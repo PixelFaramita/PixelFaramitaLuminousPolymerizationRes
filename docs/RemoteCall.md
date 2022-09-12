@@ -1404,10 +1404,10 @@
 >	|>Money_Remove
 >```
 </details>
-<details><summary><b>All Api in JavaScript<b></summary>
+<details><summary><b>All Api in JavaScript / JS接口<b></summary>
 
 ---
-<details><summary>JavaScript imports</summary>
+<details><summary>JavaScript imports / 逐个导入</summary>
 
 ``` JavaScript
 /** 设置全局配置文件（要求JSON字符串） 返回值类型：bool */
@@ -1481,7 +1481,7 @@ const Money_Remove = ll.import("PFLP", "Money::Remove");
 </details>
 
 ---
-<details><summary>JavaScript object</summary>
+<details><summary>JavaScript object / JS对象 （推荐）</summary>
 
 ``` JavaScript
 const PFLP = {
