@@ -1318,7 +1318,7 @@
 > - F#
 >```F#
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
->let Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get")
+>let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >playerXuid
 >	|>Money_Get
 >	|>ignore
@@ -1359,7 +1359,7 @@
 > - F#
 >```F#
 >// 给玩家(指定玩家名)加钱
->let Money_Add = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Add")
+>let Money_Add = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Add")
 >(playerXuid,val,info)
 >	|>Money_Add
 >```
@@ -1399,7 +1399,7 @@
 > - F#
 >```F#
 >// 给玩家(指定玩家名)减钱
->let Money_Remove = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Remove")
+>let Money_Remove = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Remove")
 >(playerXuid,val,info)
 >	|>Money_Remove
 >```
@@ -2247,11 +2247,11 @@ let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,s
 // 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt")
 // 获取玩家(指定玩家名)金钱 返回值类型：long
-let Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get")
+let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 // 给玩家(指定玩家名)加钱
-let Money_Add = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Add")
+let Money_Add = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Add")
 // 给玩家(指定玩家名)减钱
-let Money_Remove = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Remove")
+let Money_Remove = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Remove")
 
 ```
 </details>
