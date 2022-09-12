@@ -1572,7 +1572,7 @@ const PFLP = {
 </details>
 
 <details>
-<summary><b>All Api in C++<b></summary>
+<summary><b>All Api in C++ / 全部C++接口<b></summary>
 
 ``` C++
 // 设置全局配置文件（要求JSON字符串） 返回值类型：bool
@@ -1646,10 +1646,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 </details>
 
 
-<details><summary><b>All Api in C#<b></summary>
+<details><summary><b>All Api in C# /  C#全部接口<b></summary>
 
 ---
-<details><summary>C# imports</summary>
+<details><summary>C# imports / 直接导入</summary>
 
 ``` C#
 using RemoteCallAPI = LLNET.RemoteCall.RemoteCallAPI;
@@ -1725,7 +1725,7 @@ var Money_Remove = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::R
 </details>
 
 ---
-<details><summary>C# class</summary>
+<details><summary>C# class / C#静态类定义（推荐）</summary>
 
 ``` C# 
 using RemoteCallAPI = LLNET.RemoteCall.RemoteCallAPI;
@@ -1917,10 +1917,10 @@ internal static class PFLP {
 </details>
 
 
-<details><summary><b>All Api in VB<b></summary>
+<details><summary><b>All Api in Visual Basic .Net / VB接口汇总<b></summary>
 
 ---
-<details><summary>VB imports</summary>
+<details><summary>VB imports / 直接导入</summary>
 
 ``` VB
 Imports RemoteCallAPI = LLNET.RemoteCall.RemoteCallAPI;
@@ -1996,7 +1996,7 @@ Dim Money_Remove = RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money
 </details>
 
 ---
-<details><summary>VB class</summary>
+<details><summary>VB Module / 模块类定义（推荐）</summary>
 
 ``` VB 
 Imports RemoteCallAPI = LLNET.RemoteCall.RemoteCallAPI;
@@ -2188,10 +2188,10 @@ End Module
 </details>
 
 
-<details><summary><b>All Api in F#<b></summary>
+<details><summary><b>All Api in F# / F# 完整接口<b></summary>
 
 ---
-<details><summary>F# imports</summary>
+<details><summary>F# imports / 直接导入</summary>
 
 ``` F#
 #r "LiteLoader.Net"
@@ -2268,7 +2268,7 @@ let Money_Remove = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::
 </details>
 
 ---
-<details><summary>F# class</summary>
+<details><summary>F# module / F# 模块类（推荐）</summary>
 
 ``` F#
 #r "LiteLoader.Net"
