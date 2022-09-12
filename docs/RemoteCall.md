@@ -1479,8 +1479,6 @@ const Money_Remove = ll.import("PFLP", "Money::Remove");
 
 ```
 </details>
-
----
 <details><summary>JavaScript object / JS对象 （推荐）</summary>
 
 ``` JavaScript
@@ -1723,8 +1721,6 @@ var Money_Remove = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::R
 
 ```
 </details>
-
----
 <details><summary>C# class / C#静态类定义（推荐）</summary>
 
 ``` C# 
@@ -1994,8 +1990,6 @@ Dim Money_Remove = RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money
 
 ```
 </details>
-
----
 <details><summary>VB Module / 模块类定义（推荐）</summary>
 
 ``` VB 
@@ -2266,8 +2260,6 @@ let Money_Remove = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::
 
 ```
 </details>
-
----
 <details><summary>F# module / F# 模块类（推荐）</summary>
 
 ``` F#
