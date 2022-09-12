@@ -1484,82 +1484,244 @@ const Money_Remove = ll.import("PFLP", "Money::Remove");
 ``` JavaScript
 const PFLP = {
 	General : {
-		/** 设置全局配置文件（要求JSON字符串） 返回值类型：bool */
-\t\tfunction SetConfig(jsonStr) { (this.General_SetConfig??=ll.import(\"PFLP\", \"General_SetConfig\"))(jsonStr)},
-		/** 获取全局配置文件（JSON字符串） 返回值类型：string */
-\t\tfunction GetConfig() { (this.General_GetConfig??=ll.import(\"PFLP\", \"General_GetConfig\"))()},
-		/** 重新加载所有功能的配置文件 */
-\t\tfunction Reload() { (this.General_Reload??=ll.import(\"PFLP\", \"General_Reload\"))()},
+		/** 设置全局配置文件（要求JSON字符串） 返回值类型：bool
+		 * @param {string} jsonStr
+		 */
+		SetConfig(jsonStr) { return (this.General_SetConfig??=ll.import("PFLP", "General_SetConfig"))(jsonStr)},
+		/** 获取全局配置文件（JSON字符串） 返回值类型：string
+		 */
+		GetConfig() { return (this.General_GetConfig??=ll.import("PFLP", "General_GetConfig"))()},
+		/** 重新加载所有功能的配置文件
+		 * @returns {}
+		 */
+		Reload() { (this.General_Reload??=ll.import("PFLP", "General_Reload"))()},
 	},
 	Command : {
-		/** 设置命令禁用(可设置提示) */
-\t\tfunction SetCommandDisabled(playerXuid,cmd,feedback) { (this.Command_SetCommandDisabled??=ll.import(\"PFLP\", \"Command_SetCommandDisabled\"))(playerXuid,cmd,feedback)},
-		/** 设置命令启用 */
-\t\tfunction SetCommandEnabled(playerXuid,cmd) { (this.Command_SetCommandEnabled??=ll.import(\"PFLP\", \"Command_SetCommandEnabled\"))(playerXuid,cmd)},
+		/** 设置命令禁用(可设置提示)
+		 * @param {string} playerXuid
+		 * @param {string} cmd
+		 * @param {string} feedback
+		 * @returns {}
+		 */
+		SetCommandDisabled(playerXuid,cmd,feedback) { (this.Command_SetCommandDisabled??=ll.import("PFLP", "Command_SetCommandDisabled"))(playerXuid,cmd,feedback)},
+		/** 设置命令启用
+		 * @param {string} playerXuid
+		 * @param {string} cmd
+		 * @returns {}
+		 */
+		SetCommandEnabled(playerXuid,cmd) { (this.Command_SetCommandEnabled??=ll.import("PFLP", "Command_SetCommandEnabled"))(playerXuid,cmd)},
 	},
 	Language : {
-		/** 翻译 返回值类型：string */
-\t\tfunction Translate(fromLanguage,toLanguage,text) { (this.Language_Translate??=ll.import(\"PFLP\", \"Language_Translate\"))(fromLanguage,toLanguage,text)},
+		/** 翻译 返回值类型：string
+		 * @param {string} fromLanguage
+		 * @param {string} toLanguage
+		 * @param {string} text
+		 */
+		Translate(fromLanguage,toLanguage,text) { return (this.Language_Translate??=ll.import("PFLP", "Language_Translate"))(fromLanguage,toLanguage,text)},
 	},
 	ChatEx : {
-		/** 设置玩家昵称 */
-\t\tfunction SetNickName(playerXuid,nickName) { (this.ChatEx_SetNickName??=ll.import(\"PFLP\", \"ChatEx_SetNickName\"))(playerXuid,nickName)},
-		/** 设置玩家聊天时的名字 */
-\t\tfunction SetFakeName(playerXuid,fakeName) { (this.ChatEx_SetFakeName??=ll.import(\"PFLP\", \"ChatEx_SetFakeName\"))(playerXuid,fakeName)},
-		/** 设置玩家聊天消息后缀 */
-\t\tfunction SetEnd(playerXuid,endStr) { (this.ChatEx_SetEnd??=ll.import(\"PFLP\", \"ChatEx_SetEnd\"))(playerXuid,endStr)},
-		/** 设置玩家聊天消息前缀 */
-\t\tfunction SetStart(playerXuid,startStr) { (this.ChatEx_SetStart??=ll.import(\"PFLP\", \"ChatEx_SetStart\"))(playerXuid,startStr)},
-		/** 获取玩家昵称 返回值类型：string */
-\t\tfunction GetNickName(playerXuid) { (this.ChatEx_GetNickName??=ll.import(\"PFLP\", \"ChatEx_GetNickName\"))(playerXuid)},
-		/** 获取玩家聊天时的名字 返回值类型：string */
-\t\tfunction GetFakeName(playerXuid) { (this.ChatEx_GetFakeName??=ll.import(\"PFLP\", \"ChatEx_GetFakeName\"))(playerXuid)},
-		/** 获取玩家聊天消息后缀 返回值类型：string */
-\t\tfunction GetEnd(playerXuid) { (this.ChatEx_GetEnd??=ll.import(\"PFLP\", \"ChatEx_GetEnd\"))(playerXuid)},
-		/** 获取玩家聊天消息前缀 返回值类型：string */
-\t\tfunction GetStart(playerXuid) { (this.ChatEx_GetStart??=ll.import(\"PFLP\", \"ChatEx_GetStart\"))(playerXuid)},
+		/** 设置玩家昵称
+		 * @param {string} playerXuid
+		 * @param {string} nickName
+		 * @returns {}
+		 */
+		SetNickName(playerXuid,nickName) { (this.ChatEx_SetNickName??=ll.import("PFLP", "ChatEx_SetNickName"))(playerXuid,nickName)},
+		/** 设置玩家聊天时的名字
+		 * @param {string} playerXuid
+		 * @param {string} fakeName
+		 * @returns {}
+		 */
+		SetFakeName(playerXuid,fakeName) { (this.ChatEx_SetFakeName??=ll.import("PFLP", "ChatEx_SetFakeName"))(playerXuid,fakeName)},
+		/** 设置玩家聊天消息后缀
+		 * @param {string} playerXuid
+		 * @param {string} endStr
+		 * @returns {}
+		 */
+		SetEnd(playerXuid,endStr) { (this.ChatEx_SetEnd??=ll.import("PFLP", "ChatEx_SetEnd"))(playerXuid,endStr)},
+		/** 设置玩家聊天消息前缀
+		 * @param {string} playerXuid
+		 * @param {string} startStr
+		 * @returns {}
+		 */
+		SetStart(playerXuid,startStr) { (this.ChatEx_SetStart??=ll.import("PFLP", "ChatEx_SetStart"))(playerXuid,startStr)},
+		/** 获取玩家昵称 返回值类型：string
+		 * @param {string} playerXuid
+		 */
+		GetNickName(playerXuid) { return (this.ChatEx_GetNickName??=ll.import("PFLP", "ChatEx_GetNickName"))(playerXuid)},
+		/** 获取玩家聊天时的名字 返回值类型：string
+		 * @param {string} playerXuid
+		 */
+		GetFakeName(playerXuid) { return (this.ChatEx_GetFakeName??=ll.import("PFLP", "ChatEx_GetFakeName"))(playerXuid)},
+		/** 获取玩家聊天消息后缀 返回值类型：string
+		 * @param {string} playerXuid
+		 */
+		GetEnd(playerXuid) { return (this.ChatEx_GetEnd??=ll.import("PFLP", "ChatEx_GetEnd"))(playerXuid)},
+		/** 获取玩家聊天消息前缀 返回值类型：string
+		 * @param {string} playerXuid
+		 */
+		GetStart(playerXuid) { return (this.ChatEx_GetStart??=ll.import("PFLP", "ChatEx_GetStart"))(playerXuid)},
 	},
 	Lands : {
-		/** 检查指定立方体区域(float)是否有领地 返回值类型：bool */
-\t\tfunction CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId) { (this.Lands_CheckCubeHasLand??=ll.import(\"PFLP\", \"Lands_CheckCubeHasLand\"))(x1,y1,z1,x2,y2,z2,dimensionId)},
-		/** 检查指定立方体区域(int)是否有领地 返回值类型：bool */
-\t\tfunction CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId) { (this.Lands_CheckCubeHasLandInt??=ll.import(\"PFLP\", \"Lands_CheckCubeHasLandInt\"))(x1,y1,z1,x2,y2,z2,dimensionId)},
-		/** 检查指定坐标(float)是否有领地 返回值类型：bool */
-\t\tfunction CheckPosHasLand(x,y,z,dimensionId) { (this.Lands_CheckPosHasLand??=ll.import(\"PFLP\", \"Lands_CheckPosHasLand\"))(x,y,z,dimensionId)},
-		/** 检查指定坐标(int)是否有领地 返回值类型：bool */
-\t\tfunction CheckPosHasLandInt(x,y,z,dimensionId) { (this.Lands_CheckPosHasLandInt??=ll.import(\"PFLP\", \"Lands_CheckPosHasLandInt\"))(x,y,z,dimensionId)},
-		/** 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string */
-\t\tfunction GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId) { (this.Lands_GetLandByCube??=ll.import(\"PFLP\", \"Lands_GetLandByCube\"))(x1,y1,z1,x2,y2,z2,dimensionId)},
-		/** 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string */
-\t\tfunction GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId) { (this.Lands_GetLandByCubeInt??=ll.import(\"PFLP\", \"Lands_GetLandByCubeInt\"))(x1,y1,z1,x2,y2,z2,dimensionId)},
-		/** 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string */
-\t\tfunction GetLandByPos(x,y,z,dimensionId) { (this.Lands_GetLandByPos??=ll.import(\"PFLP\", \"Lands_GetLandByPos\"))(x,y,z,dimensionId)},
-		/** 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string */
-\t\tfunction GetLandByPosInt(x,y,z,dimensionId) { (this.Lands_GetLandByPosInt??=ll.import(\"PFLP\", \"Lands_GetLandByPosInt\"))(x,y,z,dimensionId)},
-		/** 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string */
-\t\tfunction GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId) { (this.Lands_GetLandInfoByCube??=ll.import(\"PFLP\", \"Lands_GetLandInfoByCube\"))(x1,y1,z1,x2,y2,z2,dimensionId)},
-		/** 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string */
-\t\tfunction GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId) { (this.Lands_GetLandInfoByCubeInt??=ll.import(\"PFLP\", \"Lands_GetLandInfoByCubeInt\"))(x1,y1,z1,x2,y2,z2,dimensionId)},
-		/** 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string */
-\t\tfunction GetLandInfoByPos(x,y,z,dimensionId) { (this.Lands_GetLandInfoByPos??=ll.import(\"PFLP\", \"Lands_GetLandInfoByPos\"))(x,y,z,dimensionId)},
-		/** 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string */
-\t\tfunction GetLandInfoByPosInt(x,y,z,dimensionId) { (this.Lands_GetLandInfoByPosInt??=ll.import(\"PFLP\", \"Lands_GetLandInfoByPosInt\"))(x,y,z,dimensionId)},
-		/** 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
-\t\tfunction SetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId,landinfo) { (this.Lands_SetLandInfoByCube??=ll.import(\"PFLP\", \"Lands_SetLandInfoByCube\"))(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)},
-		/** 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
-\t\tfunction SetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId,landinfo) { (this.Lands_SetLandInfoByCubeInt??=ll.import(\"PFLP\", \"Lands_SetLandInfoByCubeInt\"))(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)},
-		/** 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
-\t\tfunction SetLandInfoByPos(x,y,z,dimensionId,landinfo) { (this.Lands_SetLandInfoByPos??=ll.import(\"PFLP\", \"Lands_SetLandInfoByPos\"))(x,y,z,dimensionId,landinfo)},
-		/** 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
-\t\tfunction SetLandInfoByPosInt(x,y,z,dimensionId,landinfo) { (this.Lands_SetLandInfoByPosInt??=ll.import(\"PFLP\", \"Lands_SetLandInfoByPosInt\"))(x,y,z,dimensionId,landinfo)},
+		/** 检查指定立方体区域(float)是否有领地 返回值类型：bool
+		 * @param {number} x1
+		 * @param {number} y1
+		 * @param {number} z1
+		 * @param {number} x2
+		 * @param {number} y2
+		 * @param {number} z2
+		 * @param {number} dimensionId
+		 */
+		CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId) { return (this.Lands_CheckCubeHasLand??=ll.import("PFLP", "Lands_CheckCubeHasLand"))(x1,y1,z1,x2,y2,z2,dimensionId)},
+		/** 检查指定立方体区域(int)是否有领地 返回值类型：bool
+		 * @param {number} x1
+		 * @param {number} y1
+		 * @param {number} z1
+		 * @param {number} x2
+		 * @param {number} y2
+		 * @param {number} z2
+		 * @param {number} dimensionId
+		 */
+		CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId) { return (this.Lands_CheckCubeHasLandInt??=ll.import("PFLP", "Lands_CheckCubeHasLandInt"))(x1,y1,z1,x2,y2,z2,dimensionId)},
+		/** 检查指定坐标(float)是否有领地 返回值类型：bool
+		 * @param {number} x
+		 * @param {number} y
+		 * @param {number} z
+		 * @param {number} dimensionId
+		 */
+		CheckPosHasLand(x,y,z,dimensionId) { return (this.Lands_CheckPosHasLand??=ll.import("PFLP", "Lands_CheckPosHasLand"))(x,y,z,dimensionId)},
+		/** 检查指定坐标(int)是否有领地 返回值类型：bool
+		 * @param {number} x
+		 * @param {number} y
+		 * @param {number} z
+		 * @param {number} dimensionId
+		 */
+		CheckPosHasLandInt(x,y,z,dimensionId) { return (this.Lands_CheckPosHasLandInt??=ll.import("PFLP", "Lands_CheckPosHasLandInt"))(x,y,z,dimensionId)},
+		/** 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
+		 * @param {number} x1
+		 * @param {number} y1
+		 * @param {number} z1
+		 * @param {number} x2
+		 * @param {number} y2
+		 * @param {number} z2
+		 * @param {number} dimensionId
+		 */
+		GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId) { return (this.Lands_GetLandByCube??=ll.import("PFLP", "Lands_GetLandByCube"))(x1,y1,z1,x2,y2,z2,dimensionId)},
+		/** 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
+		 * @param {number} x1
+		 * @param {number} y1
+		 * @param {number} z1
+		 * @param {number} x2
+		 * @param {number} y2
+		 * @param {number} z2
+		 * @param {number} dimensionId
+		 */
+		GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId) { return (this.Lands_GetLandByCubeInt??=ll.import("PFLP", "Lands_GetLandByCubeInt"))(x1,y1,z1,x2,y2,z2,dimensionId)},
+		/** 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
+		 * @param {number} x
+		 * @param {number} y
+		 * @param {number} z
+		 * @param {number} dimensionId
+		 */
+		GetLandByPos(x,y,z,dimensionId) { return (this.Lands_GetLandByPos??=ll.import("PFLP", "Lands_GetLandByPos"))(x,y,z,dimensionId)},
+		/** 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
+		 * @param {number} x
+		 * @param {number} y
+		 * @param {number} z
+		 * @param {number} dimensionId
+		 */
+		GetLandByPosInt(x,y,z,dimensionId) { return (this.Lands_GetLandByPosInt??=ll.import("PFLP", "Lands_GetLandByPosInt"))(x,y,z,dimensionId)},
+		/** 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
+		 * @param {number} x1
+		 * @param {number} y1
+		 * @param {number} z1
+		 * @param {number} x2
+		 * @param {number} y2
+		 * @param {number} z2
+		 * @param {number} dimensionId
+		 */
+		GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId) { return (this.Lands_GetLandInfoByCube??=ll.import("PFLP", "Lands_GetLandInfoByCube"))(x1,y1,z1,x2,y2,z2,dimensionId)},
+		/** 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
+		 * @param {number} x1
+		 * @param {number} y1
+		 * @param {number} z1
+		 * @param {number} x2
+		 * @param {number} y2
+		 * @param {number} z2
+		 * @param {number} dimensionId
+		 */
+		GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId) { return (this.Lands_GetLandInfoByCubeInt??=ll.import("PFLP", "Lands_GetLandInfoByCubeInt"))(x1,y1,z1,x2,y2,z2,dimensionId)},
+		/** 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
+		 * @param {number} x
+		 * @param {number} y
+		 * @param {number} z
+		 * @param {number} dimensionId
+		 */
+		GetLandInfoByPos(x,y,z,dimensionId) { return (this.Lands_GetLandInfoByPos??=ll.import("PFLP", "Lands_GetLandInfoByPos"))(x,y,z,dimensionId)},
+		/** 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
+		 * @param {number} x
+		 * @param {number} y
+		 * @param {number} z
+		 * @param {number} dimensionId
+		 */
+		GetLandInfoByPosInt(x,y,z,dimensionId) { return (this.Lands_GetLandInfoByPosInt??=ll.import("PFLP", "Lands_GetLandInfoByPosInt"))(x,y,z,dimensionId)},
+		/** 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
+		 * @param {number} x1
+		 * @param {number} y1
+		 * @param {number} z1
+		 * @param {number} x2
+		 * @param {number} y2
+		 * @param {number} z2
+		 * @param {number} dimensionId
+		 * @param {string} landinfo
+		 */
+		SetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId,landinfo) { return (this.Lands_SetLandInfoByCube??=ll.import("PFLP", "Lands_SetLandInfoByCube"))(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)},
+		/** 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
+		 * @param {number} x1
+		 * @param {number} y1
+		 * @param {number} z1
+		 * @param {number} x2
+		 * @param {number} y2
+		 * @param {number} z2
+		 * @param {number} dimensionId
+		 * @param {string} landinfo
+		 */
+		SetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId,landinfo) { return (this.Lands_SetLandInfoByCubeInt??=ll.import("PFLP", "Lands_SetLandInfoByCubeInt"))(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)},
+		/** 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
+		 * @param {number} x
+		 * @param {number} y
+		 * @param {number} z
+		 * @param {number} dimensionId
+		 * @param {string} landinfo
+		 */
+		SetLandInfoByPos(x,y,z,dimensionId,landinfo) { return (this.Lands_SetLandInfoByPos??=ll.import("PFLP", "Lands_SetLandInfoByPos"))(x,y,z,dimensionId,landinfo)},
+		/** 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
+		 * @param {number} x
+		 * @param {number} y
+		 * @param {number} z
+		 * @param {number} dimensionId
+		 * @param {string} landinfo
+		 */
+		SetLandInfoByPosInt(x,y,z,dimensionId,landinfo) { return (this.Lands_SetLandInfoByPosInt??=ll.import("PFLP", "Lands_SetLandInfoByPosInt"))(x,y,z,dimensionId,landinfo)},
 	},
 	Money : {
-		/** 获取玩家(指定玩家名)金钱 返回值类型：long */
-\t\tfunction Get(playerXuid) { (this.Money_Get??=ll.import(\"PFLP\", \"Money_Get\"))(playerXuid)},
-		/** 给玩家(指定玩家名)加钱 */
-\t\tfunction Add(playerXuid,count,info) { (this.Money_Add??=ll.import(\"PFLP\", \"Money_Add\"))(playerXuid,count,info)},
-		/** 给玩家(指定玩家名)减钱 */
-\t\tfunction Remove(playerXuid,count,info) { (this.Money_Remove??=ll.import(\"PFLP\", \"Money_Remove\"))(playerXuid,count,info)},
+		/** 获取玩家(指定玩家名)金钱 返回值类型：long
+		 * @param {string} playerXuid
+		 */
+		Get(playerXuid) { return (this.Money_Get??=ll.import("PFLP", "Money_Get"))(playerXuid)},
+		/** 给玩家(指定玩家名)加钱
+		 * @param {string} playerXuid
+		 * @param {number} count
+		 * @param {string} info
+		 * @returns {}
+		 */
+		Add(playerXuid,count,info) { (this.Money_Add??=ll.import("PFLP", "Money_Add"))(playerXuid,count,info)},
+		/** 给玩家(指定玩家名)减钱
+		 * @param {string} playerXuid
+		 * @param {number} count
+		 * @param {string} info
+		 * @returns {}
+		 */
+		Remove(playerXuid,count,info) { (this.Money_Remove??=ll.import("PFLP", "Money_Remove"))(playerXuid,count,info)},
 	},
 };
 
