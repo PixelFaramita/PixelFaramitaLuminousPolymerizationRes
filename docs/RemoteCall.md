@@ -66,7 +66,7 @@
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >let General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
 >jsonStr
->	|>General_SetConfig
+>	|>General_SetConfig.Invoke
 >	|>ignore
 >```
 >---
@@ -181,7 +181,7 @@
 >// 设置命令禁用(可设置提示)
 >let Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
 >(playerXuid,cmd,feedback)
->	|>Command_SetCommandDisabled
+>	|>Command_SetCommandDisabled.Invoke
 >```
 >---
 >## Command::SetCommandEnabled
@@ -220,7 +220,7 @@
 >// 设置命令启用
 >let Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled")
 >(playerXuid,cmd)
->	|>Command_SetCommandEnabled
+>	|>Command_SetCommandEnabled.Invoke
 >```
 </details>
 <details>
@@ -263,7 +263,7 @@
 >// 翻译 返回值类型：string
 >let Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate")
 >(fromLanguage,toLanguage,text)
->	|>Language_Translate
+>	|>Language_Translate.Invoke
 >	|>ignore
 >```
 </details>
@@ -306,7 +306,7 @@
 >// 设置玩家昵称
 >let ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName")
 >(playerXuid,nickName)
->	|>ChatEx_SetNickName
+>	|>ChatEx_SetNickName.Invoke
 >```
 >---
 >## ChatEx::SetFakeName
@@ -345,7 +345,7 @@
 >// 设置玩家聊天时的名字
 >let ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName")
 >(playerXuid,fakeName)
->	|>ChatEx_SetFakeName
+>	|>ChatEx_SetFakeName.Invoke
 >```
 >---
 >## ChatEx::SetEnd
@@ -384,7 +384,7 @@
 >// 设置玩家聊天消息后缀
 >let ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd")
 >(playerXuid,endStr)
->	|>ChatEx_SetEnd
+>	|>ChatEx_SetEnd.Invoke
 >```
 >---
 >## ChatEx::SetStart
@@ -423,7 +423,7 @@
 >// 设置玩家聊天消息前缀
 >let ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart")
 >(playerXuid,startStr)
->	|>ChatEx_SetStart
+>	|>ChatEx_SetStart.Invoke
 >```
 >---
 >## ChatEx::GetNickName
@@ -461,7 +461,7 @@
 >// 获取玩家昵称 返回值类型：string
 >let ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName")
 >playerXuid
->	|>ChatEx_GetNickName
+>	|>ChatEx_GetNickName.Invoke
 >	|>ignore
 >```
 >---
@@ -500,7 +500,7 @@
 >// 获取玩家聊天时的名字 返回值类型：string
 >let ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName")
 >playerXuid
->	|>ChatEx_GetFakeName
+>	|>ChatEx_GetFakeName.Invoke
 >	|>ignore
 >```
 >---
@@ -539,7 +539,7 @@
 >// 获取玩家聊天消息后缀 返回值类型：string
 >let ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd")
 >playerXuid
->	|>ChatEx_GetEnd
+>	|>ChatEx_GetEnd.Invoke
 >	|>ignore
 >```
 >---
@@ -578,7 +578,7 @@
 >// 获取玩家聊天消息前缀 返回值类型：string
 >let ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart")
 >playerXuid
->	|>ChatEx_GetStart
+>	|>ChatEx_GetStart.Invoke
 >	|>ignore
 >```
 </details>
@@ -626,7 +626,7 @@
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
 >let Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
->	|>Lands_CheckCubeHasLand
+>	|>Lands_CheckCubeHasLand.Invoke
 >	|>ignore
 >```
 >---
@@ -671,7 +671,7 @@
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
 >let Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
->	|>Lands_CheckCubeHasLandInt
+>	|>Lands_CheckCubeHasLandInt.Invoke
 >	|>ignore
 >```
 >---
@@ -713,7 +713,7 @@
 >// 检查指定坐标(float)是否有领地 返回值类型：bool
 >let Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand")
 >(x,y,z,dimensionId)
->	|>Lands_CheckPosHasLand
+>	|>Lands_CheckPosHasLand.Invoke
 >	|>ignore
 >```
 >---
@@ -755,7 +755,7 @@
 >// 检查指定坐标(int)是否有领地 返回值类型：bool
 >let Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt")
 >(x,y,z,dimensionId)
->	|>Lands_CheckPosHasLandInt
+>	|>Lands_CheckPosHasLandInt.Invoke
 >	|>ignore
 >```
 >---
@@ -800,7 +800,7 @@
 >// 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
->	|>Lands_GetLandByCube
+>	|>Lands_GetLandByCube.Invoke
 >	|>ignore
 >```
 >---
@@ -845,7 +845,7 @@
 >// 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
->	|>Lands_GetLandByCubeInt
+>	|>Lands_GetLandByCubeInt.Invoke
 >	|>ignore
 >```
 >---
@@ -887,7 +887,7 @@
 >// 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos")
 >(x,y,z,dimensionId)
->	|>Lands_GetLandByPos
+>	|>Lands_GetLandByPos.Invoke
 >	|>ignore
 >```
 >---
@@ -929,7 +929,7 @@
 >// 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt")
 >(x,y,z,dimensionId)
->	|>Lands_GetLandByPosInt
+>	|>Lands_GetLandByPosInt.Invoke
 >	|>ignore
 >```
 >---
@@ -974,7 +974,7 @@
 >// 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
->	|>Lands_GetLandInfoByCube
+>	|>Lands_GetLandInfoByCube.Invoke
 >	|>ignore
 >```
 >---
@@ -1019,7 +1019,7 @@
 >// 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
->	|>Lands_GetLandInfoByCubeInt
+>	|>Lands_GetLandInfoByCubeInt.Invoke
 >	|>ignore
 >```
 >---
@@ -1061,7 +1061,7 @@
 >// 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos")
 >(x,y,z,dimensionId)
->	|>Lands_GetLandInfoByPos
+>	|>Lands_GetLandInfoByPos.Invoke
 >	|>ignore
 >```
 >---
@@ -1103,7 +1103,7 @@
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt")
 >(x,y,z,dimensionId)
->	|>Lands_GetLandInfoByPosInt
+>	|>Lands_GetLandInfoByPosInt.Invoke
 >	|>ignore
 >```
 >---
@@ -1149,7 +1149,7 @@
 >// 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >let Lands_SetLandInfoByCube = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByCube")
 >(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
->	|>Lands_SetLandInfoByCube
+>	|>Lands_SetLandInfoByCube.Invoke
 >	|>ignore
 >```
 >---
@@ -1195,7 +1195,7 @@
 >// 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >let Lands_SetLandInfoByCubeInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByCubeInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
->	|>Lands_SetLandInfoByCubeInt
+>	|>Lands_SetLandInfoByCubeInt.Invoke
 >	|>ignore
 >```
 >---
@@ -1238,7 +1238,7 @@
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos")
 >(x,y,z,dimensionId,landinfo)
->	|>Lands_SetLandInfoByPos
+>	|>Lands_SetLandInfoByPos.Invoke
 >	|>ignore
 >```
 >---
@@ -1281,7 +1281,7 @@
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt")
 >(x,y,z,dimensionId,landinfo)
->	|>Lands_SetLandInfoByPosInt
+>	|>Lands_SetLandInfoByPosInt.Invoke
 >	|>ignore
 >```
 </details>
@@ -1323,7 +1323,7 @@
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >playerXuid
->	|>Money_Get
+>	|>Money_Get.Invoke
 >	|>ignore
 >```
 >---
@@ -1364,7 +1364,7 @@
 >// 给玩家(指定玩家名)加钱
 >let Money_Add = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Add")
 >(playerXuid,count,info)
->	|>Money_Add
+>	|>Money_Add.Invoke
 >```
 >---
 >## Money::Remove
@@ -1404,7 +1404,7 @@
 >// 给玩家(指定玩家名)减钱
 >let Money_Remove = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Remove")
 >(playerXuid,count,info)
->	|>Money_Remove
+>	|>Money_Remove.Invoke
 >```
 </details>
 <details><summary><b>All Api in JavaScript / JS接口<b></summary>
