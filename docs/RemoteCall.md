@@ -1,7 +1,7 @@
 ﻿<div align="center">
-<div>
+<div align="center">
 <h1>API for PixelFaramitaLuminousPolymerization</h1>
-<h3>对接接口文档</h3>
+<h2 align="center">对接接口文档</h2>
 </div>
 <div align="right"><h4>Powered by LLRemoteCall</h4></div>
 </div>
