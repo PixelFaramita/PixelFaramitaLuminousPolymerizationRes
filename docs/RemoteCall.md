@@ -62,7 +62,7 @@
 >```F#
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >let General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
->jsonStr
+>jsonStr
 >	|>General_SetConfig
 >	|>ignore
 >```
@@ -457,7 +457,7 @@
 >```F#
 >// 获取玩家昵称 返回值类型：string
 >let ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName")
->playerXuid
+>playerXuid
 >	|>ChatEx_GetNickName
 >	|>ignore
 >```
@@ -496,7 +496,7 @@
 >```F#
 >// 获取玩家聊天时的名字 返回值类型：string
 >let ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName")
->playerXuid
+>playerXuid
 >	|>ChatEx_GetFakeName
 >	|>ignore
 >```
@@ -535,7 +535,7 @@
 >```F#
 >// 获取玩家聊天消息后缀 返回值类型：string
 >let ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd")
->playerXuid
+>playerXuid
 >	|>ChatEx_GetEnd
 >	|>ignore
 >```
@@ -574,7 +574,7 @@
 >```F#
 >// 获取玩家聊天消息前缀 返回值类型：string
 >let ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart")
->playerXuid
+>playerXuid
 >	|>ChatEx_GetStart
 >	|>ignore
 >```
@@ -1319,7 +1319,7 @@
 >```F#
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
->playerXuid
+>playerXuid
 >	|>Money_Get
 >	|>ignore
 >```
