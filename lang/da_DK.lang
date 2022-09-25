@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Fortsæt med at indramme udvæl
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Bekræftelsesomfanget er forkert
 Land.Common.Forms.BeforePurchaseMainContent=Vælg {0}område:\n  Udgangspunkt: {1}\n  Slut: {2}\n  Størrelse: {3}\n  Under dimensionen: {4}\n  Pris: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Territorium bekræftelse
-Land.Common.Forms.ChooseItemCancel.Back=returbillet
-Land.Common.Forms.ChooseItemCancel.Cancel=Luk grænsefladen
-Land.Common.Forms.ChooseItemCancel.Content=Fravælge?
-Land.Common.Forms.ChooseItemCancel.Title=Fravælge?
 Land.Common.Forms.ChooseItemNextPage=Næste
 Land.Common.Forms.ChooseItemNone.Back=Vend tilbage
 Land.Common.Forms.ChooseItemNone.Cancel=Lukningsgrænseflade

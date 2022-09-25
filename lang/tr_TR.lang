@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Seçim aralığını çerçevel
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Onay kapsamı yanlış
 Land.Common.Forms.BeforePurchaseMainContent={0}alanını seçin:\n  Başlangıç ​​noktası: {1}\n  Son: {2}\n  Boyut: {3}\n  Boyut sırasında: {4}\n  Fiyat: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Bölge Onayı
-Land.Common.Forms.ChooseItemCancel.Back=dönmek
-Land.Common.Forms.ChooseItemCancel.Cancel=Arayüzü kapatın
-Land.Common.Forms.ChooseItemCancel.Content=Seçim -ini kaldırın?
-Land.Common.Forms.ChooseItemCancel.Title=Seçim -ini kaldırın?
 Land.Common.Forms.ChooseItemNextPage=Önümüzdeki
 Land.Common.Forms.ChooseItemNone.Back=dönüş
 Land.Common.Forms.ChooseItemNone.Cancel=Kapanma arayüzü

@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Pokračujte v rozsahu výběru 
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Rozsah potvrzení je špatný
 Land.Common.Forms.BeforePurchaseMainContent=Vyberte oblast {0}:\n  Počáteční bod: {1}\n  Konec: {2}\n  Velikost: {3}\n  Během dimenze: {4}\n  Cena: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Potvrzení území
-Land.Common.Forms.ChooseItemCancel.Back=vrátit
-Land.Common.Forms.ChooseItemCancel.Cancel=Zavřete rozhraní
-Land.Common.Forms.ChooseItemCancel.Content=Odznačte?
-Land.Common.Forms.ChooseItemCancel.Title=Odznačte?
 Land.Common.Forms.ChooseItemNextPage=Další
 Land.Common.Forms.ChooseItemNone.Back=vrátit se
 Land.Common.Forms.ChooseItemNone.Cancel=Rozhraní uzavření

@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=续框选限
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=确认无误
 Land.Common.Forms.BeforePurchaseMainContent=已择{0}区。\n  初一: {1}\n  终曰: {2}\n  大小: {3}\n  维度: {4}\n  价 {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=地界确认
-Land.Common.Forms.ChooseItemCancel.Back=返回
-Land.Common.Forms.ChooseItemCancel.Cancel=闭界面
-Land.Common.Forms.ChooseItemCancel.Content=罢之?
-Land.Common.Forms.ChooseItemCancel.Title=罢之?
 Land.Common.Forms.ChooseItemNextPage=下一页
 Land.Common.Forms.ChooseItemNone.Back=返回
 Land.Common.Forms.ChooseItemNone.Cancel=闭界面

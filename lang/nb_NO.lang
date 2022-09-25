@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Fortsett å ramme ut utvalgsomr
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Omfanget av bekreftelse er feil
 Land.Common.Forms.BeforePurchaseMainContent=Velg {0}område:\n  Utgangspunkt: {1}\n  Slutt: {2}\n  Størrelse: {3}\n  Under dimensjonen: {4}\n  Pris: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Territoriumbekreftelse
-Land.Common.Forms.ChooseItemCancel.Back=retur
-Land.Common.Forms.ChooseItemCancel.Cancel=Lukk grensesnittet
-Land.Common.Forms.ChooseItemCancel.Content=Fjern merket?
-Land.Common.Forms.ChooseItemCancel.Title=Fjern merket?
 Land.Common.Forms.ChooseItemNextPage=Neste
 Land.Common.Forms.ChooseItemNone.Back=komme tilbake
 Land.Common.Forms.ChooseItemNone.Cancel=Lukking Grensesnitt

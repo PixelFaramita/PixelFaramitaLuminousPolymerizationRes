@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Folytassa a keret kiválasztás
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=A megerősítés hatálya rossz
 Land.Common.Forms.BeforePurchaseMainContent=Válassza a {0}területet:\n  Kiindulópont: {1}\n  Vége: {2}\n  Méret: {3}\n  A dimenzió során: {4}\n  Ár: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Terület visszaigazolás
-Land.Common.Forms.ChooseItemCancel.Back=visszatérés
-Land.Common.Forms.ChooseItemCancel.Cancel=A felület bezárása
-Land.Common.Forms.ChooseItemCancel.Content=Törölje?
-Land.Common.Forms.ChooseItemCancel.Title=Törölje?
 Land.Common.Forms.ChooseItemNextPage=Következő
 Land.Common.Forms.ChooseItemNone.Back=Visszatérés
 Land.Common.Forms.ChooseItemNone.Cancel=Bezárási felület

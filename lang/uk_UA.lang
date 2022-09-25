@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Продовжуйте діап
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Обсяг підтвердження неправильно
 Land.Common.Forms.BeforePurchaseMainContent=Виберіть {0}область:\n  Початкова точка: {1}\n  Кінець: {2}\n  Розмір: {3}\n  Під час виміру: {4}\n  Ціна: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Підтвердження території
-Land.Common.Forms.ChooseItemCancel.Back=повернення
-Land.Common.Forms.ChooseItemCancel.Cancel=Інтерфейс закриття
-Land.Common.Forms.ChooseItemCancel.Content=Скасувати вибір?
-Land.Common.Forms.ChooseItemCancel.Title=Скасувати вибір?
 Land.Common.Forms.ChooseItemNextPage=Наступна сторінка
 Land.Common.Forms.ChooseItemNone.Back=повернення
 Land.Common.Forms.ChooseItemNone.Cancel=Інтерфейс закриття

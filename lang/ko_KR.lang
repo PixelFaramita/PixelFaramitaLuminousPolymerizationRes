@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=프레임 선택 범위를 계�
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=확인 범위가 잘못되었습니다
 Land.Common.Forms.BeforePurchaseMainContent={0}영역 선택 :\n  출발점 : {1}\n  끝 : {2}\n  크기 : {3}\n  차원 중 : {4}\n  가격 : {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=영토 확인
-Land.Common.Forms.ChooseItemCancel.Back=반품
-Land.Common.Forms.ChooseItemCancel.Cancel=클로저 인터페이스
-Land.Common.Forms.ChooseItemCancel.Content=선택 취소?
-Land.Common.Forms.ChooseItemCancel.Title=선택 취소?
 Land.Common.Forms.ChooseItemNextPage=다음 페이지
 Land.Common.Forms.ChooseItemNone.Back=반품
 Land.Common.Forms.ChooseItemNone.Cancel=클로저 인터페이스

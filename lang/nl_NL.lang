@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Blijf selectiebereik omlijsten
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=De reikwijdte van de bevestiging is verkeerd
 Land.Common.Forms.BeforePurchaseMainContent=Selecteer {0}gebied:\n  Startpunt: {1}\n  Einde: {2}\n  Maat: {3}\n  Tijdens de dimensie: {4}\n  Prijs: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Territoriumbevestiging
-Land.Common.Forms.ChooseItemCancel.Back=terugkeren
-Land.Common.Forms.ChooseItemCancel.Cancel=Sluit de interface
-Land.Common.Forms.ChooseItemCancel.Content=Schakel?
-Land.Common.Forms.ChooseItemCancel.Title=Schakel?
 Land.Common.Forms.ChooseItemNextPage=Volgend
 Land.Common.Forms.ChooseItemNone.Back=opbrengst
 Land.Common.Forms.ChooseItemNone.Cancel=Sluit interface

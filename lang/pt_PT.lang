@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Continue a enquadrar o interval
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=O escopo da confirmação está errado
 Land.Common.Forms.BeforePurchaseMainContent=Selecione {0}área:\n  Ponto de partida: {1}\n  Fim: {2}\n  Tamanho: {3}\n  Durante a dimensão: {4}\n  Preço: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Confirmação do território
-Land.Common.Forms.ChooseItemCancel.Back=Retorna
-Land.Common.Forms.ChooseItemCancel.Cancel=Interface de fechamento
-Land.Common.Forms.ChooseItemCancel.Content=cancelar a seleção?
-Land.Common.Forms.ChooseItemCancel.Title=cancelar a seleção?
 Land.Common.Forms.ChooseItemNextPage=Próxima página
 Land.Common.Forms.ChooseItemNone.Back=Retorna
 Land.Common.Forms.ChooseItemNone.Cancel=Interface de fechamento

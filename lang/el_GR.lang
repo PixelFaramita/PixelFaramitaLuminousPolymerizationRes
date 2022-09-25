@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Συνεχίστε να πλα�
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Το πεδίο επιβεβαίωσης είναι λάθος
 Land.Common.Forms.BeforePurchaseMainContent=Επιλέξτε {0}περιοχή:\n  Σημείο εκκίνησης: {1}\n  Τέλος: {2}\n  Μέγεθος: {3}\n  Κατά τη διάρκεια της διάστασης: {4}\n  Τιμή: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Επιβεβαίωση εδάφους
-Land.Common.Forms.ChooseItemCancel.Back=επιστροφή
-Land.Common.Forms.ChooseItemCancel.Cancel=Διασύνδεση κλεισίματος
-Land.Common.Forms.ChooseItemCancel.Content=Αποεπιλέξτε?
-Land.Common.Forms.ChooseItemCancel.Title=Αποεπιλέξτε?
 Land.Common.Forms.ChooseItemNextPage=Επόμενος
 Land.Common.Forms.ChooseItemNone.Back=ΕΠΙΣΤΡΟΦΗ
 Land.Common.Forms.ChooseItemNone.Cancel=Διασύνδεση κλεισίματος

@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=選択範囲をフレーム化�
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=確認の範囲が間違っています
 Land.Common.Forms.BeforePurchaseMainContent={0}領域を選択します：\n  出発点：{1}\n  終了：{2}\n  サイズ：{3}\n  寸法中：{4}\n  価格：{5}×{6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=領土確認
-Land.Common.Forms.ChooseItemCancel.Back=戻る
-Land.Common.Forms.ChooseItemCancel.Cancel=閉鎖インターフェイス
-Land.Common.Forms.ChooseItemCancel.Content=選択をキャンセルしますか？
-Land.Common.Forms.ChooseItemCancel.Title=選択をキャンセルしますか？
 Land.Common.Forms.ChooseItemNextPage=次のページ
 Land.Common.Forms.ChooseItemNone.Back=戻る
 Land.Common.Forms.ChooseItemNone.Cancel=閉鎖インターフェイス

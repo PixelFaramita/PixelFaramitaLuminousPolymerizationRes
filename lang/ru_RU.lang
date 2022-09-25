@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Продолжить диапа
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Сфера подтверждения неверно
 Land.Common.Forms.BeforePurchaseMainContent=Выберите {0}область:\n  Отправная точка: {1}\n  Конец: {2}\n  Размер: {3}\n  Во время измерения: {4}\n  Цена: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Территория подтверждение
-Land.Common.Forms.ChooseItemCancel.Back=возвращаться
-Land.Common.Forms.ChooseItemCancel.Cancel=Интерфейс закрытия
-Land.Common.Forms.ChooseItemCancel.Content=Отменить выбор?
-Land.Common.Forms.ChooseItemCancel.Title=Отменить выбор?
 Land.Common.Forms.ChooseItemNextPage=Следующая страница
 Land.Common.Forms.ChooseItemNone.Back=возвращаться
 Land.Common.Forms.ChooseItemNone.Cancel=Интерфейс закрытия

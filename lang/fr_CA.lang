@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Continuez à cadrer la plage de
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=La portée de la confirmation est erronée
 Land.Common.Forms.BeforePurchaseMainContent=Sélectionnez {0}zone:\n  Point de départ: {1}\n  Fin: {2}\n  Taille: {3}\n  Pendant la dimension: {4}\n  Prix: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Confirmation du territoire
-Land.Common.Forms.ChooseItemCancel.Back=revenir
-Land.Common.Forms.ChooseItemCancel.Cancel=Interface de fermeture
-Land.Common.Forms.ChooseItemCancel.Content=Annuler la sélection?
-Land.Common.Forms.ChooseItemCancel.Title=Annuler la sélection?
 Land.Common.Forms.ChooseItemNextPage=Page suivante
 Land.Common.Forms.ChooseItemNone.Back=revenir
 Land.Common.Forms.ChooseItemNone.Cancel=Interface de fermeture

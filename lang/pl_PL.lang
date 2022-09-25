@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Kontynuuj zakres wyboru ramek
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Zakres potwierdzenia jest zły
 Land.Common.Forms.BeforePurchaseMainContent=Wybierz {0}Obszar:\n  Punkt wyjścia: {1}\n  END: {2}\n  Rozmiar: {3}\n  Podczas wymiaru: {4}\n  Cena: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Potwierdzenie terytorium
-Land.Common.Forms.ChooseItemCancel.Back=wrócić
-Land.Common.Forms.ChooseItemCancel.Cancel=Interfejs zamknięcia
-Land.Common.Forms.ChooseItemCancel.Content=Usuń zaznaczenie?
-Land.Common.Forms.ChooseItemCancel.Title=Usuń zaznaczenie?
 Land.Common.Forms.ChooseItemNextPage=Następny
 Land.Common.Forms.ChooseItemNone.Back=zwrócić
 Land.Common.Forms.ChooseItemNone.Cancel=Interfejs zamknięcia

@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Jatka kehyksen valintaaluetta
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Vahvistuksen laajuus on väärä
 Land.Common.Forms.BeforePurchaseMainContent=Valitse {0}alue:\n  Lähtökohta: {1}\n  Loppu: {2}\n  Koko: {3}\n  Mittauksen aikana: {4}\n  Hinta: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Alueen vahvistus
-Land.Common.Forms.ChooseItemCancel.Back=paluu
-Land.Common.Forms.ChooseItemCancel.Cancel=Sulje käyttöliittymä
-Land.Common.Forms.ChooseItemCancel.Content=Poista?
-Land.Common.Forms.ChooseItemCancel.Title=Poista?
 Land.Common.Forms.ChooseItemNextPage=Seuraava
 Land.Common.Forms.ChooseItemNone.Back=palata
 Land.Common.Forms.ChooseItemNone.Cancel=Sulkemisrajapinta

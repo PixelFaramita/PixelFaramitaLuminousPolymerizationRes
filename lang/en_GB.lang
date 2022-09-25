@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Continue to select the range
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=The scope of confirmation is wrong
 Land.Common.Forms.BeforePurchaseMainContent=Select {0}area:\n  Starting point: {1}\n  End: {2}\n  Size: {3}\n  During the dimension: {4}\n  Price: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Territory Confirmation
-Land.Common.Forms.ChooseItemCancel.Back=return
-Land.Common.Forms.ChooseItemCancel.Cancel=Closure interface
-Land.Common.Forms.ChooseItemCancel.Content=cancel selection?
-Land.Common.Forms.ChooseItemCancel.Title=cancel selection?
 Land.Common.Forms.ChooseItemNextPage=Next page
 Land.Common.Forms.ChooseItemNone.Back=return
 Land.Common.Forms.ChooseItemNone.Cancel=Closure interface

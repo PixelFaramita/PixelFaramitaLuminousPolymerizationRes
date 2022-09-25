@@ -215,10 +215,6 @@ Land.Common.Forms.BeforePurchaseMainButtonCancel=Fahren Sie fort, die Auswahl de
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Der Bestätigungsumfang ist falsch
 Land.Common.Forms.BeforePurchaseMainContent=Ausgewählt {0}Bereich:\n  Ausgangspunkt: {1}\n  Ende: {2}\n  Größe: {3}\n  Während der Dimension: {4}\n  Preis: {5}× {6}= {7}{8}\n{9}
 Land.Common.Forms.BeforePurchaseMainTitle=Bestätigung des Territoriums
-Land.Common.Forms.ChooseItemCancel.Back=Rückgabe
-Land.Common.Forms.ChooseItemCancel.Cancel=Schließen Sie die Benutzeroberfläche
-Land.Common.Forms.ChooseItemCancel.Content=Abwählen?
-Land.Common.Forms.ChooseItemCancel.Title=Abwählen?
 Land.Common.Forms.ChooseItemNextPage=Nächster
 Land.Common.Forms.ChooseItemNone.Back=Rückkehr
 Land.Common.Forms.ChooseItemNone.Cancel=Schließschnittstelle
