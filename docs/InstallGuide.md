@@ -42,3 +42,9 @@
 
     - 控制台输入`pflp reload`重载插件，或重启服务端以应用更改
 
+---
+- ### 更新插件本体
+    - 删除旧的插件`PFLP_xxx.dll`
+    - 备份数据文件和配置文件（如果不放心）：`plugins\PixelFaramitaLuminousPolymerization\`
+    #### 请前往 [最新构建](https://gxh.lanzoum.com/b03v3gxbi)  密码：114514
+    - 手动下载`PFLP_Beta_2022_xx_xx__xx_xx_xx.dll`置于插件目录（`plugins`）
