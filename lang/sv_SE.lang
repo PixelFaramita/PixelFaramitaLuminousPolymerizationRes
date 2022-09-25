@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Chattöversättning
 TranslationEx.Command.CommandDescription.mylang=Ta emot målspråket för översättning
 TranslationEx.Command.CommandDescription.setdisabled=Stäng av översättningen
 TranslationEx.Command.CommandDescription.setenabled=Slå på översättningen
+TranslationEx.Form.Main.Content=Välj operation:
+TranslationEx.Form.Main.Title=Översatt huvudmeny
+TranslationEx.Form.MainButtonOpen=Slå på översättningen: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Översättningsinställningar
+TranslationEx.Form.MainTipDisabled=§7Stängt
+TranslationEx.Form.MainTipEnabled=§3har öppnat
+TranslationEx.Form.MainTipToDisable=§2Klicka för att stänga
+TranslationEx.Form.MainTipToEnable=§1Klicka för att öppna
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Raderingsfel kan vara ({0}) raderat
 Warp.Command.DeleteNotFound=Ta bort fel, överföringspunkten ({0}) finns inte

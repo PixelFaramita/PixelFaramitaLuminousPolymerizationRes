@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Chatoversettelse
 TranslationEx.Command.CommandDescription.mylang=Motta målspråket for oversettelse
 TranslationEx.Command.CommandDescription.setdisabled=Slå av oversettelsen
 TranslationEx.Command.CommandDescription.setenabled=Slå på oversettelsen
+TranslationEx.Form.Main.Content=Velg Operasjon:
+TranslationEx.Form.Main.Title=Oversatt hovedmeny
+TranslationEx.Form.MainButtonOpen=Slå på oversettelsen: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Oversettelsesinnstillinger
+TranslationEx.Form.MainTipDisabled=§7Stengt
+TranslationEx.Form.MainTipEnabled=§3har åpnet
+TranslationEx.Form.MainTipToDisable=§2Klikk for å lukke
+TranslationEx.Form.MainTipToEnable=§1Klikk for å åpne
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Slettingssvikt kan være ({0}) slettet
 Warp.Command.DeleteNotFound=Slettfeil, overføringspunktet ({0}) eksisterer ikke

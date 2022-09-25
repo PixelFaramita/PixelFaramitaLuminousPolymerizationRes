@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=채팅 번역
 TranslationEx.Command.CommandDescription.mylang=번역의 대상 언어를받습니다
 TranslationEx.Command.CommandDescription.setdisabled=번역을 끄십시오
 TranslationEx.Command.CommandDescription.setenabled=번역을 켜십시오
+TranslationEx.Form.Main.Content=작전 선택 :
+TranslationEx.Form.Main.Title=번역 된 메인 메뉴
+TranslationEx.Form.MainButtonOpen=번역 켜기 : {0}\n{1}
+TranslationEx.Form.MainButtonSetting=번역 설정
+TranslationEx.Form.MainTipDisabled=§7폐쇄
+TranslationEx.Form.MainTipEnabled=§3가 열렸습니다
+TranslationEx.Form.MainTipToDisable=§2닫으려면 클릭하십시오
+TranslationEx.Form.MainTipToEnable=§1클릭하려면 클릭하십시오
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=삭제 실패는 ({0}) 삭제 될 수 있습니다.
 Warp.Command.DeleteNotFound=실패 삭제, 전송 지점 ({0})이 존재하지 않습니다.

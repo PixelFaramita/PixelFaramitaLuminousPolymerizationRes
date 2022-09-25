@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Chat -Übersetzung
 TranslationEx.Command.CommandDescription.mylang=Erhalten Sie die Zielsprache der Übersetzung
 TranslationEx.Command.CommandDescription.setdisabled=Schalten Sie die Übersetzung aus
 TranslationEx.Command.CommandDescription.setenabled=Die Übersetzung einschalten
+TranslationEx.Form.Main.Content=Operation auswählen:
+TranslationEx.Form.Main.Title=Übersetzter Hauptmenü
+TranslationEx.Form.MainButtonOpen=Schalten Sie die Übersetzung ein: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Übersetzungseinstellungen
+TranslationEx.Form.MainTipDisabled=§7geschlossen
+TranslationEx.Form.MainTipEnabled=§3hat geöffnet
+TranslationEx.Form.MainTipToDisable=§2Klicken Sie hier, um zu schließen
+TranslationEx.Form.MainTipToEnable=§1Klicken Sie hier, um zu öffnen
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Löschen fehlgeschlagen, es kann ({0}) gelöscht werden
 Warp.Command.DeleteNotFound=Auslöschen des Fehlers existiert nicht der Übertragungspunkt ({0})

@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Terjemahan obrolan
 TranslationEx.Command.CommandDescription.mylang=Menerima bahasa target terjemahan
 TranslationEx.Command.CommandDescription.setdisabled=Matikan terjemahannya
 TranslationEx.Command.CommandDescription.setenabled=Nyalakan terjemahannya
+TranslationEx.Form.Main.Content=Pilih Operasi:
+TranslationEx.Form.Main.Title=Menerjemahkan menu utama
+TranslationEx.Form.MainButtonOpen=Nyalakan terjemahannya: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Pengaturan Terjemahan
+TranslationEx.Form.MainTipDisabled=§7ditutup
+TranslationEx.Form.MainTipEnabled=§3telah dibuka
+TranslationEx.Form.MainTipToDisable=§2klik untuk menutup
+TranslationEx.Form.MainTipToEnable=§1Klik untuk membuka
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Kegagalan penghapusan mungkin ({0}) dihapus
 Warp.Command.DeleteNotFound=Hapus kegagalan, titik transmisi ({0}) tidak ada

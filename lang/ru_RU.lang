@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Перевод чата
 TranslationEx.Command.CommandDescription.mylang=Получить целевой язык перевода
 TranslationEx.Command.CommandDescription.setdisabled=Выключить перевод
 TranslationEx.Command.CommandDescription.setenabled=Включить перевод
+TranslationEx.Form.Main.Content=Выберите операцию:
+TranslationEx.Form.Main.Title=Перевод главного меню
+TranslationEx.Form.MainButtonOpen=Включите перевод: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Настройки перевода
+TranslationEx.Form.MainTipDisabled=§7закрыто
+TranslationEx.Form.MainTipEnabled=§3открылся
+TranslationEx.Form.MainTipToDisable=§2Нажмите, чтобы закрыть
+TranslationEx.Form.MainTipToEnable=§1Нажмите, чтобы открыть
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Отказ удаления может быть ({0}) удалена
 Warp.Command.DeleteNotFound=Удалить сбой, точка передачи ({0}) не существует

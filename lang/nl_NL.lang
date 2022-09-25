@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Chatvertaling
 TranslationEx.Command.CommandDescription.mylang=Ontvang de doeltaal van vertaling
 TranslationEx.Command.CommandDescription.setdisabled=Schakel de vertaling uit
 TranslationEx.Command.CommandDescription.setenabled=Schakel de vertaling in
+TranslationEx.Form.Main.Content=Selecteer Bewerking:
+TranslationEx.Form.Main.Title=Vertaald hoofdmenu
+TranslationEx.Form.MainButtonOpen=Schakel de vertaling in: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Vertaalinstellingen
+TranslationEx.Form.MainTipDisabled=§7gesloten
+TranslationEx.Form.MainTipEnabled=§3is geopend
+TranslationEx.Form.MainTipToDisable=§2Klik om te sluiten
+TranslationEx.Form.MainTipToEnable=§1Klik om te openen
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Verwijderingsfout kan ({0}) worden verwijderd
 Warp.Command.DeleteNotFound=Failure verwijderen, het transmissiepunt ({0}) bestaat niet

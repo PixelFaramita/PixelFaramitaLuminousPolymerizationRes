@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Překlad chatu
 TranslationEx.Command.CommandDescription.mylang=Obdržet cílový jazyk překladu
 TranslationEx.Command.CommandDescription.setdisabled=Vypněte překlad
 TranslationEx.Command.CommandDescription.setenabled=Zapněte překlad
+TranslationEx.Form.Main.Content=Vyberte operace:
+TranslationEx.Form.Main.Title=Přeložená hlavní nabídka
+TranslationEx.Form.MainButtonOpen=Zapněte překlad: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Nastavení překladu
+TranslationEx.Form.MainTipDisabled=§7uzavřeno
+TranslationEx.Form.MainTipEnabled=§3se otevřel
+TranslationEx.Form.MainTipToDisable=§2klikněte na tlačítko Zavřít
+TranslationEx.Form.MainTipToEnable=§1Kliknutím otevřete
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Selhání delece může být smazáno ({0})
 Warp.Command.DeleteNotFound=Smazání selhání, přenosový bod ({0}) neexistuje

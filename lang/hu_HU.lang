@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Chat fordítás
 TranslationEx.Command.CommandDescription.mylang=Kapja meg a fordítás célnyelvét
 TranslationEx.Command.CommandDescription.setdisabled=Kapcsolja ki a fordítást
 TranslationEx.Command.CommandDescription.setenabled=Kapcsolja be a fordítást
+TranslationEx.Form.Main.Content=Válassza a Művelet lehetőséget:
+TranslationEx.Form.Main.Title=Fordított főmenü
+TranslationEx.Form.MainButtonOpen=Kapcsolja be a fordítást: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Fordítási beállítások
+TranslationEx.Form.MainTipDisabled=§7Zárt
+TranslationEx.Form.MainTipEnabled=§3megnyílt
+TranslationEx.Form.MainTipToDisable=§2Kattintson a bezáráshoz
+TranslationEx.Form.MainTipToEnable=§1Kattintson a Nyitáshoz
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=A törlési hiba ({0}) törölhető lehet
 Warp.Command.DeleteNotFound=A hiba törlése, az átviteli pont ({0}) nem létezik

@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Chatoversættelse
 TranslationEx.Command.CommandDescription.mylang=Modtag målsproget for oversættelse
 TranslationEx.Command.CommandDescription.setdisabled=Sluk for oversættelsen
 TranslationEx.Command.CommandDescription.setenabled=Tænd for oversættelsen
+TranslationEx.Form.Main.Content=Vælg Betjening:
+TranslationEx.Form.Main.Title=Oversat hovedmenu
+TranslationEx.Form.MainButtonOpen=Tænd for oversættelsen: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Oversættelsesindstillinger
+TranslationEx.Form.MainTipDisabled=§7lukket
+TranslationEx.Form.MainTipEnabled=§3har åbnet
+TranslationEx.Form.MainTipToDisable=§2Klik for at lukke
+TranslationEx.Form.MainTipToEnable=§1Klik for at åbne
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Sletningssvigt kan være ({0}) slettet
 Warp.Command.DeleteNotFound=Slet fejl, transmissionspunktet ({0}) findes ikke

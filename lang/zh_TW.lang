@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=聊天翻譯
 TranslationEx.Command.CommandDescription.mylang=接收翻譯的目標語言
 TranslationEx.Command.CommandDescription.setdisabled=關閉翻譯
 TranslationEx.Command.CommandDescription.setenabled=開啟翻譯
+TranslationEx.Form.Main.Content=選擇操作：
+TranslationEx.Form.Main.Title=翻譯主菜單
+TranslationEx.Form.MainButtonOpen=開啟翻譯：{0}\n{1}
+TranslationEx.Form.MainButtonSetting=翻譯設置
+TranslationEx.Form.MainTipDisabled=§7已關閉
+TranslationEx.Form.MainTipEnabled=§3已開啟
+TranslationEx.Form.MainTipToDisable=§2點擊關閉
+TranslationEx.Form.MainTipToEnable=§1點擊開啟
 TranslationEx.Format.TrChat=§a[{0}=>{1}]§6<{2}>§r{3}
 Warp.Command.DeleteFailed=刪除失敗，可能是（{0}）已刪除
 Warp.Command.DeleteNotFound=刪除失敗，傳送點（{0}）不存在

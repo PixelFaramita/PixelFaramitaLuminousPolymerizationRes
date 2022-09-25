@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Превод на чат
 TranslationEx.Command.CommandDescription.mylang=Получавайте целевия език на превод
 TranslationEx.Command.CommandDescription.setdisabled=Изключете превода
 TranslationEx.Command.CommandDescription.setenabled=Включете превода
+TranslationEx.Form.Main.Content=Изберете действие:
+TranslationEx.Form.Main.Title=Преведено главно меню
+TranslationEx.Form.MainButtonOpen=Включете превода: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Настройки на превод
+TranslationEx.Form.MainTipDisabled=§7затворен
+TranslationEx.Form.MainTipEnabled=§3се отвори
+TranslationEx.Form.MainTipToDisable=§2Щракнете, за да затворите
+TranslationEx.Form.MainTipToEnable=§1Щракнете, за да отворите
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Неуспехът на изтриването може да бъде изтрит ({0})
 Warp.Command.DeleteNotFound=Изтриване на повреда, точката на предаване ({0}) не съществува

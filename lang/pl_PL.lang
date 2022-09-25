@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Tłumaczenie czatu
 TranslationEx.Command.CommandDescription.mylang=Otrzymuj język tłumaczenia
 TranslationEx.Command.CommandDescription.setdisabled=Wyłącz tłumaczenie
 TranslationEx.Command.CommandDescription.setenabled=Włącz tłumaczenie
+TranslationEx.Form.Main.Content=Wybierz operację:
+TranslationEx.Form.Main.Title=Przetłumaczone menu główne
+TranslationEx.Form.MainButtonOpen=Włącz tłumaczenie: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Ustawienia tłumaczenia
+TranslationEx.Form.MainTipDisabled=§7zamknięty
+TranslationEx.Form.MainTipEnabled=§3otworzył się
+TranslationEx.Form.MainTipToDisable=§2Kliknij, aby zamknąć
+TranslationEx.Form.MainTipToEnable=§1kliknij, aby otworzyć
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Niepowodzenie usunięcia może być usunięte ({0})
 Warp.Command.DeleteNotFound=Usuń awarię, punkt transmisji ({0}) nie istnieje

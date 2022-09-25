@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Traduction de chat
 TranslationEx.Command.CommandDescription.mylang=Recevoir le langage cible de la traduction
 TranslationEx.Command.CommandDescription.setdisabled=Éteindre la traduction
 TranslationEx.Command.CommandDescription.setenabled=Allumer la traduction
+TranslationEx.Form.Main.Content=Sélectionnez l'opération:
+TranslationEx.Form.Main.Title=Menu principal traduit
+TranslationEx.Form.MainButtonOpen=Allumez la traduction: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Paramètres de traduction
+TranslationEx.Form.MainTipDisabled=§7fermé
+TranslationEx.Form.MainTipEnabled=§3a ouvert
+TranslationEx.Form.MainTipToDisable=§2cliquez pour fermer
+TranslationEx.Form.MainTipToEnable=§1cliquez pour ouvrir
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=La défaillance de la suppression peut être supprimée ({0})
 Warp.Command.DeleteNotFound=Supprimer la défaillance, le point de transmission ({0}) n'existe pas

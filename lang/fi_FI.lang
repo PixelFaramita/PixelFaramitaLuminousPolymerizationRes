@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Chat -käännös
 TranslationEx.Command.CommandDescription.mylang=Vastaanota käännöskieli
 TranslationEx.Command.CommandDescription.setdisabled=Sammuta käännös
 TranslationEx.Command.CommandDescription.setenabled=Käynnistää käännös
+TranslationEx.Form.Main.Content=Valitse toiminta:
+TranslationEx.Form.Main.Title=Käännetty päävalikko
+TranslationEx.Form.MainButtonOpen=Käännä käännös päälle: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Käännösasetukset
+TranslationEx.Form.MainTipDisabled=§7suljettu
+TranslationEx.Form.MainTipEnabled=§3on avannut
+TranslationEx.Form.MainTipToDisable=§2Napsauta sulkeaksesi
+TranslationEx.Form.MainTipToEnable=§1Napsauta avataksesi
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Poistovirhe voi olla ({0}) poistettu
 Warp.Command.DeleteNotFound=Poista vika, lähetyspiste ({0}) ei ole olemassa

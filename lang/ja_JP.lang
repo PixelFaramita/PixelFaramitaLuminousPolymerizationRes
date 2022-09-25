@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=チャット翻訳
 TranslationEx.Command.CommandDescription.mylang=翻訳のターゲット言語を受け取ります
 TranslationEx.Command.CommandDescription.setdisabled=翻訳をオフにします
 TranslationEx.Command.CommandDescription.setenabled=翻訳をオンにします
+TranslationEx.Form.Main.Content=[操作]を選択します：
+TranslationEx.Form.Main.Title=翻訳されたメインメニュー
+TranslationEx.Form.MainButtonOpen=翻訳をオンにします：{0}\n{1}
+TranslationEx.Form.MainButtonSetting=翻訳設定
+TranslationEx.Form.MainTipDisabled=§7閉じた
+TranslationEx.Form.MainTipEnabled=§3がオープンしました
+TranslationEx.Form.MainTipToDisable=§2クリックして閉じます
+TranslationEx.Form.MainTipToEnable=§1クリックして開きます
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=削除障害は（{0}）削除される可能性があります
 Warp.Command.DeleteNotFound=故障を削除し、送信ポイント（{0}）が存在しません

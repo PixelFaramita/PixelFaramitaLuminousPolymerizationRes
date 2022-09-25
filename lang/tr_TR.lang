@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Sohbet çevirisi
 TranslationEx.Command.CommandDescription.mylang=Tercüme Dilini Alın
 TranslationEx.Command.CommandDescription.setdisabled=Çeviriyi kapatın
 TranslationEx.Command.CommandDescription.setenabled=Çeviriyi aç
+TranslationEx.Form.Main.Content=İşlemi seçin:
+TranslationEx.Form.Main.Title=Çevrilen Ana Menü
+TranslationEx.Form.MainButtonOpen=Çeviriyi açın: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Çeviri Ayarları
+TranslationEx.Form.MainTipDisabled=§7kapalı
+TranslationEx.Form.MainTipEnabled=§3açıldı
+TranslationEx.Form.MainTipToDisable=§2Kapatmak için tıklayın
+TranslationEx.Form.MainTipToEnable=§1açmak için tıklayın
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Silme hatası ({0}) silinmiş olabilir
 Warp.Command.DeleteNotFound=Sil hatası, iletim noktası ({0}) yok

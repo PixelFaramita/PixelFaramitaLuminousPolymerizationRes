@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=聊天译
 TranslationEx.Command.CommandDescription.mylang=受译者语
 TranslationEx.Command.CommandDescription.setdisabled=闭译
 TranslationEx.Command.CommandDescription.setenabled=开译
+TranslationEx.Form.Main.Content=择操作。
+TranslationEx.Form.Main.Title=译主菜单
+TranslationEx.Form.MainButtonOpen=开译{0}\n{1}
+TranslationEx.Form.MainButtonSetting=译者设
+TranslationEx.Form.MainTipDisabled=§7已闭
+TranslationEx.Form.MainTipEnabled=§3已启
+TranslationEx.Form.MainTipToDisable=§2点击闭
+TranslationEx.Form.MainTipToEnable=§1点击启
 TranslationEx.Format.TrChat=§a[{0}=>{1}] §6<{2}>§r{3}
 Warp.Command.DeleteFailed=删败,疑({0})已删
 Warp.Command.DeleteNotFound=删败,传点({0})不存

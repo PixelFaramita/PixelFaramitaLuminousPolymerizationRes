@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Переклад чату
 TranslationEx.Command.CommandDescription.mylang=Отримайте цільову мову перекладу
 TranslationEx.Command.CommandDescription.setdisabled=Вимкніть переклад
 TranslationEx.Command.CommandDescription.setenabled=Увімкніть переклад
+TranslationEx.Form.Main.Content=Виберіть операцію:
+TranslationEx.Form.Main.Title=Перекладене головне меню
+TranslationEx.Form.MainButtonOpen=Увімкніть переклад: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Налаштування перекладу
+TranslationEx.Form.MainTipDisabled=§7закрито
+TranslationEx.Form.MainTipEnabled=§3відкрився
+TranslationEx.Form.MainTipToDisable=§2Клацніть, щоб закрити
+TranslationEx.Form.MainTipToEnable=§1Клацніть, щоб відкрити
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Невдача видалення може бути ({0}) видалено
 Warp.Command.DeleteNotFound=Видалити збій, точка передачі ({0}) не існує

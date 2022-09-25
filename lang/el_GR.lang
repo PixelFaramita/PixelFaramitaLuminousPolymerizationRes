@@ -891,6 +891,14 @@ TranslationEx.Command.CommandDescription.main=Μετάφραση συνομιλ�
 TranslationEx.Command.CommandDescription.mylang=Λάβετε τη γλώσσα -στόχο της μετάφρασης
 TranslationEx.Command.CommandDescription.setdisabled=Απενεργοποιήστε τη μετάφραση
 TranslationEx.Command.CommandDescription.setenabled=Ενεργοποιήστε τη μετάφραση
+TranslationEx.Form.Main.Content=Επιλέξτε Λειτουργία:
+TranslationEx.Form.Main.Title=Μεταφρασμένο κύριο μενού
+TranslationEx.Form.MainButtonOpen=Ενεργοποιήστε τη μετάφραση: {0}\n{1}
+TranslationEx.Form.MainButtonSetting=Ρυθμίσεις μετάφρασης
+TranslationEx.Form.MainTipDisabled=§7Κλειστό
+TranslationEx.Form.MainTipEnabled=§3έχει ανοίξει
+TranslationEx.Form.MainTipToDisable=§2Κάντε κλικ για να κλείσετε
+TranslationEx.Form.MainTipToEnable=§1Κάντε κλικ για να ανοίξετε
 TranslationEx.Format.TrChat=§a[{0}=> {1}] §6<{2}> §r{3}
 Warp.Command.DeleteFailed=Η αποτυχία εξάλειψης μπορεί να διαγραφεί ({0})
 Warp.Command.DeleteNotFound=Διαγραφή αποτυχίας, το σημείο μετάδοσης ({0}) δεν υπάρχει
