@@ -1,4 +1,4 @@
-## 安装教程
+## PixelFaramitaLuminousPolymerization安装教程
 #### 部分步骤若已经完成请跳过
 ---
 - ### 下载BDS
