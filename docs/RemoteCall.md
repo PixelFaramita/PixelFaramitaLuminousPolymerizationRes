@@ -35,6 +35,9 @@
 <details>
 <summary><b>General<b></summary>
 
+> <details>
+> <summary><b>SetConfig  - 设置全局配置文件（要求JSON字符串）<b></summary>
+>
 >## General::SetConfig
 >### 设置全局配置文件（要求JSON字符串）
 >|  形参   | 类型  |
@@ -73,7 +76,14 @@
 >	|>General_SetConfig.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetConfig  - 获取全局配置文件（JSON字符串）<b></summary>
+>
 >## General::GetConfig
 >### 获取全局配置文件（JSON字符串）
 >无参数;
@@ -109,7 +119,14 @@
 >General_GetConfig()
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>Reload  - 重新加载所有功能的配置文件<b></summary>
+>
 >## General::Reload
 >### 重新加载所有功能的配置文件
 >无参数;
@@ -144,10 +161,15 @@
 >let General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
 >General_Reload()
 >```
+>
+> </details>
 </details>
 <details>
 <summary><b>Command<b></summary>
 
+> <details>
+> <summary><b>SetCommandDisabled  - 设置命令禁用(可设置提示)<b></summary>
+>
 >## Command::SetCommandDisabled
 >### 设置命令禁用(可设置提示)
 >|  形参   | 类型  |
@@ -187,7 +209,14 @@
 >(playerXuid,cmd,feedback)
 >	|>Command_SetCommandDisabled.Invoke
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>SetCommandEnabled  - 设置命令启用<b></summary>
+>
 >## Command::SetCommandEnabled
 >### 设置命令启用
 >|  形参   | 类型  |
@@ -226,10 +255,15 @@
 >(playerXuid,cmd)
 >	|>Command_SetCommandEnabled.Invoke
 >```
+>
+> </details>
 </details>
 <details>
 <summary><b>Language<b></summary>
 
+> <details>
+> <summary><b>Translate  - 翻译<b></summary>
+>
 >## Language::Translate
 >### 翻译
 >|  形参   | 类型  |
@@ -270,10 +304,15 @@
 >	|>Language_Translate.Invoke
 >	|>ignore
 >```
+>
+> </details>
 </details>
 <details>
 <summary><b>ChatEx<b></summary>
 
+> <details>
+> <summary><b>SetNickName  - 设置玩家昵称<b></summary>
+>
 >## ChatEx::SetNickName
 >### 设置玩家昵称
 >|  形参   | 类型  |
@@ -312,7 +351,14 @@
 >(playerXuid,nickName)
 >	|>ChatEx_SetNickName.Invoke
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>SetFakeName  - 设置玩家聊天时的名字<b></summary>
+>
 >## ChatEx::SetFakeName
 >### 设置玩家聊天时的名字
 >|  形参   | 类型  |
@@ -351,7 +397,14 @@
 >(playerXuid,fakeName)
 >	|>ChatEx_SetFakeName.Invoke
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>SetEnd  - 设置玩家聊天消息后缀<b></summary>
+>
 >## ChatEx::SetEnd
 >### 设置玩家聊天消息后缀
 >|  形参   | 类型  |
@@ -390,7 +443,14 @@
 >(playerXuid,endStr)
 >	|>ChatEx_SetEnd.Invoke
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>SetStart  - 设置玩家聊天消息前缀<b></summary>
+>
 >## ChatEx::SetStart
 >### 设置玩家聊天消息前缀
 >|  形参   | 类型  |
@@ -429,7 +489,14 @@
 >(playerXuid,startStr)
 >	|>ChatEx_SetStart.Invoke
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetNickName  - 获取玩家昵称<b></summary>
+>
 >## ChatEx::GetNickName
 >### 获取玩家昵称
 >|  形参   | 类型  |
@@ -468,7 +535,14 @@
 >	|>ChatEx_GetNickName.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetFakeName  - 获取玩家聊天时的名字<b></summary>
+>
 >## ChatEx::GetFakeName
 >### 获取玩家聊天时的名字
 >|  形参   | 类型  |
@@ -507,7 +581,14 @@
 >	|>ChatEx_GetFakeName.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetEnd  - 获取玩家聊天消息后缀<b></summary>
+>
 >## ChatEx::GetEnd
 >### 获取玩家聊天消息后缀
 >|  形参   | 类型  |
@@ -546,7 +627,14 @@
 >	|>ChatEx_GetEnd.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetStart  - 获取玩家聊天消息前缀<b></summary>
+>
 >## ChatEx::GetStart
 >### 获取玩家聊天消息前缀
 >|  形参   | 类型  |
@@ -585,10 +673,15 @@
 >	|>ChatEx_GetStart.Invoke
 >	|>ignore
 >```
+>
+> </details>
 </details>
 <details>
 <summary><b>Lands<b></summary>
 
+> <details>
+> <summary><b>CheckCubeHasLand  - 检查指定立方体区域(float)是否有领地<b></summary>
+>
 >## Lands::CheckCubeHasLand
 >### 检查指定立方体区域(float)是否有领地
 >|  形参   | 类型  |
@@ -633,7 +726,14 @@
 >	|>Lands_CheckCubeHasLand.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>CheckCubeHasLandInt  - 检查指定立方体区域(int)是否有领地<b></summary>
+>
 >## Lands::CheckCubeHasLandInt
 >### 检查指定立方体区域(int)是否有领地
 >|  形参   | 类型  |
@@ -678,7 +778,14 @@
 >	|>Lands_CheckCubeHasLandInt.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>CheckPosHasLand  - 检查指定坐标(float)是否有领地<b></summary>
+>
 >## Lands::CheckPosHasLand
 >### 检查指定坐标(float)是否有领地
 >|  形参   | 类型  |
@@ -720,7 +827,14 @@
 >	|>Lands_CheckPosHasLand.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>CheckPosHasLandInt  - 检查指定坐标(int)是否有领地<b></summary>
+>
 >## Lands::CheckPosHasLandInt
 >### 检查指定坐标(int)是否有领地
 >|  形参   | 类型  |
@@ -762,7 +876,14 @@
 >	|>Lands_CheckPosHasLandInt.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetLandByCube  - 获取立方体区域(float)领地信息（返回JSON字符串）<b></summary>
+>
 >## Lands::GetLandByCube
 >### 获取立方体区域(float)领地信息（返回JSON字符串）
 >|  形参   | 类型  |
@@ -807,7 +928,14 @@
 >	|>Lands_GetLandByCube.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetLandByCubeInt  - 获取立方体区域(int)领地信息（返回JSON字符串）<b></summary>
+>
 >## Lands::GetLandByCubeInt
 >### 获取立方体区域(int)领地信息（返回JSON字符串）
 >|  形参   | 类型  |
@@ -852,7 +980,14 @@
 >	|>Lands_GetLandByCubeInt.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetLandByPos  - 获取指定坐标(float)领地信息（返回JSON字符串）<b></summary>
+>
 >## Lands::GetLandByPos
 >### 获取指定坐标(float)领地信息（返回JSON字符串）
 >|  形参   | 类型  |
@@ -894,7 +1029,14 @@
 >	|>Lands_GetLandByPos.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetLandByPosInt  - 获取指定坐标(int)领地信息（返回JSON字符串）<b></summary>
+>
 >## Lands::GetLandByPosInt
 >### 获取指定坐标(int)领地信息（返回JSON字符串）
 >|  形参   | 类型  |
@@ -936,7 +1078,14 @@
 >	|>Lands_GetLandByPosInt.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetLandInfoByCube  - 获取立方体区域(float)领地数据源详细信息（返回JSON字符串）<b></summary>
+>
 >## Lands::GetLandInfoByCube
 >### 获取立方体区域(float)领地数据源详细信息（返回JSON字符串）
 >|  形参   | 类型  |
@@ -981,7 +1130,14 @@
 >	|>Lands_GetLandInfoByCube.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetLandInfoByCubeInt  - 获取立方体区域(int)领地数据源详细信息（返回JSON字符串）<b></summary>
+>
 >## Lands::GetLandInfoByCubeInt
 >### 获取立方体区域(int)领地数据源详细信息（返回JSON字符串）
 >|  形参   | 类型  |
@@ -1026,7 +1182,14 @@
 >	|>Lands_GetLandInfoByCubeInt.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetLandInfoByPos  - 获取指定坐标(float)领地数据源详细信息（返回JSON字符串）<b></summary>
+>
 >## Lands::GetLandInfoByPos
 >### 获取指定坐标(float)领地数据源详细信息（返回JSON字符串）
 >|  形参   | 类型  |
@@ -1068,7 +1231,14 @@
 >	|>Lands_GetLandInfoByPos.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>GetLandInfoByPosInt  - 获取指定坐标(int)领地数据源详细信息（返回JSON字符串）<b></summary>
+>
 >## Lands::GetLandInfoByPosInt
 >### 获取指定坐标(int)领地数据源详细信息（返回JSON字符串）
 >|  形参   | 类型  |
@@ -1110,99 +1280,14 @@
 >	|>Lands_GetLandInfoByPosInt.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
->## Lands::SetLandInfoByCube
->### 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | float |
->| y1 | float |
->| z1 | float |
->| x2 | float |
->| y2 | float |
->| z2 | float |
->| dimensionId | int |
->| landinfo | string |
->返回值类型：bool;
-> - JavaScript
->```js
->/** 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
->const Lands_SetLandInfoByCube = ll.import("PFLP", "Lands::SetLandInfoByCube");
->let result = Lands_SetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId,landinfo);
->```
-> - C++
->```C++
->// 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->auto Lands_SetLandInfoByCube = RemoteCall::importAs<bool(float const& x1,float const& y1,float const& z1,float const& x2,float const& y2,float const& z2,int const& dimensionId,std::string const& landinfo)>("PFLP", "Lands::SetLandInfoByCube");
->auto result = Lands_SetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId,landinfo);
->```
-> - C#
->```C#
->// 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->var Lands_SetLandInfoByCube = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByCube");
->var result = Lands_SetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId,landinfo);
->```
-> - Visual Basic .Net
->```vb
->' 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->Dim Lands_SetLandInfoByCube = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByCube")
->Dim result = Lands_SetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
->```
-> - F#
->```F#
->// 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->let Lands_SetLandInfoByCube = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByCube")
->(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
->	|>Lands_SetLandInfoByCube.Invoke
->	|>ignore
->```
->---
->## Lands::SetLandInfoByCubeInt
->### 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | int |
->| y1 | int |
->| z1 | int |
->| x2 | int |
->| y2 | int |
->| z2 | int |
->| dimensionId | int |
->| landinfo | string |
->返回值类型：bool;
-> - JavaScript
->```js
->/** 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
->const Lands_SetLandInfoByCubeInt = ll.import("PFLP", "Lands::SetLandInfoByCubeInt");
->let result = Lands_SetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId,landinfo);
->```
-> - C++
->```C++
->// 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->auto Lands_SetLandInfoByCubeInt = RemoteCall::importAs<bool(int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,int const& dimensionId,std::string const& landinfo)>("PFLP", "Lands::SetLandInfoByCubeInt");
->auto result = Lands_SetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId,landinfo);
->```
-> - C#
->```C#
->// 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->var Lands_SetLandInfoByCubeInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByCubeInt");
->var result = Lands_SetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId,landinfo);
->```
-> - Visual Basic .Net
->```vb
->' 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->Dim Lands_SetLandInfoByCubeInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::SetLandInfoByCubeInt")
->Dim result = Lands_SetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
->```
-> - F#
->```F#
->// 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->let Lands_SetLandInfoByCubeInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByCubeInt")
->(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
->	|>Lands_SetLandInfoByCubeInt.Invoke
->	|>ignore
->```
->---
+>
+> <details>
+> <summary><b>SetLandInfoByPos  - 设置指定坐标(float)领地数据源详细信息（传入JSON字符串）<b></summary>
+>
 >## Lands::SetLandInfoByPos
 >### 设置指定坐标(float)领地数据源详细信息（传入JSON字符串）
 >|  形参   | 类型  |
@@ -1245,7 +1330,14 @@
 >	|>Lands_SetLandInfoByPos.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>SetLandInfoByPosInt  - 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串）<b></summary>
+>
 >## Lands::SetLandInfoByPosInt
 >### 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串）
 >|  形参   | 类型  |
@@ -1288,10 +1380,217 @@
 >	|>Lands_SetLandInfoByPosInt.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>CreateLand2D  - 新建领地<b></summary>
+>
+>## Lands::CreateLand2D
+>### 新建领地
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x1 | int |
+>| z1 | int |
+>| x2 | int |
+>| z2 | int |
+>| dimensionId | int |
+>| playerXuid | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 新建领地 返回值类型：bool */
+>const Lands_CreateLand2D = ll.import("PFLP", "Lands::CreateLand2D");
+>let result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
+>```
+> - C++
+>```C++
+>// 新建领地 返回值类型：bool
+>auto Lands_CreateLand2D = RemoteCall::importAs<bool(int const& x1,int const& z1,int const& x2,int const& z2,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CreateLand2D");
+>auto result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
+>```
+> - C#
+>```C#
+>// 新建领地 返回值类型：bool
+>var Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D");
+>var result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 新建领地 返回值类型：bool
+>Dim Lands_CreateLand2D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand2D")
+>Dim result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid)
+>```
+> - F#
+>```F#
+>// 新建领地 返回值类型：bool
+>let Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D")
+>(x1,z1,x2,z2,dimensionId,playerXuid)
+>	|>Lands_CreateLand2D.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>CreateLand3D  - 新建领地<b></summary>
+>
+>## Lands::CreateLand3D
+>### 新建领地
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x1 | int |
+>| y1 | int |
+>| z1 | int |
+>| x2 | int |
+>| y2 | int |
+>| z2 | int |
+>| dimensionId | int |
+>| playerXuid | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 新建领地 返回值类型：bool */
+>const Lands_CreateLand3D = ll.import("PFLP", "Lands::CreateLand3D");
+>let result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
+>```
+> - C++
+>```C++
+>// 新建领地 返回值类型：bool
+>auto Lands_CreateLand3D = RemoteCall::importAs<bool(int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CreateLand3D");
+>auto result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
+>```
+> - C#
+>```C#
+>// 新建领地 返回值类型：bool
+>var Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D");
+>var result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 新建领地 返回值类型：bool
+>Dim Lands_CreateLand3D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand3D")
+>Dim result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
+>```
+> - F#
+>```F#
+>// 新建领地 返回值类型：bool
+>let Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D")
+>(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
+>	|>Lands_CreateLand3D.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>DeleteLandByPos  - 删除指定坐标(float)的领地<b></summary>
+>
+>## Lands::DeleteLandByPos
+>### 删除指定坐标(float)的领地
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x | float |
+>| y | float |
+>| z | float |
+>| dimensionId | int |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 删除指定坐标(float)的领地 返回值类型：bool */
+>const Lands_DeleteLandByPos = ll.import("PFLP", "Lands::DeleteLandByPos");
+>let result = Lands_DeleteLandByPos(x,y,z,dimensionId);
+>```
+> - C++
+>```C++
+>// 删除指定坐标(float)的领地 返回值类型：bool
+>auto Lands_DeleteLandByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Lands::DeleteLandByPos");
+>auto result = Lands_DeleteLandByPos(x,y,z,dimensionId);
+>```
+> - C#
+>```C#
+>// 删除指定坐标(float)的领地 返回值类型：bool
+>var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos");
+>var result = Lands_DeleteLandByPos(x,y,z,dimensionId);
+>```
+> - Visual Basic .Net
+>```vb
+>' 删除指定坐标(float)的领地 返回值类型：bool
+>Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::DeleteLandByPos")
+>Dim result = Lands_DeleteLandByPos(x,y,z,dimensionId)
+>```
+> - F#
+>```F#
+>// 删除指定坐标(float)的领地 返回值类型：bool
+>let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos")
+>(x,y,z,dimensionId)
+>	|>Lands_DeleteLandByPos.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>DeleteLandByPosInt  - 删除指定坐标(int)的领地<b></summary>
+>
+>## Lands::DeleteLandByPosInt
+>### 删除指定坐标(int)的领地
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x | int |
+>| y | int |
+>| z | int |
+>| dimensionId | int |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 删除指定坐标(int)的领地 返回值类型：bool */
+>const Lands_DeleteLandByPosInt = ll.import("PFLP", "Lands::DeleteLandByPosInt");
+>let result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
+>```
+> - C++
+>```C++
+>// 删除指定坐标(int)的领地 返回值类型：bool
+>auto Lands_DeleteLandByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId)>("PFLP", "Lands::DeleteLandByPosInt");
+>auto result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
+>```
+> - C#
+>```C#
+>// 删除指定坐标(int)的领地 返回值类型：bool
+>var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt");
+>var result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
+>```
+> - Visual Basic .Net
+>```vb
+>' 删除指定坐标(int)的领地 返回值类型：bool
+>Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::DeleteLandByPosInt")
+>Dim result = Lands_DeleteLandByPosInt(x,y,z,dimensionId)
+>```
+> - F#
+>```F#
+>// 删除指定坐标(int)的领地 返回值类型：bool
+>let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt")
+>(x,y,z,dimensionId)
+>	|>Lands_DeleteLandByPosInt.Invoke
+>	|>ignore
+>```
+>
+> </details>
 </details>
 <details>
 <summary><b>Money<b></summary>
 
+> <details>
+> <summary><b>Get  - 获取玩家(指定玩家名)金钱<b></summary>
+>
 >## Money::Get
 >### 获取玩家(指定玩家名)金钱
 >|  形参   | 类型  |
@@ -1330,7 +1629,14 @@
 >	|>Money_Get.Invoke
 >	|>ignore
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>Add  - 给玩家(指定玩家名)加钱<b></summary>
+>
 >## Money::Add
 >### 给玩家(指定玩家名)加钱
 >|  形参   | 类型  |
@@ -1370,7 +1676,14 @@
 >(playerXuid,count,info)
 >	|>Money_Add.Invoke
 >```
+>
+> </details>
+>
 >---
+>
+> <details>
+> <summary><b>Remove  - 给玩家(指定玩家名)减钱<b></summary>
+>
 >## Money::Remove
 >### 给玩家(指定玩家名)减钱
 >|  形参   | 类型  |
@@ -1410,6 +1723,8 @@
 >(playerXuid,count,info)
 >	|>Money_Remove.Invoke
 >```
+>
+> </details>
 </details>
 <details><summary><b>All Api in JavaScript / JS接口<b></summary>
 
@@ -1470,14 +1785,18 @@
 >const Lands_GetLandInfoByPos = ll.import("PFLP", "Lands::GetLandInfoByPos");
 >/** 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string */
 >const Lands_GetLandInfoByPosInt = ll.import("PFLP", "Lands::GetLandInfoByPosInt");
->/** 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
->const Lands_SetLandInfoByCube = ll.import("PFLP", "Lands::SetLandInfoByCube");
->/** 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
->const Lands_SetLandInfoByCubeInt = ll.import("PFLP", "Lands::SetLandInfoByCubeInt");
 >/** 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
 >const Lands_SetLandInfoByPos = ll.import("PFLP", "Lands::SetLandInfoByPos");
 >/** 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
 >const Lands_SetLandInfoByPosInt = ll.import("PFLP", "Lands::SetLandInfoByPosInt");
+>/** 新建领地 返回值类型：bool */
+>const Lands_CreateLand2D = ll.import("PFLP", "Lands::CreateLand2D");
+>/** 新建领地 返回值类型：bool */
+>const Lands_CreateLand3D = ll.import("PFLP", "Lands::CreateLand3D");
+>/** 删除指定坐标(float)的领地 返回值类型：bool */
+>const Lands_DeleteLandByPos = ll.import("PFLP", "Lands::DeleteLandByPos");
+>/** 删除指定坐标(int)的领地 返回值类型：bool */
+>const Lands_DeleteLandByPosInt = ll.import("PFLP", "Lands::DeleteLandByPosInt");
 >/** 获取玩家(指定玩家名)金钱 返回值类型：long */
 >const Money_Get = ll.import("PFLP", "Money::Get");
 >/** 给玩家(指定玩家名)加钱 */
@@ -1684,30 +2003,6 @@
 >		 * @returns {string}
 >		 */
 >		GetLandInfoByPosInt(x,y,z,dimensionId) { return (this.Lands_GetLandInfoByPosInt??=ll.import("PFLP", "Lands::GetLandInfoByPosInt"))(x,y,z,dimensionId)},
->		/** 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->		 * @param {number} x1
->		 * @param {number} y1
->		 * @param {number} z1
->		 * @param {number} x2
->		 * @param {number} y2
->		 * @param {number} z2
->		 * @param {number} dimensionId
->		 * @param {string} landinfo
->		 * @returns {boolean}
->		 */
->		SetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId,landinfo) { return (this.Lands_SetLandInfoByCube??=ll.import("PFLP", "Lands::SetLandInfoByCube"))(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)},
->		/** 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->		 * @param {number} x1
->		 * @param {number} y1
->		 * @param {number} z1
->		 * @param {number} x2
->		 * @param {number} y2
->		 * @param {number} z2
->		 * @param {number} dimensionId
->		 * @param {string} landinfo
->		 * @returns {boolean}
->		 */
->		SetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId,landinfo) { return (this.Lands_SetLandInfoByCubeInt??=ll.import("PFLP", "Lands::SetLandInfoByCubeInt"))(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)},
 >		/** 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >		 * @param {number} x
 >		 * @param {number} y
@@ -1726,6 +2021,44 @@
 >		 * @returns {boolean}
 >		 */
 >		SetLandInfoByPosInt(x,y,z,dimensionId,landinfo) { return (this.Lands_SetLandInfoByPosInt??=ll.import("PFLP", "Lands::SetLandInfoByPosInt"))(x,y,z,dimensionId,landinfo)},
+>		/** 新建领地 返回值类型：bool
+>		 * @param {number} x1
+>		 * @param {number} z1
+>		 * @param {number} x2
+>		 * @param {number} z2
+>		 * @param {number} dimensionId
+>		 * @param {string} playerXuid
+>		 * @returns {boolean}
+>		 */
+>		CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid) { return (this.Lands_CreateLand2D??=ll.import("PFLP", "Lands::CreateLand2D"))(x1,z1,x2,z2,dimensionId,playerXuid)},
+>		/** 新建领地 返回值类型：bool
+>		 * @param {number} x1
+>		 * @param {number} y1
+>		 * @param {number} z1
+>		 * @param {number} x2
+>		 * @param {number} y2
+>		 * @param {number} z2
+>		 * @param {number} dimensionId
+>		 * @param {string} playerXuid
+>		 * @returns {boolean}
+>		 */
+>		CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid) { return (this.Lands_CreateLand3D??=ll.import("PFLP", "Lands::CreateLand3D"))(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)},
+>		/** 删除指定坐标(float)的领地 返回值类型：bool
+>		 * @param {number} x
+>		 * @param {number} y
+>		 * @param {number} z
+>		 * @param {number} dimensionId
+>		 * @returns {boolean}
+>		 */
+>		DeleteLandByPos(x,y,z,dimensionId) { return (this.Lands_DeleteLandByPos??=ll.import("PFLP", "Lands::DeleteLandByPos"))(x,y,z,dimensionId)},
+>		/** 删除指定坐标(int)的领地 返回值类型：bool
+>		 * @param {number} x
+>		 * @param {number} y
+>		 * @param {number} z
+>		 * @param {number} dimensionId
+>		 * @returns {boolean}
+>		 */
+>		DeleteLandByPosInt(x,y,z,dimensionId) { return (this.Lands_DeleteLandByPosInt??=ll.import("PFLP", "Lands::DeleteLandByPosInt"))(x,y,z,dimensionId)},
 >	},
 >	Money : {
 >		/** 获取玩家(指定玩家名)金钱 返回值类型：long
@@ -1811,14 +2144,18 @@ auto Lands_GetLandInfoByCubeInt = RemoteCall::importAs<std::string(int const& x1
 auto Lands_GetLandInfoByPos = RemoteCall::importAs<std::string(float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Lands::GetLandInfoByPos");
 // 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 auto Lands_GetLandInfoByPosInt = RemoteCall::importAs<std::string(int const& x,int const& y,int const& z,int const& dimensionId)>("PFLP", "Lands::GetLandInfoByPosInt");
-// 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
-auto Lands_SetLandInfoByCube = RemoteCall::importAs<bool(float const& x1,float const& y1,float const& z1,float const& x2,float const& y2,float const& z2,int const& dimensionId,std::string const& landinfo)>("PFLP", "Lands::SetLandInfoByCube");
-// 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
-auto Lands_SetLandInfoByCubeInt = RemoteCall::importAs<bool(int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,int const& dimensionId,std::string const& landinfo)>("PFLP", "Lands::SetLandInfoByCubeInt");
 // 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 auto Lands_SetLandInfoByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& landinfo)>("PFLP", "Lands::SetLandInfoByPos");
 // 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 auto Lands_SetLandInfoByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& landinfo)>("PFLP", "Lands::SetLandInfoByPosInt");
+// 新建领地 返回值类型：bool
+auto Lands_CreateLand2D = RemoteCall::importAs<bool(int const& x1,int const& z1,int const& x2,int const& z2,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CreateLand2D");
+// 新建领地 返回值类型：bool
+auto Lands_CreateLand3D = RemoteCall::importAs<bool(int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CreateLand3D");
+// 删除指定坐标(float)的领地 返回值类型：bool
+auto Lands_DeleteLandByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Lands::DeleteLandByPos");
+// 删除指定坐标(int)的领地 返回值类型：bool
+auto Lands_DeleteLandByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId)>("PFLP", "Lands::DeleteLandByPosInt");
 // 获取玩家(指定玩家名)金钱 返回值类型：long
 auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
 // 给玩家(指定玩家名)加钱
@@ -1890,14 +2227,18 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos");
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >var Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt");
->// 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->var Lands_SetLandInfoByCube = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByCube");
->// 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->var Lands_SetLandInfoByCubeInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByCubeInt");
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >var Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos");
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >var Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt");
+>// 新建领地 返回值类型：bool
+>var Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D");
+>// 新建领地 返回值类型：bool
+>var Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D");
+>// 删除指定坐标(float)的领地 返回值类型：bool
+>var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos");
+>// 删除指定坐标(int)的领地 返回值类型：bool
+>var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt");
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
 >// 给玩家(指定玩家名)加钱
@@ -2052,16 +2393,6 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		public static string GetLandInfoByPosInt(int x,int y,int z,int dimensionId) {
 >			return Lands_GetLandInfoByPosInt_instance.Value(x,y,z,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_8<bool,float,float,float,float,float,float,int,string>>  Lands_SetLandInfoByCube_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByCube"));
->		/// <summary> 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
->		public static bool SetLandInfoByCube(float x1,float y1,float z1,float x2,float y2,float z2,int dimensionId,string landinfo) {
->			return Lands_SetLandInfoByCube_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId,landinfo);
->		}
->		private static Lazy<RemoteCallHandler_8<bool,int,int,int,int,int,int,int,string>>  Lands_SetLandInfoByCubeInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByCubeInt"));
->		/// <summary> 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
->		public static bool SetLandInfoByCubeInt(int x1,int y1,int z1,int x2,int y2,int z2,int dimensionId,string landinfo) {
->			return Lands_SetLandInfoByCubeInt_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId,landinfo);
->		}
 >		private static Lazy<RemoteCallHandler_5<bool,float,float,float,int,string>>  Lands_SetLandInfoByPos_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos"));
 >		/// <summary> 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >		public static bool SetLandInfoByPos(float x,float y,float z,int dimensionId,string landinfo) {
@@ -2071,6 +2402,26 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		/// <summary> 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >		public static bool SetLandInfoByPosInt(int x,int y,int z,int dimensionId,string landinfo) {
 >			return Lands_SetLandInfoByPosInt_instance.Value(x,y,z,dimensionId,landinfo);
+>		}
+>		private static Lazy<RemoteCallHandler_6<bool,int,int,int,int,int,string>>  Lands_CreateLand2D_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D"));
+>		/// <summary> 新建领地 返回值类型：bool </summary>
+>		public static bool CreateLand2D(int x1,int z1,int x2,int z2,int dimensionId,string playerXuid) {
+>			return Lands_CreateLand2D_instance.Value(x1,z1,x2,z2,dimensionId,playerXuid);
+>		}
+>		private static Lazy<RemoteCallHandler_8<bool,int,int,int,int,int,int,int,string>>  Lands_CreateLand3D_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D"));
+>		/// <summary> 新建领地 返回值类型：bool </summary>
+>		public static bool CreateLand3D(int x1,int y1,int z1,int x2,int y2,int z2,int dimensionId,string playerXuid) {
+>			return Lands_CreateLand3D_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
+>		}
+>		private static Lazy<RemoteCallHandler_4<bool,float,float,float,int>>  Lands_DeleteLandByPos_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos"));
+>		/// <summary> 删除指定坐标(float)的领地 返回值类型：bool </summary>
+>		public static bool DeleteLandByPos(float x,float y,float z,int dimensionId) {
+>			return Lands_DeleteLandByPos_instance.Value(x,y,z,dimensionId);
+>		}
+>		private static Lazy<RemoteCallHandler_4<bool,int,int,int,int>>  Lands_DeleteLandByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt"));
+>		/// <summary> 删除指定坐标(int)的领地 返回值类型：bool </summary>
+>		public static bool DeleteLandByPosInt(int x,int y,int z,int dimensionId) {
+>			return Lands_DeleteLandByPosInt_instance.Value(x,y,z,dimensionId);
 >		}
 >	}
 >	public static class Money {
@@ -2161,14 +2512,18 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByPos")
 >' 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >Dim Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByPosInt")
->' 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->Dim Lands_SetLandInfoByCube = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByCube")
->' 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->Dim Lands_SetLandInfoByCubeInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::SetLandInfoByCubeInt")
 >' 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >Dim Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByPos")
 >' 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >Dim Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::SetLandInfoByPosInt")
+>' 新建领地 返回值类型：bool
+>Dim Lands_CreateLand2D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand2D")
+>' 新建领地 返回值类型：bool
+>Dim Lands_CreateLand3D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand3D")
+>' 删除指定坐标(float)的领地 返回值类型：bool
+>Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::DeleteLandByPos")
+>' 删除指定坐标(int)的领地 返回值类型：bool
+>Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::DeleteLandByPosInt")
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
 >' 给玩家(指定玩家名)加钱
@@ -2323,16 +2678,6 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		Public Shared Function GetLandInfoByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer) As string 
 >			Return Lands_GetLandInfoByPosInt_instance.Value(x,y,z,dimensionId)
 >		End Function
->		Private Shared Lands_SetLandInfoByCube_instance As Lazy(Of RemoteCallHandler_8(Of Boolean,Single,Single,Single,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByCube"))
->		''' <summary> 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
->		Public Shared Function SetLandInfoByCube(x1 As Single,y1 As Single,z1 As Single,x2 As Single,y2 As Single,z2 As Single,dimensionId As Integer,landinfo As String) As bool 
->			Return Lands_SetLandInfoByCube_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
->		End Function
->		Private Shared Lands_SetLandInfoByCubeInt_instance As Lazy(Of RemoteCallHandler_8(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::SetLandInfoByCubeInt"))
->		''' <summary> 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
->		Public Shared Function SetLandInfoByCubeInt(x1 As Integer,y1 As Integer,z1 As Integer,x2 As Integer,y2 As Integer,z2 As Integer,dimensionId As Integer,landinfo As String) As bool 
->			Return Lands_SetLandInfoByCubeInt_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
->		End Function
 >		Private Shared Lands_SetLandInfoByPos_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByPos"))
 >		''' <summary> 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >		Public Shared Function SetLandInfoByPos(x As Single,y As Single,z As Single,dimensionId As Integer,landinfo As String) As bool 
@@ -2342,6 +2687,26 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		''' <summary> 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >		Public Shared Function SetLandInfoByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer,landinfo As String) As bool 
 >			Return Lands_SetLandInfoByPosInt_instance.Value(x,y,z,dimensionId,landinfo)
+>		End Function
+>		Private Shared Lands_CreateLand2D_instance As Lazy(Of RemoteCallHandler_6(Of Boolean,Integer,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand2D"))
+>		''' <summary> 新建领地 返回值类型：bool </summary>
+>		Public Shared Function CreateLand2D(x1 As Integer,z1 As Integer,x2 As Integer,z2 As Integer,dimensionId As Integer,playerXuid As String) As bool 
+>			Return Lands_CreateLand2D_instance.Value(x1,z1,x2,z2,dimensionId,playerXuid)
+>		End Function
+>		Private Shared Lands_CreateLand3D_instance As Lazy(Of RemoteCallHandler_8(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand3D"))
+>		''' <summary> 新建领地 返回值类型：bool </summary>
+>		Public Shared Function CreateLand3D(x1 As Integer,y1 As Integer,z1 As Integer,x2 As Integer,y2 As Integer,z2 As Integer,dimensionId As Integer,playerXuid As String) As bool 
+>			Return Lands_CreateLand3D_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
+>		End Function
+>		Private Shared Lands_DeleteLandByPos_instance As Lazy(Of RemoteCallHandler_4(Of Boolean,Single,Single,Single,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::DeleteLandByPos"))
+>		''' <summary> 删除指定坐标(float)的领地 返回值类型：bool </summary>
+>		Public Shared Function DeleteLandByPos(x As Single,y As Single,z As Single,dimensionId As Integer) As bool 
+>			Return Lands_DeleteLandByPos_instance.Value(x,y,z,dimensionId)
+>		End Function
+>		Private Shared Lands_DeleteLandByPosInt_instance As Lazy(Of RemoteCallHandler_4(Of Boolean,Integer,Integer,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::DeleteLandByPosInt"))
+>		''' <summary> 删除指定坐标(int)的领地 返回值类型：bool </summary>
+>		Public Shared Function DeleteLandByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer) As bool 
+>			Return Lands_DeleteLandByPosInt_instance.Value(x,y,z,dimensionId)
 >		End Function
 >	End Class
 >	Public NotInheritable Class Money
@@ -2433,14 +2798,18 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos")
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt")
->// 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->let Lands_SetLandInfoByCube = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByCube")
->// 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->let Lands_SetLandInfoByCubeInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByCubeInt")
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos")
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt")
+>// 新建领地 返回值类型：bool
+>let Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D")
+>// 新建领地 返回值类型：bool
+>let Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D")
+>// 删除指定坐标(float)的领地 返回值类型：bool
+>let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos")
+>// 删除指定坐标(int)的领地 返回值类型：bool
+>let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt")
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >// 给玩家(指定玩家名)加钱
@@ -2566,14 +2935,6 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >    let public GetLandInfoByPosInt(x:int)(y:int)(z:int)(dimensionId:int):string =
 >      Lands_GetLandInfoByPosInt_instance.Value.Invoke(x,y,z,dimensionId)
->    let private Lands_SetLandInfoByCube_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByCube")
->    /// <summary> 设置指定立方体区域(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
->    let public SetLandInfoByCube(x1:float)(y1:float)(z1:float)(x2:float)(y2:float)(z2:float)(dimensionId:int)(landinfo:string):bool =
->      Lands_SetLandInfoByCube_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
->    let private Lands_SetLandInfoByCubeInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByCubeInt")
->    /// <summary> 设置指定立方体区域(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
->    let public SetLandInfoByCubeInt(x1:int)(y1:int)(z1:int)(x2:int)(y2:int)(z2:int)(dimensionId:int)(landinfo:string):bool =
->      Lands_SetLandInfoByCubeInt_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId,landinfo)
 >    let private Lands_SetLandInfoByPos_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos")
 >    /// <summary> 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >    let public SetLandInfoByPos(x:float)(y:float)(z:float)(dimensionId:int)(landinfo:string):bool =
@@ -2582,6 +2943,22 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >    let public SetLandInfoByPosInt(x:int)(y:int)(z:int)(dimensionId:int)(landinfo:string):bool =
 >      Lands_SetLandInfoByPosInt_instance.Value.Invoke(x,y,z,dimensionId,landinfo)
+>    let private Lands_CreateLand2D_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D")
+>    /// <summary> 新建领地 返回值类型：bool </summary>
+>    let public CreateLand2D(x1:int)(z1:int)(x2:int)(z2:int)(dimensionId:int)(playerXuid:string):bool =
+>      Lands_CreateLand2D_instance.Value.Invoke(x1,z1,x2,z2,dimensionId,playerXuid)
+>    let private Lands_CreateLand3D_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D")
+>    /// <summary> 新建领地 返回值类型：bool </summary>
+>    let public CreateLand3D(x1:int)(y1:int)(z1:int)(x2:int)(y2:int)(z2:int)(dimensionId:int)(playerXuid:string):bool =
+>      Lands_CreateLand3D_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
+>    let private Lands_DeleteLandByPos_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos")
+>    /// <summary> 删除指定坐标(float)的领地 返回值类型：bool </summary>
+>    let public DeleteLandByPos(x:float)(y:float)(z:float)(dimensionId:int):bool =
+>      Lands_DeleteLandByPos_instance.Value.Invoke(x,y,z,dimensionId)
+>    let private Lands_DeleteLandByPosInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt")
+>    /// <summary> 删除指定坐标(int)的领地 返回值类型：bool </summary>
+>    let public DeleteLandByPosInt(x:int)(y:int)(z:int)(dimensionId:int):bool =
+>      Lands_DeleteLandByPosInt_instance.Value.Invoke(x,y,z,dimensionId)
 >  module public Money =
 >    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
