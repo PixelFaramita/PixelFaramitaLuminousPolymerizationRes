@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import {  darkTheme } from 'naive-ui'
 </script>
-
 <template>
-  <header>
-    <n-button>naive-ui</n-button>
-    <n-input>test</n-input>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">主页</RouterLink>
-        <RouterLink to="/about">关于</RouterLink>
-      </nav>
-    </div>
-  </header>
-  <RouterView />
+  <n-config-provider :theme="darkTheme">
+    <header>
+      <div class="wrapper">
+        <nav>
+          <RouterLink to="/">主页</RouterLink>
+          <RouterLink to="/about">关于</RouterLink>
+        </nav>
+      </div>
+    </header>
+    <RouterView/>
+  </n-config-provider>
 </template>
 
 <style scoped>
@@ -58,6 +58,7 @@ nav a:first-of-type {
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
+
   header .wrapper {
     display: flex;
     place-items: flex-start;

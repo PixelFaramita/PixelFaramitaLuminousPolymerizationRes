@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>PFLP.ConfigEditor.Vue</h1>
+    <n-h2 prefix="bar">PFLP.ConfigEditor.Vue</n-h2>
     <ul dir="auto">
       <h3 dir="auto">一款专门为PixelFaramitaLuminousPolymerization插件设计的配置工具</h3>
       <h4 dir="auto">配置插件从未如此方便</h4>
@@ -11,7 +11,7 @@
         </h3>
       </li>
     </ul>
-    <h1>PixelFaramitaLuminousPolymerization</h1>
+    <n-h2 prefix="bar">PixelFaramitaLuminousPolymerization</n-h2>
     <ul dir="auto">
       <h3 dir="auto">一款功能很基础的基础插件</h3>
       <h4 dir="auto">上次看到有这么基础的插件还在上次</h4>
