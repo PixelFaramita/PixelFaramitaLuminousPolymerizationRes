@@ -1,18 +1,21 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import {  darkTheme } from 'naive-ui'
+import { darkTheme } from 'naive-ui'
+import { createDiscreteApi } from 'naive-ui'
 </script>
 <template>
   <n-config-provider :theme="darkTheme">
-    <header>
-      <div class="wrapper">
-        <nav>
-          <RouterLink to="/">主页</RouterLink>
-          <RouterLink to="/about">关于</RouterLink>
-        </nav>
-      </div>
-    </header>
-    <RouterView/>
+    <n-message-provider>
+      <header>
+        <div class="wrapper">
+          <nav>
+            <RouterLink to="/">主页</RouterLink>
+            <RouterLink to="/about">关于</RouterLink>
+          </nav>
+        </div>
+      </header>
+      <RouterView />
+    </n-message-provider>
   </n-config-provider>
 </template>
 

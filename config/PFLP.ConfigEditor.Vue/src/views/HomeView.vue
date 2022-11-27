@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import { useMessage } from 'naive-ui'
+var message = useMessage()
 </script>
 <script lang="ts">
 import type { UploadFileInfo } from 'naive-ui'
-import { useMessage } from 'naive-ui'
-const message = useMessage()
 export default {
   data() {
     return {
@@ -47,7 +47,7 @@ export default {
       </n-h3>
       <n-upload @on-select="importLocalFile" :max="5" @before-upload="beforeUpload">
         <n-upload-dragger>
-          <div style="margin-bottom: 12px">
+          <div style="width: 48px;margin: 0 auto;">
             <i role="img" class="n-icon n-icon--depth n-icon--color-transition"
               style="--n-bezier:cubic-bezier(0.4, 0, 0.2, 1); --n-color:#fff; --n-opacity:0.52; font-size: 48px;"><svg
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
@@ -64,7 +64,7 @@ export default {
           <n-text style="font-size: 16px">
             点击或者拖动config.json配置文件到该区域来上传
           </n-text>
-          <n-p depth="3" style="margin: 8px 0 0 0">
+          <n-p depth="3" style="margin: 0px 0 0 0">
             配置文件位于[服务端]\plugins\PixelFaramitaLuminousPolymerization\config.json
           </n-p>
         </n-upload-dragger>
