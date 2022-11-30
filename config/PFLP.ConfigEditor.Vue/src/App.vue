@@ -1,12 +1,27 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { darkTheme } from 'naive-ui'
-import { createDiscreteApi } from 'naive-ui'
+import hljs from 'highlight.js/lib/core'
+import json from 'highlight.js/lib/languages/json'
+hljs.registerLanguage('json', json)
+</script>
+<script lang="ts">
+export default {
+  data() {
+    return {
+    }
+  },
+  computed: {
+    isHome: function (): boolean {
+      return this.$route.name == 'home' || this.$route.name == 'about'
+    }
+  }
+}
 </script>
 <template>
-  <n-config-provider :theme="darkTheme">
+  <n-config-provider :theme="darkTheme" :hljs="hljs">
     <n-message-provider>
-      <header>
+      <header v-if="isHome">
         <div class="wrapper">
           <nav>
             <RouterLink to="/">主页</RouterLink>
@@ -32,7 +47,7 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: large;
   text-align: center;
   margin-top: 2rem;
 }
