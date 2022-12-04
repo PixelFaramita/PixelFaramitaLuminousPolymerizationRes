@@ -9,6 +9,8 @@ import { MdArrowRoundBack, MdArrowRoundForward } from '@vicons/ionicons4'
 import { ref } from 'vue'
 import type { UploadFileInfo } from 'naive-ui'
 import type { StepsProps } from 'naive-ui'
+import { useGlobalStore } from "../stores/global";
+const store = useGlobalStore();
 const currentRef = ref<number | null>(0)
 export default {
   data() {
@@ -35,6 +37,7 @@ export default {
         else if (currentRef.value >= 3) {
           this.message.info('即将跳转到配置页面')
           currentRef.value = null
+          store.config = JSON.parse(this.fileData)
           this.$router.push('/config')
         }
         else currentRef.value++

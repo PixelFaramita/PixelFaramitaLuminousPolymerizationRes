@@ -9,7 +9,7 @@ const store = useGlobalStore();
 export default {
     data() {
         return {
-            config: store.configData,
+            config: store.config,
         };
     }
 }
