@@ -10,7 +10,6 @@ import { ref } from 'vue'
 import type { UploadFileInfo } from 'naive-ui'
 import type { StepsProps } from 'naive-ui'
 import { useGlobalStore } from "../stores/global";
-const store = useGlobalStore();
 const currentRef = ref<number | null>(0)
 export default {
   data() {
@@ -37,7 +36,7 @@ export default {
         else if (currentRef.value >= 3) {
           this.message.info('即将跳转到配置页面')
           currentRef.value = null
-          store.config = JSON.parse(this.fileData)
+          useGlobalStore().config = JSON.parse(this.fileData)
           this.$router.push('/config')
         }
         else currentRef.value++
@@ -72,7 +71,7 @@ export default {
 
 </script>
 <template>
-  <main>
+  <div>
     <n-h4 class="nhc">
       编辑PixelFaramitaLuminousPolymerization配置文件</n-h4>
     <n-h3 class="nhc">
@@ -143,16 +142,9 @@ export default {
     <ul v-if="(current === 2)">
       <n-code :code="fileData" language="json" show-line-numbers />
     </ul>
-  </main>
+  </div>
 </template>
 <style>
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
 
 .nhc {
   text-align: center;
