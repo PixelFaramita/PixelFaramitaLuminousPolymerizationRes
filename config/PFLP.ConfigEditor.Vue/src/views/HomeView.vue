@@ -29,6 +29,7 @@ export default {
           if (this.fileData.length == 0) {
             this.message.error('请先导入配置文件')
             this.currentStatus = 'error'
+            currentRef.value--;
             return
           }
           currentRef.value++
@@ -145,7 +146,6 @@ export default {
   </div>
 </template>
 <style>
-
 .nhc {
   text-align: center;
 }
