@@ -145,7 +145,7 @@ export default {
     </ul>
   </div>
 </template>
-<style>
+<style scoped>
 .nhc {
   text-align: center;
 }

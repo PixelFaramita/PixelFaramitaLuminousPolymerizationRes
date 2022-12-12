@@ -3,8 +3,8 @@
     <n-tab-pane name="global" tab="全局配置">
         <global-config/>
     </n-tab-pane>
-    <n-tab-pane name="tpa" tab="传送">
-        b
+    <n-tab-pane name="shop" tab="商店">
+        <shop-config/>
     </n-tab-pane>
     <n-tab-pane name="web" tab="远程">
         c
@@ -22,5 +22,5 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 </style>

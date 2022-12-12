@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     GlobalConfig: typeof import('./src/components/GlobalConfig.vue')['default']
+    LandConfig: typeof import('./src/components/LandConfig.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NButtonGroup: typeof import('naive-ui')['NButtonGroup']
     NCard: typeof import('naive-ui')['NCard']
@@ -23,15 +24,19 @@ declare module '@vue/runtime-core' {
     NIcon: typeof import('naive-ui')['NIcon']
     NInput: typeof import('naive-ui')['NInput']
     NInputGroup: typeof import('naive-ui')['NInputGroup']
+    NInputNumber: typeof import('naive-ui')['NInputNumber']
+    NLabel: typeof import('naive-ui')['NLabel']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutFooter: typeof import('naive-ui')['NLayoutFooter']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
     NLayoutSider: typeof import('naive-ui')['NLayoutSider']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
     NP: typeof import('naive-ui')['NP']
+    NSelect: typeof import('naive-ui')['NSelect']
     NSpace: typeof import('naive-ui')['NSpace']
     NStep: typeof import('naive-ui')['NStep']
     NSteps: typeof import('naive-ui')['NSteps']
+    NSwitch: typeof import('naive-ui')['NSwitch']
     NTab: typeof import('naive-ui')['NTab']
     NTabPane: typeof import('naive-ui')['NTabPane']
     NTabs: typeof import('naive-ui')['NTabs']
@@ -40,5 +45,6 @@ declare module '@vue/runtime-core' {
     NUploadDragger: typeof import('naive-ui')['NUploadDragger']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ShopConfig: typeof import('./src/components/ShopConfig.vue')['default']
   }
 }
