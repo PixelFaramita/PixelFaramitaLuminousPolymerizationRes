@@ -1,10 +1,9 @@
 <template>
-    <div>
-    </div>
+   
 </template>
 <script lang="ts">
 import { useGlobalStore } from "../stores/global";
-import "../components/GlobalConfig";
+import "../components/GlobalConfig.vue";
 const store = useGlobalStore();
 export default {
     data() {
