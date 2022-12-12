@@ -40,14 +40,4 @@
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    align-items: center;
-    vertical-align: top;
-  }
-  .h1 {
-    text-align: center;
-  }
-}
 </style>

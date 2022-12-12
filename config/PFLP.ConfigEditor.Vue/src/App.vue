@@ -33,25 +33,23 @@ export default {
     </nav>
     <n-config-provider :theme="darkTheme" :hljs="hljs">
       <n-message-provider>
-        <RouterView />
+        <RouterView/>
       </n-message-provider>
     </n-config-provider>
+  
   </div>
 </template>
-
 <style scoped>
 div.main {
-  margin-top: 10px;
-  min-height: 100vh;
-  min-width: 100vh;
-  align-items: center;
-  vertical-align: top;
-  justify-content: center;
+  /* fill the whole page */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
   font-size: large;
-  /* align to center */
+  /* align to top center */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,23 +60,7 @@ nav a.router-link-exact-active {
   border-bottom: 4px solid var(--color-border);
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
 nav a {
   padding: 0 1rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-  }
-
-  nav {
-    text-align: left;
-    justify-self: center;
-  }
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
-    <div style="position: relative">
+    <div>
         <n-layout-header>
-            <n-button style="width: 60vh;left: 20vh;margin-top: 20px;" @click="download">
+            <n-button @click="download" class="downloadbtn">
                 下载
                 config.json
             </n-button>
         </n-layout-header>
-        <n-layout content-style="padding: 24px;width: 100vh;">
+        <n-layout content-style="padding: 24px;width: 80vw;">
             <n-code :code="configStr" language="json" show-line-numbers />
         </n-layout>
     </div>
@@ -37,8 +37,10 @@ export default {
 }
 </script>
 <style scoped>
-.n-layout-sider {
-    background: rgba(128, 128, 128, 0.3);
-
+.downloadbtn{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10px;
+    width: 60%;
 }
 </style>

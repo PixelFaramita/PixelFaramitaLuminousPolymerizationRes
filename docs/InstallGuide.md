@@ -17,7 +17,7 @@
 推荐直接下载`LLNet_with_PFLP_Beta.zip`，解压到指定目录（详见压缩包注释）
 >或者也可手动下载[`LiteLoaderNet`](https://github.com/LiteLDev/LiteLoader.NET)，并手动下载`PFLP_Beta_2022_xx_xx__xx_xx_xx.dll`置于插件目录（`plugins`）
 ---
-- ### 安装微软`dotnet 6.0`运行库
+- ### 安装微软`dotnet 7.0`运行库
 地址：https://dotnet.microsoft.com/zh-cn/download
 点击`下载.Net运行时`，并安装在需要开服的主机上
 
@@ -31,7 +31,7 @@
     - 请使用专业的编辑工具编辑（而不是祭祀本）
 
     - 打开文件把看起来中意的模块开起来
-    
+
         像这样
     >``` json
     >"xxx": {

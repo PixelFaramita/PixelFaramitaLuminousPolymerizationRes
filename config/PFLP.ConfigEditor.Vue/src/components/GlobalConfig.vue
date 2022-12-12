@@ -1,10 +1,7 @@
 <template>
     <div>
+        233
         <n-input>
-            <n-input-group>
-                <n-input-addon slot="prepend">ConsoleLanguage</n-input-addon>
-                <n-input v-model="config.ConsoleLanguage" />
-            </n-input-group>
         </n-input>
     </div>
 </template>
@@ -24,6 +21,6 @@ export default {
     }
 }
 </script>
-<style lang="">
+<style>
     
 </style>
