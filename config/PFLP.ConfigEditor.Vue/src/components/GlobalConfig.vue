@@ -1,8 +1,7 @@
 <template>
     <div>
-        233
-        <n-input>
-        </n-input>
+        <n-cascader v-model:value="value" placeholder="没啥用的值" :options="options" :filterable="true"
+            :render-label="renderLabel" />
     </div>
 </template>
 <script lang="ts">
@@ -18,9 +17,34 @@ export default {
         return {
             config: store.config,
         };
+    }, methods: {
+        renderLabel(option: { value?: string | number; label?: string }) {
+            return option.label;
+        }
+    }, computed: {
+        value: {
+            get() {
+                return this.config.ConsoleLanguage;
+            },
+            set(value: string) {
+                this.config.ConsoleLanguage = value;
+            }
+        },
+        options() {
+            return [
+                {
+                    value: "zh_CN",
+                    label: "中文"
+                },
+                {
+                    value: "en_US",
+                    label: "English"
+                }
+            ];
+        }
     }
 }
 </script>
 <style>
-    
+
 </style>
