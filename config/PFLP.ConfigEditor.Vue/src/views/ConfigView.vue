@@ -1,15 +1,24 @@
-  <template>
-  <n-tabs animated type="segment" default-value="global">
-    <n-tab-pane name="global" tab="全局配置">
-        <global-config/>
-    </n-tab-pane>
-    <n-tab-pane name="shop" tab="商店">
-        <shop-config/>
-    </n-tab-pane>
-    <n-tab-pane name="web" tab="远程">
-        c
-    </n-tab-pane>
-  </n-tabs>
+<template>
+    <n-tabs animated type="card" default-value="global">
+        <n-tab-pane name="global" tab="全局配置">
+            <global-config />
+        </n-tab-pane>
+        <n-tab-pane name="shop" tab="经济">
+            <econmic-config />
+        </n-tab-pane>
+        <n-tab-pane name="land" tab="领地">
+            <land-config />
+        </n-tab-pane>
+        <n-tab-pane name="teleport" tab="传送">
+            <teleport-config />
+        </n-tab-pane>
+        <n-tab-pane name="message" tab="信息">
+            <message-config />
+        </n-tab-pane>
+        <n-tab-pane name="other" tab="其他">
+            <other-config />
+        </n-tab-pane>
+    </n-tabs>
 </template>
 <script lang="ts">
 import { useGlobalStore } from "../stores/global";
@@ -23,4 +32,5 @@ export default {
 }
 </script>
 <style scoped>
+
 </style>

@@ -43,6 +43,7 @@ export default {
 div.main {
   /* fill the whole page */
   height: 100vh;
+  width:90vw;
   display: flex;
   flex-direction: column;
 }

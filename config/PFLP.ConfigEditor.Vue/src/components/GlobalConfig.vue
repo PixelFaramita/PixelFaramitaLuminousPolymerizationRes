@@ -19,7 +19,11 @@
             全局表单每页个数<n-input-number v-model:value="config.FormAPI_CountPerPage" />
         </n-space>
         <n-space>
-            全局传送免伤时间<n-input-number step="500" v-model:value="config.Global_AsyncTeleportWaitTime" />毫秒
+            全局传送免伤时间<n-input-number step="500" v-model:value="config.Global_AsyncTeleportWaitTime">
+                <template #suffix>
+                    毫秒
+                </template>
+            </n-input-number>
         </n-space>
     </div>
 </template>
