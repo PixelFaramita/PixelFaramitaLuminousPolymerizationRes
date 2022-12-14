@@ -1,7 +1,13 @@
 <template>
     <div>
+        Popup
+        <format-pages :data="popup.Pages" textarea/>
     </div>
 </template>
+<script lang="ts" setup>
+import FormatPages from "../components/FormatPages.vue";
+</script>
+
 <script lang="ts">
 import { useGlobalStore } from "../stores/global";
 const store = useGlobalStore();

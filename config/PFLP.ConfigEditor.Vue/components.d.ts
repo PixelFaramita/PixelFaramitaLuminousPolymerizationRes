@@ -8,14 +8,17 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     EconmicConfig: typeof import('./src/components/EconmicConfig.vue')['default']
+    FormatPages: typeof import('./src/components/FormatPages.vue')['default']
     GlobalConfig: typeof import('./src/components/GlobalConfig.vue')['default']
     LandConfig: typeof import('./src/components/LandConfig.vue')['default']
     MessageConfig: typeof import('./src/components/MessageConfig.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NButtonGroup: typeof import('naive-ui')['NButtonGroup']
+    NCheckbox: typeof import('naive-ui')['NCheckbox']
     NCode: typeof import('naive-ui')['NCode']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NDivider: typeof import('naive-ui')['NDivider']
+    NDynamicInput: typeof import('naive-ui')['NDynamicInput']
     NH2: typeof import('naive-ui')['NH2']
     NH3: typeof import('naive-ui')['NH3']
     NH4: typeof import('naive-ui')['NH4']
@@ -39,7 +42,6 @@ declare module '@vue/runtime-core' {
     OtherConfig: typeof import('./src/components/OtherConfig.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    ShopConfig: typeof import('./src/components/ShopConfig.vue')['default']
     TeleportConfig: typeof import('./src/components/TeleportConfig.vue')['default']
   }
 }

@@ -4,12 +4,15 @@
             货币名称<n-input v-model:value="money.DisplayName" size="large" />
         </n-space>
         <n-space>
-            使用记分板<n-switch v-model:value="money.UseScoreboard" size="large" />
+            使用记分板作为经济前置<n-switch v-model:value="money.UseScoreboard" size="large" />
+            <li v-if="!money.UseScoreboard">
+                当前为LLMoney
+            </li>
         </n-space>
         <n-space v-if="money.UseScoreboard">
             记分板名称<n-input v-model:value="money.ScoreboardName" size="large" />
         </n-space>
-        <n-divider/>
+        <n-divider />
         <n-space>
             启用商店模块<n-switch v-model:value="shop.ModuleEnabled" size="large" />
         </n-space>

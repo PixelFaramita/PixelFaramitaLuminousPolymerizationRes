@@ -33,17 +33,17 @@ export default {
     </nav>
     <n-config-provider :theme="darkTheme" :hljs="hljs">
       <n-message-provider>
-        <RouterView/>
+        <RouterView />
       </n-message-provider>
     </n-config-provider>
-  
+
   </div>
 </template>
 <style scoped>
 div.main {
   /* fill the whole page */
-  height: 100vh;
-  width:90vw;
+  height: 90vh;
+  width: 90vw;
   display: flex;
   flex-direction: column;
 }
