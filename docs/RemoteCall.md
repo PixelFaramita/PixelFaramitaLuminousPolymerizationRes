@@ -706,7 +706,7 @@
 > - C++
 >```C++
 >// 给指定方块描框
->auto ParticlesGraphics_DrawBlock = RemoteCall::importAs<void(Player* const& player,int const& x,int const& y,int const& z,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBlock");
+>auto ParticlesGraphics_DrawBlock = RemoteCall::importAs<void(Player& const& player,int const& x,int const& y,int const& z,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBlock");
 >ParticlesGraphics_DrawBlock(player,x,y,z,r,g,b,thickness,time,alpha);
 >```
 > - C#
@@ -763,7 +763,7 @@
 > - C++
 >```C++
 >// 给指定区域描框
->auto ParticlesGraphics_DrawBorder = RemoteCall::importAs<void(Player* const& player,int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBorder");
+>auto ParticlesGraphics_DrawBorder = RemoteCall::importAs<void(Player& const& player,int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBorder");
 >ParticlesGraphics_DrawBorder(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >```
 > - C#
@@ -2268,9 +2268,9 @@ auto ChatEx_GetEnd = RemoteCall::importAs<std::string(std::string const& playerX
 // 获取玩家聊天消息前缀 返回值类型：string
 auto ChatEx_GetStart = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "ChatEx::GetStart");
 // 给指定方块描框
-auto ParticlesGraphics_DrawBlock = RemoteCall::importAs<void(Player* const& player,int const& x,int const& y,int const& z,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBlock");
+auto ParticlesGraphics_DrawBlock = RemoteCall::importAs<void(Player& const& player,int const& x,int const& y,int const& z,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBlock");
 // 给指定区域描框
-auto ParticlesGraphics_DrawBorder = RemoteCall::importAs<void(Player* const& player,int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBorder");
+auto ParticlesGraphics_DrawBorder = RemoteCall::importAs<void(Player& const& player,int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBorder");
 // 检查指定立方体区域(float)是否有领地 返回值类型：bool
 auto Lands_CheckCubeHasLand = RemoteCall::importAs<bool(float const& x1,float const& y1,float const& z1,float const& x2,float const& y2,float const& z2,int const& dimensionId)>("PFLP", "Lands::CheckCubeHasLand");
 // 检查指定立方体区域(int)是否有领地 返回值类型：bool
