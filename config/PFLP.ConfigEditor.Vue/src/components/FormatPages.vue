@@ -4,8 +4,8 @@
             写点啥
         </template>
         <template #default="{ value }: { value: LineItem }">
-            <div style="display: flex; align-items: center; width: 100%">
-                <div v-if="textarea" style="display: flex; align-items: center; width: 100%">
+            <div class="fullwidth">
+                <div v-if="textarea" class="fullwidth">
                     <n-switch v-model:value="value.multiline" size="large" :on-update-value="value.switchChanged">
                         <template #checked>
                             多行
@@ -19,7 +19,7 @@
                     </n-dynamic-input>
                     <n-input v-else v-model:value="value.string" type="textarea" :on-update-value="onUpdate" />
                 </div>
-                <div v-else>
+                <div v-else class="fullwidth">
                     <n-input v-model:value="value.string" type="text" :on-change="onUpdate" />
                 </div>
             </div>
@@ -87,7 +87,7 @@ export default {
                 }
                 return result
             }))
-        } 
+        }
     }
 }
 </script>
@@ -96,5 +96,11 @@ export default {
     flex-wrap: nowrap;
     word-wrap: unset;
     overflow-wrap: unset;
+}
+
+div.fullwidth {
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 </style>
