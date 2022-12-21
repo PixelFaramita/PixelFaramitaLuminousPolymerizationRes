@@ -213,7 +213,9 @@ export const useGlobalStore = defineStore('global', () => {
     "Death": {
       "ModuleEnabled": true,
       "DeathHistoryCount": 5,
-      "OnDeathEchoInfo": true
+      "OnDeathEchoInfo": true,
+      DeathCmdTeleport: true,
+      DeathCmdTeleportInvulnerable: 6000,
     },
     "ChatTranslation": {
       "ModuleEnabled": true

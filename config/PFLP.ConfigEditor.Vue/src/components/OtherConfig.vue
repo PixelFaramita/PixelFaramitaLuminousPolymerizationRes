@@ -1,10 +1,19 @@
 <template>
     <div>
         <n-h3 prefix="bar">
+            UI扩展
+            <n-switch v-model:value="ui.ModuleEnabled" />
+        </n-h3>
+        <div v-if="ui.ModuleEnabled">
             <n-space>
-                实验功能
-                <n-switch v-model:value="helper.ModuleEnabled" placeholder="实验功能" />
+                SimpleFormHeight:<n-input-number v-model:value="ui.SimpleFormHeight" />
             </n-space>
+            <n-space>
+                SimpleFormWidth:<n-input-number v-model:value="ui.SimpleFormWidth" />
+            </n-space>
+        </div> <n-h3 prefix="bar">
+            实验功能
+            <n-switch v-model:value="helper.ModuleEnabled" placeholder="实验功能" />
         </n-h3>
         <div v-if="helper.ModuleEnabled">
             <n-space>
@@ -117,13 +126,12 @@
             </n-space>
             <n-space>
                 强制允许的协议版本
-                <n-dynamic-input v-model:value="disconnect.ExtraAllowIncomingProtocolVersions"
-                    :on-update-value="() => {
-                        disconnect.ExtraAllowIncomingProtocolVersions.splice(0, disconnect.ExtraAllowIncomingProtocolVersions.length, ...disconnect.ExtraAllowIncomingProtocolVersions.map(x =>{
-                            if (x === '') return 0;
-                            return Number((x as string).toString().replace(/[^0-9]/g, ''));
-                        }) as never[]);
-                    }" :on-create="() => 390">
+                <n-dynamic-input v-model:value="disconnect.ExtraAllowIncomingProtocolVersions" :on-update-value="() => {
+                    disconnect.ExtraAllowIncomingProtocolVersions.splice(0, disconnect.ExtraAllowIncomingProtocolVersions.length, ...disconnect.ExtraAllowIncomingProtocolVersions.map(x => {
+                        if (x === '') return 0;
+                        return Number((x as string).toString().replace(/[^0-9]/g, ''));
+                    }) as never[]);
+                }" :on-create="() => 390">
                 </n-dynamic-input>
             </n-space>
             <div style="margin-left: 15px;">
@@ -153,7 +161,8 @@ export default {
             height: store.config.HeightEdit,
             close: store.config.CloseHandler_Settings,
             location: store.config.JoinLocation,
-            disconnect: store.config.FriendlyDisconnect
+            disconnect: store.config.FriendlyDisconnect,
+            ui: store.config.UIExtensions
         };
     }
 }

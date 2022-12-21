@@ -22,17 +22,17 @@
       </li>
       <li>
         <h3 dir="auto">
-          <a href="/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/InstallGuide.md">安装教程</a>
+          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/RemoteCall.md">安装教程</a>
         </h3>
       </li>
       <li>
         <h3 dir="auto">
-          <a href="/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/RemoteCall.md">接口文档</a>
+          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/RemoteCall.md">接口文档</a>
         </h3>
       </li>
       <li>
         <h3 dir="auto">
-          <a href="/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/lang">语言文件</a>
+          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/lang">语言文件</a>
         </h3>
       </li>
     </ul>

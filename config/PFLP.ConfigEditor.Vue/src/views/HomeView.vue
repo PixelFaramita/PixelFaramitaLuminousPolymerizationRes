@@ -139,6 +139,7 @@ export default {
         连接远程服务器：
       </n-h3>
       <h5>（需要开启PFLP插件的WebsocketAPI功能）</h5>
+      下次做
     </ul>
     <ul v-if="(current === 2)">
       <n-code :code="fileData" language="json" show-line-numbers />

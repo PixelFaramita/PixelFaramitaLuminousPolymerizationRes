@@ -47,6 +47,37 @@
         </n-h3>
         <n-divider />
         <n-h3 prefix="bar">
+            启用家园模块<n-switch v-model:value="home.ModuleEnabled" size="large" />
+        </n-h3>
+        <div v-if="home.ModuleEnabled">
+            <n-space>
+                玩家最大Home数量<n-input-number v-model:value="home.MaxHomeCount" :validator="x => x >= -1" />
+            </n-space>
+        </div> <n-divider />
+        <n-h3 prefix="bar">
+            启用死亡记录模块<n-switch v-model:value="death.ModuleEnabled" size="large" />
+        </n-h3>
+        <div v-if="death.ModuleEnabled">
+            <n-space>
+                记录数量<n-input-number v-model:value="death.DeathHistoryCount" :validator="x => x >= -1" />
+            </n-space>
+            <n-space>
+                死亡显示消息<n-switch v-model:value="death.OnDeathEchoInfo" size="large" />
+            </n-space>  
+             <n-space>
+                允许死亡返回/death back<n-switch v-model:value="death.DeathCmdTeleport" size="large" />
+            </n-space>
+            <n-space v-if="death.DeathCmdTeleport">
+                死亡显示消息
+                <n-input-number step="500" v-model:value="death.DeathCmdTeleportInvulnerable">
+                    <template #suffix>
+                        毫秒
+                    </template>
+                </n-input-number>
+            </n-space>
+        </div>
+        <n-divider />
+        <n-h3 prefix="bar">
             <n-space>
                 启用随机传送模块<n-switch v-model:value="tpr.ModuleEnabled" size="large" />
             </n-space>
@@ -62,6 +93,8 @@ export default {
             tpa: store.config.Tpa,
             tpr: store.config.Tpr,
             warp: store.config.Warp,
+            home: store.config.Home,
+            death: store.config.Death
         };
     }
 }

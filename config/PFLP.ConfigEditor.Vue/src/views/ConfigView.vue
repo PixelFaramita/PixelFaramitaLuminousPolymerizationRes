@@ -12,8 +12,14 @@
         <n-tab-pane name="teleport" tab="传送">
             <teleport-config />
         </n-tab-pane>
+        <n-tab-pane name="worldlimit" tab="边界">
+            <world-limit-config />
+        </n-tab-pane>
         <n-tab-pane name="message" tab="信息">
             <message-config />
+        </n-tab-pane>
+        <n-tab-pane name="ext" tab="杂项">
+            <next-config />
         </n-tab-pane>
         <n-tab-pane name="other" tab="其他">
             <other-config />

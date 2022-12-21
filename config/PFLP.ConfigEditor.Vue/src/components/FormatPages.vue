@@ -87,15 +87,7 @@ export default {
                 }
                 return result
             }))
-        },
-        calcString: function (item: string) {
-            return computed({
-                get: () => item,
-                set: (value) => {
-                    item = value
-                }
-            })
-        }
+        } 
     }
 }
 </script>
