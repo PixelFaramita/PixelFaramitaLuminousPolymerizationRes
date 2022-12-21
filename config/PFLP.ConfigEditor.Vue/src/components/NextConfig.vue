@@ -34,10 +34,10 @@
             ChatEnhancement/聊天增强
             <n-switch v-model:value="config.ChatEnhancement.ModuleEnabled" />
         </n-h3>
-        <n-space v-if="config.ChatEnhancement.ModuleEnabled">
+        <div v-if="config.ChatEnhancement.ModuleEnabled">
             消息格式
             <n-input v-model:value="config.ChatEnhancement.Format" />
-        </n-space>
+        </div>
     </div>
 </template>
 <script lang="ts">
