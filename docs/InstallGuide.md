@@ -49,7 +49,7 @@
     #### 请前往 [最新构建](https://gxh.lanzoum.com/b03v3gxbi)  密码：114514
     - 下载上传日期最近的`PFLP_Beta_2022_xx_xx__xx_xx_xx.dll`置于插件目录（`plugins`）
 - ### 更新BDS和LL以及LLNet
-    - 备份`worlds``plugins`等数据
+    - 备份`worlds`、`plugins`等数据
     - 上述操作重做一遍
     - ...
         lazy.jpeg
