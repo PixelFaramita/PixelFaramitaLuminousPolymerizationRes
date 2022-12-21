@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <n-dynamic-input show-sort-button v-model:value="datax" :on-create="onCreate" :on-update-value="onUpdate">
         <template #create-button-default>
             写点啥
@@ -57,7 +57,10 @@ class LineItem {
 export default {
     props: {
         data: {
-            type: Array<string | Array<string>>,
+            type: Array<{
+                Title: string,
+                Lines: string | Array<string>
+            }>,
             required: true
         },
         textarea: {
@@ -105,4 +108,4 @@ export default {
     word-wrap: unset;
     overflow-wrap: unset;
 }
-</style>
+</style> -->

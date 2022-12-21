@@ -1,8 +1,10 @@
 <template>
     <div>
-        <n-space>
-            启用请求传送模块<n-switch v-model:value="tpa.ModuleEnabled" size="large" />
-        </n-space>
+        <n-h3 prefix="bar">
+            <n-space>
+                启用请求传送模块<n-switch v-model:value="tpa.ModuleEnabled" size="large" />
+            </n-space>
+        </n-h3>
         <div v-if="tpa.ModuleEnabled">
             <n-space>
                 传送超时时间
@@ -28,21 +30,27 @@
                     </template>
                 </n-input-number>
             </n-space>
-            <n-space>
+            <div>
                 默认接收方式
-                <n-switch v-model:value="tpa.DefaultReceiveByToast" size="large" />
-                <n-switch v-model:value="tpa.DefaultReceiveByForm" size="large" />
-                <n-switch v-model:value="tpa.DefaultReceiveByMsg" size="large" />
-            </n-space>
+                <n-space>
+                    横幅<n-switch v-model:value="tpa.DefaultReceiveByToast" size="large" />
+                    弹窗<n-switch v-model:value="tpa.DefaultReceiveByForm" size="large" />
+                    消息<n-switch v-model:value="tpa.DefaultReceiveByMsg" size="large" />
+                </n-space>
+            </div>
         </div>
         <n-divider />
-        <n-space>
-            启用公共传送点模块<n-switch v-model:value="warp.ModuleEnabled" size="large" />
-        </n-space>
+        <n-h3 prefix="bar">
+            <n-space>
+                启用公共传送点模块<n-switch v-model:value="warp.ModuleEnabled" size="large" />
+            </n-space>
+        </n-h3>
         <n-divider />
-        <n-space>
-            启用随机传送模块<n-switch v-model:value="tpr.ModuleEnabled" size="large" />
-        </n-space>
+        <n-h3 prefix="bar">
+            <n-space>
+                启用随机传送模块<n-switch v-model:value="tpr.ModuleEnabled" size="large" />
+            </n-space>
+        </n-h3>
     </div>
 </template>
 <script lang="ts">

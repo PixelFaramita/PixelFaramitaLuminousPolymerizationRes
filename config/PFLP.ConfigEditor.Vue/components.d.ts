@@ -7,8 +7,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AllModules: typeof import('./src/components/AllModules.vue')['default']
     EconmicConfig: typeof import('./src/components/EconmicConfig.vue')['default']
     FormatPages: typeof import('./src/components/FormatPages.vue')['default']
+    FormatPagesWithTitle: typeof import('./src/components/FormatPagesWithTitle.vue')['default']
     GlobalConfig: typeof import('./src/components/GlobalConfig.vue')['default']
     LandConfig: typeof import('./src/components/LandConfig.vue')['default']
     MessageConfig: typeof import('./src/components/MessageConfig.vue')['default']
@@ -19,14 +21,17 @@ declare module '@vue/runtime-core' {
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NDivider: typeof import('naive-ui')['NDivider']
     NDynamicInput: typeof import('naive-ui')['NDynamicInput']
+    NDynamicInputNumber: typeof import('naive-ui')['NDynamicInputNumber']
     NH2: typeof import('naive-ui')['NH2']
     NH3: typeof import('naive-ui')['NH3']
     NH4: typeof import('naive-ui')['NH4']
+    NH5: typeof import('naive-ui')['NH5']
     NIcon: typeof import('naive-ui')['NIcon']
     NInput: typeof import('naive-ui')['NInput']
     NInputNumber: typeof import('naive-ui')['NInputNumber']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutHeader: typeof import('naive-ui')['NLayoutHeader']
+    NLi: typeof import('naive-ui')['NLi']
     NMessageProvider: typeof import('naive-ui')['NMessageProvider']
     NP: typeof import('naive-ui')['NP']
     NSelect: typeof import('naive-ui')['NSelect']

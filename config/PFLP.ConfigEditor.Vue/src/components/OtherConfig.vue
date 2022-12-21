@@ -1,9 +1,11 @@
 <template>
     <div>
-        <n-space>
-            实验功能
-            <n-switch v-model:value="helper.ModuleEnabled" placeholder="实验功能" />
-        </n-space>
+        <n-h3 prefix="bar">
+            <n-space>
+                实验功能
+                <n-switch v-model:value="helper.ModuleEnabled" placeholder="实验功能" />
+            </n-space>
+        </n-h3>
         <div v-if="helper.ModuleEnabled">
             <n-space>
                 强制下载材质
@@ -54,10 +56,12 @@
                 </n-input-number>
             </n-space>
         </div>
-        <n-divider /> <n-space>
-            修改主世界高度
-            <n-switch v-model:value="height.ModuleEnabled" />
-        </n-space>
+        <n-h3 prefix="bar">
+            <n-divider /> <n-space>
+                修改主世界高度
+                <n-switch v-model:value="height.ModuleEnabled" />
+            </n-space>
+        </n-h3>
         <div v-if="height.ModuleEnabled">
             <n-space>
                 最高高度
@@ -69,10 +73,12 @@
             </n-space>
         </div>
         <n-divider />
-        <n-space>
-            关服时自动传送到指定服务器
-            <n-switch v-model:value="close.TransferServerOnClose" />
-        </n-space>
+        <n-h3 prefix="bar">
+            <n-space>
+                关服时自动传送到指定服务器
+                <n-switch v-model:value="close.TransferServerOnClose" />
+            </n-space>
+        </n-h3>
         <div v-if="close.TransferServerOnClose">
             <n-space>
                 服务器地址
@@ -84,19 +90,56 @@
             </n-space>
         </div>
         <n-divider />
-        <n-space>
-            进服IP归属地显示
-            <n-switch v-model:value="location.ModuleEnabled" />
-        </n-space>
+        <n-h3 prefix="bar">
+            <n-space>
+                进服IP归属地显示
+                <n-switch v-model:value="location.ModuleEnabled" />
+            </n-space>
+        </n-h3>
         <div v-if="location.ModuleEnabled">
             <n-space>
                 广播消息
                 <n-switch v-model:value="location.SendMessage" />
-            </n-space>
-            <n-space>
-                消息通知
+                横幅通知
                 <n-switch v-model:value="location.SendToast" />
             </n-space>
+        </div>
+        <n-h3 prefix="bar">
+            <n-space>
+                断开连接提示优化
+                <n-switch v-model:value="disconnect.ModuleEnabled" />
+            </n-space>
+        </n-h3>
+        <div v-if="disconnect.ModuleEnabled">
+            <n-space>
+                在控制台显示断开连接的信息
+                <n-switch v-model:value="disconnect.ShowDisconnectInConsole" />
+            </n-space>
+            <n-space>
+                强制允许的协议版本
+                <n-dynamic-input v-model:value="disconnect.ExtraAllowIncomingProtocolVersions"
+                    :on-update-value="() => {
+                        disconnect.ExtraAllowIncomingProtocolVersions.splice(0, disconnect.ExtraAllowIncomingProtocolVersions.length, ...disconnect.ExtraAllowIncomingProtocolVersions.map(x =>{
+                            if (x === '') return 0;
+                            return Number((x as string).toString().replace(/[^0-9]/g, ''));
+                        }) as never[]);
+                    }" :on-create="() => 390">
+                </n-dynamic-input>
+            </n-space>
+            <div style="margin-left: 15px;">
+                <n-h5 prefix="bar" type="info">未通过XboxLive在线验证：</n-h5>
+                <n-input v-model:value="disconnect.NotAuthenticated" />
+                <n-h5 prefix="bar" type="info">不在白名单内：</n-h5>
+                <n-input v-model:value="disconnect.NotInWhitelist" />
+                <n-h5 prefix="bar" type="info">客户端版本过旧：</n-h5>
+                <n-input v-model:value="disconnect.OldClient" />
+                <n-h5 prefix="bar" type="info">客户端版本过新：</n-h5>
+                <n-input v-model:value="disconnect.OldServer" />
+                <n-h5 prefix="bar" type="info">版本具体信息：</n-h5>
+                <n-input v-model:value="disconnect.DetailedInfo" />
+                <n-h5 prefix="bar" type="info">当前账号已在其他设备登录：</n-h5>
+                <n-input v-model:value="disconnect.AlreadyLoginIn" />
+            </div>
         </div>
     </div>
 </template>
@@ -109,7 +152,8 @@ export default {
             helper: store.config.Helper,
             height: store.config.HeightEdit,
             close: store.config.CloseHandler_Settings,
-            location: store.config.JoinLocation
+            location: store.config.JoinLocation,
+            disconnect: store.config.FriendlyDisconnect
         };
     }
 }

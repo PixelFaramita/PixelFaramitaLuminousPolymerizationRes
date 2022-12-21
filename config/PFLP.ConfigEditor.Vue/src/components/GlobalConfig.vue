@@ -11,7 +11,7 @@
                     选择
                 </template>
                 <template #unchecked>
-                    编辑
+                    自定义 
                 </template>
             </n-switch>
         </n-space>
@@ -24,6 +24,17 @@
                     毫秒
                 </template>
             </n-input-number>
+        </n-space>
+        <n-space>
+            依赖材质包的图形粒子
+            <n-switch v-model:value="config.ParticlesGraphics_WithParticlesResourcePack" size="large">
+                <template #checked>
+                    开启
+                </template>
+                <template #unchecked>
+                    关闭
+                </template>
+            </n-switch>
         </n-space>
     </div>
 </template>

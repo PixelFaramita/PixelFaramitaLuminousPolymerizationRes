@@ -76,8 +76,11 @@
                 (UI)列表选择器每页数量
                 <n-input-number v-model:value="config.ChooseItemCountPerPage" size="large" />
             </n-space>
-
             <n-space>
+                阻止领地方块破坏效果增强
+                <n-switch step="50" v-model:value="config.PreventDestroyEx" size="large" />
+            </n-space>
+            <!-- <n-space>
                 不启用材质
                 <n-switch step="50" v-model:value="config.NoResourcePack" size="large" />
             </n-space>
@@ -90,11 +93,7 @@
                     (UI)选择表单宽度（需要材质）
                     <n-input-number step="50" v-model:value="config.SimpleFormHeight" size="large" />
                 </n-space>
-            </div>
-            <n-space>
-                阻止领地方块破坏效果增强
-                <n-switch step="50" v-model:value="config.PreventDestroyEx" size="large" />
-            </n-space>
+            </div> -->
         </div>
     </div>
 </template>
