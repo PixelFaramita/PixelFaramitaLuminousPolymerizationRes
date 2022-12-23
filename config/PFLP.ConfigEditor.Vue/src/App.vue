@@ -2,8 +2,20 @@
 import { RouterLink, RouterView } from 'vue-router'
 import { darkTheme } from 'naive-ui'
 import hljs from 'highlight.js/lib/core'
-import json from 'highlight.js/lib/languages/json'
-hljs.registerLanguage('json', json)
+import json from 'highlight.js/lib/languages/json' 
+import javascript from 'highlight.js/lib/languages/javascript'
+import typescript from 'highlight.js/lib/languages/typescript'
+import cpp from 'highlight.js/lib/languages/cpp'
+import csharp from 'highlight.js/lib/languages/csharp'
+import vbnet from 'highlight.js/lib/languages/vbnet'
+import fsharp from 'highlight.js/lib/languages/fsharp'
+hljs.registerLanguage('javascript', javascript)
+hljs.registerLanguage('typescript', typescript)
+hljs.registerLanguage('cpp', cpp)
+hljs.registerLanguage('csharp', csharp)
+hljs.registerLanguage('vb.net', vbnet)
+hljs.registerLanguage('F#', fsharp)
+hljs.registerLanguage('json', json) 
 </script>
 <script lang="ts">
 export default {
@@ -13,7 +25,8 @@ export default {
   },
   computed: {
     isHome: function (): boolean {
-      return this.$route.name == 'home' || this.$route.name == 'about'
+      return this.$route.name == 'home' || this.$route.name == 'about' 
+      || this.$route.name == 'document'|| this.$route.name == 'install'
     },
     isEditor: function (): boolean {
       return this.$route.name == 'config' || this.$route.name == 'editor'
@@ -24,7 +37,9 @@ export default {
 <template>
   <div class="main">
     <nav v-if="isHome">
-      <RouterLink to="/">主页</RouterLink>
+      <RouterLink to="/">配置工具</RouterLink>
+      <RouterLink to="/document">接口文档</RouterLink>
+      <RouterLink to="/install">安装教程</RouterLink>
       <RouterLink to="/about">关于</RouterLink>
     </nav>
     <nav v-else-if="isEditor">
@@ -35,8 +50,7 @@ export default {
       <n-message-provider>
         <RouterView />
       </n-message-provider>
-    </n-config-provider>
-
+    </n-config-provider> 
   </div>
 </template>
 <style scoped>

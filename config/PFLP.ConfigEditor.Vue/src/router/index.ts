@@ -13,11 +13,19 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue')
-    },
-    {
+    }, {
       path: '/config',
       name: 'config',
       component: () => import('../views/ConfigView.vue')
+    },
+    {
+      path: '/document',
+      name: 'document',
+      component: () => import('../views/DocumentView.vue')
+    }, {
+      path: '/install',
+      name: 'install',
+      component: () => import('../views/InstalGuideView.vue')
     },
     {
       path: '/editor',

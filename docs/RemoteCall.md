@@ -1696,6 +1696,106 @@
 >```
 >
 > </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetLandPermissionByPos  - 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）<b></summary>
+>
+>## Lands::GetLandPermissionByPos
+>### 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x | float |
+>| y | float |
+>| z | float |
+>| dimensionId | int |
+>| playerXuid | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string */
+>const Lands_GetLandPermissionByPos = ll.import("PFLP", "Lands::GetLandPermissionByPos");
+>let result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
+>```
+> - C++
+>```C++
+>// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>auto Lands_GetLandPermissionByPos = RemoteCall::importAs<std::string(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::GetLandPermissionByPos");
+>auto result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
+>```
+> - C#
+>```C#
+>// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos");
+>var result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>Dim Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer,String)("PFLP", "Lands::GetLandPermissionByPos")
+>Dim result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid)
+>```
+> - F#
+>```F#
+>// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>let Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos")
+>(x,y,z,dimensionId,playerXuid)
+>	|>Lands_GetLandPermissionByPos.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetLandPermissionByPosInt  - 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）<b></summary>
+>
+>## Lands::GetLandPermissionByPosInt
+>### 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x | int |
+>| y | int |
+>| z | int |
+>| dimensionId | int |
+>| playerXuid | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string */
+>const Lands_GetLandPermissionByPosInt = ll.import("PFLP", "Lands::GetLandPermissionByPosInt");
+>let result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
+>```
+> - C++
+>```C++
+>// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>auto Lands_GetLandPermissionByPosInt = RemoteCall::importAs<std::string(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::GetLandPermissionByPosInt");
+>auto result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
+>```
+> - C#
+>```C#
+>// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt");
+>var result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>Dim Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::GetLandPermissionByPosInt")
+>Dim result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid)
+>```
+> - F#
+>```F#
+>// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>let Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt")
+>(x,y,z,dimensionId,playerXuid)
+>	|>Lands_GetLandPermissionByPosInt.Invoke
+>	|>ignore
+>```
+>
+> </details>
 </details>
 <details>
 <summary><b>Money<b></summary>
@@ -1913,6 +2013,10 @@
 >const Lands_DeleteLandByPos = ll.import("PFLP", "Lands::DeleteLandByPos");
 >/** 删除指定坐标(int)的领地 返回值类型：bool */
 >const Lands_DeleteLandByPosInt = ll.import("PFLP", "Lands::DeleteLandByPosInt");
+>/** 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string */
+>const Lands_GetLandPermissionByPos = ll.import("PFLP", "Lands::GetLandPermissionByPos");
+>/** 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string */
+>const Lands_GetLandPermissionByPosInt = ll.import("PFLP", "Lands::GetLandPermissionByPosInt");
 >/** 获取玩家(指定玩家名)金钱 返回值类型：long */
 >const Money_Get = ll.import("PFLP", "Money::Get");
 >/** 给玩家(指定玩家名)加钱 */
@@ -2206,6 +2310,24 @@
 >		 * @returns {boolean}
 >		 */
 >		DeleteLandByPosInt(x,y,z,dimensionId) { return (this.Lands_DeleteLandByPosInt??=ll.import("PFLP", "Lands::DeleteLandByPosInt"))(x,y,z,dimensionId)},
+>		/** 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>		 * @param {number} x
+>		 * @param {number} y
+>		 * @param {number} z
+>		 * @param {number} dimensionId
+>		 * @param {string} playerXuid
+>		 * @returns {string}
+>		 */
+>		GetLandPermissionByPos(x,y,z,dimensionId,playerXuid) { return (this.Lands_GetLandPermissionByPos??=ll.import("PFLP", "Lands::GetLandPermissionByPos"))(x,y,z,dimensionId,playerXuid)},
+>		/** 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>		 * @param {number} x
+>		 * @param {number} y
+>		 * @param {number} z
+>		 * @param {number} dimensionId
+>		 * @param {string} playerXuid
+>		 * @returns {string}
+>		 */
+>		GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid) { return (this.Lands_GetLandPermissionByPosInt??=ll.import("PFLP", "Lands::GetLandPermissionByPosInt"))(x,y,z,dimensionId,playerXuid)},
 >	},
 >	Money : {
 >		/** 获取玩家(指定玩家名)金钱 返回值类型：long
@@ -2307,6 +2429,10 @@ auto Lands_CreateLand3D = RemoteCall::importAs<bool(int const& x1,int const& y1,
 auto Lands_DeleteLandByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Lands::DeleteLandByPos");
 // 删除指定坐标(int)的领地 返回值类型：bool
 auto Lands_DeleteLandByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId)>("PFLP", "Lands::DeleteLandByPosInt");
+// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+auto Lands_GetLandPermissionByPos = RemoteCall::importAs<std::string(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::GetLandPermissionByPos");
+// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+auto Lands_GetLandPermissionByPosInt = RemoteCall::importAs<std::string(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::GetLandPermissionByPosInt");
 // 获取玩家(指定玩家名)金钱 返回值类型：long
 auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
 // 给玩家(指定玩家名)加钱
@@ -2394,6 +2520,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos");
 >// 删除指定坐标(int)的领地 返回值类型：bool
 >var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt");
+>// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos");
+>// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt");
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
 >// 给玩家(指定玩家名)加钱
@@ -2590,6 +2720,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		public static bool DeleteLandByPosInt(int x,int y,int z,int dimensionId) {
 >			return Lands_DeleteLandByPosInt_instance.Value(x,y,z,dimensionId);
 >		}
+>		private static Lazy<RemoteCallHandler_5<string,float,float,float,int,string>>  Lands_GetLandPermissionByPos_instance = new(()=> RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos"));
+>		/// <summary> 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string </summary>
+>		public static string GetLandPermissionByPos(float x,float y,float z,int dimensionId,string playerXuid) {
+>			return Lands_GetLandPermissionByPos_instance.Value(x,y,z,dimensionId,playerXuid);
+>		}
+>		private static Lazy<RemoteCallHandler_5<string,int,int,int,int,string>>  Lands_GetLandPermissionByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt"));
+>		/// <summary> 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string </summary>
+>		public static string GetLandPermissionByPosInt(int x,int y,int z,int dimensionId,string playerXuid) {
+>			return Lands_GetLandPermissionByPosInt_instance.Value(x,y,z,dimensionId,playerXuid);
+>		}
 >	}
 >	public static class Money {
 >		private static Lazy<RemoteCallHandler_1<long,string>>  Money_Get_instance = new(()=> RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get"));
@@ -2695,6 +2835,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::DeleteLandByPos")
 >' 删除指定坐标(int)的领地 返回值类型：bool
 >Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::DeleteLandByPosInt")
+>' 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>Dim Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer,String)("PFLP", "Lands::GetLandPermissionByPos")
+>' 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>Dim Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::GetLandPermissionByPosInt")
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
 >' 给玩家(指定玩家名)加钱
@@ -2891,6 +3035,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		Public Shared Function DeleteLandByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer) As bool 
 >			Return Lands_DeleteLandByPosInt_instance.Value(x,y,z,dimensionId)
 >		End Function
+>		Private Shared Lands_GetLandPermissionByPos_instance As Lazy(Of RemoteCallHandler_5(Of String,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer,String)("PFLP", "Lands::GetLandPermissionByPos"))
+>		''' <summary> 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string </summary>
+>		Public Shared Function GetLandPermissionByPos(x As Single,y As Single,z As Single,dimensionId As Integer,playerXuid As String) As string 
+>			Return Lands_GetLandPermissionByPos_instance.Value(x,y,z,dimensionId,playerXuid)
+>		End Function
+>		Private Shared Lands_GetLandPermissionByPosInt_instance As Lazy(Of RemoteCallHandler_5(Of String,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::GetLandPermissionByPosInt"))
+>		''' <summary> 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string </summary>
+>		Public Shared Function GetLandPermissionByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As string 
+>			Return Lands_GetLandPermissionByPosInt_instance.Value(x,y,z,dimensionId,playerXuid)
+>		End Function
 >	End Class
 >	Public NotInheritable Class Money
 >		Private Shared Money_Get_instance As Lazy(Of RemoteCallHandler_1(Of Long,String))(Function() RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get"))
@@ -2997,6 +3151,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos")
 >// 删除指定坐标(int)的领地 返回值类型：bool
 >let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt")
+>// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>let Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos")
+>// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string
+>let Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt")
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >// 给玩家(指定玩家名)加钱
@@ -3155,6 +3313,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 删除指定坐标(int)的领地 返回值类型：bool </summary>
 >    let public DeleteLandByPosInt(x:int)(y:int)(z:int)(dimensionId:int):bool =
 >      Lands_DeleteLandByPosInt_instance.Value.Invoke(x,y,z,dimensionId)
+>    let private Lands_GetLandPermissionByPos_instance = lazy RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos")
+>    /// <summary> 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string </summary>
+>    let public GetLandPermissionByPos(x:float)(y:float)(z:float)(dimensionId:int)(playerXuid:string):string =
+>      Lands_GetLandPermissionByPos_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
+>    let private Lands_GetLandPermissionByPosInt_instance = lazy RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt")
+>    /// <summary> 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}） 返回值类型：string </summary>
+>    let public GetLandPermissionByPosInt(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):string =
+>      Lands_GetLandPermissionByPosInt_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
 >  module public Money =
 >    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>

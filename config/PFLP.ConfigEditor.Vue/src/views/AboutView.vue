@@ -17,22 +17,22 @@
       <h4 dir="auto">上次看到有这么基础的插件还在上次</h4>
       <li>
         <h3 dir="auto">
-          <a href="https://gxh.lanzoum.com/b03v3gxbi" rel="nofollow">最新构建</a> 密码：114514
+          <a href="https://gxh.lanzoum.com/b03v3gxbi" rel="nofollow">最新构建｜Lanzou</a> 密码：114514
         </h3>
       </li>
       <li>
         <h3 dir="auto">
-          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/RemoteCall.md">安装教程</a>
+          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/RemoteCall.md">安装教程｜GitHub</a>
         </h3>
       </li>
       <li>
         <h3 dir="auto">
-          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/RemoteCall.md">接口文档</a>
+          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/RemoteCall.md">接口文档｜GitHub</a>
         </h3>
       </li>
       <li>
         <h3 dir="auto">
-          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/lang">语言文件</a>
+          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/lang">语言文件｜GitHub</a>
         </h3>
       </li>
     </ul>
