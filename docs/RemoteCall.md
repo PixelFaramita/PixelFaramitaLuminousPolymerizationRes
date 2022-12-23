@@ -1898,6 +1898,206 @@
 >```
 >
 > </details>
+>
+>---
+>
+> <details>
+> <summary><b>CheckPlayerIsLandOwnerByPos  - 检查玩家是否是指定坐标(float)领地的主人<b></summary>
+>
+>## Lands::CheckPlayerIsLandOwnerByPos
+>### 检查玩家是否是指定坐标(float)领地的主人
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x | float |
+>| y | float |
+>| z | float |
+>| dimensionId | int |
+>| playerXuid | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool */
+>const Lands_CheckPlayerIsLandOwnerByPos = ll.import("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
+>let result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
+>```
+> - C++
+>```C++
+>// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
+>auto Lands_CheckPlayerIsLandOwnerByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
+>auto result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
+>```
+> - C#
+>```C#
+>// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
+>var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
+>var result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
+>Dim Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>Dim result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid)
+>```
+> - F#
+>```F#
+>// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
+>let Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>(x,y,z,dimensionId,playerXuid)
+>	|>Lands_CheckPlayerIsLandOwnerByPos.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>CheckPlayerIsLandOwnerByPosInt  - 检查玩家是否是指定坐标(int)领地的主人<b></summary>
+>
+>## Lands::CheckPlayerIsLandOwnerByPosInt
+>### 检查玩家是否是指定坐标(int)领地的主人
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x | int |
+>| y | int |
+>| z | int |
+>| dimensionId | int |
+>| playerXuid | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool */
+>const Lands_CheckPlayerIsLandOwnerByPosInt = ll.import("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
+>let result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid);
+>```
+> - C++
+>```C++
+>// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
+>auto Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
+>auto result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid);
+>```
+> - C#
+>```C#
+>// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
+>var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
+>var result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
+>Dim Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>Dim result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid)
+>```
+> - F#
+>```F#
+>// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
+>let Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>(x,y,z,dimensionId,playerXuid)
+>	|>Lands_CheckPlayerIsLandOwnerByPosInt.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>CheckIsLandSharedToPlayerByPos  - 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）<b></summary>
+>
+>## Lands::CheckIsLandSharedToPlayerByPos
+>### 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x | float |
+>| y | float |
+>| z | float |
+>| dimensionId | int |
+>| playerXuid | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool */
+>const Lands_CheckIsLandSharedToPlayerByPos = ll.import("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
+>let result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid);
+>```
+> - C++
+>```C++
+>// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>auto Lands_CheckIsLandSharedToPlayerByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
+>auto result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid);
+>```
+> - C#
+>```C#
+>// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
+>var result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>Dim result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid)
+>```
+> - F#
+>```F#
+>// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>(x,y,z,dimensionId,playerXuid)
+>	|>Lands_CheckIsLandSharedToPlayerByPos.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>CheckIsLandSharedToPlayerByPosInt  - 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）<b></summary>
+>
+>## Lands::CheckIsLandSharedToPlayerByPosInt
+>### 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| x | int |
+>| y | int |
+>| z | int |
+>| dimensionId | int |
+>| playerXuid | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool */
+>const Lands_CheckIsLandSharedToPlayerByPosInt = ll.import("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
+>let result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid);
+>```
+> - C++
+>```C++
+>// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>auto Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
+>auto result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid);
+>```
+> - C#
+>```C#
+>// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
+>var result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+>Dim result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid)
+>```
+> - F#
+>```F#
+>// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+>(x,y,z,dimensionId,playerXuid)
+>	|>Lands_CheckIsLandSharedToPlayerByPosInt.Invoke
+>	|>ignore
+>```
+>
+> </details>
 </details>
 <details>
 <summary><b>Money<b></summary>
@@ -2123,6 +2323,14 @@
 >const Lands_CheckLandPermissionByPos = ll.import("PFLP", "Lands::CheckLandPermissionByPos");
 >/** 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool */
 >const Lands_CheckLandPermissionByPosInt = ll.import("PFLP", "Lands::CheckLandPermissionByPosInt");
+>/** 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool */
+>const Lands_CheckPlayerIsLandOwnerByPos = ll.import("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
+>/** 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool */
+>const Lands_CheckPlayerIsLandOwnerByPosInt = ll.import("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
+>/** 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool */
+>const Lands_CheckIsLandSharedToPlayerByPos = ll.import("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
+>/** 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool */
+>const Lands_CheckIsLandSharedToPlayerByPosInt = ll.import("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
 >/** 获取玩家(指定玩家名)金钱 返回值类型：long */
 >const Money_Get = ll.import("PFLP", "Money::Get");
 >/** 给玩家(指定玩家名)加钱 */
@@ -2454,6 +2662,42 @@
 >		 * @returns {boolean}
 >		 */
 >		CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid) { return (this.Lands_CheckLandPermissionByPosInt??=ll.import("PFLP", "Lands::CheckLandPermissionByPosInt"))(permissionId,x,y,z,dimensionId,playerXuid)},
+>		/** 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
+>		 * @param {number} x
+>		 * @param {number} y
+>		 * @param {number} z
+>		 * @param {number} dimensionId
+>		 * @param {string} playerXuid
+>		 * @returns {boolean}
+>		 */
+>		CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid) { return (this.Lands_CheckPlayerIsLandOwnerByPos??=ll.import("PFLP", "Lands::CheckPlayerIsLandOwnerByPos"))(x,y,z,dimensionId,playerXuid)},
+>		/** 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
+>		 * @param {number} x
+>		 * @param {number} y
+>		 * @param {number} z
+>		 * @param {number} dimensionId
+>		 * @param {string} playerXuid
+>		 * @returns {boolean}
+>		 */
+>		CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid) { return (this.Lands_CheckPlayerIsLandOwnerByPosInt??=ll.import("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt"))(x,y,z,dimensionId,playerXuid)},
+>		/** 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>		 * @param {number} x
+>		 * @param {number} y
+>		 * @param {number} z
+>		 * @param {number} dimensionId
+>		 * @param {string} playerXuid
+>		 * @returns {boolean}
+>		 */
+>		CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid) { return (this.Lands_CheckIsLandSharedToPlayerByPos??=ll.import("PFLP", "Lands::CheckIsLandSharedToPlayerByPos"))(x,y,z,dimensionId,playerXuid)},
+>		/** 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>		 * @param {number} x
+>		 * @param {number} y
+>		 * @param {number} z
+>		 * @param {number} dimensionId
+>		 * @param {string} playerXuid
+>		 * @returns {boolean}
+>		 */
+>		CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid) { return (this.Lands_CheckIsLandSharedToPlayerByPosInt??=ll.import("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt"))(x,y,z,dimensionId,playerXuid)},
 >	},
 >	Money : {
 >		/** 获取玩家(指定玩家名)金钱 返回值类型：long
@@ -2563,6 +2807,14 @@ auto Lands_GetLandPermissionByPosInt = RemoteCall::importAs<std::string(int cons
 auto Lands_CheckLandPermissionByPos = RemoteCall::importAs<bool(std::string const& permissionId,float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckLandPermissionByPos");
 // 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 auto Lands_CheckLandPermissionByPosInt = RemoteCall::importAs<bool(std::string const& permissionId,int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckLandPermissionByPosInt");
+// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
+auto Lands_CheckPlayerIsLandOwnerByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
+// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
+auto Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
+// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+auto Lands_CheckIsLandSharedToPlayerByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
+// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+auto Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
 // 获取玩家(指定玩家名)金钱 返回值类型：long
 auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
 // 给玩家(指定玩家名)加钱
@@ -2658,6 +2910,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos");
 >// 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >var Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt");
+>// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
+>var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
+>// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
+>var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
+>// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
+>// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
 >// 给玩家(指定玩家名)加钱
@@ -2874,6 +3134,26 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		public static bool CheckLandPermissionByPosInt(string permissionId,int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_CheckLandPermissionByPosInt_instance.Value(permissionId,x,y,z,dimensionId,playerXuid);
 >		}
+>		private static Lazy<RemoteCallHandler_5<bool,float,float,float,int,string>>  Lands_CheckPlayerIsLandOwnerByPos_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos"));
+>		/// <summary> 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool </summary>
+>		public static bool CheckPlayerIsLandOwnerByPos(float x,float y,float z,int dimensionId,string playerXuid) {
+>			return Lands_CheckPlayerIsLandOwnerByPos_instance.Value(x,y,z,dimensionId,playerXuid);
+>		}
+>		private static Lazy<RemoteCallHandler_5<bool,int,int,int,int,string>>  Lands_CheckPlayerIsLandOwnerByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt"));
+>		/// <summary> 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool </summary>
+>		public static bool CheckPlayerIsLandOwnerByPosInt(int x,int y,int z,int dimensionId,string playerXuid) {
+>			return Lands_CheckPlayerIsLandOwnerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid);
+>		}
+>		private static Lazy<RemoteCallHandler_5<bool,float,float,float,int,string>>  Lands_CheckIsLandSharedToPlayerByPos_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos"));
+>		/// <summary> 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
+>		public static bool CheckIsLandSharedToPlayerByPos(float x,float y,float z,int dimensionId,string playerXuid) {
+>			return Lands_CheckIsLandSharedToPlayerByPos_instance.Value(x,y,z,dimensionId,playerXuid);
+>		}
+>		private static Lazy<RemoteCallHandler_5<bool,int,int,int,int,string>>  Lands_CheckIsLandSharedToPlayerByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt"));
+>		/// <summary> 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
+>		public static bool CheckIsLandSharedToPlayerByPosInt(int x,int y,int z,int dimensionId,string playerXuid) {
+>			return Lands_CheckIsLandSharedToPlayerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid);
+>		}
 >	}
 >	public static class Money {
 >		private static Lazy<RemoteCallHandler_1<long,string>>  Money_Get_instance = new(()=> RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get"));
@@ -2987,6 +3267,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs(Of Boolean,String,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckLandPermissionByPos")
 >' 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >Dim Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Boolean,String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckLandPermissionByPosInt")
+>' 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
+>Dim Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>' 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
+>Dim Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>' 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>' 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
 >' 给玩家(指定玩家名)加钱
@@ -3203,6 +3491,26 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		Public Shared Function CheckLandPermissionByPosInt(permissionId As String,x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckLandPermissionByPosInt_instance.Value(permissionId,x,y,z,dimensionId,playerXuid)
 >		End Function
+>		Private Shared Lands_CheckPlayerIsLandOwnerByPos_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPos"))
+>		''' <summary> 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool </summary>
+>		Public Shared Function CheckPlayerIsLandOwnerByPos(x As Single,y As Single,z As Single,dimensionId As Integer,playerXuid As String) As bool 
+>			Return Lands_CheckPlayerIsLandOwnerByPos_instance.Value(x,y,z,dimensionId,playerXuid)
+>		End Function
+>		Private Shared Lands_CheckPlayerIsLandOwnerByPosInt_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt"))
+>		''' <summary> 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool </summary>
+>		Public Shared Function CheckPlayerIsLandOwnerByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
+>			Return Lands_CheckPlayerIsLandOwnerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid)
+>		End Function
+>		Private Shared Lands_CheckIsLandSharedToPlayerByPos_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPos"))
+>		''' <summary> 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
+>		Public Shared Function CheckIsLandSharedToPlayerByPos(x As Single,y As Single,z As Single,dimensionId As Integer,playerXuid As String) As bool 
+>			Return Lands_CheckIsLandSharedToPlayerByPos_instance.Value(x,y,z,dimensionId,playerXuid)
+>		End Function
+>		Private Shared Lands_CheckIsLandSharedToPlayerByPosInt_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt"))
+>		''' <summary> 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
+>		Public Shared Function CheckIsLandSharedToPlayerByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
+>			Return Lands_CheckIsLandSharedToPlayerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid)
+>		End Function
 >	End Class
 >	Public NotInheritable Class Money
 >		Private Shared Money_Get_instance As Lazy(Of RemoteCallHandler_1(Of Long,String))(Function() RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get"))
@@ -3317,6 +3625,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos")
 >// 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >let Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt")
+>// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
+>let Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
+>let Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
+>let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >// 给玩家(指定玩家名)加钱
@@ -3491,6 +3807,22 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool </summary>
 >    let public CheckLandPermissionByPosInt(permissionId:string)(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckLandPermissionByPosInt_instance.Value.Invoke(permissionId,x,y,z,dimensionId,playerXuid)
+>    let private Lands_CheckPlayerIsLandOwnerByPos_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>    /// <summary> 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool </summary>
+>    let public CheckPlayerIsLandOwnerByPos(x:float)(y:float)(z:float)(dimensionId:int)(playerXuid:string):bool =
+>      Lands_CheckPlayerIsLandOwnerByPos_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
+>    let private Lands_CheckPlayerIsLandOwnerByPosInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>    /// <summary> 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool </summary>
+>    let public CheckPlayerIsLandOwnerByPosInt(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
+>      Lands_CheckPlayerIsLandOwnerByPosInt_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
+>    let private Lands_CheckIsLandSharedToPlayerByPos_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>    /// <summary> 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
+>    let public CheckIsLandSharedToPlayerByPos(x:float)(y:float)(z:float)(dimensionId:int)(playerXuid:string):bool =
+>      Lands_CheckIsLandSharedToPlayerByPos_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
+>    let private Lands_CheckIsLandSharedToPlayerByPosInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+>    /// <summary> 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
+>    let public CheckIsLandSharedToPlayerByPosInt(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
+>      Lands_CheckIsLandSharedToPlayerByPosInt_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
 >  module public Money =
 >    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
