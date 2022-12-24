@@ -22,7 +22,7 @@
       </li>
       <li>
         <h3 dir="auto">
-          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/RemoteCall.md">安装教程｜GitHub</a>
+          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/InstallGuide.md">安装教程｜GitHub</a>
         </h3>
       </li>
       <li>
