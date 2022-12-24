@@ -81,6 +81,12 @@ export default {
             this.markdown = '加载失败';
           }
         }
+      }).catch(() => {
+        if (i < mirrors.length) {
+          load();
+        } else {
+          this.markdown = '加载失败';
+        }
       });
     };
     load();
