@@ -2102,10 +2102,10 @@
 >---
 >
 > <details>
-> <summary><b>CheckPlayerHasCreateChestPermission  - 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件)<b></summary>
+> <summary><b>CheckPlayerHasCreateChestPermission  - (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件)<b></summary>
 >
 >## Lands::CheckPlayerHasCreateChestPermission
->### 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件)
+>### (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件)
 >|  形参   | 类型  |
 >|  ----  | ----  |
 >| x | int |
@@ -2116,31 +2116,31 @@
 >返回值类型：bool;
 > - JavaScript
 >```js
->/** 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool */
+>/** (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool */
 >const Lands_CheckPlayerHasCreateChestPermission = ll.import("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
 >let result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
 >```C++
->// 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >auto Lands_CheckPlayerHasCreateChestPermission = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
 >auto result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
 >```C#
->// 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
 >var result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .Net
 >```vb
->' 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
+>' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >Dim Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 >Dim result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```F#
->// 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >let Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckPlayerHasCreateChestPermission.Invoke
@@ -2152,10 +2152,10 @@
 >---
 >
 > <details>
-> <summary><b>CheckPlayerHasOpenChestPermission  - 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件)<b></summary>
+> <summary><b>CheckPlayerHasOpenChestPermission  - (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件)<b></summary>
 >
 >## Lands::CheckPlayerHasOpenChestPermission
->### 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件)
+>### (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件)
 >|  形参   | 类型  |
 >|  ----  | ----  |
 >| x | int |
@@ -2166,34 +2166,174 @@
 >返回值类型：bool;
 > - JavaScript
 >```js
->/** 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool */
+>/** (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool */
 >const Lands_CheckPlayerHasOpenChestPermission = ll.import("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >let result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
 >```C++
->// 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >auto Lands_CheckPlayerHasOpenChestPermission = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >auto result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
 >```C#
->// 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >var result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .Net
 >```vb
->' 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
+>' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >Dim result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```F#
->// 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckPlayerHasOpenChestPermission.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetPlayerAllParmissionGroupId  - 取玩家所有权限组ID（返回["id1","id2"...]字符串）<b></summary>
+>
+>## Lands::GetPlayerAllParmissionGroupId
+>### 取玩家所有权限组ID（返回["id1","id2"...]字符串）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string */
+>const Lands_GetPlayerAllParmissionGroupId = ll.import("PFLP", "Lands::GetPlayerAllParmissionGroupId");
+>let result = Lands_GetPlayerAllParmissionGroupId(playerXuid);
+>```
+> - C++
+>```C++
+>// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
+>auto Lands_GetPlayerAllParmissionGroupId = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetPlayerAllParmissionGroupId");
+>auto result = Lands_GetPlayerAllParmissionGroupId(playerXuid);
+>```
+> - C#
+>```C#
+>// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
+>var Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId");
+>var result = Lands_GetPlayerAllParmissionGroupId(playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
+>Dim Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllParmissionGroupId")
+>Dim result = Lands_GetPlayerAllParmissionGroupId(playerXuid)
+>```
+> - F#
+>```F#
+>// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
+>let Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId")
+>playerXuid
+>	|>Lands_GetPlayerAllParmissionGroupId.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetPlayerParmissionGroup  - 取玩家权限组内容(指定ID)（返回JSON对象字符串）<b></summary>
+>
+>## Lands::GetPlayerParmissionGroup
+>### 取玩家权限组内容(指定ID)（返回JSON对象字符串）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| permissionGroupId | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string */
+>const Lands_GetPlayerParmissionGroup = ll.import("PFLP", "Lands::GetPlayerParmissionGroup");
+>let result = Lands_GetPlayerParmissionGroup(playerXuid,permissionGroupId);
+>```
+> - C++
+>```C++
+>// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
+>auto Lands_GetPlayerParmissionGroup = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::GetPlayerParmissionGroup");
+>auto result = Lands_GetPlayerParmissionGroup(playerXuid,permissionGroupId);
+>```
+> - C#
+>```C#
+>// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
+>var Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup");
+>var result = Lands_GetPlayerParmissionGroup(playerXuid,permissionGroupId);
+>```
+> - Visual Basic .Net
+>```vb
+>' 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
+>Dim Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerParmissionGroup")
+>Dim result = Lands_GetPlayerParmissionGroup(playerXuid,permissionGroupId)
+>```
+> - F#
+>```F#
+>// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
+>let Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup")
+>(playerXuid,permissionGroupId)
+>	|>Lands_GetPlayerParmissionGroup.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>DeletePlayerParmissionGroup  - 删玩家权限组(指定ID)<b></summary>
+>
+>## Lands::DeletePlayerParmissionGroup
+>### 删玩家权限组(指定ID)
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| permissionGroupId | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 删玩家权限组(指定ID) 返回值类型：bool */
+>const Lands_DeletePlayerParmissionGroup = ll.import("PFLP", "Lands::DeletePlayerParmissionGroup");
+>let result = Lands_DeletePlayerParmissionGroup(playerXuid,permissionGroupId);
+>```
+> - C++
+>```C++
+>// 删玩家权限组(指定ID) 返回值类型：bool
+>auto Lands_DeletePlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::DeletePlayerParmissionGroup");
+>auto result = Lands_DeletePlayerParmissionGroup(playerXuid,permissionGroupId);
+>```
+> - C#
+>```C#
+>// 删玩家权限组(指定ID) 返回值类型：bool
+>var Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup");
+>var result = Lands_DeletePlayerParmissionGroup(playerXuid,permissionGroupId);
+>```
+> - Visual Basic .Net
+>```vb
+>' 删玩家权限组(指定ID) 返回值类型：bool
+>Dim Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerParmissionGroup")
+>Dim result = Lands_DeletePlayerParmissionGroup(playerXuid,permissionGroupId)
+>```
+> - F#
+>```F#
+>// 删玩家权限组(指定ID) 返回值类型：bool
+>let Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup")
+>(playerXuid,permissionGroupId)
+>	|>Lands_DeletePlayerParmissionGroup.Invoke
 >	|>ignore
 >```
 >
@@ -2431,10 +2571,16 @@
 >const Lands_CheckIsLandSharedToPlayerByPos = ll.import("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
 >/** 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool */
 >const Lands_CheckIsLandSharedToPlayerByPosInt = ll.import("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
->/** 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool */
+>/** (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool */
 >const Lands_CheckPlayerHasCreateChestPermission = ll.import("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
->/** 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool */
+>/** (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool */
 >const Lands_CheckPlayerHasOpenChestPermission = ll.import("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
+>/** 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string */
+>const Lands_GetPlayerAllParmissionGroupId = ll.import("PFLP", "Lands::GetPlayerAllParmissionGroupId");
+>/** 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string */
+>const Lands_GetPlayerParmissionGroup = ll.import("PFLP", "Lands::GetPlayerParmissionGroup");
+>/** 删玩家权限组(指定ID) 返回值类型：bool */
+>const Lands_DeletePlayerParmissionGroup = ll.import("PFLP", "Lands::DeletePlayerParmissionGroup");
 >/** 获取玩家(指定玩家名)金钱 返回值类型：long */
 >const Money_Get = ll.import("PFLP", "Money::Get");
 >/** 给玩家(指定玩家名)加钱 */
@@ -2802,7 +2948,7 @@
 >		 * @returns {boolean}
 >		 */
 >		CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid) { return (this.Lands_CheckIsLandSharedToPlayerByPosInt??=ll.import("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt"))(x,y,z,dimensionId,playerXuid)},
->		/** 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
+>		/** (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >		 * @param {number} x
 >		 * @param {number} y
 >		 * @param {number} z
@@ -2811,7 +2957,7 @@
 >		 * @returns {boolean}
 >		 */
 >		CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid) { return (this.Lands_CheckPlayerHasCreateChestPermission??=ll.import("PFLP", "Lands::CheckPlayerHasCreateChestPermission"))(x,y,z,dimensionId,playerXuid)},
->		/** 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
+>		/** (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >		 * @param {number} x
 >		 * @param {number} y
 >		 * @param {number} z
@@ -2820,6 +2966,23 @@
 >		 * @returns {boolean}
 >		 */
 >		CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid) { return (this.Lands_CheckPlayerHasOpenChestPermission??=ll.import("PFLP", "Lands::CheckPlayerHasOpenChestPermission"))(x,y,z,dimensionId,playerXuid)},
+>		/** 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
+>		 * @param {string} playerXuid
+>		 * @returns {string}
+>		 */
+>		GetPlayerAllParmissionGroupId(playerXuid) { return (this.Lands_GetPlayerAllParmissionGroupId??=ll.import("PFLP", "Lands::GetPlayerAllParmissionGroupId"))(playerXuid)},
+>		/** 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
+>		 * @param {string} playerXuid
+>		 * @param {string} permissionGroupId
+>		 * @returns {string}
+>		 */
+>		GetPlayerParmissionGroup(playerXuid,permissionGroupId) { return (this.Lands_GetPlayerParmissionGroup??=ll.import("PFLP", "Lands::GetPlayerParmissionGroup"))(playerXuid,permissionGroupId)},
+>		/** 删玩家权限组(指定ID) 返回值类型：bool
+>		 * @param {string} playerXuid
+>		 * @param {string} permissionGroupId
+>		 * @returns {boolean}
+>		 */
+>		DeletePlayerParmissionGroup(playerXuid,permissionGroupId) { return (this.Lands_DeletePlayerParmissionGroup??=ll.import("PFLP", "Lands::DeletePlayerParmissionGroup"))(playerXuid,permissionGroupId)},
 >	},
 >	Money : {
 >		/** 获取玩家(指定玩家名)金钱 返回值类型：long
@@ -2937,10 +3100,16 @@ auto Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCall::importAs<bool(int const&
 auto Lands_CheckIsLandSharedToPlayerByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
 // 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 auto Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
-// 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
+// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 auto Lands_CheckPlayerHasCreateChestPermission = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
-// 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
+// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 auto Lands_CheckPlayerHasOpenChestPermission = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
+// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
+auto Lands_GetPlayerAllParmissionGroupId = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetPlayerAllParmissionGroupId");
+// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
+auto Lands_GetPlayerParmissionGroup = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::GetPlayerParmissionGroup");
+// 删玩家权限组(指定ID) 返回值类型：bool
+auto Lands_DeletePlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::DeletePlayerParmissionGroup");
 // 获取玩家(指定玩家名)金钱 返回值类型：long
 auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
 // 给玩家(指定玩家名)加钱
@@ -3044,10 +3213,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
 >// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
->// 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
->// 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
+>// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
+>var Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId");
+>// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
+>var Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup");
+>// 删玩家权限组(指定ID) 返回值类型：bool
+>var Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup");
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
 >// 给玩家(指定玩家名)加钱
@@ -3059,7 +3234,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 ></details>
 ><details><summary>C# class / C#静态类定义（推荐）</summary>
 >
->``` C# 
+>``` C#
 >using RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >internal static class PFLP {
@@ -3285,14 +3460,29 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >			return Lands_CheckIsLandSharedToPlayerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
 >		private static Lazy<RemoteCallHandler_5<bool,int,int,int,int,string>>  Lands_CheckPlayerHasCreateChestPermission_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission"));
->		/// <summary> 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool </summary>
+>		/// <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >		public static bool CheckPlayerHasCreateChestPermission(int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_CheckPlayerHasCreateChestPermission_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
 >		private static Lazy<RemoteCallHandler_5<bool,int,int,int,int,string>>  Lands_CheckPlayerHasOpenChestPermission_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission"));
->		/// <summary> 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
+>		/// <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >		public static bool CheckPlayerHasOpenChestPermission(int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_CheckPlayerHasOpenChestPermission_instance.Value(x,y,z,dimensionId,playerXuid);
+>		}
+>		private static Lazy<RemoteCallHandler_1<string,string>>  Lands_GetPlayerAllParmissionGroupId_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId"));
+>		/// <summary> 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string </summary>
+>		public static string GetPlayerAllParmissionGroupId(string playerXuid) {
+>			return Lands_GetPlayerAllParmissionGroupId_instance.Value(playerXuid);
+>		}
+>		private static Lazy<RemoteCallHandler_2<string,string,string>>  Lands_GetPlayerParmissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup"));
+>		/// <summary> 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string </summary>
+>		public static string GetPlayerParmissionGroup(string playerXuid,string permissionGroupId) {
+>			return Lands_GetPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId);
+>		}
+>		private static Lazy<RemoteCallHandler_2<bool,string,string>>  Lands_DeletePlayerParmissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup"));
+>		/// <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
+>		public static bool DeletePlayerParmissionGroup(string playerXuid,string permissionGroupId) {
+>			return Lands_DeletePlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId);
 >		}
 >	}
 >	public static class Money {
@@ -3313,7 +3503,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		}
 >	}
 >}
-> 
+>
 >```
 ></details>
 >
@@ -3415,10 +3605,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 >' 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
->' 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
+>' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >Dim Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
->' 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
+>' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
+>' 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
+>Dim Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllParmissionGroupId")
+>' 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
+>Dim Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerParmissionGroup")
+>' 删玩家权限组(指定ID) 返回值类型：bool
+>Dim Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerParmissionGroup")
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
 >' 给玩家(指定玩家名)加钱
@@ -3430,7 +3626,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 ></details>
 ><details><summary>VB Module / 模块类定义（推荐）</summary>
 >
->``` VB 
+>``` VB
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >Friend Module PFLP
@@ -3656,14 +3852,29 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >			Return Lands_CheckIsLandSharedToPlayerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
 >		Private Shared Lands_CheckPlayerHasCreateChestPermission_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasCreateChestPermission"))
->		''' <summary> 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool </summary>
+>		''' <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >		Public Shared Function CheckPlayerHasCreateChestPermission(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckPlayerHasCreateChestPermission_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
 >		Private Shared Lands_CheckPlayerHasOpenChestPermission_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasOpenChestPermission"))
->		''' <summary> 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
+>		''' <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >		Public Shared Function CheckPlayerHasOpenChestPermission(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckPlayerHasOpenChestPermission_instance.Value(x,y,z,dimensionId,playerXuid)
+>		End Function
+>		Private Shared Lands_GetPlayerAllParmissionGroupId_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllParmissionGroupId"))
+>		''' <summary> 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string </summary>
+>		Public Shared Function GetPlayerAllParmissionGroupId(playerXuid As String) As string 
+>			Return Lands_GetPlayerAllParmissionGroupId_instance.Value(playerXuid)
+>		End Function
+>		Private Shared Lands_GetPlayerParmissionGroup_instance As Lazy(Of RemoteCallHandler_2(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerParmissionGroup"))
+>		''' <summary> 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string </summary>
+>		Public Shared Function GetPlayerParmissionGroup(playerXuid As String,permissionGroupId As String) As string 
+>			Return Lands_GetPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId)
+>		End Function
+>		Private Shared Lands_DeletePlayerParmissionGroup_instance As Lazy(Of RemoteCallHandler_2(Of Boolean,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerParmissionGroup"))
+>		''' <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
+>		Public Shared Function DeletePlayerParmissionGroup(playerXuid As String,permissionGroupId As String) As bool 
+>			Return Lands_DeletePlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId)
 >		End Function
 >	End Class
 >	Public NotInheritable Class Money
@@ -3684,7 +3895,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		End Sub
 >	End Class
 >End Module
-> 
+>
 >```
 ></details>
 >
@@ -3787,10 +3998,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 >// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
->// 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >let Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
->// 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
+>// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
+>// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
+>let Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId")
+>// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
+>let Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup")
+>// 删玩家权限组(指定ID) 返回值类型：bool
+>let Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup")
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >// 给玩家(指定玩家名)加钱
@@ -3982,13 +4199,25 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    let public CheckIsLandSharedToPlayerByPosInt(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckIsLandSharedToPlayerByPosInt_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
 >    let private Lands_CheckPlayerHasCreateChestPermission_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
->    /// <summary> 检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool </summary>
+>    /// <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >    let public CheckPlayerHasCreateChestPermission(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckPlayerHasCreateChestPermission_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
 >    let private Lands_CheckPlayerHasOpenChestPermission_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
->    /// <summary> 检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
+>    /// <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >    let public CheckPlayerHasOpenChestPermission(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckPlayerHasOpenChestPermission_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
+>    let private Lands_GetPlayerAllParmissionGroupId_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId")
+>    /// <summary> 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string </summary>
+>    let public GetPlayerAllParmissionGroupId(playerXuid:string):string =
+>      Lands_GetPlayerAllParmissionGroupId_instance.Value.Invoke(playerXuid)
+>    let private Lands_GetPlayerParmissionGroup_instance = lazy RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup")
+>    /// <summary> 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string </summary>
+>    let public GetPlayerParmissionGroup(playerXuid:string)(permissionGroupId:string):string =
+>      Lands_GetPlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId)
+>    let private Lands_DeletePlayerParmissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup")
+>    /// <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
+>    let public DeletePlayerParmissionGroup(playerXuid:string)(permissionGroupId:string):bool =
+>      Lands_DeletePlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId)
 >  module public Money =
 >    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
