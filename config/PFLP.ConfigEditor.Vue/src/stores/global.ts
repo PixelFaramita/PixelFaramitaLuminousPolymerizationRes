@@ -196,10 +196,10 @@ export const useGlobalStore = defineStore('global', () => {
       "FakeSeed": 114514,
       "EnableLevelName": true,
       "LevelName": "Bedrock Level",
-      "SlowDownRedstoneTick": true,
-      "OverworldRedstoneTickMs": 250,
-      "NetherRedstoneTickMs": 250,
-      "TheEndRedstoneTickMs": 250
+      "EditRedstoneTPS": true,
+      "OverworldRedstoneTPS": 250,
+      "NetherRedstoneTPS": 250,
+      "TheEndRedstoneTPS": 250
     },
     "KickToolbox": {
       "ModuleEnabled": true,

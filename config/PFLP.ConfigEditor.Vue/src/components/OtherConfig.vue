@@ -37,32 +37,56 @@
                 <n-input v-model:value="helper.LevelName" />
             </n-space>
             <n-space>
-                重新定义红石刻
-                <n-switch v-model:value="helper.SlowDownRedstoneTick" />
+                修改红石刻速度
+                <n-switch v-model:value="helper.EditRedstoneTPS" />
+                <n-a v-if="helper.EditRedstoneTPS" href="https://wiki.biligame.com/mc/%E5%88%BB">刻/TPS/MSPT参考</n-a>
             </n-space>
-            <n-space v-if="helper.SlowDownRedstoneTick">
-                主世界红石刻时间
-                <n-input-number step="500" v-model:value="helper.OverworldRedstoneTickMs">
-                    <template #suffix>
-                        毫秒
-                    </template>
-                </n-input-number>
-            </n-space>
-            <n-space v-if="helper.SlowDownRedstoneTick">
-                地狱红石刻时间
-                <n-input-number step="500" v-model:value="helper.NetherRedstoneTickMs">
-                    <template #suffix>
-                        毫秒
-                    </template>
-                </n-input-number>
-            </n-space>
-            <n-space v-if="helper.SlowDownRedstoneTick">
-                末地红石刻时间
-                <n-input-number step="500" v-model:value="helper.TheEndRedstoneTickMs">
-                    <template #suffix>
-                        毫秒
-                    </template>
-                </n-input-number>
+            <n-space v-if="helper.EditRedstoneTPS">
+                <n-space>
+                    主世界红石
+                    <n-input-number step="0.5" v-model:value="helper.OverworldRedstoneTPS">
+                        <template #suffix>
+                            TPS
+                        </template>
+                    </n-input-number>
+                    <n-space>
+                        =<n-text class="blue">{{ TpsToMSPT(helper.OverworldRedstoneTPS) }}</n-text>
+                        <n-text class="yellow">MSPT</n-text>
+                        =<n-text class="yellow">原速</n-text>÷<n-text class="blue">{{
+                            TpsToCount(helper.OverworldRedstoneTPS)
+                        }}</n-text>
+                    </n-space>
+                </n-space>
+                <n-space>
+                    地狱红石
+                    <n-input-number step="0.5" v-model:value="helper.NetherRedstoneTPS">
+                        <template #suffix>
+                            TPS
+                        </template>
+                    </n-input-number>
+                    <n-space>
+                    =<n-text class="blue">{{ TpsToMSPT(helper.NetherRedstoneTPS) }}</n-text>
+                    <n-text class="yellow">MSPT</n-text>
+                    =<n-text class="yellow">原速</n-text>÷<n-text class="blue">{{
+                        TpsToCount(helper.NetherRedstoneTPS)
+                    }}</n-text>
+                </n-space>
+                </n-space>
+                <n-space>
+                    末地红石
+                    <n-input-number step="0.5" v-model:value="helper.TheEndRedstoneTPS">
+                        <template #suffix>
+                            TPS
+                        </template>
+                    </n-input-number>
+                    <n-space>
+                        =<n-text class="blue">{{ TpsToMSPT(helper.TheEndRedstoneTPS) }}</n-text>
+                        <n-text class="yellow">MSPT</n-text>
+                        =<n-text class="yellow">原速</n-text>÷<n-text class="blue">{{
+                            TpsToCount(helper.TheEndRedstoneTPS)
+                        }}</n-text>
+                    </n-space>
+                </n-space>
             </n-space>
         </div>
         <n-h3 prefix="bar">
@@ -164,6 +188,13 @@ export default {
             disconnect: store.config.FriendlyDisconnect,
             ui: store.config.UIExtensions
         };
+    },
+    methods: {
+        TpsToMSPT: function (val: number) {
+            return Math.round(1000 / (20 / this.TpsToCount(val)));
+        }, TpsToCount: function (val: number) {
+            return Math.max(Math.round(40 / val) / 2, .5);
+        }
     }
 }
 </script>
@@ -175,5 +206,14 @@ export default {
 
 .n-divider {
     margin: 3px;
+}
+
+.yellow {
+    /*yellow*/
+    color: #f0ad4e;
+}
+
+.green {
+    color: lightblue;
 }
 </style>

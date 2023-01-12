@@ -23,6 +23,9 @@
         </n-tab-pane>
         <n-tab-pane name="other" tab="其他">
             <other-config />
+        </n-tab-pane> 
+        <n-tab-pane name="ws" tab="Websocket">
+            <websocket-config />
         </n-tab-pane>
     </n-tabs>
 </template>

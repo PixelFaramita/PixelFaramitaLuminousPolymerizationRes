@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     GlobalConfig: typeof import('./src/components/GlobalConfig.vue')['default']
     LandConfig: typeof import('./src/components/LandConfig.vue')['default']
     MessageConfig: typeof import('./src/components/MessageConfig.vue')['default']
+    NA: typeof import('naive-ui')['NA']
     NButton: typeof import('naive-ui')['NButton']
     NButtonGroup: typeof import('naive-ui')['NButtonGroup']
     NCode: typeof import('naive-ui')['NCode']
@@ -46,6 +47,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TeleportConfig: typeof import('./src/components/TeleportConfig.vue')['default']
+    WebsocketConfig: typeof import('./src/components/WebsocketConfig.vue')['default']
     WorldLimitConfig: typeof import('./src/components/WorldLimitConfig.vue')['default']
     WorldLimitItem: typeof import('./src/components/WorldLimitItem.vue')['default']
   }
