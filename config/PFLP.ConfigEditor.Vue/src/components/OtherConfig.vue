@@ -1,6 +1,18 @@
 <template>
     <div>
         <n-h3 prefix="bar">
+            攻击回显
+            <n-switch v-model:value="attack.ModuleEnabled" />
+        </n-h3>
+        <div v-if="attack.ModuleEnabled">
+            <n-space>
+                弹射物击中 ding~ 音效:<n-switch v-model:value="attack.BowDing" />
+            </n-space>
+            <n-space>
+                弹射物击中标题显示伤害:<n-switch v-model:value="attack.BowDingTitle" />
+            </n-space>
+        </div>
+        <n-h3 prefix="bar">
             UI扩展
             <n-switch v-model:value="ui.ModuleEnabled" />
         </n-h3>
@@ -65,12 +77,12 @@
                         </template>
                     </n-input-number>
                     <n-space>
-                    =<n-text class="blue">{{ TpsToMSPT(helper.NetherRedstoneTPS) }}</n-text>
-                    <n-text class="yellow">MSPT</n-text>
-                    =<n-text class="yellow">原速</n-text>÷<n-text class="blue">{{
-                        TpsToCount(helper.NetherRedstoneTPS)
-                    }}</n-text>
-                </n-space>
+                        =<n-text class="blue">{{ TpsToMSPT(helper.NetherRedstoneTPS) }}</n-text>
+                        <n-text class="yellow">MSPT</n-text>
+                        =<n-text class="yellow">原速</n-text>÷<n-text class="blue">{{
+                            TpsToCount(helper.NetherRedstoneTPS)
+                        }}</n-text>
+                    </n-space>
                 </n-space>
                 <n-space>
                     末地红石
@@ -186,7 +198,8 @@ export default {
             close: store.config.CloseHandler_Settings,
             location: store.config.JoinLocation,
             disconnect: store.config.FriendlyDisconnect,
-            ui: store.config.UIExtensions
+            ui: store.config.UIExtensions,
+            attack: store.config.AttackEcho
         };
     },
     methods: {

@@ -230,7 +230,9 @@ export const useGlobalStore = defineStore('global', () => {
       "Port": 19132
     },
     "AttackEcho": {
-      "ModuleEnabled": true
+      "ModuleEnabled": true,
+      "BowDing": true,
+      "BowDingTitle": true
     }
   }
   const config = ref(defaultVal)
