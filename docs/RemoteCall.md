@@ -2338,6 +2338,102 @@
 >```
 >
 > </details>
+>
+>---
+>
+> <details>
+> <summary><b>EditPlayerParmissionGroup  - 修改家权限组内容(指定ID)<b></summary>
+>
+>## Lands::EditPlayerParmissionGroup
+>### 修改家权限组内容(指定ID)
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| permissionGroupId | string |
+>| jsonString | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 修改家权限组内容(指定ID) 返回值类型：bool */
+>const Lands_EditPlayerParmissionGroup = ll.import("PFLP", "Lands::EditPlayerParmissionGroup");
+>let result = Lands_EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>```
+> - C++
+>```C++
+>// 修改家权限组内容(指定ID) 返回值类型：bool
+>auto Lands_EditPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::EditPlayerParmissionGroup");
+>auto result = Lands_EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>```
+> - C#
+>```C#
+>// 修改家权限组内容(指定ID) 返回值类型：bool
+>var Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup");
+>var result = Lands_EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>```
+> - Visual Basic .Net
+>```vb
+>' 修改家权限组内容(指定ID) 返回值类型：bool
+>Dim Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerParmissionGroup")
+>Dim result = Lands_EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString)
+>```
+> - F#
+>```F#
+>// 修改家权限组内容(指定ID) 返回值类型：bool
+>let Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup")
+>(playerXuid,permissionGroupId,jsonString)
+>	|>Lands_EditPlayerParmissionGroup.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>AddPlayerParmissionGroup  - 添加权限组<b></summary>
+>
+>## Lands::AddPlayerParmissionGroup
+>### 添加权限组
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| permissionGroupId | string |
+>| jsonString | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 添加权限组 返回值类型：bool */
+>const Lands_AddPlayerParmissionGroup = ll.import("PFLP", "Lands::AddPlayerParmissionGroup");
+>let result = Lands_AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>```
+> - C++
+>```C++
+>// 添加权限组 返回值类型：bool
+>auto Lands_AddPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::AddPlayerParmissionGroup");
+>auto result = Lands_AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>```
+> - C#
+>```C#
+>// 添加权限组 返回值类型：bool
+>var Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup");
+>var result = Lands_AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>```
+> - Visual Basic .Net
+>```vb
+>' 添加权限组 返回值类型：bool
+>Dim Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerParmissionGroup")
+>Dim result = Lands_AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString)
+>```
+> - F#
+>```F#
+>// 添加权限组 返回值类型：bool
+>let Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup")
+>(playerXuid,permissionGroupId,jsonString)
+>	|>Lands_AddPlayerParmissionGroup.Invoke
+>	|>ignore
+>```
+>
+> </details>
 </details>
 <details>
 <summary><b>Money<b></summary>
@@ -2581,6 +2677,10 @@
 >const Lands_GetPlayerParmissionGroup = ll.import("PFLP", "Lands::GetPlayerParmissionGroup");
 >/** 删玩家权限组(指定ID) 返回值类型：bool */
 >const Lands_DeletePlayerParmissionGroup = ll.import("PFLP", "Lands::DeletePlayerParmissionGroup");
+>/** 修改家权限组内容(指定ID) 返回值类型：bool */
+>const Lands_EditPlayerParmissionGroup = ll.import("PFLP", "Lands::EditPlayerParmissionGroup");
+>/** 添加权限组 返回值类型：bool */
+>const Lands_AddPlayerParmissionGroup = ll.import("PFLP", "Lands::AddPlayerParmissionGroup");
 >/** 获取玩家(指定玩家名)金钱 返回值类型：long */
 >const Money_Get = ll.import("PFLP", "Money::Get");
 >/** 给玩家(指定玩家名)加钱 */
@@ -2983,6 +3083,20 @@
 >		 * @returns {boolean}
 >		 */
 >		DeletePlayerParmissionGroup(playerXuid,permissionGroupId) { return (this.Lands_DeletePlayerParmissionGroup??=ll.import("PFLP", "Lands::DeletePlayerParmissionGroup"))(playerXuid,permissionGroupId)},
+>		/** 修改家权限组内容(指定ID) 返回值类型：bool
+>		 * @param {string} playerXuid
+>		 * @param {string} permissionGroupId
+>		 * @param {string} jsonString
+>		 * @returns {boolean}
+>		 */
+>		EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString) { return (this.Lands_EditPlayerParmissionGroup??=ll.import("PFLP", "Lands::EditPlayerParmissionGroup"))(playerXuid,permissionGroupId,jsonString)},
+>		/** 添加权限组 返回值类型：bool
+>		 * @param {string} playerXuid
+>		 * @param {string} permissionGroupId
+>		 * @param {string} jsonString
+>		 * @returns {boolean}
+>		 */
+>		AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString) { return (this.Lands_AddPlayerParmissionGroup??=ll.import("PFLP", "Lands::AddPlayerParmissionGroup"))(playerXuid,permissionGroupId,jsonString)},
 >	},
 >	Money : {
 >		/** 获取玩家(指定玩家名)金钱 返回值类型：long
@@ -3110,6 +3224,10 @@ auto Lands_GetPlayerAllParmissionGroupId = RemoteCall::importAs<std::string(std:
 auto Lands_GetPlayerParmissionGroup = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::GetPlayerParmissionGroup");
 // 删玩家权限组(指定ID) 返回值类型：bool
 auto Lands_DeletePlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::DeletePlayerParmissionGroup");
+// 修改家权限组内容(指定ID) 返回值类型：bool
+auto Lands_EditPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::EditPlayerParmissionGroup");
+// 添加权限组 返回值类型：bool
+auto Lands_AddPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::AddPlayerParmissionGroup");
 // 获取玩家(指定玩家名)金钱 返回值类型：long
 auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
 // 给玩家(指定玩家名)加钱
@@ -3223,6 +3341,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup");
 >// 删玩家权限组(指定ID) 返回值类型：bool
 >var Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup");
+>// 修改家权限组内容(指定ID) 返回值类型：bool
+>var Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup");
+>// 添加权限组 返回值类型：bool
+>var Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup");
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
 >// 给玩家(指定玩家名)加钱
@@ -3484,6 +3606,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		public static bool DeletePlayerParmissionGroup(string playerXuid,string permissionGroupId) {
 >			return Lands_DeletePlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId);
 >		}
+>		private static Lazy<RemoteCallHandler_3<bool,string,string,string>>  Lands_EditPlayerParmissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup"));
+>		/// <summary> 修改家权限组内容(指定ID) 返回值类型：bool </summary>
+>		public static bool EditPlayerParmissionGroup(string playerXuid,string permissionGroupId,string jsonString) {
+>			return Lands_EditPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString);
+>		}
+>		private static Lazy<RemoteCallHandler_3<bool,string,string,string>>  Lands_AddPlayerParmissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup"));
+>		/// <summary> 添加权限组 返回值类型：bool </summary>
+>		public static bool AddPlayerParmissionGroup(string playerXuid,string permissionGroupId,string jsonString) {
+>			return Lands_AddPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString);
+>		}
 >	}
 >	public static class Money {
 >		private static Lazy<RemoteCallHandler_1<long,string>>  Money_Get_instance = new(()=> RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get"));
@@ -3615,6 +3747,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerParmissionGroup")
 >' 删玩家权限组(指定ID) 返回值类型：bool
 >Dim Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerParmissionGroup")
+>' 修改家权限组内容(指定ID) 返回值类型：bool
+>Dim Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerParmissionGroup")
+>' 添加权限组 返回值类型：bool
+>Dim Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerParmissionGroup")
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
 >' 给玩家(指定玩家名)加钱
@@ -3876,6 +4012,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		Public Shared Function DeletePlayerParmissionGroup(playerXuid As String,permissionGroupId As String) As bool 
 >			Return Lands_DeletePlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId)
 >		End Function
+>		Private Shared Lands_EditPlayerParmissionGroup_instance As Lazy(Of RemoteCallHandler_3(Of Boolean,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerParmissionGroup"))
+>		''' <summary> 修改家权限组内容(指定ID) 返回值类型：bool </summary>
+>		Public Shared Function EditPlayerParmissionGroup(playerXuid As String,permissionGroupId As String,jsonString As String) As bool 
+>			Return Lands_EditPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString)
+>		End Function
+>		Private Shared Lands_AddPlayerParmissionGroup_instance As Lazy(Of RemoteCallHandler_3(Of Boolean,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerParmissionGroup"))
+>		''' <summary> 添加权限组 返回值类型：bool </summary>
+>		Public Shared Function AddPlayerParmissionGroup(playerXuid As String,permissionGroupId As String,jsonString As String) As bool 
+>			Return Lands_AddPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString)
+>		End Function
 >	End Class
 >	Public NotInheritable Class Money
 >		Private Shared Money_Get_instance As Lazy(Of RemoteCallHandler_1(Of Long,String))(Function() RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get"))
@@ -4008,6 +4154,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup")
 >// 删玩家权限组(指定ID) 返回值类型：bool
 >let Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup")
+>// 修改家权限组内容(指定ID) 返回值类型：bool
+>let Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup")
+>// 添加权限组 返回值类型：bool
+>let Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup")
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >// 给玩家(指定玩家名)加钱
@@ -4218,6 +4368,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
 >    let public DeletePlayerParmissionGroup(playerXuid:string)(permissionGroupId:string):bool =
 >      Lands_DeletePlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId)
+>    let private Lands_EditPlayerParmissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup")
+>    /// <summary> 修改家权限组内容(指定ID) 返回值类型：bool </summary>
+>    let public EditPlayerParmissionGroup(playerXuid:string)(permissionGroupId:string)(jsonString:string):bool =
+>      Lands_EditPlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId,jsonString)
+>    let private Lands_AddPlayerParmissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup")
+>    /// <summary> 添加权限组 返回值类型：bool </summary>
+>    let public AddPlayerParmissionGroup(playerXuid:string)(permissionGroupId:string)(jsonString:string):bool =
+>      Lands_AddPlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId,jsonString)
 >  module public Money =
 >    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
