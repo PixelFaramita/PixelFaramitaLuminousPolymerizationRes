@@ -7,6 +7,10 @@
             <n-space>
                 启用领地传送
                 <n-switch v-model:value="config.EnableTeleport" size="large" />
+            </n-space> 
+            <n-space>
+                圈地飞行（短距离）（仅非OP有效）
+                <n-switch v-model:value="config.EnableEnclosureFly" size="large" />
             </n-space>
             <n-space>
                 开启二维领地圈地

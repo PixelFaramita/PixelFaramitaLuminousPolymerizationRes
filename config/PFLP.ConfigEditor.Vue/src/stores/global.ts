@@ -70,6 +70,7 @@ export const useGlobalStore = defineStore('global', () => {
     "Land": {
       "ModuleEnabled": true,
       "EnableTeleport": true,
+      "EnableEnclosureFly":true,
       "Enabled2D": true,
       "Price2D": 100.0,
       "RecyclePrice2D": 95.0,

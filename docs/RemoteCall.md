@@ -33,6 +33,50 @@
 > 滑稽
 
 <details>
+<summary><b>Event<b></summary>
+
+> <details>
+> <summary><b>OnLandCreate  - 领地创建<b></summary>
+>
+>## Event::OnLandCreate
+>### 领地创建
+>无参数;
+>返回值类型：long;
+> - JavaScript
+>```js
+>/** 领地创建 返回值类型：long */
+>const Event_OnLandCreate = ll.import("PFLP", "Event::OnLandCreate");
+>let result = Event_OnLandCreate();
+>```
+> - C++
+>```C++
+>// 领地创建 返回值类型：long
+>auto Event_OnLandCreate = RemoteCall::importAs<long long()>("PFLP", "Event::OnLandCreate");
+>auto result = Event_OnLandCreate();
+>```
+> - C#
+>```C#
+>// 领地创建 返回值类型：long
+>var Event_OnLandCreate = RemoteCallAPI.ImportAs<long>("PFLP", "Event::OnLandCreate");
+>var result = Event_OnLandCreate();
+>```
+> - Visual Basic .Net
+>```vb
+>' 领地创建 返回值类型：long
+>Dim Event_OnLandCreate = RemoteCallAPI.ImportAs(Of Long)("PFLP", "Event::OnLandCreate")
+>Dim result = Event_OnLandCreate()
+>```
+> - F#
+>```F#
+>// 领地创建 返回值类型：long
+>let Event_OnLandCreate = RemoteCallAPI.ImportAs<int64>("PFLP", "Event::OnLandCreate")
+>Event_OnLandCreate()
+>	|>ignore
+>```
+>
+> </details>
+</details>
+<details>
 <summary><b>General<b></summary>
 
 > <details>
@@ -2583,6 +2627,8 @@
 ><details><summary>JavaScript imports / 逐个导入</summary>
 >
 >``` JavaScript
+>/** 领地创建 返回值类型：long */
+>const Event_OnLandCreate = ll.import("PFLP", "Event::OnLandCreate");
 >/** 设置全局配置文件（要求JSON字符串） 返回值类型：bool */
 >const General_SetConfig = ll.import("PFLP", "General::SetConfig");
 >/** 获取全局配置文件（JSON字符串） 返回值类型：string */
@@ -2694,6 +2740,12 @@
 >
 >``` JavaScript
 >const PFLP = {
+>	Event : {
+>		/** 领地创建 返回值类型：long
+>		 * @returns {number}
+>		 */
+>		OnLandCreate() { return (this.Event_OnLandCreate??=ll.import("PFLP", "Event::OnLandCreate"))()},
+>	},
 >	General : {
 >		/** 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >		 * @param {string} jsonStr
@@ -3130,6 +3182,8 @@
 <summary><b>All Api in C++ / 全部C++接口<b></summary>
 
 ``` C++
+// 领地创建 返回值类型：long
+auto Event_OnLandCreate = RemoteCall::importAs<long long()>("PFLP", "Event::OnLandCreate");
 // 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 auto General_SetConfig = RemoteCall::importAs<bool(std::string const& jsonStr)>("PFLP", "General::SetConfig");
 // 获取全局配置文件（JSON字符串） 返回值类型：string
@@ -3247,6 +3301,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >``` C#
 >using RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
+>// 领地创建 返回值类型：long
+>var Event_OnLandCreate = RemoteCallAPI.ImportAs<long>("PFLP", "Event::OnLandCreate");
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >var General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig");
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
@@ -3360,6 +3416,13 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >using RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >internal static class PFLP {
+>	public static class Event {
+>		private static Lazy<RemoteCallHandler_0<long>>  Event_OnLandCreate_instance = new(()=> RemoteCallAPI.ImportAs<long>("PFLP", "Event::OnLandCreate"));
+>		/// <summary> 领地创建 返回值类型：long </summary>
+>		public static long OnLandCreate() {
+>			return Event_OnLandCreate_instance.Value();
+>		}
+>	}
 >	public static class General {
 >		private static Lazy<RemoteCallHandler_1<bool,string>>  General_SetConfig_instance = new(()=> RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig"));
 >		/// <summary> 设置全局配置文件（要求JSON字符串） 返回值类型：bool </summary>
@@ -3653,6 +3716,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >``` VB
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
+>' 领地创建 返回值类型：long
+>Dim Event_OnLandCreate = RemoteCallAPI.ImportAs(Of Long)("PFLP", "Event::OnLandCreate")
 >' 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "General::SetConfig")
 >' 获取全局配置文件（JSON字符串） 返回值类型：string
@@ -3766,6 +3831,13 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >Friend Module PFLP
+>	Public NotInheritable Class Event
+>		Private Shared Event_OnLandCreate_instance As Lazy(Of RemoteCallHandler_0(Of Long))(Function() RemoteCallAPI.ImportAs(Of Long)("PFLP", "Event::OnLandCreate"))
+>		''' <summary> 领地创建 返回值类型：long </summary>
+>		Public Shared Function OnLandCreate() As long 
+>			Return Event_OnLandCreate_instance.Value()
+>		End Function
+>	End Class
 >	Public NotInheritable Class General
 >		Private Shared General_SetConfig_instance As Lazy(Of RemoteCallHandler_1(Of Boolean,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "General::SetConfig"))
 >		''' <summary> 设置全局配置文件（要求JSON字符串） 返回值类型：bool </summary>
@@ -4060,6 +4132,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >#r "LiteLoader.Net"
 >open LiteLoader.RemoteCall
 >
+>// 领地创建 返回值类型：long
+>let Event_OnLandCreate = RemoteCallAPI.ImportAs<int64>("PFLP", "Event::OnLandCreate")
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >let General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
@@ -4174,6 +4248,11 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >open LiteLoader.RemoteCall
 >
 >module public PFLP =
+>  module public Event =
+>    let private Event_OnLandCreate_instance = lazy RemoteCallAPI.ImportAs<int64>("PFLP", "Event::OnLandCreate")
+>    /// <summary> 领地创建 返回值类型：long </summary>
+>    let public OnLandCreate():int64 =
+>      Event_OnLandCreate_instance.Value.Invoke()
 >  module public General =
 >    let private General_SetConfig_instance = lazy RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
 >    /// <summary> 设置全局配置文件（要求JSON字符串） 返回值类型：bool </summary>
