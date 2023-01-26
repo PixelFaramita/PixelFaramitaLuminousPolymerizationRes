@@ -61,7 +61,7 @@ mc.listen("onServerStarted", () => {
 不过开始前，你需要安装`@minecraft/server`等npm包以实现编辑器的自动补全，通常`PixelFaramitaLuminousPolymerization\scripts`已经准备好了`package.json`，你只需在该目录执行`npm i`命令即可自动安装补全库。
 然后你可以在`PixelFaramitaLuminousPolymerization\scripts`文件夹中创建一个`test.js`文件，然后写入以下代码：
 ```js
-import * as mc from "@minecraft/server";
+import * as mc from "@minecraft/server";//导入官方包
 /**
  * 实体对象转玩家对象
  * @param {mc.Entity} entity 
@@ -69,29 +69,29 @@ import * as mc from "@minecraft/server";
  */
 function EntityToPlayer(entity) {
     if (entity.typeId === "minecraft:player") {
-        for (const iterator of mc.world.getPlayers({ name: entity.nameTag })) {
+        for (const iterator of mc.world.getPlayers({ name: entity.nameTag })) {//通过mc.world.getPlayers方法找到与实体对应的玩家对象并返回
             return iterator
         }
     }
 }
-mc.world.events.projectileHit.subscribe(e => {
-    if (e.entityHit !== undefined) {
-        EntityToPlayer(e.source)?.playSound("random.orb")
+mc.world.events.projectileHit.subscribe(e => {//订阅弹射物击中事件
+    if (e.entityHit !== undefined) {//如果击中了实体
+        EntityToPlayer(e.source)?.playSound("random.orb")//播放声音
     }
 })
 ```
 这个简单示例实现了箭矢击中目标后反馈给玩家ding~的音效，可以看出addon中深藏不漏的ScriptingAPI还是很强大的。
 然后请往下看
 ```js
-import { Utils, log, Api } from "@pf"
+import { Utils, log, Api } from "@pf"//导入PFLP的方法
 import * as mc from "@minecraft/server";
-mc.world.events.projectileHit.subscribe(e => {
+mc.world.events.projectileHit.subscribe(e => {//订阅弹射物击中事件
     if (e.blockHit !== undefined) {
         if (e.source.typeId === "minecraft:player") {
             try {
-                const playerXuid = Utils.UniqueIdToXuid(e.source.id)
+                const playerXuid = Utils.UniqueIdToXuid(e.source.id)//这个方法可以把UniqueId转换成玩家的xuid
                 const { x, y, z } = e.blockHit.block.location 
-                Api.ParticlesGraphics.DrawBlock(playerXuid, x, y, z, 0.5, 0.9, 0.5, 0.03, 1, 0.5)
+                Api.ParticlesGraphics.DrawBlock(playerXuid, x, y, z, 0.5, 0.9, 0.5, 0.03, 1, 0.5)//通过PFLP的API绘制方块描边
             } catch (error) { }
         }
     }
