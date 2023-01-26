@@ -8,6 +8,7 @@
 
 - ### [安装教程](docs/InstallGuide.md)
 
+- ### [JS扩展和对接](docs/MagicJS.md)
 - ### [接口文档](docs/RemoteCall.md)
 
 - ### [语言文件](lang)
