@@ -70,7 +70,7 @@ export const useGlobalStore = defineStore('global', () => {
     "Land": {
       "ModuleEnabled": true,
       "EnableTeleport": true,
-      "EnableEnclosureFly":true,
+      "EnableEnclosureFly": true,
       "Enabled2D": true,
       "Price2D": 100.0,
       "RecyclePrice2D": 95.0,
@@ -233,7 +233,17 @@ export const useGlobalStore = defineStore('global', () => {
     "AttackEcho": {
       "ModuleEnabled": true,
       "BowDing": true,
-      "BowDingTitle": true
+      "ShowTitle": true,
+      "ShowActionbar": true
+    },
+    "FakeMotd": {
+      "ModuleEnabled": true,
+      "DynamicMaxCount": true,
+      "FakeCurrentPlayerCount": 0,
+      "FakeMaxPlayerCount": 0,
+      "FakePortIPv4": 19132,
+      "FakePortIPv6": 19133,
+      "FakeLevelName": "Bedrock Level"
     }
   }
   const config = ref(defaultVal)

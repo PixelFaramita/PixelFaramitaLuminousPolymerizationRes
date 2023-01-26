@@ -1,6 +1,32 @@
 <template>
     <div>
         <n-h3 prefix="bar">
+            虚拟Motd
+            <n-switch v-model:value="motdx.ModuleEnabled" />
+        </n-h3>
+        <div v-if="motdx.ModuleEnabled">
+            <n-space>
+                自动最大玩家数量（=当前玩家数量+1）:<n-switch v-model:value="motdx.DynamicMaxCount" />
+            </n-space>
+            <n-space>
+                伪造在线玩家数 (0为关闭)： <n-input-number v-model:value="motdx.FakeCurrentPlayerCount" />
+            </n-space>
+            <n-space>
+                修改最大玩家数 (0为关闭)： <n-input-number v-model:value="motdx.FakeMaxPlayerCount" />
+            </n-space>
+            <n-space>
+                伪造motd显示端口(IPv4) (0为关闭)： <n-input-number :validator="(val) => val <= 65535 && val >= 0"
+                    v-model:value="motdx.FakePortIPv4" />
+            </n-space>
+            <n-space>
+                伪造motd显示端口(IPv6) (0为关闭)： <n-input-number :validator="(val) => val <= 65535 && val >= 0"
+                    v-model:value="motdx.FakePortIPv6" />
+            </n-space>
+            <n-space>
+                修改motd存档名称(留空关闭)： <n-input v-model:value="motdx.FakeLevelName" />
+            </n-space>
+        </div>
+        <n-h3 prefix="bar">
             攻击回显
             <n-switch v-model:value="attack.ModuleEnabled" />
         </n-h3>
@@ -9,7 +35,10 @@
                 弹射物击中 ding~ 音效:<n-switch v-model:value="attack.BowDing" />
             </n-space>
             <n-space>
-                弹射物击中标题显示伤害:<n-switch v-model:value="attack.BowDingTitle" />
+                弹射物击中标题大字显示伤害:<n-switch v-model:value="attack.ShowTitle" />
+            </n-space>
+            <n-space>
+                弹射物击中物品栏小字显示伤害:<n-switch v-model:value="attack.ShowActionbar" />
             </n-space>
         </div>
         <n-h3 prefix="bar">
@@ -199,7 +228,8 @@ export default {
             location: store.config.JoinLocation,
             disconnect: store.config.FriendlyDisconnect,
             ui: store.config.UIExtensions,
-            attack: store.config.AttackEcho
+            attack: store.config.AttackEcho,
+            motdx: store.config.FakeMotd
         };
     },
     methods: {
