@@ -57,9 +57,10 @@ mc.listen("onServerStarted", () => {
 
 ### Mojang Scripting
 不仅仅是基于LL的js脚本，PFLP的插件目录还有个scripts文件夹，相信你已经猜出来这是用来干什么的了...
-你可能听说过在行为包中利用官方的脚本接口编写插件，现在MagicJS可以让更加轻松地编写官方脚本插件，你可以在`PixelFaramitaLuminousPolymerization\scripts`文件夹中创建一个`test.js`文件，然后写入以下代码：
+你可能听说过在行为包中利用官方的脚本接口编写插件，现在MagicJS可以让更加轻松地编写官方脚本插件，
+不过开始前，你需要安装`@minecraft/server`等npm包以实现编辑器的自动补全，通常`PixelFaramitaLuminousPolymerization\scripts`已经准备好了`package.json`，你只需在该目录执行`npm i`命令即可自动安装补全库。
+然后你可以在`PixelFaramitaLuminousPolymerization\scripts`文件夹中创建一个`test.js`文件，然后写入以下代码：
 ```js
-import { Utils, log, Api } from "@pf"
 import * as mc from "@minecraft/server";
 /**
  * 实体对象转玩家对象
@@ -96,4 +97,4 @@ mc.world.events.projectileHit.subscribe(e => {
     }
 })
 ```
-这个示例调用了PFLP的`DrawBlock`方法，在箭矢击中方块后给方块绘制了描边。
+这个示例调用了PFLP的`DrawBlock`方法，在箭矢击中方块后给方块绘制了描边。就像官方的脚本，可以优雅地使用`import`来导入`@pf`模块，然后可以直接调用PFLP的方法，类似上文的`$pf`变量
