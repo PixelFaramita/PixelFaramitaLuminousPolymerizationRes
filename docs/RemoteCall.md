@@ -686,7 +686,7 @@
 >### 给指定方块描框
 >|  形参   | 类型  |
 >|  ----  | ----  |
->| player | Player |
+>| playerXuid | string |
 >| x | int |
 >| y | int |
 >| z | int |
@@ -701,31 +701,31 @@
 >```js
 >/** 给指定方块描框 */
 >const ParticlesGraphics_DrawBlock = ll.import("PFLP", "ParticlesGraphics::DrawBlock");
->ParticlesGraphics_DrawBlock(player,x,y,z,r,g,b,thickness,time,alpha);
+>ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 >```
 > - C++
 >```C++
 >// 给指定方块描框
->auto ParticlesGraphics_DrawBlock = RemoteCall::importAs<void(Player& const& player,int const& x,int const& y,int const& z,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBlock");
->ParticlesGraphics_DrawBlock(player,x,y,z,r,g,b,thickness,time,alpha);
+>auto ParticlesGraphics_DrawBlock = RemoteCall::importAs<void(std::string const& playerXuid,int const& x,int const& y,int const& z,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBlock");
+>ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 >```
 > - C#
 >```C#
 >// 给指定方块描框
->var ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<Player,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock");
->ParticlesGraphics_DrawBlock(player,x,y,z,r,g,b,thickness,time,alpha);
+>var ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock");
+>ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 >```
 > - Visual Basic .Net
 >```vb
 >' 给指定方块描框
->Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As(Of IntPtr,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock")
->ParticlesGraphics_DrawBlock(player,x,y,z,r,g,b,thickness,time,alpha)
+>Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock")
+>ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
 >```
 > - F#
 >```F#
 >// 给指定方块描框
->let ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<nativeint,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
->(player,x,y,z,r,g,b,thickness,time,alpha)
+>let ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
+>(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
 >	|>ParticlesGraphics_DrawBlock.Invoke
 >```
 >
@@ -740,7 +740,7 @@
 >### 给指定区域描框
 >|  形参   | 类型  |
 >|  ----  | ----  |
->| player | Player |
+>| playerXuid | string |
 >| x1 | int |
 >| y1 | int |
 >| z1 | int |
@@ -758,31 +758,31 @@
 >```js
 >/** 给指定区域描框 */
 >const ParticlesGraphics_DrawBorder = ll.import("PFLP", "ParticlesGraphics::DrawBorder");
->ParticlesGraphics_DrawBorder(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
+>ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >```
 > - C++
 >```C++
 >// 给指定区域描框
->auto ParticlesGraphics_DrawBorder = RemoteCall::importAs<void(Player& const& player,int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBorder");
->ParticlesGraphics_DrawBorder(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
+>auto ParticlesGraphics_DrawBorder = RemoteCall::importAs<void(std::string const& playerXuid,int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBorder");
+>ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >```
 > - C#
 >```C#
 >// 给指定区域描框
->var ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<Player,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder");
->ParticlesGraphics_DrawBorder(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
+>var ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder");
+>ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >```
 > - Visual Basic .Net
 >```vb
 >' 给指定区域描框
->Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As(Of IntPtr,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder")
->ParticlesGraphics_DrawBorder(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
+>Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder")
+>ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 >```
 > - F#
 >```F#
 >// 给指定区域描框
->let ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<nativeint,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
->(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
+>let ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
+>(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 >	|>ParticlesGraphics_DrawBorder.Invoke
 >```
 >
@@ -2774,7 +2774,7 @@
 >	},
 >	ParticlesGraphics : {
 >		/** 给指定方块描框
->		 * @param {Player} player
+>		 * @param {string} playerXuid
 >		 * @param {number} x
 >		 * @param {number} y
 >		 * @param {number} z
@@ -2785,9 +2785,9 @@
 >		 * @param {number} time
 >		 * @param {number} alpha
 >		 */
->		DrawBlock(player,x,y,z,r,g,b,thickness,time,alpha) { (this.ParticlesGraphics_DrawBlock??=ll.import("PFLP", "ParticlesGraphics::DrawBlock"))(player,x,y,z,r,g,b,thickness,time,alpha)},
+>		DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha) { (this.ParticlesGraphics_DrawBlock??=ll.import("PFLP", "ParticlesGraphics::DrawBlock"))(playerXuid,x,y,z,r,g,b,thickness,time,alpha)},
 >		/** 给指定区域描框
->		 * @param {Player} player
+>		 * @param {string} playerXuid
 >		 * @param {number} x1
 >		 * @param {number} y1
 >		 * @param {number} z1
@@ -2801,7 +2801,7 @@
 >		 * @param {number} time
 >		 * @param {number} alpha
 >		 */
->		DrawBorder(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha) { (this.ParticlesGraphics_DrawBorder??=ll.import("PFLP", "ParticlesGraphics::DrawBorder"))(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)},
+>		DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha) { (this.ParticlesGraphics_DrawBorder??=ll.import("PFLP", "ParticlesGraphics::DrawBorder"))(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)},
 >	},
 >	Lands : {
 >		/** 检查指定立方体区域(float)是否有领地 返回值类型：bool
@@ -3159,9 +3159,9 @@ auto ChatEx_GetEnd = RemoteCall::importAs<std::string(std::string const& playerX
 // 获取玩家聊天消息前缀 返回值类型：string
 auto ChatEx_GetStart = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "ChatEx::GetStart");
 // 给指定方块描框
-auto ParticlesGraphics_DrawBlock = RemoteCall::importAs<void(Player& const& player,int const& x,int const& y,int const& z,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBlock");
+auto ParticlesGraphics_DrawBlock = RemoteCall::importAs<void(std::string const& playerXuid,int const& x,int const& y,int const& z,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBlock");
 // 给指定区域描框
-auto ParticlesGraphics_DrawBorder = RemoteCall::importAs<void(Player& const& player,int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBorder");
+auto ParticlesGraphics_DrawBorder = RemoteCall::importAs<void(std::string const& playerXuid,int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBorder");
 // 检查指定立方体区域(float)是否有领地 返回值类型：bool
 auto Lands_CheckCubeHasLand = RemoteCall::importAs<bool(float const& x1,float const& y1,float const& z1,float const& x2,float const& y2,float const& z2,int const& dimensionId)>("PFLP", "Lands::CheckCubeHasLand");
 // 检查指定立方体区域(int)是否有领地 返回值类型：bool
@@ -3276,9 +3276,9 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >// 获取玩家聊天消息前缀 返回值类型：string
 >var ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart");
 >// 给指定方块描框
->var ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<Player,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock");
+>var ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock");
 >// 给指定区域描框
->var ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<Player,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder");
+>var ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder");
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
 >var Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand");
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
@@ -3439,15 +3439,15 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		}
 >	}
 >	public static class ParticlesGraphics {
->		private static Lazy<RemoteCallHandler_void_10<Player,int,int,int,float,float,float,float,float,float>>  ParticlesGraphics_DrawBlock_instance = new(()=> RemoteCallAPI.Import_As<Player,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock"));
+>		private static Lazy<RemoteCallHandler_void_10<string,int,int,int,float,float,float,float,float,float>>  ParticlesGraphics_DrawBlock_instance = new(()=> RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock"));
 >		/// <summary> 给指定方块描框 </summary>
->		public static void DrawBlock(Player player,int x,int y,int z,float r,float g,float b,float thickness,float time,float alpha) {
->			ParticlesGraphics_DrawBlock_instance.Value(player,x,y,z,r,g,b,thickness,time,alpha);
+>		public static void DrawBlock(string playerXuid,int x,int y,int z,float r,float g,float b,float thickness,float time,float alpha) {
+>			ParticlesGraphics_DrawBlock_instance.Value(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 >		}
->		private static Lazy<RemoteCallHandler_void_13<Player,int,int,int,int,int,int,float,float,float,float,float,float>>  ParticlesGraphics_DrawBorder_instance = new(()=> RemoteCallAPI.Import_As<Player,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder"));
+>		private static Lazy<RemoteCallHandler_void_13<string,int,int,int,int,int,int,float,float,float,float,float,float>>  ParticlesGraphics_DrawBorder_instance = new(()=> RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder"));
 >		/// <summary> 给指定区域描框 </summary>
->		public static void DrawBorder(Player player,int x1,int y1,int z1,int x2,int y2,int z2,float r,float g,float b,float thickness,float time,float alpha) {
->			ParticlesGraphics_DrawBorder_instance.Value(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
+>		public static void DrawBorder(string playerXuid,int x1,int y1,int z1,int x2,int y2,int z2,float r,float g,float b,float thickness,float time,float alpha) {
+>			ParticlesGraphics_DrawBorder_instance.Value(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >		}
 >	}
 >	public static class Lands {
@@ -3682,9 +3682,9 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >' 获取玩家聊天消息前缀 返回值类型：string
 >Dim ChatEx_GetStart = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetStart")
 >' 给指定方块描框
->Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As(Of IntPtr,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock")
+>Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock")
 >' 给指定区域描框
->Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As(Of IntPtr,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder")
+>Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder")
 >' 检查指定立方体区域(float)是否有领地 返回值类型：bool
 >Dim Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::CheckCubeHasLand")
 >' 检查指定立方体区域(int)是否有领地 返回值类型：bool
@@ -3845,15 +3845,15 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		End Function
 >	End Class
 >	Public NotInheritable Class ParticlesGraphics
->		Private Shared ParticlesGraphics_DrawBlock_instance As Lazy(Of RemoteCallHandler_void_10(Of IntPtr,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))(Function() RemoteCallAPI.Import_As(Of IntPtr,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock"))
+>		Private Shared ParticlesGraphics_DrawBlock_instance As Lazy(Of RemoteCallHandler_void_10(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))(Function() RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock"))
 >		''' <summary> 给指定方块描框 </summary>
->		Public Shared Sub DrawBlock(player As IntPtr,x As Integer,y As Integer,z As Integer,r As Single,g As Single,b As Single,thickness As Single,time As Single,alpha As Single)  
->			ParticlesGraphics_DrawBlock_instance.Value(player,x,y,z,r,g,b,thickness,time,alpha)
+>		Public Shared Sub DrawBlock(playerXuid As String,x As Integer,y As Integer,z As Integer,r As Single,g As Single,b As Single,thickness As Single,time As Single,alpha As Single)  
+>			ParticlesGraphics_DrawBlock_instance.Value(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
 >		End Sub
->		Private Shared ParticlesGraphics_DrawBorder_instance As Lazy(Of RemoteCallHandler_void_13(Of IntPtr,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))(Function() RemoteCallAPI.Import_As(Of IntPtr,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder"))
+>		Private Shared ParticlesGraphics_DrawBorder_instance As Lazy(Of RemoteCallHandler_void_13(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))(Function() RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder"))
 >		''' <summary> 给指定区域描框 </summary>
->		Public Shared Sub DrawBorder(player As IntPtr,x1 As Integer,y1 As Integer,z1 As Integer,x2 As Integer,y2 As Integer,z2 As Integer,r As Single,g As Single,b As Single,thickness As Single,time As Single,alpha As Single)  
->			ParticlesGraphics_DrawBorder_instance.Value(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
+>		Public Shared Sub DrawBorder(playerXuid As String,x1 As Integer,y1 As Integer,z1 As Integer,x2 As Integer,y2 As Integer,z2 As Integer,r As Single,g As Single,b As Single,thickness As Single,time As Single,alpha As Single)  
+>			ParticlesGraphics_DrawBorder_instance.Value(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 >		End Sub
 >	End Class
 >	Public NotInheritable Class Lands
@@ -4089,9 +4089,9 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >// 获取玩家聊天消息前缀 返回值类型：string
 >let ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart")
 >// 给指定方块描框
->let ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<nativeint,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
+>let ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
 >// 给指定区域描框
->let ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<nativeint,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
+>let ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
 >let Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand")
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
@@ -4235,14 +4235,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    let public GetStart(playerXuid:string):string =
 >      ChatEx_GetStart_instance.Value.Invoke(playerXuid)
 >  module public ParticlesGraphics =
->    let private ParticlesGraphics_DrawBlock_instance = lazy RemoteCallAPI.Import_As<nativeint,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
+>    let private ParticlesGraphics_DrawBlock_instance = lazy RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
 >    /// <summary> 给指定方块描框 </summary>
->    let public DrawBlock(player:nativeint)(x:int)(y:int)(z:int)(r:float)(g:float)(b:float)(thickness:float)(time:float)(alpha:float):unit =
->      ParticlesGraphics_DrawBlock_instance.Value.Invoke(player,x,y,z,r,g,b,thickness,time,alpha)
->    let private ParticlesGraphics_DrawBorder_instance = lazy RemoteCallAPI.Import_As<nativeint,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
+>    let public DrawBlock(playerXuid:string)(x:int)(y:int)(z:int)(r:float)(g:float)(b:float)(thickness:float)(time:float)(alpha:float):unit =
+>      ParticlesGraphics_DrawBlock_instance.Value.Invoke(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
+>    let private ParticlesGraphics_DrawBorder_instance = lazy RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
 >    /// <summary> 给指定区域描框 </summary>
->    let public DrawBorder(player:nativeint)(x1:int)(y1:int)(z1:int)(x2:int)(y2:int)(z2:int)(r:float)(g:float)(b:float)(thickness:float)(time:float)(alpha:float):unit =
->      ParticlesGraphics_DrawBorder_instance.Value.Invoke(player,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
+>    let public DrawBorder(playerXuid:string)(x1:int)(y1:int)(z1:int)(x2:int)(y2:int)(z2:int)(r:float)(g:float)(b:float)(thickness:float)(time:float)(alpha:float):unit =
+>      ParticlesGraphics_DrawBorder_instance.Value.Invoke(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 >  module public Lands =
 >    let private Lands_CheckCubeHasLand_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand")
 >    /// <summary> 检查指定立方体区域(float)是否有领地 返回值类型：bool </summary>
