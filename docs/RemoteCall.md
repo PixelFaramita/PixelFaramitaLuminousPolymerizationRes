@@ -2434,6 +2434,98 @@
 >```
 >
 > </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetLandsOwnedByPlayer  - 取玩家拥有的领地<b></summary>
+>
+>## Lands::GetLandsOwnedByPlayer
+>### 取玩家拥有的领地
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 取玩家拥有的领地 返回值类型：string */
+>const Lands_GetLandsOwnedByPlayer = ll.import("PFLP", "Lands::GetLandsOwnedByPlayer");
+>let result = Lands_GetLandsOwnedByPlayer(playerXuid);
+>```
+> - C++
+>```C++
+>// 取玩家拥有的领地 返回值类型：string
+>auto Lands_GetLandsOwnedByPlayer = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetLandsOwnedByPlayer");
+>auto result = Lands_GetLandsOwnedByPlayer(playerXuid);
+>```
+> - C#
+>```C#
+>// 取玩家拥有的领地 返回值类型：string
+>var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer");
+>var result = Lands_GetLandsOwnedByPlayer(playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 取玩家拥有的领地 返回值类型：string
+>Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer")
+>Dim result = Lands_GetLandsOwnedByPlayer(playerXuid)
+>```
+> - F#
+>```F#
+>// 取玩家拥有的领地 返回值类型：string
+>let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
+>playerXuid
+>	|>Lands_GetLandsOwnedByPlayer.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetLandsSharedToPlayer  - 取共享给玩家的领地<b></summary>
+>
+>## Lands::GetLandsSharedToPlayer
+>### 取共享给玩家的领地
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 取共享给玩家的领地 返回值类型：string */
+>const Lands_GetLandsSharedToPlayer = ll.import("PFLP", "Lands::GetLandsSharedToPlayer");
+>let result = Lands_GetLandsSharedToPlayer(playerXuid);
+>```
+> - C++
+>```C++
+>// 取共享给玩家的领地 返回值类型：string
+>auto Lands_GetLandsSharedToPlayer = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetLandsSharedToPlayer");
+>auto result = Lands_GetLandsSharedToPlayer(playerXuid);
+>```
+> - C#
+>```C#
+>// 取共享给玩家的领地 返回值类型：string
+>var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer");
+>var result = Lands_GetLandsSharedToPlayer(playerXuid);
+>```
+> - Visual Basic .Net
+>```vb
+>' 取共享给玩家的领地 返回值类型：string
+>Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsSharedToPlayer")
+>Dim result = Lands_GetLandsSharedToPlayer(playerXuid)
+>```
+> - F#
+>```F#
+>// 取共享给玩家的领地 返回值类型：string
+>let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer")
+>playerXuid
+>	|>Lands_GetLandsSharedToPlayer.Invoke
+>	|>ignore
+>```
+>
+> </details>
 </details>
 <details>
 <summary><b>Money<b></summary>
@@ -2681,6 +2773,10 @@
 >const Lands_EditPlayerParmissionGroup = ll.import("PFLP", "Lands::EditPlayerParmissionGroup");
 >/** 添加权限组 返回值类型：bool */
 >const Lands_AddPlayerParmissionGroup = ll.import("PFLP", "Lands::AddPlayerParmissionGroup");
+>/** 取玩家拥有的领地 返回值类型：string */
+>const Lands_GetLandsOwnedByPlayer = ll.import("PFLP", "Lands::GetLandsOwnedByPlayer");
+>/** 取共享给玩家的领地 返回值类型：string */
+>const Lands_GetLandsSharedToPlayer = ll.import("PFLP", "Lands::GetLandsSharedToPlayer");
 >/** 获取玩家(指定玩家名)金钱 返回值类型：long */
 >const Money_Get = ll.import("PFLP", "Money::Get");
 >/** 给玩家(指定玩家名)加钱 */
@@ -3097,6 +3193,16 @@
 >		 * @returns {boolean}
 >		 */
 >		AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString) { return (this.Lands_AddPlayerParmissionGroup??=ll.import("PFLP", "Lands::AddPlayerParmissionGroup"))(playerXuid,permissionGroupId,jsonString)},
+>		/** 取玩家拥有的领地 返回值类型：string
+>		 * @param {string} playerXuid
+>		 * @returns {string}
+>		 */
+>		GetLandsOwnedByPlayer(playerXuid) { return (this.Lands_GetLandsOwnedByPlayer??=ll.import("PFLP", "Lands::GetLandsOwnedByPlayer"))(playerXuid)},
+>		/** 取共享给玩家的领地 返回值类型：string
+>		 * @param {string} playerXuid
+>		 * @returns {string}
+>		 */
+>		GetLandsSharedToPlayer(playerXuid) { return (this.Lands_GetLandsSharedToPlayer??=ll.import("PFLP", "Lands::GetLandsSharedToPlayer"))(playerXuid)},
 >	},
 >	Money : {
 >		/** 获取玩家(指定玩家名)金钱 返回值类型：long
@@ -3228,6 +3334,10 @@ auto Lands_DeletePlayerParmissionGroup = RemoteCall::importAs<bool(std::string c
 auto Lands_EditPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::EditPlayerParmissionGroup");
 // 添加权限组 返回值类型：bool
 auto Lands_AddPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::AddPlayerParmissionGroup");
+// 取玩家拥有的领地 返回值类型：string
+auto Lands_GetLandsOwnedByPlayer = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetLandsOwnedByPlayer");
+// 取共享给玩家的领地 返回值类型：string
+auto Lands_GetLandsSharedToPlayer = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetLandsSharedToPlayer");
 // 获取玩家(指定玩家名)金钱 返回值类型：long
 auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
 // 给玩家(指定玩家名)加钱
@@ -3345,6 +3455,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup");
 >// 添加权限组 返回值类型：bool
 >var Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup");
+>// 取玩家拥有的领地 返回值类型：string
+>var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer");
+>// 取共享给玩家的领地 返回值类型：string
+>var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer");
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
 >// 给玩家(指定玩家名)加钱
@@ -3616,6 +3730,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		public static bool AddPlayerParmissionGroup(string playerXuid,string permissionGroupId,string jsonString) {
 >			return Lands_AddPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString);
 >		}
+>		private static Lazy<RemoteCallHandler_1<string,string>>  Lands_GetLandsOwnedByPlayer_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer"));
+>		/// <summary> 取玩家拥有的领地 返回值类型：string </summary>
+>		public static string GetLandsOwnedByPlayer(string playerXuid) {
+>			return Lands_GetLandsOwnedByPlayer_instance.Value(playerXuid);
+>		}
+>		private static Lazy<RemoteCallHandler_1<string,string>>  Lands_GetLandsSharedToPlayer_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer"));
+>		/// <summary> 取共享给玩家的领地 返回值类型：string </summary>
+>		public static string GetLandsSharedToPlayer(string playerXuid) {
+>			return Lands_GetLandsSharedToPlayer_instance.Value(playerXuid);
+>		}
 >	}
 >	public static class Money {
 >		private static Lazy<RemoteCallHandler_1<long,string>>  Money_Get_instance = new(()=> RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get"));
@@ -3751,6 +3875,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerParmissionGroup")
 >' 添加权限组 返回值类型：bool
 >Dim Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerParmissionGroup")
+>' 取玩家拥有的领地 返回值类型：string
+>Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer")
+>' 取共享给玩家的领地 返回值类型：string
+>Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsSharedToPlayer")
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
 >' 给玩家(指定玩家名)加钱
@@ -4022,6 +4150,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		Public Shared Function AddPlayerParmissionGroup(playerXuid As String,permissionGroupId As String,jsonString As String) As bool 
 >			Return Lands_AddPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString)
 >		End Function
+>		Private Shared Lands_GetLandsOwnedByPlayer_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer"))
+>		''' <summary> 取玩家拥有的领地 返回值类型：string </summary>
+>		Public Shared Function GetLandsOwnedByPlayer(playerXuid As String) As string 
+>			Return Lands_GetLandsOwnedByPlayer_instance.Value(playerXuid)
+>		End Function
+>		Private Shared Lands_GetLandsSharedToPlayer_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsSharedToPlayer"))
+>		''' <summary> 取共享给玩家的领地 返回值类型：string </summary>
+>		Public Shared Function GetLandsSharedToPlayer(playerXuid As String) As string 
+>			Return Lands_GetLandsSharedToPlayer_instance.Value(playerXuid)
+>		End Function
 >	End Class
 >	Public NotInheritable Class Money
 >		Private Shared Money_Get_instance As Lazy(Of RemoteCallHandler_1(Of Long,String))(Function() RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get"))
@@ -4158,6 +4296,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup")
 >// 添加权限组 返回值类型：bool
 >let Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup")
+>// 取玩家拥有的领地 返回值类型：string
+>let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
+>// 取共享给玩家的领地 返回值类型：string
+>let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer")
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >// 给玩家(指定玩家名)加钱
@@ -4376,6 +4518,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 添加权限组 返回值类型：bool </summary>
 >    let public AddPlayerParmissionGroup(playerXuid:string)(permissionGroupId:string)(jsonString:string):bool =
 >      Lands_AddPlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId,jsonString)
+>    let private Lands_GetLandsOwnedByPlayer_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
+>    /// <summary> 取玩家拥有的领地 返回值类型：string </summary>
+>    let public GetLandsOwnedByPlayer(playerXuid:string):string =
+>      Lands_GetLandsOwnedByPlayer_instance.Value.Invoke(playerXuid)
+>    let private Lands_GetLandsSharedToPlayer_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer")
+>    /// <summary> 取共享给玩家的领地 返回值类型：string </summary>
+>    let public GetLandsSharedToPlayer(playerXuid:string):string =
+>      Lands_GetLandsSharedToPlayer_instance.Value.Invoke(playerXuid)
 >  module public Money =
 >    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
