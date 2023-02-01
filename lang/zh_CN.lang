@@ -1,5 +1,16 @@
 Global._LangAuthor=LazuliKao
 Global._LangName=简体中文
+Backup.Command.backup=快速备份
+Backup.Message.BackToFolderSuccess=已备份到文件夹{0}.
+Backup.Message.BackToMcworldSuccess=已备份到世界存档{0}.大小{1}
+Backup.Message.BackToZipSuccess=已备份到压缩包{0}.大小：{1}
+Backup.Message.BackupFinish=备份结束
+Backup.Message.BackupTimeout=存档失败，超时，正在恢复...
+Backup.Message.Busy=正在备份...请稍后重试...
+Backup.Message.FindCustomDirNotExists=自定义目录"{0}"不存在！
+Backup.Message.FindCustomFailed=查找自定义目录"{0}"出错：{1}
+Backup.Message.PrepareBackup=正在存档...
+Backup.Message.StartBackup=存档完毕，开始备份...
 ChatEnhancement.SelectorOnTellDisabled=选择器在聊天中已被禁用
 ChatTranslation.Command.CommandDescription.chatlang=发出消息的语言
 ChatTranslation.Command.CommandDescription.main=聊天翻译
