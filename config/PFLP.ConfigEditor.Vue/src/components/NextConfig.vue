@@ -18,7 +18,7 @@
             GiftCode礼包码
             <n-switch v-model:value="config.GiftCode.ModuleEnabled" />
         </n-h3>
-         <n-h3 prefix="bar">
+        <n-h3 prefix="bar">
             KickToolbox/踢出(部分)Toolbox玩家
             <n-switch v-model:value="config.KickToolbox.ModuleEnabled" />
         </n-h3>
@@ -34,7 +34,7 @@
             ChatEnhancement/聊天增强
             <n-switch v-model:value="config.ChatEnhancement.ModuleEnabled" />
         </n-h3>
-        <div v-if="config.ChatEnhancement.ModuleEnabled">
+        <div v-if="config.ChatEnhancement.ModuleEnabled" class="end">
             消息格式
             <n-input v-model:value="config.ChatEnhancement.Format" />
         </div>
@@ -59,5 +59,8 @@ export default {
 
 .n-divider {
     margin: 3px;
+}
+div.end{
+    margin-bottom: 20px;
 }
 </style>

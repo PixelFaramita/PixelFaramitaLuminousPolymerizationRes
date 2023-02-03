@@ -244,8 +244,105 @@ export const useGlobalStore = defineStore('global', () => {
       "FakePortIPv4": 19132,
       "FakePortIPv6": 19133,
       "FakeLevelName": "Bedrock Level"
+    }, "Backup": {
+      "ModuleEnabled": true,
+      "TargetFolder": "backup/%time:yyyy-MM-dd-HH-mm-ss%",
+      "DeleteTargetFolderIfExists": true,
+      "CopyFolder": false,
+      "CreateZipFile": true,
+      "ZipFileName": "backup-%time:yyyy-MM-dd-HH-mm-ss%",
+      "CreateMcWorldFile": true,
+      "McWorldFileName": "backup-%time:yyyy-MM-dd-HH-mm-ss%",
+      "IncludePluginData": true,
+      "IncludePluginConfig": true,
+      "Extra": [
+        "plugins/LiteLoader/*.json"
+      ]
+    }, "BehaviorLog": {
+      "ModuleEnabled": true,
+      "FileName": "BehaviorLog_%time:yyyy-MM-dd%.db",
+      "RefreshIntervalInMinutes": 60,
+      "Toggles": {
+        "PlayerJoin": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerLeft": {
+          "Database": true,
+          "Console": true
+        },
+        "ServerCmd": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerCmd": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerRespawn": {
+          "Database": true,
+          "Console": true
+        },
+        "MobDie": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerOpenContainer": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerChat": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerChangeDimension": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerAttack": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerPickUpItem": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerDropItem": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerDestroyBlock": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerPlaceBlock": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerInteractBlock": {
+          "Database": true,
+          "Console": true
+        },
+        "PlayerInteractEntity": {
+          "Database": true,
+          "Console": true
+        },
+        "ContainerChanged": {
+          "Database": true,
+          "Console": true
+        },
+        "BlockExplode": {
+          "Database": true,
+          "Console": true
+        },
+        "EntityExplode": {
+          "Database": true,
+          "Console": true
+        }
+      }
     }
   }
   const config = ref(defaultVal)
-  return { config }
+  const isFormRemote = ref(false)
+  return { config, isFormRemote }
 })

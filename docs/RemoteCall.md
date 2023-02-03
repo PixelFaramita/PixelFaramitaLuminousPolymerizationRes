@@ -33,6 +33,56 @@
 > 滑稽
 
 <details>
+<summary><b>Internal<b></summary>
+
+> <details>
+> <summary><b>CheatPunish  - 作弊反馈（LLAntiCheat用）<b></summary>
+>
+>## Internal::CheatPunish
+>### 作弊反馈（LLAntiCheat用）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| PunishLevel | int |
+>| PunishReason | int |
+>| playerInstance | Player |
+>| CheatCount | int |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 作弊反馈（LLAntiCheat用） 返回值类型：bool */
+>const Internal_CheatPunish = ll.import("PFLP", "Internal::CheatPunish");
+>let result = Internal_CheatPunish(PunishLevel,PunishReason,playerInstance,CheatCount);
+>```
+> - C++
+>```C++
+>// 作弊反馈（LLAntiCheat用） 返回值类型：bool
+>auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int const& PunishReason,Player& const& playerInstance,int const& CheatCount)>("PFLP", "Internal::CheatPunish");
+>auto result = Internal_CheatPunish(PunishLevel,PunishReason,playerInstance,CheatCount);
+>```
+> - C#
+>```C#
+>// 作弊反馈（LLAntiCheat用） 返回值类型：bool
+>var Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,Player,int>("PFLP", "Internal::CheatPunish");
+>var result = Internal_CheatPunish(PunishLevel,PunishReason,playerInstance,CheatCount);
+>```
+> - Visual Basic .Net
+>```vb
+>' 作弊反馈（LLAntiCheat用） 返回值类型：bool
+>Dim Internal_CheatPunish = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,IntPtr,Integer)("PFLP", "Internal::CheatPunish")
+>Dim result = Internal_CheatPunish(PunishLevel,PunishReason,playerInstance,CheatCount)
+>```
+> - F#
+>```F#
+>// 作弊反馈（LLAntiCheat用） 返回值类型：bool
+>let Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,nativeint,int>("PFLP", "Internal::CheatPunish")
+>(PunishLevel,PunishReason,playerInstance,CheatCount)
+>	|>Internal_CheatPunish.Invoke
+>	|>ignore
+>```
+>
+> </details>
+</details>
+<details>
 <summary><b>General<b></summary>
 
 > <details>
@@ -2675,6 +2725,8 @@
 ><details><summary>JavaScript imports / 逐个导入</summary>
 >
 >``` JavaScript
+>/** 作弊反馈（LLAntiCheat用） 返回值类型：bool */
+>const Internal_CheatPunish = ll.import("PFLP", "Internal::CheatPunish");
 >/** 设置全局配置文件（要求JSON字符串） 返回值类型：bool */
 >const General_SetConfig = ll.import("PFLP", "General::SetConfig");
 >/** 获取全局配置文件（JSON字符串） 返回值类型：string */
@@ -2790,6 +2842,16 @@
 >
 >``` JavaScript
 >const PFLP = {
+>	Internal : {
+>		/** 作弊反馈（LLAntiCheat用） 返回值类型：bool
+>		 * @param {number} PunishLevel
+>		 * @param {number} PunishReason
+>		 * @param {any} playerInstance
+>		 * @param {number} CheatCount
+>		 * @returns {boolean}
+>		 */
+>		CheatPunish(PunishLevel,PunishReason,playerInstance,CheatCount) { return (this.Internal_CheatPunish??=ll.import("PFLP", "Internal::CheatPunish"))(PunishLevel,PunishReason,playerInstance,CheatCount)},
+>	},
 >	General : {
 >		/** 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >		 * @param {string} jsonStr
@@ -3236,6 +3298,8 @@
 <summary><b>All Api in C++ / 全部C++接口<b></summary>
 
 ``` C++
+// 作弊反馈（LLAntiCheat用） 返回值类型：bool
+auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int const& PunishReason,Player& const& playerInstance,int const& CheatCount)>("PFLP", "Internal::CheatPunish");
 // 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 auto General_SetConfig = RemoteCall::importAs<bool(std::string const& jsonStr)>("PFLP", "General::SetConfig");
 // 获取全局配置文件（JSON字符串） 返回值类型：string
@@ -3357,6 +3421,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >``` C#
 >using RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
+>// 作弊反馈（LLAntiCheat用） 返回值类型：bool
+>var Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,Player,int>("PFLP", "Internal::CheatPunish");
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >var General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig");
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
@@ -3474,6 +3540,13 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >using RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >internal static class PFLP {
+>	public static class Internal {
+>		private static Lazy<RemoteCallHandler_4<bool,int,int,Player,int>>  Internal_CheatPunish_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,Player,int>("PFLP", "Internal::CheatPunish"));
+>		/// <summary> 作弊反馈（LLAntiCheat用） 返回值类型：bool </summary>
+>		public static bool CheatPunish(int PunishLevel,int PunishReason,Player playerInstance,int CheatCount) {
+>			return Internal_CheatPunish_instance.Value(PunishLevel,PunishReason,playerInstance,CheatCount);
+>		}
+>	}
 >	public static class General {
 >		private static Lazy<RemoteCallHandler_1<bool,string>>  General_SetConfig_instance = new(()=> RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig"));
 >		/// <summary> 设置全局配置文件（要求JSON字符串） 返回值类型：bool </summary>
@@ -3777,6 +3850,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >``` VB
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
+>' 作弊反馈（LLAntiCheat用） 返回值类型：bool
+>Dim Internal_CheatPunish = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,IntPtr,Integer)("PFLP", "Internal::CheatPunish")
 >' 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "General::SetConfig")
 >' 获取全局配置文件（JSON字符串） 返回值类型：string
@@ -3894,6 +3969,13 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >Friend Module PFLP
+>	Public NotInheritable Class Internal
+>		Private Shared Internal_CheatPunish_instance As Lazy(Of RemoteCallHandler_4(Of Boolean,Integer,Integer,IntPtr,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,IntPtr,Integer)("PFLP", "Internal::CheatPunish"))
+>		''' <summary> 作弊反馈（LLAntiCheat用） 返回值类型：bool </summary>
+>		Public Shared Function CheatPunish(PunishLevel As Integer,PunishReason As Integer,playerInstance As IntPtr,CheatCount As Integer) As bool 
+>			Return Internal_CheatPunish_instance.Value(PunishLevel,PunishReason,playerInstance,CheatCount)
+>		End Function
+>	End Class
 >	Public NotInheritable Class General
 >		Private Shared General_SetConfig_instance As Lazy(Of RemoteCallHandler_1(Of Boolean,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "General::SetConfig"))
 >		''' <summary> 设置全局配置文件（要求JSON字符串） 返回值类型：bool </summary>
@@ -4198,6 +4280,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >#r "LiteLoader.Net"
 >open LiteLoader.RemoteCall
 >
+>// 作弊反馈（LLAntiCheat用） 返回值类型：bool
+>let Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,nativeint,int>("PFLP", "Internal::CheatPunish")
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >let General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
@@ -4316,6 +4400,11 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >open LiteLoader.RemoteCall
 >
 >module public PFLP =
+>  module public Internal =
+>    let private Internal_CheatPunish_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,nativeint,int>("PFLP", "Internal::CheatPunish")
+>    /// <summary> 作弊反馈（LLAntiCheat用） 返回值类型：bool </summary>
+>    let public CheatPunish(PunishLevel:int)(PunishReason:int)(playerInstance:nativeint)(CheatCount:int):bool =
+>      Internal_CheatPunish_instance.Value.Invoke(PunishLevel,PunishReason,playerInstance,CheatCount)
 >  module public General =
 >    let private General_SetConfig_instance = lazy RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
 >    /// <summary> 设置全局配置文件（要求JSON字符串） 返回值类型：bool </summary>
