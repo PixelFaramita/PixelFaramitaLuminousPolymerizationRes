@@ -165,6 +165,386 @@
 > </details>
 </details>
 <details>
+<summary><b>Format<b></summary>
+
+> <details>
+> <summary><b>GetVariableString  - 获取变量<b></summary>
+>
+>## Format::GetVariableString
+>### 获取变量
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| name | string |
+>| format | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 获取变量 返回值类型：string */
+>const Format_GetVariableString = ll.import("PFLP", "Format::GetVariableString");
+>let result = Format_GetVariableString(playerXuid,name,format);
+>```
+> - C++
+>```C++
+>// 获取变量 返回值类型：string
+>auto Format_GetVariableString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& name,std::string const& format)>("PFLP", "Format::GetVariableString");
+>auto result = Format_GetVariableString(playerXuid,name,format);
+>```
+> - C#
+>```C#
+>// 获取变量 返回值类型：string
+>var Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString");
+>var result = Format_GetVariableString(playerXuid,name,format);
+>```
+> - Visual Basic .Net
+>```vb
+>' 获取变量 返回值类型：string
+>Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString")
+>Dim result = Format_GetVariableString(playerXuid,name,format)
+>```
+> - F#
+>```F#
+>// 获取变量 返回值类型：string
+>let Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
+>(playerXuid,name,format)
+>	|>Format_GetVariableString.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetVariableInt  - 获取变量，但是强制返回int类型<b></summary>
+>
+>## Format::GetVariableInt
+>### 获取变量，但是强制返回int类型
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| name | string |
+>返回值类型：int;
+> - JavaScript
+>```js
+>/** 获取变量，但是强制返回int类型 返回值类型：int */
+>const Format_GetVariableInt = ll.import("PFLP", "Format::GetVariableInt");
+>let result = Format_GetVariableInt(playerXuid,name);
+>```
+> - C++
+>```C++
+>// 获取变量，但是强制返回int类型 返回值类型：int
+>auto Format_GetVariableInt = RemoteCall::importAs<int(std::string const& playerXuid,std::string const& name)>("PFLP", "Format::GetVariableInt");
+>auto result = Format_GetVariableInt(playerXuid,name);
+>```
+> - C#
+>```C#
+>// 获取变量，但是强制返回int类型 返回值类型：int
+>var Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt");
+>var result = Format_GetVariableInt(playerXuid,name);
+>```
+> - Visual Basic .Net
+>```vb
+>' 获取变量，但是强制返回int类型 返回值类型：int
+>Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Integer,String,String)("PFLP", "Format::GetVariableInt")
+>Dim result = Format_GetVariableInt(playerXuid,name)
+>```
+> - F#
+>```F#
+>// 获取变量，但是强制返回int类型 返回值类型：int
+>let Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt")
+>(playerXuid,name)
+>	|>Format_GetVariableInt.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>FormatRawString  - 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat)<b></summary>
+>
+>## Format::FormatRawString
+>### 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat)
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| rawFormat | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string */
+>const Format_FormatRawString = ll.import("PFLP", "Format::FormatRawString");
+>let result = Format_FormatRawString(playerXuid,rawFormat);
+>```
+> - C++
+>```C++
+>// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
+>auto Format_FormatRawString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& rawFormat)>("PFLP", "Format::FormatRawString");
+>auto result = Format_FormatRawString(playerXuid,rawFormat);
+>```
+> - C#
+>```C#
+>// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
+>var Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString");
+>var result = Format_FormatRawString(playerXuid,rawFormat);
+>```
+> - Visual Basic .Net
+>```vb
+>' 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
+>Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::FormatRawString")
+>Dim result = Format_FormatRawString(playerXuid,rawFormat)
+>```
+> - F#
+>```F#
+>// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
+>let Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString")
+>(playerXuid,rawFormat)
+>	|>Format_FormatRawString.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>DefineFormat  - 定义格式化内容（返回true为创建成功，false为覆盖）<b></summary>
+>
+>## Format::DefineFormat
+>### 定义格式化内容（返回true为创建成功，false为覆盖）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| id | string |
+>| rawFormat | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool */
+>const Format_DefineFormat = ll.import("PFLP", "Format::DefineFormat");
+>let result = Format_DefineFormat(id,rawFormat);
+>```
+> - C++
+>```C++
+>// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
+>auto Format_DefineFormat = RemoteCall::importAs<bool(std::string const& id,std::string const& rawFormat)>("PFLP", "Format::DefineFormat");
+>auto result = Format_DefineFormat(id,rawFormat);
+>```
+> - C#
+>```C#
+>// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
+>var Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat");
+>var result = Format_DefineFormat(id,rawFormat);
+>```
+> - Visual Basic .Net
+>```vb
+>' 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
+>Dim Format_DefineFormat = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Format::DefineFormat")
+>Dim result = Format_DefineFormat(id,rawFormat)
+>```
+> - F#
+>```F#
+>// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
+>let Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat")
+>(id,rawFormat)
+>	|>Format_DefineFormat.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>RemoveFormat  - 移除格式化定义（返回true为存在并移除）<b></summary>
+>
+>## Format::RemoveFormat
+>### 移除格式化定义（返回true为存在并移除）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| id | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 移除格式化定义（返回true为存在并移除） 返回值类型：bool */
+>const Format_RemoveFormat = ll.import("PFLP", "Format::RemoveFormat");
+>let result = Format_RemoveFormat(id);
+>```
+> - C++
+>```C++
+>// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
+>auto Format_RemoveFormat = RemoteCall::importAs<bool(std::string const& id)>("PFLP", "Format::RemoveFormat");
+>auto result = Format_RemoveFormat(id);
+>```
+> - C#
+>```C#
+>// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
+>var Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat");
+>var result = Format_RemoveFormat(id);
+>```
+> - Visual Basic .Net
+>```vb
+>' 移除格式化定义（返回true为存在并移除） 返回值类型：bool
+>Dim Format_RemoveFormat = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "Format::RemoveFormat")
+>Dim result = Format_RemoveFormat(id)
+>```
+> - F#
+>```F#
+>// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
+>let Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat")
+>id
+>	|>Format_RemoveFormat.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetFormatWithPlayer  - 通过已定义的ID获取格式化内容（性能更优）<b></summary>
+>
+>## Format::GetFormatWithPlayer
+>### 通过已定义的ID获取格式化内容（性能更优）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| id | string |
+>| playerXuid | string |
+>| extra | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string */
+>const Format_GetFormatWithPlayer = ll.import("PFLP", "Format::GetFormatWithPlayer");
+>let result = Format_GetFormatWithPlayer(id,playerXuid,extra);
+>```
+> - C++
+>```C++
+>// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
+>auto Format_GetFormatWithPlayer = RemoteCall::importAs<std::string(std::string const& id,std::string const& playerXuid,std::string const& extra)>("PFLP", "Format::GetFormatWithPlayer");
+>auto result = Format_GetFormatWithPlayer(id,playerXuid,extra);
+>```
+> - C#
+>```C#
+>// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
+>var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer");
+>var result = Format_GetFormatWithPlayer(id,playerXuid,extra);
+>```
+> - Visual Basic .Net
+>```vb
+>' 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
+>Dim Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetFormatWithPlayer")
+>Dim result = Format_GetFormatWithPlayer(id,playerXuid,extra)
+>```
+> - F#
+>```F#
+>// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
+>let Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer")
+>(id,playerXuid,extra)
+>	|>Format_GetFormatWithPlayer.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetFormatWithPlayerLang  - 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取）<b></summary>
+>
+>## Format::GetFormatWithPlayerLang
+>### 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| id | string |
+>| playerXuid | string |
+>| playerLangXuid | string |
+>| extra | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string */
+>const Format_GetFormatWithPlayerLang = ll.import("PFLP", "Format::GetFormatWithPlayerLang");
+>let result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra);
+>```
+> - C++
+>```C++
+>// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
+>auto Format_GetFormatWithPlayerLang = RemoteCall::importAs<std::string(std::string const& id,std::string const& playerXuid,std::string const& playerLangXuid,std::string const& extra)>("PFLP", "Format::GetFormatWithPlayerLang");
+>auto result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra);
+>```
+> - C#
+>```C#
+>// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
+>var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang");
+>var result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra);
+>```
+> - Visual Basic .Net
+>```vb
+>' 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
+>Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang")
+>Dim result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra)
+>```
+> - F#
+>```F#
+>// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
+>let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
+>(id,playerXuid,playerLangXuid,extra)
+>	|>Format_GetFormatWithPlayerLang.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetFormat  - 通过已定义的ID获取格式化内容（不包含玩家上下文）<b></summary>
+>
+>## Format::GetFormat
+>### 通过已定义的ID获取格式化内容（不包含玩家上下文）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| id | string |
+>| extra | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string */
+>const Format_GetFormat = ll.import("PFLP", "Format::GetFormat");
+>let result = Format_GetFormat(id,extra);
+>```
+> - C++
+>```C++
+>// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
+>auto Format_GetFormat = RemoteCall::importAs<std::string(std::string const& id,std::string const& extra)>("PFLP", "Format::GetFormat");
+>auto result = Format_GetFormat(id,extra);
+>```
+> - C#
+>```C#
+>// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
+>var Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat");
+>var result = Format_GetFormat(id,extra);
+>```
+> - Visual Basic .Net
+>```vb
+>' 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
+>Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat")
+>Dim result = Format_GetFormat(id,extra)
+>```
+> - F#
+>```F#
+>// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
+>let Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
+>(id,extra)
+>	|>Format_GetFormat.Invoke
+>	|>ignore
+>```
+>
+> </details>
+</details>
+<details>
 <summary><b>Command<b></summary>
 
 > <details>
@@ -2731,6 +3111,22 @@
 >const General_GetConfig = ll.import("PFLP", "General::GetConfig");
 >/** 重新加载所有功能的配置文件 */
 >const General_Reload = ll.import("PFLP", "General::Reload");
+>/** 获取变量 返回值类型：string */
+>const Format_GetVariableString = ll.import("PFLP", "Format::GetVariableString");
+>/** 获取变量，但是强制返回int类型 返回值类型：int */
+>const Format_GetVariableInt = ll.import("PFLP", "Format::GetVariableInt");
+>/** 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string */
+>const Format_FormatRawString = ll.import("PFLP", "Format::FormatRawString");
+>/** 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool */
+>const Format_DefineFormat = ll.import("PFLP", "Format::DefineFormat");
+>/** 移除格式化定义（返回true为存在并移除） 返回值类型：bool */
+>const Format_RemoveFormat = ll.import("PFLP", "Format::RemoveFormat");
+>/** 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string */
+>const Format_GetFormatWithPlayer = ll.import("PFLP", "Format::GetFormatWithPlayer");
+>/** 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string */
+>const Format_GetFormatWithPlayerLang = ll.import("PFLP", "Format::GetFormatWithPlayerLang");
+>/** 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string */
+>const Format_GetFormat = ll.import("PFLP", "Format::GetFormat");
 >/** 设置命令禁用(可设置提示) */
 >const Command_SetCommandDisabled = ll.import("PFLP", "Command::SetCommandDisabled");
 >/** 设置命令启用 */
@@ -2855,6 +3251,59 @@
 >		/** 重新加载所有功能的配置文件
 >		 */
 >		Reload() { (this.General_Reload??=ll.import("PFLP", "General::Reload"))()},
+>	},
+>	Format : {
+>		/** 获取变量 返回值类型：string
+>		 * @param {string} playerXuid
+>		 * @param {string} name
+>		 * @param {string} format
+>		 * @returns {string}
+>		 */
+>		GetVariableString(playerXuid,name,format) { return (this.Format_GetVariableString??=ll.import("PFLP", "Format::GetVariableString"))(playerXuid,name,format)},
+>		/** 获取变量，但是强制返回int类型 返回值类型：int
+>		 * @param {string} playerXuid
+>		 * @param {string} name
+>		 * @returns {number}
+>		 */
+>		GetVariableInt(playerXuid,name) { return (this.Format_GetVariableInt??=ll.import("PFLP", "Format::GetVariableInt"))(playerXuid,name)},
+>		/** 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
+>		 * @param {string} playerXuid
+>		 * @param {string} rawFormat
+>		 * @returns {string}
+>		 */
+>		FormatRawString(playerXuid,rawFormat) { return (this.Format_FormatRawString??=ll.import("PFLP", "Format::FormatRawString"))(playerXuid,rawFormat)},
+>		/** 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
+>		 * @param {string} id
+>		 * @param {string} rawFormat
+>		 * @returns {boolean}
+>		 */
+>		DefineFormat(id,rawFormat) { return (this.Format_DefineFormat??=ll.import("PFLP", "Format::DefineFormat"))(id,rawFormat)},
+>		/** 移除格式化定义（返回true为存在并移除） 返回值类型：bool
+>		 * @param {string} id
+>		 * @returns {boolean}
+>		 */
+>		RemoveFormat(id) { return (this.Format_RemoveFormat??=ll.import("PFLP", "Format::RemoveFormat"))(id)},
+>		/** 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
+>		 * @param {string} id
+>		 * @param {string} playerXuid
+>		 * @param {string} extra
+>		 * @returns {string}
+>		 */
+>		GetFormatWithPlayer(id,playerXuid,extra) { return (this.Format_GetFormatWithPlayer??=ll.import("PFLP", "Format::GetFormatWithPlayer"))(id,playerXuid,extra)},
+>		/** 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
+>		 * @param {string} id
+>		 * @param {string} playerXuid
+>		 * @param {string} playerLangXuid
+>		 * @param {string} extra
+>		 * @returns {string}
+>		 */
+>		GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra) { return (this.Format_GetFormatWithPlayerLang??=ll.import("PFLP", "Format::GetFormatWithPlayerLang"))(id,playerXuid,playerLangXuid,extra)},
+>		/** 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
+>		 * @param {string} id
+>		 * @param {string} extra
+>		 * @returns {string}
+>		 */
+>		GetFormat(id,extra) { return (this.Format_GetFormat??=ll.import("PFLP", "Format::GetFormat"))(id,extra)},
 >	},
 >	Command : {
 >		/** 设置命令禁用(可设置提示)
@@ -3304,6 +3753,22 @@ auto General_SetConfig = RemoteCall::importAs<bool(std::string const& jsonStr)>(
 auto General_GetConfig = RemoteCall::importAs<std::string()>("PFLP", "General::GetConfig");
 // 重新加载所有功能的配置文件
 auto General_Reload = RemoteCall::importAs<void()>("PFLP", "General::Reload");
+// 获取变量 返回值类型：string
+auto Format_GetVariableString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& name,std::string const& format)>("PFLP", "Format::GetVariableString");
+// 获取变量，但是强制返回int类型 返回值类型：int
+auto Format_GetVariableInt = RemoteCall::importAs<int(std::string const& playerXuid,std::string const& name)>("PFLP", "Format::GetVariableInt");
+// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
+auto Format_FormatRawString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& rawFormat)>("PFLP", "Format::FormatRawString");
+// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
+auto Format_DefineFormat = RemoteCall::importAs<bool(std::string const& id,std::string const& rawFormat)>("PFLP", "Format::DefineFormat");
+// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
+auto Format_RemoveFormat = RemoteCall::importAs<bool(std::string const& id)>("PFLP", "Format::RemoveFormat");
+// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
+auto Format_GetFormatWithPlayer = RemoteCall::importAs<std::string(std::string const& id,std::string const& playerXuid,std::string const& extra)>("PFLP", "Format::GetFormatWithPlayer");
+// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
+auto Format_GetFormatWithPlayerLang = RemoteCall::importAs<std::string(std::string const& id,std::string const& playerXuid,std::string const& playerLangXuid,std::string const& extra)>("PFLP", "Format::GetFormatWithPlayerLang");
+// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
+auto Format_GetFormat = RemoteCall::importAs<std::string(std::string const& id,std::string const& extra)>("PFLP", "Format::GetFormat");
 // 设置命令禁用(可设置提示)
 auto Command_SetCommandDisabled = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& cmd,std::string const& feedback)>("PFLP", "Command::SetCommandDisabled");
 // 设置命令启用
@@ -3427,6 +3892,22 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >var General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig");
 >// 重新加载所有功能的配置文件
 >var General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload");
+>// 获取变量 返回值类型：string
+>var Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString");
+>// 获取变量，但是强制返回int类型 返回值类型：int
+>var Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt");
+>// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
+>var Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString");
+>// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
+>var Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat");
+>// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
+>var Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat");
+>// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
+>var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer");
+>// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
+>var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang");
+>// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
+>var Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat");
 >// 设置命令禁用(可设置提示)
 >var Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled");
 >// 设置命令启用
@@ -3555,6 +4036,48 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >		/// <summary> 重新加载所有功能的配置文件 </summary>
 >		public static void Reload() {
 >			General_Reload_instance.Value();
+>		}
+>	}
+>	public static class Format {
+>		private static Lazy<RemoteCallHandler_3<string,string,string,string>>  Format_GetVariableString_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString"));
+>		/// <summary> 获取变量 返回值类型：string </summary>
+>		public static string GetVariableString(string playerXuid,string name,string format) {
+>			return Format_GetVariableString_instance.Value(playerXuid,name,format);
+>		}
+>		private static Lazy<RemoteCallHandler_2<int,string,string>>  Format_GetVariableInt_instance = new(()=> RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt"));
+>		/// <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
+>		public static int GetVariableInt(string playerXuid,string name) {
+>			return Format_GetVariableInt_instance.Value(playerXuid,name);
+>		}
+>		private static Lazy<RemoteCallHandler_2<string,string,string>>  Format_FormatRawString_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString"));
+>		/// <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
+>		public static string FormatRawString(string playerXuid,string rawFormat) {
+>			return Format_FormatRawString_instance.Value(playerXuid,rawFormat);
+>		}
+>		private static Lazy<RemoteCallHandler_2<bool,string,string>>  Format_DefineFormat_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat"));
+>		/// <summary> 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool </summary>
+>		public static bool DefineFormat(string id,string rawFormat) {
+>			return Format_DefineFormat_instance.Value(id,rawFormat);
+>		}
+>		private static Lazy<RemoteCallHandler_1<bool,string>>  Format_RemoveFormat_instance = new(()=> RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat"));
+>		/// <summary> 移除格式化定义（返回true为存在并移除） 返回值类型：bool </summary>
+>		public static bool RemoveFormat(string id) {
+>			return Format_RemoveFormat_instance.Value(id);
+>		}
+>		private static Lazy<RemoteCallHandler_3<string,string,string,string>>  Format_GetFormatWithPlayer_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer"));
+>		/// <summary> 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string </summary>
+>		public static string GetFormatWithPlayer(string id,string playerXuid,string extra) {
+>			return Format_GetFormatWithPlayer_instance.Value(id,playerXuid,extra);
+>		}
+>		private static Lazy<RemoteCallHandler_4<string,string,string,string,string>>  Format_GetFormatWithPlayerLang_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang"));
+>		/// <summary> 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string </summary>
+>		public static string GetFormatWithPlayerLang(string id,string playerXuid,string playerLangXuid,string extra) {
+>			return Format_GetFormatWithPlayerLang_instance.Value(id,playerXuid,playerLangXuid,extra);
+>		}
+>		private static Lazy<RemoteCallHandler_2<string,string,string>>  Format_GetFormat_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat"));
+>		/// <summary> 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string </summary>
+>		public static string GetFormat(string id,string extra) {
+>			return Format_GetFormat_instance.Value(id,extra);
 >		}
 >	}
 >	public static class Command {
@@ -3856,6 +4379,22 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >Dim General_GetConfig = RemoteCallAPI.ImportAs(Of String)("PFLP", "General::GetConfig")
 >' 重新加载所有功能的配置文件
 >Dim General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+>' 获取变量 返回值类型：string
+>Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString")
+>' 获取变量，但是强制返回int类型 返回值类型：int
+>Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Integer,String,String)("PFLP", "Format::GetVariableInt")
+>' 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
+>Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::FormatRawString")
+>' 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
+>Dim Format_DefineFormat = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Format::DefineFormat")
+>' 移除格式化定义（返回true为存在并移除） 返回值类型：bool
+>Dim Format_RemoveFormat = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "Format::RemoveFormat")
+>' 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
+>Dim Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetFormatWithPlayer")
+>' 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
+>Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang")
+>' 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
+>Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat")
 >' 设置命令禁用(可设置提示)
 >Dim Command_SetCommandDisabled = RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled")
 >' 设置命令启用
@@ -3985,6 +4524,48 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >		Public Shared Sub Reload()  
 >			General_Reload_instance.Value()
 >		End Sub
+>	End Class
+>	Public NotInheritable Class Format
+>		Private Shared Format_GetVariableString_instance As Lazy(Of RemoteCallHandler_3(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString"))
+>		''' <summary> 获取变量 返回值类型：string </summary>
+>		Public Shared Function GetVariableString(playerXuid As String,name As String,format As String) As string 
+>			Return Format_GetVariableString_instance.Value(playerXuid,name,format)
+>		End Function
+>		Private Shared Format_GetVariableInt_instance As Lazy(Of RemoteCallHandler_2(Of Integer,String,String))(Function() RemoteCallAPI.ImportAs(Of Integer,String,String)("PFLP", "Format::GetVariableInt"))
+>		''' <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
+>		Public Shared Function GetVariableInt(playerXuid As String,name As String) As int 
+>			Return Format_GetVariableInt_instance.Value(playerXuid,name)
+>		End Function
+>		Private Shared Format_FormatRawString_instance As Lazy(Of RemoteCallHandler_2(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::FormatRawString"))
+>		''' <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
+>		Public Shared Function FormatRawString(playerXuid As String,rawFormat As String) As string 
+>			Return Format_FormatRawString_instance.Value(playerXuid,rawFormat)
+>		End Function
+>		Private Shared Format_DefineFormat_instance As Lazy(Of RemoteCallHandler_2(Of Boolean,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Format::DefineFormat"))
+>		''' <summary> 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool </summary>
+>		Public Shared Function DefineFormat(id As String,rawFormat As String) As bool 
+>			Return Format_DefineFormat_instance.Value(id,rawFormat)
+>		End Function
+>		Private Shared Format_RemoveFormat_instance As Lazy(Of RemoteCallHandler_1(Of Boolean,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "Format::RemoveFormat"))
+>		''' <summary> 移除格式化定义（返回true为存在并移除） 返回值类型：bool </summary>
+>		Public Shared Function RemoveFormat(id As String) As bool 
+>			Return Format_RemoveFormat_instance.Value(id)
+>		End Function
+>		Private Shared Format_GetFormatWithPlayer_instance As Lazy(Of RemoteCallHandler_3(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetFormatWithPlayer"))
+>		''' <summary> 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string </summary>
+>		Public Shared Function GetFormatWithPlayer(id As String,playerXuid As String,extra As String) As string 
+>			Return Format_GetFormatWithPlayer_instance.Value(id,playerXuid,extra)
+>		End Function
+>		Private Shared Format_GetFormatWithPlayerLang_instance As Lazy(Of RemoteCallHandler_4(Of String,String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang"))
+>		''' <summary> 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string </summary>
+>		Public Shared Function GetFormatWithPlayerLang(id As String,playerXuid As String,playerLangXuid As String,extra As String) As string 
+>			Return Format_GetFormatWithPlayerLang_instance.Value(id,playerXuid,playerLangXuid,extra)
+>		End Function
+>		Private Shared Format_GetFormat_instance As Lazy(Of RemoteCallHandler_2(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat"))
+>		''' <summary> 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string </summary>
+>		Public Shared Function GetFormat(id As String,extra As String) As string 
+>			Return Format_GetFormat_instance.Value(id,extra)
+>		End Function
 >	End Class
 >	Public NotInheritable Class Command
 >		Private Shared Command_SetCommandDisabled_instance As Lazy(Of RemoteCallHandler_void_3(Of String,String,String))(Function() RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled"))
@@ -4286,6 +4867,22 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >let General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig")
 >// 重新加载所有功能的配置文件
 >let General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+>// 获取变量 返回值类型：string
+>let Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
+>// 获取变量，但是强制返回int类型 返回值类型：int
+>let Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt")
+>// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
+>let Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString")
+>// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
+>let Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat")
+>// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
+>let Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat")
+>// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
+>let Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer")
+>// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
+>let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
+>// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
+>let Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
 >// 设置命令禁用(可设置提示)
 >let Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
 >// 设置命令启用
@@ -4413,6 +5010,39 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >    /// <summary> 重新加载所有功能的配置文件 </summary>
 >    let public Reload():unit =
 >      General_Reload_instance.Value.Invoke()
+>  module public Format =
+>    let private Format_GetVariableString_instance = lazy RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
+>    /// <summary> 获取变量 返回值类型：string </summary>
+>    let public GetVariableString(playerXuid:string)(name:string)(format:string):string =
+>      Format_GetVariableString_instance.Value.Invoke(playerXuid,name,format)
+>    let private Format_GetVariableInt_instance = lazy RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt")
+>    /// <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
+>    let public GetVariableInt(playerXuid:string)(name:string):int =
+>      Format_GetVariableInt_instance.Value.Invoke(playerXuid,name)
+>    let private Format_FormatRawString_instance = lazy RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString")
+>    /// <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
+>    let public FormatRawString(playerXuid:string)(rawFormat:string):string =
+>      Format_FormatRawString_instance.Value.Invoke(playerXuid,rawFormat)
+>    let private Format_DefineFormat_instance = lazy RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat")
+>    /// <summary> 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool </summary>
+>    let public DefineFormat(id:string)(rawFormat:string):bool =
+>      Format_DefineFormat_instance.Value.Invoke(id,rawFormat)
+>    let private Format_RemoveFormat_instance = lazy RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat")
+>    /// <summary> 移除格式化定义（返回true为存在并移除） 返回值类型：bool </summary>
+>    let public RemoveFormat(id:string):bool =
+>      Format_RemoveFormat_instance.Value.Invoke(id)
+>    let private Format_GetFormatWithPlayer_instance = lazy RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer")
+>    /// <summary> 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string </summary>
+>    let public GetFormatWithPlayer(id:string)(playerXuid:string)(extra:string):string =
+>      Format_GetFormatWithPlayer_instance.Value.Invoke(id,playerXuid,extra)
+>    let private Format_GetFormatWithPlayerLang_instance = lazy RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
+>    /// <summary> 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string </summary>
+>    let public GetFormatWithPlayerLang(id:string)(playerXuid:string)(playerLangXuid:string)(extra:string):string =
+>      Format_GetFormatWithPlayerLang_instance.Value.Invoke(id,playerXuid,playerLangXuid,extra)
+>    let private Format_GetFormat_instance = lazy RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
+>    /// <summary> 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string </summary>
+>    let public GetFormat(id:string)(extra:string):string =
+>      Format_GetFormat_instance.Value.Invoke(id,extra)
 >  module public Command =
 >    let private Command_SetCommandDisabled_instance = lazy RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
 >    /// <summary> 设置命令禁用(可设置提示) </summary>
