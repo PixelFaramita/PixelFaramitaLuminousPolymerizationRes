@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=L'editor di immagini è uscito
 PictureLoader.Command.PictureAreaSelectorNotSet=Il selezionatore dell'area non è impostato
 PictureLoader.Command.PictureAreaSelectorNotStart=L'editor di immagini non è aperto
 PictureLoader.Command.PictureAreaSelectorStart=Il selettore di area è attivato, posizionare il punto di selezione del blocco A, distruggere il punto di selezione del blocco B
+PictureLoader.Command.ReloadStart=Inizia ricarica tutte le immagini ... Questo potrebbe richiedere un po 'di tempo ...
 PictureLoader.Command.SetASuccess=Punto a impostazioni complete (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Punto b Impostazione (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Completa modifica e salva
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Immettere l'indirizzo dell'im
 PictureLoader.Forms.InitPictureIsCompand=Tagliare
 PictureLoader.Forms.MainForm.Content=Seleziona operazione:
 PictureLoader.Forms.MainForm.Title=Menu principale del caricatore di immagini
+PictureLoader.Forms.MainFormCreate=Importa nuove foto
+PictureLoader.Forms.MainFormEdit=Modifica immagini esistenti
+PictureLoader.Forms.MainFormEditInfo=Modifica il parametro dell'immagine
+PictureLoader.Forms.MainFormExit=Esci dall'editor di immagini\n(non salvare)
+PictureLoader.Forms.MainFormReload=RE -LOUT TUTTE le immagini
+PictureLoader.Forms.MainFormSave=Salva l'immagine dell'editor corrente\nEd esci dall'editor di immagini
+PictureLoader.Tips.EditPopup=Editor di immagini a ({0}, {1}, {2}) b ({3}, {4}, {5})\n/operazione di esecuzione dell'immagine,/estit estit\nPosizionare il set point a blocco A, distruggere il set point quadrato B e fare clic sulla rotazione 45 ° vuoto
 QuickUpdate.UpdateWaiting=Il server riavvierà l'aggiornamento dell'applicazione dopo {0}secondi
 ServerTransfer.Command.Description.main=Trasmissione cross -service
 ServerTransfer.Forms.Main.Content=Scegli un server

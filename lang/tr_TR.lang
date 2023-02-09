@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Resim editörü çıktı
 PictureLoader.Command.PictureAreaSelectorNotSet=Alan seçicisi ayarlanmadı
 PictureLoader.Command.PictureAreaSelectorNotStart=Resim editörü açılmadı
 PictureLoader.Command.PictureAreaSelectorStart=Alan Seçicisi açıldı, A seçmek için kareyi seçin ve B puanlarını seçmek için küpü seçin
+PictureLoader.Command.ReloadStart=Tüm resimleri yeniden yükleyin ... Bu biraz zaman alabilir ...
 PictureLoader.Command.SetASuccess=A ayarları tamamlandı (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=B noktası ayarlama (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Düzenle ve Kaydet'i Tamamla
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Resim adresini girin (HTTP'yi
 PictureLoader.Forms.InitPictureIsCompand=Ayırmak
 PictureLoader.Forms.MainForm.Content=İşlemi seçin:
 PictureLoader.Forms.MainForm.Title=Resim Yükleyici Ana Menü
+PictureLoader.Forms.MainFormCreate=Yeni resimler içe aktarın
+PictureLoader.Forms.MainFormEdit=Mevcut resimleri düzenle
+PictureLoader.Forms.MainFormEditInfo=Resim parametresini değiştir
+PictureLoader.Forms.MainFormExit=Resim Editöründen Çıkın\n(kaydetme)
+PictureLoader.Forms.MainFormReload=Tüm resimleri yeniden yükle
+PictureLoader.Forms.MainFormSave=Mevcut Editör resmini kaydedin\nVe resim düzenleyicisinden çıkın
+PictureLoader.Tips.EditPopup=Image Editor A ({0}, {1}, {2}) b ({3}, {4}, {5})\n/Resim yürütme işlemi,/resim genişletme çıkışı\nBlok ayar noktasını A yerleştirin, kare ayar noktasını yok edin ve 45 ° boş dönmeyi tıklayın
 QuickUpdate.UpdateWaiting=Sunucu, {0}saniyelerden sonra uygulama güncellemesini yeniden başlatacak
 ServerTransfer.Command.Description.main=Çapraz hizmet iletimi
 ServerTransfer.Forms.Main.Content=Bir sunucu seçin

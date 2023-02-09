@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=El editor de imágenes ha salido
 PictureLoader.Command.PictureAreaSelectorNotSet=El selectador de área no está configurado
 PictureLoader.Command.PictureAreaSelectorNotStart=El editor de imágenes no está abierto
 PictureLoader.Command.PictureAreaSelectorStart=El seleccionador de área se ha activado, seleccione el cuadrado para seleccionar A y seleccione el Cubo para seleccionar los puntos B
+PictureLoader.Command.ReloadStart=Empiece a recargar todas las fotos ... esto puede llevar un poco de tiempo ...
 PictureLoader.Command.SetASuccess=Punto A Configuración completa (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Punto B Configuración (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Finalizar edición y guardar
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Ingrese la dirección de la i
 PictureLoader.Forms.InitPictureIsCompand=Cortar
 PictureLoader.Forms.MainForm.Content=Operación de selección:
 PictureLoader.Forms.MainForm.Title=Menú principal del cargador de imágenes
+PictureLoader.Forms.MainFormCreate=Importar nuevas fotos
+PictureLoader.Forms.MainFormEdit=Editar imágenes existentes
+PictureLoader.Forms.MainFormEditInfo=Modificar el parámetro de imagen
+PictureLoader.Forms.MainFormExit=Salir del editor de imágenes\n(no guarde)
+PictureLoader.Forms.MainFormReload=Volver a cargar todas las fotos
+PictureLoader.Forms.MainFormSave=Guardar la imagen actual del editor\nY salir del editor de imágenes
+PictureLoader.Tips.EditPopup=Editor de imágenes A ({0}, {1}, {2}) B ({3}, {4}, {5})\n/Operación de ejecución de imágenes,/Extit de imagen Exit\nColoque el punto de ajuste del bloque A, destruya el punto de ajuste cuadrado B y haga clic en la rotación 45 ° vacío con cita
 QuickUpdate.UpdateWaiting=El servidor reiniciará la actualización de la aplicación después de {0}segundos
 ServerTransfer.Command.Description.main=Transmisión de servicio cruzado
 ServerTransfer.Forms.Main.Content=Seleccione el servidor

@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Bildredakteur ist beendet
 PictureLoader.Command.PictureAreaSelectorNotSet=Der Bereichsauswahler ist nicht eingestellt
 PictureLoader.Command.PictureAreaSelectorNotStart=Der Bildredakteur wird nicht geöffnet
 PictureLoader.Command.PictureAreaSelectorStart=Der Bereichsauswahler wurde eingeschaltet, wählen Sie das Quadrat aus, um a zu wählen, und wählen Sie den Würfel aus, um Punkte B auszuwählen
+PictureLoader.Command.ReloadStart=Laden Sie alle Bilder neu. Das kann ein wenig Zeit dauern ...
 PictureLoader.Command.SetASuccess=Punkt A Einstellungen vollständig (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Punkt B einrichten (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Vervollständigen Sie Bearbeiten und Speichern
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Geben Sie die Bildadresse ein
 PictureLoader.Forms.InitPictureIsCompand=Abgeschnitten
 PictureLoader.Forms.MainForm.Content=Operation auswählen:
 PictureLoader.Forms.MainForm.Title=Bildloader -Hauptmenü
+PictureLoader.Forms.MainFormCreate=Neue Bilder importieren
+PictureLoader.Forms.MainFormEdit=Bestehende Bilder bearbeiten
+PictureLoader.Forms.MainFormEditInfo=Ändern Sie den Bildparameter
+PictureLoader.Forms.MainFormExit=Beenden Sie den Bildredakteur\n(Rette nicht)
+PictureLoader.Forms.MainFormReload=Laden Sie alle Bilder neu.
+PictureLoader.Forms.MainFormSave=Speichern Sie das aktuelle Editor -Bild\nUnd beenden Sie den Bildredakteur
+PictureLoader.Tips.EditPopup=Bildeditor A ({0}, {1}, {2}) B ({3}, {4}, {5})\n/Bildausführungsoperation,/Bild -Extit -Ausgang\nPlatzieren Sie den Block -Sollwert A, zerstören Sie den quadratischen Sollwert B und klicken Sie auf die Rotation 45 ° leeres Handwerk
 QuickUpdate.UpdateWaiting=Der Server startet das Anwendungsaktualisierung nach {0}Sekunden neu
 ServerTransfer.Command.Description.main=Cross -Service -Übertragung
 ServerTransfer.Forms.Main.Content=Wählen Sie einen Server

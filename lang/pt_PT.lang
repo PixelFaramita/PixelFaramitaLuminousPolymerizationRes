@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Editor de imagens saiu
 PictureLoader.Command.PictureAreaSelectorNotSet=O selecionador de área não está definido
 PictureLoader.Command.PictureAreaSelectorNotStart=O editor de imagens não está aberto
 PictureLoader.Command.PictureAreaSelectorStart=O seleção de área foi ativado, selecione o quadrado para selecionar A e selecione o cubo para selecionar pontos B
+PictureLoader.Command.ReloadStart=Comece a recarregar todas as imagens... Isso pode levar um pouco de tempo...
 PictureLoader.Command.SetASuccess=Ponto A Configurações completas (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Ponto B configurando (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Editar e salvar completos
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Digite o endereço da imagem 
 PictureLoader.Forms.InitPictureIsCompand=Cortar
 PictureLoader.Forms.MainForm.Content=Selecione Operação:
 PictureLoader.Forms.MainForm.Title=Menu principal do carregador de imagem
+PictureLoader.Forms.MainFormCreate=Importar novas imagens
+PictureLoader.Forms.MainFormEdit=Editar fotos existentes
+PictureLoader.Forms.MainFormEditInfo=Modifique o parâmetro de imagem
+PictureLoader.Forms.MainFormExit=Saia do editor de imagens\n(não salve)
+PictureLoader.Forms.MainFormReload=Re -carregar todas as fotos
+PictureLoader.Forms.MainFormSave=Salve a foto do editor atual\nE sair do editor de imagens
+PictureLoader.Tips.EditPopup=Editor de imagem A ({0}, {1}, {2}) b ({3}, {4}, {5})\n/Operação de execução de imagem,/Extit de imagem Saída\nColoque o ponto de ajuste do bloco A, destrua o ponto de ajuste quadrado B e clique na rotação de 45 ° vazio -com a mão
 QuickUpdate.UpdateWaiting=O servidor reiniciará a atualização do aplicativo após {0}segundos
 ServerTransfer.Command.Description.main=Transmissão cruzada de serviço
 ServerTransfer.Forms.Main.Content=Escolha um servidor

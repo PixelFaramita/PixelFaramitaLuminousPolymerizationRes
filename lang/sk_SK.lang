@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Editor obrázkov opustil
 PictureLoader.Command.PictureAreaSelectorNotSet=Výberca oblasti nie je nastavený
 PictureLoader.Command.PictureAreaSelectorNotStart=Editor obrázkov nie je otvorený
 PictureLoader.Command.PictureAreaSelectorStart=Výberca oblasti bol zapnutý, vyberte štvorec, ktorý vyberie A, a vyberte kocku, aby ste vybrali body B
+PictureLoader.Command.ReloadStart=Začnite znova načítavať všetky obrázky... Môže to chvíľu trvať...
 PictureLoader.Command.SetASuccess=Nastavenie bodu A je dokončené (x={0}, y={1}, z={2})
 PictureLoader.Command.SetBSuccess=Nastavenie bodu B (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Kompletné úpravy a uložte
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Zadajte obrázkovú adresu (p
 PictureLoader.Forms.InitPictureIsCompand=Odrezať
 PictureLoader.Forms.MainForm.Content=Vyberte operáciu:
 PictureLoader.Forms.MainForm.Title=Hlavná ponuka obrázkového nakladača
+PictureLoader.Forms.MainFormCreate=Importovať nové obrázky
+PictureLoader.Forms.MainFormEdit=Upraviť existujúce obrázky
+PictureLoader.Forms.MainFormEditInfo=Upravte parameter obrázka
+PictureLoader.Forms.MainFormExit=Opustiť editor obrázkov\n(neukladať)
+PictureLoader.Forms.MainFormReload=Znovu načítajte všetky obrázky
+PictureLoader.Forms.MainFormSave=Uložte aktuálny obrázok editora\nA opustite editor obrázkov
+PictureLoader.Tips.EditPopup=Editor obrázkov A({0}, {1}, {2}) B({3}, {4}, {5})\n/picture vykoná operáciu, /picture exit exit\nUmiestnite blokový bod A, zničte blok nastavený bod B a otáčajte o 45° prázdnymi kliknutiami rukou
 QuickUpdate.UpdateWaiting=Server reštartuje aktualizáciu aplikácie po {0}sekundy
 ServerTransfer.Command.Description.main=Prenos krížov
 ServerTransfer.Forms.Main.Content=Vyberte server

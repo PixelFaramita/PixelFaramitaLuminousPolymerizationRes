@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Picture Editor har forlatt
 PictureLoader.Command.PictureAreaSelectorNotSet=Områdevalget er ikke satt
 PictureLoader.Command.PictureAreaSelectorNotStart=Picture Editor er ikke åpnet
 PictureLoader.Command.PictureAreaSelectorStart=Områdevalget er slått på, velg torget for å velge A og velg kuben for å velge punkter B
+PictureLoader.Command.ReloadStart=Begynn å laste inn alle bildene på nytt ... dette kan ta litt tid ...
 PictureLoader.Command.SetASuccess=Pek en innstillinger komplett (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Punkt B Setting opp (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Fullfør redigering og lagre
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Skriv inn bildeadressen (stø
 PictureLoader.Forms.InitPictureIsCompand=Avskåret
 PictureLoader.Forms.MainForm.Content=Velg Operasjon:
 PictureLoader.Forms.MainForm.Title=Bilde Loader Hovedmeny
+PictureLoader.Forms.MainFormCreate=Importer nye bilder
+PictureLoader.Forms.MainFormEdit=Rediger eksisterende bilder
+PictureLoader.Forms.MainFormEditInfo=Endre bildeparameteren
+PictureLoader.Forms.MainFormExit=Gå ut av bilderedigereren\n(Ikke lagre)
+PictureLoader.Forms.MainFormReload=Last inn alle bilder på nytt
+PictureLoader.Forms.MainFormSave=Lagre det nåværende redigeringsbildet\nOg gå ut av bilderedigereren
+PictureLoader.Tips.EditPopup=Image Editor A ({0}, {1}, {2}) B ({3}, {4}, {5})\n/Bildeutførelsesoperasjon,/Bildeutgang\nPlasser blokkeringspunktet A, ødelegg det firkantede punktet B, og klikk på rotasjonen 45 ° tom -hånden
 QuickUpdate.UpdateWaiting=Serveren starter applikasjonsoppdateringen på nytt etter {0}sekunder
 ServerTransfer.Command.Description.main=Kryss -tjenesteoverføring
 ServerTransfer.Forms.Main.Content=Velg en server

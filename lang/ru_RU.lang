@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Редактор изображе�
 PictureLoader.Command.PictureAreaSelectorNotSet=Селектор области не установлен
 PictureLoader.Command.PictureAreaSelectorNotStart=Редактор изображений не открыт
 PictureLoader.Command.PictureAreaSelectorStart=Селектор области включен, выберите квадрат, чтобы выбрать A, и выберите куб, чтобы выбрать точки B
+PictureLoader.Command.ReloadStart=Начните перезагрузить все картинки ... Это может занять немного времени ...
 PictureLoader.Command.SetASuccess=Настройки точки A завершены (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Настройка точки B (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Завершите редактирование и сохраните
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Введите адрес к�
 PictureLoader.Forms.InitPictureIsCompand=Отрезать
 PictureLoader.Forms.MainForm.Content=Выберите операцию:
 PictureLoader.Forms.MainForm.Title=Главное меню «Загрузчик
+PictureLoader.Forms.MainFormCreate=Импортировать новые картинки
+PictureLoader.Forms.MainFormEdit=Редактировать существующие картинки
+PictureLoader.Forms.MainFormEditInfo=Измените параметр изображения
+PictureLoader.Forms.MainFormExit=Выйдите из редактора изображений\n(Не сохраняй)
+PictureLoader.Forms.MainFormReload=Повторно загрузить все картинки
+PictureLoader.Forms.MainFormSave=Сохранить текущее изображение редактора\nИ выйти из редактора изображений
+PictureLoader.Tips.EditPopup=Редактор изображений a ({0}, {1}, {2}) b ({3}, {4}, {5})\n/операция выполнения изображения,/изображение exitit выезд\nПоместите установленную точку блока A, уничтожьте квадратную установленную точку B и щелкните вращение на 45 °.
 QuickUpdate.UpdateWaiting=Сервер перезагрузит обновление приложения через {0}секунд
 ServerTransfer.Command.Description.main=Перекрестная передача
 ServerTransfer.Forms.Main.Content=Выберите сервер

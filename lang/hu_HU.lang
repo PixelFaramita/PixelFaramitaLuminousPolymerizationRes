@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Képszerkesztő kilépett
 PictureLoader.Command.PictureAreaSelectorNotSet=A terület kiválasztóját nincs beállítva
 PictureLoader.Command.PictureAreaSelectorNotStart=A képszerkesztő nincs megnyitva
 PictureLoader.Command.PictureAreaSelectorStart=A terület kiválasztóját be van kapcsolva, válassza ki a négyzetet az A kiválasztásához, és válassza ki a kocka kiválasztásához a B pontokat
+PictureLoader.Command.ReloadStart=Indítsa el az összes kép újratöltését ... ez egy kis időbe telik ...
 PictureLoader.Command.SetASuccess=A pontok pontja teljes (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=B pont beállítása (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Töltse ki a szerkesztést és mentse el
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Írja be a képcímet (Támog
 PictureLoader.Forms.InitPictureIsCompand=Levág
 PictureLoader.Forms.MainForm.Content=Válassza a Művelet lehetőséget:
 PictureLoader.Forms.MainForm.Title=Kép betöltő főmenü
+PictureLoader.Forms.MainFormCreate=Új képek importálása
+PictureLoader.Forms.MainFormEdit=Szerkessze a meglévő képeket
+PictureLoader.Forms.MainFormEditInfo=Módosítsa a képparamétert
+PictureLoader.Forms.MainFormExit=Lépjen ki a képszerkesztőből\n(Ne mentse el)
+PictureLoader.Forms.MainFormReload=Töltse újra az összes képet
+PictureLoader.Forms.MainFormSave=Mentse el az aktuális szerkesztő képet\nÉs lépjen ki a képszerkesztőből
+PictureLoader.Tips.EditPopup=Képszerkesztő A ({0}, {1}, {2}) b ({3}, {4}, {5})\n/Kép végrehajtási művelet,/kép kibővítése Kilépés\nHelyezze a blokk beállított pontját, elpusztítja a B négyzetbe beállított pontot, és kattintson a forgás 45 ° üres -kezelésre
 QuickUpdate.UpdateWaiting=A szerver újraindítja az alkalmazás frissítését a {0}másodpercek után
 ServerTransfer.Command.Description.main=Kereszt -szolgálat átvitel
 ServerTransfer.Forms.Main.Content=Válasszon kiszolgálót

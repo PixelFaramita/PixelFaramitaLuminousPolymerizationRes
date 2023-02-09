@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Kuvaeditori on poistunut
 PictureLoader.Command.PictureAreaSelectorNotSet=Alueen valintaohjelmaa ei ole asetettu
 PictureLoader.Command.PictureAreaSelectorNotStart=Kuvaeditoria ei avata
 PictureLoader.Command.PictureAreaSelectorStart=Aluevalintaohjelma on kytketty päälle, valitse neliö A: n valitsemiseksi ja valitse kuutio pisteitä B
+PictureLoader.Command.ReloadStart=Aloita uudelleen kaikki kuvat ... tämä voi viedä vähän aikaa ...
 PictureLoader.Command.SetASuccess=Piste asetukset valmis (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Piste b Asetus (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Täydellinen muokkaus ja tallenna
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Kirjoita kuvaosoite (tuki HTT
 PictureLoader.Forms.InitPictureIsCompand=Katkaista
 PictureLoader.Forms.MainForm.Content=Valitse toiminta:
 PictureLoader.Forms.MainForm.Title=Kuvakuormaajan päävalikko
+PictureLoader.Forms.MainFormCreate=Tuo uusia kuvia
+PictureLoader.Forms.MainFormEdit=Muokkaa olemassa olevia kuvia
+PictureLoader.Forms.MainFormEditInfo=Muokkaa kuvaparametria
+PictureLoader.Forms.MainFormExit=Poistu kuvaeditorista\n(Älä säästä)
+PictureLoader.Forms.MainFormReload=Lataa kaikki kuvat
+PictureLoader.Forms.MainFormSave=Tallenna nykyinen editorikuva\nJa poistu kuvaeditorista
+PictureLoader.Tips.EditPopup=Kuvaeditori A ({0}, {1}, {2}) b ({3}, {4}, {5})\n/Kuvan suorittamisen toiminta,/kuva Extit Exit\nAseta lohkoasetuspiste A, tuhoa neliöasetuspiste B ja napsauta kiertoa 45 ° Tyhjä -kädessä
 QuickUpdate.UpdateWaiting=Palvelin käynnistää sovelluksen päivityksen uudelleen {0}sekunnin kuluttua
 ServerTransfer.Command.Description.main=Ristipalvelun siirto
 ServerTransfer.Forms.Main.Content=Valitse palvelin

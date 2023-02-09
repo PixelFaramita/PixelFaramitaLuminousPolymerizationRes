@@ -25,14 +25,16 @@
         <n-tab-pane name="ext" tab="扩展功能">
             <n-tab-pane name="main" tab="基础功能">
                 <n-tabs animated type="card" default-value="global">
+                    <n-tab-pane name="pic" tab="地图画">
+                        <picture-loader-config />
+                    </n-tab-pane> <n-tab-pane name="ws" tab="远控">
+                        <websocket-config />
+                    </n-tab-pane>
                     <n-tab-pane name="next" tab="杂项">
                         <next-config />
                     </n-tab-pane>
                     <n-tab-pane name="other" tab="其他">
                         <other-config />
-                    </n-tab-pane>
-                    <n-tab-pane name="ws" tab="Websocket">
-                        <websocket-config />
                     </n-tab-pane>
                 </n-tabs>
             </n-tab-pane>
@@ -45,7 +47,7 @@
                     </n-tab-pane>
                     <n-tab-pane name="backup" tab="存档备份">
                         <backup-config />
-                    </n-tab-pane> 
+                    </n-tab-pane>
                 </n-tabs>
             </n-tab-pane>
         </n-tab-pane>

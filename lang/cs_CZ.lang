@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Editor obrázků opustil
 PictureLoader.Command.PictureAreaSelectorNotSet=Výběr oblasti není nastaven
 PictureLoader.Command.PictureAreaSelectorNotStart=Editor obrázků není otevřen
 PictureLoader.Command.PictureAreaSelectorStart=Výběr oblasti byl zapnut, vyberte čtverec pro výběr a a vyberte krychli pro výběr bodů B
+PictureLoader.Command.ReloadStart=Začněte znovu načítat všechny obrázky... To může chvíli trvat...
 PictureLoader.Command.SetASuccess=Bod A Nastavení Kompletní (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Nastavení bodu B (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Dokončení úprav a uložení
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Zadejte adresu obrázku (podp
 PictureLoader.Forms.InitPictureIsCompand=Plodina
 PictureLoader.Forms.MainForm.Content=Vyberte akci:
 PictureLoader.Forms.MainForm.Title=Hlavní nabídka Image Loader
+PictureLoader.Forms.MainFormCreate=Import nového obrázku
+PictureLoader.Forms.MainFormEdit=Upravit existující obrázky
+PictureLoader.Forms.MainFormEditInfo=Upravte parametr obrázku
+PictureLoader.Forms.MainFormExit=Ukončete editor obrázku\n(neukládat)
+PictureLoader.Forms.MainFormReload=Znovu založte všechny obrázky
+PictureLoader.Forms.MainFormSave=Uložte obrázek aktuálního editoru\nA ukončit editor obrázku
+PictureLoader.Tips.EditPopup=Editor obrázků A ({0}, {1}, {2}) B ({3}, {4}, {5})\n/Provoz pro provádění obrázků,/EXIT pro vyhlídky\nUmístěte nastavení bloku A, zničte čtvercový nastavený bod B a klikněte na rotaci 45 ° prázdné
 QuickUpdate.UpdateWaiting=Server restartuje aktualizaci aplikace po {0}sekundách
 ServerTransfer.Command.Description.main=Přenos mezi službami
 ServerTransfer.Forms.Main.Content=Vyberte server

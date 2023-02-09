@@ -1,6 +1,9 @@
 <template>
     <div>
-        <n-space>
+        <n-text type="info">
+            后台或者OP使用/backup命令即可创建备份<br/>
+            暂无内置定时备份，建议配合面板或外部插件使用<br/><br/>
+        </n-text> <n-space>
             开启存档备份<n-switch v-model:value="bak.ModuleEnabled" size="large" />
         </n-space>
         <div v-if="bak.ModuleEnabled">
@@ -58,7 +61,8 @@ export default {
     align-items: center;
     margin-bottom: 10px;
 }
-div.end{
+
+div.end {
     margin-bottom: 30px;
 }
 </style>

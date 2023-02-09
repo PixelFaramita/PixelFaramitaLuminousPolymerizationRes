@@ -340,6 +340,10 @@ export const useGlobalStore = defineStore('global', () => {
           "Console": true
         }
       }
+    }, "PictureLoader": {
+      "ModuleEnabled": true,
+      "DisplayDistance": 20,
+      "StaticPictureResendDurationSeconds": 30.0
     }
   }
   const config = ref(defaultVal)

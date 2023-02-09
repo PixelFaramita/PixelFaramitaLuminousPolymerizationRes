@@ -1,5 +1,9 @@
 <template>
     <div>
+        <n-text type="info">
+            数据库格式SQLite<br/>
+            推荐使用<a href="https://www.sqlitestudio.pl/">SQLiteStudio</a>查看<br/><br/>
+        </n-text>
         <n-space>
             开启行为日志<n-switch v-model:value="beh.ModuleEnabled" size="large" />
         </n-space>

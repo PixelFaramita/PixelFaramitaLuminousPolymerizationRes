@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Editor gambar telah keluar
 PictureLoader.Command.PictureAreaSelectorNotSet=Pemilihan area tidak disetel
 PictureLoader.Command.PictureAreaSelectorNotStart=Editor gambar tidak dibuka
 PictureLoader.Command.PictureAreaSelectorStart=Pilihan area telah dihidupkan, pilih kotak untuk memilih A, dan pilih kubus untuk memilih titik b
+PictureLoader.Command.ReloadStart=Mulai muat ulang semua gambar... Ini mungkin memakan sedikit waktu ...
 PictureLoader.Command.SetASuccess=Point A Pengaturan Lengkap (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Pengaturan titik B selesai (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Lengkapi Edit dan Simpan
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Masukkan alamat gambar (Dukun
 PictureLoader.Forms.InitPictureIsCompand=Memotong
 PictureLoader.Forms.MainForm.Content=Pilih Operasi:
 PictureLoader.Forms.MainForm.Title=Menu utama gambar loader
+PictureLoader.Forms.MainFormCreate=Mengimpor gambar baru
+PictureLoader.Forms.MainFormEdit=Edit gambar yang ada
+PictureLoader.Forms.MainFormEditInfo=Ubah parameter gambar
+PictureLoader.Forms.MainFormExit=Keluar dari editor gambar\n(jangan simpan)
+PictureLoader.Forms.MainFormReload=Re -muatan semua gambar
+PictureLoader.Forms.MainFormSave=Menyimpan gambar yang saat ini diedit\ndan keluar dari editor gambar
+PictureLoader.Tips.EditPopup=Editor gambar a ({0}, {1}, {2}) b ({3}, {4}, {5})\n/Operasi Eksekusi Gambar,/Keluar Ekstit Picture\nTempatkan titik setel blok A, hancurkan titik setel persegi B, dan klik rotasi 45 ° kosong -hand
 QuickUpdate.UpdateWaiting=Server akan memulai kembali pembaruan aplikasi setelah {0}detik
 ServerTransfer.Command.Description.main=Transmisi silang -Slvice
 ServerTransfer.Forms.Main.Content=Pilih server

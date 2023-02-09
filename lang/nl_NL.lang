@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Foto -editor is weggegaan
 PictureLoader.Command.PictureAreaSelectorNotSet=De gebiedsselectie is niet ingesteld
 PictureLoader.Command.PictureAreaSelectorNotStart=De afbeeldingseditor is niet geopend
 PictureLoader.Command.PictureAreaSelectorStart=De gebiedsselectie is ingeschakeld, selecteer het vierkant om A te selecteren en selecteer de kubus om punten B te selecteren
+PictureLoader.Command.ReloadStart=Begin alle foto's opnieuw te laden ... dit kan even duren ...
 PictureLoader.Command.SetASuccess=Punt A instellingen compleet (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Punt B instellen (x = {0}, y = {1}, z = {2}))
 PictureLoader.Forms.CompleteAddForm=Voltooi bewerken en opslaan
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Voer het afbeeldingadres in (
 PictureLoader.Forms.InitPictureIsCompand=Afsnijden
 PictureLoader.Forms.MainForm.Content=Selecteer Bewerking:
 PictureLoader.Forms.MainForm.Title=Foto lader hoofdmenu
+PictureLoader.Forms.MainFormCreate=Nieuwe foto's importeren
+PictureLoader.Forms.MainFormEdit=Bestaande foto's bewerken
+PictureLoader.Forms.MainFormEditInfo=Wijzig de beeldparameter
+PictureLoader.Forms.MainFormExit=Verlaat de foto -editor\n(Sla niet op)
+PictureLoader.Forms.MainFormReload=RE -LOAD ALLE FOTO'S
+PictureLoader.Forms.MainFormSave=Bewaar de huidige editorfoto\nEn verlaat de foto -editor
+PictureLoader.Tips.EditPopup=Image Editor a ({0}, {1}, {2}) b ({3}, {4}, {5})\n/afbeelding uitvoeringsbewerking,/afbeelding Exit uitbreiden\nPlaats het blokinstelpunt A, vernietig het vierkante instelpunt B en klik op de rotatie 45 ° leeg
 QuickUpdate.UpdateWaiting=De server zal de applicatie -update opnieuw opstarten na {0}seconden
 ServerTransfer.Command.Description.main=Kruis -service -transmissie
 ServerTransfer.Forms.Main.Content=Kies een server

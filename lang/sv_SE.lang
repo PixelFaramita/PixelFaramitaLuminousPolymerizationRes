@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Picture Editor har lämnat
 PictureLoader.Command.PictureAreaSelectorNotSet=Områdesvalet är inte inställt
 PictureLoader.Command.PictureAreaSelectorNotStart=Bildredigeraren öppnas inte
 PictureLoader.Command.PictureAreaSelectorStart=Områdesvalet har aktiverats, välj torget för att välja a och välj kuben för att välja punkter b
+PictureLoader.Command.ReloadStart=Börja ladda om alla bilder ... det kan ta lite tid ...
 PictureLoader.Command.SetASuccess=Peka A -inställningar komplett (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Punkt B Ställa in (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Komplett redigera och spara
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Ange bildadressen (Support HT
 PictureLoader.Forms.InitPictureIsCompand=Avskuren
 PictureLoader.Forms.MainForm.Content=Välj operation:
 PictureLoader.Forms.MainForm.Title=Bildlastare huvudmeny
+PictureLoader.Forms.MainFormCreate=Importera nya bilder
+PictureLoader.Forms.MainFormEdit=Redigera befintliga bilder
+PictureLoader.Forms.MainFormEditInfo=Ändra bildparametern
+PictureLoader.Forms.MainFormExit=Lämna bildredigeraren\n(spara inte)
+PictureLoader.Forms.MainFormReload=Ladda upp alla bilder
+PictureLoader.Forms.MainFormSave=Spara den aktuella redigeringsbilden\nOch avsluta bildredigeraren
+PictureLoader.Tips.EditPopup=Image Editor A ({0}, {1}, {2}) B ({3}, {4}, {5})\n/Bildkörningsoperation,/Bildförlängningsutgång\nPlacera blocket Point A, förstör fyrkantig börvärde B och klicka på rotationen 45 ° tomhänder
 QuickUpdate.UpdateWaiting=Servern startar om applikationsuppdateringen efter {0}sekunder
 ServerTransfer.Command.Description.main=Överföring av tvärservice
 ServerTransfer.Forms.Main.Content=Välj en server

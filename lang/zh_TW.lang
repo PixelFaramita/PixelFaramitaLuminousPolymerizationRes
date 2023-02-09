@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=圖片編輯器已退出
 PictureLoader.Command.PictureAreaSelectorNotSet=區域選擇器未設置
 PictureLoader.Command.PictureAreaSelectorNotStart=圖片編輯器未開啟
 PictureLoader.Command.PictureAreaSelectorStart=區域選擇器已開啟，放置方塊選擇點A，破壞方塊選擇點B
+PictureLoader.Command.ReloadStart=開始重新加載所有圖片...這可能需要一點時間...
 PictureLoader.Command.SetASuccess=A點設置完成(x={0},y={1},z={2})
 PictureLoader.Command.SetBSuccess=B點設置完成(x={0},y={1},z={2})
 PictureLoader.Forms.CompleteAddForm=完成編輯並保存
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=輸入圖片地址(支持http
 PictureLoader.Forms.InitPictureIsCompand=裁切
 PictureLoader.Forms.MainForm.Content=選擇操作：
 PictureLoader.Forms.MainForm.Title=圖片加載器主菜單
+PictureLoader.Forms.MainFormCreate=導入新的圖片
+PictureLoader.Forms.MainFormEdit=編輯已有的圖片
+PictureLoader.Forms.MainFormEditInfo=修改圖片參數
+PictureLoader.Forms.MainFormExit=退出圖片編輯器\n（不保存）
+PictureLoader.Forms.MainFormReload=重新載入所有圖片
+PictureLoader.Forms.MainFormSave=保存當前編輯的圖片\n並退出圖片編輯器
+PictureLoader.Tips.EditPopup=圖片編輯器 A({0}, {1}, {2}) B({3}, {4}, {5})\n/picture執行操作,/picture exit退出\n放置方塊設置點A，破壞方塊設置點B，空手點擊旋轉45°
 QuickUpdate.UpdateWaiting=服務器將在{0}秒後重啟以應用更新
 ServerTransfer.Command.Description.main=跨服傳送
 ServerTransfer.Forms.Main.Content=選擇服務器

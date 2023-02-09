@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Редакторът на карт
 PictureLoader.Command.PictureAreaSelectorNotSet=Изборът на зоната не е зададен
 PictureLoader.Command.PictureAreaSelectorNotStart=Редакторът на картини не се отваря
 PictureLoader.Command.PictureAreaSelectorStart=Изборникът на зоната е включен, изберете квадрата, за да изберете A, и изберете куба, за да изберете точки B
+PictureLoader.Command.ReloadStart=Започнете да презареждате всички снимки... Това може да отнеме малко време...
 PictureLoader.Command.SetASuccess=Настройки на точка A завършени (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Настройката на точка B е завършена (x={0}, y={1}, z={2})
 PictureLoader.Forms.CompleteAddForm=Попълнете редактиране и запазете
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Въведете адреса
 PictureLoader.Forms.InitPictureIsCompand=Култура
 PictureLoader.Forms.MainForm.Content=Изберете действие:
 PictureLoader.Forms.MainForm.Title=Главно меню на товарача на изображения
+PictureLoader.Forms.MainFormCreate=Импортиране на нова картина
+PictureLoader.Forms.MainFormEdit=Редактиране на съществуващи снимки
+PictureLoader.Forms.MainFormEditInfo=Променете параметъра на картината
+PictureLoader.Forms.MainFormExit=Излезте от редактора на картини\n(не запазвай)
+PictureLoader.Forms.MainFormReload=Повторете всички снимки
+PictureLoader.Forms.MainFormSave=Записва редактираната в момента картина\nи излезте от редактора на картини
+PictureLoader.Tips.EditPopup=Редактор на изображения A({0}, {1}, {2}) B({3}, {4}, {5})\n/picture изпълнява операцията, /picture изход изходи\nПоставете зададената точка на блока A, унищожете зададената точка B на блока и завъртете 45° с празни ръчни щраквания
 QuickUpdate.UpdateWaiting=Сървърът ще се рестартира след {0}секунди, за да приложи актуализацията
 ServerTransfer.Command.Description.main=Предаване на кръстосано обслужване
 ServerTransfer.Forms.Main.Content=Изберете сървър

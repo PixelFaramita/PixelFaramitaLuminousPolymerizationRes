@@ -46,6 +46,7 @@ declare module '@vue/runtime-core' {
     NUpload: typeof import('naive-ui')['NUpload']
     NUploadDragger: typeof import('naive-ui')['NUploadDragger']
     OtherConfig: typeof import('./src/components/OtherConfig.vue')['default']
+    PictureLoaderConfig: typeof import('./src/components/PictureLoaderConfig.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TeleportConfig: typeof import('./src/components/TeleportConfig.vue')['default']

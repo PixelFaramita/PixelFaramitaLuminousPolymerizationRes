@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Ο επεξεργαστής εικ
 PictureLoader.Command.PictureAreaSelectorNotSet=Ο επιλογέας της περιοχής δεν έχει οριστεί
 PictureLoader.Command.PictureAreaSelectorNotStart=Ο επεξεργαστής εικόνων δεν ανοίγει
 PictureLoader.Command.PictureAreaSelectorStart=Ο επιλογέας περιοχής είναι ενεργοποιημένος, τοποθετήστε το σημείο επιλογής μπλοκ A, καταστρέψτε το σημείο επιλογής μπλοκ B
+PictureLoader.Command.ReloadStart=Ξεκινήστε ξανά όλες τις φωτογραφίες ... αυτό μπορεί να χρειαστεί λίγο χρόνο ...
 PictureLoader.Command.SetASuccess=Η ρύθμιση σημείου Α έχει ολοκληρωθεί (x={0}, y={1}, z={2})
 PictureLoader.Command.SetBSuccess=Ρύθμιση σημείων Β (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Πλήρης επεξεργασία και αποθήκευση
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Εισαγάγετε τη δ�
 PictureLoader.Forms.InitPictureIsCompand=Αποκόβω
 PictureLoader.Forms.MainForm.Content=Επιλέξτε Λειτουργία:
 PictureLoader.Forms.MainForm.Title=Κύριο μενού φορτωτή εικόνας
+PictureLoader.Forms.MainFormCreate=Εισαγάγετε νέες εικόνες
+PictureLoader.Forms.MainFormEdit=Επεξεργαστείτε τις υπάρχουσες εικόνες
+PictureLoader.Forms.MainFormEditInfo=Τροποποιήστε την παράμετρο της εικόνας
+PictureLoader.Forms.MainFormExit=Έξοδος από τον επεξεργαστή εικόνων\n(μην σώσεις)
+PictureLoader.Forms.MainFormReload=Επαναλάβετε όλες τις εικόνες
+PictureLoader.Forms.MainFormSave=Αποθηκεύστε την τρέχουσα εικόνα του επεξεργαστή\nΚαι βγείτε από τον επεξεργαστή εικόνων
+PictureLoader.Tips.EditPopup=Επεξεργαστής εικόνας A({0}, {1}, {2}) B({3}, {4}, {5})\n/picture Εκτελεί τη λειτουργία, /εικόνα έξοδος τερματίζεται\nΤοποθετήστε το σημείο ρύθμισης μπλοκ Α, καταστρέψτε το σημείο ρύθμισης μπλοκ Β και περιστρέψτε 45° με κλικ με άδεια χέρια
 QuickUpdate.UpdateWaiting=Ο διακομιστής θα κάνει επανεκκίνηση μετά από {0}δευτερόλεπτα για να εφαρμόσει την ενημερωμένη έκδοση
 ServerTransfer.Command.Description.main=Μεταφορά διασταυρούμενης υπηρεσίας
 ServerTransfer.Forms.Main.Content=Επιλέξτε έναν διακομιστή

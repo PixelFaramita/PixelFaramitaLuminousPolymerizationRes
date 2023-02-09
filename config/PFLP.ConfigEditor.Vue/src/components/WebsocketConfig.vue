@@ -1,8 +1,11 @@
 <template>
     <n-h3 prefix="bar">
-        WebsocketAPI远程控制
+        WebsocketAPI/远程控制接口
         <n-switch v-model:value="ws.ModuleEnabled" size="large" />
     </n-h3>
+    <n-text type="info">
+        接口格式见<a href="https://github.com/LazuliKao/BDSWebSocketAPIProtocol">BDSWebSocketAPIProtocol</a><br />
+    </n-text><br/>
     <div v-if="ws.ModuleEnabled">
         <n-space>
             地址:<n-input :status="verifyWebsocketAddress(ws.Location)" v-model:value="ws.Location" />

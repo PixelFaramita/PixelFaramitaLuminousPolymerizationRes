@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Picture editor has exited
 PictureLoader.Command.PictureAreaSelectorNotSet=The area selectioner is not set
 PictureLoader.Command.PictureAreaSelectorNotStart=The picture editor is not opened
 PictureLoader.Command.PictureAreaSelectorStart=The area selectioner has been turned on, select the square to select A, and select the cube to select points B
+PictureLoader.Command.ReloadStart=Start reload all the pictures ... This may take a little time ...
 PictureLoader.Command.SetASuccess=Point A settings complete (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Point B setting up (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Complete edit and save
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Enter the picture address (su
 PictureLoader.Forms.InitPictureIsCompand=Cut off
 PictureLoader.Forms.MainForm.Content=Select operation:
 PictureLoader.Forms.MainForm.Title=Picture loader main menu
+PictureLoader.Forms.MainFormCreate=Import new pictures
+PictureLoader.Forms.MainFormEdit=Edit existing pictures
+PictureLoader.Forms.MainFormEditInfo=Modify the picture parameter
+PictureLoader.Forms.MainFormExit=Exit the image editor\n(Do not save)
+PictureLoader.Forms.MainFormReload=Re -load all pictures
+PictureLoader.Forms.MainFormSave=Save the current editor picture\nAnd exit the picture editor
+PictureLoader.Tips.EditPopup=Image editor A ({0}, {1}, {2}) b ({3}, {4}, {5})\n/picture execution operation,/picture extit exit\nPlace the block set point A, destroy the square set point B, and click the rotation 45 ° empty -handed
 QuickUpdate.UpdateWaiting=The server will restart the application update after {0}seconds
 ServerTransfer.Command.Description.main=Cross -service transmission
 ServerTransfer.Forms.Main.Content=Choose a server

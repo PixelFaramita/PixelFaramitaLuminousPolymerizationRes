@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Edytor zdjęć wyszedł
 PictureLoader.Command.PictureAreaSelectorNotSet=Wybór obszaru nie jest ustawiony
 PictureLoader.Command.PictureAreaSelectorNotStart=Edytor zdjęć nie jest otwarty
 PictureLoader.Command.PictureAreaSelectorStart=Wybór obszaru został włączony, wybierz kwadrat, aby wybrać A i wybierz kostkę, aby wybrać punkty B
+PictureLoader.Command.ReloadStart=Rozpocznij przeładowanie wszystkich zdjęć ... może to potrwać trochę czasu ...
 PictureLoader.Command.SetASuccess=Wskaż Ustawienia A pełne (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Punkt B Konfiguracja (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Wypełnij edytuj i zapisz
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Wprowadź adres obrazu (obsł
 PictureLoader.Forms.InitPictureIsCompand=Odciąć
 PictureLoader.Forms.MainForm.Content=Wybierz operację:
 PictureLoader.Forms.MainForm.Title=Menu główne ładowarki obrazu
+PictureLoader.Forms.MainFormCreate=Importowanie nowego obrazu
+PictureLoader.Forms.MainFormEdit=Edytuj istniejące zdjęcia
+PictureLoader.Forms.MainFormEditInfo=Zmodyfikuj parametr obrazu
+PictureLoader.Forms.MainFormExit=Wyjdź z edytora zdjęć\n(nie oszczędzaj)
+PictureLoader.Forms.MainFormReload=Ponownie ładuj wszystkie zdjęcia
+PictureLoader.Forms.MainFormSave=Zapisz bieżące zdjęcie edytora\nI wyjdź z edytora zdjęć
+PictureLoader.Tips.EditPopup=Edytor obrazu A ({0}, {1}, {2}) b ({3}, {4}, {5})\n/Operacja wykonywania obrazu,/obraz Extit Exit\nUmieść punkt zestawu bloku A, zniszcz kwadratowy punkt B i kliknij obrót 45 °
 QuickUpdate.UpdateWaiting=Serwer ponownie uruchomi aktualizację aplikacji po sekundach {0}
 ServerTransfer.Command.Description.main=Przekładnia krzyżowa
 ServerTransfer.Forms.Main.Content=Wybierz serwer

@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=图片编辑器已退出
 PictureLoader.Command.PictureAreaSelectorNotSet=区域选择器未设置
 PictureLoader.Command.PictureAreaSelectorNotStart=图片编辑器未开启
 PictureLoader.Command.PictureAreaSelectorStart=区域选择器已开启，放置方块选择点A，破坏方块选择点B
+PictureLoader.Command.ReloadStart=开始重新加载所有图片...这可能需要一点时间...
 PictureLoader.Command.SetASuccess=A点设置完成(x={0},y={1},z={2})
 PictureLoader.Command.SetBSuccess=B点设置完成(x={0},y={1},z={2})
 PictureLoader.Forms.CompleteAddForm=完成编辑并保存
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=输入图片地址(支持http
 PictureLoader.Forms.InitPictureIsCompand=裁切
 PictureLoader.Forms.MainForm.Content=选择操作：
 PictureLoader.Forms.MainForm.Title=图片加载器主菜单
+PictureLoader.Forms.MainFormCreate=导入新的图片
+PictureLoader.Forms.MainFormEdit=编辑已有的图片
+PictureLoader.Forms.MainFormEditInfo=修改图片参数
+PictureLoader.Forms.MainFormExit=退出图片编辑器\n（不保存）
+PictureLoader.Forms.MainFormReload=重新加载所有图片
+PictureLoader.Forms.MainFormSave=保存当前编辑的图片\n并退出图片编辑器
+PictureLoader.Tips.EditPopup=图片编辑器 A({0}, {1}, {2}) B({3}, {4}, {5})\n/picture执行操作,/picture exit退出\n放置方块设置点A，破坏方块设置点B，空手点击旋转45°
 QuickUpdate.UpdateWaiting=服务器将在{0}秒后重启以应用更新
 ServerTransfer.Command.Description.main=跨服传送
 ServerTransfer.Forms.Main.Content=选择服务器

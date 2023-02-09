@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=Billedredaktør har forladt
 PictureLoader.Command.PictureAreaSelectorNotSet=Området Selectioner er ikke indstillet
 PictureLoader.Command.PictureAreaSelectorNotStart=Billededitoren åbnes ikke
 PictureLoader.Command.PictureAreaSelectorStart=Området Selectioner er tændt, vælg Square for at vælge A, og vælg terningen for at vælge punkter B
+PictureLoader.Command.ReloadStart=Begynd at genindlæse alle billederne ... dette kan tage lidt tid ...
 PictureLoader.Command.SetASuccess=Punkt en indstilling komplet (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=Punkt B opsætning (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=Komplet redigering og gem
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=Indtast billedadressen (Suppo
 PictureLoader.Forms.InitPictureIsCompand=Skære af
 PictureLoader.Forms.MainForm.Content=Vælg en handling:
 PictureLoader.Forms.MainForm.Title=Billedlæsser Hovedmenu
+PictureLoader.Forms.MainFormCreate=Importer nye billeder
+PictureLoader.Forms.MainFormEdit=Rediger eksisterende billeder
+PictureLoader.Forms.MainFormEditInfo=Rediger billedparameteren
+PictureLoader.Forms.MainFormExit=Afslut billedredigeringsprogrammet\n(Gem ikke)
+PictureLoader.Forms.MainFormReload=Genbelast alle billeder
+PictureLoader.Forms.MainFormSave=Gem det aktuelle editorbillede\nOg afslut billedredaktøren
+PictureLoader.Tips.EditPopup=Image Editor A ({0}, {1}, {2}) B ({3}, {4}, {5})\n/billedudførelsesoperation,/billede Extit exit\nPlacer bloksættet punkt A, ødelæg det firkantede sæt punkt B, og klik på rotationen 45 ° tom -håndet
 QuickUpdate.UpdateWaiting=Serveren genstarter applikationsopdateringen efter {0}sekunder
 ServerTransfer.Command.Description.main=Kryds -service transmission
 ServerTransfer.Forms.Main.Content=Vælg en server

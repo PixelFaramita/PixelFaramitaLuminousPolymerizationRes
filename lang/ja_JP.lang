@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=画像エディターが終了し�
 PictureLoader.Command.PictureAreaSelectorNotSet=エリア選択者は設定されていません
 PictureLoader.Command.PictureAreaSelectorNotStart=画像エディターは開かれていません
 PictureLoader.Command.PictureAreaSelectorStart=エリア選択者がオンになっています。正方形を選択してAを選択し、キューブを選択してポイントbを選択します
+PictureLoader.Command.ReloadStart=すべての写真をリロードし始める...これには少し時間がかかるかもしれません...
 PictureLoader.Command.SetASuccess=設定を完了すると、x = {0}、y = {1}、z = {2}）
 PictureLoader.Command.SetBSuccess=ポイントBセットアップ（x = {0}、y = {1}、z = {2}）
 PictureLoader.Forms.CompleteAddForm=完全な編集と保存
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=画像アドレス（サポ�
 PictureLoader.Forms.InitPictureIsCompand=切り落とす
 PictureLoader.Forms.MainForm.Content=[操作]を選択します：
 PictureLoader.Forms.MainForm.Title=画像ローダーメインメニュー
+PictureLoader.Forms.MainFormCreate=新しい写真をインポートします
+PictureLoader.Forms.MainFormEdit=既存の写真を編集します
+PictureLoader.Forms.MainFormEditInfo=画像パラメーターを変更します
+PictureLoader.Forms.MainFormExit=画像エディターを終了します\n（保存しない）
+PictureLoader.Forms.MainFormReload=すべての写真を再ロードします
+PictureLoader.Forms.MainFormSave=現在編集中の画像を保存します\nをクリックし、画像エディタを終了します
+PictureLoader.Tips.EditPopup=画像エディターA（{0}、{1}、{2}）b（{3}、{4}、{5}）\n/画像実行操作、/画像拡張出口\nブロック設定ポイントAを配置し、正方形の設定ポイントBを破壊し、3.HANDEDで45°の回転をクリックします
 QuickUpdate.UpdateWaiting=サーバーは{0}秒後にアプリケーションの更新を再起動します
 ServerTransfer.Command.Description.main=クロスサービス送信
 ServerTransfer.Forms.Main.Content=サーバーを選択します

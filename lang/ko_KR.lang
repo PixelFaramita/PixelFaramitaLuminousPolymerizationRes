@@ -1165,6 +1165,7 @@ PictureLoader.Command.PictureAreaSelectorExit=사진 편집기가 종료되었�
 PictureLoader.Command.PictureAreaSelectorNotSet=영역 선택기가 설정되지 않았습니다
 PictureLoader.Command.PictureAreaSelectorNotStart=사진 편집기가 열리지 않았습니다
 PictureLoader.Command.PictureAreaSelectorStart=영역 선택기가 켜져 있고 A를 선택하려면 정사각형을 선택하고 큐브를 선택하여 점 B를 선택하십시오.
+PictureLoader.Command.ReloadStart=모든 사진을 다시로드 시작하십시오 ... 이것은 약간 시간이 걸릴 수 있습니다 ...
 PictureLoader.Command.SetASuccess=포인트 A 설정 완료 (x = {0}, y = {1}, z = {2})
 PictureLoader.Command.SetBSuccess=포인트 B 설정 (x = {0}, y = {1}, z = {2})
 PictureLoader.Forms.CompleteAddForm=편집 및 저장을 완료하십시오
@@ -1190,6 +1191,13 @@ PictureLoader.Forms.InitPictureFormUrl.Placeholder=이미지 주소 입력(http 
 PictureLoader.Forms.InitPictureIsCompand=끊다
 PictureLoader.Forms.MainForm.Content=작전 선택 :
 PictureLoader.Forms.MainForm.Title=그림 로더 메인 메뉴
+PictureLoader.Forms.MainFormCreate=새 사진을 수입하십시오
+PictureLoader.Forms.MainFormEdit=기존 사진 편집
+PictureLoader.Forms.MainFormEditInfo=그림 매개 변수를 수정하십시오
+PictureLoader.Forms.MainFormExit=사진 편집기를 종료하십시오\n(저장하지 마십시오)
+PictureLoader.Forms.MainFormReload=모든 사진을 다시로드하십시오
+PictureLoader.Forms.MainFormSave=현재 편집기 사진을 저장하십시오\n사진 편집기를 종료하십시오
+PictureLoader.Tips.EditPopup=그림 편집기 A({0}, {1}, {2}) B({3}, {4}, {5})\n/picture가 작업을 수행하고 /picture exit가 종료됩니다\n블록 설정점 A를 배치하고, 블록 설정점 B를 파괴하고, 빈 손으로 45° 회전을 클릭합니다
 QuickUpdate.UpdateWaiting=서버는 {0}초 후에 응용 프로그램 업데이트를 다시 시작합니다.
 ServerTransfer.Command.Description.main=크로스 서비스 전송
 ServerTransfer.Forms.Main.Content=서버를 선택하십시오
