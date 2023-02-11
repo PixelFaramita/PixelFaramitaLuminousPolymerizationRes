@@ -1584,3 +1584,6 @@ QuickUpdate.NewUpdateId=バージョンコード＃{0}
 QuickUpdate.NewUpdateInfo=新しいバージョンファイル固有の情報
 QuickUpdate.NewUpdateInfoDescription=説明：{0}
 QuickUpdate.NewUpdateInfoDownloadCommand=コンソール入力> {0}<コマンドはすばやく更新できます
+QuickUpdate.NewUpdateInfoDownloadComplete=ダウンロードが完了し、ファイルが交換されています...
+QuickUpdate.NewUpdateInfoDownloadLink=ダイレクトチェーンをダウンロード：{0}
+QuickUpdate.NewUpdateInfoDownloadStart=ダウンロードを開始して更新します...

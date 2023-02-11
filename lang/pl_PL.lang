@@ -1514,3 +1514,4 @@ Menu.ModuleName=Niestandardowe menu
 MoneyAPI.ModuleName=gospodarka
 MoneyExtensions.ModuleName=Zarządzanie gospodarcze
 Notice.ModuleName=ogłoszenie
+PackManager.ModuleName=Zarządzanie paczkami

@@ -1548,3 +1548,5 @@ PictureLoader.PictureConfig.PaddingColors.White=Hvit ({0})
 PictureLoader.PictureConfig.PaddingColors.Yellow=Gul ({0})
 PictureLoader.PictureConfig.Resamplers.Bicubic=Dobbelt tre ganger ({0})
 PictureLoader.PictureConfig.Resamplers.Box=Boks ({0})
+PictureLoader.PictureConfig.Resamplers.Hermite=Hermite ({0}) [anti -serrert]
+PictureLoader.PictureConfig.Resamplers.Lanczos2=Lanczos sekundær interpolasjon ({0})

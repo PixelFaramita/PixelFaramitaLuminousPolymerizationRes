@@ -1499,3 +1499,4 @@ FloatText.ModuleName=Palavra flutuante
 FormAPI.ModuleName=Forma UI
 FriendlyDisconnect.ModuleName=Descarte a otimização do prompt de conexão
 GiftCode.ModuleName=Sistema de código de pacote de presente
+Global.ModuleName=Plug -in Configuração global
