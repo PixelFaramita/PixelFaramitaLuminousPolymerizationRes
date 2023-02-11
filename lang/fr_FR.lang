@@ -1484,3 +1484,6 @@ Warp.Forms.NoPermission.Cancel=fermeture
 Warp.Forms.NoPermission.Content=Exécution non professionnelle de cette opération
 Warp.Forms.NoPermission.Title=Aucune autorisation
 WorldLimit.OutOfBorder=--- les frontières du monde---
+AttackEcho.ModuleName=Attaquez les commentaires
+Backup.ModuleName=Sauvegarde automatique
+BehaviorLog.ModuleName=Journal de comportement

@@ -1484,3 +1484,5 @@ Warp.Forms.NoPermission.Cancel=bezárás
 Warp.Forms.NoPermission.Content=A művelet szakszerűtlen végrehajtása
 Warp.Forms.NoPermission.Title=Nincs engedélye
 WorldLimit.OutOfBorder=--- a világ határait---
+AttackEcho.ModuleName=Támadási visszajelzés
+Backup.ModuleName=Automatikus biztonsági mentés
