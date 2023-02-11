@@ -1485,3 +1485,5 @@ Warp.Forms.NoPermission.Content=Bu operasyonun profesyonelce yürütülmesi
 Warp.Forms.NoPermission.Title=İzin yok
 WorldLimit.OutOfBorder=Dünyanın sınırlarını ------
 AttackEcho.ModuleName=Saldırı Geri Bildirimi
+Backup.ModuleName=Otomatik yedekleme
+BehaviorLog.ModuleName=Davranış günlüğü

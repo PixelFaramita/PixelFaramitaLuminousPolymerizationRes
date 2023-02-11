@@ -1485,3 +1485,5 @@ Warp.Forms.NoPermission.Content=Непрофесійне виконання ці
 Warp.Forms.NoPermission.Title=Немає дозволу
 WorldLimit.OutOfBorder=--- кордонів світу---
 AttackEcho.ModuleName=Зворотній зв'язок
+Backup.ModuleName=Автоматичне резервне копіювання
+BehaviorLog.ModuleName=Журнал поведінки

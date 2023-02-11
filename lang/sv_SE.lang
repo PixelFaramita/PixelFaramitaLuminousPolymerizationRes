@@ -1485,3 +1485,7 @@ Warp.Forms.NoPermission.Content=Oprofessionellt genomförande av denna operation
 Warp.Forms.NoPermission.Title=Inget tillstånd
 WorldLimit.OutOfBorder=--- världens gränser---
 AttackEcho.ModuleName=Attack Feedback
+Backup.ModuleName=Automatisk säkerhetskopiering
+BehaviorLog.ModuleName=Beteendelogg
+BelowName.ModuleName=Spelarens namnutvidgning
+Blacklist.ModuleName=Spelarförbudssystem

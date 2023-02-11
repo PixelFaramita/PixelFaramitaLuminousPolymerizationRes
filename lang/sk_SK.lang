@@ -1486,3 +1486,7 @@ Warp.Forms.NoPermission.Title=Bez povolenia
 WorldLimit.OutOfBorder=--- hranice sveta---
 AttackEcho.ModuleName=Spätná väzba
 Backup.ModuleName=Automatická záloha
+BehaviorLog.ModuleName=Protokol správania
+BelowName.ModuleName=Meno hráča Expanzia
+Blacklist.ModuleName=Systém zákazu
+ChatEnhancement.ModuleName=Vylepšenie chatovania
