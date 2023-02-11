@@ -1484,3 +1484,4 @@ Warp.Forms.NoPermission.Cancel=폐쇄
 Warp.Forms.NoPermission.Content=이 작업의 비전문가 실행
 Warp.Forms.NoPermission.Title=비허가
 WorldLimit.OutOfBorder=세계 경계를 ------
+AttackEcho.ModuleName=공격 피드백

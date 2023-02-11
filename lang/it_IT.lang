@@ -1485,3 +1485,7 @@ Warp.Forms.NoPermission.Content=Esecuzione non professionale di questa operazion
 Warp.Forms.NoPermission.Title=Nessun permesso
 WorldLimit.OutOfBorder=--- confini del mondo---
 AttackEcho.ModuleName=Feedback di attacchi
+Backup.ModuleName=Backup automatico
+BehaviorLog.ModuleName=Registro comportamentale
+BelowName.ModuleName=Espansione del nome del giocatore
+Blacklist.ModuleName=Sistema di divieto del giocatore

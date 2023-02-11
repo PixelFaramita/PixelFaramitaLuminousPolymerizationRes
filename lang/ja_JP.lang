@@ -1484,3 +1484,6 @@ Warp.Forms.NoPermission.Cancel=閉鎖
 Warp.Forms.NoPermission.Content=この操作の非専門的な実行
 Warp.Forms.NoPermission.Title=無許可
 WorldLimit.OutOfBorder=世界の国境を------
+AttackEcho.ModuleName=攻撃フィードバック
+Backup.ModuleName=自動バックアップ
+BehaviorLog.ModuleName=動作ログ

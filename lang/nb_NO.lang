@@ -1484,3 +1484,4 @@ Warp.Forms.NoPermission.Cancel=nedleggelse
 Warp.Forms.NoPermission.Content=Uprofesjonell utførelse av denne operasjonen
 Warp.Forms.NoPermission.Title=Ingen tillatelse
 WorldLimit.OutOfBorder=--- verdens grenser---
+AttackEcho.ModuleName=Angrep tilbakemelding
