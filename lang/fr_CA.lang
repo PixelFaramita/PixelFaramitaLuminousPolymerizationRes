@@ -1495,3 +1495,7 @@ CloseHandler.ModuleName=Soins et optimisation
 Death.ModuleName=Retour à la mort
 DynamicMotd.ModuleName=MOTD dynamique
 FakeMotd.ModuleName=Motd virtuel
+FloatText.ModuleName=Mot flottant
+FormAPI.ModuleName=FORME UI
+FriendlyDisconnect.ModuleName=Jeter l'optimisation de l'invite de connexion
+GiftCode.ModuleName=Système de code de pack cadeau

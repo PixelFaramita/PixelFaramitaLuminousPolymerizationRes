@@ -1489,3 +1489,6 @@ Backup.ModuleName=Cadangan Otomatis
 BehaviorLog.ModuleName=Log Perilaku
 BelowName.ModuleName=Ekspansi Nama Pemain
 Blacklist.ModuleName=Sistem pelarangan pemain
+ChatEnhancement.ModuleName=Peningkatan obrolan
+ChatTranslation.ModuleName=Terjemahan nyata -waktu
+CloseHandler.ModuleName=Optimalisasi shutdown

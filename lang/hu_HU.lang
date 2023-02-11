@@ -1491,3 +1491,7 @@ BelowName.ModuleName=A lejátszó neve bővítése
 Blacklist.ModuleName=Játékos tiltási rendszer
 ChatEnhancement.ModuleName=Csevegés javítás
 ChatTranslation.ModuleName=Valódi -idő fordítás
+CloseHandler.ModuleName=Gondoskodás és optimalizálás
+Death.ModuleName=Halálos visszatérés
+DynamicMotd.ModuleName=Dinamikus motd
+FakeMotd.ModuleName=Virtuális motd
