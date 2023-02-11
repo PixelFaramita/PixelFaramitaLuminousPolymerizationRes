@@ -1484,3 +1484,4 @@ Warp.Forms.NoPermission.Cancel=關閉
 Warp.Forms.NoPermission.Content=無權限執行該操作
 Warp.Forms.NoPermission.Title=無權限
 WorldLimit.OutOfBorder=---世界邊界---
+AttackEcho.ModuleName=攻擊反饋

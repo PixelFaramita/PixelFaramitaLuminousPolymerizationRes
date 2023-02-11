@@ -1484,3 +1484,5 @@ Warp.Forms.NoPermission.Cancel=закрытие
 Warp.Forms.NoPermission.Content=Непрофессиональное выполнение этой операции
 Warp.Forms.NoPermission.Title=Отсутствует разрешение
 WorldLimit.OutOfBorder=--- границ мира---
+AttackEcho.ModuleName=Обратная связь атаки
+Backup.ModuleName=Автоматическая резервная копия

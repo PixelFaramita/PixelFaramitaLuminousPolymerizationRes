@@ -1484,3 +1484,4 @@ Warp.Forms.NoPermission.Cancel=закриття
 Warp.Forms.NoPermission.Content=Непрофесійне виконання цієї операції
 Warp.Forms.NoPermission.Title=Немає дозволу
 WorldLimit.OutOfBorder=--- кордонів світу---
+AttackEcho.ModuleName=Зворотній зв'язок

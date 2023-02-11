@@ -1484,3 +1484,4 @@ Warp.Forms.NoPermission.Cancel=stängning
 Warp.Forms.NoPermission.Content=Oprofessionellt genomförande av denna operation
 Warp.Forms.NoPermission.Title=Inget tillstånd
 WorldLimit.OutOfBorder=--- världens gränser---
+AttackEcho.ModuleName=Attack Feedback

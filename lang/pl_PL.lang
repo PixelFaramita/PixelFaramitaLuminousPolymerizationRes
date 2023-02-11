@@ -1484,3 +1484,7 @@ Warp.Forms.NoPermission.Cancel=zamknięcie
 Warp.Forms.NoPermission.Content=Nieprofesjonalne wykonanie tej operacji
 Warp.Forms.NoPermission.Title=Brak pozwolenia
 WorldLimit.OutOfBorder=--- granice świata---
+AttackEcho.ModuleName=Sprzężenie zwrotne ataku
+Backup.ModuleName=Automatyczna kopia zapasowa
+BehaviorLog.ModuleName=Dziennik zachowania
+BelowName.ModuleName=Rozszerzenie nazwy gracza

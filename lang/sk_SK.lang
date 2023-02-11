@@ -1484,3 +1484,5 @@ Warp.Forms.NoPermission.Cancel=zatvorenie
 Warp.Forms.NoPermission.Content=Neprofesionálne vykonanie tejto operácie
 Warp.Forms.NoPermission.Title=Bez povolenia
 WorldLimit.OutOfBorder=--- hranice sveta---
+AttackEcho.ModuleName=Spätná väzba
+Backup.ModuleName=Automatická záloha
