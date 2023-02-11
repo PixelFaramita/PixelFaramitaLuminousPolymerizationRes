@@ -18,13 +18,13 @@
 >```C#
 >using RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI
 >```
 > - F#
 >```F#
->#r "LiteLoader.Net"
+>#r "LiteLoader.NET"
 >open LiteLoader.RemoteCall
 >```
 > - Lua
@@ -62,7 +62,7 @@
 >var General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig");
 >var result = General_SetConfig(jsonStr);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "General::SetConfig")
@@ -106,7 +106,7 @@
 >var General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig");
 >var result = General_GetConfig();
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取全局配置文件（JSON字符串） 返回值类型：string
 >Dim General_GetConfig = RemoteCallAPI.ImportAs(Of String)("PFLP", "General::GetConfig")
@@ -149,7 +149,7 @@
 >var General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload");
 >General_Reload();
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 重新加载所有功能的配置文件
 >Dim General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
@@ -196,7 +196,7 @@
 >var Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString");
 >var result = Format_GetVariableString(playerXuid,name,format);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取变量 返回值类型：string
 >Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString")
@@ -243,7 +243,7 @@
 >var Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt");
 >var result = Format_GetVariableInt(playerXuid,name);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取变量，但是强制返回int类型 返回值类型：int
 >Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Integer,String,String)("PFLP", "Format::GetVariableInt")
@@ -290,7 +290,7 @@
 >var Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString");
 >var result = Format_FormatRawString(playerXuid,rawFormat);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 >Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::FormatRawString")
@@ -337,7 +337,7 @@
 >var Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat");
 >var result = Format_DefineFormat(id,rawFormat);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
 >Dim Format_DefineFormat = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Format::DefineFormat")
@@ -383,7 +383,7 @@
 >var Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat");
 >var result = Format_RemoveFormat(id);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 移除格式化定义（返回true为存在并移除） 返回值类型：bool
 >Dim Format_RemoveFormat = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "Format::RemoveFormat")
@@ -431,7 +431,7 @@
 >var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer");
 >var result = Format_GetFormatWithPlayer(id,playerXuid,extra);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
 >Dim Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetFormatWithPlayer")
@@ -480,7 +480,7 @@
 >var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang");
 >var result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
 >Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang")
@@ -527,7 +527,7 @@
 >var Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat");
 >var result = Format_GetFormat(id,extra);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat")
@@ -576,7 +576,7 @@
 >var Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled");
 >Command_SetCommandDisabled(playerXuid,cmd,feedback);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 设置命令禁用(可设置提示)
 >Dim Command_SetCommandDisabled = RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled")
@@ -622,7 +622,7 @@
 >var Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled");
 >Command_SetCommandEnabled(playerXuid,cmd);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 设置命令启用
 >Dim Command_SetCommandEnabled = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::SetCommandEnabled")
@@ -670,7 +670,7 @@
 >var Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate");
 >var result = Language_Translate(fromLanguage,toLanguage,text);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 翻译 返回值类型：string
 >Dim Language_Translate = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Language::Translate")
@@ -718,7 +718,7 @@
 >var ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName");
 >ChatEx_SetNickName(playerXuid,nickName);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 设置玩家昵称
 >Dim ChatEx_SetNickName = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetNickName")
@@ -764,7 +764,7 @@
 >var ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName");
 >ChatEx_SetFakeName(playerXuid,fakeName);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 设置玩家聊天时的名字
 >Dim ChatEx_SetFakeName = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetFakeName")
@@ -810,7 +810,7 @@
 >var ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd");
 >ChatEx_SetEnd(playerXuid,endStr);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 设置玩家聊天消息后缀
 >Dim ChatEx_SetEnd = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetEnd")
@@ -856,7 +856,7 @@
 >var ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart");
 >ChatEx_SetStart(playerXuid,startStr);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 设置玩家聊天消息前缀
 >Dim ChatEx_SetStart = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetStart")
@@ -901,7 +901,7 @@
 >var ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName");
 >var result = ChatEx_GetNickName(playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取玩家昵称 返回值类型：string
 >Dim ChatEx_GetNickName = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetNickName")
@@ -947,7 +947,7 @@
 >var ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName");
 >var result = ChatEx_GetFakeName(playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取玩家聊天时的名字 返回值类型：string
 >Dim ChatEx_GetFakeName = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetFakeName")
@@ -993,7 +993,7 @@
 >var ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd");
 >var result = ChatEx_GetEnd(playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取玩家聊天消息后缀 返回值类型：string
 >Dim ChatEx_GetEnd = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetEnd")
@@ -1039,7 +1039,7 @@
 >var ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart");
 >var result = ChatEx_GetStart(playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取玩家聊天消息前缀 返回值类型：string
 >Dim ChatEx_GetStart = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetStart")
@@ -1095,7 +1095,7 @@
 >var ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock");
 >ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 给指定方块描框
 >Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock")
@@ -1152,7 +1152,7 @@
 >var ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder");
 >ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 给指定区域描框
 >Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder")
@@ -1204,7 +1204,7 @@
 >var Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand");
 >var result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查指定立方体区域(float)是否有领地 返回值类型：bool
 >Dim Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::CheckCubeHasLand")
@@ -1256,7 +1256,7 @@
 >var Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt");
 >var result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查指定立方体区域(int)是否有领地 返回值类型：bool
 >Dim Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckCubeHasLandInt")
@@ -1305,7 +1305,7 @@
 >var Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand");
 >var result = Lands_CheckPosHasLand(x,y,z,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查指定坐标(float)是否有领地 返回值类型：bool
 >Dim Lands_CheckPosHasLand = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::CheckPosHasLand")
@@ -1354,7 +1354,7 @@
 >var Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt");
 >var result = Lands_CheckPosHasLandInt(x,y,z,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查指定坐标(int)是否有领地 返回值类型：bool
 >Dim Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckPosHasLandInt")
@@ -1406,7 +1406,7 @@
 >var Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube");
 >var result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
 >Dim Lands_GetLandByCube = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByCube")
@@ -1458,7 +1458,7 @@
 >var Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt");
 >var result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
 >Dim Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByCubeInt")
@@ -1507,7 +1507,7 @@
 >var Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos");
 >var result = Lands_GetLandByPos(x,y,z,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
 >Dim Lands_GetLandByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByPos")
@@ -1556,7 +1556,7 @@
 >var Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt");
 >var result = Lands_GetLandByPosInt(x,y,z,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
 >Dim Lands_GetLandByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByPosInt")
@@ -1608,7 +1608,7 @@
 >var Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube");
 >var result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >Dim Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByCube")
@@ -1660,7 +1660,7 @@
 >var Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt");
 >var result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >Dim Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByCubeInt")
@@ -1709,7 +1709,7 @@
 >var Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos");
 >var result = Lands_GetLandInfoByPos(x,y,z,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >Dim Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByPos")
@@ -1758,7 +1758,7 @@
 >var Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt");
 >var result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >Dim Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByPosInt")
@@ -1808,7 +1808,7 @@
 >var Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos");
 >var result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >Dim Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByPos")
@@ -1858,7 +1858,7 @@
 >var Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt");
 >var result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >Dim Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::SetLandInfoByPosInt")
@@ -1909,7 +1909,7 @@
 >var Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D");
 >var result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 新建领地 返回值类型：bool
 >Dim Lands_CreateLand2D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand2D")
@@ -1962,7 +1962,7 @@
 >var Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D");
 >var result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 新建领地 返回值类型：bool
 >Dim Lands_CreateLand3D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand3D")
@@ -2011,7 +2011,7 @@
 >var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos");
 >var result = Lands_DeleteLandByPos(x,y,z,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 删除指定坐标(float)的领地 返回值类型：bool
 >Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::DeleteLandByPos")
@@ -2060,7 +2060,7 @@
 >var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt");
 >var result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 删除指定坐标(int)的领地 返回值类型：bool
 >Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::DeleteLandByPosInt")
@@ -2110,7 +2110,7 @@
 >var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos");
 >var result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
 >Dim Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer,String)("PFLP", "Lands::GetLandPermissionByPos")
@@ -2160,7 +2160,7 @@
 >var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt");
 >var result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
 >Dim Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::GetLandPermissionByPosInt")
@@ -2211,7 +2211,7 @@
 >var Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos");
 >var result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >Dim Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs(Of Boolean,String,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckLandPermissionByPos")
@@ -2262,7 +2262,7 @@
 >var Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt");
 >var result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >Dim Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Boolean,String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckLandPermissionByPosInt")
@@ -2312,7 +2312,7 @@
 >var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
 >var result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
 >Dim Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
@@ -2362,7 +2362,7 @@
 >var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
 >var result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
 >Dim Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
@@ -2412,7 +2412,7 @@
 >var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
 >var result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
@@ -2462,7 +2462,7 @@
 >var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
 >var result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
@@ -2512,7 +2512,7 @@
 >var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
 >var result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >Dim Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
@@ -2562,7 +2562,7 @@
 >var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >var result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
@@ -2608,7 +2608,7 @@
 >var Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId");
 >var result = Lands_GetPlayerAllParmissionGroupId(playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
 >Dim Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllParmissionGroupId")
@@ -2655,7 +2655,7 @@
 >var Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup");
 >var result = Lands_GetPlayerParmissionGroup(playerXuid,permissionGroupId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
 >Dim Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerParmissionGroup")
@@ -2702,7 +2702,7 @@
 >var Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup");
 >var result = Lands_DeletePlayerParmissionGroup(playerXuid,permissionGroupId);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 删玩家权限组(指定ID) 返回值类型：bool
 >Dim Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerParmissionGroup")
@@ -2750,7 +2750,7 @@
 >var Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup");
 >var result = Lands_EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 修改家权限组内容(指定ID) 返回值类型：bool
 >Dim Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerParmissionGroup")
@@ -2798,7 +2798,7 @@
 >var Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup");
 >var result = Lands_AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 添加权限组 返回值类型：bool
 >Dim Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerParmissionGroup")
@@ -2844,7 +2844,7 @@
 >var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer");
 >var result = Lands_GetLandsOwnedByPlayer(playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 取玩家拥有的领地 返回值类型：string
 >Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer")
@@ -2890,7 +2890,7 @@
 >var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer");
 >var result = Lands_GetLandsSharedToPlayer(playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 取共享给玩家的领地 返回值类型：string
 >Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsSharedToPlayer")
@@ -2937,7 +2937,7 @@
 >var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
 >var result = Money_Get(playerXuid);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
@@ -2985,7 +2985,7 @@
 >var Money_Add = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Add");
 >Money_Add(playerXuid,count,info);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 给玩家(指定玩家名)加钱
 >Dim Money_Add = RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money::Add")
@@ -3032,7 +3032,7 @@
 >var Money_Remove = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Remove");
 >Money_Remove(playerXuid,count,info);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 给玩家(指定玩家名)减钱
 >Dim Money_Remove = RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money::Remove")
@@ -3081,7 +3081,7 @@
 >var Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,Player,int>("PFLP", "Internal::CheatPunish");
 >var result = Internal_CheatPunish(PunishLevel,PunishReason,playerXuid,CheatCount);
 >```
-> - Visual Basic .Net
+> - Visual Basic .NET
 >```vb
 >' 作弊反馈（LLAntiCheat用） 返回值类型：bool
 >Dim Internal_CheatPunish = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,IntPtr,Integer)("PFLP", "Internal::CheatPunish")
@@ -4364,7 +4364,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 </details>
 
 
-<details><summary><b>All Api in Visual Basic .Net / VB接口汇总<b></summary>
+<details><summary><b>All Api in Visual Basic .NET / VB接口汇总<b></summary>
 
 
 >---
@@ -4858,7 +4858,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 ><details><summary>F# imports / 直接导入</summary>
 >
 >``` F#
->#r "LiteLoader.Net"
+>#r "LiteLoader.NET"
 >open LiteLoader.RemoteCall
 >
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
@@ -4993,7 +4993,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 ><details><summary>F# module / F# 模块类（推荐）</summary>
 >
 >``` F#
->#r "LiteLoader.Net"
+>#r "LiteLoader.NET"
 >open LiteLoader.RemoteCall
 >
 >module public PFLP =

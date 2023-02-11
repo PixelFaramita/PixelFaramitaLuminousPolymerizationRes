@@ -9,29 +9,29 @@ MagicJS实现了LLJS插件(或Mojang Scripting)与PFLP的互交互，使得插�
 ### 快速上手
 在plugins目录创建一个js插件，例如`test.js`，用[VisualStudioCode](https://code.visualstudio.com/)打开，添加以下内容：
 ```js
-/// <reference path="./PixelFaramitaLuminousPolymerization/scripts/node_modules/@pf/index.d.ts" /> 
+/// <reference path="./PixelFaramitaLuminousPolymerization/scripts/node_modules/@pf/index.d.ts" />
 ```
 这告诉编辑器PFLP的类型定义，此后编辑器会自动提示补全，你可以在`PixelFaramitaLuminousPolymerization/scripts/node_modules/@pf/index.d.ts`中查看PFLP的所有类型定义，查看PFLP的所有方法，这些方法都是可以直接调用的，例如：
 ```js
 mc.listen("onJump", pl => {
-    const { x, y, z, dimid } = pl.blockPos
+    const { x, y, z, dimid } = pl.blockPos;
     //调用PF的API
     var result = $pf.Api.Lands.GetLandByPosInt(x, y, z, dimid);
     if (result !== null) {//存在领地，输出信息
-        $pf.log(`当前${result.PlayerName}的领地:${result.Displayname}`)
+        $pf.log(`当前${result.PlayerName}的领地:${result.Displayname}`);
     }
 })
 ```
 其中$pf是PFLP的全局变量，此后你在编写对接插件时将会不断使用它，示例中`$pf.Api.Lands.`下有许多操作领地的API，你可以使用它来完成大部分领地功能的自定义，比如创建自定义权限组，修改领地属性等等...
 类似的功能还有很多，例如：
 ```js
-$pf.Api.Command.SetCommandDisabled(xuid,"land","领地命令已禁用")
+$pf.Api.Command.SetCommandDisabled(xuid,"land","领地命令已禁用");
 ```
 此方法可以修改某个玩家的某个命令（PFLP内的命令）可用性
 ```js
-let config=$pf.Api.General.GetConfig()
-config.ChatEnhancement.ModuleEnabled=true
-$pf.Api.General.SetConfig(config)
+let config=$pf.Api.General.GetConfig();
+config.ChatEnhancement.ModuleEnabled = true;
+$pf.Api.General.SetConfig(config);
 ```
 此方法可以获取PFLP的配置文件，包括但不限于开关PFLP的模块，修改PFLP的配置等等...
 
@@ -46,9 +46,9 @@ MagicJS实现了对PFLP的事件监听，你可以使用`$pf.listen`方法监听
 mc.listen("onServerStarted", () => {
     //添加监听
     $pf.listen($pf.EventKey.onLandCreated, infoObj => {
-         $pf.log(`领地${land.Displayname}被创建`)
-    })
-}); 
+        $pf.log(`领地${land.Displayname}被创建`);
+    });
+});
 ```
 
 ### 当前存在的问题
@@ -64,37 +64,37 @@ mc.listen("onServerStarted", () => {
 import * as mc from "@minecraft/server";//导入官方包
 /**
  * 实体对象转玩家对象
- * @param {mc.Entity} entity 
- * @returns {mc.Player|undefined} 
+ * @param {mc.Entity} entity
+ * @returns {mc.Player|undefined}
  */
 function EntityToPlayer(entity) {
     if (entity.typeId === "minecraft:player") {
         for (const iterator of mc.world.getPlayers({ name: entity.nameTag })) {//通过mc.world.getPlayers方法找到与实体对应的玩家对象并返回
-            return iterator
+            return iterator;
         }
     }
 }
 mc.world.events.projectileHit.subscribe(e => {//订阅弹射物击中事件
-    if (e.entityHit !== undefined) {//如果击中了实体
-        EntityToPlayer(e.source)?.playSound("random.orb")//播放声音
+    if (e.entityHit !== undefined); {//如果击中了实体
+        EntityToPlayer(e.source)?.playSound("random.orb");//播放声音
     }
-})
+});
 ```
 这个简单示例实现了箭矢击中目标后反馈给玩家ding~的音效，可以看出addon中深藏不漏的ScriptingAPI还是很强大的。
 然后请往下看
 ```js
-import { Utils, log, Api } from "@pf"//导入PFLP的方法
+import { Utils, log, Api } from "@pf";//导入PFLP的方法
 import * as mc from "@minecraft/server";
 mc.world.events.projectileHit.subscribe(e => {//订阅弹射物击中事件
     if (e.blockHit !== undefined) {
         if (e.source.typeId === "minecraft:player") {
             try {
-                const playerXuid = Utils.UniqueIdToXuid(e.source.id)//这个方法可以把UniqueId转换成玩家的xuid
-                const { x, y, z } = e.blockHit.block.location 
-                Api.ParticlesGraphics.DrawBlock(playerXuid, x, y, z, 0.5, 0.9, 0.5, 0.03, 1, 0.5)//通过PFLP的API绘制方块描边
+                const playerXuid = Utils.UniqueIdToXuid(e.source.id);//这个方法可以把UniqueId转换成玩家的xuid
+                const { x, y, z } = e.blockHit.block.location;
+                Api.ParticlesGraphics.DrawBlock(playerXuid, x, y, z, 0.5, 0.9, 0.5, 0.03, 1, 0.5);//通过PFLP的API绘制方块描边
             } catch (error) { }
         }
     }
-})
+});
 ```
 这个示例调用了PFLP的`DrawBlock`方法，在箭矢击中方块后给方块绘制了描边。就像官方的脚本，可以优雅地使用`import`来导入`@pf`模块，然后可以直接调用PFLP的方法，类似上文的`$pf`变量
