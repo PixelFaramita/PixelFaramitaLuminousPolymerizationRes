@@ -24,7 +24,7 @@
 
 ### **BelowName | 玩家名下方信息显示**
 
-### **Helper | 辅助功能** 
+### **Helper | 辅助功能**
 
 - ForceDownloadWithoutCovering：强制下载材质包但不覆盖
 - FakeSeed：假种子

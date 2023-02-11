@@ -12,12 +12,12 @@
 然后运行`LLPeEditor.exe`，之后便会生成`bedrock_server_mod.exe`，此为插件端启动程序
 
 ---
-- ### 下载和安装最新的LiteLoaderNET和PFLP插件
+- ### 下载和安装最新的LiteLoader.NET和PFLP插件
     #### 请前往 [最新构建](https://gxh.lanzoum.com/b03v3gxbi)  密码：114514
 推荐直接下载`LLNET_with_PFLP_Beta.zip`，解压到指定目录（详见压缩包注释）
->或者也可手动下载[`LiteLoaderNET`](https://github.com/LiteLDev/LiteLoader.NET)，并手动下载`PFLP_Beta_2022_xx_xx__xx_xx_xx.dll`置于插件目录（`plugins`）
+>或者也可手动下载[`LiteLoader.NET`](https://github.com/LiteLDev/LiteLoader.NET)，并手动下载`PFLP_Beta_2022_xx_xx__xx_xx_xx.dll`置于插件目录（`plugins`）
 ---
-- ### 安装微软`dotnet 7.0`运行库
+- ### 安装微软`.NET 7.0`运行时
 地址：https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0
 点击`下载.NET运行时`，并安装在需要开服的主机上
 
