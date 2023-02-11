@@ -4,7 +4,7 @@
 首先你需要确保已经下载和安装了LiteLoaderNet
 
 ---
-- ### 先阅读并理解[安装文档](docs/InstallGuide.md)
+- ### 先阅读并理解[安装文档][def]
 ---
 - ### 放置`dotnet 7.0`二进制文件
 地址：https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0
@@ -28,3 +28,5 @@
     - `Ijwhost.dll`放到BDS安装目录的`plugins\lib`文件夹下
     - (临时下载地址：  https://gxh.lanzoum.com/iv8bf0n9ndji)
 - ### 运行
+
+[def]: InstallGuide.md

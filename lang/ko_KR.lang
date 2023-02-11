@@ -1499,3 +1499,6 @@ FloatText.ModuleName=떠 다니는 단어
 FormAPI.ModuleName=양식 UI
 FriendlyDisconnect.ModuleName=연결 프롬프트 최적화를 폐기하십시오
 GiftCode.ModuleName=선물 팩 코드 시스템
+Global.ModuleName=플러그 인 글로벌 구성
+HeightEdit.ModuleName=세계 높이를 수정하십시오
+Helper.ModuleName=확장

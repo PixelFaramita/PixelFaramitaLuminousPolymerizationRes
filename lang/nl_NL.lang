@@ -1492,3 +1492,5 @@ Blacklist.ModuleName=Speler die systeem verbiedt
 ChatEnhancement.ModuleName=Chattenverbetering
 ChatTranslation.ModuleName=Real -Time vertaling
 CloseHandler.ModuleName=Zorg en optimalisatie
+Death.ModuleName=Overlijden
+DynamicMotd.ModuleName=Dynamische MOTD

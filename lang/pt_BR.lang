@@ -1486,3 +1486,4 @@ Warp.Forms.NoPermission.Title=Sem permissão
 WorldLimit.OutOfBorder=--- fronteiras do mundo---
 AttackEcho.ModuleName=Atacar o feedback
 Backup.ModuleName=Backup automático
+BehaviorLog.ModuleName=Log de comportamento

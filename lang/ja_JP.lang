@@ -1503,3 +1503,7 @@ Global.ModuleName=プラグイングローバル構成
 HeightEdit.ModuleName=世界の高さを変更します
 Helper.ModuleName=拡張機能
 Home.ModuleName=ホームシステム
+Hunter.ModuleName=賞金稼ぎ
+ImmuneTimeHelper.ModuleName=怪我 - フリー管理
+JoinLocation.ModuleName=-Service位置で
+KickToolbox.ModuleName=ツールボックスはツールボックスを禁止します

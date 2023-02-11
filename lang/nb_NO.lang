@@ -1496,3 +1496,5 @@ Death.ModuleName=Dødsretur
 DynamicMotd.ModuleName=Dynamic Motd
 FakeMotd.ModuleName=Virtual Motd
 FloatText.ModuleName=Flytende ord
+FormAPI.ModuleName=Form ui
+FriendlyDisconnect.ModuleName=Kast tilkoblingsoppgavens optimalisering

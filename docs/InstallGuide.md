@@ -1,4 +1,7 @@
 ## PixelFaramitaLuminousPolymerization安装教程
+---
+#### 你可能还需要[面板服安装文档][def]
+---
 #### 部分步骤若已经完成请跳过
 ---
 - ### 下载BDS
@@ -54,3 +57,6 @@
     - 上述操作重做一遍
     - ...
         lazy.jpeg
+
+
+[def]: InstallGuideForPanel.md

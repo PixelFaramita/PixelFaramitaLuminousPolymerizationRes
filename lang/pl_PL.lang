@@ -1488,3 +1488,5 @@ AttackEcho.ModuleName=Sprzężenie zwrotne ataku
 Backup.ModuleName=Automatyczna kopia zapasowa
 BehaviorLog.ModuleName=Dziennik zachowania
 BelowName.ModuleName=Rozszerzenie nazwy gracza
+Blacklist.ModuleName=System zakazu graczy
+ChatEnhancement.ModuleName=Rozszerzenie czatu

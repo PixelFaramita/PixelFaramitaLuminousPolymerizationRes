@@ -1487,3 +1487,4 @@ WorldLimit.OutOfBorder=--- fronteiras do mundo---
 AttackEcho.ModuleName=Atacar o feedback
 Backup.ModuleName=Backup automático
 BehaviorLog.ModuleName=Log de comportamento
+BelowName.ModuleName=Expansão do nome do jogador
