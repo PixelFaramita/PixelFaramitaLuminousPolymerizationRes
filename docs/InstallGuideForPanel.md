@@ -19,7 +19,7 @@
     ></table>
   - 不论是基于wine还是windows的面板，你需要的都是`Windows`行`二进制文件`列的`x64`文件
   - 下载到的是个zip文件
-  - 到BDS安装目录的`plugins\lib`文件夹下，创建一个叫的`dotnet`文件夹，将zip所有文件解压到此文件夹，也就是说`plugins\lib\managed\dotnet`文件夹下应该有`dotnet.exe`和`shared`文件夹
+  - 到BDS安装目录的`plugins\lib`文件夹下，创建一个叫`managed`的文件夹，进去再创建一个叫`dotnet`文件夹，将zip所有文件解压到此文件夹，也就是说`plugins\lib\managed\dotnet`文件夹下应该有`dotnet.exe`和`shared`文件夹
 - ### 安装LLNETPreLoader
     - 下载LLNETPreLoader.dll到BDS安装目录的`plugins\LiteLoader`文件夹下
     - 打开`plugins\preload.conf`，添加一行`plugins\LiteLoader\LLNETPreLoader.dll`
