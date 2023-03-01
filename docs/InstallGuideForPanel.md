@@ -23,6 +23,11 @@
 - ### 安装LLNETPreLoader
     - 下载`LLNETPreLoader-x.x.x.zip`并解压到BDS安装目录的`plugins`文件夹下
     - (临时下载地址：  https://gxh.lanzoum.com/iRzAF0n9couj)
+- ### 添加PreLoad配置
+    - 找到由LL生成的`plugins\preload.conf` ，添加上一步下载的`LLNETPreLoader.dll`的路径，如
+        ```
+        plugins/LLNETPreLoader.dll
+        ```
 - ### 放置Ijwhost.dll
     - `Ijwhost.dll`放到BDS安装目录的`plugins\lib`文件夹下
     - (临时下载地址：  https://gxh.lanzoum.com/iv8bf0n9ndji)
