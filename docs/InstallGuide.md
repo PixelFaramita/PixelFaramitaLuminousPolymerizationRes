@@ -32,9 +32,7 @@
     ><tr><td>Windows</td><td>Arm64 | <a href="64">x64</a> | x86 | winget 指令</td><td>Arm64 | x64 | x86</td></tr>
     ><tr><td>全部</td><td>dotnet-install scripts</td><td></td></tr>
     ></table>
-  - 不论是基于Wine还是Windows的面板，你需要的都是`Windows`行`二进制文件`列的`x64`文件
-  - 下载到的是个zip文件
-  - 到BDS安装目录的`plugins\lib`文件夹下，创建一个叫`managed`的文件夹，进去再创建一个叫`dotnet`文件夹，将zip所有文件解压到此文件夹，也就是说`plugins\lib\managed\dotnet`文件夹下应该有`dotnet.exe`和`shared`文件夹
+  - 安装运行时即可
 
 ---
 - ### 启动服务器
