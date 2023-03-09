@@ -30,7 +30,7 @@
         ```
 - ### 放置Ijwhost.dll
     - `Ijwhost.dll`放到BDS安装目录的`plugins\lib`文件夹下
-    - (临时下载地址：  https://gxh.lanzoum.com/iv8bf0n9ndji)
+    - (下载地址： LLNET的压缩包内lib文件夹下自带了，放上去就行了)
 - ### 运行
 
 [def]: InstallGuide.md
