@@ -18,9 +18,10 @@ export default {
   },
   computed: {
     html() {
-      return marked(this.markdown, {
+      const raw = this.markdown;
+      return marked(raw, {
         highlight: (code, lang) => {
-          const language = hljs.getLanguage(lang) ? lang : "plaintext";
+          const language = hljs.getLanguage(lang) ? lang : "json";
           const result = hljs.highlight(code, { language }).value;
           //add copy button to code block
           // border
@@ -61,15 +62,15 @@ export default {
   },
   mounted() {
     let mirrors = [
-      "https://raw.githubusercontent.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuide.md",
-      "https://jsd.cdn.zzko.cn/gh/LazuliKao/PixelFaramitaLuminousPolymerizationRes@main/docs/InstallGuide.md",
-      "https://cdn.jsdelivr.net/gh/LazuliKao/PixelFaramitaLuminousPolymerizationRes@main/docs/InstallGuide.md",
-      "https://raw.iqiq.io/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuide.md",
-      "https://raw.fastgit.org/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuide.md",
-      "https://raw.kgithub.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuide.md",
-      "https://raw.sevencdn.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuide.md",
-      "https://raw.githack.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuide.md",
-      "https://github.moeyy.xyz/https://raw.githubusercontent.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuide.md",
+      "https://raw.githubusercontent.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuideForPanel.md",
+      "https://jsd.cdn.zzko.cn/gh/LazuliKao/PixelFaramitaLuminousPolymerizationRes@main/docs/InstallGuideForPanel.md",
+      "https://cdn.jsdelivr.net/gh/LazuliKao/PixelFaramitaLuminousPolymerizationRes@main/docs/InstallGuideForPanel.md",
+      "https://raw.iqiq.io/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuideForPanel.md",
+      "https://raw.fastgit.org/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuideForPanel.md",
+      "https://raw.kgithub.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuideForPanel.md",
+      "https://raw.sevencdn.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuideForPanel.md",
+      "https://raw.githack.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuideForPanel.md",
+      "https://github.moeyy.xyz/https://raw.githubusercontent.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/main/docs/InstallGuideForPanel.md",
     ];
     let i = 0;
     let load = () => {
@@ -77,10 +78,7 @@ export default {
         .then((res) => {
           if (res.ok) {
             res.text().then((text) => {
-              this.markdown = text.replace(
-                /InstallGuideForPanel\.md/g,
-                "install_pannel"
-              );
+              this.markdown = text;
             });
           } else {
             if (i < mirrors.length) {

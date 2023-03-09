@@ -1,55 +1,63 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import { darkTheme } from 'naive-ui'
-import hljs from 'highlight.js/lib/core'
-import json from 'highlight.js/lib/languages/json'
-import javascript from 'highlight.js/lib/languages/javascript'
-import typescript from 'highlight.js/lib/languages/typescript'
-import cpp from 'highlight.js/lib/languages/cpp'
-import csharp from 'highlight.js/lib/languages/csharp'
-import vbnet from 'highlight.js/lib/languages/vbnet'
-import fsharp from 'highlight.js/lib/languages/fsharp'
-hljs.registerLanguage('javascript', javascript)
-hljs.registerLanguage('typescript', typescript)
-hljs.registerLanguage('cpp', cpp)
-hljs.registerLanguage('csharp', csharp)
-hljs.registerLanguage('vb.net', vbnet)
-hljs.registerLanguage('F#', fsharp)
-hljs.registerLanguage('json', json) 
+import { RouterLink, RouterView } from "vue-router";
+import { darkTheme } from "naive-ui";
+import hljs from "highlight.js/lib/core";
+import json from "highlight.js/lib/languages/json";
+import javascript from "highlight.js/lib/languages/javascript";
+import typescript from "highlight.js/lib/languages/typescript";
+import cpp from "highlight.js/lib/languages/cpp";
+import csharp from "highlight.js/lib/languages/csharp";
+import vbnet from "highlight.js/lib/languages/vbnet";
+import fsharp from "highlight.js/lib/languages/fsharp";
+hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage("typescript", typescript);
+hljs.registerLanguage("cpp", cpp);
+hljs.registerLanguage("csharp", csharp);
+hljs.registerLanguage("vb.net", vbnet);
+hljs.registerLanguage("F#", fsharp);
+hljs.registerLanguage("json", json);
 </script>
 <script lang="ts">
-import axios from 'axios'
+import axios from "axios";
 import { useGlobalStore } from "./stores/global";
-import router from './router'
+import router from "./router";
 
 export default {
   data() {
     return {
-      isFormRemote: false
-    }
+      isFormRemote: false,
+    };
   },
   computed: {
     isHome: function (): boolean {
-      return this.$route.name == 'home' || this.$route.name == 'about'
-        || this.$route.name == 'document' || this.$route.name == 'install'
+      return (
+        this.$route.name == "home" ||
+        this.$route.name == "about" ||
+        this.$route.name == "document" ||
+        this.$route.name == "install" ||
+        this.$route.name == "install_pannel"
+      );
     },
     isEditor: function (): boolean {
-      return this.$route.name == 'config' || this.$route.name == 'editor'
-      || this.$route.name == 'save'
-    }
+      return (
+        this.$route.name == "config" ||
+        this.$route.name == "editor" ||
+        this.$route.name == "save"
+      );
+    },
   },
   mounted: function () {
-    axios.post('/api/config/get').then((res) => {
+    axios.post("/api/config/get").then((res) => {
       if (res.status == 200) {
-        this.isFormRemote = true
+        this.isFormRemote = true;
         const store = useGlobalStore();
         store.config = res.data;
         store.isFormRemote = true;
       }
-      router.push({ name: 'config' })
+      router.push({ name: "config" });
     });
-  }
-}
+  },
+};
 </script>
 <template>
   <div class="main">
