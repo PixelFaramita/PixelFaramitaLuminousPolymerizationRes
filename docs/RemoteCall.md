@@ -2908,6 +2908,103 @@
 > </details>
 </details>
 <details>
+<summary><b>FloatText<b></summary>
+
+> <details>
+> <summary><b>Add  - 创建浮空字(给玩家发包)<b></summary>
+>
+>## FloatText::Add
+>### 创建浮空字(给玩家发包)
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| x | float |
+>| y | float |
+>| z | float |
+>| text | string |
+>返回值类型：int;
+> - JavaScript
+>```js
+>/** 创建浮空字(给玩家发包) 返回值类型：int */
+>const FloatText_Add = ll.import("PFLP", "FloatText::Add");
+>let result = FloatText_Add(playerXuid,x,y,z,text);
+>```
+> - C++
+>```C++
+>// 创建浮空字(给玩家发包) 返回值类型：int
+>auto FloatText_Add = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,std::string const& text)>("PFLP", "FloatText::Add");
+>auto result = FloatText_Add(playerXuid,x,y,z,text);
+>```
+> - C#
+>```C#
+>// 创建浮空字(给玩家发包) 返回值类型：int
+>var FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add");
+>var result = FloatText_Add(playerXuid,x,y,z,text);
+>```
+> - Visual Basic .NET
+>```vb
+>' 创建浮空字(给玩家发包) 返回值类型：int
+>Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Integer,String,Single,Single,Single,String)("PFLP", "FloatText::Add")
+>Dim result = FloatText_Add(playerXuid,x,y,z,text)
+>```
+> - F#
+>```F#
+>// 创建浮空字(给玩家发包) 返回值类型：int
+>let FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add")
+>(playerXuid,x,y,z,text)
+>	|>FloatText_Add.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>Remove  - 移除浮空字(给玩家发包)<b></summary>
+>
+>## FloatText::Remove
+>### 移除浮空字(给玩家发包)
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| id | int |
+>无返回值;
+> - JavaScript
+>```js
+>/** 移除浮空字(给玩家发包) */
+>const FloatText_Remove = ll.import("PFLP", "FloatText::Remove");
+>FloatText_Remove(playerXuid,id);
+>```
+> - C++
+>```C++
+>// 移除浮空字(给玩家发包)
+>auto FloatText_Remove = RemoteCall::importAs<void(std::string const& playerXuid,int const& id)>("PFLP", "FloatText::Remove");
+>FloatText_Remove(playerXuid,id);
+>```
+> - C#
+>```C#
+>// 移除浮空字(给玩家发包)
+>var FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove");
+>FloatText_Remove(playerXuid,id);
+>```
+> - Visual Basic .NET
+>```vb
+>' 移除浮空字(给玩家发包)
+>Dim FloatText_Remove = RemoteCallAPI.Import_As(Of String,Integer)("PFLP", "FloatText::Remove")
+>FloatText_Remove(playerXuid,id)
+>```
+> - F#
+>```F#
+>// 移除浮空字(给玩家发包)
+>let FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove")
+>(playerXuid,id)
+>	|>FloatText_Remove.Invoke
+>```
+>
+> </details>
+</details>
+<details>
 <summary><b>Money<b></summary>
 
 > <details>
@@ -3223,6 +3320,10 @@
 >const Lands_GetLandsOwnedByPlayer = ll.import("PFLP", "Lands::GetLandsOwnedByPlayer");
 >/** 取共享给玩家的领地 返回值类型：string */
 >const Lands_GetLandsSharedToPlayer = ll.import("PFLP", "Lands::GetLandsSharedToPlayer");
+>/** 创建浮空字(给玩家发包) 返回值类型：int */
+>const FloatText_Add = ll.import("PFLP", "FloatText::Add");
+>/** 移除浮空字(给玩家发包) */
+>const FloatText_Remove = ll.import("PFLP", "FloatText::Remove");
 >/** 获取玩家(指定玩家名)金钱 返回值类型：long */
 >const Money_Get = ll.import("PFLP", "Money::Get");
 >/** 给玩家(指定玩家名)加钱 */
@@ -3705,6 +3806,22 @@
 >		 */
 >		GetLandsSharedToPlayer(playerXuid) { return (this.Lands_GetLandsSharedToPlayer??=ll.import("PFLP", "Lands::GetLandsSharedToPlayer"))(playerXuid)},
 >	},
+>	FloatText : {
+>		/** 创建浮空字(给玩家发包) 返回值类型：int
+>		 * @param {string} playerXuid
+>		 * @param {number} x
+>		 * @param {number} y
+>		 * @param {number} z
+>		 * @param {string} text
+>		 * @returns {number}
+>		 */
+>		Add(playerXuid,x,y,z,text) { return (this.FloatText_Add??=ll.import("PFLP", "FloatText::Add"))(playerXuid,x,y,z,text)},
+>		/** 移除浮空字(给玩家发包)
+>		 * @param {string} playerXuid
+>		 * @param {number} id
+>		 */
+>		Remove(playerXuid,id) { (this.FloatText_Remove??=ll.import("PFLP", "FloatText::Remove"))(playerXuid,id)},
+>	},
 >	Money : {
 >		/** 获取玩家(指定玩家名)金钱 返回值类型：long
 >		 * @param {string} playerXuid
@@ -3865,6 +3982,10 @@ auto Lands_AddPlayerParmissionGroup = RemoteCall::importAs<bool(std::string cons
 auto Lands_GetLandsOwnedByPlayer = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetLandsOwnedByPlayer");
 // 取共享给玩家的领地 返回值类型：string
 auto Lands_GetLandsSharedToPlayer = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetLandsSharedToPlayer");
+// 创建浮空字(给玩家发包) 返回值类型：int
+auto FloatText_Add = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,std::string const& text)>("PFLP", "FloatText::Add");
+// 移除浮空字(给玩家发包)
+auto FloatText_Remove = RemoteCall::importAs<void(std::string const& playerXuid,int const& id)>("PFLP", "FloatText::Remove");
 // 获取玩家(指定玩家名)金钱 返回值类型：long
 auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
 // 给玩家(指定玩家名)加钱
@@ -4004,6 +4125,10 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer");
 >// 取共享给玩家的领地 返回值类型：string
 >var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer");
+>// 创建浮空字(给玩家发包) 返回值类型：int
+>var FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add");
+>// 移除浮空字(给玩家发包)
+>var FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove");
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
 >// 给玩家(指定玩家名)加钱
@@ -4330,6 +4455,18 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >			return Lands_GetLandsSharedToPlayer_instance.Value(playerXuid);
 >		}
 >	}
+>	public static class FloatText {
+>		private static Lazy<RemoteCallHandler_5<int,string,float,float,float,string>>  FloatText_Add_instance = new(()=> RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add"));
+>		/// <summary> 创建浮空字(给玩家发包) 返回值类型：int </summary>
+>		public static int Add(string playerXuid,float x,float y,float z,string text) {
+>			return FloatText_Add_instance.Value(playerXuid,x,y,z,text);
+>		}
+>		private static Lazy<RemoteCallHandler_void_2<string,int>>  FloatText_Remove_instance = new(()=> RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove"));
+>		/// <summary> 移除浮空字(给玩家发包) </summary>
+>		public static void Remove(string playerXuid,int id) {
+>			FloatText_Remove_instance.Value(playerXuid,id);
+>		}
+>	}
 >	public static class Money {
 >		private static Lazy<RemoteCallHandler_1<long,string>>  Money_Get_instance = new(()=> RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get"));
 >		/// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
@@ -4491,6 +4628,10 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer")
 >' 取共享给玩家的领地 返回值类型：string
 >Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsSharedToPlayer")
+>' 创建浮空字(给玩家发包) 返回值类型：int
+>Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Integer,String,Single,Single,Single,String)("PFLP", "FloatText::Add")
+>' 移除浮空字(给玩家发包)
+>Dim FloatText_Remove = RemoteCallAPI.Import_As(Of String,Integer)("PFLP", "FloatText::Remove")
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
 >' 给玩家(指定玩家名)加钱
@@ -4817,6 +4958,18 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >			Return Lands_GetLandsSharedToPlayer_instance.Value(playerXuid)
 >		End Function
 >	End Class
+>	Public NotInheritable Class FloatText
+>		Private Shared FloatText_Add_instance As Lazy(Of RemoteCallHandler_5(Of Integer,String,Single,Single,Single,String))(Function() RemoteCallAPI.ImportAs(Of Integer,String,Single,Single,Single,String)("PFLP", "FloatText::Add"))
+>		''' <summary> 创建浮空字(给玩家发包) 返回值类型：int </summary>
+>		Public Shared Function Add(playerXuid As String,x As Single,y As Single,z As Single,text As String) As int 
+>			Return FloatText_Add_instance.Value(playerXuid,x,y,z,text)
+>		End Function
+>		Private Shared FloatText_Remove_instance As Lazy(Of RemoteCallHandler_void_2(Of String,Integer))(Function() RemoteCallAPI.Import_As(Of String,Integer)("PFLP", "FloatText::Remove"))
+>		''' <summary> 移除浮空字(给玩家发包) </summary>
+>		Public Shared Sub Remove(playerXuid As String,id As Integer)  
+>			FloatText_Remove_instance.Value(playerXuid,id)
+>		End Sub
+>	End Class
 >	Public NotInheritable Class Money
 >		Private Shared Money_Get_instance As Lazy(Of RemoteCallHandler_1(Of Long,String))(Function() RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get"))
 >		''' <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
@@ -4979,6 +5132,10 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
 >// 取共享给玩家的领地 返回值类型：string
 >let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer")
+>// 创建浮空字(给玩家发包) 返回值类型：int
+>let FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add")
+>// 移除浮空字(给玩家发包)
+>let FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove")
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >// 给玩家(指定玩家名)加钱
@@ -5240,6 +5397,15 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >    /// <summary> 取共享给玩家的领地 返回值类型：string </summary>
 >    let public GetLandsSharedToPlayer(playerXuid:string):string =
 >      Lands_GetLandsSharedToPlayer_instance.Value.Invoke(playerXuid)
+>  module public FloatText =
+>    let private FloatText_Add_instance = lazy RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add")
+>    /// <summary> 创建浮空字(给玩家发包) 返回值类型：int </summary>
+>    let public Add(playerXuid:string)(x:float)(y:float)(z:float)(text:string):int =
+>      FloatText_Add_instance.Value.Invoke(playerXuid,x,y,z,text)
+>    let private FloatText_Remove_instance = lazy RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove")
+>    /// <summary> 移除浮空字(给玩家发包) </summary>
+>    let public Remove(playerXuid:string)(id:int):unit =
+>      FloatText_Remove_instance.Value.Invoke(playerXuid,id)
 >  module public Money =
 >    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
