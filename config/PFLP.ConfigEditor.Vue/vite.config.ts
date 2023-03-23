@@ -1,28 +1,28 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
-import vue from '@vitejs/plugin-vue'
+import { fileURLToPath, URL } from "node:url";
+import { defineConfig } from "vite";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
+import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
       imports: [
-        'vue',
+        "vue",
         {
-          'naive-ui': [
-            'useDialog',
-            'useMessage',
-            'useNotification',
-            'useLoadingBar'
-          ]
-        }
-      ]
+          "naive-ui": [
+            "useDialog",
+            "useMessage",
+            "useNotification",
+            "useLoadingBar",
+          ],
+        },
+      ],
     }),
     Components({
-      resolvers: [NaiveUiResolver()]
-    })
-  ]
-})
+      resolvers: [NaiveUiResolver()],
+    }),
+  ],
+});
