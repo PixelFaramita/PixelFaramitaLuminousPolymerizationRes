@@ -1,6 +1,7 @@
 ## 面板服如何运行此插件？
-#### 如果你是面板服，你可能发现没法安装全局的.NET会导致加载LiteLoader.NET报错，故此文档详细说明了面板服的运行方法
-#### 此过程没有任何技术难度，但是任何一步的操作不正确都可能让插件无法运行
+#### 暂时不建议尝试
+###### 如果你是面板服，你可能发现没法安装全局的.NET会导致加载LiteLoader.NET报错，故此文档详细说明了面板服的运行方法
+###### 此过程没有任何技术难度，但是任何一步的操作不正确都可能让插件无法运行
 首先你需要确保已经下载和安装了LiteLoader.NET
 
 ---
@@ -28,6 +29,9 @@
         ```
         plugins/LLNETPreLoader.dll
         ```
+- ### 放置nethost.dll
+- [地址](https://github.com/LiteLDev-NET/Loader/blob/main/lib/nethost.dll)
+- [地址(直接下载)](https://raw.githubusercontent.com/LiteLDev-NET/Loader/main/lib/nethost.dll)
 - ### 放置Ijwhost.dll
     - `Ijwhost.dll`放到BDS安装目录的`plugins\lib`文件夹下
     - (下载地址： LLNET的压缩包内lib文件夹下自带了，放上去就行了)
