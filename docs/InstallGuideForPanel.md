@@ -32,6 +32,7 @@
 - ### 放置nethost.dll
 - [地址](https://github.com/LiteLDev-NET/Loader/blob/main/lib/nethost.dll)
 - [地址(直接下载)](https://raw.githubusercontent.com/LiteLDev-NET/Loader/main/lib/nethost.dll)
+- 放置到`plugins\lib`目录下
 - ### 放置Ijwhost.dll
     - `Ijwhost.dll`放到BDS安装目录的`plugins\lib`文件夹下
     - (下载地址： LLNET的压缩包内lib文件夹下自带了，放上去就行了)
