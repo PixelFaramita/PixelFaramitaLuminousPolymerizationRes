@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI -kiterjesztés
 Warp.ModuleName=Átviteli pont
 WebConfig.ModuleName=Online konfigurációs eszköz
 WebsocketAPI.ModuleName=Távirányító API
+WebViewConfig.ModuleName=Helyi konfiguráció UI
 WorldLimit.ModuleName=Világhatárok
 Backup.Command.backup=Gyors mentés
 Backup.Message.BackToFolderSuccess=Biztonsági másolat a {0}mappába.

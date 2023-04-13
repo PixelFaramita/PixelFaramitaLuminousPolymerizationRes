@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI拡張機能
 Warp.ModuleName=送信ポイント
 WebConfig.ModuleName=オンライン構成ツール
 WebsocketAPI.ModuleName=リモートコントロールAPI
+WebViewConfig.ModuleName=ローカル構成UI
 WorldLimit.ModuleName=世界国境
 Backup.Command.backup=クイックバックアップ
 Backup.Message.BackToFolderSuccess=フォルダーにバックアップ{0}。

@@ -50,6 +50,7 @@ UIExtensions.ModuleName=Rozšíření UI
 Warp.ModuleName=Přenosový bod
 WebConfig.ModuleName=Online konfigurační nástroj
 WebsocketAPI.ModuleName=API dálkového ovládání
+WebViewConfig.ModuleName=Místní konfigurace uživatelského rozhraní
 WorldLimit.ModuleName=Světová hranice
 Backup.Command.backup=Rychlá záloha
 Backup.Message.BackToFolderSuccess=Zálohování do složky {0}.

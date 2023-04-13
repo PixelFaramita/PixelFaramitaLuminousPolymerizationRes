@@ -50,6 +50,7 @@ UIExtensions.ModuleName=Ui-tillägg
 Warp.ModuleName=Överföringspunkt
 WebConfig.ModuleName=Online -konfigurationsverktyg
 WebsocketAPI.ModuleName=Fjärrkontroll API
+WebViewConfig.ModuleName=Lokal konfiguration UI
 WorldLimit.ModuleName=Världsgräns
 Backup.Command.backup=Snabb backup
 Backup.Message.BackToFolderSuccess=Säkerhetskopiering till mappen {0}.

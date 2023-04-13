@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI扩展
 Warp.ModuleName=传送点
 WebConfig.ModuleName=在线配置工具
 WebsocketAPI.ModuleName=远程控制API
+WebViewConfig.ModuleName=本地置UI
 WorldLimit.ModuleName=世界边界
 Backup.Command.backup=疾备份
 Backup.Message.BackToFolderSuccess=已备份文件夹{0}.

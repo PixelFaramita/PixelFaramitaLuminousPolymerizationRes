@@ -50,6 +50,7 @@ UIExtensions.ModuleName=Επέκταση UI
 Warp.ModuleName=Σημείο τηλεμεταφοράς
 WebConfig.ModuleName=Online εργαλείο διαμόρφωσης
 WebsocketAPI.ModuleName=API τηλεχειριστηρίου
+WebViewConfig.ModuleName=Τοπική διαμόρφωση UI
 WorldLimit.ModuleName=Παγκόσμια σύνορα
 Backup.Command.backup=Ταχεία αντίγραφα ασφαλείας
 Backup.Message.BackToFolderSuccess=Δημιουργία αντιγράφων ασφαλείας στο φάκελο {0}.

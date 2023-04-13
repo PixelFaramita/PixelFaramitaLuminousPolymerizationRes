@@ -50,6 +50,7 @@ UIExtensions.ModuleName=Расширение пользовательского 
 Warp.ModuleName=Точка передачи
 WebConfig.ModuleName=Инструмент онлайн -конфигурации
 WebsocketAPI.ModuleName=API дистанционного управления
+WebViewConfig.ModuleName=Локальная конфигурация пользовательского интерфейса
 WorldLimit.ModuleName=Мировая граница
 Backup.Command.backup=Быстрая резервная копия
 Backup.Message.BackToFolderSuccess=Резервное копирование в папку {0}.

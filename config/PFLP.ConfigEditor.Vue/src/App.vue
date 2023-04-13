@@ -80,14 +80,6 @@ export default {
   </div>
 </template>
 <style scoped>
-div.main {
-  /* fill the whole page */
-  height: 90vh;
-  width: 90vw;
-  display: flex;
-  flex-direction: column;
-}
-
 nav {
   font-size: large;
   /* align to top center */

@@ -50,6 +50,7 @@ UIExtensions.ModuleName=Rozszerzenia interfejsu użytkownika
 Warp.ModuleName=Punkt transmisji
 WebConfig.ModuleName=Narzędzie do konfiguracji online
 WebsocketAPI.ModuleName=Interfejs API zdalnego sterowania
+WebViewConfig.ModuleName=Interfejs konfiguracji lokalnej
 WorldLimit.ModuleName=Granice świata
 Backup.Command.backup=Szybka kopia zapasowa
 Backup.Message.BackToFolderSuccess=Kopia zapasowa do folderu {0}.

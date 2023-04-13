@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI extension
 Warp.ModuleName=Transmission point
 WebConfig.ModuleName=Online configuration tool
 WebsocketAPI.ModuleName=Remote control API
+WebViewConfig.ModuleName=Local configuration UI
 WorldLimit.ModuleName=World borders
 Backup.Command.backup=Quick backup
 Backup.Message.BackToFolderSuccess=Backup to the folder {0}.

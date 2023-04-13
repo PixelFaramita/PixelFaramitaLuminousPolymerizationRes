@@ -50,6 +50,7 @@ UIExtensions.ModuleName=Ekstensi UI
 Warp.ModuleName=Titik teleportasi
 WebConfig.ModuleName=Alat konfigurasi online
 WebsocketAPI.ModuleName=API kendali jarak jauh
+WebViewConfig.ModuleName=UI konfigurasi lokal
 WorldLimit.ModuleName=Perbatasan Dunia
 Backup.Command.backup=Cadangan Cepat
 Backup.Message.BackToFolderSuccess=Cadangan ke folder {0}.
