@@ -27,7 +27,7 @@ const router = createRouter({
     {
       path: "/install",
       name: "install",
-      component: () => import("../views/InstalGuideView.vue"),
+      component: () => import("../views/InstallGuideView.vue"),
     },
     {
       path: "/install_pannel",
