@@ -50,6 +50,7 @@ UIExtensions.ModuleName=Kullanıcı arayüzü uzantıları
 Warp.ModuleName=İletim noktası
 WebConfig.ModuleName=Çevrimiçi Yapılandırma Aracı
 WebsocketAPI.ModuleName=Uzaktan Kumanda API
+WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Yerel yapılandırma kullanıcı arayüzü
 WorldLimit.ModuleName=Dünya sınırı
 Backup.Command.backup=Hızlı yedekleme

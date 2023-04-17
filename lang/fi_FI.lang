@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI -laajennus
 Warp.ModuleName=Lähetyspiste
 WebConfig.ModuleName=Online-määritystyökalu
 WebsocketAPI.ModuleName=Kaukosäätimen sovellusliittymä
+WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Paikallinen kokoonpano UI
 WorldLimit.ModuleName=Maailmanraja
 Backup.Command.backup=Nopea varmuuskopiointi

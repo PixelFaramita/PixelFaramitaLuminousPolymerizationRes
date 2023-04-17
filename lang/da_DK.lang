@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI -udvidelse
 Warp.ModuleName=Transmissionspunkt
 WebConfig.ModuleName=Online konfigurationsværktøj
 WebsocketAPI.ModuleName=Fjernbetjening API
+WebUI.ModuleName=Webby
 WebViewConfig.ModuleName=Lokal konfigurations UI
 WorldLimit.ModuleName=Verdens grænse
 Backup.Command.backup=Hurtig sikkerhedskopi

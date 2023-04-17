@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI -uitbreiding
 Warp.ModuleName=Uitzendpunt
 WebConfig.ModuleName=Online configuratietool
 WebsocketAPI.ModuleName=Afstandsbediening API
+WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Lokale configuratie UI
 WorldLimit.ModuleName=Wereldgrens
 Backup.Command.backup=Snelle back -up

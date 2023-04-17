@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI -Erweiterung
 Warp.ModuleName=Übertragungspunkt
 WebConfig.ModuleName=Online-Konfigurationstool
 WebsocketAPI.ModuleName=API für die Fernsteuerung
+WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Lokale Konfigurations -Benutzeroberfläche
 WorldLimit.ModuleName=Weltgrenze
 Backup.Command.backup=Schnelles Backup

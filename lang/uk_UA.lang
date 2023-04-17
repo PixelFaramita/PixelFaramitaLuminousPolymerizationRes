@@ -50,6 +50,7 @@ UIExtensions.ModuleName=Розширення інтерфейсу користу
 Warp.ModuleName=Точка передачі
 WebConfig.ModuleName=Інтернет -інструмент конфігурації
 WebsocketAPI.ModuleName=API дистанційного керування
+WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Локальний інтерфейс конфігурації
 WorldLimit.ModuleName=Світовий кордон
 Backup.Command.backup=Швидке резервне копіювання

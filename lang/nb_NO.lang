@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI -utvidelse
 Warp.ModuleName=Overføringspunkt
 WebConfig.ModuleName=Online konfigurasjonsverktøy
 WebsocketAPI.ModuleName=Fjernkontroll API
+WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Lokal konfigurasjonsgrensesnitt
 WorldLimit.ModuleName=Verdensgrenser
 Backup.Command.backup=Rask sikkerhetskopi

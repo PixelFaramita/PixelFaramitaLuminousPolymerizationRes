@@ -50,6 +50,7 @@ UIExtensions.ModuleName=UI 확장
 Warp.ModuleName=전송 지점
 WebConfig.ModuleName=온라인 구성 도구
 WebsocketAPI.ModuleName=원격 제어 API
+WebUI.ModuleName=webui
 WebViewConfig.ModuleName=로컬 구성 UI
 WorldLimit.ModuleName=세계 국경
 Backup.Command.backup=빠른 백업

@@ -50,6 +50,7 @@ UIExtensions.ModuleName=Extensão da interface do usuário
 Warp.ModuleName=Ponto de transmissão
 WebConfig.ModuleName=Ferramenta de configuração online
 WebsocketAPI.ModuleName=API de controle remoto
+WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=UI de configuração local
 WorldLimit.ModuleName=Fronteira mundial
 Backup.Command.backup=Backup rápido
