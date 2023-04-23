@@ -8,6 +8,7 @@ Blacklist.ModuleName=Systém zákazu
 ChatEnhancement.ModuleName=Vylepšenie rozhovoru
 ChatTranslation.ModuleName=Skutočný preklad
 CloseHandler.ModuleName=Starostlivosť a optimalizácia
+CommandAPI.ModuleName=Príkazové rozhranie
 Death.ModuleName=Návrat smrti
 DynamicMotd.ModuleName=Dynamický MOTD
 FakeMotd.ModuleName=Virtuálny MOTD

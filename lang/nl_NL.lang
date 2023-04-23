@@ -8,6 +8,7 @@ Blacklist.ModuleName=Speler die systeem verbiedt
 ChatEnhancement.ModuleName=Chatverbetering
 ChatTranslation.ModuleName=Real-time vertaling
 CloseHandler.ModuleName=Zorg en optimalisatie
+CommandAPI.ModuleName=Commando-interface
 Death.ModuleName=Overlijden
 DynamicMotd.ModuleName=Dynamische MOTD
 FakeMotd.ModuleName=Virtuele MOTD

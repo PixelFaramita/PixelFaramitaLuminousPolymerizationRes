@@ -8,6 +8,7 @@ Blacklist.ModuleName=Oyuncu Banning Sistemi
 ChatEnhancement.ModuleName=Sohbet Geliştirme
 ChatTranslation.ModuleName=Gerçek -Zaman Çeviri
 CloseHandler.ModuleName=Bakım ve Optimizasyon
+CommandAPI.ModuleName=Komut arayüzü
 Death.ModuleName=Ölüm geri dönüyor
 DynamicMotd.ModuleName=Dinamik Motd
 FakeMotd.ModuleName=Sanal MOTD

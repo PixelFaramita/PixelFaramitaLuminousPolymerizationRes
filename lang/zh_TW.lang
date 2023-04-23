@@ -8,6 +8,7 @@ Blacklist.ModuleName=玩家封禁系統
 ChatEnhancement.ModuleName=聊天增強
 ChatTranslation.ModuleName=實時翻譯
 CloseHandler.ModuleName=關服優化
+CommandAPI.ModuleName=命令介面
 Death.ModuleName=死亡返回
 DynamicMotd.ModuleName=動態Motd
 FakeMotd.ModuleName=虛擬Motd

@@ -8,6 +8,7 @@ Blacklist.ModuleName=Pelaajan kieltäminen järjestelmä
 ChatEnhancement.ModuleName=Chat -parannus
 ChatTranslation.ModuleName=Real -Time -käännös
 CloseHandler.ModuleName=Hoito ja optimointi
+CommandAPI.ModuleName=Komentoliittymä
 Death.ModuleName=Kuoleman paluu
 DynamicMotd.ModuleName=Dynaaminen MOTD
 FakeMotd.ModuleName=Virtuaalinen MOTD

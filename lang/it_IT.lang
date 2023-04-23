@@ -8,6 +8,7 @@ Blacklist.ModuleName=Sistema di divieto del giocatore
 ChatEnhancement.ModuleName=Miglioramento della chat
 ChatTranslation.ModuleName=Traduzione reale -tempo
 CloseHandler.ModuleName=Cura e ottimizzazione
+CommandAPI.ModuleName=Interfaccia di comando
 Death.ModuleName=Ritorno di morte
 DynamicMotd.ModuleName=MOTD dinamico
 FakeMotd.ModuleName=MOTD virtuale

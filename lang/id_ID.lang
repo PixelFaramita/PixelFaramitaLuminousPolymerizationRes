@@ -8,6 +8,7 @@ Blacklist.ModuleName=Sistem larangan pemain
 ChatEnhancement.ModuleName=Peningkatan obrolan
 ChatTranslation.ModuleName=Terjemahan real-time
 CloseHandler.ModuleName=Perawatan dan Optimalisasi
+CommandAPI.ModuleName=Antarmuka perintah
 Death.ModuleName=Kembalinya Kematian
 DynamicMotd.ModuleName=Motd dinamis
 FakeMotd.ModuleName=Virtual Motd

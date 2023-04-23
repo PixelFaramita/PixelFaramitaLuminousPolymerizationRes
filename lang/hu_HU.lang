@@ -8,6 +8,7 @@ Blacklist.ModuleName=Játékos tiltási rendszer
 ChatEnhancement.ModuleName=Csevegés javítása
 ChatTranslation.ModuleName=Valódi idő fordítás
 CloseHandler.ModuleName=Gondoskodás és optimalizálás
+CommandAPI.ModuleName=Parancsfelület
 Death.ModuleName=Halálos visszatérés
 DynamicMotd.ModuleName=Dinamikus motd
 FakeMotd.ModuleName=Virtuális motd
