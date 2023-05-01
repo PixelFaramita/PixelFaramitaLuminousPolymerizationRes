@@ -165,6 +165,53 @@
 > </details>
 </details>
 <details>
+<summary><b>Tpa<b></summary>
+
+> <details>
+> <summary><b>GetTemp  - 获取指定玩家的Tpa缓存（JSON字符串）<b></summary>
+>
+>## Tpa::GetTemp
+>### 获取指定玩家的Tpa缓存（JSON字符串）
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>返回值类型：string;
+> - JavaScript
+>```js
+>/** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string */
+>const Tpa_GetTemp = ll.import("PFLP", "Tpa::GetTemp");
+>let result = Tpa_GetTemp(playerXuid);
+>```
+> - C++
+>```C++
+>// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
+>auto Tpa_GetTemp = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Tpa::GetTemp");
+>auto result = Tpa_GetTemp(playerXuid);
+>```
+> - C#
+>```C#
+>// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
+>var Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp");
+>var result = Tpa_GetTemp(playerXuid);
+>```
+> - Visual Basic .NET
+>```vb
+>' 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
+>Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Tpa::GetTemp")
+>Dim result = Tpa_GetTemp(playerXuid)
+>```
+> - F#
+>```F#
+>// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
+>let Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp")
+>playerXuid
+>	|>Tpa_GetTemp.Invoke
+>	|>ignore
+>```
+>
+> </details>
+</details>
+<details>
 <summary><b>Format<b></summary>
 
 > <details>
@@ -3208,6 +3255,8 @@
 >const General_GetConfig = ll.import("PFLP", "General::GetConfig");
 >/** 重新加载所有功能的配置文件 */
 >const General_Reload = ll.import("PFLP", "General::Reload");
+>/** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string */
+>const Tpa_GetTemp = ll.import("PFLP", "Tpa::GetTemp");
 >/** 获取变量 返回值类型：string */
 >const Format_GetVariableString = ll.import("PFLP", "Format::GetVariableString");
 >/** 获取变量，但是强制返回int类型 返回值类型：int */
@@ -3352,6 +3401,13 @@
 >		/** 重新加载所有功能的配置文件
 >		 */
 >		Reload() { (this.General_Reload??=ll.import("PFLP", "General::Reload"))()},
+>	},
+>	Tpa : {
+>		/** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
+>		 * @param {string} playerXuid
+>		 * @returns {string}
+>		 */
+>		GetTemp(playerXuid) { return (this.Tpa_GetTemp??=ll.import("PFLP", "Tpa::GetTemp"))(playerXuid)},
 >	},
 >	Format : {
 >		/** 获取变量 返回值类型：string
@@ -3870,6 +3926,8 @@ auto General_SetConfig = RemoteCall::importAs<bool(std::string const& jsonStr)>(
 auto General_GetConfig = RemoteCall::importAs<std::string()>("PFLP", "General::GetConfig");
 // 重新加载所有功能的配置文件
 auto General_Reload = RemoteCall::importAs<void()>("PFLP", "General::Reload");
+// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
+auto Tpa_GetTemp = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Tpa::GetTemp");
 // 获取变量 返回值类型：string
 auto Format_GetVariableString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& name,std::string const& format)>("PFLP", "Format::GetVariableString");
 // 获取变量，但是强制返回int类型 返回值类型：int
@@ -4013,6 +4071,8 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >var General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig");
 >// 重新加载所有功能的配置文件
 >var General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload");
+>// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
+>var Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp");
 >// 获取变量 返回值类型：string
 >var Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString");
 >// 获取变量，但是强制返回int类型 返回值类型：int
@@ -4161,6 +4221,13 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >		/// <summary> 重新加载所有功能的配置文件 </summary>
 >		public static void Reload() {
 >			General_Reload_instance.Value();
+>		}
+>	}
+>	public static class Tpa {
+>		private static Lazy<RemoteCallHandler_1<string,string>>  Tpa_GetTemp_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp"));
+>		/// <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
+>		public static string GetTemp(string playerXuid) {
+>			return Tpa_GetTemp_instance.Value(playerXuid);
 >		}
 >	}
 >	public static class Format {
@@ -4516,6 +4583,8 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >Dim General_GetConfig = RemoteCallAPI.ImportAs(Of String)("PFLP", "General::GetConfig")
 >' 重新加载所有功能的配置文件
 >Dim General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+>' 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
+>Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Tpa::GetTemp")
 >' 获取变量 返回值类型：string
 >Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString")
 >' 获取变量，但是强制返回int类型 返回值类型：int
@@ -4665,6 +4734,13 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >		Public Shared Sub Reload()  
 >			General_Reload_instance.Value()
 >		End Sub
+>	End Class
+>	Public NotInheritable Class Tpa
+>		Private Shared Tpa_GetTemp_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Tpa::GetTemp"))
+>		''' <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
+>		Public Shared Function GetTemp(playerXuid As String) As string 
+>			Return Tpa_GetTemp_instance.Value(playerXuid)
+>		End Function
 >	End Class
 >	Public NotInheritable Class Format
 >		Private Shared Format_GetVariableString_instance As Lazy(Of RemoteCallHandler_3(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString"))
@@ -5020,6 +5096,8 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >let General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig")
 >// 重新加载所有功能的配置文件
 >let General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+>// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
+>let Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp")
 >// 获取变量 返回值类型：string
 >let Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
 >// 获取变量，但是强制返回int类型 返回值类型：int
@@ -5167,6 +5245,11 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >    /// <summary> 重新加载所有功能的配置文件 </summary>
 >    let public Reload():unit =
 >      General_Reload_instance.Value.Invoke()
+>  module public Tpa =
+>    let private Tpa_GetTemp_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp")
+>    /// <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
+>    let public GetTemp(playerXuid:string):string =
+>      Tpa_GetTemp_instance.Value.Invoke(playerXuid)
 >  module public Format =
 >    let private Format_GetVariableString_instance = lazy RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
 >    /// <summary> 获取变量 返回值类型：string </summary>
