@@ -20,6 +20,7 @@ export default defineConfig({
           ],
         },
       ],
+      dts: "src/auto-imports.d.ts",
     }),
     Components({
       resolvers: [NaiveUiResolver()],

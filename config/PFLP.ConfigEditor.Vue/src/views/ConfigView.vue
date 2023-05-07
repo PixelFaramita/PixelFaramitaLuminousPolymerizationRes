@@ -5,7 +5,7 @@
         <global-config />
       </n-tab-pane>
       <n-tab-pane name="main" tab="基础功能">
-        <n-tabs animated :type="tabTypeByDocWidth" default-value="global">
+        <n-tabs animated :type="tabTypeByDocWidth" default-value="shop">
           <n-tab-pane name="shop" tab="经济">
             <econmic-config />
           </n-tab-pane>
@@ -24,12 +24,9 @@
         </n-tabs>
       </n-tab-pane>
       <n-tab-pane name="ext" tab="扩展功能">
-        <n-tabs animated :type="tabTypeByDocWidth" default-value="global">
+        <n-tabs animated :type="tabTypeByDocWidth" default-value="pic">
           <n-tab-pane name="pic" tab="地图画">
             <picture-loader-config />
-          </n-tab-pane>
-          <n-tab-pane name="ws" tab="远控">
-            <websocket-config />
           </n-tab-pane>
           <n-tab-pane name="next" tab="杂项">
             <next-config />
@@ -39,8 +36,21 @@
           </n-tab-pane>
         </n-tabs>
       </n-tab-pane>
+      <n-tab-pane name="web" tab="远程控制">
+        <n-tabs animated :type="tabTypeByDocWidth" default-value="ws">
+          <n-tab-pane name="ws" tab="ws接口">
+            <websocket-config />
+          </n-tab-pane>
+          <n-tab-pane name="webui" tab="测试">
+            <webui-config />
+          </n-tab-pane>
+          <n-tab-pane name="webcfg" tab="测试">
+            <webcfg-config />
+          </n-tab-pane>
+        </n-tabs>
+      </n-tab-pane>
       <n-tab-pane name="log" tab="日志备份">
-        <n-tabs animated :type="tabTypeByDocWidth" default-value="global">
+        <n-tabs animated :type="tabTypeByDocWidth" default-value="next">
           <n-tab-pane name="next" tab="行为日志">
             <behavior-log-config />
           </n-tab-pane>
