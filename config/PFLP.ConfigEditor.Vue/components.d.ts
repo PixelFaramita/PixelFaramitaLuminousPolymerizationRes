@@ -28,6 +28,7 @@ declare module '@vue/runtime-core' {
     NH3: typeof import('naive-ui')['NH3']
     NH4: typeof import('naive-ui')['NH4']
     NH5: typeof import('naive-ui')['NH5']
+    NH6: typeof import('naive-ui')['NH6']
     NIcon: typeof import('naive-ui')['NIcon']
     NInput: typeof import('naive-ui')['NInput']
     NInputNumber: typeof import('naive-ui')['NInputNumber']
@@ -50,7 +51,9 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TeleportConfig: typeof import('./src/components/TeleportConfig.vue')['default']
+    WebcfgConfig: typeof import('./src/components/WebcfgConfig.vue')['default']
     WebsocketConfig: typeof import('./src/components/WebsocketConfig.vue')['default']
+    WebUIConfig: typeof import('./src/components/WebUIConfig.vue')['default']
     WorldLimitConfig: typeof import('./src/components/WorldLimitConfig.vue')['default']
     WorldLimitItem: typeof import('./src/components/WorldLimitItem.vue')['default']
   }

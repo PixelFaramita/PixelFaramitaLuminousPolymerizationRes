@@ -37,14 +37,14 @@
         </n-tabs>
       </n-tab-pane>
       <n-tab-pane name="web" tab="远程控制">
-        <n-tabs animated :type="tabTypeByDocWidth" default-value="ws">
+        <n-tabs animated :type="tabTypeByDocWidth" default-value="webui">
           <n-tab-pane name="ws" tab="ws接口">
             <websocket-config />
           </n-tab-pane>
-          <n-tab-pane name="webui" tab="测试">
-            <webui-config />
+          <n-tab-pane name="webui" tab="网页UI">
+            <WebUIConfig />
           </n-tab-pane>
-          <n-tab-pane name="webcfg" tab="测试">
+          <n-tab-pane name="webcfg" tab="网页配置">
             <webcfg-config />
           </n-tab-pane>
         </n-tabs>

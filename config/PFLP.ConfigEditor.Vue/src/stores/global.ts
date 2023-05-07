@@ -4,6 +4,8 @@ export const useGlobalStore = defineStore("global", () => {
   const defaultVal = {
     ConsoleLanguage: "zh_CN",
     ParticlesGraphics_WithParticlesResourcePack: true,
+    PackManager_EncryptResourcePacks: true,
+    WebViewConfig_ConsoleCommand: "pfc",
     Global_AsyncTeleportWaitTime: 2500,
     FormAPI_CountPerPage: 5,
     MoneyAPI_Settings: {
@@ -70,6 +72,7 @@ export const useGlobalStore = defineStore("global", () => {
       ModuleEnabled: true,
       EnableTeleport: true,
       EnableEnclosureFly: true,
+      OpBuffTimeSeconds: 60,
       Enabled2D: true,
       Price2D: 100.0,
       RecyclePrice2D: 95.0,
@@ -183,9 +186,9 @@ export const useGlobalStore = defineStore("global", () => {
       EnableLevelName: true,
       LevelName: "Bedrock Level",
       EditRedstoneTPS: true,
-      OverworldRedstoneTPS: 250,
-      NetherRedstoneTPS: 250,
-      TheEndRedstoneTPS: 250,
+      OverworldRedstoneTPS: 250.0,
+      NetherRedstoneTPS: 250.0,
+      TheEndRedstoneTPS: 250.0,
     },
     KickToolbox: {
       ModuleEnabled: true,
@@ -199,15 +202,16 @@ export const useGlobalStore = defineStore("global", () => {
     Death: {
       ModuleEnabled: true,
       DeathHistoryCount: 5,
-      OnDeathEchoInfo: true,
       DeathCmdTeleport: true,
       DeathCmdTeleportInvulnerable: 6000,
+      OnDeathEchoInfo: true,
     },
     ChatTranslation: {
       ModuleEnabled: true,
     },
     ChatEnhancement: {
       ModuleEnabled: true,
+      DisableSelectorOnTell: true,
       Format:
         "§g[§r§7%date:HH：mm：ss% §d%world%§r§g]§b%os%§e|%ping%ms§e|§r§a<§r%nickname%§r%fakename%§r§a>§r%start%%msg%§r%end%",
     },
@@ -331,6 +335,42 @@ export const useGlobalStore = defineStore("global", () => {
       ModuleEnabled: true,
       DisplayDistance: 20,
       StaticPictureResendDurationSeconds: 30.0,
+    },
+    WebUI: {
+      ModuleEnabled: true,
+      Hostname: "0.0.0.0",
+      Port: 8800,
+      UseSSL: false,
+      SSLCertificatePath: "",
+      SSLCertificatePassword: "",
+      Debug: false,
+      Functions: {
+        LogQuery: true,
+        OnlineChat: true,
+        PreserveChatHistory: true,
+      },
+    },
+    WebConfig: {
+      ModuleEnabled: true,
+      Hostname: "0.0.0.0",
+      Port: 8080,
+      UseSSL: false,
+      SSLCertificatePath: "",
+      SSLCertificatePassword: "",
+      Debug: true,
+    },
+    PlayerSettings: {
+      ModuleEnabled: true,
+      ShowInSettings: true,
+    },
+    MoneyExtensions: {
+      ModuleEnabled: true,
+    },
+    Blacklist: {
+      ModuleEnabled: true,
+    },
+    LLAntiCheatPunish: {
+      ModuleEnabled: true,
     },
   };
   const config = ref(defaultVal);
