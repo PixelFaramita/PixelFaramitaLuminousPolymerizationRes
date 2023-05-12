@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Modifier le paramètre de l'image
 PictureLoader.Forms.MainFormExit=Quitter l'éditeur d'image\n(Ne pas enregistrer)
 PictureLoader.Forms.MainFormReload=Re-télécharger toutes les photos
 PictureLoader.Forms.MainFormSave=Enregistrer l'image actuelle de l'éditeur\nEt quittez l'éditeur d'images
+PictureLoader.Forms.MainFormSource=Modifier l'adresse source
 PictureLoader.Forms.RemoveImplFailed=Rupture de suppression
 PictureLoader.Forms.RemoveImplSuccess.Back=retour
 PictureLoader.Forms.RemoveImplSuccess.Cancel=fermeture

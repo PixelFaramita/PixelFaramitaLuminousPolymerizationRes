@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Променете параметъра н�
 PictureLoader.Forms.MainFormExit=Излезте от редактора на картини\n(не запазвай)
 PictureLoader.Forms.MainFormReload=Повторете всички снимки
 PictureLoader.Forms.MainFormSave=Записва редактираната в момента картина\nи излезте от редактора на картини
+PictureLoader.Forms.MainFormSource=Промяна на адреса на източника
 PictureLoader.Forms.RemoveImplFailed=Повреда на отстраняването
 PictureLoader.Forms.RemoveImplSuccess.Back=връщане
 PictureLoader.Forms.RemoveImplSuccess.Cancel=закриване

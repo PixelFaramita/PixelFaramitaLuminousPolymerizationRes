@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=修改图片参数
 PictureLoader.Forms.MainFormExit=退出图片编辑器\n（不保存）
 PictureLoader.Forms.MainFormReload=重新加载所有图片
 PictureLoader.Forms.MainFormSave=保存当前编辑的图片\n并退出图片编辑器
+PictureLoader.Forms.MainFormSource=修改源地址
 PictureLoader.Forms.RemoveImplFailed=移除失败
 PictureLoader.Forms.RemoveImplSuccess.Back=返回
 PictureLoader.Forms.RemoveImplSuccess.Cancel=关闭

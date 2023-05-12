@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Rediger billedparameteren
 PictureLoader.Forms.MainFormExit=Afslut billedredigeringsprogrammet\n(Gem ikke)
 PictureLoader.Forms.MainFormReload=Genbelast alle billeder
 PictureLoader.Forms.MainFormSave=Gem det aktuelle editorbillede\nOg afslut billedredaktøren
+PictureLoader.Forms.MainFormSource=Ændre kildeadresse
 PictureLoader.Forms.RemoveImplFailed=Fjernelse mislykkedes
 PictureLoader.Forms.RemoveImplSuccess.Back=Vend tilbage
 PictureLoader.Forms.RemoveImplSuccess.Cancel=lukning

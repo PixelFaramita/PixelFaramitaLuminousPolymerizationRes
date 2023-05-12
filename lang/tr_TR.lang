@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Resim parametresini değiştir
 PictureLoader.Forms.MainFormExit=Resim Editöründen Çıkın\n(kaydetme)
 PictureLoader.Forms.MainFormReload=Tüm resimleri yeniden yükle
 PictureLoader.Forms.MainFormSave=Mevcut Editör resmini kaydedin\nVe resim düzenleyicisinden çıkın
+PictureLoader.Forms.MainFormSource=Kaynak Adresini Değiştir
 PictureLoader.Forms.RemoveImplFailed=Kaldırma hatası
 PictureLoader.Forms.RemoveImplSuccess.Back=geri dönmek
 PictureLoader.Forms.RemoveImplSuccess.Cancel=kapanma

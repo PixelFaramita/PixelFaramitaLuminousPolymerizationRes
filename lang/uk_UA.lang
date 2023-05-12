@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Змініть параметр зобра�
 PictureLoader.Forms.MainFormExit=Вийдіть з редактора малюнків\n(не врятувати)
 PictureLoader.Forms.MainFormReload=Повторно завантажте всі фотографії
 PictureLoader.Forms.MainFormSave=Збережіть поточне зображення редактора\nІ вийдіть з редактора малюнків
+PictureLoader.Forms.MainFormSource=Змініть адресу джерела
 PictureLoader.Forms.RemoveImplFailed=Відмова видалення
 PictureLoader.Forms.RemoveImplSuccess.Back=повернення
 PictureLoader.Forms.RemoveImplSuccess.Cancel=закриття

@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Upravte parametr obrázku
 PictureLoader.Forms.MainFormExit=Ukončete editor obrázku\n(neukládat)
 PictureLoader.Forms.MainFormReload=Znovu založte všechny obrázky
 PictureLoader.Forms.MainFormSave=Uložte obrázek aktuálního editoru\nA ukončit editor obrázku
+PictureLoader.Forms.MainFormSource=Upravit zdrojovou adresu
 PictureLoader.Forms.RemoveImplFailed=Selhání odstranění
 PictureLoader.Forms.RemoveImplSuccess.Back=vrátit se
 PictureLoader.Forms.RemoveImplSuccess.Cancel=uzavření

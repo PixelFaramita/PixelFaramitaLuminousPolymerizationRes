@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Modifica il parametro dell'immagine
 PictureLoader.Forms.MainFormExit=Esci dall'editor di immagini\n(non salvare)
 PictureLoader.Forms.MainFormReload=RE -LOUT TUTTE le immagini
 PictureLoader.Forms.MainFormSave=Salva l'immagine dell'editor corrente\nEd esci dall'editor di immagini
+PictureLoader.Forms.MainFormSource=Modifica l'indirizzo di origine
 PictureLoader.Forms.RemoveImplFailed=Fallimento di rimozione
 PictureLoader.Forms.RemoveImplSuccess.Back=ritorno
 PictureLoader.Forms.RemoveImplSuccess.Cancel=chiusura

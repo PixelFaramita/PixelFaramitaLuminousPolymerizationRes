@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Ändern Sie den Bildparameter
 PictureLoader.Forms.MainFormExit=Beenden Sie den Bildredakteur\n(Rette nicht)
 PictureLoader.Forms.MainFormReload=Laden Sie alle Bilder neu.
 PictureLoader.Forms.MainFormSave=Speichern Sie das aktuelle Editor -Bild\nUnd beenden Sie den Bildredakteur
+PictureLoader.Forms.MainFormSource=Quellenadresse ändern
 PictureLoader.Forms.RemoveImplFailed=Entfernungsfehler
 PictureLoader.Forms.RemoveImplSuccess.Back=zurückkehren
 PictureLoader.Forms.RemoveImplSuccess.Cancel=Schließung

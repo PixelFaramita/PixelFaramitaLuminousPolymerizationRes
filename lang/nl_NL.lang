@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Wijzig de beeldparameter
 PictureLoader.Forms.MainFormExit=Verlaat de foto -editor\n(Sla niet op)
 PictureLoader.Forms.MainFormReload=RE -LOAD ALLE FOTO'S
 PictureLoader.Forms.MainFormSave=Bewaar de huidige editorfoto\nEn verlaat de foto -editor
+PictureLoader.Forms.MainFormSource=Bronadres wijzigen
 PictureLoader.Forms.RemoveImplFailed=Verwijderingsfout
 PictureLoader.Forms.RemoveImplSuccess.Back=opbrengst
 PictureLoader.Forms.RemoveImplSuccess.Cancel=sluiting

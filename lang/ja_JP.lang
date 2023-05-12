@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=画像パラメーターを変更します
 PictureLoader.Forms.MainFormExit=画像エディターを終了します\n（保存しない）
 PictureLoader.Forms.MainFormReload=すべての写真を再ロードします
 PictureLoader.Forms.MainFormSave=現在編集中の画像を保存します\nをクリックし、画像エディタを終了します
+PictureLoader.Forms.MainFormSource=ソースアドレスを変更します
 PictureLoader.Forms.RemoveImplFailed=除去障害
 PictureLoader.Forms.RemoveImplSuccess.Back=戻る
 PictureLoader.Forms.RemoveImplSuccess.Cancel=閉鎖

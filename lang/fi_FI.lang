@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Muokkaa kuvaparametria
 PictureLoader.Forms.MainFormExit=Poistu kuvaeditorista\n(Älä säästä)
 PictureLoader.Forms.MainFormReload=Lataa kaikki kuvat
 PictureLoader.Forms.MainFormSave=Tallenna nykyinen editorikuva\nJa poistu kuvaeditorista
+PictureLoader.Forms.MainFormSource=Muokkaa lähteen osoitetta
 PictureLoader.Forms.RemoveImplFailed=Poistovaurio
 PictureLoader.Forms.RemoveImplSuccess.Back=palata
 PictureLoader.Forms.RemoveImplSuccess.Cancel=päättäminen

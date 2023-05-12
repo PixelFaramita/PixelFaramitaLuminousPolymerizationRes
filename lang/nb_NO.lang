@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Endre bildeparameteren
 PictureLoader.Forms.MainFormExit=Gå ut av bilderedigereren\n(Ikke lagre)
 PictureLoader.Forms.MainFormReload=Last inn alle bilder på nytt
 PictureLoader.Forms.MainFormSave=Lagre det nåværende redigeringsbildet\nOg gå ut av bilderedigereren
+PictureLoader.Forms.MainFormSource=Endre kildeadresse
 PictureLoader.Forms.RemoveImplFailed=Fjerningssvikt
 PictureLoader.Forms.RemoveImplSuccess.Back=komme tilbake
 PictureLoader.Forms.RemoveImplSuccess.Cancel=Lukking

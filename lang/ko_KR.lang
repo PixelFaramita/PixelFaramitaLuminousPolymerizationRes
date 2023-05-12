@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=그림 매개 변수를 수정하십시오
 PictureLoader.Forms.MainFormExit=사진 편집기를 종료하십시오\n(저장하지 마십시오)
 PictureLoader.Forms.MainFormReload=모든 사진을 다시로드하십시오
 PictureLoader.Forms.MainFormSave=현재 편집기 사진을 저장하십시오\n사진 편집기를 종료하십시오
+PictureLoader.Forms.MainFormSource=소스 주소를 수정하십시오
 PictureLoader.Forms.RemoveImplFailed=제거 실패
 PictureLoader.Forms.RemoveImplSuccess.Back=반품
 PictureLoader.Forms.RemoveImplSuccess.Cancel=폐쇄

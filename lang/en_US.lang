@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Modify the picture parameter
 PictureLoader.Forms.MainFormExit=Exit the image editor\n(Do not save)
 PictureLoader.Forms.MainFormReload=Re -load all pictures
 PictureLoader.Forms.MainFormSave=Save the current editor picture\nAnd exit the picture editor
+PictureLoader.Forms.MainFormSource=Modify source address
 PictureLoader.Forms.RemoveImplFailed=Removal failure
 PictureLoader.Forms.RemoveImplSuccess.Back=return
 PictureLoader.Forms.RemoveImplSuccess.Cancel=closure

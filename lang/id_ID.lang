@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Ubah parameter gambar
 PictureLoader.Forms.MainFormExit=Keluar dari editor gambar\n(jangan simpan)
 PictureLoader.Forms.MainFormReload=Re -muatan semua gambar
 PictureLoader.Forms.MainFormSave=Menyimpan gambar yang saat ini diedit\ndan keluar dari editor gambar
+PictureLoader.Forms.MainFormSource=Memodifikasi alamat sumber
 PictureLoader.Forms.RemoveImplFailed=Kegagalan penghapusan
 PictureLoader.Forms.RemoveImplSuccess.Back=kembali
 PictureLoader.Forms.RemoveImplSuccess.Cancel=penutup

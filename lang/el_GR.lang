@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Τροποποιήστε την παράμ�
 PictureLoader.Forms.MainFormExit=Έξοδος από τον επεξεργαστή εικόνων\n(μην σώσεις)
 PictureLoader.Forms.MainFormReload=Επαναλάβετε όλες τις εικόνες
 PictureLoader.Forms.MainFormSave=Αποθηκεύστε την τρέχουσα εικόνα του επεξεργαστή\nΚαι βγείτε από τον επεξεργαστή εικόνων
+PictureLoader.Forms.MainFormSource=Τροποποιήστε τη διεύθυνση προέλευσης
 PictureLoader.Forms.RemoveImplFailed=Αποτυχία απομάκρυνσης
 PictureLoader.Forms.RemoveImplSuccess.Back=ΕΠΙΣΤΡΟΦΗ
 PictureLoader.Forms.RemoveImplSuccess.Cancel=κλείσιμο

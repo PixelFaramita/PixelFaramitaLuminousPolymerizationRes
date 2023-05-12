@@ -1264,6 +1264,7 @@ PictureLoader.Forms.MainFormEditInfo=Módosítsa a képparamétert
 PictureLoader.Forms.MainFormExit=Lépjen ki a képszerkesztőből\n(Ne mentse el)
 PictureLoader.Forms.MainFormReload=Töltse újra az összes képet
 PictureLoader.Forms.MainFormSave=Mentse el az aktuális szerkesztő képet\nÉs lépjen ki a képszerkesztőből
+PictureLoader.Forms.MainFormSource=Módosítsa a forráscímet
 PictureLoader.Forms.RemoveImplFailed=Eltávolítási meghibásodás
 PictureLoader.Forms.RemoveImplSuccess.Back=Visszatérés
 PictureLoader.Forms.RemoveImplSuccess.Cancel=bezárás
