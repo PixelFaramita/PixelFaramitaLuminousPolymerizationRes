@@ -8,7 +8,7 @@ export const useGlobalStore = defineStore("global", () => {
     WebViewConfig_ConsoleCommand: "pfc",
     Global_AsyncTeleportWaitTime: 2500,
     FormAPI_CountPerPage: 5,
-    MoneyAPI_Settings: {
+    MoneyApi_Settings: {
       DisplayName: "金钱",
       UseScoreboard: false,
       ScoreboardName: undefined,
