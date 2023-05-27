@@ -595,6 +595,99 @@
 <summary><b>Command<b></summary>
 
 > <details>
+> <summary><b>RenameCommand  - 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)<b></summary>
+>
+>## Command::RenameCommand
+>### 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| cmd | string |
+>| newCmd | string |
+>无返回值;
+> - JavaScript
+>```js
+>/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) */
+>const Command_RenameCommand = ll.import("PFLP", "Command::RenameCommand");
+>Command_RenameCommand(cmd,newCmd);
+>```
+> - C++
+>```C++
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>auto Command_RenameCommand = RemoteCall::importAs<void(std::string const& cmd,std::string const& newCmd)>("PFLP", "Command::RenameCommand");
+>Command_RenameCommand(cmd,newCmd);
+>```
+> - C#
+>```C#
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>var Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand");
+>Command_RenameCommand(cmd,newCmd);
+>```
+> - Visual Basic .NET
+>```vb
+>' 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>Dim Command_RenameCommand = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::RenameCommand")
+>Command_RenameCommand(cmd,newCmd)
+>```
+> - F#
+>```F#
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>let Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
+>(cmd,newCmd)
+>	|>Command_RenameCommand.Invoke
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>ExecuteInternalCommand  - 执行pflp内部命令(无视重命名,执行的是原始命令)<b></summary>
+>
+>## Command::ExecuteInternalCommand
+>### 执行pflp内部命令(无视重命名,执行的是原始命令)
+>|  形参   | 类型  |
+>|  ----  | ----  |
+>| playerXuid | string |
+>| cmd | string |
+>返回值类型：bool;
+> - JavaScript
+>```js
+>/** 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool */
+>const Command_ExecuteInternalCommand = ll.import("PFLP", "Command::ExecuteInternalCommand");
+>let result = Command_ExecuteInternalCommand(playerXuid,cmd);
+>```
+> - C++
+>```C++
+>// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
+>auto Command_ExecuteInternalCommand = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& cmd)>("PFLP", "Command::ExecuteInternalCommand");
+>auto result = Command_ExecuteInternalCommand(playerXuid,cmd);
+>```
+> - C#
+>```C#
+>// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
+>var Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand");
+>var result = Command_ExecuteInternalCommand(playerXuid,cmd);
+>```
+> - Visual Basic .NET
+>```vb
+>' 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
+>Dim Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Command::ExecuteInternalCommand")
+>Dim result = Command_ExecuteInternalCommand(playerXuid,cmd)
+>```
+> - F#
+>```F#
+>// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
+>let Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand")
+>(playerXuid,cmd)
+>	|>Command_ExecuteInternalCommand.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
 > <summary><b>SetCommandDisabled  - 设置命令禁用(可设置提示)<b></summary>
 >
 >## Command::SetCommandDisabled
@@ -2629,9 +2722,9 @@
 >---
 >
 > <details>
-> <summary><b>GetPlayerAllParmissionGroupId  - 取玩家所有权限组ID（返回["id1","id2"...]字符串）<b></summary>
+> <summary><b>GetPlayerAllPermissionGroupId  - 取玩家所有权限组ID（返回["id1","id2"...]字符串）<b></summary>
 >
->## Lands::GetPlayerAllParmissionGroupId
+>## Lands::GetPlayerAllPermissionGroupId
 >### 取玩家所有权限组ID（返回["id1","id2"...]字符串）
 >|  形参   | 类型  |
 >|  ----  | ----  |
@@ -2640,33 +2733,33 @@
 > - JavaScript
 >```js
 >/** 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string */
->const Lands_GetPlayerAllParmissionGroupId = ll.import("PFLP", "Lands::GetPlayerAllParmissionGroupId");
->let result = Lands_GetPlayerAllParmissionGroupId(playerXuid);
+>const Lands_GetPlayerAllPermissionGroupId = ll.import("PFLP", "Lands::GetPlayerAllPermissionGroupId");
+>let result = Lands_GetPlayerAllPermissionGroupId(playerXuid);
 >```
 > - C++
 >```C++
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->auto Lands_GetPlayerAllParmissionGroupId = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetPlayerAllParmissionGroupId");
->auto result = Lands_GetPlayerAllParmissionGroupId(playerXuid);
+>auto Lands_GetPlayerAllPermissionGroupId = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
+>auto result = Lands_GetPlayerAllPermissionGroupId(playerXuid);
 >```
 > - C#
 >```C#
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->var Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId");
->var result = Lands_GetPlayerAllParmissionGroupId(playerXuid);
+>var Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
+>var result = Lands_GetPlayerAllPermissionGroupId(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->Dim Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllParmissionGroupId")
->Dim result = Lands_GetPlayerAllParmissionGroupId(playerXuid)
+>Dim Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllPermissionGroupId")
+>Dim result = Lands_GetPlayerAllPermissionGroupId(playerXuid)
 >```
 > - F#
 >```F#
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->let Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId")
+>let Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >playerXuid
->	|>Lands_GetPlayerAllParmissionGroupId.Invoke
+>	|>Lands_GetPlayerAllPermissionGroupId.Invoke
 >	|>ignore
 >```
 >
@@ -2675,9 +2768,9 @@
 >---
 >
 > <details>
-> <summary><b>GetPlayerParmissionGroup  - 取玩家权限组内容(指定ID)（返回JSON对象字符串）<b></summary>
+> <summary><b>GetPlayerPermissionGroup  - 取玩家权限组内容(指定ID)（返回JSON对象字符串）<b></summary>
 >
->## Lands::GetPlayerParmissionGroup
+>## Lands::GetPlayerPermissionGroup
 >### 取玩家权限组内容(指定ID)（返回JSON对象字符串）
 >|  形参   | 类型  |
 >|  ----  | ----  |
@@ -2687,33 +2780,33 @@
 > - JavaScript
 >```js
 >/** 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string */
->const Lands_GetPlayerParmissionGroup = ll.import("PFLP", "Lands::GetPlayerParmissionGroup");
->let result = Lands_GetPlayerParmissionGroup(playerXuid,permissionGroupId);
+>const Lands_GetPlayerPermissionGroup = ll.import("PFLP", "Lands::GetPlayerPermissionGroup");
+>let result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - C++
 >```C++
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->auto Lands_GetPlayerParmissionGroup = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::GetPlayerParmissionGroup");
->auto result = Lands_GetPlayerParmissionGroup(playerXuid,permissionGroupId);
+>auto Lands_GetPlayerPermissionGroup = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::GetPlayerPermissionGroup");
+>auto result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - C#
 >```C#
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->var Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup");
->var result = Lands_GetPlayerParmissionGroup(playerXuid,permissionGroupId);
+>var Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup");
+>var result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->Dim Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerParmissionGroup")
->Dim result = Lands_GetPlayerParmissionGroup(playerXuid,permissionGroupId)
+>Dim Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerPermissionGroup")
+>Dim result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId)
 >```
 > - F#
 >```F#
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->let Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup")
+>let Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup")
 >(playerXuid,permissionGroupId)
->	|>Lands_GetPlayerParmissionGroup.Invoke
+>	|>Lands_GetPlayerPermissionGroup.Invoke
 >	|>ignore
 >```
 >
@@ -2722,9 +2815,9 @@
 >---
 >
 > <details>
-> <summary><b>DeletePlayerParmissionGroup  - 删玩家权限组(指定ID)<b></summary>
+> <summary><b>DeletePlayerPermissionGroup  - 删玩家权限组(指定ID)<b></summary>
 >
->## Lands::DeletePlayerParmissionGroup
+>## Lands::DeletePlayerPermissionGroup
 >### 删玩家权限组(指定ID)
 >|  形参   | 类型  |
 >|  ----  | ----  |
@@ -2734,33 +2827,33 @@
 > - JavaScript
 >```js
 >/** 删玩家权限组(指定ID) 返回值类型：bool */
->const Lands_DeletePlayerParmissionGroup = ll.import("PFLP", "Lands::DeletePlayerParmissionGroup");
->let result = Lands_DeletePlayerParmissionGroup(playerXuid,permissionGroupId);
+>const Lands_DeletePlayerPermissionGroup = ll.import("PFLP", "Lands::DeletePlayerPermissionGroup");
+>let result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - C++
 >```C++
 >// 删玩家权限组(指定ID) 返回值类型：bool
->auto Lands_DeletePlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::DeletePlayerParmissionGroup");
->auto result = Lands_DeletePlayerParmissionGroup(playerXuid,permissionGroupId);
+>auto Lands_DeletePlayerPermissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::DeletePlayerPermissionGroup");
+>auto result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - C#
 >```C#
 >// 删玩家权限组(指定ID) 返回值类型：bool
->var Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup");
->var result = Lands_DeletePlayerParmissionGroup(playerXuid,permissionGroupId);
+>var Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup");
+>var result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 删玩家权限组(指定ID) 返回值类型：bool
->Dim Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerParmissionGroup")
->Dim result = Lands_DeletePlayerParmissionGroup(playerXuid,permissionGroupId)
+>Dim Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerPermissionGroup")
+>Dim result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId)
 >```
 > - F#
 >```F#
 >// 删玩家权限组(指定ID) 返回值类型：bool
->let Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup")
+>let Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup")
 >(playerXuid,permissionGroupId)
->	|>Lands_DeletePlayerParmissionGroup.Invoke
+>	|>Lands_DeletePlayerPermissionGroup.Invoke
 >	|>ignore
 >```
 >
@@ -2769,9 +2862,9 @@
 >---
 >
 > <details>
-> <summary><b>EditPlayerParmissionGroup  - 修改家权限组内容(指定ID)<b></summary>
+> <summary><b>EditPlayerPermissionGroup  - 修改家权限组内容(指定ID)<b></summary>
 >
->## Lands::EditPlayerParmissionGroup
+>## Lands::EditPlayerPermissionGroup
 >### 修改家权限组内容(指定ID)
 >|  形参   | 类型  |
 >|  ----  | ----  |
@@ -2782,33 +2875,33 @@
 > - JavaScript
 >```js
 >/** 修改家权限组内容(指定ID) 返回值类型：bool */
->const Lands_EditPlayerParmissionGroup = ll.import("PFLP", "Lands::EditPlayerParmissionGroup");
->let result = Lands_EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>const Lands_EditPlayerPermissionGroup = ll.import("PFLP", "Lands::EditPlayerPermissionGroup");
+>let result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - C++
 >```C++
 >// 修改家权限组内容(指定ID) 返回值类型：bool
->auto Lands_EditPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::EditPlayerParmissionGroup");
->auto result = Lands_EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>auto Lands_EditPlayerPermissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::EditPlayerPermissionGroup");
+>auto result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - C#
 >```C#
 >// 修改家权限组内容(指定ID) 返回值类型：bool
->var Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup");
->var result = Lands_EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>var Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup");
+>var result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - Visual Basic .NET
 >```vb
 >' 修改家权限组内容(指定ID) 返回值类型：bool
->Dim Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerParmissionGroup")
->Dim result = Lands_EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString)
+>Dim Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerPermissionGroup")
+>Dim result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString)
 >```
 > - F#
 >```F#
 >// 修改家权限组内容(指定ID) 返回值类型：bool
->let Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup")
+>let Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup")
 >(playerXuid,permissionGroupId,jsonString)
->	|>Lands_EditPlayerParmissionGroup.Invoke
+>	|>Lands_EditPlayerPermissionGroup.Invoke
 >	|>ignore
 >```
 >
@@ -2817,9 +2910,9 @@
 >---
 >
 > <details>
-> <summary><b>AddPlayerParmissionGroup  - 添加权限组<b></summary>
+> <summary><b>AddPlayerPermissionGroup  - 添加权限组<b></summary>
 >
->## Lands::AddPlayerParmissionGroup
+>## Lands::AddPlayerPermissionGroup
 >### 添加权限组
 >|  形参   | 类型  |
 >|  ----  | ----  |
@@ -2830,33 +2923,33 @@
 > - JavaScript
 >```js
 >/** 添加权限组 返回值类型：bool */
->const Lands_AddPlayerParmissionGroup = ll.import("PFLP", "Lands::AddPlayerParmissionGroup");
->let result = Lands_AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>const Lands_AddPlayerPermissionGroup = ll.import("PFLP", "Lands::AddPlayerPermissionGroup");
+>let result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - C++
 >```C++
 >// 添加权限组 返回值类型：bool
->auto Lands_AddPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::AddPlayerParmissionGroup");
->auto result = Lands_AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>auto Lands_AddPlayerPermissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::AddPlayerPermissionGroup");
+>auto result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - C#
 >```C#
 >// 添加权限组 返回值类型：bool
->var Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup");
->var result = Lands_AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString);
+>var Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup");
+>var result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - Visual Basic .NET
 >```vb
 >' 添加权限组 返回值类型：bool
->Dim Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerParmissionGroup")
->Dim result = Lands_AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString)
+>Dim Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerPermissionGroup")
+>Dim result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString)
 >```
 > - F#
 >```F#
 >// 添加权限组 返回值类型：bool
->let Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup")
+>let Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup")
 >(playerXuid,permissionGroupId,jsonString)
->	|>Lands_AddPlayerParmissionGroup.Invoke
+>	|>Lands_AddPlayerPermissionGroup.Invoke
 >	|>ignore
 >```
 >
@@ -3273,6 +3366,10 @@
 >const Format_GetFormatWithPlayerLang = ll.import("PFLP", "Format::GetFormatWithPlayerLang");
 >/** 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string */
 >const Format_GetFormat = ll.import("PFLP", "Format::GetFormat");
+>/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) */
+>const Command_RenameCommand = ll.import("PFLP", "Command::RenameCommand");
+>/** 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool */
+>const Command_ExecuteInternalCommand = ll.import("PFLP", "Command::ExecuteInternalCommand");
 >/** 设置命令禁用(可设置提示) */
 >const Command_SetCommandDisabled = ll.import("PFLP", "Command::SetCommandDisabled");
 >/** 设置命令启用 */
@@ -3356,15 +3453,15 @@
 >/** (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool */
 >const Lands_CheckPlayerHasOpenChestPermission = ll.import("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >/** 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string */
->const Lands_GetPlayerAllParmissionGroupId = ll.import("PFLP", "Lands::GetPlayerAllParmissionGroupId");
+>const Lands_GetPlayerAllPermissionGroupId = ll.import("PFLP", "Lands::GetPlayerAllPermissionGroupId");
 >/** 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string */
->const Lands_GetPlayerParmissionGroup = ll.import("PFLP", "Lands::GetPlayerParmissionGroup");
+>const Lands_GetPlayerPermissionGroup = ll.import("PFLP", "Lands::GetPlayerPermissionGroup");
 >/** 删玩家权限组(指定ID) 返回值类型：bool */
->const Lands_DeletePlayerParmissionGroup = ll.import("PFLP", "Lands::DeletePlayerParmissionGroup");
+>const Lands_DeletePlayerPermissionGroup = ll.import("PFLP", "Lands::DeletePlayerPermissionGroup");
 >/** 修改家权限组内容(指定ID) 返回值类型：bool */
->const Lands_EditPlayerParmissionGroup = ll.import("PFLP", "Lands::EditPlayerParmissionGroup");
+>const Lands_EditPlayerPermissionGroup = ll.import("PFLP", "Lands::EditPlayerPermissionGroup");
 >/** 添加权限组 返回值类型：bool */
->const Lands_AddPlayerParmissionGroup = ll.import("PFLP", "Lands::AddPlayerParmissionGroup");
+>const Lands_AddPlayerPermissionGroup = ll.import("PFLP", "Lands::AddPlayerPermissionGroup");
 >/** 取玩家拥有的领地 返回值类型：string */
 >const Lands_GetLandsOwnedByPlayer = ll.import("PFLP", "Lands::GetLandsOwnedByPlayer");
 >/** 取共享给玩家的领地 返回值类型：string */
@@ -3463,6 +3560,17 @@
 >		GetFormat(id,extra) { return (this.Format_GetFormat??=ll.import("PFLP", "Format::GetFormat"))(id,extra)},
 >	},
 >	Command : {
+>		/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>		 * @param {string} cmd
+>		 * @param {string} newCmd
+>		 */
+>		RenameCommand(cmd,newCmd) { (this.Command_RenameCommand??=ll.import("PFLP", "Command::RenameCommand"))(cmd,newCmd)},
+>		/** 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
+>		 * @param {string} playerXuid
+>		 * @param {string} cmd
+>		 * @returns {boolean}
+>		 */
+>		ExecuteInternalCommand(playerXuid,cmd) { return (this.Command_ExecuteInternalCommand??=ll.import("PFLP", "Command::ExecuteInternalCommand"))(playerXuid,cmd)},
 >		/** 设置命令禁用(可设置提示)
 >		 * @param {string} playerXuid
 >		 * @param {string} cmd
@@ -3824,33 +3932,33 @@
 >		 * @param {string} playerXuid
 >		 * @returns {string}
 >		 */
->		GetPlayerAllParmissionGroupId(playerXuid) { return (this.Lands_GetPlayerAllParmissionGroupId??=ll.import("PFLP", "Lands::GetPlayerAllParmissionGroupId"))(playerXuid)},
+>		GetPlayerAllPermissionGroupId(playerXuid) { return (this.Lands_GetPlayerAllPermissionGroupId??=ll.import("PFLP", "Lands::GetPlayerAllPermissionGroupId"))(playerXuid)},
 >		/** 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
 >		 * @param {string} playerXuid
 >		 * @param {string} permissionGroupId
 >		 * @returns {string}
 >		 */
->		GetPlayerParmissionGroup(playerXuid,permissionGroupId) { return (this.Lands_GetPlayerParmissionGroup??=ll.import("PFLP", "Lands::GetPlayerParmissionGroup"))(playerXuid,permissionGroupId)},
+>		GetPlayerPermissionGroup(playerXuid,permissionGroupId) { return (this.Lands_GetPlayerPermissionGroup??=ll.import("PFLP", "Lands::GetPlayerPermissionGroup"))(playerXuid,permissionGroupId)},
 >		/** 删玩家权限组(指定ID) 返回值类型：bool
 >		 * @param {string} playerXuid
 >		 * @param {string} permissionGroupId
 >		 * @returns {boolean}
 >		 */
->		DeletePlayerParmissionGroup(playerXuid,permissionGroupId) { return (this.Lands_DeletePlayerParmissionGroup??=ll.import("PFLP", "Lands::DeletePlayerParmissionGroup"))(playerXuid,permissionGroupId)},
+>		DeletePlayerPermissionGroup(playerXuid,permissionGroupId) { return (this.Lands_DeletePlayerPermissionGroup??=ll.import("PFLP", "Lands::DeletePlayerPermissionGroup"))(playerXuid,permissionGroupId)},
 >		/** 修改家权限组内容(指定ID) 返回值类型：bool
 >		 * @param {string} playerXuid
 >		 * @param {string} permissionGroupId
 >		 * @param {string} jsonString
 >		 * @returns {boolean}
 >		 */
->		EditPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString) { return (this.Lands_EditPlayerParmissionGroup??=ll.import("PFLP", "Lands::EditPlayerParmissionGroup"))(playerXuid,permissionGroupId,jsonString)},
+>		EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString) { return (this.Lands_EditPlayerPermissionGroup??=ll.import("PFLP", "Lands::EditPlayerPermissionGroup"))(playerXuid,permissionGroupId,jsonString)},
 >		/** 添加权限组 返回值类型：bool
 >		 * @param {string} playerXuid
 >		 * @param {string} permissionGroupId
 >		 * @param {string} jsonString
 >		 * @returns {boolean}
 >		 */
->		AddPlayerParmissionGroup(playerXuid,permissionGroupId,jsonString) { return (this.Lands_AddPlayerParmissionGroup??=ll.import("PFLP", "Lands::AddPlayerParmissionGroup"))(playerXuid,permissionGroupId,jsonString)},
+>		AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString) { return (this.Lands_AddPlayerPermissionGroup??=ll.import("PFLP", "Lands::AddPlayerPermissionGroup"))(playerXuid,permissionGroupId,jsonString)},
 >		/** 取玩家拥有的领地 返回值类型：string
 >		 * @param {string} playerXuid
 >		 * @returns {string}
@@ -3944,6 +4052,10 @@ auto Format_GetFormatWithPlayer = RemoteCall::importAs<std::string(std::string c
 auto Format_GetFormatWithPlayerLang = RemoteCall::importAs<std::string(std::string const& id,std::string const& playerXuid,std::string const& playerLangXuid,std::string const& extra)>("PFLP", "Format::GetFormatWithPlayerLang");
 // 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 auto Format_GetFormat = RemoteCall::importAs<std::string(std::string const& id,std::string const& extra)>("PFLP", "Format::GetFormat");
+// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+auto Command_RenameCommand = RemoteCall::importAs<void(std::string const& cmd,std::string const& newCmd)>("PFLP", "Command::RenameCommand");
+// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
+auto Command_ExecuteInternalCommand = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& cmd)>("PFLP", "Command::ExecuteInternalCommand");
 // 设置命令禁用(可设置提示)
 auto Command_SetCommandDisabled = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& cmd,std::string const& feedback)>("PFLP", "Command::SetCommandDisabled");
 // 设置命令启用
@@ -4027,15 +4139,15 @@ auto Lands_CheckPlayerHasCreateChestPermission = RemoteCall::importAs<bool(int c
 // (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 auto Lands_CheckPlayerHasOpenChestPermission = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 // 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
-auto Lands_GetPlayerAllParmissionGroupId = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetPlayerAllParmissionGroupId");
+auto Lands_GetPlayerAllPermissionGroupId = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
 // 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
-auto Lands_GetPlayerParmissionGroup = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::GetPlayerParmissionGroup");
+auto Lands_GetPlayerPermissionGroup = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::GetPlayerPermissionGroup");
 // 删玩家权限组(指定ID) 返回值类型：bool
-auto Lands_DeletePlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::DeletePlayerParmissionGroup");
+auto Lands_DeletePlayerPermissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::DeletePlayerPermissionGroup");
 // 修改家权限组内容(指定ID) 返回值类型：bool
-auto Lands_EditPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::EditPlayerParmissionGroup");
+auto Lands_EditPlayerPermissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::EditPlayerPermissionGroup");
 // 添加权限组 返回值类型：bool
-auto Lands_AddPlayerParmissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::AddPlayerParmissionGroup");
+auto Lands_AddPlayerPermissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::AddPlayerPermissionGroup");
 // 取玩家拥有的领地 返回值类型：string
 auto Lands_GetLandsOwnedByPlayer = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetLandsOwnedByPlayer");
 // 取共享给玩家的领地 返回值类型：string
@@ -4089,6 +4201,10 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang");
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >var Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat");
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>var Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand");
+>// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
+>var Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand");
 >// 设置命令禁用(可设置提示)
 >var Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled");
 >// 设置命令启用
@@ -4172,15 +4288,15 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->var Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId");
+>var Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->var Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup");
+>var Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup");
 >// 删玩家权限组(指定ID) 返回值类型：bool
->var Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup");
+>var Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup");
 >// 修改家权限组内容(指定ID) 返回值类型：bool
->var Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup");
+>var Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup");
 >// 添加权限组 返回值类型：bool
->var Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup");
+>var Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup");
 >// 取玩家拥有的领地 返回值类型：string
 >var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer");
 >// 取共享给玩家的领地 返回值类型：string
@@ -4273,6 +4389,16 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >		}
 >	}
 >	public static class Command {
+>		private static Lazy<RemoteCallHandler_void_2<string,string>>  Command_RenameCommand_instance = new(()=> RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand"));
+>		/// <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) </summary>
+>		public static void RenameCommand(string cmd,string newCmd) {
+>			Command_RenameCommand_instance.Value(cmd,newCmd);
+>		}
+>		private static Lazy<RemoteCallHandler_2<bool,string,string>>  Command_ExecuteInternalCommand_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand"));
+>		/// <summary> 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool </summary>
+>		public static bool ExecuteInternalCommand(string playerXuid,string cmd) {
+>			return Command_ExecuteInternalCommand_instance.Value(playerXuid,cmd);
+>		}
 >		private static Lazy<RemoteCallHandler_void_3<string,string,string>>  Command_SetCommandDisabled_instance = new(()=> RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled"));
 >		/// <summary> 设置命令禁用(可设置提示) </summary>
 >		public static void SetCommandDisabled(string playerXuid,string cmd,string feedback) {
@@ -4486,30 +4612,30 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >		public static bool CheckPlayerHasOpenChestPermission(int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_CheckPlayerHasOpenChestPermission_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_1<string,string>>  Lands_GetPlayerAllParmissionGroupId_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId"));
+>		private static Lazy<RemoteCallHandler_1<string,string>>  Lands_GetPlayerAllPermissionGroupId_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId"));
 >		/// <summary> 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string </summary>
->		public static string GetPlayerAllParmissionGroupId(string playerXuid) {
->			return Lands_GetPlayerAllParmissionGroupId_instance.Value(playerXuid);
+>		public static string GetPlayerAllPermissionGroupId(string playerXuid) {
+>			return Lands_GetPlayerAllPermissionGroupId_instance.Value(playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_2<string,string,string>>  Lands_GetPlayerParmissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup"));
+>		private static Lazy<RemoteCallHandler_2<string,string,string>>  Lands_GetPlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup"));
 >		/// <summary> 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string </summary>
->		public static string GetPlayerParmissionGroup(string playerXuid,string permissionGroupId) {
->			return Lands_GetPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId);
+>		public static string GetPlayerPermissionGroup(string playerXuid,string permissionGroupId) {
+>			return Lands_GetPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId);
 >		}
->		private static Lazy<RemoteCallHandler_2<bool,string,string>>  Lands_DeletePlayerParmissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup"));
+>		private static Lazy<RemoteCallHandler_2<bool,string,string>>  Lands_DeletePlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup"));
 >		/// <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
->		public static bool DeletePlayerParmissionGroup(string playerXuid,string permissionGroupId) {
->			return Lands_DeletePlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId);
+>		public static bool DeletePlayerPermissionGroup(string playerXuid,string permissionGroupId) {
+>			return Lands_DeletePlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId);
 >		}
->		private static Lazy<RemoteCallHandler_3<bool,string,string,string>>  Lands_EditPlayerParmissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup"));
+>		private static Lazy<RemoteCallHandler_3<bool,string,string,string>>  Lands_EditPlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup"));
 >		/// <summary> 修改家权限组内容(指定ID) 返回值类型：bool </summary>
->		public static bool EditPlayerParmissionGroup(string playerXuid,string permissionGroupId,string jsonString) {
->			return Lands_EditPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString);
+>		public static bool EditPlayerPermissionGroup(string playerXuid,string permissionGroupId,string jsonString) {
+>			return Lands_EditPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString);
 >		}
->		private static Lazy<RemoteCallHandler_3<bool,string,string,string>>  Lands_AddPlayerParmissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup"));
+>		private static Lazy<RemoteCallHandler_3<bool,string,string,string>>  Lands_AddPlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup"));
 >		/// <summary> 添加权限组 返回值类型：bool </summary>
->		public static bool AddPlayerParmissionGroup(string playerXuid,string permissionGroupId,string jsonString) {
->			return Lands_AddPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString);
+>		public static bool AddPlayerPermissionGroup(string playerXuid,string permissionGroupId,string jsonString) {
+>			return Lands_AddPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString);
 >		}
 >		private static Lazy<RemoteCallHandler_1<string,string>>  Lands_GetLandsOwnedByPlayer_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer"));
 >		/// <summary> 取玩家拥有的领地 返回值类型：string </summary>
@@ -4601,6 +4727,10 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang")
 >' 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat")
+>' 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>Dim Command_RenameCommand = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::RenameCommand")
+>' 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
+>Dim Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Command::ExecuteInternalCommand")
 >' 设置命令禁用(可设置提示)
 >Dim Command_SetCommandDisabled = RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled")
 >' 设置命令启用
@@ -4684,15 +4814,15 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >' 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->Dim Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllParmissionGroupId")
+>Dim Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >' 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->Dim Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerParmissionGroup")
+>Dim Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerPermissionGroup")
 >' 删玩家权限组(指定ID) 返回值类型：bool
->Dim Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerParmissionGroup")
+>Dim Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerPermissionGroup")
 >' 修改家权限组内容(指定ID) 返回值类型：bool
->Dim Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerParmissionGroup")
+>Dim Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerPermissionGroup")
 >' 添加权限组 返回值类型：bool
->Dim Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerParmissionGroup")
+>Dim Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerPermissionGroup")
 >' 取玩家拥有的领地 返回值类型：string
 >Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer")
 >' 取共享给玩家的领地 返回值类型：string
@@ -4785,6 +4915,16 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >		End Function
 >	End Class
 >	Public NotInheritable Class Command
+>		Private Shared Command_RenameCommand_instance As Lazy(Of RemoteCallHandler_void_2(Of String,String))(Function() RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::RenameCommand"))
+>		''' <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) </summary>
+>		Public Shared Sub RenameCommand(cmd As String,newCmd As String)  
+>			Command_RenameCommand_instance.Value(cmd,newCmd)
+>		End Sub
+>		Private Shared Command_ExecuteInternalCommand_instance As Lazy(Of RemoteCallHandler_2(Of Boolean,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Command::ExecuteInternalCommand"))
+>		''' <summary> 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool </summary>
+>		Public Shared Function ExecuteInternalCommand(playerXuid As String,cmd As String) As bool 
+>			Return Command_ExecuteInternalCommand_instance.Value(playerXuid,cmd)
+>		End Function
 >		Private Shared Command_SetCommandDisabled_instance As Lazy(Of RemoteCallHandler_void_3(Of String,String,String))(Function() RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled"))
 >		''' <summary> 设置命令禁用(可设置提示) </summary>
 >		Public Shared Sub SetCommandDisabled(playerXuid As String,cmd As String,feedback As String)  
@@ -4998,30 +5138,30 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >		Public Shared Function CheckPlayerHasOpenChestPermission(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckPlayerHasOpenChestPermission_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_GetPlayerAllParmissionGroupId_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllParmissionGroupId"))
+>		Private Shared Lands_GetPlayerAllPermissionGroupId_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllPermissionGroupId"))
 >		''' <summary> 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string </summary>
->		Public Shared Function GetPlayerAllParmissionGroupId(playerXuid As String) As string 
->			Return Lands_GetPlayerAllParmissionGroupId_instance.Value(playerXuid)
+>		Public Shared Function GetPlayerAllPermissionGroupId(playerXuid As String) As string 
+>			Return Lands_GetPlayerAllPermissionGroupId_instance.Value(playerXuid)
 >		End Function
->		Private Shared Lands_GetPlayerParmissionGroup_instance As Lazy(Of RemoteCallHandler_2(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerParmissionGroup"))
+>		Private Shared Lands_GetPlayerPermissionGroup_instance As Lazy(Of RemoteCallHandler_2(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerPermissionGroup"))
 >		''' <summary> 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string </summary>
->		Public Shared Function GetPlayerParmissionGroup(playerXuid As String,permissionGroupId As String) As string 
->			Return Lands_GetPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId)
+>		Public Shared Function GetPlayerPermissionGroup(playerXuid As String,permissionGroupId As String) As string 
+>			Return Lands_GetPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId)
 >		End Function
->		Private Shared Lands_DeletePlayerParmissionGroup_instance As Lazy(Of RemoteCallHandler_2(Of Boolean,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerParmissionGroup"))
+>		Private Shared Lands_DeletePlayerPermissionGroup_instance As Lazy(Of RemoteCallHandler_2(Of Boolean,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerPermissionGroup"))
 >		''' <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
->		Public Shared Function DeletePlayerParmissionGroup(playerXuid As String,permissionGroupId As String) As bool 
->			Return Lands_DeletePlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId)
+>		Public Shared Function DeletePlayerPermissionGroup(playerXuid As String,permissionGroupId As String) As bool 
+>			Return Lands_DeletePlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId)
 >		End Function
->		Private Shared Lands_EditPlayerParmissionGroup_instance As Lazy(Of RemoteCallHandler_3(Of Boolean,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerParmissionGroup"))
+>		Private Shared Lands_EditPlayerPermissionGroup_instance As Lazy(Of RemoteCallHandler_3(Of Boolean,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerPermissionGroup"))
 >		''' <summary> 修改家权限组内容(指定ID) 返回值类型：bool </summary>
->		Public Shared Function EditPlayerParmissionGroup(playerXuid As String,permissionGroupId As String,jsonString As String) As bool 
->			Return Lands_EditPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString)
+>		Public Shared Function EditPlayerPermissionGroup(playerXuid As String,permissionGroupId As String,jsonString As String) As bool 
+>			Return Lands_EditPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString)
 >		End Function
->		Private Shared Lands_AddPlayerParmissionGroup_instance As Lazy(Of RemoteCallHandler_3(Of Boolean,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerParmissionGroup"))
+>		Private Shared Lands_AddPlayerPermissionGroup_instance As Lazy(Of RemoteCallHandler_3(Of Boolean,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerPermissionGroup"))
 >		''' <summary> 添加权限组 返回值类型：bool </summary>
->		Public Shared Function AddPlayerParmissionGroup(playerXuid As String,permissionGroupId As String,jsonString As String) As bool 
->			Return Lands_AddPlayerParmissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString)
+>		Public Shared Function AddPlayerPermissionGroup(playerXuid As String,permissionGroupId As String,jsonString As String) As bool 
+>			Return Lands_AddPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString)
 >		End Function
 >		Private Shared Lands_GetLandsOwnedByPlayer_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer"))
 >		''' <summary> 取玩家拥有的领地 返回值类型：string </summary>
@@ -5114,6 +5254,10 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >let Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>let Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
+>// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
+>let Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand")
 >// 设置命令禁用(可设置提示)
 >let Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
 >// 设置命令启用
@@ -5197,15 +5341,15 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->let Lands_GetPlayerAllParmissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId")
+>let Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->let Lands_GetPlayerParmissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup")
+>let Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup")
 >// 删玩家权限组(指定ID) 返回值类型：bool
->let Lands_DeletePlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup")
+>let Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup")
 >// 修改家权限组内容(指定ID) 返回值类型：bool
->let Lands_EditPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup")
+>let Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup")
 >// 添加权限组 返回值类型：bool
->let Lands_AddPlayerParmissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup")
+>let Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup")
 >// 取玩家拥有的领地 返回值类型：string
 >let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
 >// 取共享给玩家的领地 返回值类型：string
@@ -5284,6 +5428,14 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >    let public GetFormat(id:string)(extra:string):string =
 >      Format_GetFormat_instance.Value.Invoke(id,extra)
 >  module public Command =
+>    let private Command_RenameCommand_instance = lazy RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
+>    /// <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) </summary>
+>    let public RenameCommand(cmd:string)(newCmd:string):unit =
+>      Command_RenameCommand_instance.Value.Invoke(cmd,newCmd)
+>    let private Command_ExecuteInternalCommand_instance = lazy RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand")
+>    /// <summary> 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool </summary>
+>    let public ExecuteInternalCommand(playerXuid:string)(cmd:string):bool =
+>      Command_ExecuteInternalCommand_instance.Value.Invoke(playerXuid,cmd)
 >    let private Command_SetCommandDisabled_instance = lazy RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
 >    /// <summary> 设置命令禁用(可设置提示) </summary>
 >    let public SetCommandDisabled(playerXuid:string)(cmd:string)(feedback:string):unit =
@@ -5452,26 +5604,26 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >    /// <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >    let public CheckPlayerHasOpenChestPermission(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckPlayerHasOpenChestPermission_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
->    let private Lands_GetPlayerAllParmissionGroupId_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllParmissionGroupId")
+>    let private Lands_GetPlayerAllPermissionGroupId_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >    /// <summary> 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string </summary>
->    let public GetPlayerAllParmissionGroupId(playerXuid:string):string =
->      Lands_GetPlayerAllParmissionGroupId_instance.Value.Invoke(playerXuid)
->    let private Lands_GetPlayerParmissionGroup_instance = lazy RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerParmissionGroup")
+>    let public GetPlayerAllPermissionGroupId(playerXuid:string):string =
+>      Lands_GetPlayerAllPermissionGroupId_instance.Value.Invoke(playerXuid)
+>    let private Lands_GetPlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup")
 >    /// <summary> 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string </summary>
->    let public GetPlayerParmissionGroup(playerXuid:string)(permissionGroupId:string):string =
->      Lands_GetPlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId)
->    let private Lands_DeletePlayerParmissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerParmissionGroup")
+>    let public GetPlayerPermissionGroup(playerXuid:string)(permissionGroupId:string):string =
+>      Lands_GetPlayerPermissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId)
+>    let private Lands_DeletePlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup")
 >    /// <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
->    let public DeletePlayerParmissionGroup(playerXuid:string)(permissionGroupId:string):bool =
->      Lands_DeletePlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId)
->    let private Lands_EditPlayerParmissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerParmissionGroup")
+>    let public DeletePlayerPermissionGroup(playerXuid:string)(permissionGroupId:string):bool =
+>      Lands_DeletePlayerPermissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId)
+>    let private Lands_EditPlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup")
 >    /// <summary> 修改家权限组内容(指定ID) 返回值类型：bool </summary>
->    let public EditPlayerParmissionGroup(playerXuid:string)(permissionGroupId:string)(jsonString:string):bool =
->      Lands_EditPlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId,jsonString)
->    let private Lands_AddPlayerParmissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerParmissionGroup")
+>    let public EditPlayerPermissionGroup(playerXuid:string)(permissionGroupId:string)(jsonString:string):bool =
+>      Lands_EditPlayerPermissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId,jsonString)
+>    let private Lands_AddPlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup")
 >    /// <summary> 添加权限组 返回值类型：bool </summary>
->    let public AddPlayerParmissionGroup(playerXuid:string)(permissionGroupId:string)(jsonString:string):bool =
->      Lands_AddPlayerParmissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId,jsonString)
+>    let public AddPlayerPermissionGroup(playerXuid:string)(permissionGroupId:string)(jsonString:string):bool =
+>      Lands_AddPlayerPermissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId,jsonString)
 >    let private Lands_GetLandsOwnedByPlayer_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
 >    /// <summary> 取玩家拥有的领地 返回值类型：string </summary>
 >    let public GetLandsOwnedByPlayer(playerXuid:string):string =

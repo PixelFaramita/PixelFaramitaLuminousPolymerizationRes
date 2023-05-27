@@ -1760,3 +1760,5 @@ Warp.Forms.NoPermission.Cancel=closure
 Warp.Forms.NoPermission.Content=Unprofessional execution of this operation
 Warp.Forms.NoPermission.Title=No permission
 WorldLimit.OutOfBorder=--- the borders of the world---
+WebViewConfig.Command.Complete=Configuration
+WebViewConfig.Command.Launch=starting program

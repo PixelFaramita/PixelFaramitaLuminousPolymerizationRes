@@ -1760,3 +1760,7 @@ Warp.Forms.NoPermission.Cancel=κλείσιμο
 Warp.Forms.NoPermission.Content=Αντιεπαγγελματική εκτέλεση αυτής της λειτουργίας
 Warp.Forms.NoPermission.Title=Χωρίς άδεια
 WorldLimit.OutOfBorder=--- τα σύνορα του κόσμου---
+WebViewConfig.Command.Complete=Διαμόρφωση
+WebViewConfig.Command.Launch=πρόγραμμα εκκίνησης
+WebViewConfig.Command.Main=Διαμόρφωση προσθήκης
+WebViewConfig.Command.MainInvoke=Άνοιγμα του παραθύρου ρύθμισης παραμέτρων της προσθήκης
