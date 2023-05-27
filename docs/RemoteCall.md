@@ -595,10 +595,10 @@
 <summary><b>Command<b></summary>
 
 > <details>
-> <summary><b>RenameCommand  - 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)<b></summary>
+> <summary><b>RenameCommand  - 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)<b></summary>
 >
 >## Command::RenameCommand
->### 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>### 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >|  形参   | 类型  |
 >|  ----  | ----  |
 >| cmd | string |
@@ -606,31 +606,31 @@
 >无返回值;
 > - JavaScript
 >```js
->/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) */
+>/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令) */
 >const Command_RenameCommand = ll.import("PFLP", "Command::RenameCommand");
 >Command_RenameCommand(cmd,newCmd);
 >```
 > - C++
 >```C++
->// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >auto Command_RenameCommand = RemoteCall::importAs<void(std::string const& cmd,std::string const& newCmd)>("PFLP", "Command::RenameCommand");
 >Command_RenameCommand(cmd,newCmd);
 >```
 > - C#
 >```C#
->// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >var Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand");
 >Command_RenameCommand(cmd,newCmd);
 >```
 > - Visual Basic .NET
 >```vb
->' 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>' 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >Dim Command_RenameCommand = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::RenameCommand")
 >Command_RenameCommand(cmd,newCmd)
 >```
 > - F#
 >```F#
->// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >let Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
 >(cmd,newCmd)
 >	|>Command_RenameCommand.Invoke
@@ -688,10 +688,10 @@
 >---
 >
 > <details>
-> <summary><b>SetCommandDisabled  - 设置命令禁用(可设置提示)<b></summary>
+> <summary><b>SetCommandDisabled  - 设置命令禁用(可设置提示)(支持任意命令)<b></summary>
 >
 >## Command::SetCommandDisabled
->### 设置命令禁用(可设置提示)
+>### 设置命令禁用(可设置提示)(支持任意命令)
 >|  形参   | 类型  |
 >|  ----  | ----  |
 >| playerXuid | string |
@@ -700,31 +700,31 @@
 >无返回值;
 > - JavaScript
 >```js
->/** 设置命令禁用(可设置提示) */
+>/** 设置命令禁用(可设置提示)(支持任意命令) */
 >const Command_SetCommandDisabled = ll.import("PFLP", "Command::SetCommandDisabled");
 >Command_SetCommandDisabled(playerXuid,cmd,feedback);
 >```
 > - C++
 >```C++
->// 设置命令禁用(可设置提示)
+>// 设置命令禁用(可设置提示)(支持任意命令)
 >auto Command_SetCommandDisabled = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& cmd,std::string const& feedback)>("PFLP", "Command::SetCommandDisabled");
 >Command_SetCommandDisabled(playerXuid,cmd,feedback);
 >```
 > - C#
 >```C#
->// 设置命令禁用(可设置提示)
+>// 设置命令禁用(可设置提示)(支持任意命令)
 >var Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled");
 >Command_SetCommandDisabled(playerXuid,cmd,feedback);
 >```
 > - Visual Basic .NET
 >```vb
->' 设置命令禁用(可设置提示)
+>' 设置命令禁用(可设置提示)(支持任意命令)
 >Dim Command_SetCommandDisabled = RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled")
 >Command_SetCommandDisabled(playerXuid,cmd,feedback)
 >```
 > - F#
 >```F#
->// 设置命令禁用(可设置提示)
+>// 设置命令禁用(可设置提示)(支持任意命令)
 >let Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
 >(playerXuid,cmd,feedback)
 >	|>Command_SetCommandDisabled.Invoke
@@ -3366,11 +3366,11 @@
 >const Format_GetFormatWithPlayerLang = ll.import("PFLP", "Format::GetFormatWithPlayerLang");
 >/** 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string */
 >const Format_GetFormat = ll.import("PFLP", "Format::GetFormat");
->/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) */
+>/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令) */
 >const Command_RenameCommand = ll.import("PFLP", "Command::RenameCommand");
 >/** 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool */
 >const Command_ExecuteInternalCommand = ll.import("PFLP", "Command::ExecuteInternalCommand");
->/** 设置命令禁用(可设置提示) */
+>/** 设置命令禁用(可设置提示)(支持任意命令) */
 >const Command_SetCommandDisabled = ll.import("PFLP", "Command::SetCommandDisabled");
 >/** 设置命令启用 */
 >const Command_SetCommandEnabled = ll.import("PFLP", "Command::SetCommandEnabled");
@@ -3560,7 +3560,7 @@
 >		GetFormat(id,extra) { return (this.Format_GetFormat??=ll.import("PFLP", "Format::GetFormat"))(id,extra)},
 >	},
 >	Command : {
->		/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>		/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >		 * @param {string} cmd
 >		 * @param {string} newCmd
 >		 */
@@ -3571,7 +3571,7 @@
 >		 * @returns {boolean}
 >		 */
 >		ExecuteInternalCommand(playerXuid,cmd) { return (this.Command_ExecuteInternalCommand??=ll.import("PFLP", "Command::ExecuteInternalCommand"))(playerXuid,cmd)},
->		/** 设置命令禁用(可设置提示)
+>		/** 设置命令禁用(可设置提示)(支持任意命令)
 >		 * @param {string} playerXuid
 >		 * @param {string} cmd
 >		 * @param {string} feedback
@@ -4052,11 +4052,11 @@ auto Format_GetFormatWithPlayer = RemoteCall::importAs<std::string(std::string c
 auto Format_GetFormatWithPlayerLang = RemoteCall::importAs<std::string(std::string const& id,std::string const& playerXuid,std::string const& playerLangXuid,std::string const& extra)>("PFLP", "Format::GetFormatWithPlayerLang");
 // 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 auto Format_GetFormat = RemoteCall::importAs<std::string(std::string const& id,std::string const& extra)>("PFLP", "Format::GetFormat");
-// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 auto Command_RenameCommand = RemoteCall::importAs<void(std::string const& cmd,std::string const& newCmd)>("PFLP", "Command::RenameCommand");
 // 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
 auto Command_ExecuteInternalCommand = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& cmd)>("PFLP", "Command::ExecuteInternalCommand");
-// 设置命令禁用(可设置提示)
+// 设置命令禁用(可设置提示)(支持任意命令)
 auto Command_SetCommandDisabled = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& cmd,std::string const& feedback)>("PFLP", "Command::SetCommandDisabled");
 // 设置命令启用
 auto Command_SetCommandEnabled = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& cmd)>("PFLP", "Command::SetCommandEnabled");
@@ -4201,11 +4201,11 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang");
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >var Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat");
->// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >var Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand");
 >// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
 >var Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand");
->// 设置命令禁用(可设置提示)
+>// 设置命令禁用(可设置提示)(支持任意命令)
 >var Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled");
 >// 设置命令启用
 >var Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled");
@@ -4390,7 +4390,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >	}
 >	public static class Command {
 >		private static Lazy<RemoteCallHandler_void_2<string,string>>  Command_RenameCommand_instance = new(()=> RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand"));
->		/// <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) </summary>
+>		/// <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令) </summary>
 >		public static void RenameCommand(string cmd,string newCmd) {
 >			Command_RenameCommand_instance.Value(cmd,newCmd);
 >		}
@@ -4400,7 +4400,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >			return Command_ExecuteInternalCommand_instance.Value(playerXuid,cmd);
 >		}
 >		private static Lazy<RemoteCallHandler_void_3<string,string,string>>  Command_SetCommandDisabled_instance = new(()=> RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled"));
->		/// <summary> 设置命令禁用(可设置提示) </summary>
+>		/// <summary> 设置命令禁用(可设置提示)(支持任意命令) </summary>
 >		public static void SetCommandDisabled(string playerXuid,string cmd,string feedback) {
 >			Command_SetCommandDisabled_instance.Value(playerXuid,cmd,feedback);
 >		}
@@ -4727,11 +4727,11 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang")
 >' 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat")
->' 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>' 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >Dim Command_RenameCommand = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::RenameCommand")
 >' 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
 >Dim Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Command::ExecuteInternalCommand")
->' 设置命令禁用(可设置提示)
+>' 设置命令禁用(可设置提示)(支持任意命令)
 >Dim Command_SetCommandDisabled = RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled")
 >' 设置命令启用
 >Dim Command_SetCommandEnabled = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::SetCommandEnabled")
@@ -4916,7 +4916,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >	End Class
 >	Public NotInheritable Class Command
 >		Private Shared Command_RenameCommand_instance As Lazy(Of RemoteCallHandler_void_2(Of String,String))(Function() RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::RenameCommand"))
->		''' <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) </summary>
+>		''' <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令) </summary>
 >		Public Shared Sub RenameCommand(cmd As String,newCmd As String)  
 >			Command_RenameCommand_instance.Value(cmd,newCmd)
 >		End Sub
@@ -4926,7 +4926,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >			Return Command_ExecuteInternalCommand_instance.Value(playerXuid,cmd)
 >		End Function
 >		Private Shared Command_SetCommandDisabled_instance As Lazy(Of RemoteCallHandler_void_3(Of String,String,String))(Function() RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled"))
->		''' <summary> 设置命令禁用(可设置提示) </summary>
+>		''' <summary> 设置命令禁用(可设置提示)(支持任意命令) </summary>
 >		Public Shared Sub SetCommandDisabled(playerXuid As String,cmd As String,feedback As String)  
 >			Command_SetCommandDisabled_instance.Value(playerXuid,cmd,feedback)
 >		End Sub
@@ -5254,11 +5254,11 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >let Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
->// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)
+>// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >let Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
 >// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
 >let Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand")
->// 设置命令禁用(可设置提示)
+>// 设置命令禁用(可设置提示)(支持任意命令)
 >let Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
 >// 设置命令启用
 >let Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled")
@@ -5429,7 +5429,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >      Format_GetFormat_instance.Value.Invoke(id,extra)
 >  module public Command =
 >    let private Command_RenameCommand_instance = lazy RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
->    /// <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令) </summary>
+>    /// <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令) </summary>
 >    let public RenameCommand(cmd:string)(newCmd:string):unit =
 >      Command_RenameCommand_instance.Value.Invoke(cmd,newCmd)
 >    let private Command_ExecuteInternalCommand_instance = lazy RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand")
@@ -5437,7 +5437,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >    let public ExecuteInternalCommand(playerXuid:string)(cmd:string):bool =
 >      Command_ExecuteInternalCommand_instance.Value.Invoke(playerXuid,cmd)
 >    let private Command_SetCommandDisabled_instance = lazy RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
->    /// <summary> 设置命令禁用(可设置提示) </summary>
+>    /// <summary> 设置命令禁用(可设置提示)(支持任意命令) </summary>
 >    let public SetCommandDisabled(playerXuid:string)(cmd:string)(feedback:string):unit =
 >      Command_SetCommandDisabled_instance.Value.Invoke(playerXuid,cmd,feedback)
 >    let private Command_SetCommandEnabled_instance = lazy RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled")
