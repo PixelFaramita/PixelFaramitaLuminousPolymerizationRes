@@ -338,6 +338,7 @@ export const useGlobalStore = defineStore("global", () => {
     },
     WebUI: {
       ModuleEnabled: true,
+      HtmlTitle: "网页标题",
       Hostname: "0.0.0.0",
       Port: 8800,
       UseSSL: false,
@@ -348,6 +349,7 @@ export const useGlobalStore = defineStore("global", () => {
         LogQuery: true,
         OnlineChat: true,
         PreserveChatHistory: true,
+        OnlineMap: true,
       },
     },
     WebConfig: {

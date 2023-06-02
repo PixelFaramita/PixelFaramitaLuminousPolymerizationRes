@@ -11,6 +11,7 @@
           v-model:value="config.Hostname"
         />
       </n-space>
+      <n-space> 网站标题:<n-input v-model:value="config.HtmlTitle" /> </n-space>
       <n-space>
         端口 :<n-input-number
           :status="verifyPort(config.Port)"
@@ -54,6 +55,12 @@
               size="large"
             />
           </n-space>
+          <n-space>
+            在线地图<n-switch
+              v-model:value="config.Functions.OnlineMap"
+              size="large"
+            />
+          </n-space>
         </div>
       </div>
     </div>
@@ -86,20 +93,6 @@ export default {
   data() {
     return {
       config: store.config.WebUI,
-      //WebUI: {
-      //   ModuleEnabled: true,
-      //   Hostname: "0.0.0.0",
-      //   Port: 8800,
-      //   UseSSL: false,
-      //   SSLCertificatePath: "",
-      //   SSLCertificatePassword: "",
-      //   Debug: false,
-      //   Functions: {
-      //     LogQuery: true,
-      //     OnlineChat: true,
-      //     PreserveChatHistory: true,
-      //   },
-      //},
     };
   },
 };
