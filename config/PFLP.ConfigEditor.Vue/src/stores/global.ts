@@ -374,6 +374,9 @@ export const useGlobalStore = defineStore("global", () => {
     LLAntiCheatPunish: {
       ModuleEnabled: true,
     },
+    MapService: {
+      ModuleEnabled: true,
+    },
   };
   const config = ref(defaultVal);
   const isFormRemote = ref(false);

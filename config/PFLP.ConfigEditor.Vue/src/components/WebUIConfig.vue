@@ -71,6 +71,20 @@
 import { useGlobalStore } from "../stores/global";
 const store = useGlobalStore();
 export default {
+  setup() {
+    const onlineMap = computed({
+      get: () =>
+        store.config.WebUI.Functions.OnlineMap &&
+        store.config.MapService.ModuleEnabled,
+      set: (value) => {
+        store.config.WebUI.Functions.OnlineMap = value;
+        store.config.MapService.ModuleEnabled = value;
+      },
+    });
+    return {
+      onlineMap,
+    };
+  },
   methods: {
     verifyAddress: function (text: string): "success" | "error" | "warning" {
       //address
