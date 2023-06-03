@@ -2,12 +2,17 @@
   <div class="about">
     <n-h2 prefix="bar">PFLP.ConfigEditor.Vue</n-h2>
     <ul dir="auto">
-      <h3 dir="auto">一款专门为PixelFaramitaLuminousPolymerization插件设计的配置工具</h3>
+      <h3 dir="auto">
+        一款专门为PixelFaramitaLuminousPolymerization插件设计的配置工具
+      </h3>
       <h4 dir="auto">配置插件从未如此方便</h4>
       <li>
         <h3 dir="auto">
-          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/tree/main/config/PFLP.ConfigEditor.Vue"
-            rel="nofollow">源码</a>（基于Vue.js + TypeScript）
+          <a
+            href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/tree/main/config/PFLP.ConfigEditor.Vue"
+            rel="nofollow"
+            >源码</a
+          >（基于Vue.js + TypeScript）
         </h3>
       </li>
     </ul>
@@ -17,27 +22,38 @@
       <h4 dir="auto">上次看到有这么基础的插件还在上次</h4>
       <li>
         <h3 dir="auto">
-          <a href="https://gxh.lanzoum.com/b03v3gxbi" rel="nofollow">最新构建｜Lanzou</a> 密码：114514
+          <a href="https://gxh.lanzoum.com/b03v3gxbi" rel="nofollow"
+            >最新构建｜Lanzou</a
+          >
+          密码：114514
         </h3>
       </li>
       <li>
         <h3 dir="auto">
-          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/InstallGuide.md">安装教程｜GitHub</a>
+          <a
+            href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/wiki/InstallGuide.md"
+            >安装教程｜GitHub</a
+          >
         </h3>
       </li>
       <li>
         <h3 dir="auto">
-          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/docs/RemoteCall.md">接口文档｜GitHub</a>
+          <a
+            href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/wiki/RemoteCall.md"
+            >接口文档｜GitHub</a
+          >
         </h3>
       </li>
       <li>
         <h3 dir="auto">
-          <a href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/lang">语言文件｜GitHub</a>
+          <a
+            href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/lang"
+            >语言文件｜GitHub</a
+          >
         </h3>
       </li>
     </ul>
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

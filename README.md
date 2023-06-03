@@ -9,10 +9,10 @@
 
 - ### [最新构建](https://gxh.lanzoum.com/b03v3gxbi)  密码：114514
 
-- ### [安装教程](docs/InstallGuide.md)
+- ### [安装教程](wiki/InstallGuide.md)
 
-- ### [JS扩展和对接](docs/MagicJS.md)
+- ### [JS扩展和对接](wiki/MagicJS.md)
 
-- ### [接口文档](docs/RemoteCall.md)
+- ### [接口文档](wiki/RemoteCall.md)
 
 - ### [语言文件](lang)
