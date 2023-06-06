@@ -3,7 +3,7 @@
 - #### 上次看到有这么基础的插件还在上次
 - ### [MineBBS发布地址](https://www.minebbs.com/resources/5400/)
  
-- ### [使用文档](https://lazulikao.github.io/PixelFaramitaLuminousPolymerizationRes/)
+- ### [使用文档](https://lazulikao.github.io/PFLPDocs/)
 
 - ### [配置工具](https://www.mcpf.live/)
 
