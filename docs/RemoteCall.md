@@ -3479,7 +3479,7 @@
 >---
 ><details><summary>JavaScript imports / 逐个导入</summary>
 >
->``` JavaScript
+>``` js
 >/** 设置全局配置文件（要求JSON字符串） 返回值类型：bool */
 >const General_SetConfig = ll.import("PFLP", "General::SetConfig");
 >/** 获取全局配置文件（JSON字符串） 返回值类型：string */
@@ -3621,7 +3621,7 @@
 ></details>
 ><details><summary>JavaScript object / JS对象 （推荐）</summary>
 >
->``` JavaScript
+>``` js
 >const PFLP = {
 >	General : {
 >		/** 设置全局配置文件（要求JSON字符串） 返回值类型：bool
@@ -4165,7 +4165,7 @@
 <details>
 <summary><b>All Api in C++ / 全部C++接口</b></summary>
 
-``` C++
+``` cpp
 // 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 auto General_SetConfig = RemoteCall::importAs<bool(std::string const& jsonStr)>("PFLP", "General::SetConfig");
 // 获取全局配置文件（JSON字符串） 返回值类型：string
@@ -4312,7 +4312,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >---
 ><details><summary>C# imports / 直接导入</summary>
 >
->``` C#
+>``` cs
 >using RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
@@ -4456,7 +4456,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 ></details>
 ><details><summary>C# class / C#静态类定义（推荐）</summary>
 >
->``` C#
+>``` cs
 >using RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >internal static class PFLP {
