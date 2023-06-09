@@ -33,17 +33,19 @@
 > 滑稽
 
 <details>
-<summary><b>General<b></summary>
+<summary><b>General</b></summary>
 
 > <details>
-> <summary><b>SetConfig  - 设置全局配置文件（要求JSON字符串）<b></summary>
+> <summary><b>SetConfig  - 设置全局配置文件（要求JSON字符串）</b></summary>
 >
 >## General::SetConfig
 >### 设置全局配置文件（要求JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| jsonStr | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>jsonStr</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 设置全局配置文件（要求JSON字符串） 返回值类型：bool */
@@ -51,13 +53,13 @@
 >let result = General_SetConfig(jsonStr);
 >```
 > - C++
->```C++
+>```cpp
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >auto General_SetConfig = RemoteCall::importAs<bool(std::string const& jsonStr)>("PFLP", "General::SetConfig");
 >auto result = General_SetConfig(jsonStr);
 >```
 > - C#
->```C#
+>```csharp
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >var General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig");
 >var result = General_SetConfig(jsonStr);
@@ -69,7 +71,7 @@
 >Dim result = General_SetConfig(jsonStr)
 >```
 > - F#
->```F#
+>```fsharp
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
 >let General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
 >jsonStr
@@ -82,12 +84,15 @@
 >---
 >
 > <details>
-> <summary><b>GetConfig  - 获取全局配置文件（JSON字符串）<b></summary>
+> <summary><b>GetConfig  - 获取全局配置文件（JSON字符串）</b></summary>
 >
 >## General::GetConfig
 >### 获取全局配置文件（JSON字符串）
->无参数;
->返回值类型：string;
+><table><tr><th>无参数;</th></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取全局配置文件（JSON字符串） 返回值类型：string */
@@ -95,13 +100,13 @@
 >let result = General_GetConfig();
 >```
 > - C++
->```C++
+>```cpp
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
 >auto General_GetConfig = RemoteCall::importAs<std::string()>("PFLP", "General::GetConfig");
 >auto result = General_GetConfig();
 >```
 > - C#
->```C#
+>```csharp
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
 >var General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig");
 >var result = General_GetConfig();
@@ -113,7 +118,7 @@
 >Dim result = General_GetConfig()
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
 >let General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig")
 >General_GetConfig()
@@ -125,12 +130,15 @@
 >---
 >
 > <details>
-> <summary><b>Reload  - 重新加载所有功能的配置文件<b></summary>
+> <summary><b>Reload  - 重新加载所有功能的配置文件</b></summary>
 >
 >## General::Reload
 >### 重新加载所有功能的配置文件
->无参数;
->无返回值;
+><table><tr><th>无参数;</th></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 重新加载所有功能的配置文件 */
@@ -138,13 +146,13 @@
 >General_Reload();
 >```
 > - C++
->```C++
+>```cpp
 >// 重新加载所有功能的配置文件
 >auto General_Reload = RemoteCall::importAs<void()>("PFLP", "General::Reload");
 >General_Reload();
 >```
 > - C#
->```C#
+>```csharp
 >// 重新加载所有功能的配置文件
 >var General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload");
 >General_Reload();
@@ -156,7 +164,7 @@
 >General_Reload()
 >```
 > - F#
->```F#
+>```fsharp
 >// 重新加载所有功能的配置文件
 >let General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
 >General_Reload()
@@ -165,17 +173,19 @@
 > </details>
 </details>
 <details>
-<summary><b>Tpa<b></summary>
+<summary><b>Tpa</b></summary>
 
 > <details>
-> <summary><b>GetTemp  - 获取指定玩家的Tpa缓存（JSON字符串）<b></summary>
+> <summary><b>GetTemp  - 获取指定玩家的Tpa缓存（JSON字符串）</b></summary>
 >
 >## Tpa::GetTemp
 >### 获取指定玩家的Tpa缓存（JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string */
@@ -183,13 +193,13 @@
 >let result = Tpa_GetTemp(playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 >auto Tpa_GetTemp = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Tpa::GetTemp");
 >auto result = Tpa_GetTemp(playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 >var Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp");
 >var result = Tpa_GetTemp(playerXuid);
@@ -201,7 +211,7 @@
 >Dim result = Tpa_GetTemp(playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 >let Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp")
 >playerXuid
@@ -212,19 +222,21 @@
 > </details>
 </details>
 <details>
-<summary><b>Format<b></summary>
+<summary><b>Format</b></summary>
 
 > <details>
-> <summary><b>GetVariableString  - 获取变量<b></summary>
+> <summary><b>GetVariableString  - 获取变量</b></summary>
 >
 >## Format::GetVariableString
 >### 获取变量
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| name | string |
->| format | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>name</td><td>string</td></tr>
+><tr><td>format</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取变量 返回值类型：string */
@@ -232,13 +244,13 @@
 >let result = Format_GetVariableString(playerXuid,name,format);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取变量 返回值类型：string
 >auto Format_GetVariableString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& name,std::string const& format)>("PFLP", "Format::GetVariableString");
 >auto result = Format_GetVariableString(playerXuid,name,format);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取变量 返回值类型：string
 >var Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString");
 >var result = Format_GetVariableString(playerXuid,name,format);
@@ -250,7 +262,7 @@
 >Dim result = Format_GetVariableString(playerXuid,name,format)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取变量 返回值类型：string
 >let Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
 >(playerXuid,name,format)
@@ -263,15 +275,17 @@
 >---
 >
 > <details>
-> <summary><b>GetVariableInt  - 获取变量，但是强制返回int类型<b></summary>
+> <summary><b>GetVariableInt  - 获取变量，但是强制返回int类型</b></summary>
 >
 >## Format::GetVariableInt
 >### 获取变量，但是强制返回int类型
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| name | string |
->返回值类型：int;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>name</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：int;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取变量，但是强制返回int类型 返回值类型：int */
@@ -279,13 +293,13 @@
 >let result = Format_GetVariableInt(playerXuid,name);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取变量，但是强制返回int类型 返回值类型：int
 >auto Format_GetVariableInt = RemoteCall::importAs<int(std::string const& playerXuid,std::string const& name)>("PFLP", "Format::GetVariableInt");
 >auto result = Format_GetVariableInt(playerXuid,name);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取变量，但是强制返回int类型 返回值类型：int
 >var Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt");
 >var result = Format_GetVariableInt(playerXuid,name);
@@ -297,7 +311,7 @@
 >Dim result = Format_GetVariableInt(playerXuid,name)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取变量，但是强制返回int类型 返回值类型：int
 >let Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt")
 >(playerXuid,name)
@@ -310,15 +324,17 @@
 >---
 >
 > <details>
-> <summary><b>FormatRawString  - 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat)<b></summary>
+> <summary><b>FormatRawString  - 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat)</b></summary>
 >
 >## Format::FormatRawString
 >### 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat)
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| rawFormat | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>rawFormat</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string */
@@ -326,13 +342,13 @@
 >let result = Format_FormatRawString(playerXuid,rawFormat);
 >```
 > - C++
->```C++
+>```cpp
 >// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 >auto Format_FormatRawString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& rawFormat)>("PFLP", "Format::FormatRawString");
 >auto result = Format_FormatRawString(playerXuid,rawFormat);
 >```
 > - C#
->```C#
+>```csharp
 >// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 >var Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString");
 >var result = Format_FormatRawString(playerXuid,rawFormat);
@@ -344,7 +360,7 @@
 >Dim result = Format_FormatRawString(playerXuid,rawFormat)
 >```
 > - F#
->```F#
+>```fsharp
 >// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 >let Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString")
 >(playerXuid,rawFormat)
@@ -357,15 +373,17 @@
 >---
 >
 > <details>
-> <summary><b>DefineFormat  - 定义格式化内容（返回true为创建成功，false为覆盖）<b></summary>
+> <summary><b>DefineFormat  - 定义格式化内容（返回true为创建成功，false为覆盖）</b></summary>
 >
 >## Format::DefineFormat
 >### 定义格式化内容（返回true为创建成功，false为覆盖）
->|  形参   | 类型  |
->|  ----  | ----  |
->| id | string |
->| rawFormat | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>id</td><td>string</td></tr>
+><tr><td>rawFormat</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool */
@@ -373,13 +391,13 @@
 >let result = Format_DefineFormat(id,rawFormat);
 >```
 > - C++
->```C++
+>```cpp
 >// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
 >auto Format_DefineFormat = RemoteCall::importAs<bool(std::string const& id,std::string const& rawFormat)>("PFLP", "Format::DefineFormat");
 >auto result = Format_DefineFormat(id,rawFormat);
 >```
 > - C#
->```C#
+>```csharp
 >// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
 >var Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat");
 >var result = Format_DefineFormat(id,rawFormat);
@@ -391,7 +409,7 @@
 >Dim result = Format_DefineFormat(id,rawFormat)
 >```
 > - F#
->```F#
+>```fsharp
 >// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
 >let Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat")
 >(id,rawFormat)
@@ -404,14 +422,16 @@
 >---
 >
 > <details>
-> <summary><b>RemoveFormat  - 移除格式化定义（返回true为存在并移除）<b></summary>
+> <summary><b>RemoveFormat  - 移除格式化定义（返回true为存在并移除）</b></summary>
 >
 >## Format::RemoveFormat
 >### 移除格式化定义（返回true为存在并移除）
->|  形参   | 类型  |
->|  ----  | ----  |
->| id | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>id</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 移除格式化定义（返回true为存在并移除） 返回值类型：bool */
@@ -419,13 +439,13 @@
 >let result = Format_RemoveFormat(id);
 >```
 > - C++
->```C++
+>```cpp
 >// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
 >auto Format_RemoveFormat = RemoteCall::importAs<bool(std::string const& id)>("PFLP", "Format::RemoveFormat");
 >auto result = Format_RemoveFormat(id);
 >```
 > - C#
->```C#
+>```csharp
 >// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
 >var Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat");
 >var result = Format_RemoveFormat(id);
@@ -437,7 +457,7 @@
 >Dim result = Format_RemoveFormat(id)
 >```
 > - F#
->```F#
+>```fsharp
 >// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
 >let Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat")
 >id
@@ -450,16 +470,18 @@
 >---
 >
 > <details>
-> <summary><b>GetFormatWithPlayer  - 通过已定义的ID获取格式化内容（性能更优）<b></summary>
+> <summary><b>GetFormatWithPlayer  - 通过已定义的ID获取格式化内容（性能更优）</b></summary>
 >
 >## Format::GetFormatWithPlayer
 >### 通过已定义的ID获取格式化内容（性能更优）
->|  形参   | 类型  |
->|  ----  | ----  |
->| id | string |
->| playerXuid | string |
->| extra | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>id</td><td>string</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>extra</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string */
@@ -467,13 +489,13 @@
 >let result = Format_GetFormatWithPlayer(id,playerXuid,extra);
 >```
 > - C++
->```C++
+>```cpp
 >// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
 >auto Format_GetFormatWithPlayer = RemoteCall::importAs<std::string(std::string const& id,std::string const& playerXuid,std::string const& extra)>("PFLP", "Format::GetFormatWithPlayer");
 >auto result = Format_GetFormatWithPlayer(id,playerXuid,extra);
 >```
 > - C#
->```C#
+>```csharp
 >// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
 >var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer");
 >var result = Format_GetFormatWithPlayer(id,playerXuid,extra);
@@ -485,7 +507,7 @@
 >Dim result = Format_GetFormatWithPlayer(id,playerXuid,extra)
 >```
 > - F#
->```F#
+>```fsharp
 >// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
 >let Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer")
 >(id,playerXuid,extra)
@@ -498,17 +520,19 @@
 >---
 >
 > <details>
-> <summary><b>GetFormatWithPlayerLang  - 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取）<b></summary>
+> <summary><b>GetFormatWithPlayerLang  - 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取）</b></summary>
 >
 >## Format::GetFormatWithPlayerLang
 >### 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取）
->|  形参   | 类型  |
->|  ----  | ----  |
->| id | string |
->| playerXuid | string |
->| playerLangXuid | string |
->| extra | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>id</td><td>string</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>playerLangXuid</td><td>string</td></tr>
+><tr><td>extra</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string */
@@ -516,13 +540,13 @@
 >let result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra);
 >```
 > - C++
->```C++
+>```cpp
 >// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
 >auto Format_GetFormatWithPlayerLang = RemoteCall::importAs<std::string(std::string const& id,std::string const& playerXuid,std::string const& playerLangXuid,std::string const& extra)>("PFLP", "Format::GetFormatWithPlayerLang");
 >auto result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra);
 >```
 > - C#
->```C#
+>```csharp
 >// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
 >var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang");
 >var result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra);
@@ -534,7 +558,7 @@
 >Dim result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra)
 >```
 > - F#
->```F#
+>```fsharp
 >// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
 >let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
 >(id,playerXuid,playerLangXuid,extra)
@@ -547,15 +571,17 @@
 >---
 >
 > <details>
-> <summary><b>GetFormat  - 通过已定义的ID获取格式化内容（不包含玩家上下文）<b></summary>
+> <summary><b>GetFormat  - 通过已定义的ID获取格式化内容（不包含玩家上下文）</b></summary>
 >
 >## Format::GetFormat
 >### 通过已定义的ID获取格式化内容（不包含玩家上下文）
->|  形参   | 类型  |
->|  ----  | ----  |
->| id | string |
->| extra | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>id</td><td>string</td></tr>
+><tr><td>extra</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string */
@@ -563,13 +589,13 @@
 >let result = Format_GetFormat(id,extra);
 >```
 > - C++
->```C++
+>```cpp
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >auto Format_GetFormat = RemoteCall::importAs<std::string(std::string const& id,std::string const& extra)>("PFLP", "Format::GetFormat");
 >auto result = Format_GetFormat(id,extra);
 >```
 > - C#
->```C#
+>```csharp
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >var Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat");
 >var result = Format_GetFormat(id,extra);
@@ -581,7 +607,7 @@
 >Dim result = Format_GetFormat(id,extra)
 >```
 > - F#
->```F#
+>```fsharp
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
 >let Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
 >(id,extra)
@@ -592,18 +618,20 @@
 > </details>
 </details>
 <details>
-<summary><b>Command<b></summary>
+<summary><b>Command</b></summary>
 
 > <details>
-> <summary><b>RenameCommand  - 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)<b></summary>
+> <summary><b>RenameCommand  - 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)</b></summary>
 >
 >## Command::RenameCommand
 >### 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
->|  形参   | 类型  |
->|  ----  | ----  |
->| cmd | string |
->| newCmd | string |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>cmd</td><td>string</td></tr>
+><tr><td>newCmd</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令) */
@@ -611,13 +639,13 @@
 >Command_RenameCommand(cmd,newCmd);
 >```
 > - C++
->```C++
+>```cpp
 >// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >auto Command_RenameCommand = RemoteCall::importAs<void(std::string const& cmd,std::string const& newCmd)>("PFLP", "Command::RenameCommand");
 >Command_RenameCommand(cmd,newCmd);
 >```
 > - C#
->```C#
+>```csharp
 >// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >var Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand");
 >Command_RenameCommand(cmd,newCmd);
@@ -629,7 +657,7 @@
 >Command_RenameCommand(cmd,newCmd)
 >```
 > - F#
->```F#
+>```fsharp
 >// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
 >let Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
 >(cmd,newCmd)
@@ -641,15 +669,17 @@
 >---
 >
 > <details>
-> <summary><b>ExecuteInternalCommand  - 执行pflp内部命令(无视重命名,执行的是原始命令)<b></summary>
+> <summary><b>ExecuteInternalCommand  - 执行pflp内部命令(无视重命名,执行的是原始命令)</b></summary>
 >
 >## Command::ExecuteInternalCommand
 >### 执行pflp内部命令(无视重命名,执行的是原始命令)
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| cmd | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>cmd</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool */
@@ -657,13 +687,13 @@
 >let result = Command_ExecuteInternalCommand(playerXuid,cmd);
 >```
 > - C++
->```C++
+>```cpp
 >// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
 >auto Command_ExecuteInternalCommand = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& cmd)>("PFLP", "Command::ExecuteInternalCommand");
 >auto result = Command_ExecuteInternalCommand(playerXuid,cmd);
 >```
 > - C#
->```C#
+>```csharp
 >// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
 >var Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand");
 >var result = Command_ExecuteInternalCommand(playerXuid,cmd);
@@ -675,7 +705,7 @@
 >Dim result = Command_ExecuteInternalCommand(playerXuid,cmd)
 >```
 > - F#
->```F#
+>```fsharp
 >// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
 >let Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand")
 >(playerXuid,cmd)
@@ -688,16 +718,18 @@
 >---
 >
 > <details>
-> <summary><b>SetCommandDisabled  - 设置命令禁用(可设置提示)(支持任意命令)<b></summary>
+> <summary><b>SetCommandDisabled  - 设置命令禁用(可设置提示)(支持任意命令)</b></summary>
 >
 >## Command::SetCommandDisabled
 >### 设置命令禁用(可设置提示)(支持任意命令)
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| cmd | string |
->| feedback | string |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>cmd</td><td>string</td></tr>
+><tr><td>feedback</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 设置命令禁用(可设置提示)(支持任意命令) */
@@ -705,13 +737,13 @@
 >Command_SetCommandDisabled(playerXuid,cmd,feedback);
 >```
 > - C++
->```C++
+>```cpp
 >// 设置命令禁用(可设置提示)(支持任意命令)
 >auto Command_SetCommandDisabled = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& cmd,std::string const& feedback)>("PFLP", "Command::SetCommandDisabled");
 >Command_SetCommandDisabled(playerXuid,cmd,feedback);
 >```
 > - C#
->```C#
+>```csharp
 >// 设置命令禁用(可设置提示)(支持任意命令)
 >var Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled");
 >Command_SetCommandDisabled(playerXuid,cmd,feedback);
@@ -723,7 +755,7 @@
 >Command_SetCommandDisabled(playerXuid,cmd,feedback)
 >```
 > - F#
->```F#
+>```fsharp
 >// 设置命令禁用(可设置提示)(支持任意命令)
 >let Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
 >(playerXuid,cmd,feedback)
@@ -735,15 +767,17 @@
 >---
 >
 > <details>
-> <summary><b>SetCommandEnabled  - 设置命令启用<b></summary>
+> <summary><b>SetCommandEnabled  - 设置命令启用</b></summary>
 >
 >## Command::SetCommandEnabled
 >### 设置命令启用
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| cmd | string |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>cmd</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 设置命令启用 */
@@ -751,13 +785,13 @@
 >Command_SetCommandEnabled(playerXuid,cmd);
 >```
 > - C++
->```C++
+>```cpp
 >// 设置命令启用
 >auto Command_SetCommandEnabled = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& cmd)>("PFLP", "Command::SetCommandEnabled");
 >Command_SetCommandEnabled(playerXuid,cmd);
 >```
 > - C#
->```C#
+>```csharp
 >// 设置命令启用
 >var Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled");
 >Command_SetCommandEnabled(playerXuid,cmd);
@@ -769,7 +803,7 @@
 >Command_SetCommandEnabled(playerXuid,cmd)
 >```
 > - F#
->```F#
+>```fsharp
 >// 设置命令启用
 >let Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled")
 >(playerXuid,cmd)
@@ -779,19 +813,21 @@
 > </details>
 </details>
 <details>
-<summary><b>Language<b></summary>
+<summary><b>Language</b></summary>
 
 > <details>
-> <summary><b>Translate  - 翻译<b></summary>
+> <summary><b>Translate  - 翻译</b></summary>
 >
 >## Language::Translate
 >### 翻译
->|  形参   | 类型  |
->|  ----  | ----  |
->| fromLanguage | string |
->| toLanguage | string |
->| text | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>fromLanguage</td><td>string</td></tr>
+><tr><td>toLanguage</td><td>string</td></tr>
+><tr><td>text</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 翻译 返回值类型：string */
@@ -799,13 +835,13 @@
 >let result = Language_Translate(fromLanguage,toLanguage,text);
 >```
 > - C++
->```C++
+>```cpp
 >// 翻译 返回值类型：string
 >auto Language_Translate = RemoteCall::importAs<std::string(std::string const& fromLanguage,std::string const& toLanguage,std::string const& text)>("PFLP", "Language::Translate");
 >auto result = Language_Translate(fromLanguage,toLanguage,text);
 >```
 > - C#
->```C#
+>```csharp
 >// 翻译 返回值类型：string
 >var Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate");
 >var result = Language_Translate(fromLanguage,toLanguage,text);
@@ -817,7 +853,7 @@
 >Dim result = Language_Translate(fromLanguage,toLanguage,text)
 >```
 > - F#
->```F#
+>```fsharp
 >// 翻译 返回值类型：string
 >let Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate")
 >(fromLanguage,toLanguage,text)
@@ -828,18 +864,20 @@
 > </details>
 </details>
 <details>
-<summary><b>ChatEx<b></summary>
+<summary><b>ChatEx</b></summary>
 
 > <details>
-> <summary><b>SetNickName  - 设置玩家昵称<b></summary>
+> <summary><b>SetNickName  - 设置玩家昵称</b></summary>
 >
 >## ChatEx::SetNickName
 >### 设置玩家昵称
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| nickName | string |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>nickName</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 设置玩家昵称 */
@@ -847,13 +885,13 @@
 >ChatEx_SetNickName(playerXuid,nickName);
 >```
 > - C++
->```C++
+>```cpp
 >// 设置玩家昵称
 >auto ChatEx_SetNickName = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& nickName)>("PFLP", "ChatEx::SetNickName");
 >ChatEx_SetNickName(playerXuid,nickName);
 >```
 > - C#
->```C#
+>```csharp
 >// 设置玩家昵称
 >var ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName");
 >ChatEx_SetNickName(playerXuid,nickName);
@@ -865,7 +903,7 @@
 >ChatEx_SetNickName(playerXuid,nickName)
 >```
 > - F#
->```F#
+>```fsharp
 >// 设置玩家昵称
 >let ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName")
 >(playerXuid,nickName)
@@ -877,15 +915,17 @@
 >---
 >
 > <details>
-> <summary><b>SetFakeName  - 设置玩家聊天时的名字<b></summary>
+> <summary><b>SetFakeName  - 设置玩家聊天时的名字</b></summary>
 >
 >## ChatEx::SetFakeName
 >### 设置玩家聊天时的名字
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| fakeName | string |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>fakeName</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 设置玩家聊天时的名字 */
@@ -893,13 +933,13 @@
 >ChatEx_SetFakeName(playerXuid,fakeName);
 >```
 > - C++
->```C++
+>```cpp
 >// 设置玩家聊天时的名字
 >auto ChatEx_SetFakeName = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& fakeName)>("PFLP", "ChatEx::SetFakeName");
 >ChatEx_SetFakeName(playerXuid,fakeName);
 >```
 > - C#
->```C#
+>```csharp
 >// 设置玩家聊天时的名字
 >var ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName");
 >ChatEx_SetFakeName(playerXuid,fakeName);
@@ -911,7 +951,7 @@
 >ChatEx_SetFakeName(playerXuid,fakeName)
 >```
 > - F#
->```F#
+>```fsharp
 >// 设置玩家聊天时的名字
 >let ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName")
 >(playerXuid,fakeName)
@@ -923,15 +963,17 @@
 >---
 >
 > <details>
-> <summary><b>SetEnd  - 设置玩家聊天消息后缀<b></summary>
+> <summary><b>SetEnd  - 设置玩家聊天消息后缀</b></summary>
 >
 >## ChatEx::SetEnd
 >### 设置玩家聊天消息后缀
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| endStr | string |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>endStr</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 设置玩家聊天消息后缀 */
@@ -939,13 +981,13 @@
 >ChatEx_SetEnd(playerXuid,endStr);
 >```
 > - C++
->```C++
+>```cpp
 >// 设置玩家聊天消息后缀
 >auto ChatEx_SetEnd = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& endStr)>("PFLP", "ChatEx::SetEnd");
 >ChatEx_SetEnd(playerXuid,endStr);
 >```
 > - C#
->```C#
+>```csharp
 >// 设置玩家聊天消息后缀
 >var ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd");
 >ChatEx_SetEnd(playerXuid,endStr);
@@ -957,7 +999,7 @@
 >ChatEx_SetEnd(playerXuid,endStr)
 >```
 > - F#
->```F#
+>```fsharp
 >// 设置玩家聊天消息后缀
 >let ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd")
 >(playerXuid,endStr)
@@ -969,15 +1011,17 @@
 >---
 >
 > <details>
-> <summary><b>SetStart  - 设置玩家聊天消息前缀<b></summary>
+> <summary><b>SetStart  - 设置玩家聊天消息前缀</b></summary>
 >
 >## ChatEx::SetStart
 >### 设置玩家聊天消息前缀
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| startStr | string |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>startStr</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 设置玩家聊天消息前缀 */
@@ -985,13 +1029,13 @@
 >ChatEx_SetStart(playerXuid,startStr);
 >```
 > - C++
->```C++
+>```cpp
 >// 设置玩家聊天消息前缀
 >auto ChatEx_SetStart = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& startStr)>("PFLP", "ChatEx::SetStart");
 >ChatEx_SetStart(playerXuid,startStr);
 >```
 > - C#
->```C#
+>```csharp
 >// 设置玩家聊天消息前缀
 >var ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart");
 >ChatEx_SetStart(playerXuid,startStr);
@@ -1003,7 +1047,7 @@
 >ChatEx_SetStart(playerXuid,startStr)
 >```
 > - F#
->```F#
+>```fsharp
 >// 设置玩家聊天消息前缀
 >let ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart")
 >(playerXuid,startStr)
@@ -1015,14 +1059,16 @@
 >---
 >
 > <details>
-> <summary><b>GetNickName  - 获取玩家昵称<b></summary>
+> <summary><b>GetNickName  - 获取玩家昵称</b></summary>
 >
 >## ChatEx::GetNickName
 >### 获取玩家昵称
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取玩家昵称 返回值类型：string */
@@ -1030,13 +1076,13 @@
 >let result = ChatEx_GetNickName(playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取玩家昵称 返回值类型：string
 >auto ChatEx_GetNickName = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "ChatEx::GetNickName");
 >auto result = ChatEx_GetNickName(playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取玩家昵称 返回值类型：string
 >var ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName");
 >var result = ChatEx_GetNickName(playerXuid);
@@ -1048,7 +1094,7 @@
 >Dim result = ChatEx_GetNickName(playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取玩家昵称 返回值类型：string
 >let ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName")
 >playerXuid
@@ -1061,14 +1107,16 @@
 >---
 >
 > <details>
-> <summary><b>GetFakeName  - 获取玩家聊天时的名字<b></summary>
+> <summary><b>GetFakeName  - 获取玩家聊天时的名字</b></summary>
 >
 >## ChatEx::GetFakeName
 >### 获取玩家聊天时的名字
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取玩家聊天时的名字 返回值类型：string */
@@ -1076,13 +1124,13 @@
 >let result = ChatEx_GetFakeName(playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取玩家聊天时的名字 返回值类型：string
 >auto ChatEx_GetFakeName = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "ChatEx::GetFakeName");
 >auto result = ChatEx_GetFakeName(playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取玩家聊天时的名字 返回值类型：string
 >var ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName");
 >var result = ChatEx_GetFakeName(playerXuid);
@@ -1094,7 +1142,7 @@
 >Dim result = ChatEx_GetFakeName(playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取玩家聊天时的名字 返回值类型：string
 >let ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName")
 >playerXuid
@@ -1107,14 +1155,16 @@
 >---
 >
 > <details>
-> <summary><b>GetEnd  - 获取玩家聊天消息后缀<b></summary>
+> <summary><b>GetEnd  - 获取玩家聊天消息后缀</b></summary>
 >
 >## ChatEx::GetEnd
 >### 获取玩家聊天消息后缀
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取玩家聊天消息后缀 返回值类型：string */
@@ -1122,13 +1172,13 @@
 >let result = ChatEx_GetEnd(playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取玩家聊天消息后缀 返回值类型：string
 >auto ChatEx_GetEnd = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "ChatEx::GetEnd");
 >auto result = ChatEx_GetEnd(playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取玩家聊天消息后缀 返回值类型：string
 >var ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd");
 >var result = ChatEx_GetEnd(playerXuid);
@@ -1140,7 +1190,7 @@
 >Dim result = ChatEx_GetEnd(playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取玩家聊天消息后缀 返回值类型：string
 >let ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd")
 >playerXuid
@@ -1153,14 +1203,16 @@
 >---
 >
 > <details>
-> <summary><b>GetStart  - 获取玩家聊天消息前缀<b></summary>
+> <summary><b>GetStart  - 获取玩家聊天消息前缀</b></summary>
 >
 >## ChatEx::GetStart
 >### 获取玩家聊天消息前缀
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取玩家聊天消息前缀 返回值类型：string */
@@ -1168,13 +1220,13 @@
 >let result = ChatEx_GetStart(playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取玩家聊天消息前缀 返回值类型：string
 >auto ChatEx_GetStart = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "ChatEx::GetStart");
 >auto result = ChatEx_GetStart(playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取玩家聊天消息前缀 返回值类型：string
 >var ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart");
 >var result = ChatEx_GetStart(playerXuid);
@@ -1186,7 +1238,7 @@
 >Dim result = ChatEx_GetStart(playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取玩家聊天消息前缀 返回值类型：string
 >let ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart")
 >playerXuid
@@ -1197,26 +1249,28 @@
 > </details>
 </details>
 <details>
-<summary><b>ParticlesGraphics<b></summary>
+<summary><b>ParticlesGraphics</b></summary>
 
 > <details>
-> <summary><b>DrawBlock  - 给指定方块描框<b></summary>
+> <summary><b>DrawBlock  - 给指定方块描框</b></summary>
 >
 >## ParticlesGraphics::DrawBlock
 >### 给指定方块描框
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| x | int |
->| y | int |
->| z | int |
->| r | float |
->| g | float |
->| b | float |
->| thickness | float |
->| time | float |
->| alpha | float |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>r</td><td>float</td></tr>
+><tr><td>g</td><td>float</td></tr>
+><tr><td>b</td><td>float</td></tr>
+><tr><td>thickness</td><td>float</td></tr>
+><tr><td>time</td><td>float</td></tr>
+><tr><td>alpha</td><td>float</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 给指定方块描框 */
@@ -1224,13 +1278,13 @@
 >ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 >```
 > - C++
->```C++
+>```cpp
 >// 给指定方块描框
 >auto ParticlesGraphics_DrawBlock = RemoteCall::importAs<void(std::string const& playerXuid,int const& x,int const& y,int const& z,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBlock");
 >ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 >```
 > - C#
->```C#
+>```csharp
 >// 给指定方块描框
 >var ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock");
 >ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
@@ -1242,7 +1296,7 @@
 >ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
 >```
 > - F#
->```F#
+>```fsharp
 >// 给指定方块描框
 >let ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
 >(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
@@ -1254,26 +1308,28 @@
 >---
 >
 > <details>
-> <summary><b>DrawBorder  - 给指定区域描框<b></summary>
+> <summary><b>DrawBorder  - 给指定区域描框</b></summary>
 >
 >## ParticlesGraphics::DrawBorder
 >### 给指定区域描框
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| x1 | int |
->| y1 | int |
->| z1 | int |
->| x2 | int |
->| y2 | int |
->| z2 | int |
->| r | float |
->| g | float |
->| b | float |
->| thickness | float |
->| time | float |
->| alpha | float |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>x1</td><td>int</td></tr>
+><tr><td>y1</td><td>int</td></tr>
+><tr><td>z1</td><td>int</td></tr>
+><tr><td>x2</td><td>int</td></tr>
+><tr><td>y2</td><td>int</td></tr>
+><tr><td>z2</td><td>int</td></tr>
+><tr><td>r</td><td>float</td></tr>
+><tr><td>g</td><td>float</td></tr>
+><tr><td>b</td><td>float</td></tr>
+><tr><td>thickness</td><td>float</td></tr>
+><tr><td>time</td><td>float</td></tr>
+><tr><td>alpha</td><td>float</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 给指定区域描框 */
@@ -1281,13 +1337,13 @@
 >ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >```
 > - C++
->```C++
+>```cpp
 >// 给指定区域描框
 >auto ParticlesGraphics_DrawBorder = RemoteCall::importAs<void(std::string const& playerXuid,int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,float const& r,float const& g,float const& b,float const& thickness,float const& time,float const& alpha)>("PFLP", "ParticlesGraphics::DrawBorder");
 >ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >```
 > - C#
->```C#
+>```csharp
 >// 给指定区域描框
 >var ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder");
 >ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
@@ -1299,7 +1355,7 @@
 >ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 >```
 > - F#
->```F#
+>```fsharp
 >// 给指定区域描框
 >let ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
 >(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
@@ -1309,23 +1365,25 @@
 > </details>
 </details>
 <details>
-<summary><b>Lands<b></summary>
+<summary><b>Lands</b></summary>
 
 > <details>
-> <summary><b>CheckCubeHasLand  - 检查指定立方体区域(float)是否有领地<b></summary>
+> <summary><b>CheckCubeHasLand  - 检查指定立方体区域(float)是否有领地</b></summary>
 >
 >## Lands::CheckCubeHasLand
 >### 检查指定立方体区域(float)是否有领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | float |
->| y1 | float |
->| z1 | float |
->| x2 | float |
->| y2 | float |
->| z2 | float |
->| dimensionId | int |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x1</td><td>float</td></tr>
+><tr><td>y1</td><td>float</td></tr>
+><tr><td>z1</td><td>float</td></tr>
+><tr><td>x2</td><td>float</td></tr>
+><tr><td>y2</td><td>float</td></tr>
+><tr><td>z2</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查指定立方体区域(float)是否有领地 返回值类型：bool */
@@ -1333,13 +1391,13 @@
 >let result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
 >auto Lands_CheckCubeHasLand = RemoteCall::importAs<bool(float const& x1,float const& y1,float const& z1,float const& x2,float const& y2,float const& z2,int const& dimensionId)>("PFLP", "Lands::CheckCubeHasLand");
 >auto result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
 >var Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand");
 >var result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId);
@@ -1351,7 +1409,7 @@
 >Dim result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
 >let Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
@@ -1364,20 +1422,22 @@
 >---
 >
 > <details>
-> <summary><b>CheckCubeHasLandInt  - 检查指定立方体区域(int)是否有领地<b></summary>
+> <summary><b>CheckCubeHasLandInt  - 检查指定立方体区域(int)是否有领地</b></summary>
 >
 >## Lands::CheckCubeHasLandInt
 >### 检查指定立方体区域(int)是否有领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | int |
->| y1 | int |
->| z1 | int |
->| x2 | int |
->| y2 | int |
->| z2 | int |
->| dimensionId | int |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x1</td><td>int</td></tr>
+><tr><td>y1</td><td>int</td></tr>
+><tr><td>z1</td><td>int</td></tr>
+><tr><td>x2</td><td>int</td></tr>
+><tr><td>y2</td><td>int</td></tr>
+><tr><td>z2</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查指定立方体区域(int)是否有领地 返回值类型：bool */
@@ -1385,13 +1445,13 @@
 >let result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
 >auto Lands_CheckCubeHasLandInt = RemoteCall::importAs<bool(int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,int const& dimensionId)>("PFLP", "Lands::CheckCubeHasLandInt");
 >auto result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
 >var Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt");
 >var result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId);
@@ -1403,7 +1463,7 @@
 >Dim result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
 >let Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
@@ -1416,17 +1476,19 @@
 >---
 >
 > <details>
-> <summary><b>CheckPosHasLand  - 检查指定坐标(float)是否有领地<b></summary>
+> <summary><b>CheckPosHasLand  - 检查指定坐标(float)是否有领地</b></summary>
 >
 >## Lands::CheckPosHasLand
 >### 检查指定坐标(float)是否有领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | float |
->| y | float |
->| z | float |
->| dimensionId | int |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查指定坐标(float)是否有领地 返回值类型：bool */
@@ -1434,13 +1496,13 @@
 >let result = Lands_CheckPosHasLand(x,y,z,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查指定坐标(float)是否有领地 返回值类型：bool
 >auto Lands_CheckPosHasLand = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Lands::CheckPosHasLand");
 >auto result = Lands_CheckPosHasLand(x,y,z,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查指定坐标(float)是否有领地 返回值类型：bool
 >var Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand");
 >var result = Lands_CheckPosHasLand(x,y,z,dimensionId);
@@ -1452,7 +1514,7 @@
 >Dim result = Lands_CheckPosHasLand(x,y,z,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查指定坐标(float)是否有领地 返回值类型：bool
 >let Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand")
 >(x,y,z,dimensionId)
@@ -1465,17 +1527,19 @@
 >---
 >
 > <details>
-> <summary><b>CheckPosHasLandInt  - 检查指定坐标(int)是否有领地<b></summary>
+> <summary><b>CheckPosHasLandInt  - 检查指定坐标(int)是否有领地</b></summary>
 >
 >## Lands::CheckPosHasLandInt
 >### 检查指定坐标(int)是否有领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查指定坐标(int)是否有领地 返回值类型：bool */
@@ -1483,13 +1547,13 @@
 >let result = Lands_CheckPosHasLandInt(x,y,z,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查指定坐标(int)是否有领地 返回值类型：bool
 >auto Lands_CheckPosHasLandInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId)>("PFLP", "Lands::CheckPosHasLandInt");
 >auto result = Lands_CheckPosHasLandInt(x,y,z,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查指定坐标(int)是否有领地 返回值类型：bool
 >var Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt");
 >var result = Lands_CheckPosHasLandInt(x,y,z,dimensionId);
@@ -1501,7 +1565,7 @@
 >Dim result = Lands_CheckPosHasLandInt(x,y,z,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查指定坐标(int)是否有领地 返回值类型：bool
 >let Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt")
 >(x,y,z,dimensionId)
@@ -1514,20 +1578,22 @@
 >---
 >
 > <details>
-> <summary><b>GetLandByCube  - 获取立方体区域(float)领地信息（返回JSON字符串）<b></summary>
+> <summary><b>GetLandByCube  - 获取立方体区域(float)领地信息（返回JSON字符串）</b></summary>
 >
 >## Lands::GetLandByCube
 >### 获取立方体区域(float)领地信息（返回JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | float |
->| y1 | float |
->| z1 | float |
->| x2 | float |
->| y2 | float |
->| z2 | float |
->| dimensionId | int |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x1</td><td>float</td></tr>
+><tr><td>y1</td><td>float</td></tr>
+><tr><td>z1</td><td>float</td></tr>
+><tr><td>x2</td><td>float</td></tr>
+><tr><td>y2</td><td>float</td></tr>
+><tr><td>z2</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string */
@@ -1535,13 +1601,13 @@
 >let result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
 >auto Lands_GetLandByCube = RemoteCall::importAs<std::string(float const& x1,float const& y1,float const& z1,float const& x2,float const& y2,float const& z2,int const& dimensionId)>("PFLP", "Lands::GetLandByCube");
 >auto result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
 >var Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube");
 >var result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId);
@@ -1553,7 +1619,7 @@
 >Dim result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
@@ -1566,20 +1632,22 @@
 >---
 >
 > <details>
-> <summary><b>GetLandByCubeInt  - 获取立方体区域(int)领地信息（返回JSON字符串）<b></summary>
+> <summary><b>GetLandByCubeInt  - 获取立方体区域(int)领地信息（返回JSON字符串）</b></summary>
 >
 >## Lands::GetLandByCubeInt
 >### 获取立方体区域(int)领地信息（返回JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | int |
->| y1 | int |
->| z1 | int |
->| x2 | int |
->| y2 | int |
->| z2 | int |
->| dimensionId | int |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x1</td><td>int</td></tr>
+><tr><td>y1</td><td>int</td></tr>
+><tr><td>z1</td><td>int</td></tr>
+><tr><td>x2</td><td>int</td></tr>
+><tr><td>y2</td><td>int</td></tr>
+><tr><td>z2</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string */
@@ -1587,13 +1655,13 @@
 >let result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
 >auto Lands_GetLandByCubeInt = RemoteCall::importAs<std::string(int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,int const& dimensionId)>("PFLP", "Lands::GetLandByCubeInt");
 >auto result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
 >var Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt");
 >var result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
@@ -1605,7 +1673,7 @@
 >Dim result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
@@ -1618,17 +1686,19 @@
 >---
 >
 > <details>
-> <summary><b>GetLandByPos  - 获取指定坐标(float)领地信息（返回JSON字符串）<b></summary>
+> <summary><b>GetLandByPos  - 获取指定坐标(float)领地信息（返回JSON字符串）</b></summary>
 >
 >## Lands::GetLandByPos
 >### 获取指定坐标(float)领地信息（返回JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | float |
->| y | float |
->| z | float |
->| dimensionId | int |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string */
@@ -1636,13 +1706,13 @@
 >let result = Lands_GetLandByPos(x,y,z,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
 >auto Lands_GetLandByPos = RemoteCall::importAs<std::string(float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Lands::GetLandByPos");
 >auto result = Lands_GetLandByPos(x,y,z,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
 >var Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos");
 >var result = Lands_GetLandByPos(x,y,z,dimensionId);
@@ -1654,7 +1724,7 @@
 >Dim result = Lands_GetLandByPos(x,y,z,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos")
 >(x,y,z,dimensionId)
@@ -1667,17 +1737,19 @@
 >---
 >
 > <details>
-> <summary><b>GetLandByPosInt  - 获取指定坐标(int)领地信息（返回JSON字符串）<b></summary>
+> <summary><b>GetLandByPosInt  - 获取指定坐标(int)领地信息（返回JSON字符串）</b></summary>
 >
 >## Lands::GetLandByPosInt
 >### 获取指定坐标(int)领地信息（返回JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string */
@@ -1685,13 +1757,13 @@
 >let result = Lands_GetLandByPosInt(x,y,z,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
 >auto Lands_GetLandByPosInt = RemoteCall::importAs<std::string(int const& x,int const& y,int const& z,int const& dimensionId)>("PFLP", "Lands::GetLandByPosInt");
 >auto result = Lands_GetLandByPosInt(x,y,z,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
 >var Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt");
 >var result = Lands_GetLandByPosInt(x,y,z,dimensionId);
@@ -1703,7 +1775,7 @@
 >Dim result = Lands_GetLandByPosInt(x,y,z,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt")
 >(x,y,z,dimensionId)
@@ -1716,20 +1788,22 @@
 >---
 >
 > <details>
-> <summary><b>GetLandInfoByCube  - 获取立方体区域(float)领地数据源详细信息（返回JSON字符串）<b></summary>
+> <summary><b>GetLandInfoByCube  - 获取立方体区域(float)领地数据源详细信息（返回JSON字符串）</b></summary>
 >
 >## Lands::GetLandInfoByCube
 >### 获取立方体区域(float)领地数据源详细信息（返回JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | float |
->| y1 | float |
->| z1 | float |
->| x2 | float |
->| y2 | float |
->| z2 | float |
->| dimensionId | int |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x1</td><td>float</td></tr>
+><tr><td>y1</td><td>float</td></tr>
+><tr><td>z1</td><td>float</td></tr>
+><tr><td>x2</td><td>float</td></tr>
+><tr><td>y2</td><td>float</td></tr>
+><tr><td>z2</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string */
@@ -1737,13 +1811,13 @@
 >let result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >auto Lands_GetLandInfoByCube = RemoteCall::importAs<std::string(float const& x1,float const& y1,float const& z1,float const& x2,float const& y2,float const& z2,int const& dimensionId)>("PFLP", "Lands::GetLandInfoByCube");
 >auto result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >var Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube");
 >var result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId);
@@ -1755,7 +1829,7 @@
 >Dim result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
@@ -1768,20 +1842,22 @@
 >---
 >
 > <details>
-> <summary><b>GetLandInfoByCubeInt  - 获取立方体区域(int)领地数据源详细信息（返回JSON字符串）<b></summary>
+> <summary><b>GetLandInfoByCubeInt  - 获取立方体区域(int)领地数据源详细信息（返回JSON字符串）</b></summary>
 >
 >## Lands::GetLandInfoByCubeInt
 >### 获取立方体区域(int)领地数据源详细信息（返回JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | int |
->| y1 | int |
->| z1 | int |
->| x2 | int |
->| y2 | int |
->| z2 | int |
->| dimensionId | int |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x1</td><td>int</td></tr>
+><tr><td>y1</td><td>int</td></tr>
+><tr><td>z1</td><td>int</td></tr>
+><tr><td>x2</td><td>int</td></tr>
+><tr><td>y2</td><td>int</td></tr>
+><tr><td>z2</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string */
@@ -1789,13 +1865,13 @@
 >let result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >auto Lands_GetLandInfoByCubeInt = RemoteCall::importAs<std::string(int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,int const& dimensionId)>("PFLP", "Lands::GetLandInfoByCubeInt");
 >auto result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >var Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt");
 >var result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
@@ -1807,7 +1883,7 @@
 >Dim result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
@@ -1820,17 +1896,19 @@
 >---
 >
 > <details>
-> <summary><b>GetLandInfoByPos  - 获取指定坐标(float)领地数据源详细信息（返回JSON字符串）<b></summary>
+> <summary><b>GetLandInfoByPos  - 获取指定坐标(float)领地数据源详细信息（返回JSON字符串）</b></summary>
 >
 >## Lands::GetLandInfoByPos
 >### 获取指定坐标(float)领地数据源详细信息（返回JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | float |
->| y | float |
->| z | float |
->| dimensionId | int |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string */
@@ -1838,13 +1916,13 @@
 >let result = Lands_GetLandInfoByPos(x,y,z,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >auto Lands_GetLandInfoByPos = RemoteCall::importAs<std::string(float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Lands::GetLandInfoByPos");
 >auto result = Lands_GetLandInfoByPos(x,y,z,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >var Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos");
 >var result = Lands_GetLandInfoByPos(x,y,z,dimensionId);
@@ -1856,7 +1934,7 @@
 >Dim result = Lands_GetLandInfoByPos(x,y,z,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos")
 >(x,y,z,dimensionId)
@@ -1869,17 +1947,19 @@
 >---
 >
 > <details>
-> <summary><b>GetLandInfoByPosInt  - 获取指定坐标(int)领地数据源详细信息（返回JSON字符串）<b></summary>
+> <summary><b>GetLandInfoByPosInt  - 获取指定坐标(int)领地数据源详细信息（返回JSON字符串）</b></summary>
 >
 >## Lands::GetLandInfoByPosInt
 >### 获取指定坐标(int)领地数据源详细信息（返回JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string */
@@ -1887,13 +1967,13 @@
 >let result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >auto Lands_GetLandInfoByPosInt = RemoteCall::importAs<std::string(int const& x,int const& y,int const& z,int const& dimensionId)>("PFLP", "Lands::GetLandInfoByPosInt");
 >auto result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >var Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt");
 >var result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId);
@@ -1905,7 +1985,7 @@
 >Dim result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
 >let Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt")
 >(x,y,z,dimensionId)
@@ -1918,18 +1998,20 @@
 >---
 >
 > <details>
-> <summary><b>SetLandInfoByPos  - 设置指定坐标(float)领地数据源详细信息（传入JSON字符串）<b></summary>
+> <summary><b>SetLandInfoByPos  - 设置指定坐标(float)领地数据源详细信息（传入JSON字符串）</b></summary>
 >
 >## Lands::SetLandInfoByPos
 >### 设置指定坐标(float)领地数据源详细信息（传入JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | float |
->| y | float |
->| z | float |
->| dimensionId | int |
->| landinfo | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>landinfo</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
@@ -1937,13 +2019,13 @@
 >let result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo);
 >```
 > - C++
->```C++
+>```cpp
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >auto Lands_SetLandInfoByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& landinfo)>("PFLP", "Lands::SetLandInfoByPos");
 >auto result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo);
 >```
 > - C#
->```C#
+>```csharp
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >var Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos");
 >var result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo);
@@ -1955,7 +2037,7 @@
 >Dim result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo)
 >```
 > - F#
->```F#
+>```fsharp
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos")
 >(x,y,z,dimensionId,landinfo)
@@ -1968,18 +2050,20 @@
 >---
 >
 > <details>
-> <summary><b>SetLandInfoByPosInt  - 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串）<b></summary>
+> <summary><b>SetLandInfoByPosInt  - 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串）</b></summary>
 >
 >## Lands::SetLandInfoByPosInt
 >### 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->| landinfo | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>landinfo</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool */
@@ -1987,13 +2071,13 @@
 >let result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo);
 >```
 > - C++
->```C++
+>```cpp
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >auto Lands_SetLandInfoByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& landinfo)>("PFLP", "Lands::SetLandInfoByPosInt");
 >auto result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo);
 >```
 > - C#
->```C#
+>```csharp
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >var Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt");
 >var result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo);
@@ -2005,7 +2089,7 @@
 >Dim result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo)
 >```
 > - F#
->```F#
+>```fsharp
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
 >let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt")
 >(x,y,z,dimensionId,landinfo)
@@ -2018,19 +2102,21 @@
 >---
 >
 > <details>
-> <summary><b>CreateLand2D  - 新建领地<b></summary>
+> <summary><b>CreateLand2D  - 新建领地</b></summary>
 >
 >## Lands::CreateLand2D
 >### 新建领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | int |
->| z1 | int |
->| x2 | int |
->| z2 | int |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x1</td><td>int</td></tr>
+><tr><td>z1</td><td>int</td></tr>
+><tr><td>x2</td><td>int</td></tr>
+><tr><td>z2</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 新建领地 返回值类型：bool */
@@ -2038,13 +2124,13 @@
 >let result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 新建领地 返回值类型：bool
 >auto Lands_CreateLand2D = RemoteCall::importAs<bool(int const& x1,int const& z1,int const& x2,int const& z2,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CreateLand2D");
 >auto result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 新建领地 返回值类型：bool
 >var Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D");
 >var result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
@@ -2056,7 +2142,7 @@
 >Dim result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 新建领地 返回值类型：bool
 >let Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D")
 >(x1,z1,x2,z2,dimensionId,playerXuid)
@@ -2069,21 +2155,23 @@
 >---
 >
 > <details>
-> <summary><b>CreateLand3D  - 新建领地<b></summary>
+> <summary><b>CreateLand3D  - 新建领地</b></summary>
 >
 >## Lands::CreateLand3D
 >### 新建领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| x1 | int |
->| y1 | int |
->| z1 | int |
->| x2 | int |
->| y2 | int |
->| z2 | int |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x1</td><td>int</td></tr>
+><tr><td>y1</td><td>int</td></tr>
+><tr><td>z1</td><td>int</td></tr>
+><tr><td>x2</td><td>int</td></tr>
+><tr><td>y2</td><td>int</td></tr>
+><tr><td>z2</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 新建领地 返回值类型：bool */
@@ -2091,13 +2179,13 @@
 >let result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 新建领地 返回值类型：bool
 >auto Lands_CreateLand3D = RemoteCall::importAs<bool(int const& x1,int const& y1,int const& z1,int const& x2,int const& y2,int const& z2,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CreateLand3D");
 >auto result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 新建领地 返回值类型：bool
 >var Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D");
 >var result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
@@ -2109,7 +2197,7 @@
 >Dim result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 新建领地 返回值类型：bool
 >let Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D")
 >(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
@@ -2122,17 +2210,19 @@
 >---
 >
 > <details>
-> <summary><b>DeleteLandByPos  - 删除指定坐标(float)的领地<b></summary>
+> <summary><b>DeleteLandByPos  - 删除指定坐标(float)的领地</b></summary>
 >
 >## Lands::DeleteLandByPos
 >### 删除指定坐标(float)的领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | float |
->| y | float |
->| z | float |
->| dimensionId | int |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 删除指定坐标(float)的领地 返回值类型：bool */
@@ -2140,13 +2230,13 @@
 >let result = Lands_DeleteLandByPos(x,y,z,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 删除指定坐标(float)的领地 返回值类型：bool
 >auto Lands_DeleteLandByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Lands::DeleteLandByPos");
 >auto result = Lands_DeleteLandByPos(x,y,z,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 删除指定坐标(float)的领地 返回值类型：bool
 >var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos");
 >var result = Lands_DeleteLandByPos(x,y,z,dimensionId);
@@ -2158,7 +2248,7 @@
 >Dim result = Lands_DeleteLandByPos(x,y,z,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 删除指定坐标(float)的领地 返回值类型：bool
 >let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos")
 >(x,y,z,dimensionId)
@@ -2171,17 +2261,19 @@
 >---
 >
 > <details>
-> <summary><b>DeleteLandByPosInt  - 删除指定坐标(int)的领地<b></summary>
+> <summary><b>DeleteLandByPosInt  - 删除指定坐标(int)的领地</b></summary>
 >
 >## Lands::DeleteLandByPosInt
 >### 删除指定坐标(int)的领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 删除指定坐标(int)的领地 返回值类型：bool */
@@ -2189,13 +2281,13 @@
 >let result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
 >```
 > - C++
->```C++
+>```cpp
 >// 删除指定坐标(int)的领地 返回值类型：bool
 >auto Lands_DeleteLandByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId)>("PFLP", "Lands::DeleteLandByPosInt");
 >auto result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
 >```
 > - C#
->```C#
+>```csharp
 >// 删除指定坐标(int)的领地 返回值类型：bool
 >var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt");
 >var result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
@@ -2207,7 +2299,7 @@
 >Dim result = Lands_DeleteLandByPosInt(x,y,z,dimensionId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 删除指定坐标(int)的领地 返回值类型：bool
 >let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt")
 >(x,y,z,dimensionId)
@@ -2220,18 +2312,20 @@
 >---
 >
 > <details>
-> <summary><b>GetLandPermissionByPos  - 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）<b></summary>
+> <summary><b>GetLandPermissionByPos  - 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）</b></summary>
 >
 >## Lands::GetLandPermissionByPos
 >### 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | float |
->| y | float |
->| z | float |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string */
@@ -2239,13 +2333,13 @@
 >let result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
 >auto Lands_GetLandPermissionByPos = RemoteCall::importAs<std::string(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::GetLandPermissionByPos");
 >auto result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
 >var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos");
 >var result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
@@ -2257,7 +2351,7 @@
 >Dim result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
 >let Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos")
 >(x,y,z,dimensionId,playerXuid)
@@ -2270,18 +2364,20 @@
 >---
 >
 > <details>
-> <summary><b>GetLandPermissionByPosInt  - 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）<b></summary>
+> <summary><b>GetLandPermissionByPosInt  - 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）</b></summary>
 >
 >## Lands::GetLandPermissionByPosInt
 >### 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string */
@@ -2289,13 +2385,13 @@
 >let result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
 >auto Lands_GetLandPermissionByPosInt = RemoteCall::importAs<std::string(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::GetLandPermissionByPosInt");
 >auto result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
 >var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt");
 >var result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
@@ -2307,7 +2403,7 @@
 >Dim result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
 >let Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt")
 >(x,y,z,dimensionId,playerXuid)
@@ -2320,19 +2416,21 @@
 >---
 >
 > <details>
-> <summary><b>CheckLandPermissionByPos  - 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）<b></summary>
+> <summary><b>CheckLandPermissionByPos  - 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）</b></summary>
 >
 >## Lands::CheckLandPermissionByPos
 >### 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| permissionId | string |
->| x | float |
->| y | float |
->| z | float |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>permissionId</td><td>string</td></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool */
@@ -2340,13 +2438,13 @@
 >let result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >auto Lands_CheckLandPermissionByPos = RemoteCall::importAs<bool(std::string const& permissionId,float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckLandPermissionByPos");
 >auto result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >var Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos");
 >var result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,playerXuid);
@@ -2358,7 +2456,7 @@
 >Dim result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >let Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos")
 >(permissionId,x,y,z,dimensionId,playerXuid)
@@ -2371,19 +2469,21 @@
 >---
 >
 > <details>
-> <summary><b>CheckLandPermissionByPosInt  - 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）<b></summary>
+> <summary><b>CheckLandPermissionByPosInt  - 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）</b></summary>
 >
 >## Lands::CheckLandPermissionByPosInt
 >### 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| permissionId | string |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>permissionId</td><td>string</td></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool */
@@ -2391,13 +2491,13 @@
 >let result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >auto Lands_CheckLandPermissionByPosInt = RemoteCall::importAs<bool(std::string const& permissionId,int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckLandPermissionByPosInt");
 >auto result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >var Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt");
 >var result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid);
@@ -2409,7 +2509,7 @@
 >Dim result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
 >let Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt")
 >(permissionId,x,y,z,dimensionId,playerXuid)
@@ -2422,18 +2522,20 @@
 >---
 >
 > <details>
-> <summary><b>CheckPlayerIsLandOwnerByPos  - 检查玩家是否是指定坐标(float)领地的主人<b></summary>
+> <summary><b>CheckPlayerIsLandOwnerByPos  - 检查玩家是否是指定坐标(float)领地的主人</b></summary>
 >
 >## Lands::CheckPlayerIsLandOwnerByPos
 >### 检查玩家是否是指定坐标(float)领地的主人
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | float |
->| y | float |
->| z | float |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool */
@@ -2441,13 +2543,13 @@
 >let result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
 >auto Lands_CheckPlayerIsLandOwnerByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
 >auto result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
 >var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
 >var result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
@@ -2459,7 +2561,7 @@
 >Dim result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
 >let Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
 >(x,y,z,dimensionId,playerXuid)
@@ -2472,18 +2574,20 @@
 >---
 >
 > <details>
-> <summary><b>CheckPlayerIsLandOwnerByPosInt  - 检查玩家是否是指定坐标(int)领地的主人<b></summary>
+> <summary><b>CheckPlayerIsLandOwnerByPosInt  - 检查玩家是否是指定坐标(int)领地的主人</b></summary>
 >
 >## Lands::CheckPlayerIsLandOwnerByPosInt
 >### 检查玩家是否是指定坐标(int)领地的主人
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool */
@@ -2491,13 +2595,13 @@
 >let result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
 >auto Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
 >auto result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
 >var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
 >var result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid);
@@ -2509,7 +2613,7 @@
 >Dim result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
 >let Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
 >(x,y,z,dimensionId,playerXuid)
@@ -2522,18 +2626,20 @@
 >---
 >
 > <details>
-> <summary><b>CheckIsLandSharedToPlayerByPos  - 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）<b></summary>
+> <summary><b>CheckIsLandSharedToPlayerByPos  - 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）</b></summary>
 >
 >## Lands::CheckIsLandSharedToPlayerByPos
 >### 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | float |
->| y | float |
->| z | float |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool */
@@ -2541,13 +2647,13 @@
 >let result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >auto Lands_CheckIsLandSharedToPlayerByPos = RemoteCall::importAs<bool(float const& x,float const& y,float const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
 >auto result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
 >var result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid);
@@ -2559,7 +2665,7 @@
 >Dim result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 >(x,y,z,dimensionId,playerXuid)
@@ -2572,18 +2678,20 @@
 >---
 >
 > <details>
-> <summary><b>CheckIsLandSharedToPlayerByPosInt  - 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）<b></summary>
+> <summary><b>CheckIsLandSharedToPlayerByPosInt  - 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）</b></summary>
 >
 >## Lands::CheckIsLandSharedToPlayerByPosInt
 >### 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos）
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool */
@@ -2591,13 +2699,13 @@
 >let result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >auto Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
 >auto result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
 >var result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid);
@@ -2609,7 +2717,7 @@
 >Dim result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
 >let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 >(x,y,z,dimensionId,playerXuid)
@@ -2622,18 +2730,20 @@
 >---
 >
 > <details>
-> <summary><b>CheckPlayerHasCreateChestPermission  - (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件)<b></summary>
+> <summary><b>CheckPlayerHasCreateChestPermission  - (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件)</b></summary>
 >
 >## Lands::CheckPlayerHasCreateChestPermission
 >### (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件)
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool */
@@ -2641,13 +2751,13 @@
 >let result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >auto Lands_CheckPlayerHasCreateChestPermission = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
 >auto result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
 >var result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid);
@@ -2659,7 +2769,7 @@
 >Dim result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
 >let Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 >(x,y,z,dimensionId,playerXuid)
@@ -2672,18 +2782,20 @@
 >---
 >
 > <details>
-> <summary><b>CheckPlayerHasOpenChestPermission  - (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件)<b></summary>
+> <summary><b>CheckPlayerHasOpenChestPermission  - (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件)</b></summary>
 >
 >## Lands::CheckPlayerHasOpenChestPermission
 >### (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件)
->|  形参   | 类型  |
->|  ----  | ----  |
->| x | int |
->| y | int |
->| z | int |
->| dimensionId | int |
->| playerXuid | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>x</td><td>int</td></tr>
+><tr><td>y</td><td>int</td></tr>
+><tr><td>z</td><td>int</td></tr>
+><tr><td>dimensionId</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool */
@@ -2691,13 +2803,13 @@
 >let result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >auto Lands_CheckPlayerHasOpenChestPermission = RemoteCall::importAs<bool(int const& x,int const& y,int const& z,int const& dimensionId,std::string const& playerXuid)>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >auto result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >var result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid);
@@ -2709,7 +2821,7 @@
 >Dim result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
 >let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >(x,y,z,dimensionId,playerXuid)
@@ -2722,14 +2834,16 @@
 >---
 >
 > <details>
-> <summary><b>GetPlayerAllPermissionGroupId  - 取玩家所有权限组ID（返回["id1","id2"...]字符串）<b></summary>
+> <summary><b>GetPlayerAllPermissionGroupId  - 取玩家所有权限组ID（返回["id1","id2"...]字符串）</b></summary>
 >
 >## Lands::GetPlayerAllPermissionGroupId
 >### 取玩家所有权限组ID（返回["id1","id2"...]字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string */
@@ -2737,13 +2851,13 @@
 >let result = Lands_GetPlayerAllPermissionGroupId(playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
 >auto Lands_GetPlayerAllPermissionGroupId = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
 >auto result = Lands_GetPlayerAllPermissionGroupId(playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
 >var Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
 >var result = Lands_GetPlayerAllPermissionGroupId(playerXuid);
@@ -2755,7 +2869,7 @@
 >Dim result = Lands_GetPlayerAllPermissionGroupId(playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
 >let Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >playerXuid
@@ -2768,15 +2882,17 @@
 >---
 >
 > <details>
-> <summary><b>GetPlayerPermissionGroup  - 取玩家权限组内容(指定ID)（返回JSON对象字符串）<b></summary>
+> <summary><b>GetPlayerPermissionGroup  - 取玩家权限组内容(指定ID)（返回JSON对象字符串）</b></summary>
 >
 >## Lands::GetPlayerPermissionGroup
 >### 取玩家权限组内容(指定ID)（返回JSON对象字符串）
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| permissionGroupId | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>permissionGroupId</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string */
@@ -2784,13 +2900,13 @@
 >let result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - C++
->```C++
+>```cpp
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
 >auto Lands_GetPlayerPermissionGroup = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::GetPlayerPermissionGroup");
 >auto result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - C#
->```C#
+>```csharp
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
 >var Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup");
 >var result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId);
@@ -2802,7 +2918,7 @@
 >Dim result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
 >let Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup")
 >(playerXuid,permissionGroupId)
@@ -2815,15 +2931,17 @@
 >---
 >
 > <details>
-> <summary><b>DeletePlayerPermissionGroup  - 删玩家权限组(指定ID)<b></summary>
+> <summary><b>DeletePlayerPermissionGroup  - 删玩家权限组(指定ID)</b></summary>
 >
 >## Lands::DeletePlayerPermissionGroup
 >### 删玩家权限组(指定ID)
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| permissionGroupId | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>permissionGroupId</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 删玩家权限组(指定ID) 返回值类型：bool */
@@ -2831,13 +2949,13 @@
 >let result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - C++
->```C++
+>```cpp
 >// 删玩家权限组(指定ID) 返回值类型：bool
 >auto Lands_DeletePlayerPermissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId)>("PFLP", "Lands::DeletePlayerPermissionGroup");
 >auto result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - C#
->```C#
+>```csharp
 >// 删玩家权限组(指定ID) 返回值类型：bool
 >var Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup");
 >var result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId);
@@ -2849,7 +2967,7 @@
 >Dim result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId)
 >```
 > - F#
->```F#
+>```fsharp
 >// 删玩家权限组(指定ID) 返回值类型：bool
 >let Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup")
 >(playerXuid,permissionGroupId)
@@ -2862,16 +2980,18 @@
 >---
 >
 > <details>
-> <summary><b>EditPlayerPermissionGroup  - 修改家权限组内容(指定ID)<b></summary>
+> <summary><b>EditPlayerPermissionGroup  - 修改家权限组内容(指定ID)</b></summary>
 >
 >## Lands::EditPlayerPermissionGroup
 >### 修改家权限组内容(指定ID)
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| permissionGroupId | string |
->| jsonString | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>permissionGroupId</td><td>string</td></tr>
+><tr><td>jsonString</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 修改家权限组内容(指定ID) 返回值类型：bool */
@@ -2879,13 +2999,13 @@
 >let result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - C++
->```C++
+>```cpp
 >// 修改家权限组内容(指定ID) 返回值类型：bool
 >auto Lands_EditPlayerPermissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::EditPlayerPermissionGroup");
 >auto result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - C#
->```C#
+>```csharp
 >// 修改家权限组内容(指定ID) 返回值类型：bool
 >var Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup");
 >var result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
@@ -2897,7 +3017,7 @@
 >Dim result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString)
 >```
 > - F#
->```F#
+>```fsharp
 >// 修改家权限组内容(指定ID) 返回值类型：bool
 >let Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup")
 >(playerXuid,permissionGroupId,jsonString)
@@ -2910,16 +3030,18 @@
 >---
 >
 > <details>
-> <summary><b>AddPlayerPermissionGroup  - 添加权限组<b></summary>
+> <summary><b>AddPlayerPermissionGroup  - 添加权限组</b></summary>
 >
 >## Lands::AddPlayerPermissionGroup
 >### 添加权限组
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| permissionGroupId | string |
->| jsonString | string |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>permissionGroupId</td><td>string</td></tr>
+><tr><td>jsonString</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 添加权限组 返回值类型：bool */
@@ -2927,13 +3049,13 @@
 >let result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - C++
->```C++
+>```cpp
 >// 添加权限组 返回值类型：bool
 >auto Lands_AddPlayerPermissionGroup = RemoteCall::importAs<bool(std::string const& playerXuid,std::string const& permissionGroupId,std::string const& jsonString)>("PFLP", "Lands::AddPlayerPermissionGroup");
 >auto result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - C#
->```C#
+>```csharp
 >// 添加权限组 返回值类型：bool
 >var Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup");
 >var result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
@@ -2945,7 +3067,7 @@
 >Dim result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString)
 >```
 > - F#
->```F#
+>```fsharp
 >// 添加权限组 返回值类型：bool
 >let Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup")
 >(playerXuid,permissionGroupId,jsonString)
@@ -2958,14 +3080,16 @@
 >---
 >
 > <details>
-> <summary><b>GetLandsOwnedByPlayer  - 取玩家拥有的领地<b></summary>
+> <summary><b>GetLandsOwnedByPlayer  - 取玩家拥有的领地</b></summary>
 >
 >## Lands::GetLandsOwnedByPlayer
 >### 取玩家拥有的领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 取玩家拥有的领地 返回值类型：string */
@@ -2973,13 +3097,13 @@
 >let result = Lands_GetLandsOwnedByPlayer(playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 取玩家拥有的领地 返回值类型：string
 >auto Lands_GetLandsOwnedByPlayer = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetLandsOwnedByPlayer");
 >auto result = Lands_GetLandsOwnedByPlayer(playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 取玩家拥有的领地 返回值类型：string
 >var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer");
 >var result = Lands_GetLandsOwnedByPlayer(playerXuid);
@@ -2991,7 +3115,7 @@
 >Dim result = Lands_GetLandsOwnedByPlayer(playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 取玩家拥有的领地 返回值类型：string
 >let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
 >playerXuid
@@ -3004,14 +3128,16 @@
 >---
 >
 > <details>
-> <summary><b>GetLandsSharedToPlayer  - 取共享给玩家的领地<b></summary>
+> <summary><b>GetLandsSharedToPlayer  - 取共享给玩家的领地</b></summary>
 >
 >## Lands::GetLandsSharedToPlayer
 >### 取共享给玩家的领地
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->返回值类型：string;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 取共享给玩家的领地 返回值类型：string */
@@ -3019,13 +3145,13 @@
 >let result = Lands_GetLandsSharedToPlayer(playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 取共享给玩家的领地 返回值类型：string
 >auto Lands_GetLandsSharedToPlayer = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Lands::GetLandsSharedToPlayer");
 >auto result = Lands_GetLandsSharedToPlayer(playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 取共享给玩家的领地 返回值类型：string
 >var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer");
 >var result = Lands_GetLandsSharedToPlayer(playerXuid);
@@ -3037,7 +3163,7 @@
 >Dim result = Lands_GetLandsSharedToPlayer(playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 取共享给玩家的领地 返回值类型：string
 >let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer")
 >playerXuid
@@ -3048,21 +3174,23 @@
 > </details>
 </details>
 <details>
-<summary><b>FloatText<b></summary>
+<summary><b>FloatText</b></summary>
 
 > <details>
-> <summary><b>Add  - 创建浮空字(给玩家发包)<b></summary>
+> <summary><b>Add  - 创建浮空字(给玩家发包)</b></summary>
 >
 >## FloatText::Add
 >### 创建浮空字(给玩家发包)
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| x | float |
->| y | float |
->| z | float |
->| text | string |
->返回值类型：int;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>x</td><td>float</td></tr>
+><tr><td>y</td><td>float</td></tr>
+><tr><td>z</td><td>float</td></tr>
+><tr><td>text</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：int;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 创建浮空字(给玩家发包) 返回值类型：int */
@@ -3070,13 +3198,13 @@
 >let result = FloatText_Add(playerXuid,x,y,z,text);
 >```
 > - C++
->```C++
+>```cpp
 >// 创建浮空字(给玩家发包) 返回值类型：int
 >auto FloatText_Add = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,std::string const& text)>("PFLP", "FloatText::Add");
 >auto result = FloatText_Add(playerXuid,x,y,z,text);
 >```
 > - C#
->```C#
+>```csharp
 >// 创建浮空字(给玩家发包) 返回值类型：int
 >var FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add");
 >var result = FloatText_Add(playerXuid,x,y,z,text);
@@ -3088,7 +3216,7 @@
 >Dim result = FloatText_Add(playerXuid,x,y,z,text)
 >```
 > - F#
->```F#
+>```fsharp
 >// 创建浮空字(给玩家发包) 返回值类型：int
 >let FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add")
 >(playerXuid,x,y,z,text)
@@ -3101,15 +3229,17 @@
 >---
 >
 > <details>
-> <summary><b>Remove  - 移除浮空字(给玩家发包)<b></summary>
+> <summary><b>Remove  - 移除浮空字(给玩家发包)</b></summary>
 >
 >## FloatText::Remove
 >### 移除浮空字(给玩家发包)
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| id | int |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>id</td><td>int</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 移除浮空字(给玩家发包) */
@@ -3117,13 +3247,13 @@
 >FloatText_Remove(playerXuid,id);
 >```
 > - C++
->```C++
+>```cpp
 >// 移除浮空字(给玩家发包)
 >auto FloatText_Remove = RemoteCall::importAs<void(std::string const& playerXuid,int const& id)>("PFLP", "FloatText::Remove");
 >FloatText_Remove(playerXuid,id);
 >```
 > - C#
->```C#
+>```csharp
 >// 移除浮空字(给玩家发包)
 >var FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove");
 >FloatText_Remove(playerXuid,id);
@@ -3135,7 +3265,7 @@
 >FloatText_Remove(playerXuid,id)
 >```
 > - F#
->```F#
+>```fsharp
 >// 移除浮空字(给玩家发包)
 >let FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove")
 >(playerXuid,id)
@@ -3145,17 +3275,19 @@
 > </details>
 </details>
 <details>
-<summary><b>Money<b></summary>
+<summary><b>Money</b></summary>
 
 > <details>
-> <summary><b>Get  - 获取玩家(指定玩家名)金钱<b></summary>
+> <summary><b>Get  - 获取玩家(指定玩家名)金钱</b></summary>
 >
 >## Money::Get
 >### 获取玩家(指定玩家名)金钱
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->返回值类型：long;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：long;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 获取玩家(指定玩家名)金钱 返回值类型：long */
@@ -3163,13 +3295,13 @@
 >let result = Money_Get(playerXuid);
 >```
 > - C++
->```C++
+>```cpp
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
 >auto result = Money_Get(playerXuid);
 >```
 > - C#
->```C#
+>```csharp
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
 >var result = Money_Get(playerXuid);
@@ -3181,7 +3313,7 @@
 >Dim result = Money_Get(playerXuid)
 >```
 > - F#
->```F#
+>```fsharp
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
 >playerXuid
@@ -3194,16 +3326,18 @@
 >---
 >
 > <details>
-> <summary><b>Add  - 给玩家(指定玩家名)加钱<b></summary>
+> <summary><b>Add  - 给玩家(指定玩家名)加钱</b></summary>
 >
 >## Money::Add
 >### 给玩家(指定玩家名)加钱
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| count | long |
->| info | string |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>count</td><td>long</td></tr>
+><tr><td>info</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 给玩家(指定玩家名)加钱 */
@@ -3211,13 +3345,13 @@
 >Money_Add(playerXuid,count,info);
 >```
 > - C++
->```C++
+>```cpp
 >// 给玩家(指定玩家名)加钱
 >auto Money_Add = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Add");
 >Money_Add(playerXuid,count,info);
 >```
 > - C#
->```C#
+>```csharp
 >// 给玩家(指定玩家名)加钱
 >var Money_Add = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Add");
 >Money_Add(playerXuid,count,info);
@@ -3229,7 +3363,7 @@
 >Money_Add(playerXuid,count,info)
 >```
 > - F#
->```F#
+>```fsharp
 >// 给玩家(指定玩家名)加钱
 >let Money_Add = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Add")
 >(playerXuid,count,info)
@@ -3241,16 +3375,18 @@
 >---
 >
 > <details>
-> <summary><b>Remove  - 给玩家(指定玩家名)减钱<b></summary>
+> <summary><b>Remove  - 给玩家(指定玩家名)减钱</b></summary>
 >
 >## Money::Remove
 >### 给玩家(指定玩家名)减钱
->|  形参   | 类型  |
->|  ----  | ----  |
->| playerXuid | string |
->| count | long |
->| info | string |
->无返回值;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>count</td><td>long</td></tr>
+><tr><td>info</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 给玩家(指定玩家名)减钱 */
@@ -3258,13 +3394,13 @@
 >Money_Remove(playerXuid,count,info);
 >```
 > - C++
->```C++
+>```cpp
 >// 给玩家(指定玩家名)减钱
 >auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Remove");
 >Money_Remove(playerXuid,count,info);
 >```
 > - C#
->```C#
+>```csharp
 >// 给玩家(指定玩家名)减钱
 >var Money_Remove = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Remove");
 >Money_Remove(playerXuid,count,info);
@@ -3276,7 +3412,7 @@
 >Money_Remove(playerXuid,count,info)
 >```
 > - F#
->```F#
+>```fsharp
 >// 给玩家(指定玩家名)减钱
 >let Money_Remove = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Remove")
 >(playerXuid,count,info)
@@ -3286,20 +3422,22 @@
 > </details>
 </details>
 <details>
-<summary><b>Internal<b></summary>
+<summary><b>Internal</b></summary>
 
 > <details>
-> <summary><b>CheatPunish  - 作弊反馈（LLAntiCheat用）<b></summary>
+> <summary><b>CheatPunish  - 作弊反馈（LLAntiCheat用）</b></summary>
 >
 >## Internal::CheatPunish
 >### 作弊反馈（LLAntiCheat用）
->|  形参   | 类型  |
->|  ----  | ----  |
->| PunishLevel | int |
->| PunishReason | int |
->| playerXuid | Player |
->| CheatCount | int |
->返回值类型：bool;
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>PunishLevel</td><td>int</td></tr>
+><tr><td>PunishReason</td><td>int</td></tr>
+><tr><td>playerXuid</td><td>Player</td></tr>
+><tr><td>CheatCount</td><td>int</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
 > - JavaScript
 >```js
 >/** 作弊反馈（LLAntiCheat用） 返回值类型：bool */
@@ -3307,13 +3445,13 @@
 >let result = Internal_CheatPunish(PunishLevel,PunishReason,playerXuid,CheatCount);
 >```
 > - C++
->```C++
+>```cpp
 >// 作弊反馈（LLAntiCheat用） 返回值类型：bool
 >auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int const& PunishReason,Player& const& playerXuid,int const& CheatCount)>("PFLP", "Internal::CheatPunish");
 >auto result = Internal_CheatPunish(PunishLevel,PunishReason,playerXuid,CheatCount);
 >```
 > - C#
->```C#
+>```csharp
 >// 作弊反馈（LLAntiCheat用） 返回值类型：bool
 >var Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,Player,int>("PFLP", "Internal::CheatPunish");
 >var result = Internal_CheatPunish(PunishLevel,PunishReason,playerXuid,CheatCount);
@@ -3325,7 +3463,7 @@
 >Dim result = Internal_CheatPunish(PunishLevel,PunishReason,playerXuid,CheatCount)
 >```
 > - F#
->```F#
+>```fsharp
 >// 作弊反馈（LLAntiCheat用） 返回值类型：bool
 >let Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,nativeint,int>("PFLP", "Internal::CheatPunish")
 >(PunishLevel,PunishReason,playerXuid,CheatCount)
@@ -3335,7 +3473,7 @@
 >
 > </details>
 </details>
-<details><summary><b>All Api in JavaScript / JS接口<b></summary>
+<details><summary><b>All Api in JavaScript / JS接口</b></summary>
 
 
 >---
@@ -4025,7 +4163,7 @@
 </details>
 
 <details>
-<summary><b>All Api in C++ / 全部C++接口<b></summary>
+<summary><b>All Api in C++ / 全部C++接口</b></summary>
 
 ``` C++
 // 设置全局配置文件（要求JSON字符串） 返回值类型：bool
@@ -4169,7 +4307,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 </details>
 
 
-<details><summary><b>All Api in C# /  C#全部接口<b></summary>
+<details><summary><b>All Api in C# /  C#全部接口</b></summary>
 
 >---
 ><details><summary>C# imports / 直接导入</summary>
@@ -4694,7 +4832,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 </details>
 
 
-<details><summary><b>All Api in Visual Basic .NET / VB接口汇总<b></summary>
+<details><summary><b>All Api in Visual Basic .NET / VB接口汇总</b></summary>
 
 
 >---
@@ -5220,7 +5358,7 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 </details>
 
 
-<details><summary><b>All Api in F# / F# 完整接口<b></summary>
+<details><summary><b>All Api in F# / F# 完整接口</b></summary>
 
 
 >---
