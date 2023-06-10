@@ -29,19 +29,19 @@ auto result = Language_Translate(fromLanguage,toLanguage,text);
  - C#
 ```csharp
 // 翻译 返回值类型：string
-var Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate");
+var Language_Translate = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Language::Translate");
 var result = Language_Translate(fromLanguage,toLanguage,text);
 ```
  - Visual Basic .NET
 ```vb
 ' 翻译 返回值类型：string
-Dim Language_Translate = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Language::Translate")
+Dim Language_Translate = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Language::Translate")
 Dim result = Language_Translate(fromLanguage,toLanguage,text)
 ```
  - F#
 ```fsharp
 // 翻译 返回值类型：string
-let Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate")
+let Language_Translate = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Language::Translate")
 (fromLanguage,toLanguage,text)
 	|>Language_Translate.Invoke
 	|>ignore

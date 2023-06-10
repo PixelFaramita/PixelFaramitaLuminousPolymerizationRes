@@ -31,19 +31,19 @@ auto result = FloatText_Add(playerXuid,x,y,z,text);
  - C#
 ```csharp
 // 创建浮空字(给玩家发包) 返回值类型：int
-var FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add");
+var FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add");
 var result = FloatText_Add(playerXuid,x,y,z,text);
 ```
  - Visual Basic .NET
 ```vb
 ' 创建浮空字(给玩家发包) 返回值类型：int
-Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Integer,String,Single,Single,Single,String)("PFLP", "FloatText::Add")
+Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,String,Integer))("PFLP", "FloatText::Add")
 Dim result = FloatText_Add(playerXuid,x,y,z,text)
 ```
  - F#
 ```fsharp
 // 创建浮空字(给玩家发包) 返回值类型：int
-let FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add")
+let FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add")
 (playerXuid,x,y,z,text)
 	|>FloatText_Add.Invoke
 	|>ignore
@@ -72,19 +72,19 @@ FloatText_Remove(playerXuid,id);
  - C#
 ```csharp
 // 移除浮空字(给玩家发包)
-var FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove");
+var FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove");
 FloatText_Remove(playerXuid,id);
 ```
  - Visual Basic .NET
 ```vb
 ' 移除浮空字(给玩家发包)
-Dim FloatText_Remove = RemoteCallAPI.Import_As(Of String,Integer)("PFLP", "FloatText::Remove")
+Dim FloatText_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Integer))("PFLP", "FloatText::Remove")
 FloatText_Remove(playerXuid,id)
 ```
  - F#
 ```fsharp
 // 移除浮空字(给玩家发包)
-let FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove")
+let FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove")
 (playerXuid,id)
 	|>FloatText_Remove.Invoke
 ```

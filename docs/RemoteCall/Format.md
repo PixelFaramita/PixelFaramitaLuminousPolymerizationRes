@@ -29,19 +29,19 @@ auto result = Format_GetVariableString(playerXuid,name,format);
  - C#
 ```csharp
 // 获取变量 返回值类型：string
-var Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString");
+var Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString");
 var result = Format_GetVariableString(playerXuid,name,format);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取变量 返回值类型：string
-Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString")
+Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString")
 Dim result = Format_GetVariableString(playerXuid,name,format)
 ```
  - F#
 ```fsharp
 // 获取变量 返回值类型：string
-let Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
+let Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 (playerXuid,name,format)
 	|>Format_GetVariableString.Invoke
 	|>ignore
@@ -70,19 +70,19 @@ auto result = Format_GetVariableInt(playerXuid,name);
  - C#
 ```csharp
 // 获取变量，但是强制返回int类型 返回值类型：int
-var Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt");
+var Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt");
 var result = Format_GetVariableInt(playerXuid,name);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取变量，但是强制返回int类型 返回值类型：int
-Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Integer,String,String)("PFLP", "Format::GetVariableInt")
+Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Func(Of String,String,Integer))("PFLP", "Format::GetVariableInt")
 Dim result = Format_GetVariableInt(playerXuid,name)
 ```
  - F#
 ```fsharp
 // 获取变量，但是强制返回int类型 返回值类型：int
-let Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt")
+let Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt")
 (playerXuid,name)
 	|>Format_GetVariableInt.Invoke
 	|>ignore
@@ -111,19 +111,19 @@ auto result = Format_FormatRawString(playerXuid,rawFormat);
  - C#
 ```csharp
 // 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
-var Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString");
+var Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString");
 var result = Format_FormatRawString(playerXuid,rawFormat);
 ```
  - Visual Basic .NET
 ```vb
 ' 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
-Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::FormatRawString")
+Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::FormatRawString")
 Dim result = Format_FormatRawString(playerXuid,rawFormat)
 ```
  - F#
 ```fsharp
 // 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
-let Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString")
+let Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString")
 (playerXuid,rawFormat)
 	|>Format_FormatRawString.Invoke
 	|>ignore
@@ -152,19 +152,19 @@ auto result = Format_DefineFormat(id,rawFormat);
  - C#
 ```csharp
 // 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
-var Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat");
+var Format_DefineFormat = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Format::DefineFormat");
 var result = Format_DefineFormat(id,rawFormat);
 ```
  - Visual Basic .NET
 ```vb
 ' 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
-Dim Format_DefineFormat = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Format::DefineFormat")
+Dim Format_DefineFormat = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Format::DefineFormat")
 Dim result = Format_DefineFormat(id,rawFormat)
 ```
  - F#
 ```fsharp
 // 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
-let Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat")
+let Format_DefineFormat = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Format::DefineFormat")
 (id,rawFormat)
 	|>Format_DefineFormat.Invoke
 	|>ignore
@@ -192,19 +192,19 @@ auto result = Format_RemoveFormat(id);
  - C#
 ```csharp
 // 移除格式化定义（返回true为存在并移除） 返回值类型：bool
-var Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat");
+var Format_RemoveFormat = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "Format::RemoveFormat");
 var result = Format_RemoveFormat(id);
 ```
  - Visual Basic .NET
 ```vb
 ' 移除格式化定义（返回true为存在并移除） 返回值类型：bool
-Dim Format_RemoveFormat = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "Format::RemoveFormat")
+Dim Format_RemoveFormat = RemoteCallAPI.ImportAs(Of Func(Of String,Boolean))("PFLP", "Format::RemoveFormat")
 Dim result = Format_RemoveFormat(id)
 ```
  - F#
 ```fsharp
 // 移除格式化定义（返回true为存在并移除） 返回值类型：bool
-let Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat")
+let Format_RemoveFormat = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "Format::RemoveFormat")
 id
 	|>Format_RemoveFormat.Invoke
 	|>ignore
@@ -234,19 +234,19 @@ auto result = Format_GetFormatWithPlayer(id,playerXuid,extra);
  - C#
 ```csharp
 // 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
-var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer");
+var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetFormatWithPlayer");
 var result = Format_GetFormatWithPlayer(id,playerXuid,extra);
 ```
  - Visual Basic .NET
 ```vb
 ' 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
-Dim Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetFormatWithPlayer")
+Dim Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetFormatWithPlayer")
 Dim result = Format_GetFormatWithPlayer(id,playerXuid,extra)
 ```
  - F#
 ```fsharp
 // 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
-let Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer")
+let Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetFormatWithPlayer")
 (id,playerXuid,extra)
 	|>Format_GetFormatWithPlayer.Invoke
 	|>ignore
@@ -277,19 +277,19 @@ auto result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra)
  - C#
 ```csharp
 // 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
-var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang");
+var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<Func<string,string,string,string,string>>("PFLP", "Format::GetFormatWithPlayerLang");
 var result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra);
 ```
  - Visual Basic .NET
 ```vb
 ' 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
-Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang")
+Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String,String))("PFLP", "Format::GetFormatWithPlayerLang")
 Dim result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra)
 ```
  - F#
 ```fsharp
 // 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
-let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
+let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<Func<string,string,string,string,string>>("PFLP", "Format::GetFormatWithPlayerLang")
 (id,playerXuid,playerLangXuid,extra)
 	|>Format_GetFormatWithPlayerLang.Invoke
 	|>ignore
@@ -318,19 +318,19 @@ auto result = Format_GetFormat(id,extra);
  - C#
 ```csharp
 // 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
-var Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat");
+var Format_GetFormat = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::GetFormat");
 var result = Format_GetFormat(id,extra);
 ```
  - Visual Basic .NET
 ```vb
 ' 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
-Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat")
+Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::GetFormat")
 Dim result = Format_GetFormat(id,extra)
 ```
  - F#
 ```fsharp
 // 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
-let Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
+let Format_GetFormat = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::GetFormat")
 (id,extra)
 	|>Format_GetFormat.Invoke
 	|>ignore

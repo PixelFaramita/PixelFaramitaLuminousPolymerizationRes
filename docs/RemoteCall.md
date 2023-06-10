@@ -61,19 +61,19 @@
 > - C#
 >```csharp
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
->var General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig");
+>var General_SetConfig = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "General::SetConfig");
 >var result = General_SetConfig(jsonStr);
 >```
 > - Visual Basic .NET
 >```vb
 >' 设置全局配置文件（要求JSON字符串） 返回值类型：bool
->Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "General::SetConfig")
+>Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Func(Of String,Boolean))("PFLP", "General::SetConfig")
 >Dim result = General_SetConfig(jsonStr)
 >```
 > - F#
 >```fsharp
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
->let General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
+>let General_SetConfig = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "General::SetConfig")
 >jsonStr
 >	|>General_SetConfig.Invoke
 >	|>ignore
@@ -108,19 +108,19 @@
 > - C#
 >```csharp
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
->var General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig");
+>var General_GetConfig = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig");
 >var result = General_GetConfig();
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取全局配置文件（JSON字符串） 返回值类型：string
->Dim General_GetConfig = RemoteCallAPI.ImportAs(Of String)("PFLP", "General::GetConfig")
+>Dim General_GetConfig = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "General::GetConfig")
 >Dim result = General_GetConfig()
 >```
 > - F#
 >```fsharp
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
->let General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig")
+>let General_GetConfig = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig")
 >General_GetConfig()
 >	|>ignore
 >```
@@ -154,19 +154,19 @@
 > - C#
 >```csharp
 >// 重新加载所有功能的配置文件
->var General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload");
+>var General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload");
 >General_Reload();
 >```
 > - Visual Basic .NET
 >```vb
 >' 重新加载所有功能的配置文件
->Dim General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+>Dim General_Reload = RemoteCallAPI.ImportAs(Of Action)("PFLP", "General::Reload")
 >General_Reload()
 >```
 > - F#
 >```fsharp
 >// 重新加载所有功能的配置文件
->let General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+>let General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload")
 >General_Reload()
 >```
 >
@@ -201,19 +201,19 @@
 > - C#
 >```csharp
 >// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
->var Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp");
+>var Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp");
 >var result = Tpa_GetTemp(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
->Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Tpa::GetTemp")
+>Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp")
 >Dim result = Tpa_GetTemp(playerXuid)
 >```
 > - F#
 >```fsharp
 >// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
->let Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp")
+>let Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
 >playerXuid
 >	|>Tpa_GetTemp.Invoke
 >	|>ignore
@@ -252,19 +252,19 @@
 > - C#
 >```csharp
 >// 获取变量 返回值类型：string
->var Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString");
+>var Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString");
 >var result = Format_GetVariableString(playerXuid,name,format);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取变量 返回值类型：string
->Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString")
+>Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString")
 >Dim result = Format_GetVariableString(playerXuid,name,format)
 >```
 > - F#
 >```fsharp
 >// 获取变量 返回值类型：string
->let Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
+>let Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 >(playerXuid,name,format)
 >	|>Format_GetVariableString.Invoke
 >	|>ignore
@@ -301,19 +301,19 @@
 > - C#
 >```csharp
 >// 获取变量，但是强制返回int类型 返回值类型：int
->var Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt");
+>var Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt");
 >var result = Format_GetVariableInt(playerXuid,name);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取变量，但是强制返回int类型 返回值类型：int
->Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Integer,String,String)("PFLP", "Format::GetVariableInt")
+>Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Func(Of String,String,Integer))("PFLP", "Format::GetVariableInt")
 >Dim result = Format_GetVariableInt(playerXuid,name)
 >```
 > - F#
 >```fsharp
 >// 获取变量，但是强制返回int类型 返回值类型：int
->let Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt")
+>let Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt")
 >(playerXuid,name)
 >	|>Format_GetVariableInt.Invoke
 >	|>ignore
@@ -350,19 +350,19 @@
 > - C#
 >```csharp
 >// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
->var Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString");
+>var Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString");
 >var result = Format_FormatRawString(playerXuid,rawFormat);
 >```
 > - Visual Basic .NET
 >```vb
 >' 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
->Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::FormatRawString")
+>Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::FormatRawString")
 >Dim result = Format_FormatRawString(playerXuid,rawFormat)
 >```
 > - F#
 >```fsharp
 >// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
->let Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString")
+>let Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString")
 >(playerXuid,rawFormat)
 >	|>Format_FormatRawString.Invoke
 >	|>ignore
@@ -399,19 +399,19 @@
 > - C#
 >```csharp
 >// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
->var Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat");
+>var Format_DefineFormat = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Format::DefineFormat");
 >var result = Format_DefineFormat(id,rawFormat);
 >```
 > - Visual Basic .NET
 >```vb
 >' 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
->Dim Format_DefineFormat = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Format::DefineFormat")
+>Dim Format_DefineFormat = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Format::DefineFormat")
 >Dim result = Format_DefineFormat(id,rawFormat)
 >```
 > - F#
 >```fsharp
 >// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
->let Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat")
+>let Format_DefineFormat = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Format::DefineFormat")
 >(id,rawFormat)
 >	|>Format_DefineFormat.Invoke
 >	|>ignore
@@ -447,19 +447,19 @@
 > - C#
 >```csharp
 >// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
->var Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat");
+>var Format_RemoveFormat = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "Format::RemoveFormat");
 >var result = Format_RemoveFormat(id);
 >```
 > - Visual Basic .NET
 >```vb
 >' 移除格式化定义（返回true为存在并移除） 返回值类型：bool
->Dim Format_RemoveFormat = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "Format::RemoveFormat")
+>Dim Format_RemoveFormat = RemoteCallAPI.ImportAs(Of Func(Of String,Boolean))("PFLP", "Format::RemoveFormat")
 >Dim result = Format_RemoveFormat(id)
 >```
 > - F#
 >```fsharp
 >// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
->let Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat")
+>let Format_RemoveFormat = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "Format::RemoveFormat")
 >id
 >	|>Format_RemoveFormat.Invoke
 >	|>ignore
@@ -497,19 +497,19 @@
 > - C#
 >```csharp
 >// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
->var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer");
+>var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetFormatWithPlayer");
 >var result = Format_GetFormatWithPlayer(id,playerXuid,extra);
 >```
 > - Visual Basic .NET
 >```vb
 >' 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
->Dim Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetFormatWithPlayer")
+>Dim Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetFormatWithPlayer")
 >Dim result = Format_GetFormatWithPlayer(id,playerXuid,extra)
 >```
 > - F#
 >```fsharp
 >// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
->let Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer")
+>let Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetFormatWithPlayer")
 >(id,playerXuid,extra)
 >	|>Format_GetFormatWithPlayer.Invoke
 >	|>ignore
@@ -548,19 +548,19 @@
 > - C#
 >```csharp
 >// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
->var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang");
+>var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<Func<string,string,string,string,string>>("PFLP", "Format::GetFormatWithPlayerLang");
 >var result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra);
 >```
 > - Visual Basic .NET
 >```vb
 >' 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
->Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang")
+>Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String,String))("PFLP", "Format::GetFormatWithPlayerLang")
 >Dim result = Format_GetFormatWithPlayerLang(id,playerXuid,playerLangXuid,extra)
 >```
 > - F#
 >```fsharp
 >// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
->let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
+>let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<Func<string,string,string,string,string>>("PFLP", "Format::GetFormatWithPlayerLang")
 >(id,playerXuid,playerLangXuid,extra)
 >	|>Format_GetFormatWithPlayerLang.Invoke
 >	|>ignore
@@ -597,19 +597,19 @@
 > - C#
 >```csharp
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
->var Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat");
+>var Format_GetFormat = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::GetFormat");
 >var result = Format_GetFormat(id,extra);
 >```
 > - Visual Basic .NET
 >```vb
 >' 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
->Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat")
+>Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::GetFormat")
 >Dim result = Format_GetFormat(id,extra)
 >```
 > - F#
 >```fsharp
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
->let Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
+>let Format_GetFormat = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::GetFormat")
 >(id,extra)
 >	|>Format_GetFormat.Invoke
 >	|>ignore
@@ -647,19 +647,19 @@
 > - C#
 >```csharp
 >// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
->var Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand");
+>var Command_RenameCommand = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::RenameCommand");
 >Command_RenameCommand(cmd,newCmd);
 >```
 > - Visual Basic .NET
 >```vb
 >' 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
->Dim Command_RenameCommand = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::RenameCommand")
+>Dim Command_RenameCommand = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Command::RenameCommand")
 >Command_RenameCommand(cmd,newCmd)
 >```
 > - F#
 >```fsharp
 >// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
->let Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
+>let Command_RenameCommand = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::RenameCommand")
 >(cmd,newCmd)
 >	|>Command_RenameCommand.Invoke
 >```
@@ -695,19 +695,19 @@
 > - C#
 >```csharp
 >// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
->var Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand");
+>var Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Command::ExecuteInternalCommand");
 >var result = Command_ExecuteInternalCommand(playerXuid,cmd);
 >```
 > - Visual Basic .NET
 >```vb
 >' 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
->Dim Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Command::ExecuteInternalCommand")
+>Dim Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Command::ExecuteInternalCommand")
 >Dim result = Command_ExecuteInternalCommand(playerXuid,cmd)
 >```
 > - F#
 >```fsharp
 >// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
->let Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand")
+>let Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Command::ExecuteInternalCommand")
 >(playerXuid,cmd)
 >	|>Command_ExecuteInternalCommand.Invoke
 >	|>ignore
@@ -745,19 +745,19 @@
 > - C#
 >```csharp
 >// 设置命令禁用(可设置提示)(支持任意命令)
->var Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled");
+>var Command_SetCommandDisabled = RemoteCallAPI.ImportAs<Action<string,string,string>>("PFLP", "Command::SetCommandDisabled");
 >Command_SetCommandDisabled(playerXuid,cmd,feedback);
 >```
 > - Visual Basic .NET
 >```vb
 >' 设置命令禁用(可设置提示)(支持任意命令)
->Dim Command_SetCommandDisabled = RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled")
+>Dim Command_SetCommandDisabled = RemoteCallAPI.ImportAs(Of Action(Of String,String,String))("PFLP", "Command::SetCommandDisabled")
 >Command_SetCommandDisabled(playerXuid,cmd,feedback)
 >```
 > - F#
 >```fsharp
 >// 设置命令禁用(可设置提示)(支持任意命令)
->let Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
+>let Command_SetCommandDisabled = RemoteCallAPI.ImportAs<Action<string,string,string>>("PFLP", "Command::SetCommandDisabled")
 >(playerXuid,cmd,feedback)
 >	|>Command_SetCommandDisabled.Invoke
 >```
@@ -793,19 +793,19 @@
 > - C#
 >```csharp
 >// 设置命令启用
->var Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled");
+>var Command_SetCommandEnabled = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::SetCommandEnabled");
 >Command_SetCommandEnabled(playerXuid,cmd);
 >```
 > - Visual Basic .NET
 >```vb
 >' 设置命令启用
->Dim Command_SetCommandEnabled = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::SetCommandEnabled")
+>Dim Command_SetCommandEnabled = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Command::SetCommandEnabled")
 >Command_SetCommandEnabled(playerXuid,cmd)
 >```
 > - F#
 >```fsharp
 >// 设置命令启用
->let Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled")
+>let Command_SetCommandEnabled = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::SetCommandEnabled")
 >(playerXuid,cmd)
 >	|>Command_SetCommandEnabled.Invoke
 >```
@@ -843,19 +843,19 @@
 > - C#
 >```csharp
 >// 翻译 返回值类型：string
->var Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate");
+>var Language_Translate = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Language::Translate");
 >var result = Language_Translate(fromLanguage,toLanguage,text);
 >```
 > - Visual Basic .NET
 >```vb
 >' 翻译 返回值类型：string
->Dim Language_Translate = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Language::Translate")
+>Dim Language_Translate = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Language::Translate")
 >Dim result = Language_Translate(fromLanguage,toLanguage,text)
 >```
 > - F#
 >```fsharp
 >// 翻译 返回值类型：string
->let Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate")
+>let Language_Translate = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Language::Translate")
 >(fromLanguage,toLanguage,text)
 >	|>Language_Translate.Invoke
 >	|>ignore
@@ -893,19 +893,19 @@
 > - C#
 >```csharp
 >// 设置玩家昵称
->var ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName");
+>var ChatEx_SetNickName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetNickName");
 >ChatEx_SetNickName(playerXuid,nickName);
 >```
 > - Visual Basic .NET
 >```vb
 >' 设置玩家昵称
->Dim ChatEx_SetNickName = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetNickName")
+>Dim ChatEx_SetNickName = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetNickName")
 >ChatEx_SetNickName(playerXuid,nickName)
 >```
 > - F#
 >```fsharp
 >// 设置玩家昵称
->let ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName")
+>let ChatEx_SetNickName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetNickName")
 >(playerXuid,nickName)
 >	|>ChatEx_SetNickName.Invoke
 >```
@@ -941,19 +941,19 @@
 > - C#
 >```csharp
 >// 设置玩家聊天时的名字
->var ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName");
+>var ChatEx_SetFakeName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetFakeName");
 >ChatEx_SetFakeName(playerXuid,fakeName);
 >```
 > - Visual Basic .NET
 >```vb
 >' 设置玩家聊天时的名字
->Dim ChatEx_SetFakeName = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetFakeName")
+>Dim ChatEx_SetFakeName = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetFakeName")
 >ChatEx_SetFakeName(playerXuid,fakeName)
 >```
 > - F#
 >```fsharp
 >// 设置玩家聊天时的名字
->let ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName")
+>let ChatEx_SetFakeName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetFakeName")
 >(playerXuid,fakeName)
 >	|>ChatEx_SetFakeName.Invoke
 >```
@@ -989,19 +989,19 @@
 > - C#
 >```csharp
 >// 设置玩家聊天消息后缀
->var ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd");
+>var ChatEx_SetEnd = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetEnd");
 >ChatEx_SetEnd(playerXuid,endStr);
 >```
 > - Visual Basic .NET
 >```vb
 >' 设置玩家聊天消息后缀
->Dim ChatEx_SetEnd = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetEnd")
+>Dim ChatEx_SetEnd = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetEnd")
 >ChatEx_SetEnd(playerXuid,endStr)
 >```
 > - F#
 >```fsharp
 >// 设置玩家聊天消息后缀
->let ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd")
+>let ChatEx_SetEnd = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetEnd")
 >(playerXuid,endStr)
 >	|>ChatEx_SetEnd.Invoke
 >```
@@ -1037,19 +1037,19 @@
 > - C#
 >```csharp
 >// 设置玩家聊天消息前缀
->var ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart");
+>var ChatEx_SetStart = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetStart");
 >ChatEx_SetStart(playerXuid,startStr);
 >```
 > - Visual Basic .NET
 >```vb
 >' 设置玩家聊天消息前缀
->Dim ChatEx_SetStart = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetStart")
+>Dim ChatEx_SetStart = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetStart")
 >ChatEx_SetStart(playerXuid,startStr)
 >```
 > - F#
 >```fsharp
 >// 设置玩家聊天消息前缀
->let ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart")
+>let ChatEx_SetStart = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetStart")
 >(playerXuid,startStr)
 >	|>ChatEx_SetStart.Invoke
 >```
@@ -1084,19 +1084,19 @@
 > - C#
 >```csharp
 >// 获取玩家昵称 返回值类型：string
->var ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName");
+>var ChatEx_GetNickName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetNickName");
 >var result = ChatEx_GetNickName(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取玩家昵称 返回值类型：string
->Dim ChatEx_GetNickName = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetNickName")
+>Dim ChatEx_GetNickName = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetNickName")
 >Dim result = ChatEx_GetNickName(playerXuid)
 >```
 > - F#
 >```fsharp
 >// 获取玩家昵称 返回值类型：string
->let ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName")
+>let ChatEx_GetNickName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetNickName")
 >playerXuid
 >	|>ChatEx_GetNickName.Invoke
 >	|>ignore
@@ -1132,19 +1132,19 @@
 > - C#
 >```csharp
 >// 获取玩家聊天时的名字 返回值类型：string
->var ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName");
+>var ChatEx_GetFakeName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetFakeName");
 >var result = ChatEx_GetFakeName(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取玩家聊天时的名字 返回值类型：string
->Dim ChatEx_GetFakeName = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetFakeName")
+>Dim ChatEx_GetFakeName = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetFakeName")
 >Dim result = ChatEx_GetFakeName(playerXuid)
 >```
 > - F#
 >```fsharp
 >// 获取玩家聊天时的名字 返回值类型：string
->let ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName")
+>let ChatEx_GetFakeName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetFakeName")
 >playerXuid
 >	|>ChatEx_GetFakeName.Invoke
 >	|>ignore
@@ -1180,19 +1180,19 @@
 > - C#
 >```csharp
 >// 获取玩家聊天消息后缀 返回值类型：string
->var ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd");
+>var ChatEx_GetEnd = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetEnd");
 >var result = ChatEx_GetEnd(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取玩家聊天消息后缀 返回值类型：string
->Dim ChatEx_GetEnd = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetEnd")
+>Dim ChatEx_GetEnd = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetEnd")
 >Dim result = ChatEx_GetEnd(playerXuid)
 >```
 > - F#
 >```fsharp
 >// 获取玩家聊天消息后缀 返回值类型：string
->let ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd")
+>let ChatEx_GetEnd = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetEnd")
 >playerXuid
 >	|>ChatEx_GetEnd.Invoke
 >	|>ignore
@@ -1228,19 +1228,19 @@
 > - C#
 >```csharp
 >// 获取玩家聊天消息前缀 返回值类型：string
->var ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart");
+>var ChatEx_GetStart = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetStart");
 >var result = ChatEx_GetStart(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取玩家聊天消息前缀 返回值类型：string
->Dim ChatEx_GetStart = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetStart")
+>Dim ChatEx_GetStart = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetStart")
 >Dim result = ChatEx_GetStart(playerXuid)
 >```
 > - F#
 >```fsharp
 >// 获取玩家聊天消息前缀 返回值类型：string
->let ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart")
+>let ChatEx_GetStart = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetStart")
 >playerXuid
 >	|>ChatEx_GetStart.Invoke
 >	|>ignore
@@ -1286,19 +1286,19 @@
 > - C#
 >```csharp
 >// 给指定方块描框
->var ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock");
+>var ParticlesGraphics_DrawBlock = RemoteCallAPI.ImportAs<Action<string,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBlock");
 >ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 >```
 > - Visual Basic .NET
 >```vb
 >' 给指定方块描框
->Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock")
+>Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.ImportAs(Of Action(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))("PFLP", "ParticlesGraphics::DrawBlock")
 >ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
 >```
 > - F#
 >```fsharp
 >// 给指定方块描框
->let ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
+>let ParticlesGraphics_DrawBlock = RemoteCallAPI.ImportAs<Action<string,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBlock")
 >(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
 >	|>ParticlesGraphics_DrawBlock.Invoke
 >```
@@ -1345,19 +1345,19 @@
 > - C#
 >```csharp
 >// 给指定区域描框
->var ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder");
+>var ParticlesGraphics_DrawBorder = RemoteCallAPI.ImportAs<Action<string,int,int,int,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBorder");
 >ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >```
 > - Visual Basic .NET
 >```vb
 >' 给指定区域描框
->Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder")
+>Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.ImportAs(Of Action(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))("PFLP", "ParticlesGraphics::DrawBorder")
 >ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 >```
 > - F#
 >```fsharp
 >// 给指定区域描框
->let ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
+>let ParticlesGraphics_DrawBorder = RemoteCallAPI.ImportAs<Action<string,int,int,int,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBorder")
 >(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 >	|>ParticlesGraphics_DrawBorder.Invoke
 >```
@@ -1399,19 +1399,19 @@
 > - C#
 >```csharp
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
->var Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand");
+>var Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,bool>>("PFLP", "Lands::CheckCubeHasLand");
 >var result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查指定立方体区域(float)是否有领地 返回值类型：bool
->Dim Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::CheckCubeHasLand")
+>Dim Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,Boolean))("PFLP", "Lands::CheckCubeHasLand")
 >Dim result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
->let Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand")
+>let Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,bool>>("PFLP", "Lands::CheckCubeHasLand")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
 >	|>Lands_CheckCubeHasLand.Invoke
 >	|>ignore
@@ -1453,19 +1453,19 @@
 > - C#
 >```csharp
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
->var Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt");
+>var Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,bool>>("PFLP", "Lands::CheckCubeHasLandInt");
 >var result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查指定立方体区域(int)是否有领地 返回值类型：bool
->Dim Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckCubeHasLandInt")
+>Dim Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::CheckCubeHasLandInt")
 >Dim result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
->let Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt")
+>let Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,bool>>("PFLP", "Lands::CheckCubeHasLandInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
 >	|>Lands_CheckCubeHasLandInt.Invoke
 >	|>ignore
@@ -1504,19 +1504,19 @@
 > - C#
 >```csharp
 >// 检查指定坐标(float)是否有领地 返回值类型：bool
->var Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand");
+>var Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::CheckPosHasLand");
 >var result = Lands_CheckPosHasLand(x,y,z,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查指定坐标(float)是否有领地 返回值类型：bool
->Dim Lands_CheckPosHasLand = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::CheckPosHasLand")
+>Dim Lands_CheckPosHasLand = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,Boolean))("PFLP", "Lands::CheckPosHasLand")
 >Dim result = Lands_CheckPosHasLand(x,y,z,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 检查指定坐标(float)是否有领地 返回值类型：bool
->let Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand")
+>let Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::CheckPosHasLand")
 >(x,y,z,dimensionId)
 >	|>Lands_CheckPosHasLand.Invoke
 >	|>ignore
@@ -1555,19 +1555,19 @@
 > - C#
 >```csharp
 >// 检查指定坐标(int)是否有领地 返回值类型：bool
->var Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt");
+>var Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::CheckPosHasLandInt");
 >var result = Lands_CheckPosHasLandInt(x,y,z,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查指定坐标(int)是否有领地 返回值类型：bool
->Dim Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckPosHasLandInt")
+>Dim Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::CheckPosHasLandInt")
 >Dim result = Lands_CheckPosHasLandInt(x,y,z,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 检查指定坐标(int)是否有领地 返回值类型：bool
->let Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt")
+>let Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::CheckPosHasLandInt")
 >(x,y,z,dimensionId)
 >	|>Lands_CheckPosHasLandInt.Invoke
 >	|>ignore
@@ -1609,19 +1609,19 @@
 > - C#
 >```csharp
 >// 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube");
+>var Lands_GetLandByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandByCube");
 >var result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandByCube = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByCube")
+>Dim Lands_GetLandByCube = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandByCube")
 >Dim result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube")
+>let Lands_GetLandByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandByCube")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
 >	|>Lands_GetLandByCube.Invoke
 >	|>ignore
@@ -1663,19 +1663,19 @@
 > - C#
 >```csharp
 >// 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt");
+>var Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandByCubeInt");
 >var result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByCubeInt")
+>Dim Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandByCubeInt")
 >Dim result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt")
+>let Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandByCubeInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
 >	|>Lands_GetLandByCubeInt.Invoke
 >	|>ignore
@@ -1714,19 +1714,19 @@
 > - C#
 >```csharp
 >// 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos");
+>var Lands_GetLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandByPos");
 >var result = Lands_GetLandByPos(x,y,z,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByPos")
+>Dim Lands_GetLandByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandByPos")
 >Dim result = Lands_GetLandByPos(x,y,z,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos")
+>let Lands_GetLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandByPos")
 >(x,y,z,dimensionId)
 >	|>Lands_GetLandByPos.Invoke
 >	|>ignore
@@ -1765,19 +1765,19 @@
 > - C#
 >```csharp
 >// 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt");
+>var Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandByPosInt");
 >var result = Lands_GetLandByPosInt(x,y,z,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByPosInt")
+>Dim Lands_GetLandByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandByPosInt")
 >Dim result = Lands_GetLandByPosInt(x,y,z,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt")
+>let Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandByPosInt")
 >(x,y,z,dimensionId)
 >	|>Lands_GetLandByPosInt.Invoke
 >	|>ignore
@@ -1819,19 +1819,19 @@
 > - C#
 >```csharp
 >// 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube");
+>var Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByCube");
 >var result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByCube")
+>Dim Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandInfoByCube")
 >Dim result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube")
+>let Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByCube")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
 >	|>Lands_GetLandInfoByCube.Invoke
 >	|>ignore
@@ -1873,19 +1873,19 @@
 > - C#
 >```csharp
 >// 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt");
+>var Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByCubeInt");
 >var result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByCubeInt")
+>Dim Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandInfoByCubeInt")
 >Dim result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt")
+>let Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByCubeInt")
 >(x1,y1,z1,x2,y2,z2,dimensionId)
 >	|>Lands_GetLandInfoByCubeInt.Invoke
 >	|>ignore
@@ -1924,19 +1924,19 @@
 > - C#
 >```csharp
 >// 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos");
+>var Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByPos");
 >var result = Lands_GetLandInfoByPos(x,y,z,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByPos")
+>Dim Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandInfoByPos")
 >Dim result = Lands_GetLandInfoByPos(x,y,z,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos")
+>let Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByPos")
 >(x,y,z,dimensionId)
 >	|>Lands_GetLandInfoByPos.Invoke
 >	|>ignore
@@ -1975,19 +1975,19 @@
 > - C#
 >```csharp
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt");
+>var Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByPosInt");
 >var result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByPosInt")
+>Dim Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandInfoByPosInt")
 >Dim result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt")
+>let Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByPosInt")
 >(x,y,z,dimensionId)
 >	|>Lands_GetLandInfoByPosInt.Invoke
 >	|>ignore
@@ -2027,19 +2027,19 @@
 > - C#
 >```csharp
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->var Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos");
+>var Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::SetLandInfoByPos");
 >var result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo);
 >```
 > - Visual Basic .NET
 >```vb
 >' 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->Dim Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByPos")
+>Dim Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::SetLandInfoByPos")
 >Dim result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo)
 >```
 > - F#
 >```fsharp
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos")
+>let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::SetLandInfoByPos")
 >(x,y,z,dimensionId,landinfo)
 >	|>Lands_SetLandInfoByPos.Invoke
 >	|>ignore
@@ -2079,19 +2079,19 @@
 > - C#
 >```csharp
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->var Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt");
+>var Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::SetLandInfoByPosInt");
 >var result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo);
 >```
 > - Visual Basic .NET
 >```vb
 >' 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->Dim Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::SetLandInfoByPosInt")
+>Dim Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::SetLandInfoByPosInt")
 >Dim result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo)
 >```
 > - F#
 >```fsharp
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt")
+>let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::SetLandInfoByPosInt")
 >(x,y,z,dimensionId,landinfo)
 >	|>Lands_SetLandInfoByPosInt.Invoke
 >	|>ignore
@@ -2132,19 +2132,19 @@
 > - C#
 >```csharp
 >// 新建领地 返回值类型：bool
->var Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D");
+>var Lands_CreateLand2D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand2D");
 >var result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 新建领地 返回值类型：bool
->Dim Lands_CreateLand2D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand2D")
+>Dim Lands_CreateLand2D = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CreateLand2D")
 >Dim result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 新建领地 返回值类型：bool
->let Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D")
+>let Lands_CreateLand2D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand2D")
 >(x1,z1,x2,z2,dimensionId,playerXuid)
 >	|>Lands_CreateLand2D.Invoke
 >	|>ignore
@@ -2187,19 +2187,19 @@
 > - C#
 >```csharp
 >// 新建领地 返回值类型：bool
->var Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D");
+>var Lands_CreateLand3D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand3D");
 >var result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 新建领地 返回值类型：bool
->Dim Lands_CreateLand3D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand3D")
+>Dim Lands_CreateLand3D = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CreateLand3D")
 >Dim result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 新建领地 返回值类型：bool
->let Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D")
+>let Lands_CreateLand3D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand3D")
 >(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
 >	|>Lands_CreateLand3D.Invoke
 >	|>ignore
@@ -2238,19 +2238,19 @@
 > - C#
 >```csharp
 >// 删除指定坐标(float)的领地 返回值类型：bool
->var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos");
+>var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::DeleteLandByPos");
 >var result = Lands_DeleteLandByPos(x,y,z,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 删除指定坐标(float)的领地 返回值类型：bool
->Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::DeleteLandByPos")
+>Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,Boolean))("PFLP", "Lands::DeleteLandByPos")
 >Dim result = Lands_DeleteLandByPos(x,y,z,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 删除指定坐标(float)的领地 返回值类型：bool
->let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos")
+>let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::DeleteLandByPos")
 >(x,y,z,dimensionId)
 >	|>Lands_DeleteLandByPos.Invoke
 >	|>ignore
@@ -2289,19 +2289,19 @@
 > - C#
 >```csharp
 >// 删除指定坐标(int)的领地 返回值类型：bool
->var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt");
+>var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::DeleteLandByPosInt");
 >var result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 删除指定坐标(int)的领地 返回值类型：bool
->Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::DeleteLandByPosInt")
+>Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::DeleteLandByPosInt")
 >Dim result = Lands_DeleteLandByPosInt(x,y,z,dimensionId)
 >```
 > - F#
 >```fsharp
 >// 删除指定坐标(int)的领地 返回值类型：bool
->let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt")
+>let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::DeleteLandByPosInt")
 >(x,y,z,dimensionId)
 >	|>Lands_DeleteLandByPosInt.Invoke
 >	|>ignore
@@ -2341,19 +2341,19 @@
 > - C#
 >```csharp
 >// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos");
+>var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,string>>("PFLP", "Lands::GetLandPermissionByPos");
 >var result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->Dim Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer,String)("PFLP", "Lands::GetLandPermissionByPos")
+>Dim Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,String))("PFLP", "Lands::GetLandPermissionByPos")
 >Dim result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->let Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos")
+>let Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,string>>("PFLP", "Lands::GetLandPermissionByPos")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_GetLandPermissionByPos.Invoke
 >	|>ignore
@@ -2393,19 +2393,19 @@
 > - C#
 >```csharp
 >// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt");
+>var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,string>>("PFLP", "Lands::GetLandPermissionByPosInt");
 >var result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->Dim Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::GetLandPermissionByPosInt")
+>Dim Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,String))("PFLP", "Lands::GetLandPermissionByPosInt")
 >Dim result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->let Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt")
+>let Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,string>>("PFLP", "Lands::GetLandPermissionByPosInt")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_GetLandPermissionByPosInt.Invoke
 >	|>ignore
@@ -2446,19 +2446,19 @@
 > - C#
 >```csharp
 >// 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->var Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos");
+>var Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPos");
 >var result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->Dim Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs(Of Boolean,String,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckLandPermissionByPos")
+>Dim Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckLandPermissionByPos")
 >Dim result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->let Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos")
+>let Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPos")
 >(permissionId,x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckLandPermissionByPos.Invoke
 >	|>ignore
@@ -2499,19 +2499,19 @@
 > - C#
 >```csharp
 >// 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->var Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt");
+>var Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<string,int,int,int,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPosInt");
 >var result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->Dim Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Boolean,String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckLandPermissionByPosInt")
+>Dim Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Func(Of String,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckLandPermissionByPosInt")
 >Dim result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->let Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt")
+>let Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<string,int,int,int,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPosInt")
 >(permissionId,x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckLandPermissionByPosInt.Invoke
 >	|>ignore
@@ -2551,19 +2551,19 @@
 > - C#
 >```csharp
 >// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
->var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
+>var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
 >var result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
->Dim Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>Dim Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
 >Dim result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
->let Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>let Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckPlayerIsLandOwnerByPos.Invoke
 >	|>ignore
@@ -2603,19 +2603,19 @@
 > - C#
 >```csharp
 >// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
->var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
+>var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
 >var result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
->Dim Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>Dim Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
 >Dim result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
->let Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>let Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckPlayerIsLandOwnerByPosInt.Invoke
 >	|>ignore
@@ -2655,19 +2655,19 @@
 > - C#
 >```csharp
 >// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
+>var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
 >var result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 >Dim result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckIsLandSharedToPlayerByPos.Invoke
 >	|>ignore
@@ -2707,19 +2707,19 @@
 > - C#
 >```csharp
 >// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
+>var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
 >var result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+>Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 >Dim result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+>let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckIsLandSharedToPlayerByPosInt.Invoke
 >	|>ignore
@@ -2759,19 +2759,19 @@
 > - C#
 >```csharp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
->var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
+>var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
 >var result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
->Dim Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
+>Dim Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 >Dim result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
->let Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
+>let Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckPlayerHasCreateChestPermission.Invoke
 >	|>ignore
@@ -2811,19 +2811,19 @@
 > - C#
 >```csharp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
->var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
+>var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >var result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
->Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
+>Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >Dim result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid)
 >```
 > - F#
 >```fsharp
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
->let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
+>let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >(x,y,z,dimensionId,playerXuid)
 >	|>Lands_CheckPlayerHasOpenChestPermission.Invoke
 >	|>ignore
@@ -2859,19 +2859,19 @@
 > - C#
 >```csharp
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->var Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
+>var Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
 >var result = Lands_GetPlayerAllPermissionGroupId(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->Dim Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllPermissionGroupId")
+>Dim Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >Dim result = Lands_GetPlayerAllPermissionGroupId(playerXuid)
 >```
 > - F#
 >```fsharp
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->let Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
+>let Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >playerXuid
 >	|>Lands_GetPlayerAllPermissionGroupId.Invoke
 >	|>ignore
@@ -2908,19 +2908,19 @@
 > - C#
 >```csharp
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->var Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup");
+>var Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Lands::GetPlayerPermissionGroup");
 >var result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->Dim Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerPermissionGroup")
+>Dim Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Lands::GetPlayerPermissionGroup")
 >Dim result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId)
 >```
 > - F#
 >```fsharp
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->let Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup")
+>let Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Lands::GetPlayerPermissionGroup")
 >(playerXuid,permissionGroupId)
 >	|>Lands_GetPlayerPermissionGroup.Invoke
 >	|>ignore
@@ -2957,19 +2957,19 @@
 > - C#
 >```csharp
 >// 删玩家权限组(指定ID) 返回值类型：bool
->var Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup");
+>var Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Lands::DeletePlayerPermissionGroup");
 >var result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId);
 >```
 > - Visual Basic .NET
 >```vb
 >' 删玩家权限组(指定ID) 返回值类型：bool
->Dim Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerPermissionGroup")
+>Dim Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Lands::DeletePlayerPermissionGroup")
 >Dim result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId)
 >```
 > - F#
 >```fsharp
 >// 删玩家权限组(指定ID) 返回值类型：bool
->let Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup")
+>let Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Lands::DeletePlayerPermissionGroup")
 >(playerXuid,permissionGroupId)
 >	|>Lands_DeletePlayerPermissionGroup.Invoke
 >	|>ignore
@@ -3007,19 +3007,19 @@
 > - C#
 >```csharp
 >// 修改家权限组内容(指定ID) 返回值类型：bool
->var Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup");
+>var Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::EditPlayerPermissionGroup");
 >var result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - Visual Basic .NET
 >```vb
 >' 修改家权限组内容(指定ID) 返回值类型：bool
->Dim Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerPermissionGroup")
+>Dim Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,Boolean))("PFLP", "Lands::EditPlayerPermissionGroup")
 >Dim result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString)
 >```
 > - F#
 >```fsharp
 >// 修改家权限组内容(指定ID) 返回值类型：bool
->let Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup")
+>let Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::EditPlayerPermissionGroup")
 >(playerXuid,permissionGroupId,jsonString)
 >	|>Lands_EditPlayerPermissionGroup.Invoke
 >	|>ignore
@@ -3057,19 +3057,19 @@
 > - C#
 >```csharp
 >// 添加权限组 返回值类型：bool
->var Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup");
+>var Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::AddPlayerPermissionGroup");
 >var result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 >```
 > - Visual Basic .NET
 >```vb
 >' 添加权限组 返回值类型：bool
->Dim Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerPermissionGroup")
+>Dim Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,Boolean))("PFLP", "Lands::AddPlayerPermissionGroup")
 >Dim result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString)
 >```
 > - F#
 >```fsharp
 >// 添加权限组 返回值类型：bool
->let Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup")
+>let Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::AddPlayerPermissionGroup")
 >(playerXuid,permissionGroupId,jsonString)
 >	|>Lands_AddPlayerPermissionGroup.Invoke
 >	|>ignore
@@ -3105,19 +3105,19 @@
 > - C#
 >```csharp
 >// 取玩家拥有的领地 返回值类型：string
->var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer");
+>var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsOwnedByPlayer");
 >var result = Lands_GetLandsOwnedByPlayer(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 取玩家拥有的领地 返回值类型：string
->Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer")
+>Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetLandsOwnedByPlayer")
 >Dim result = Lands_GetLandsOwnedByPlayer(playerXuid)
 >```
 > - F#
 >```fsharp
 >// 取玩家拥有的领地 返回值类型：string
->let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
+>let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsOwnedByPlayer")
 >playerXuid
 >	|>Lands_GetLandsOwnedByPlayer.Invoke
 >	|>ignore
@@ -3153,19 +3153,19 @@
 > - C#
 >```csharp
 >// 取共享给玩家的领地 返回值类型：string
->var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer");
+>var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsSharedToPlayer");
 >var result = Lands_GetLandsSharedToPlayer(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 取共享给玩家的领地 返回值类型：string
->Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsSharedToPlayer")
+>Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetLandsSharedToPlayer")
 >Dim result = Lands_GetLandsSharedToPlayer(playerXuid)
 >```
 > - F#
 >```fsharp
 >// 取共享给玩家的领地 返回值类型：string
->let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer")
+>let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsSharedToPlayer")
 >playerXuid
 >	|>Lands_GetLandsSharedToPlayer.Invoke
 >	|>ignore
@@ -3206,19 +3206,19 @@
 > - C#
 >```csharp
 >// 创建浮空字(给玩家发包) 返回值类型：int
->var FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add");
+>var FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add");
 >var result = FloatText_Add(playerXuid,x,y,z,text);
 >```
 > - Visual Basic .NET
 >```vb
 >' 创建浮空字(给玩家发包) 返回值类型：int
->Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Integer,String,Single,Single,Single,String)("PFLP", "FloatText::Add")
+>Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,String,Integer))("PFLP", "FloatText::Add")
 >Dim result = FloatText_Add(playerXuid,x,y,z,text)
 >```
 > - F#
 >```fsharp
 >// 创建浮空字(给玩家发包) 返回值类型：int
->let FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add")
+>let FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add")
 >(playerXuid,x,y,z,text)
 >	|>FloatText_Add.Invoke
 >	|>ignore
@@ -3255,19 +3255,19 @@
 > - C#
 >```csharp
 >// 移除浮空字(给玩家发包)
->var FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove");
+>var FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove");
 >FloatText_Remove(playerXuid,id);
 >```
 > - Visual Basic .NET
 >```vb
 >' 移除浮空字(给玩家发包)
->Dim FloatText_Remove = RemoteCallAPI.Import_As(Of String,Integer)("PFLP", "FloatText::Remove")
+>Dim FloatText_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Integer))("PFLP", "FloatText::Remove")
 >FloatText_Remove(playerXuid,id)
 >```
 > - F#
 >```fsharp
 >// 移除浮空字(给玩家发包)
->let FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove")
+>let FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove")
 >(playerXuid,id)
 >	|>FloatText_Remove.Invoke
 >```
@@ -3303,19 +3303,19 @@
 > - C#
 >```csharp
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
->var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
+>var Money_Get = RemoteCallAPI.ImportAs<Func<string,long>>("PFLP", "Money::Get");
 >var result = Money_Get(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
->Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
+>Dim Money_Get = RemoteCallAPI.ImportAs(Of Func(Of String,Long))("PFLP", "Money::Get")
 >Dim result = Money_Get(playerXuid)
 >```
 > - F#
 >```fsharp
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
->let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
+>let Money_Get = RemoteCallAPI.ImportAs<Func<string,int64>>("PFLP", "Money::Get")
 >playerXuid
 >	|>Money_Get.Invoke
 >	|>ignore
@@ -3353,19 +3353,19 @@
 > - C#
 >```csharp
 >// 给玩家(指定玩家名)加钱
->var Money_Add = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Add");
+>var Money_Add = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add");
 >Money_Add(playerXuid,count,info);
 >```
 > - Visual Basic .NET
 >```vb
 >' 给玩家(指定玩家名)加钱
->Dim Money_Add = RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money::Add")
+>Dim Money_Add = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add")
 >Money_Add(playerXuid,count,info)
 >```
 > - F#
 >```fsharp
 >// 给玩家(指定玩家名)加钱
->let Money_Add = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Add")
+>let Money_Add = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
 >(playerXuid,count,info)
 >	|>Money_Add.Invoke
 >```
@@ -3402,19 +3402,19 @@
 > - C#
 >```csharp
 >// 给玩家(指定玩家名)减钱
->var Money_Remove = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Remove");
+>var Money_Remove = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove");
 >Money_Remove(playerXuid,count,info);
 >```
 > - Visual Basic .NET
 >```vb
 >' 给玩家(指定玩家名)减钱
->Dim Money_Remove = RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money::Remove")
+>Dim Money_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove")
 >Money_Remove(playerXuid,count,info)
 >```
 > - F#
 >```fsharp
 >// 给玩家(指定玩家名)减钱
->let Money_Remove = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Remove")
+>let Money_Remove = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
 >(playerXuid,count,info)
 >	|>Money_Remove.Invoke
 >```
@@ -3443,32 +3443,6 @@
 >/** 作弊反馈（LLAntiCheat用） 返回值类型：bool */
 >const Internal_CheatPunish = ll.import("PFLP", "Internal::CheatPunish");
 >let result = Internal_CheatPunish(PunishLevel,PunishReason,playerXuid,CheatCount);
->```
-> - C++
->```cpp
->// 作弊反馈（LLAntiCheat用） 返回值类型：bool
->auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int const& PunishReason,Player& const& playerXuid,int const& CheatCount)>("PFLP", "Internal::CheatPunish");
->auto result = Internal_CheatPunish(PunishLevel,PunishReason,playerXuid,CheatCount);
->```
-> - C#
->```csharp
->// 作弊反馈（LLAntiCheat用） 返回值类型：bool
->var Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,Player,int>("PFLP", "Internal::CheatPunish");
->var result = Internal_CheatPunish(PunishLevel,PunishReason,playerXuid,CheatCount);
->```
-> - Visual Basic .NET
->```vb
->' 作弊反馈（LLAntiCheat用） 返回值类型：bool
->Dim Internal_CheatPunish = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,IntPtr,Integer)("PFLP", "Internal::CheatPunish")
->Dim result = Internal_CheatPunish(PunishLevel,PunishReason,playerXuid,CheatCount)
->```
-> - F#
->```fsharp
->// 作弊反馈（LLAntiCheat用） 返回值类型：bool
->let Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,nativeint,int>("PFLP", "Internal::CheatPunish")
->(PunishLevel,PunishReason,playerXuid,CheatCount)
->	|>Internal_CheatPunish.Invoke
->	|>ignore
 >```
 >
 > </details>
@@ -4300,8 +4274,6 @@ auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>(
 auto Money_Add = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Add");
 // 给玩家(指定玩家名)减钱
 auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Remove");
-// 作弊反馈（LLAntiCheat用） 返回值类型：bool
-auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int const& PunishReason,Player& const& playerXuid,int const& CheatCount)>("PFLP", "Internal::CheatPunish");
 
 ```
 </details>
@@ -4316,141 +4288,139 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >using RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
->var General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig");
+>var General_SetConfig = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "General::SetConfig");
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
->var General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig");
+>var General_GetConfig = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig");
 >// 重新加载所有功能的配置文件
->var General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload");
+>var General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload");
 >// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
->var Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp");
+>var Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp");
 >// 获取变量 返回值类型：string
->var Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString");
+>var Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString");
 >// 获取变量，但是强制返回int类型 返回值类型：int
->var Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt");
+>var Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt");
 >// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
->var Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString");
+>var Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString");
 >// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
->var Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat");
+>var Format_DefineFormat = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Format::DefineFormat");
 >// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
->var Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat");
+>var Format_RemoveFormat = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "Format::RemoveFormat");
 >// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
->var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer");
+>var Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetFormatWithPlayer");
 >// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
->var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang");
+>var Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<Func<string,string,string,string,string>>("PFLP", "Format::GetFormatWithPlayerLang");
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
->var Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat");
+>var Format_GetFormat = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::GetFormat");
 >// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
->var Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand");
+>var Command_RenameCommand = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::RenameCommand");
 >// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
->var Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand");
+>var Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Command::ExecuteInternalCommand");
 >// 设置命令禁用(可设置提示)(支持任意命令)
->var Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled");
+>var Command_SetCommandDisabled = RemoteCallAPI.ImportAs<Action<string,string,string>>("PFLP", "Command::SetCommandDisabled");
 >// 设置命令启用
->var Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled");
+>var Command_SetCommandEnabled = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::SetCommandEnabled");
 >// 翻译 返回值类型：string
->var Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate");
+>var Language_Translate = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Language::Translate");
 >// 设置玩家昵称
->var ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName");
+>var ChatEx_SetNickName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetNickName");
 >// 设置玩家聊天时的名字
->var ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName");
+>var ChatEx_SetFakeName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetFakeName");
 >// 设置玩家聊天消息后缀
->var ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd");
+>var ChatEx_SetEnd = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetEnd");
 >// 设置玩家聊天消息前缀
->var ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart");
+>var ChatEx_SetStart = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetStart");
 >// 获取玩家昵称 返回值类型：string
->var ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName");
+>var ChatEx_GetNickName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetNickName");
 >// 获取玩家聊天时的名字 返回值类型：string
->var ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName");
+>var ChatEx_GetFakeName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetFakeName");
 >// 获取玩家聊天消息后缀 返回值类型：string
->var ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd");
+>var ChatEx_GetEnd = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetEnd");
 >// 获取玩家聊天消息前缀 返回值类型：string
->var ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart");
+>var ChatEx_GetStart = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetStart");
 >// 给指定方块描框
->var ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock");
+>var ParticlesGraphics_DrawBlock = RemoteCallAPI.ImportAs<Action<string,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBlock");
 >// 给指定区域描框
->var ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder");
+>var ParticlesGraphics_DrawBorder = RemoteCallAPI.ImportAs<Action<string,int,int,int,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBorder");
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
->var Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand");
+>var Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,bool>>("PFLP", "Lands::CheckCubeHasLand");
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
->var Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt");
+>var Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,bool>>("PFLP", "Lands::CheckCubeHasLandInt");
 >// 检查指定坐标(float)是否有领地 返回值类型：bool
->var Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand");
+>var Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::CheckPosHasLand");
 >// 检查指定坐标(int)是否有领地 返回值类型：bool
->var Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt");
+>var Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::CheckPosHasLandInt");
 >// 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube");
+>var Lands_GetLandByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandByCube");
 >// 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt");
+>var Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandByCubeInt");
 >// 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos");
+>var Lands_GetLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandByPos");
 >// 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt");
+>var Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandByPosInt");
 >// 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube");
+>var Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByCube");
 >// 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt");
+>var Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByCubeInt");
 >// 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos");
+>var Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByPos");
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->var Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt");
+>var Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByPosInt");
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->var Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos");
+>var Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::SetLandInfoByPos");
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->var Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt");
+>var Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::SetLandInfoByPosInt");
 >// 新建领地 返回值类型：bool
->var Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D");
+>var Lands_CreateLand2D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand2D");
 >// 新建领地 返回值类型：bool
->var Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D");
+>var Lands_CreateLand3D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand3D");
 >// 删除指定坐标(float)的领地 返回值类型：bool
->var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos");
+>var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::DeleteLandByPos");
 >// 删除指定坐标(int)的领地 返回值类型：bool
->var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt");
+>var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::DeleteLandByPosInt");
 >// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos");
+>var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,string>>("PFLP", "Lands::GetLandPermissionByPos");
 >// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt");
+>var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,string>>("PFLP", "Lands::GetLandPermissionByPosInt");
 >// 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->var Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos");
+>var Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPos");
 >// 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->var Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt");
+>var Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<string,int,int,int,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPosInt");
 >// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
->var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
+>var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
 >// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
->var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
+>var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
 >// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
+>var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
 >// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
+>var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
->var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
+>var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
->var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
+>var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->var Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
+>var Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->var Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup");
+>var Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Lands::GetPlayerPermissionGroup");
 >// 删玩家权限组(指定ID) 返回值类型：bool
->var Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup");
+>var Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Lands::DeletePlayerPermissionGroup");
 >// 修改家权限组内容(指定ID) 返回值类型：bool
->var Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup");
+>var Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::EditPlayerPermissionGroup");
 >// 添加权限组 返回值类型：bool
->var Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup");
+>var Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::AddPlayerPermissionGroup");
 >// 取玩家拥有的领地 返回值类型：string
->var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer");
+>var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsOwnedByPlayer");
 >// 取共享给玩家的领地 返回值类型：string
->var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer");
+>var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsSharedToPlayer");
 >// 创建浮空字(给玩家发包) 返回值类型：int
->var FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add");
+>var FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add");
 >// 移除浮空字(给玩家发包)
->var FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove");
+>var FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove");
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
->var Money_Get = RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get");
+>var Money_Get = RemoteCallAPI.ImportAs<Func<string,long>>("PFLP", "Money::Get");
 >// 给玩家(指定玩家名)加钱
->var Money_Add = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Add");
+>var Money_Add = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add");
 >// 给玩家(指定玩家名)减钱
->var Money_Remove = RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Remove");
->// 作弊反馈（LLAntiCheat用） 返回值类型：bool
->var Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,Player,int>("PFLP", "Internal::CheatPunish");
+>var Money_Remove = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove");
 >
 >```
 ></details>
@@ -4461,366 +4431,361 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >
 >internal static class PFLP {
 >	public static class General {
->		private static Lazy<RemoteCallHandler_1<bool,string>>  General_SetConfig_instance = new(()=> RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig"));
+>		private static Lazy<Func<string,bool>>  General_SetConfig_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "General::SetConfig"));
 >		/// <summary> 设置全局配置文件（要求JSON字符串） 返回值类型：bool </summary>
 >		public static bool SetConfig(string jsonStr) {
 >			return General_SetConfig_instance.Value(jsonStr);
 >		}
->		private static Lazy<RemoteCallHandler_0<string>>  General_GetConfig_instance = new(()=> RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig"));
+>		private static Lazy<Func<string>>  General_GetConfig_instance = new(()=> RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig"));
 >		/// <summary> 获取全局配置文件（JSON字符串） 返回值类型：string </summary>
 >		public static string GetConfig() {
 >			return General_GetConfig_instance.Value();
 >		}
->		private static Lazy<RemoteCallHandler_void_0>  General_Reload_instance = new(()=> RemoteCallAPI.Import_As("PFLP", "General::Reload"));
+>		private static Lazy<Action>  General_Reload_instance = new(()=> RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload"));
 >		/// <summary> 重新加载所有功能的配置文件 </summary>
 >		public static void Reload() {
 >			General_Reload_instance.Value();
 >		}
 >	}
 >	public static class Tpa {
->		private static Lazy<RemoteCallHandler_1<string,string>>  Tpa_GetTemp_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp"));
+>		private static Lazy<Func<string,string>>  Tpa_GetTemp_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp"));
 >		/// <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
 >		public static string GetTemp(string playerXuid) {
 >			return Tpa_GetTemp_instance.Value(playerXuid);
 >		}
 >	}
 >	public static class Format {
->		private static Lazy<RemoteCallHandler_3<string,string,string,string>>  Format_GetVariableString_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString"));
+>		private static Lazy<Func<string,string,string,string>>  Format_GetVariableString_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString"));
 >		/// <summary> 获取变量 返回值类型：string </summary>
 >		public static string GetVariableString(string playerXuid,string name,string format) {
 >			return Format_GetVariableString_instance.Value(playerXuid,name,format);
 >		}
->		private static Lazy<RemoteCallHandler_2<int,string,string>>  Format_GetVariableInt_instance = new(()=> RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt"));
+>		private static Lazy<Func<string,string,int>>  Format_GetVariableInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt"));
 >		/// <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
 >		public static int GetVariableInt(string playerXuid,string name) {
 >			return Format_GetVariableInt_instance.Value(playerXuid,name);
 >		}
->		private static Lazy<RemoteCallHandler_2<string,string,string>>  Format_FormatRawString_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString"));
+>		private static Lazy<Func<string,string,string>>  Format_FormatRawString_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString"));
 >		/// <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
 >		public static string FormatRawString(string playerXuid,string rawFormat) {
 >			return Format_FormatRawString_instance.Value(playerXuid,rawFormat);
 >		}
->		private static Lazy<RemoteCallHandler_2<bool,string,string>>  Format_DefineFormat_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat"));
+>		private static Lazy<Func<string,string,bool>>  Format_DefineFormat_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Format::DefineFormat"));
 >		/// <summary> 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool </summary>
 >		public static bool DefineFormat(string id,string rawFormat) {
 >			return Format_DefineFormat_instance.Value(id,rawFormat);
 >		}
->		private static Lazy<RemoteCallHandler_1<bool,string>>  Format_RemoveFormat_instance = new(()=> RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat"));
+>		private static Lazy<Func<string,bool>>  Format_RemoveFormat_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "Format::RemoveFormat"));
 >		/// <summary> 移除格式化定义（返回true为存在并移除） 返回值类型：bool </summary>
 >		public static bool RemoveFormat(string id) {
 >			return Format_RemoveFormat_instance.Value(id);
 >		}
->		private static Lazy<RemoteCallHandler_3<string,string,string,string>>  Format_GetFormatWithPlayer_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer"));
+>		private static Lazy<Func<string,string,string,string>>  Format_GetFormatWithPlayer_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetFormatWithPlayer"));
 >		/// <summary> 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string </summary>
 >		public static string GetFormatWithPlayer(string id,string playerXuid,string extra) {
 >			return Format_GetFormatWithPlayer_instance.Value(id,playerXuid,extra);
 >		}
->		private static Lazy<RemoteCallHandler_4<string,string,string,string,string>>  Format_GetFormatWithPlayerLang_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang"));
+>		private static Lazy<Func<string,string,string,string,string>>  Format_GetFormatWithPlayerLang_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string,string,string>>("PFLP", "Format::GetFormatWithPlayerLang"));
 >		/// <summary> 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string </summary>
 >		public static string GetFormatWithPlayerLang(string id,string playerXuid,string playerLangXuid,string extra) {
 >			return Format_GetFormatWithPlayerLang_instance.Value(id,playerXuid,playerLangXuid,extra);
 >		}
->		private static Lazy<RemoteCallHandler_2<string,string,string>>  Format_GetFormat_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat"));
+>		private static Lazy<Func<string,string,string>>  Format_GetFormat_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::GetFormat"));
 >		/// <summary> 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string </summary>
 >		public static string GetFormat(string id,string extra) {
 >			return Format_GetFormat_instance.Value(id,extra);
 >		}
 >	}
 >	public static class Command {
->		private static Lazy<RemoteCallHandler_void_2<string,string>>  Command_RenameCommand_instance = new(()=> RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand"));
+>		private static Lazy<Action<string,string>>  Command_RenameCommand_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::RenameCommand"));
 >		/// <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令) </summary>
 >		public static void RenameCommand(string cmd,string newCmd) {
 >			Command_RenameCommand_instance.Value(cmd,newCmd);
 >		}
->		private static Lazy<RemoteCallHandler_2<bool,string,string>>  Command_ExecuteInternalCommand_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand"));
+>		private static Lazy<Func<string,string,bool>>  Command_ExecuteInternalCommand_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Command::ExecuteInternalCommand"));
 >		/// <summary> 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool </summary>
 >		public static bool ExecuteInternalCommand(string playerXuid,string cmd) {
 >			return Command_ExecuteInternalCommand_instance.Value(playerXuid,cmd);
 >		}
->		private static Lazy<RemoteCallHandler_void_3<string,string,string>>  Command_SetCommandDisabled_instance = new(()=> RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled"));
+>		private static Lazy<Action<string,string,string>>  Command_SetCommandDisabled_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string,string>>("PFLP", "Command::SetCommandDisabled"));
 >		/// <summary> 设置命令禁用(可设置提示)(支持任意命令) </summary>
 >		public static void SetCommandDisabled(string playerXuid,string cmd,string feedback) {
 >			Command_SetCommandDisabled_instance.Value(playerXuid,cmd,feedback);
 >		}
->		private static Lazy<RemoteCallHandler_void_2<string,string>>  Command_SetCommandEnabled_instance = new(()=> RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled"));
+>		private static Lazy<Action<string,string>>  Command_SetCommandEnabled_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::SetCommandEnabled"));
 >		/// <summary> 设置命令启用 </summary>
 >		public static void SetCommandEnabled(string playerXuid,string cmd) {
 >			Command_SetCommandEnabled_instance.Value(playerXuid,cmd);
 >		}
 >	}
 >	public static class Language {
->		private static Lazy<RemoteCallHandler_3<string,string,string,string>>  Language_Translate_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate"));
+>		private static Lazy<Func<string,string,string,string>>  Language_Translate_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Language::Translate"));
 >		/// <summary> 翻译 返回值类型：string </summary>
 >		public static string Translate(string fromLanguage,string toLanguage,string text) {
 >			return Language_Translate_instance.Value(fromLanguage,toLanguage,text);
 >		}
 >	}
 >	public static class ChatEx {
->		private static Lazy<RemoteCallHandler_void_2<string,string>>  ChatEx_SetNickName_instance = new(()=> RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName"));
+>		private static Lazy<Action<string,string>>  ChatEx_SetNickName_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetNickName"));
 >		/// <summary> 设置玩家昵称 </summary>
 >		public static void SetNickName(string playerXuid,string nickName) {
 >			ChatEx_SetNickName_instance.Value(playerXuid,nickName);
 >		}
->		private static Lazy<RemoteCallHandler_void_2<string,string>>  ChatEx_SetFakeName_instance = new(()=> RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName"));
+>		private static Lazy<Action<string,string>>  ChatEx_SetFakeName_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetFakeName"));
 >		/// <summary> 设置玩家聊天时的名字 </summary>
 >		public static void SetFakeName(string playerXuid,string fakeName) {
 >			ChatEx_SetFakeName_instance.Value(playerXuid,fakeName);
 >		}
->		private static Lazy<RemoteCallHandler_void_2<string,string>>  ChatEx_SetEnd_instance = new(()=> RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd"));
+>		private static Lazy<Action<string,string>>  ChatEx_SetEnd_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetEnd"));
 >		/// <summary> 设置玩家聊天消息后缀 </summary>
 >		public static void SetEnd(string playerXuid,string endStr) {
 >			ChatEx_SetEnd_instance.Value(playerXuid,endStr);
 >		}
->		private static Lazy<RemoteCallHandler_void_2<string,string>>  ChatEx_SetStart_instance = new(()=> RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart"));
+>		private static Lazy<Action<string,string>>  ChatEx_SetStart_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetStart"));
 >		/// <summary> 设置玩家聊天消息前缀 </summary>
 >		public static void SetStart(string playerXuid,string startStr) {
 >			ChatEx_SetStart_instance.Value(playerXuid,startStr);
 >		}
->		private static Lazy<RemoteCallHandler_1<string,string>>  ChatEx_GetNickName_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName"));
+>		private static Lazy<Func<string,string>>  ChatEx_GetNickName_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetNickName"));
 >		/// <summary> 获取玩家昵称 返回值类型：string </summary>
 >		public static string GetNickName(string playerXuid) {
 >			return ChatEx_GetNickName_instance.Value(playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_1<string,string>>  ChatEx_GetFakeName_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName"));
+>		private static Lazy<Func<string,string>>  ChatEx_GetFakeName_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetFakeName"));
 >		/// <summary> 获取玩家聊天时的名字 返回值类型：string </summary>
 >		public static string GetFakeName(string playerXuid) {
 >			return ChatEx_GetFakeName_instance.Value(playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_1<string,string>>  ChatEx_GetEnd_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd"));
+>		private static Lazy<Func<string,string>>  ChatEx_GetEnd_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetEnd"));
 >		/// <summary> 获取玩家聊天消息后缀 返回值类型：string </summary>
 >		public static string GetEnd(string playerXuid) {
 >			return ChatEx_GetEnd_instance.Value(playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_1<string,string>>  ChatEx_GetStart_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart"));
+>		private static Lazy<Func<string,string>>  ChatEx_GetStart_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetStart"));
 >		/// <summary> 获取玩家聊天消息前缀 返回值类型：string </summary>
 >		public static string GetStart(string playerXuid) {
 >			return ChatEx_GetStart_instance.Value(playerXuid);
 >		}
 >	}
 >	public static class ParticlesGraphics {
->		private static Lazy<RemoteCallHandler_void_10<string,int,int,int,float,float,float,float,float,float>>  ParticlesGraphics_DrawBlock_instance = new(()=> RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock"));
+>		private static Lazy<Action<string,int,int,int,float,float,float,float,float,float>>  ParticlesGraphics_DrawBlock_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBlock"));
 >		/// <summary> 给指定方块描框 </summary>
 >		public static void DrawBlock(string playerXuid,int x,int y,int z,float r,float g,float b,float thickness,float time,float alpha) {
 >			ParticlesGraphics_DrawBlock_instance.Value(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 >		}
->		private static Lazy<RemoteCallHandler_void_13<string,int,int,int,int,int,int,float,float,float,float,float,float>>  ParticlesGraphics_DrawBorder_instance = new(()=> RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder"));
+>		private static Lazy<Action<string,int,int,int,int,int,int,float,float,float,float,float,float>>  ParticlesGraphics_DrawBorder_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,int,int,int,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBorder"));
 >		/// <summary> 给指定区域描框 </summary>
 >		public static void DrawBorder(string playerXuid,int x1,int y1,int z1,int x2,int y2,int z2,float r,float g,float b,float thickness,float time,float alpha) {
 >			ParticlesGraphics_DrawBorder_instance.Value(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 >		}
 >	}
 >	public static class Lands {
->		private static Lazy<RemoteCallHandler_7<bool,float,float,float,float,float,float,int>>  Lands_CheckCubeHasLand_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand"));
+>		private static Lazy<Func<float,float,float,float,float,float,int,bool>>  Lands_CheckCubeHasLand_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,bool>>("PFLP", "Lands::CheckCubeHasLand"));
 >		/// <summary> 检查指定立方体区域(float)是否有领地 返回值类型：bool </summary>
 >		public static bool CheckCubeHasLand(float x1,float y1,float z1,float x2,float y2,float z2,int dimensionId) {
 >			return Lands_CheckCubeHasLand_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_7<bool,int,int,int,int,int,int,int>>  Lands_CheckCubeHasLandInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt"));
+>		private static Lazy<Func<int,int,int,int,int,int,int,bool>>  Lands_CheckCubeHasLandInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,bool>>("PFLP", "Lands::CheckCubeHasLandInt"));
 >		/// <summary> 检查指定立方体区域(int)是否有领地 返回值类型：bool </summary>
 >		public static bool CheckCubeHasLandInt(int x1,int y1,int z1,int x2,int y2,int z2,int dimensionId) {
 >			return Lands_CheckCubeHasLandInt_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_4<bool,float,float,float,int>>  Lands_CheckPosHasLand_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand"));
+>		private static Lazy<Func<float,float,float,int,bool>>  Lands_CheckPosHasLand_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::CheckPosHasLand"));
 >		/// <summary> 检查指定坐标(float)是否有领地 返回值类型：bool </summary>
 >		public static bool CheckPosHasLand(float x,float y,float z,int dimensionId) {
 >			return Lands_CheckPosHasLand_instance.Value(x,y,z,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_4<bool,int,int,int,int>>  Lands_CheckPosHasLandInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt"));
+>		private static Lazy<Func<int,int,int,int,bool>>  Lands_CheckPosHasLandInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::CheckPosHasLandInt"));
 >		/// <summary> 检查指定坐标(int)是否有领地 返回值类型：bool </summary>
 >		public static bool CheckPosHasLandInt(int x,int y,int z,int dimensionId) {
 >			return Lands_CheckPosHasLandInt_instance.Value(x,y,z,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_7<string,float,float,float,float,float,float,int>>  Lands_GetLandByCube_instance = new(()=> RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube"));
+>		private static Lazy<Func<float,float,float,float,float,float,int,string>>  Lands_GetLandByCube_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandByCube"));
 >		/// <summary> 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >		public static string GetLandByCube(float x1,float y1,float z1,float x2,float y2,float z2,int dimensionId) {
 >			return Lands_GetLandByCube_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_7<string,int,int,int,int,int,int,int>>  Lands_GetLandByCubeInt_instance = new(()=> RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt"));
+>		private static Lazy<Func<int,int,int,int,int,int,int,string>>  Lands_GetLandByCubeInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandByCubeInt"));
 >		/// <summary> 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >		public static string GetLandByCubeInt(int x1,int y1,int z1,int x2,int y2,int z2,int dimensionId) {
 >			return Lands_GetLandByCubeInt_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_4<string,float,float,float,int>>  Lands_GetLandByPos_instance = new(()=> RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos"));
+>		private static Lazy<Func<float,float,float,int,string>>  Lands_GetLandByPos_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandByPos"));
 >		/// <summary> 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >		public static string GetLandByPos(float x,float y,float z,int dimensionId) {
 >			return Lands_GetLandByPos_instance.Value(x,y,z,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_4<string,int,int,int,int>>  Lands_GetLandByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt"));
+>		private static Lazy<Func<int,int,int,int,string>>  Lands_GetLandByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandByPosInt"));
 >		/// <summary> 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >		public static string GetLandByPosInt(int x,int y,int z,int dimensionId) {
 >			return Lands_GetLandByPosInt_instance.Value(x,y,z,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_7<string,float,float,float,float,float,float,int>>  Lands_GetLandInfoByCube_instance = new(()=> RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube"));
+>		private static Lazy<Func<float,float,float,float,float,float,int,string>>  Lands_GetLandInfoByCube_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByCube"));
 >		/// <summary> 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >		public static string GetLandInfoByCube(float x1,float y1,float z1,float x2,float y2,float z2,int dimensionId) {
 >			return Lands_GetLandInfoByCube_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_7<string,int,int,int,int,int,int,int>>  Lands_GetLandInfoByCubeInt_instance = new(()=> RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt"));
+>		private static Lazy<Func<int,int,int,int,int,int,int,string>>  Lands_GetLandInfoByCubeInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByCubeInt"));
 >		/// <summary> 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >		public static string GetLandInfoByCubeInt(int x1,int y1,int z1,int x2,int y2,int z2,int dimensionId) {
 >			return Lands_GetLandInfoByCubeInt_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_4<string,float,float,float,int>>  Lands_GetLandInfoByPos_instance = new(()=> RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos"));
+>		private static Lazy<Func<float,float,float,int,string>>  Lands_GetLandInfoByPos_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByPos"));
 >		/// <summary> 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >		public static string GetLandInfoByPos(float x,float y,float z,int dimensionId) {
 >			return Lands_GetLandInfoByPos_instance.Value(x,y,z,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_4<string,int,int,int,int>>  Lands_GetLandInfoByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt"));
+>		private static Lazy<Func<int,int,int,int,string>>  Lands_GetLandInfoByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByPosInt"));
 >		/// <summary> 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >		public static string GetLandInfoByPosInt(int x,int y,int z,int dimensionId) {
 >			return Lands_GetLandInfoByPosInt_instance.Value(x,y,z,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_5<bool,float,float,float,int,string>>  Lands_SetLandInfoByPos_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos"));
+>		private static Lazy<Func<float,float,float,int,string,bool>>  Lands_SetLandInfoByPos_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::SetLandInfoByPos"));
 >		/// <summary> 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >		public static bool SetLandInfoByPos(float x,float y,float z,int dimensionId,string landinfo) {
 >			return Lands_SetLandInfoByPos_instance.Value(x,y,z,dimensionId,landinfo);
 >		}
->		private static Lazy<RemoteCallHandler_5<bool,int,int,int,int,string>>  Lands_SetLandInfoByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt"));
+>		private static Lazy<Func<int,int,int,int,string,bool>>  Lands_SetLandInfoByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::SetLandInfoByPosInt"));
 >		/// <summary> 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >		public static bool SetLandInfoByPosInt(int x,int y,int z,int dimensionId,string landinfo) {
 >			return Lands_SetLandInfoByPosInt_instance.Value(x,y,z,dimensionId,landinfo);
 >		}
->		private static Lazy<RemoteCallHandler_6<bool,int,int,int,int,int,string>>  Lands_CreateLand2D_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D"));
+>		private static Lazy<Func<int,int,int,int,int,string,bool>>  Lands_CreateLand2D_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand2D"));
 >		/// <summary> 新建领地 返回值类型：bool </summary>
 >		public static bool CreateLand2D(int x1,int z1,int x2,int z2,int dimensionId,string playerXuid) {
 >			return Lands_CreateLand2D_instance.Value(x1,z1,x2,z2,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_8<bool,int,int,int,int,int,int,int,string>>  Lands_CreateLand3D_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D"));
+>		private static Lazy<Func<int,int,int,int,int,int,int,string,bool>>  Lands_CreateLand3D_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand3D"));
 >		/// <summary> 新建领地 返回值类型：bool </summary>
 >		public static bool CreateLand3D(int x1,int y1,int z1,int x2,int y2,int z2,int dimensionId,string playerXuid) {
 >			return Lands_CreateLand3D_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_4<bool,float,float,float,int>>  Lands_DeleteLandByPos_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos"));
+>		private static Lazy<Func<float,float,float,int,bool>>  Lands_DeleteLandByPos_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::DeleteLandByPos"));
 >		/// <summary> 删除指定坐标(float)的领地 返回值类型：bool </summary>
 >		public static bool DeleteLandByPos(float x,float y,float z,int dimensionId) {
 >			return Lands_DeleteLandByPos_instance.Value(x,y,z,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_4<bool,int,int,int,int>>  Lands_DeleteLandByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt"));
+>		private static Lazy<Func<int,int,int,int,bool>>  Lands_DeleteLandByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::DeleteLandByPosInt"));
 >		/// <summary> 删除指定坐标(int)的领地 返回值类型：bool </summary>
 >		public static bool DeleteLandByPosInt(int x,int y,int z,int dimensionId) {
 >			return Lands_DeleteLandByPosInt_instance.Value(x,y,z,dimensionId);
 >		}
->		private static Lazy<RemoteCallHandler_5<string,float,float,float,int,string>>  Lands_GetLandPermissionByPos_instance = new(()=> RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos"));
+>		private static Lazy<Func<float,float,float,int,string,string>>  Lands_GetLandPermissionByPos_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,int,string,string>>("PFLP", "Lands::GetLandPermissionByPos"));
 >		/// <summary> 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string </summary>
 >		public static string GetLandPermissionByPos(float x,float y,float z,int dimensionId,string playerXuid) {
 >			return Lands_GetLandPermissionByPos_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_5<string,int,int,int,int,string>>  Lands_GetLandPermissionByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt"));
+>		private static Lazy<Func<int,int,int,int,string,string>>  Lands_GetLandPermissionByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,string,string>>("PFLP", "Lands::GetLandPermissionByPosInt"));
 >		/// <summary> 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string </summary>
 >		public static string GetLandPermissionByPosInt(int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_GetLandPermissionByPosInt_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_6<bool,string,float,float,float,int,string>>  Lands_CheckLandPermissionByPos_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos"));
+>		private static Lazy<Func<string,float,float,float,int,string,bool>>  Lands_CheckLandPermissionByPos_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,float,float,float,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPos"));
 >		/// <summary> 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool </summary>
 >		public static bool CheckLandPermissionByPos(string permissionId,float x,float y,float z,int dimensionId,string playerXuid) {
 >			return Lands_CheckLandPermissionByPos_instance.Value(permissionId,x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_6<bool,string,int,int,int,int,string>>  Lands_CheckLandPermissionByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt"));
+>		private static Lazy<Func<string,int,int,int,int,string,bool>>  Lands_CheckLandPermissionByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,int,int,int,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPosInt"));
 >		/// <summary> 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool </summary>
 >		public static bool CheckLandPermissionByPosInt(string permissionId,int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_CheckLandPermissionByPosInt_instance.Value(permissionId,x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_5<bool,float,float,float,int,string>>  Lands_CheckPlayerIsLandOwnerByPos_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos"));
+>		private static Lazy<Func<float,float,float,int,string,bool>>  Lands_CheckPlayerIsLandOwnerByPos_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos"));
 >		/// <summary> 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool </summary>
 >		public static bool CheckPlayerIsLandOwnerByPos(float x,float y,float z,int dimensionId,string playerXuid) {
 >			return Lands_CheckPlayerIsLandOwnerByPos_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_5<bool,int,int,int,int,string>>  Lands_CheckPlayerIsLandOwnerByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt"));
+>		private static Lazy<Func<int,int,int,int,string,bool>>  Lands_CheckPlayerIsLandOwnerByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt"));
 >		/// <summary> 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool </summary>
 >		public static bool CheckPlayerIsLandOwnerByPosInt(int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_CheckPlayerIsLandOwnerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_5<bool,float,float,float,int,string>>  Lands_CheckIsLandSharedToPlayerByPos_instance = new(()=> RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos"));
+>		private static Lazy<Func<float,float,float,int,string,bool>>  Lands_CheckIsLandSharedToPlayerByPos_instance = new(()=> RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos"));
 >		/// <summary> 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
 >		public static bool CheckIsLandSharedToPlayerByPos(float x,float y,float z,int dimensionId,string playerXuid) {
 >			return Lands_CheckIsLandSharedToPlayerByPos_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_5<bool,int,int,int,int,string>>  Lands_CheckIsLandSharedToPlayerByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt"));
+>		private static Lazy<Func<int,int,int,int,string,bool>>  Lands_CheckIsLandSharedToPlayerByPosInt_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt"));
 >		/// <summary> 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
 >		public static bool CheckIsLandSharedToPlayerByPosInt(int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_CheckIsLandSharedToPlayerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_5<bool,int,int,int,int,string>>  Lands_CheckPlayerHasCreateChestPermission_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission"));
+>		private static Lazy<Func<int,int,int,int,string,bool>>  Lands_CheckPlayerHasCreateChestPermission_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasCreateChestPermission"));
 >		/// <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >		public static bool CheckPlayerHasCreateChestPermission(int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_CheckPlayerHasCreateChestPermission_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_5<bool,int,int,int,int,string>>  Lands_CheckPlayerHasOpenChestPermission_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission"));
+>		private static Lazy<Func<int,int,int,int,string,bool>>  Lands_CheckPlayerHasOpenChestPermission_instance = new(()=> RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasOpenChestPermission"));
 >		/// <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >		public static bool CheckPlayerHasOpenChestPermission(int x,int y,int z,int dimensionId,string playerXuid) {
 >			return Lands_CheckPlayerHasOpenChestPermission_instance.Value(x,y,z,dimensionId,playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_1<string,string>>  Lands_GetPlayerAllPermissionGroupId_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId"));
+>		private static Lazy<Func<string,string>>  Lands_GetPlayerAllPermissionGroupId_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetPlayerAllPermissionGroupId"));
 >		/// <summary> 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string </summary>
 >		public static string GetPlayerAllPermissionGroupId(string playerXuid) {
 >			return Lands_GetPlayerAllPermissionGroupId_instance.Value(playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_2<string,string,string>>  Lands_GetPlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup"));
+>		private static Lazy<Func<string,string,string>>  Lands_GetPlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Lands::GetPlayerPermissionGroup"));
 >		/// <summary> 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string </summary>
 >		public static string GetPlayerPermissionGroup(string playerXuid,string permissionGroupId) {
 >			return Lands_GetPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId);
 >		}
->		private static Lazy<RemoteCallHandler_2<bool,string,string>>  Lands_DeletePlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup"));
+>		private static Lazy<Func<string,string,bool>>  Lands_DeletePlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Lands::DeletePlayerPermissionGroup"));
 >		/// <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
 >		public static bool DeletePlayerPermissionGroup(string playerXuid,string permissionGroupId) {
 >			return Lands_DeletePlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId);
 >		}
->		private static Lazy<RemoteCallHandler_3<bool,string,string,string>>  Lands_EditPlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup"));
+>		private static Lazy<Func<string,string,string,bool>>  Lands_EditPlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::EditPlayerPermissionGroup"));
 >		/// <summary> 修改家权限组内容(指定ID) 返回值类型：bool </summary>
 >		public static bool EditPlayerPermissionGroup(string playerXuid,string permissionGroupId,string jsonString) {
 >			return Lands_EditPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString);
 >		}
->		private static Lazy<RemoteCallHandler_3<bool,string,string,string>>  Lands_AddPlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup"));
+>		private static Lazy<Func<string,string,string,bool>>  Lands_AddPlayerPermissionGroup_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::AddPlayerPermissionGroup"));
 >		/// <summary> 添加权限组 返回值类型：bool </summary>
 >		public static bool AddPlayerPermissionGroup(string playerXuid,string permissionGroupId,string jsonString) {
 >			return Lands_AddPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString);
 >		}
->		private static Lazy<RemoteCallHandler_1<string,string>>  Lands_GetLandsOwnedByPlayer_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer"));
+>		private static Lazy<Func<string,string>>  Lands_GetLandsOwnedByPlayer_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsOwnedByPlayer"));
 >		/// <summary> 取玩家拥有的领地 返回值类型：string </summary>
 >		public static string GetLandsOwnedByPlayer(string playerXuid) {
 >			return Lands_GetLandsOwnedByPlayer_instance.Value(playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_1<string,string>>  Lands_GetLandsSharedToPlayer_instance = new(()=> RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer"));
+>		private static Lazy<Func<string,string>>  Lands_GetLandsSharedToPlayer_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsSharedToPlayer"));
 >		/// <summary> 取共享给玩家的领地 返回值类型：string </summary>
 >		public static string GetLandsSharedToPlayer(string playerXuid) {
 >			return Lands_GetLandsSharedToPlayer_instance.Value(playerXuid);
 >		}
 >	}
 >	public static class FloatText {
->		private static Lazy<RemoteCallHandler_5<int,string,float,float,float,string>>  FloatText_Add_instance = new(()=> RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add"));
+>		private static Lazy<Func<string,float,float,float,string,int>>  FloatText_Add_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add"));
 >		/// <summary> 创建浮空字(给玩家发包) 返回值类型：int </summary>
 >		public static int Add(string playerXuid,float x,float y,float z,string text) {
 >			return FloatText_Add_instance.Value(playerXuid,x,y,z,text);
 >		}
->		private static Lazy<RemoteCallHandler_void_2<string,int>>  FloatText_Remove_instance = new(()=> RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove"));
+>		private static Lazy<Action<string,int>>  FloatText_Remove_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove"));
 >		/// <summary> 移除浮空字(给玩家发包) </summary>
 >		public static void Remove(string playerXuid,int id) {
 >			FloatText_Remove_instance.Value(playerXuid,id);
 >		}
 >	}
 >	public static class Money {
->		private static Lazy<RemoteCallHandler_1<long,string>>  Money_Get_instance = new(()=> RemoteCallAPI.ImportAs<long,string>("PFLP", "Money::Get"));
+>		private static Lazy<Func<string,long>>  Money_Get_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,long>>("PFLP", "Money::Get"));
 >		/// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
 >		public static long Get(string playerXuid) {
 >			return Money_Get_instance.Value(playerXuid);
 >		}
->		private static Lazy<RemoteCallHandler_void_3<string,long,string>>  Money_Add_instance = new(()=> RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Add"));
+>		private static Lazy<Action<string,long,string>>  Money_Add_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add"));
 >		/// <summary> 给玩家(指定玩家名)加钱 </summary>
 >		public static void Add(string playerXuid,long count,string info) {
 >			Money_Add_instance.Value(playerXuid,count,info);
 >		}
->		private static Lazy<RemoteCallHandler_void_3<string,long,string>>  Money_Remove_instance = new(()=> RemoteCallAPI.Import_As<string,long,string>("PFLP", "Money::Remove"));
+>		private static Lazy<Action<string,long,string>>  Money_Remove_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove"));
 >		/// <summary> 给玩家(指定玩家名)减钱 </summary>
 >		public static void Remove(string playerXuid,long count,string info) {
 >			Money_Remove_instance.Value(playerXuid,count,info);
 >		}
 >	}
 >	public static class Internal {
->		private static Lazy<RemoteCallHandler_4<bool,int,int,Player,int>>  Internal_CheatPunish_instance = new(()=> RemoteCallAPI.ImportAs<bool,int,int,Player,int>("PFLP", "Internal::CheatPunish"));
->		/// <summary> 作弊反馈（LLAntiCheat用） 返回值类型：bool </summary>
->		public static bool CheatPunish(int PunishLevel,int PunishReason,Player playerXuid,int CheatCount) {
->			return Internal_CheatPunish_instance.Value(PunishLevel,PunishReason,playerXuid,CheatCount);
->		}
 >	}
 >}
 >
@@ -4842,141 +4807,139 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >' 设置全局配置文件（要求JSON字符串） 返回值类型：bool
->Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "General::SetConfig")
+>Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Func(Of String,Boolean))("PFLP", "General::SetConfig")
 >' 获取全局配置文件（JSON字符串） 返回值类型：string
->Dim General_GetConfig = RemoteCallAPI.ImportAs(Of String)("PFLP", "General::GetConfig")
+>Dim General_GetConfig = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "General::GetConfig")
 >' 重新加载所有功能的配置文件
->Dim General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+>Dim General_Reload = RemoteCallAPI.ImportAs(Of Action)("PFLP", "General::Reload")
 >' 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
->Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Tpa::GetTemp")
+>Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp")
 >' 获取变量 返回值类型：string
->Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString")
+>Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString")
 >' 获取变量，但是强制返回int类型 返回值类型：int
->Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Integer,String,String)("PFLP", "Format::GetVariableInt")
+>Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Func(Of String,String,Integer))("PFLP", "Format::GetVariableInt")
 >' 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
->Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::FormatRawString")
+>Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::FormatRawString")
 >' 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
->Dim Format_DefineFormat = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Format::DefineFormat")
+>Dim Format_DefineFormat = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Format::DefineFormat")
 >' 移除格式化定义（返回true为存在并移除） 返回值类型：bool
->Dim Format_RemoveFormat = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "Format::RemoveFormat")
+>Dim Format_RemoveFormat = RemoteCallAPI.ImportAs(Of Func(Of String,Boolean))("PFLP", "Format::RemoveFormat")
 >' 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
->Dim Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetFormatWithPlayer")
+>Dim Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetFormatWithPlayer")
 >' 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
->Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang")
+>Dim Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String,String))("PFLP", "Format::GetFormatWithPlayerLang")
 >' 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
->Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat")
+>Dim Format_GetFormat = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::GetFormat")
 >' 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
->Dim Command_RenameCommand = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::RenameCommand")
+>Dim Command_RenameCommand = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Command::RenameCommand")
 >' 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
->Dim Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Command::ExecuteInternalCommand")
+>Dim Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Command::ExecuteInternalCommand")
 >' 设置命令禁用(可设置提示)(支持任意命令)
->Dim Command_SetCommandDisabled = RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled")
+>Dim Command_SetCommandDisabled = RemoteCallAPI.ImportAs(Of Action(Of String,String,String))("PFLP", "Command::SetCommandDisabled")
 >' 设置命令启用
->Dim Command_SetCommandEnabled = RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::SetCommandEnabled")
+>Dim Command_SetCommandEnabled = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Command::SetCommandEnabled")
 >' 翻译 返回值类型：string
->Dim Language_Translate = RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Language::Translate")
+>Dim Language_Translate = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Language::Translate")
 >' 设置玩家昵称
->Dim ChatEx_SetNickName = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetNickName")
+>Dim ChatEx_SetNickName = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetNickName")
 >' 设置玩家聊天时的名字
->Dim ChatEx_SetFakeName = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetFakeName")
+>Dim ChatEx_SetFakeName = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetFakeName")
 >' 设置玩家聊天消息后缀
->Dim ChatEx_SetEnd = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetEnd")
+>Dim ChatEx_SetEnd = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetEnd")
 >' 设置玩家聊天消息前缀
->Dim ChatEx_SetStart = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetStart")
+>Dim ChatEx_SetStart = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetStart")
 >' 获取玩家昵称 返回值类型：string
->Dim ChatEx_GetNickName = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetNickName")
+>Dim ChatEx_GetNickName = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetNickName")
 >' 获取玩家聊天时的名字 返回值类型：string
->Dim ChatEx_GetFakeName = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetFakeName")
+>Dim ChatEx_GetFakeName = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetFakeName")
 >' 获取玩家聊天消息后缀 返回值类型：string
->Dim ChatEx_GetEnd = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetEnd")
+>Dim ChatEx_GetEnd = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetEnd")
 >' 获取玩家聊天消息前缀 返回值类型：string
->Dim ChatEx_GetStart = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetStart")
+>Dim ChatEx_GetStart = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetStart")
 >' 给指定方块描框
->Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock")
+>Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.ImportAs(Of Action(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))("PFLP", "ParticlesGraphics::DrawBlock")
 >' 给指定区域描框
->Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder")
+>Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.ImportAs(Of Action(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))("PFLP", "ParticlesGraphics::DrawBorder")
 >' 检查指定立方体区域(float)是否有领地 返回值类型：bool
->Dim Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::CheckCubeHasLand")
+>Dim Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,Boolean))("PFLP", "Lands::CheckCubeHasLand")
 >' 检查指定立方体区域(int)是否有领地 返回值类型：bool
->Dim Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckCubeHasLandInt")
+>Dim Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::CheckCubeHasLandInt")
 >' 检查指定坐标(float)是否有领地 返回值类型：bool
->Dim Lands_CheckPosHasLand = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::CheckPosHasLand")
+>Dim Lands_CheckPosHasLand = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,Boolean))("PFLP", "Lands::CheckPosHasLand")
 >' 检查指定坐标(int)是否有领地 返回值类型：bool
->Dim Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckPosHasLandInt")
+>Dim Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::CheckPosHasLandInt")
 >' 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandByCube = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByCube")
+>Dim Lands_GetLandByCube = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandByCube")
 >' 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByCubeInt")
+>Dim Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandByCubeInt")
 >' 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByPos")
+>Dim Lands_GetLandByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandByPos")
 >' 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByPosInt")
+>Dim Lands_GetLandByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandByPosInt")
 >' 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByCube")
+>Dim Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandInfoByCube")
 >' 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByCubeInt")
+>Dim Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandInfoByCubeInt")
 >' 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByPos")
+>Dim Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandInfoByPos")
 >' 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->Dim Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByPosInt")
+>Dim Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandInfoByPosInt")
 >' 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->Dim Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByPos")
+>Dim Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::SetLandInfoByPos")
 >' 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->Dim Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::SetLandInfoByPosInt")
+>Dim Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::SetLandInfoByPosInt")
 >' 新建领地 返回值类型：bool
->Dim Lands_CreateLand2D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand2D")
+>Dim Lands_CreateLand2D = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CreateLand2D")
 >' 新建领地 返回值类型：bool
->Dim Lands_CreateLand3D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand3D")
+>Dim Lands_CreateLand3D = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CreateLand3D")
 >' 删除指定坐标(float)的领地 返回值类型：bool
->Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::DeleteLandByPos")
+>Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,Boolean))("PFLP", "Lands::DeleteLandByPos")
 >' 删除指定坐标(int)的领地 返回值类型：bool
->Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::DeleteLandByPosInt")
+>Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::DeleteLandByPosInt")
 >' 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->Dim Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer,String)("PFLP", "Lands::GetLandPermissionByPos")
+>Dim Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,String))("PFLP", "Lands::GetLandPermissionByPos")
 >' 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->Dim Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::GetLandPermissionByPosInt")
+>Dim Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,String))("PFLP", "Lands::GetLandPermissionByPosInt")
 >' 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->Dim Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs(Of Boolean,String,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckLandPermissionByPos")
+>Dim Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckLandPermissionByPos")
 >' 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->Dim Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Boolean,String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckLandPermissionByPosInt")
+>Dim Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Func(Of String,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckLandPermissionByPosInt")
 >' 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
->Dim Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>Dim Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
 >' 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
->Dim Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>Dim Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
 >' 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 >' 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+>Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 >' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
->Dim Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
+>Dim Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 >' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
->Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
+>Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >' 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->Dim Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllPermissionGroupId")
+>Dim Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >' 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->Dim Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerPermissionGroup")
+>Dim Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Lands::GetPlayerPermissionGroup")
 >' 删玩家权限组(指定ID) 返回值类型：bool
->Dim Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerPermissionGroup")
+>Dim Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Lands::DeletePlayerPermissionGroup")
 >' 修改家权限组内容(指定ID) 返回值类型：bool
->Dim Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerPermissionGroup")
+>Dim Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,Boolean))("PFLP", "Lands::EditPlayerPermissionGroup")
 >' 添加权限组 返回值类型：bool
->Dim Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerPermissionGroup")
+>Dim Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,Boolean))("PFLP", "Lands::AddPlayerPermissionGroup")
 >' 取玩家拥有的领地 返回值类型：string
->Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer")
+>Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetLandsOwnedByPlayer")
 >' 取共享给玩家的领地 返回值类型：string
->Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsSharedToPlayer")
+>Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetLandsSharedToPlayer")
 >' 创建浮空字(给玩家发包) 返回值类型：int
->Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Integer,String,Single,Single,Single,String)("PFLP", "FloatText::Add")
+>Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,String,Integer))("PFLP", "FloatText::Add")
 >' 移除浮空字(给玩家发包)
->Dim FloatText_Remove = RemoteCallAPI.Import_As(Of String,Integer)("PFLP", "FloatText::Remove")
+>Dim FloatText_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Integer))("PFLP", "FloatText::Remove")
 >' 获取玩家(指定玩家名)金钱 返回值类型：long
->Dim Money_Get = RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get")
+>Dim Money_Get = RemoteCallAPI.ImportAs(Of Func(Of String,Long))("PFLP", "Money::Get")
 >' 给玩家(指定玩家名)加钱
->Dim Money_Add = RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money::Add")
+>Dim Money_Add = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add")
 >' 给玩家(指定玩家名)减钱
->Dim Money_Remove = RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money::Remove")
->' 作弊反馈（LLAntiCheat用） 返回值类型：bool
->Dim Internal_CheatPunish = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,IntPtr,Integer)("PFLP", "Internal::CheatPunish")
+>Dim Money_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove")
 >
 >```
 ></details>
@@ -4987,366 +4950,361 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >
 >Friend Module PFLP
 >	Public NotInheritable Class General
->		Private Shared General_SetConfig_instance As Lazy(Of RemoteCallHandler_1(Of Boolean,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "General::SetConfig"))
+>		Private Shared General_SetConfig_instance As Lazy(Of Func(Of String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Boolean))("PFLP", "General::SetConfig"))
 >		''' <summary> 设置全局配置文件（要求JSON字符串） 返回值类型：bool </summary>
 >		Public Shared Function SetConfig(jsonStr As String) As bool 
 >			Return General_SetConfig_instance.Value(jsonStr)
 >		End Function
->		Private Shared General_GetConfig_instance As Lazy(Of RemoteCallHandler_0(Of String))(Function() RemoteCallAPI.ImportAs(Of String)("PFLP", "General::GetConfig"))
+>		Private Shared General_GetConfig_instance As Lazy(Of Func(Of String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "General::GetConfig"))
 >		''' <summary> 获取全局配置文件（JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetConfig() As string 
 >			Return General_GetConfig_instance.Value()
 >		End Function
->		Private Shared General_Reload_instance As Lazy(Of RemoteCallHandler_void_0)(Function() RemoteCallAPI.Import_As("PFLP", "General::Reload"))
+>		Private Shared General_Reload_instance As Lazy(Of Action)(Function() RemoteCallAPI.ImportAs(Of Action)("PFLP", "General::Reload"))
 >		''' <summary> 重新加载所有功能的配置文件 </summary>
 >		Public Shared Sub Reload()  
 >			General_Reload_instance.Value()
 >		End Sub
 >	End Class
 >	Public NotInheritable Class Tpa
->		Private Shared Tpa_GetTemp_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Tpa::GetTemp"))
+>		Private Shared Tpa_GetTemp_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp"))
 >		''' <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetTemp(playerXuid As String) As string 
 >			Return Tpa_GetTemp_instance.Value(playerXuid)
 >		End Function
 >	End Class
 >	Public NotInheritable Class Format
->		Private Shared Format_GetVariableString_instance As Lazy(Of RemoteCallHandler_3(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetVariableString"))
+>		Private Shared Format_GetVariableString_instance As Lazy(Of Func(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString"))
 >		''' <summary> 获取变量 返回值类型：string </summary>
 >		Public Shared Function GetVariableString(playerXuid As String,name As String,format As String) As string 
 >			Return Format_GetVariableString_instance.Value(playerXuid,name,format)
 >		End Function
->		Private Shared Format_GetVariableInt_instance As Lazy(Of RemoteCallHandler_2(Of Integer,String,String))(Function() RemoteCallAPI.ImportAs(Of Integer,String,String)("PFLP", "Format::GetVariableInt"))
+>		Private Shared Format_GetVariableInt_instance As Lazy(Of Func(Of String,String,Integer))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Integer))("PFLP", "Format::GetVariableInt"))
 >		''' <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
 >		Public Shared Function GetVariableInt(playerXuid As String,name As String) As int 
 >			Return Format_GetVariableInt_instance.Value(playerXuid,name)
 >		End Function
->		Private Shared Format_FormatRawString_instance As Lazy(Of RemoteCallHandler_2(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::FormatRawString"))
+>		Private Shared Format_FormatRawString_instance As Lazy(Of Func(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::FormatRawString"))
 >		''' <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
 >		Public Shared Function FormatRawString(playerXuid As String,rawFormat As String) As string 
 >			Return Format_FormatRawString_instance.Value(playerXuid,rawFormat)
 >		End Function
->		Private Shared Format_DefineFormat_instance As Lazy(Of RemoteCallHandler_2(Of Boolean,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Format::DefineFormat"))
+>		Private Shared Format_DefineFormat_instance As Lazy(Of Func(Of String,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Format::DefineFormat"))
 >		''' <summary> 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool </summary>
 >		Public Shared Function DefineFormat(id As String,rawFormat As String) As bool 
 >			Return Format_DefineFormat_instance.Value(id,rawFormat)
 >		End Function
->		Private Shared Format_RemoveFormat_instance As Lazy(Of RemoteCallHandler_1(Of Boolean,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "Format::RemoveFormat"))
+>		Private Shared Format_RemoveFormat_instance As Lazy(Of Func(Of String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Boolean))("PFLP", "Format::RemoveFormat"))
 >		''' <summary> 移除格式化定义（返回true为存在并移除） 返回值类型：bool </summary>
 >		Public Shared Function RemoveFormat(id As String) As bool 
 >			Return Format_RemoveFormat_instance.Value(id)
 >		End Function
->		Private Shared Format_GetFormatWithPlayer_instance As Lazy(Of RemoteCallHandler_3(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Format::GetFormatWithPlayer"))
+>		Private Shared Format_GetFormatWithPlayer_instance As Lazy(Of Func(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetFormatWithPlayer"))
 >		''' <summary> 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string </summary>
 >		Public Shared Function GetFormatWithPlayer(id As String,playerXuid As String,extra As String) As string 
 >			Return Format_GetFormatWithPlayer_instance.Value(id,playerXuid,extra)
 >		End Function
->		Private Shared Format_GetFormatWithPlayerLang_instance As Lazy(Of RemoteCallHandler_4(Of String,String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String,String,String)("PFLP", "Format::GetFormatWithPlayerLang"))
+>		Private Shared Format_GetFormatWithPlayerLang_instance As Lazy(Of Func(Of String,String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String,String))("PFLP", "Format::GetFormatWithPlayerLang"))
 >		''' <summary> 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string </summary>
 >		Public Shared Function GetFormatWithPlayerLang(id As String,playerXuid As String,playerLangXuid As String,extra As String) As string 
 >			Return Format_GetFormatWithPlayerLang_instance.Value(id,playerXuid,playerLangXuid,extra)
 >		End Function
->		Private Shared Format_GetFormat_instance As Lazy(Of RemoteCallHandler_2(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Format::GetFormat"))
+>		Private Shared Format_GetFormat_instance As Lazy(Of Func(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::GetFormat"))
 >		''' <summary> 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string </summary>
 >		Public Shared Function GetFormat(id As String,extra As String) As string 
 >			Return Format_GetFormat_instance.Value(id,extra)
 >		End Function
 >	End Class
 >	Public NotInheritable Class Command
->		Private Shared Command_RenameCommand_instance As Lazy(Of RemoteCallHandler_void_2(Of String,String))(Function() RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::RenameCommand"))
+>		Private Shared Command_RenameCommand_instance As Lazy(Of Action(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Command::RenameCommand"))
 >		''' <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令) </summary>
 >		Public Shared Sub RenameCommand(cmd As String,newCmd As String)  
 >			Command_RenameCommand_instance.Value(cmd,newCmd)
 >		End Sub
->		Private Shared Command_ExecuteInternalCommand_instance As Lazy(Of RemoteCallHandler_2(Of Boolean,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Command::ExecuteInternalCommand"))
+>		Private Shared Command_ExecuteInternalCommand_instance As Lazy(Of Func(Of String,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Command::ExecuteInternalCommand"))
 >		''' <summary> 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool </summary>
 >		Public Shared Function ExecuteInternalCommand(playerXuid As String,cmd As String) As bool 
 >			Return Command_ExecuteInternalCommand_instance.Value(playerXuid,cmd)
 >		End Function
->		Private Shared Command_SetCommandDisabled_instance As Lazy(Of RemoteCallHandler_void_3(Of String,String,String))(Function() RemoteCallAPI.Import_As(Of String,String,String)("PFLP", "Command::SetCommandDisabled"))
+>		Private Shared Command_SetCommandDisabled_instance As Lazy(Of Action(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String,String))("PFLP", "Command::SetCommandDisabled"))
 >		''' <summary> 设置命令禁用(可设置提示)(支持任意命令) </summary>
 >		Public Shared Sub SetCommandDisabled(playerXuid As String,cmd As String,feedback As String)  
 >			Command_SetCommandDisabled_instance.Value(playerXuid,cmd,feedback)
 >		End Sub
->		Private Shared Command_SetCommandEnabled_instance As Lazy(Of RemoteCallHandler_void_2(Of String,String))(Function() RemoteCallAPI.Import_As(Of String,String)("PFLP", "Command::SetCommandEnabled"))
+>		Private Shared Command_SetCommandEnabled_instance As Lazy(Of Action(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Command::SetCommandEnabled"))
 >		''' <summary> 设置命令启用 </summary>
 >		Public Shared Sub SetCommandEnabled(playerXuid As String,cmd As String)  
 >			Command_SetCommandEnabled_instance.Value(playerXuid,cmd)
 >		End Sub
 >	End Class
 >	Public NotInheritable Class Language
->		Private Shared Language_Translate_instance As Lazy(Of RemoteCallHandler_3(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String,String)("PFLP", "Language::Translate"))
+>		Private Shared Language_Translate_instance As Lazy(Of Func(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Language::Translate"))
 >		''' <summary> 翻译 返回值类型：string </summary>
 >		Public Shared Function Translate(fromLanguage As String,toLanguage As String,text As String) As string 
 >			Return Language_Translate_instance.Value(fromLanguage,toLanguage,text)
 >		End Function
 >	End Class
 >	Public NotInheritable Class ChatEx
->		Private Shared ChatEx_SetNickName_instance As Lazy(Of RemoteCallHandler_void_2(Of String,String))(Function() RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetNickName"))
+>		Private Shared ChatEx_SetNickName_instance As Lazy(Of Action(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetNickName"))
 >		''' <summary> 设置玩家昵称 </summary>
 >		Public Shared Sub SetNickName(playerXuid As String,nickName As String)  
 >			ChatEx_SetNickName_instance.Value(playerXuid,nickName)
 >		End Sub
->		Private Shared ChatEx_SetFakeName_instance As Lazy(Of RemoteCallHandler_void_2(Of String,String))(Function() RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetFakeName"))
+>		Private Shared ChatEx_SetFakeName_instance As Lazy(Of Action(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetFakeName"))
 >		''' <summary> 设置玩家聊天时的名字 </summary>
 >		Public Shared Sub SetFakeName(playerXuid As String,fakeName As String)  
 >			ChatEx_SetFakeName_instance.Value(playerXuid,fakeName)
 >		End Sub
->		Private Shared ChatEx_SetEnd_instance As Lazy(Of RemoteCallHandler_void_2(Of String,String))(Function() RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetEnd"))
+>		Private Shared ChatEx_SetEnd_instance As Lazy(Of Action(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetEnd"))
 >		''' <summary> 设置玩家聊天消息后缀 </summary>
 >		Public Shared Sub SetEnd(playerXuid As String,endStr As String)  
 >			ChatEx_SetEnd_instance.Value(playerXuid,endStr)
 >		End Sub
->		Private Shared ChatEx_SetStart_instance As Lazy(Of RemoteCallHandler_void_2(Of String,String))(Function() RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetStart"))
+>		Private Shared ChatEx_SetStart_instance As Lazy(Of Action(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetStart"))
 >		''' <summary> 设置玩家聊天消息前缀 </summary>
 >		Public Shared Sub SetStart(playerXuid As String,startStr As String)  
 >			ChatEx_SetStart_instance.Value(playerXuid,startStr)
 >		End Sub
->		Private Shared ChatEx_GetNickName_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetNickName"))
+>		Private Shared ChatEx_GetNickName_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetNickName"))
 >		''' <summary> 获取玩家昵称 返回值类型：string </summary>
 >		Public Shared Function GetNickName(playerXuid As String) As string 
 >			Return ChatEx_GetNickName_instance.Value(playerXuid)
 >		End Function
->		Private Shared ChatEx_GetFakeName_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetFakeName"))
+>		Private Shared ChatEx_GetFakeName_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetFakeName"))
 >		''' <summary> 获取玩家聊天时的名字 返回值类型：string </summary>
 >		Public Shared Function GetFakeName(playerXuid As String) As string 
 >			Return ChatEx_GetFakeName_instance.Value(playerXuid)
 >		End Function
->		Private Shared ChatEx_GetEnd_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetEnd"))
+>		Private Shared ChatEx_GetEnd_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetEnd"))
 >		''' <summary> 获取玩家聊天消息后缀 返回值类型：string </summary>
 >		Public Shared Function GetEnd(playerXuid As String) As string 
 >			Return ChatEx_GetEnd_instance.Value(playerXuid)
 >		End Function
->		Private Shared ChatEx_GetStart_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetStart"))
+>		Private Shared ChatEx_GetStart_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetStart"))
 >		''' <summary> 获取玩家聊天消息前缀 返回值类型：string </summary>
 >		Public Shared Function GetStart(playerXuid As String) As string 
 >			Return ChatEx_GetStart_instance.Value(playerXuid)
 >		End Function
 >	End Class
 >	Public NotInheritable Class ParticlesGraphics
->		Private Shared ParticlesGraphics_DrawBlock_instance As Lazy(Of RemoteCallHandler_void_10(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))(Function() RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock"))
+>		Private Shared ParticlesGraphics_DrawBlock_instance As Lazy(Of Action(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))("PFLP", "ParticlesGraphics::DrawBlock"))
 >		''' <summary> 给指定方块描框 </summary>
 >		Public Shared Sub DrawBlock(playerXuid As String,x As Integer,y As Integer,z As Integer,r As Single,g As Single,b As Single,thickness As Single,time As Single,alpha As Single)  
 >			ParticlesGraphics_DrawBlock_instance.Value(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
 >		End Sub
->		Private Shared ParticlesGraphics_DrawBorder_instance As Lazy(Of RemoteCallHandler_void_13(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))(Function() RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder"))
+>		Private Shared ParticlesGraphics_DrawBorder_instance As Lazy(Of Action(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))("PFLP", "ParticlesGraphics::DrawBorder"))
 >		''' <summary> 给指定区域描框 </summary>
 >		Public Shared Sub DrawBorder(playerXuid As String,x1 As Integer,y1 As Integer,z1 As Integer,x2 As Integer,y2 As Integer,z2 As Integer,r As Single,g As Single,b As Single,thickness As Single,time As Single,alpha As Single)  
 >			ParticlesGraphics_DrawBorder_instance.Value(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 >		End Sub
 >	End Class
 >	Public NotInheritable Class Lands
->		Private Shared Lands_CheckCubeHasLand_instance As Lazy(Of RemoteCallHandler_7(Of Boolean,Single,Single,Single,Single,Single,Single,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::CheckCubeHasLand"))
+>		Private Shared Lands_CheckCubeHasLand_instance As Lazy(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,Boolean))("PFLP", "Lands::CheckCubeHasLand"))
 >		''' <summary> 检查指定立方体区域(float)是否有领地 返回值类型：bool </summary>
 >		Public Shared Function CheckCubeHasLand(x1 As Single,y1 As Single,z1 As Single,x2 As Single,y2 As Single,z2 As Single,dimensionId As Integer) As bool 
 >			Return Lands_CheckCubeHasLand_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId)
 >		End Function
->		Private Shared Lands_CheckCubeHasLandInt_instance As Lazy(Of RemoteCallHandler_7(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckCubeHasLandInt"))
+>		Private Shared Lands_CheckCubeHasLandInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::CheckCubeHasLandInt"))
 >		''' <summary> 检查指定立方体区域(int)是否有领地 返回值类型：bool </summary>
 >		Public Shared Function CheckCubeHasLandInt(x1 As Integer,y1 As Integer,z1 As Integer,x2 As Integer,y2 As Integer,z2 As Integer,dimensionId As Integer) As bool 
 >			Return Lands_CheckCubeHasLandInt_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId)
 >		End Function
->		Private Shared Lands_CheckPosHasLand_instance As Lazy(Of RemoteCallHandler_4(Of Boolean,Single,Single,Single,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::CheckPosHasLand"))
+>		Private Shared Lands_CheckPosHasLand_instance As Lazy(Of Func(Of Single,Single,Single,Integer,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,Boolean))("PFLP", "Lands::CheckPosHasLand"))
 >		''' <summary> 检查指定坐标(float)是否有领地 返回值类型：bool </summary>
 >		Public Shared Function CheckPosHasLand(x As Single,y As Single,z As Single,dimensionId As Integer) As bool 
 >			Return Lands_CheckPosHasLand_instance.Value(x,y,z,dimensionId)
 >		End Function
->		Private Shared Lands_CheckPosHasLandInt_instance As Lazy(Of RemoteCallHandler_4(Of Boolean,Integer,Integer,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckPosHasLandInt"))
+>		Private Shared Lands_CheckPosHasLandInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::CheckPosHasLandInt"))
 >		''' <summary> 检查指定坐标(int)是否有领地 返回值类型：bool </summary>
 >		Public Shared Function CheckPosHasLandInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer) As bool 
 >			Return Lands_CheckPosHasLandInt_instance.Value(x,y,z,dimensionId)
 >		End Function
->		Private Shared Lands_GetLandByCube_instance As Lazy(Of RemoteCallHandler_7(Of String,Single,Single,Single,Single,Single,Single,Integer))(Function() RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByCube"))
+>		Private Shared Lands_GetLandByCube_instance As Lazy(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandByCube"))
 >		''' <summary> 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandByCube(x1 As Single,y1 As Single,z1 As Single,x2 As Single,y2 As Single,z2 As Single,dimensionId As Integer) As string 
 >			Return Lands_GetLandByCube_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId)
 >		End Function
->		Private Shared Lands_GetLandByCubeInt_instance As Lazy(Of RemoteCallHandler_7(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByCubeInt"))
+>		Private Shared Lands_GetLandByCubeInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandByCubeInt"))
 >		''' <summary> 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandByCubeInt(x1 As Integer,y1 As Integer,z1 As Integer,x2 As Integer,y2 As Integer,z2 As Integer,dimensionId As Integer) As string 
 >			Return Lands_GetLandByCubeInt_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId)
 >		End Function
->		Private Shared Lands_GetLandByPos_instance As Lazy(Of RemoteCallHandler_4(Of String,Single,Single,Single,Integer))(Function() RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByPos"))
+>		Private Shared Lands_GetLandByPos_instance As Lazy(Of Func(Of Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandByPos"))
 >		''' <summary> 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandByPos(x As Single,y As Single,z As Single,dimensionId As Integer) As string 
 >			Return Lands_GetLandByPos_instance.Value(x,y,z,dimensionId)
 >		End Function
->		Private Shared Lands_GetLandByPosInt_instance As Lazy(Of RemoteCallHandler_4(Of String,Integer,Integer,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByPosInt"))
+>		Private Shared Lands_GetLandByPosInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandByPosInt"))
 >		''' <summary> 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer) As string 
 >			Return Lands_GetLandByPosInt_instance.Value(x,y,z,dimensionId)
 >		End Function
->		Private Shared Lands_GetLandInfoByCube_instance As Lazy(Of RemoteCallHandler_7(Of String,Single,Single,Single,Single,Single,Single,Integer))(Function() RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByCube"))
+>		Private Shared Lands_GetLandInfoByCube_instance As Lazy(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandInfoByCube"))
 >		''' <summary> 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandInfoByCube(x1 As Single,y1 As Single,z1 As Single,x2 As Single,y2 As Single,z2 As Single,dimensionId As Integer) As string 
 >			Return Lands_GetLandInfoByCube_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId)
 >		End Function
->		Private Shared Lands_GetLandInfoByCubeInt_instance As Lazy(Of RemoteCallHandler_7(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByCubeInt"))
+>		Private Shared Lands_GetLandInfoByCubeInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandInfoByCubeInt"))
 >		''' <summary> 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandInfoByCubeInt(x1 As Integer,y1 As Integer,z1 As Integer,x2 As Integer,y2 As Integer,z2 As Integer,dimensionId As Integer) As string 
 >			Return Lands_GetLandInfoByCubeInt_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId)
 >		End Function
->		Private Shared Lands_GetLandInfoByPos_instance As Lazy(Of RemoteCallHandler_4(Of String,Single,Single,Single,Integer))(Function() RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByPos"))
+>		Private Shared Lands_GetLandInfoByPos_instance As Lazy(Of Func(Of Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandInfoByPos"))
 >		''' <summary> 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandInfoByPos(x As Single,y As Single,z As Single,dimensionId As Integer) As string 
 >			Return Lands_GetLandInfoByPos_instance.Value(x,y,z,dimensionId)
 >		End Function
->		Private Shared Lands_GetLandInfoByPosInt_instance As Lazy(Of RemoteCallHandler_4(Of String,Integer,Integer,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByPosInt"))
+>		Private Shared Lands_GetLandInfoByPosInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandInfoByPosInt"))
 >		''' <summary> 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandInfoByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer) As string 
 >			Return Lands_GetLandInfoByPosInt_instance.Value(x,y,z,dimensionId)
 >		End Function
->		Private Shared Lands_SetLandInfoByPos_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByPos"))
+>		Private Shared Lands_SetLandInfoByPos_instance As Lazy(Of Func(Of Single,Single,Single,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::SetLandInfoByPos"))
 >		''' <summary> 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >		Public Shared Function SetLandInfoByPos(x As Single,y As Single,z As Single,dimensionId As Integer,landinfo As String) As bool 
 >			Return Lands_SetLandInfoByPos_instance.Value(x,y,z,dimensionId,landinfo)
 >		End Function
->		Private Shared Lands_SetLandInfoByPosInt_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::SetLandInfoByPosInt"))
+>		Private Shared Lands_SetLandInfoByPosInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::SetLandInfoByPosInt"))
 >		''' <summary> 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >		Public Shared Function SetLandInfoByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer,landinfo As String) As bool 
 >			Return Lands_SetLandInfoByPosInt_instance.Value(x,y,z,dimensionId,landinfo)
 >		End Function
->		Private Shared Lands_CreateLand2D_instance As Lazy(Of RemoteCallHandler_6(Of Boolean,Integer,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand2D"))
+>		Private Shared Lands_CreateLand2D_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CreateLand2D"))
 >		''' <summary> 新建领地 返回值类型：bool </summary>
 >		Public Shared Function CreateLand2D(x1 As Integer,z1 As Integer,x2 As Integer,z2 As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CreateLand2D_instance.Value(x1,z1,x2,z2,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_CreateLand3D_instance As Lazy(Of RemoteCallHandler_8(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand3D"))
+>		Private Shared Lands_CreateLand3D_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CreateLand3D"))
 >		''' <summary> 新建领地 返回值类型：bool </summary>
 >		Public Shared Function CreateLand3D(x1 As Integer,y1 As Integer,z1 As Integer,x2 As Integer,y2 As Integer,z2 As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CreateLand3D_instance.Value(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_DeleteLandByPos_instance As Lazy(Of RemoteCallHandler_4(Of Boolean,Single,Single,Single,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::DeleteLandByPos"))
+>		Private Shared Lands_DeleteLandByPos_instance As Lazy(Of Func(Of Single,Single,Single,Integer,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,Boolean))("PFLP", "Lands::DeleteLandByPos"))
 >		''' <summary> 删除指定坐标(float)的领地 返回值类型：bool </summary>
 >		Public Shared Function DeleteLandByPos(x As Single,y As Single,z As Single,dimensionId As Integer) As bool 
 >			Return Lands_DeleteLandByPos_instance.Value(x,y,z,dimensionId)
 >		End Function
->		Private Shared Lands_DeleteLandByPosInt_instance As Lazy(Of RemoteCallHandler_4(Of Boolean,Integer,Integer,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::DeleteLandByPosInt"))
+>		Private Shared Lands_DeleteLandByPosInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::DeleteLandByPosInt"))
 >		''' <summary> 删除指定坐标(int)的领地 返回值类型：bool </summary>
 >		Public Shared Function DeleteLandByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer) As bool 
 >			Return Lands_DeleteLandByPosInt_instance.Value(x,y,z,dimensionId)
 >		End Function
->		Private Shared Lands_GetLandPermissionByPos_instance As Lazy(Of RemoteCallHandler_5(Of String,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer,String)("PFLP", "Lands::GetLandPermissionByPos"))
+>		Private Shared Lands_GetLandPermissionByPos_instance As Lazy(Of Func(Of Single,Single,Single,Integer,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,String))("PFLP", "Lands::GetLandPermissionByPos"))
 >		''' <summary> 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandPermissionByPos(x As Single,y As Single,z As Single,dimensionId As Integer,playerXuid As String) As string 
 >			Return Lands_GetLandPermissionByPos_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_GetLandPermissionByPosInt_instance As Lazy(Of RemoteCallHandler_5(Of String,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::GetLandPermissionByPosInt"))
+>		Private Shared Lands_GetLandPermissionByPosInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,String))("PFLP", "Lands::GetLandPermissionByPosInt"))
 >		''' <summary> 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string </summary>
 >		Public Shared Function GetLandPermissionByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As string 
 >			Return Lands_GetLandPermissionByPosInt_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_CheckLandPermissionByPos_instance As Lazy(Of RemoteCallHandler_6(Of Boolean,String,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckLandPermissionByPos"))
+>		Private Shared Lands_CheckLandPermissionByPos_instance As Lazy(Of Func(Of String,Single,Single,Single,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckLandPermissionByPos"))
 >		''' <summary> 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool </summary>
 >		Public Shared Function CheckLandPermissionByPos(permissionId As String,x As Single,y As Single,z As Single,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckLandPermissionByPos_instance.Value(permissionId,x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_CheckLandPermissionByPosInt_instance As Lazy(Of RemoteCallHandler_6(Of Boolean,String,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckLandPermissionByPosInt"))
+>		Private Shared Lands_CheckLandPermissionByPosInt_instance As Lazy(Of Func(Of String,Integer,Integer,Integer,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckLandPermissionByPosInt"))
 >		''' <summary> 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool </summary>
 >		Public Shared Function CheckLandPermissionByPosInt(permissionId As String,x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckLandPermissionByPosInt_instance.Value(permissionId,x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_CheckPlayerIsLandOwnerByPos_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPos"))
+>		Private Shared Lands_CheckPlayerIsLandOwnerByPos_instance As Lazy(Of Func(Of Single,Single,Single,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerIsLandOwnerByPos"))
 >		''' <summary> 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool </summary>
 >		Public Shared Function CheckPlayerIsLandOwnerByPos(x As Single,y As Single,z As Single,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckPlayerIsLandOwnerByPos_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_CheckPlayerIsLandOwnerByPosInt_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt"))
+>		Private Shared Lands_CheckPlayerIsLandOwnerByPosInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt"))
 >		''' <summary> 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool </summary>
 >		Public Shared Function CheckPlayerIsLandOwnerByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckPlayerIsLandOwnerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_CheckIsLandSharedToPlayerByPos_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Single,Single,Single,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPos"))
+>		Private Shared Lands_CheckIsLandSharedToPlayerByPos_instance As Lazy(Of Func(Of Single,Single,Single,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckIsLandSharedToPlayerByPos"))
 >		''' <summary> 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
 >		Public Shared Function CheckIsLandSharedToPlayerByPos(x As Single,y As Single,z As Single,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckIsLandSharedToPlayerByPos_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_CheckIsLandSharedToPlayerByPosInt_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt"))
+>		Private Shared Lands_CheckIsLandSharedToPlayerByPosInt_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt"))
 >		''' <summary> 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
 >		Public Shared Function CheckIsLandSharedToPlayerByPosInt(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckIsLandSharedToPlayerByPosInt_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_CheckPlayerHasCreateChestPermission_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasCreateChestPermission"))
+>		Private Shared Lands_CheckPlayerHasCreateChestPermission_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerHasCreateChestPermission"))
 >		''' <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >		Public Shared Function CheckPlayerHasCreateChestPermission(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckPlayerHasCreateChestPermission_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_CheckPlayerHasOpenChestPermission_instance As Lazy(Of RemoteCallHandler_5(Of Boolean,Integer,Integer,Integer,Integer,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasOpenChestPermission"))
+>		Private Shared Lands_CheckPlayerHasOpenChestPermission_instance As Lazy(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerHasOpenChestPermission"))
 >		''' <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >		Public Shared Function CheckPlayerHasOpenChestPermission(x As Integer,y As Integer,z As Integer,dimensionId As Integer,playerXuid As String) As bool 
 >			Return Lands_CheckPlayerHasOpenChestPermission_instance.Value(x,y,z,dimensionId,playerXuid)
 >		End Function
->		Private Shared Lands_GetPlayerAllPermissionGroupId_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllPermissionGroupId"))
+>		Private Shared Lands_GetPlayerAllPermissionGroupId_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetPlayerAllPermissionGroupId"))
 >		''' <summary> 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string </summary>
 >		Public Shared Function GetPlayerAllPermissionGroupId(playerXuid As String) As string 
 >			Return Lands_GetPlayerAllPermissionGroupId_instance.Value(playerXuid)
 >		End Function
->		Private Shared Lands_GetPlayerPermissionGroup_instance As Lazy(Of RemoteCallHandler_2(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerPermissionGroup"))
+>		Private Shared Lands_GetPlayerPermissionGroup_instance As Lazy(Of Func(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Lands::GetPlayerPermissionGroup"))
 >		''' <summary> 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string </summary>
 >		Public Shared Function GetPlayerPermissionGroup(playerXuid As String,permissionGroupId As String) As string 
 >			Return Lands_GetPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId)
 >		End Function
->		Private Shared Lands_DeletePlayerPermissionGroup_instance As Lazy(Of RemoteCallHandler_2(Of Boolean,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerPermissionGroup"))
+>		Private Shared Lands_DeletePlayerPermissionGroup_instance As Lazy(Of Func(Of String,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Lands::DeletePlayerPermissionGroup"))
 >		''' <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
 >		Public Shared Function DeletePlayerPermissionGroup(playerXuid As String,permissionGroupId As String) As bool 
 >			Return Lands_DeletePlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId)
 >		End Function
->		Private Shared Lands_EditPlayerPermissionGroup_instance As Lazy(Of RemoteCallHandler_3(Of Boolean,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerPermissionGroup"))
+>		Private Shared Lands_EditPlayerPermissionGroup_instance As Lazy(Of Func(Of String,String,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String,Boolean))("PFLP", "Lands::EditPlayerPermissionGroup"))
 >		''' <summary> 修改家权限组内容(指定ID) 返回值类型：bool </summary>
 >		Public Shared Function EditPlayerPermissionGroup(playerXuid As String,permissionGroupId As String,jsonString As String) As bool 
 >			Return Lands_EditPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString)
 >		End Function
->		Private Shared Lands_AddPlayerPermissionGroup_instance As Lazy(Of RemoteCallHandler_3(Of Boolean,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerPermissionGroup"))
+>		Private Shared Lands_AddPlayerPermissionGroup_instance As Lazy(Of Func(Of String,String,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String,Boolean))("PFLP", "Lands::AddPlayerPermissionGroup"))
 >		''' <summary> 添加权限组 返回值类型：bool </summary>
 >		Public Shared Function AddPlayerPermissionGroup(playerXuid As String,permissionGroupId As String,jsonString As String) As bool 
 >			Return Lands_AddPlayerPermissionGroup_instance.Value(playerXuid,permissionGroupId,jsonString)
 >		End Function
->		Private Shared Lands_GetLandsOwnedByPlayer_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer"))
+>		Private Shared Lands_GetLandsOwnedByPlayer_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetLandsOwnedByPlayer"))
 >		''' <summary> 取玩家拥有的领地 返回值类型：string </summary>
 >		Public Shared Function GetLandsOwnedByPlayer(playerXuid As String) As string 
 >			Return Lands_GetLandsOwnedByPlayer_instance.Value(playerXuid)
 >		End Function
->		Private Shared Lands_GetLandsSharedToPlayer_instance As Lazy(Of RemoteCallHandler_1(Of String,String))(Function() RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsSharedToPlayer"))
+>		Private Shared Lands_GetLandsSharedToPlayer_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetLandsSharedToPlayer"))
 >		''' <summary> 取共享给玩家的领地 返回值类型：string </summary>
 >		Public Shared Function GetLandsSharedToPlayer(playerXuid As String) As string 
 >			Return Lands_GetLandsSharedToPlayer_instance.Value(playerXuid)
 >		End Function
 >	End Class
 >	Public NotInheritable Class FloatText
->		Private Shared FloatText_Add_instance As Lazy(Of RemoteCallHandler_5(Of Integer,String,Single,Single,Single,String))(Function() RemoteCallAPI.ImportAs(Of Integer,String,Single,Single,Single,String)("PFLP", "FloatText::Add"))
+>		Private Shared FloatText_Add_instance As Lazy(Of Func(Of String,Single,Single,Single,String,Integer))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,String,Integer))("PFLP", "FloatText::Add"))
 >		''' <summary> 创建浮空字(给玩家发包) 返回值类型：int </summary>
 >		Public Shared Function Add(playerXuid As String,x As Single,y As Single,z As Single,text As String) As int 
 >			Return FloatText_Add_instance.Value(playerXuid,x,y,z,text)
 >		End Function
->		Private Shared FloatText_Remove_instance As Lazy(Of RemoteCallHandler_void_2(Of String,Integer))(Function() RemoteCallAPI.Import_As(Of String,Integer)("PFLP", "FloatText::Remove"))
+>		Private Shared FloatText_Remove_instance As Lazy(Of Action(Of String,Integer))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,Integer))("PFLP", "FloatText::Remove"))
 >		''' <summary> 移除浮空字(给玩家发包) </summary>
 >		Public Shared Sub Remove(playerXuid As String,id As Integer)  
 >			FloatText_Remove_instance.Value(playerXuid,id)
 >		End Sub
 >	End Class
 >	Public NotInheritable Class Money
->		Private Shared Money_Get_instance As Lazy(Of RemoteCallHandler_1(Of Long,String))(Function() RemoteCallAPI.ImportAs(Of Long,String)("PFLP", "Money::Get"))
+>		Private Shared Money_Get_instance As Lazy(Of Func(Of String,Long))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Long))("PFLP", "Money::Get"))
 >		''' <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
 >		Public Shared Function Get(playerXuid As String) As long 
 >			Return Money_Get_instance.Value(playerXuid)
 >		End Function
->		Private Shared Money_Add_instance As Lazy(Of RemoteCallHandler_void_3(Of String,Long,String))(Function() RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money::Add"))
+>		Private Shared Money_Add_instance As Lazy(Of Action(Of String,Long,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add"))
 >		''' <summary> 给玩家(指定玩家名)加钱 </summary>
 >		Public Shared Sub Add(playerXuid As String,count As Long,info As String)  
 >			Money_Add_instance.Value(playerXuid,count,info)
 >		End Sub
->		Private Shared Money_Remove_instance As Lazy(Of RemoteCallHandler_void_3(Of String,Long,String))(Function() RemoteCallAPI.Import_As(Of String,Long,String)("PFLP", "Money::Remove"))
+>		Private Shared Money_Remove_instance As Lazy(Of Action(Of String,Long,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove"))
 >		''' <summary> 给玩家(指定玩家名)减钱 </summary>
 >		Public Shared Sub Remove(playerXuid As String,count As Long,info As String)  
 >			Money_Remove_instance.Value(playerXuid,count,info)
 >		End Sub
 >	End Class
 >	Public NotInheritable Class Internal
->		Private Shared Internal_CheatPunish_instance As Lazy(Of RemoteCallHandler_4(Of Boolean,Integer,Integer,IntPtr,Integer))(Function() RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,IntPtr,Integer)("PFLP", "Internal::CheatPunish"))
->		''' <summary> 作弊反馈（LLAntiCheat用） 返回值类型：bool </summary>
->		Public Shared Function CheatPunish(PunishLevel As Integer,PunishReason As Integer,playerXuid As IntPtr,CheatCount As Integer) As bool 
->			Return Internal_CheatPunish_instance.Value(PunishLevel,PunishReason,playerXuid,CheatCount)
->		End Function
 >	End Class
 >End Module
 >
@@ -5369,141 +5327,139 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >open LiteLoader.RemoteCall
 >
 >// 设置全局配置文件（要求JSON字符串） 返回值类型：bool
->let General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
+>let General_SetConfig = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "General::SetConfig")
 >// 获取全局配置文件（JSON字符串） 返回值类型：string
->let General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig")
+>let General_GetConfig = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig")
 >// 重新加载所有功能的配置文件
->let General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+>let General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload")
 >// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
->let Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp")
+>let Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
 >// 获取变量 返回值类型：string
->let Format_GetVariableString = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
+>let Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 >// 获取变量，但是强制返回int类型 返回值类型：int
->let Format_GetVariableInt = RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt")
+>let Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt")
 >// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
->let Format_FormatRawString = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString")
+>let Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString")
 >// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
->let Format_DefineFormat = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat")
+>let Format_DefineFormat = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Format::DefineFormat")
 >// 移除格式化定义（返回true为存在并移除） 返回值类型：bool
->let Format_RemoveFormat = RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat")
+>let Format_RemoveFormat = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "Format::RemoveFormat")
 >// 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string
->let Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer")
+>let Format_GetFormatWithPlayer = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetFormatWithPlayer")
 >// 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string
->let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
+>let Format_GetFormatWithPlayerLang = RemoteCallAPI.ImportAs<Func<string,string,string,string,string>>("PFLP", "Format::GetFormatWithPlayerLang")
 >// 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string
->let Format_GetFormat = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
+>let Format_GetFormat = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::GetFormat")
 >// 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令)
->let Command_RenameCommand = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
+>let Command_RenameCommand = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::RenameCommand")
 >// 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool
->let Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand")
+>let Command_ExecuteInternalCommand = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Command::ExecuteInternalCommand")
 >// 设置命令禁用(可设置提示)(支持任意命令)
->let Command_SetCommandDisabled = RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
+>let Command_SetCommandDisabled = RemoteCallAPI.ImportAs<Action<string,string,string>>("PFLP", "Command::SetCommandDisabled")
 >// 设置命令启用
->let Command_SetCommandEnabled = RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled")
+>let Command_SetCommandEnabled = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::SetCommandEnabled")
 >// 翻译 返回值类型：string
->let Language_Translate = RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate")
+>let Language_Translate = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Language::Translate")
 >// 设置玩家昵称
->let ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName")
+>let ChatEx_SetNickName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetNickName")
 >// 设置玩家聊天时的名字
->let ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName")
+>let ChatEx_SetFakeName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetFakeName")
 >// 设置玩家聊天消息后缀
->let ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd")
+>let ChatEx_SetEnd = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetEnd")
 >// 设置玩家聊天消息前缀
->let ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart")
+>let ChatEx_SetStart = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetStart")
 >// 获取玩家昵称 返回值类型：string
->let ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName")
+>let ChatEx_GetNickName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetNickName")
 >// 获取玩家聊天时的名字 返回值类型：string
->let ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName")
+>let ChatEx_GetFakeName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetFakeName")
 >// 获取玩家聊天消息后缀 返回值类型：string
->let ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd")
+>let ChatEx_GetEnd = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetEnd")
 >// 获取玩家聊天消息前缀 返回值类型：string
->let ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart")
+>let ChatEx_GetStart = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetStart")
 >// 给指定方块描框
->let ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
+>let ParticlesGraphics_DrawBlock = RemoteCallAPI.ImportAs<Action<string,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBlock")
 >// 给指定区域描框
->let ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
+>let ParticlesGraphics_DrawBorder = RemoteCallAPI.ImportAs<Action<string,int,int,int,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBorder")
 >// 检查指定立方体区域(float)是否有领地 返回值类型：bool
->let Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand")
+>let Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,bool>>("PFLP", "Lands::CheckCubeHasLand")
 >// 检查指定立方体区域(int)是否有领地 返回值类型：bool
->let Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt")
+>let Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,bool>>("PFLP", "Lands::CheckCubeHasLandInt")
 >// 检查指定坐标(float)是否有领地 返回值类型：bool
->let Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand")
+>let Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::CheckPosHasLand")
 >// 检查指定坐标(int)是否有领地 返回值类型：bool
->let Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt")
+>let Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::CheckPosHasLandInt")
 >// 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube")
+>let Lands_GetLandByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandByCube")
 >// 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt")
+>let Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandByCubeInt")
 >// 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos")
+>let Lands_GetLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandByPos")
 >// 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt")
+>let Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandByPosInt")
 >// 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube")
+>let Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByCube")
 >// 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt")
+>let Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByCubeInt")
 >// 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos")
+>let Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByPos")
 >// 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
->let Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt")
+>let Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByPosInt")
 >// 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos")
+>let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::SetLandInfoByPos")
 >// 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
->let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt")
+>let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::SetLandInfoByPosInt")
 >// 新建领地 返回值类型：bool
->let Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D")
+>let Lands_CreateLand2D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand2D")
 >// 新建领地 返回值类型：bool
->let Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D")
+>let Lands_CreateLand3D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand3D")
 >// 删除指定坐标(float)的领地 返回值类型：bool
->let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos")
+>let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::DeleteLandByPos")
 >// 删除指定坐标(int)的领地 返回值类型：bool
->let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt")
+>let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::DeleteLandByPosInt")
 >// 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->let Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos")
+>let Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,string>>("PFLP", "Lands::GetLandPermissionByPos")
 >// 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
->let Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt")
+>let Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,string>>("PFLP", "Lands::GetLandPermissionByPosInt")
 >// 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->let Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos")
+>let Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPos")
 >// 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
->let Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt")
+>let Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<string,int,int,int,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPosInt")
 >// 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
->let Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>let Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
 >// 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
->let Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>let Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
 >// 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 >// 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
->let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+>let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
->let Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
+>let Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 >// (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
->let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
+>let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >// 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
->let Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
+>let Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >// 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
->let Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup")
+>let Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Lands::GetPlayerPermissionGroup")
 >// 删玩家权限组(指定ID) 返回值类型：bool
->let Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup")
+>let Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Lands::DeletePlayerPermissionGroup")
 >// 修改家权限组内容(指定ID) 返回值类型：bool
->let Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup")
+>let Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::EditPlayerPermissionGroup")
 >// 添加权限组 返回值类型：bool
->let Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup")
+>let Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::AddPlayerPermissionGroup")
 >// 取玩家拥有的领地 返回值类型：string
->let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
+>let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsOwnedByPlayer")
 >// 取共享给玩家的领地 返回值类型：string
->let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer")
+>let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsSharedToPlayer")
 >// 创建浮空字(给玩家发包) 返回值类型：int
->let FloatText_Add = RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add")
+>let FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add")
 >// 移除浮空字(给玩家发包)
->let FloatText_Remove = RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove")
+>let FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove")
 >// 获取玩家(指定玩家名)金钱 返回值类型：long
->let Money_Get = RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
+>let Money_Get = RemoteCallAPI.ImportAs<Func<string,int64>>("PFLP", "Money::Get")
 >// 给玩家(指定玩家名)加钱
->let Money_Add = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Add")
+>let Money_Add = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
 >// 给玩家(指定玩家名)减钱
->let Money_Remove = RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Remove")
->// 作弊反馈（LLAntiCheat用） 返回值类型：bool
->let Internal_CheatPunish = RemoteCallAPI.ImportAs<bool,int,int,nativeint,int>("PFLP", "Internal::CheatPunish")
+>let Money_Remove = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
 >
 >```
 ></details>
@@ -5515,288 +5471,284 @@ auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int
 >
 >module public PFLP =
 >  module public General =
->    let private General_SetConfig_instance = lazy RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
+>    let private General_SetConfig_instance = lazy RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "General::SetConfig")
 >    /// <summary> 设置全局配置文件（要求JSON字符串） 返回值类型：bool </summary>
 >    let public SetConfig(jsonStr:string):bool =
 >      General_SetConfig_instance.Value.Invoke(jsonStr)
->    let private General_GetConfig_instance = lazy RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig")
+>    let private General_GetConfig_instance = lazy RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig")
 >    /// <summary> 获取全局配置文件（JSON字符串） 返回值类型：string </summary>
 >    let public GetConfig():string =
 >      General_GetConfig_instance.Value.Invoke()
->    let private General_Reload_instance = lazy RemoteCallAPI.Import_As("PFLP", "General::Reload")
+>    let private General_Reload_instance = lazy RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload")
 >    /// <summary> 重新加载所有功能的配置文件 </summary>
 >    let public Reload():unit =
 >      General_Reload_instance.Value.Invoke()
 >  module public Tpa =
->    let private Tpa_GetTemp_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp")
+>    let private Tpa_GetTemp_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
 >    /// <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
 >    let public GetTemp(playerXuid:string):string =
 >      Tpa_GetTemp_instance.Value.Invoke(playerXuid)
 >  module public Format =
->    let private Format_GetVariableString_instance = lazy RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetVariableString")
+>    let private Format_GetVariableString_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 >    /// <summary> 获取变量 返回值类型：string </summary>
 >    let public GetVariableString(playerXuid:string)(name:string)(format:string):string =
 >      Format_GetVariableString_instance.Value.Invoke(playerXuid,name,format)
->    let private Format_GetVariableInt_instance = lazy RemoteCallAPI.ImportAs<int,string,string>("PFLP", "Format::GetVariableInt")
+>    let private Format_GetVariableInt_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt")
 >    /// <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
 >    let public GetVariableInt(playerXuid:string)(name:string):int =
 >      Format_GetVariableInt_instance.Value.Invoke(playerXuid,name)
->    let private Format_FormatRawString_instance = lazy RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::FormatRawString")
+>    let private Format_FormatRawString_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString")
 >    /// <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
 >    let public FormatRawString(playerXuid:string)(rawFormat:string):string =
 >      Format_FormatRawString_instance.Value.Invoke(playerXuid,rawFormat)
->    let private Format_DefineFormat_instance = lazy RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Format::DefineFormat")
+>    let private Format_DefineFormat_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Format::DefineFormat")
 >    /// <summary> 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool </summary>
 >    let public DefineFormat(id:string)(rawFormat:string):bool =
 >      Format_DefineFormat_instance.Value.Invoke(id,rawFormat)
->    let private Format_RemoveFormat_instance = lazy RemoteCallAPI.ImportAs<bool,string>("PFLP", "Format::RemoveFormat")
+>    let private Format_RemoveFormat_instance = lazy RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "Format::RemoveFormat")
 >    /// <summary> 移除格式化定义（返回true为存在并移除） 返回值类型：bool </summary>
 >    let public RemoveFormat(id:string):bool =
 >      Format_RemoveFormat_instance.Value.Invoke(id)
->    let private Format_GetFormatWithPlayer_instance = lazy RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Format::GetFormatWithPlayer")
+>    let private Format_GetFormatWithPlayer_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetFormatWithPlayer")
 >    /// <summary> 通过已定义的ID获取格式化内容（性能更优） 返回值类型：string </summary>
 >    let public GetFormatWithPlayer(id:string)(playerXuid:string)(extra:string):string =
 >      Format_GetFormatWithPlayer_instance.Value.Invoke(id,playerXuid,extra)
->    let private Format_GetFormatWithPlayerLang_instance = lazy RemoteCallAPI.ImportAs<string,string,string,string,string>("PFLP", "Format::GetFormatWithPlayerLang")
+>    let private Format_GetFormatWithPlayerLang_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string,string,string>>("PFLP", "Format::GetFormatWithPlayerLang")
 >    /// <summary> 通过已定义的ID获取格式化内容（其中playerXuid为玩家上下文，playerLangXuid用于格式化的语言获取） 返回值类型：string </summary>
 >    let public GetFormatWithPlayerLang(id:string)(playerXuid:string)(playerLangXuid:string)(extra:string):string =
 >      Format_GetFormatWithPlayerLang_instance.Value.Invoke(id,playerXuid,playerLangXuid,extra)
->    let private Format_GetFormat_instance = lazy RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Format::GetFormat")
+>    let private Format_GetFormat_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::GetFormat")
 >    /// <summary> 通过已定义的ID获取格式化内容（不包含玩家上下文） 返回值类型：string </summary>
 >    let public GetFormat(id:string)(extra:string):string =
 >      Format_GetFormat_instance.Value.Invoke(id,extra)
 >  module public Command =
->    let private Command_RenameCommand_instance = lazy RemoteCallAPI.Import_As<string,string>("PFLP", "Command::RenameCommand")
+>    let private Command_RenameCommand_instance = lazy RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::RenameCommand")
 >    /// <summary> 重命名命令(仅pflp插件的命令，暂不支持其他插件的命令)(newCmd为空字符串则表示隐藏该cmd命令) </summary>
 >    let public RenameCommand(cmd:string)(newCmd:string):unit =
 >      Command_RenameCommand_instance.Value.Invoke(cmd,newCmd)
->    let private Command_ExecuteInternalCommand_instance = lazy RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Command::ExecuteInternalCommand")
+>    let private Command_ExecuteInternalCommand_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Command::ExecuteInternalCommand")
 >    /// <summary> 执行pflp内部命令(无视重命名,执行的是原始命令) 返回值类型：bool </summary>
 >    let public ExecuteInternalCommand(playerXuid:string)(cmd:string):bool =
 >      Command_ExecuteInternalCommand_instance.Value.Invoke(playerXuid,cmd)
->    let private Command_SetCommandDisabled_instance = lazy RemoteCallAPI.Import_As<string,string,string>("PFLP", "Command::SetCommandDisabled")
+>    let private Command_SetCommandDisabled_instance = lazy RemoteCallAPI.ImportAs<Action<string,string,string>>("PFLP", "Command::SetCommandDisabled")
 >    /// <summary> 设置命令禁用(可设置提示)(支持任意命令) </summary>
 >    let public SetCommandDisabled(playerXuid:string)(cmd:string)(feedback:string):unit =
 >      Command_SetCommandDisabled_instance.Value.Invoke(playerXuid,cmd,feedback)
->    let private Command_SetCommandEnabled_instance = lazy RemoteCallAPI.Import_As<string,string>("PFLP", "Command::SetCommandEnabled")
+>    let private Command_SetCommandEnabled_instance = lazy RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Command::SetCommandEnabled")
 >    /// <summary> 设置命令启用 </summary>
 >    let public SetCommandEnabled(playerXuid:string)(cmd:string):unit =
 >      Command_SetCommandEnabled_instance.Value.Invoke(playerXuid,cmd)
 >  module public Language =
->    let private Language_Translate_instance = lazy RemoteCallAPI.ImportAs<string,string,string,string>("PFLP", "Language::Translate")
+>    let private Language_Translate_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Language::Translate")
 >    /// <summary> 翻译 返回值类型：string </summary>
 >    let public Translate(fromLanguage:string)(toLanguage:string)(text:string):string =
 >      Language_Translate_instance.Value.Invoke(fromLanguage,toLanguage,text)
 >  module public ChatEx =
->    let private ChatEx_SetNickName_instance = lazy RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName")
+>    let private ChatEx_SetNickName_instance = lazy RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetNickName")
 >    /// <summary> 设置玩家昵称 </summary>
 >    let public SetNickName(playerXuid:string)(nickName:string):unit =
 >      ChatEx_SetNickName_instance.Value.Invoke(playerXuid,nickName)
->    let private ChatEx_SetFakeName_instance = lazy RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName")
+>    let private ChatEx_SetFakeName_instance = lazy RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetFakeName")
 >    /// <summary> 设置玩家聊天时的名字 </summary>
 >    let public SetFakeName(playerXuid:string)(fakeName:string):unit =
 >      ChatEx_SetFakeName_instance.Value.Invoke(playerXuid,fakeName)
->    let private ChatEx_SetEnd_instance = lazy RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd")
+>    let private ChatEx_SetEnd_instance = lazy RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetEnd")
 >    /// <summary> 设置玩家聊天消息后缀 </summary>
 >    let public SetEnd(playerXuid:string)(endStr:string):unit =
 >      ChatEx_SetEnd_instance.Value.Invoke(playerXuid,endStr)
->    let private ChatEx_SetStart_instance = lazy RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart")
+>    let private ChatEx_SetStart_instance = lazy RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetStart")
 >    /// <summary> 设置玩家聊天消息前缀 </summary>
 >    let public SetStart(playerXuid:string)(startStr:string):unit =
 >      ChatEx_SetStart_instance.Value.Invoke(playerXuid,startStr)
->    let private ChatEx_GetNickName_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName")
+>    let private ChatEx_GetNickName_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetNickName")
 >    /// <summary> 获取玩家昵称 返回值类型：string </summary>
 >    let public GetNickName(playerXuid:string):string =
 >      ChatEx_GetNickName_instance.Value.Invoke(playerXuid)
->    let private ChatEx_GetFakeName_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName")
+>    let private ChatEx_GetFakeName_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetFakeName")
 >    /// <summary> 获取玩家聊天时的名字 返回值类型：string </summary>
 >    let public GetFakeName(playerXuid:string):string =
 >      ChatEx_GetFakeName_instance.Value.Invoke(playerXuid)
->    let private ChatEx_GetEnd_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd")
+>    let private ChatEx_GetEnd_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetEnd")
 >    /// <summary> 获取玩家聊天消息后缀 返回值类型：string </summary>
 >    let public GetEnd(playerXuid:string):string =
 >      ChatEx_GetEnd_instance.Value.Invoke(playerXuid)
->    let private ChatEx_GetStart_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart")
+>    let private ChatEx_GetStart_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetStart")
 >    /// <summary> 获取玩家聊天消息前缀 返回值类型：string </summary>
 >    let public GetStart(playerXuid:string):string =
 >      ChatEx_GetStart_instance.Value.Invoke(playerXuid)
 >  module public ParticlesGraphics =
->    let private ParticlesGraphics_DrawBlock_instance = lazy RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
+>    let private ParticlesGraphics_DrawBlock_instance = lazy RemoteCallAPI.ImportAs<Action<string,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBlock")
 >    /// <summary> 给指定方块描框 </summary>
 >    let public DrawBlock(playerXuid:string)(x:int)(y:int)(z:int)(r:float)(g:float)(b:float)(thickness:float)(time:float)(alpha:float):unit =
 >      ParticlesGraphics_DrawBlock_instance.Value.Invoke(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
->    let private ParticlesGraphics_DrawBorder_instance = lazy RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
+>    let private ParticlesGraphics_DrawBorder_instance = lazy RemoteCallAPI.ImportAs<Action<string,int,int,int,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBorder")
 >    /// <summary> 给指定区域描框 </summary>
 >    let public DrawBorder(playerXuid:string)(x1:int)(y1:int)(z1:int)(x2:int)(y2:int)(z2:int)(r:float)(g:float)(b:float)(thickness:float)(time:float)(alpha:float):unit =
 >      ParticlesGraphics_DrawBorder_instance.Value.Invoke(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 >  module public Lands =
->    let private Lands_CheckCubeHasLand_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand")
+>    let private Lands_CheckCubeHasLand_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,bool>>("PFLP", "Lands::CheckCubeHasLand")
 >    /// <summary> 检查指定立方体区域(float)是否有领地 返回值类型：bool </summary>
 >    let public CheckCubeHasLand(x1:float)(y1:float)(z1:float)(x2:float)(y2:float)(z2:float)(dimensionId:int):bool =
 >      Lands_CheckCubeHasLand_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId)
->    let private Lands_CheckCubeHasLandInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt")
+>    let private Lands_CheckCubeHasLandInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,bool>>("PFLP", "Lands::CheckCubeHasLandInt")
 >    /// <summary> 检查指定立方体区域(int)是否有领地 返回值类型：bool </summary>
 >    let public CheckCubeHasLandInt(x1:int)(y1:int)(z1:int)(x2:int)(y2:int)(z2:int)(dimensionId:int):bool =
 >      Lands_CheckCubeHasLandInt_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId)
->    let private Lands_CheckPosHasLand_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand")
+>    let private Lands_CheckPosHasLand_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::CheckPosHasLand")
 >    /// <summary> 检查指定坐标(float)是否有领地 返回值类型：bool </summary>
 >    let public CheckPosHasLand(x:float)(y:float)(z:float)(dimensionId:int):bool =
 >      Lands_CheckPosHasLand_instance.Value.Invoke(x,y,z,dimensionId)
->    let private Lands_CheckPosHasLandInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt")
+>    let private Lands_CheckPosHasLandInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::CheckPosHasLandInt")
 >    /// <summary> 检查指定坐标(int)是否有领地 返回值类型：bool </summary>
 >    let public CheckPosHasLandInt(x:int)(y:int)(z:int)(dimensionId:int):bool =
 >      Lands_CheckPosHasLandInt_instance.Value.Invoke(x,y,z,dimensionId)
->    let private Lands_GetLandByCube_instance = lazy RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube")
+>    let private Lands_GetLandByCube_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandByCube")
 >    /// <summary> 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >    let public GetLandByCube(x1:float)(y1:float)(z1:float)(x2:float)(y2:float)(z2:float)(dimensionId:int):string =
 >      Lands_GetLandByCube_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId)
->    let private Lands_GetLandByCubeInt_instance = lazy RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt")
+>    let private Lands_GetLandByCubeInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandByCubeInt")
 >    /// <summary> 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >    let public GetLandByCubeInt(x1:int)(y1:int)(z1:int)(x2:int)(y2:int)(z2:int)(dimensionId:int):string =
 >      Lands_GetLandByCubeInt_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId)
->    let private Lands_GetLandByPos_instance = lazy RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos")
+>    let private Lands_GetLandByPos_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandByPos")
 >    /// <summary> 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >    let public GetLandByPos(x:float)(y:float)(z:float)(dimensionId:int):string =
 >      Lands_GetLandByPos_instance.Value.Invoke(x,y,z,dimensionId)
->    let private Lands_GetLandByPosInt_instance = lazy RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt")
+>    let private Lands_GetLandByPosInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandByPosInt")
 >    /// <summary> 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string </summary>
 >    let public GetLandByPosInt(x:int)(y:int)(z:int)(dimensionId:int):string =
 >      Lands_GetLandByPosInt_instance.Value.Invoke(x,y,z,dimensionId)
->    let private Lands_GetLandInfoByCube_instance = lazy RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube")
+>    let private Lands_GetLandInfoByCube_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByCube")
 >    /// <summary> 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >    let public GetLandInfoByCube(x1:float)(y1:float)(z1:float)(x2:float)(y2:float)(z2:float)(dimensionId:int):string =
 >      Lands_GetLandInfoByCube_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId)
->    let private Lands_GetLandInfoByCubeInt_instance = lazy RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt")
+>    let private Lands_GetLandInfoByCubeInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByCubeInt")
 >    /// <summary> 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >    let public GetLandInfoByCubeInt(x1:int)(y1:int)(z1:int)(x2:int)(y2:int)(z2:int)(dimensionId:int):string =
 >      Lands_GetLandInfoByCubeInt_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId)
->    let private Lands_GetLandInfoByPos_instance = lazy RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos")
+>    let private Lands_GetLandInfoByPos_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByPos")
 >    /// <summary> 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >    let public GetLandInfoByPos(x:float)(y:float)(z:float)(dimensionId:int):string =
 >      Lands_GetLandInfoByPos_instance.Value.Invoke(x,y,z,dimensionId)
->    let private Lands_GetLandInfoByPosInt_instance = lazy RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt")
+>    let private Lands_GetLandInfoByPosInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByPosInt")
 >    /// <summary> 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string </summary>
 >    let public GetLandInfoByPosInt(x:int)(y:int)(z:int)(dimensionId:int):string =
 >      Lands_GetLandInfoByPosInt_instance.Value.Invoke(x,y,z,dimensionId)
->    let private Lands_SetLandInfoByPos_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos")
+>    let private Lands_SetLandInfoByPos_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::SetLandInfoByPos")
 >    /// <summary> 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >    let public SetLandInfoByPos(x:float)(y:float)(z:float)(dimensionId:int)(landinfo:string):bool =
 >      Lands_SetLandInfoByPos_instance.Value.Invoke(x,y,z,dimensionId,landinfo)
->    let private Lands_SetLandInfoByPosInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt")
+>    let private Lands_SetLandInfoByPosInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::SetLandInfoByPosInt")
 >    /// <summary> 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool </summary>
 >    let public SetLandInfoByPosInt(x:int)(y:int)(z:int)(dimensionId:int)(landinfo:string):bool =
 >      Lands_SetLandInfoByPosInt_instance.Value.Invoke(x,y,z,dimensionId,landinfo)
->    let private Lands_CreateLand2D_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D")
+>    let private Lands_CreateLand2D_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand2D")
 >    /// <summary> 新建领地 返回值类型：bool </summary>
 >    let public CreateLand2D(x1:int)(z1:int)(x2:int)(z2:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CreateLand2D_instance.Value.Invoke(x1,z1,x2,z2,dimensionId,playerXuid)
->    let private Lands_CreateLand3D_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D")
+>    let private Lands_CreateLand3D_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand3D")
 >    /// <summary> 新建领地 返回值类型：bool </summary>
 >    let public CreateLand3D(x1:int)(y1:int)(z1:int)(x2:int)(y2:int)(z2:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CreateLand3D_instance.Value.Invoke(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
->    let private Lands_DeleteLandByPos_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos")
+>    let private Lands_DeleteLandByPos_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::DeleteLandByPos")
 >    /// <summary> 删除指定坐标(float)的领地 返回值类型：bool </summary>
 >    let public DeleteLandByPos(x:float)(y:float)(z:float)(dimensionId:int):bool =
 >      Lands_DeleteLandByPos_instance.Value.Invoke(x,y,z,dimensionId)
->    let private Lands_DeleteLandByPosInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt")
+>    let private Lands_DeleteLandByPosInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::DeleteLandByPosInt")
 >    /// <summary> 删除指定坐标(int)的领地 返回值类型：bool </summary>
 >    let public DeleteLandByPosInt(x:int)(y:int)(z:int)(dimensionId:int):bool =
 >      Lands_DeleteLandByPosInt_instance.Value.Invoke(x,y,z,dimensionId)
->    let private Lands_GetLandPermissionByPos_instance = lazy RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos")
+>    let private Lands_GetLandPermissionByPos_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,int,string,string>>("PFLP", "Lands::GetLandPermissionByPos")
 >    /// <summary> 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string </summary>
 >    let public GetLandPermissionByPos(x:float)(y:float)(z:float)(dimensionId:int)(playerXuid:string):string =
 >      Lands_GetLandPermissionByPos_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
->    let private Lands_GetLandPermissionByPosInt_instance = lazy RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt")
+>    let private Lands_GetLandPermissionByPosInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,string,string>>("PFLP", "Lands::GetLandPermissionByPosInt")
 >    /// <summary> 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string </summary>
 >    let public GetLandPermissionByPosInt(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):string =
 >      Lands_GetLandPermissionByPosInt_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
->    let private Lands_CheckLandPermissionByPos_instance = lazy RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos")
+>    let private Lands_CheckLandPermissionByPos_instance = lazy RemoteCallAPI.ImportAs<Func<string,float,float,float,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPos")
 >    /// <summary> 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool </summary>
 >    let public CheckLandPermissionByPos(permissionId:string)(x:float)(y:float)(z:float)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckLandPermissionByPos_instance.Value.Invoke(permissionId,x,y,z,dimensionId,playerXuid)
->    let private Lands_CheckLandPermissionByPosInt_instance = lazy RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt")
+>    let private Lands_CheckLandPermissionByPosInt_instance = lazy RemoteCallAPI.ImportAs<Func<string,int,int,int,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPosInt")
 >    /// <summary> 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool </summary>
 >    let public CheckLandPermissionByPosInt(permissionId:string)(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckLandPermissionByPosInt_instance.Value.Invoke(permissionId,x,y,z,dimensionId,playerXuid)
->    let private Lands_CheckPlayerIsLandOwnerByPos_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+>    let private Lands_CheckPlayerIsLandOwnerByPos_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
 >    /// <summary> 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool </summary>
 >    let public CheckPlayerIsLandOwnerByPos(x:float)(y:float)(z:float)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckPlayerIsLandOwnerByPos_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
->    let private Lands_CheckPlayerIsLandOwnerByPosInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+>    let private Lands_CheckPlayerIsLandOwnerByPosInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
 >    /// <summary> 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool </summary>
 >    let public CheckPlayerIsLandOwnerByPosInt(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckPlayerIsLandOwnerByPosInt_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
->    let private Lands_CheckIsLandSharedToPlayerByPos_instance = lazy RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+>    let private Lands_CheckIsLandSharedToPlayerByPos_instance = lazy RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 >    /// <summary> 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
 >    let public CheckIsLandSharedToPlayerByPos(x:float)(y:float)(z:float)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckIsLandSharedToPlayerByPos_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
->    let private Lands_CheckIsLandSharedToPlayerByPosInt_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+>    let private Lands_CheckIsLandSharedToPlayerByPosInt_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 >    /// <summary> 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool </summary>
 >    let public CheckIsLandSharedToPlayerByPosInt(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckIsLandSharedToPlayerByPosInt_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
->    let private Lands_CheckPlayerHasCreateChestPermission_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
+>    let private Lands_CheckPlayerHasCreateChestPermission_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 >    /// <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >    let public CheckPlayerHasCreateChestPermission(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckPlayerHasCreateChestPermission_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
->    let private Lands_CheckPlayerHasOpenChestPermission_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
+>    let private Lands_CheckPlayerHasOpenChestPermission_instance = lazy RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 >    /// <summary> (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool </summary>
 >    let public CheckPlayerHasOpenChestPermission(x:int)(y:int)(z:int)(dimensionId:int)(playerXuid:string):bool =
 >      Lands_CheckPlayerHasOpenChestPermission_instance.Value.Invoke(x,y,z,dimensionId,playerXuid)
->    let private Lands_GetPlayerAllPermissionGroupId_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
+>    let private Lands_GetPlayerAllPermissionGroupId_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 >    /// <summary> 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string </summary>
 >    let public GetPlayerAllPermissionGroupId(playerXuid:string):string =
 >      Lands_GetPlayerAllPermissionGroupId_instance.Value.Invoke(playerXuid)
->    let private Lands_GetPlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup")
+>    let private Lands_GetPlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Lands::GetPlayerPermissionGroup")
 >    /// <summary> 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string </summary>
 >    let public GetPlayerPermissionGroup(playerXuid:string)(permissionGroupId:string):string =
 >      Lands_GetPlayerPermissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId)
->    let private Lands_DeletePlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup")
+>    let private Lands_DeletePlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Lands::DeletePlayerPermissionGroup")
 >    /// <summary> 删玩家权限组(指定ID) 返回值类型：bool </summary>
 >    let public DeletePlayerPermissionGroup(playerXuid:string)(permissionGroupId:string):bool =
 >      Lands_DeletePlayerPermissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId)
->    let private Lands_EditPlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup")
+>    let private Lands_EditPlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::EditPlayerPermissionGroup")
 >    /// <summary> 修改家权限组内容(指定ID) 返回值类型：bool </summary>
 >    let public EditPlayerPermissionGroup(playerXuid:string)(permissionGroupId:string)(jsonString:string):bool =
 >      Lands_EditPlayerPermissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId,jsonString)
->    let private Lands_AddPlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup")
+>    let private Lands_AddPlayerPermissionGroup_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::AddPlayerPermissionGroup")
 >    /// <summary> 添加权限组 返回值类型：bool </summary>
 >    let public AddPlayerPermissionGroup(playerXuid:string)(permissionGroupId:string)(jsonString:string):bool =
 >      Lands_AddPlayerPermissionGroup_instance.Value.Invoke(playerXuid,permissionGroupId,jsonString)
->    let private Lands_GetLandsOwnedByPlayer_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
+>    let private Lands_GetLandsOwnedByPlayer_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsOwnedByPlayer")
 >    /// <summary> 取玩家拥有的领地 返回值类型：string </summary>
 >    let public GetLandsOwnedByPlayer(playerXuid:string):string =
 >      Lands_GetLandsOwnedByPlayer_instance.Value.Invoke(playerXuid)
->    let private Lands_GetLandsSharedToPlayer_instance = lazy RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer")
+>    let private Lands_GetLandsSharedToPlayer_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsSharedToPlayer")
 >    /// <summary> 取共享给玩家的领地 返回值类型：string </summary>
 >    let public GetLandsSharedToPlayer(playerXuid:string):string =
 >      Lands_GetLandsSharedToPlayer_instance.Value.Invoke(playerXuid)
 >  module public FloatText =
->    let private FloatText_Add_instance = lazy RemoteCallAPI.ImportAs<int,string,float,float,float,string>("PFLP", "FloatText::Add")
+>    let private FloatText_Add_instance = lazy RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add")
 >    /// <summary> 创建浮空字(给玩家发包) 返回值类型：int </summary>
 >    let public Add(playerXuid:string)(x:float)(y:float)(z:float)(text:string):int =
 >      FloatText_Add_instance.Value.Invoke(playerXuid,x,y,z,text)
->    let private FloatText_Remove_instance = lazy RemoteCallAPI.Import_As<string,int>("PFLP", "FloatText::Remove")
+>    let private FloatText_Remove_instance = lazy RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove")
 >    /// <summary> 移除浮空字(给玩家发包) </summary>
 >    let public Remove(playerXuid:string)(id:int):unit =
 >      FloatText_Remove_instance.Value.Invoke(playerXuid,id)
 >  module public Money =
->    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<int64,string>("PFLP", "Money::Get")
+>    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<Func<string,int64>>("PFLP", "Money::Get")
 >    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
 >    let public Get(playerXuid:string):int64 =
 >      Money_Get_instance.Value.Invoke(playerXuid)
->    let private Money_Add_instance = lazy RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Add")
+>    let private Money_Add_instance = lazy RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
 >    /// <summary> 给玩家(指定玩家名)加钱 </summary>
 >    let public Add(playerXuid:string)(count:int64)(info:string):unit =
 >      Money_Add_instance.Value.Invoke(playerXuid,count,info)
->    let private Money_Remove_instance = lazy RemoteCallAPI.Import_As<string,int64,string>("PFLP", "Money::Remove")
+>    let private Money_Remove_instance = lazy RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
 >    /// <summary> 给玩家(指定玩家名)减钱 </summary>
 >    let public Remove(playerXuid:string)(count:int64)(info:string):unit =
 >      Money_Remove_instance.Value.Invoke(playerXuid,count,info)
 >  module public Internal =
->    let private Internal_CheatPunish_instance = lazy RemoteCallAPI.ImportAs<bool,int,int,nativeint,int>("PFLP", "Internal::CheatPunish")
->    /// <summary> 作弊反馈（LLAntiCheat用） 返回值类型：bool </summary>
->    let public CheatPunish(PunishLevel:int)(PunishReason:int)(playerXuid:nativeint)(CheatCount:int):bool =
->      Internal_CheatPunish_instance.Value.Invoke(PunishLevel,PunishReason,playerXuid,CheatCount)
 >
 >```
 ></details>

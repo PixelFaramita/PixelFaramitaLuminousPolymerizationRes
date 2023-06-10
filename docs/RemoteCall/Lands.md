@@ -33,19 +33,19 @@ auto result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId);
  - C#
 ```csharp
 // 检查指定立方体区域(float)是否有领地 返回值类型：bool
-var Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand");
+var Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,bool>>("PFLP", "Lands::CheckCubeHasLand");
 var result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查指定立方体区域(float)是否有领地 返回值类型：bool
-Dim Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::CheckCubeHasLand")
+Dim Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,Boolean))("PFLP", "Lands::CheckCubeHasLand")
 Dim result = Lands_CheckCubeHasLand(x1,y1,z1,x2,y2,z2,dimensionId)
 ```
  - F#
 ```fsharp
 // 检查指定立方体区域(float)是否有领地 返回值类型：bool
-let Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,float,float,float,int>("PFLP", "Lands::CheckCubeHasLand")
+let Lands_CheckCubeHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,bool>>("PFLP", "Lands::CheckCubeHasLand")
 (x1,y1,z1,x2,y2,z2,dimensionId)
 	|>Lands_CheckCubeHasLand.Invoke
 	|>ignore
@@ -79,19 +79,19 @@ auto result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId);
  - C#
 ```csharp
 // 检查指定立方体区域(int)是否有领地 返回值类型：bool
-var Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt");
+var Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,bool>>("PFLP", "Lands::CheckCubeHasLandInt");
 var result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查指定立方体区域(int)是否有领地 返回值类型：bool
-Dim Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckCubeHasLandInt")
+Dim Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::CheckCubeHasLandInt")
 Dim result = Lands_CheckCubeHasLandInt(x1,y1,z1,x2,y2,z2,dimensionId)
 ```
  - F#
 ```fsharp
 // 检查指定立方体区域(int)是否有领地 返回值类型：bool
-let Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int>("PFLP", "Lands::CheckCubeHasLandInt")
+let Lands_CheckCubeHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,bool>>("PFLP", "Lands::CheckCubeHasLandInt")
 (x1,y1,z1,x2,y2,z2,dimensionId)
 	|>Lands_CheckCubeHasLandInt.Invoke
 	|>ignore
@@ -122,19 +122,19 @@ auto result = Lands_CheckPosHasLand(x,y,z,dimensionId);
  - C#
 ```csharp
 // 检查指定坐标(float)是否有领地 返回值类型：bool
-var Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand");
+var Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::CheckPosHasLand");
 var result = Lands_CheckPosHasLand(x,y,z,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查指定坐标(float)是否有领地 返回值类型：bool
-Dim Lands_CheckPosHasLand = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::CheckPosHasLand")
+Dim Lands_CheckPosHasLand = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,Boolean))("PFLP", "Lands::CheckPosHasLand")
 Dim result = Lands_CheckPosHasLand(x,y,z,dimensionId)
 ```
  - F#
 ```fsharp
 // 检查指定坐标(float)是否有领地 返回值类型：bool
-let Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::CheckPosHasLand")
+let Lands_CheckPosHasLand = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::CheckPosHasLand")
 (x,y,z,dimensionId)
 	|>Lands_CheckPosHasLand.Invoke
 	|>ignore
@@ -165,19 +165,19 @@ auto result = Lands_CheckPosHasLandInt(x,y,z,dimensionId);
  - C#
 ```csharp
 // 检查指定坐标(int)是否有领地 返回值类型：bool
-var Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt");
+var Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::CheckPosHasLandInt");
 var result = Lands_CheckPosHasLandInt(x,y,z,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查指定坐标(int)是否有领地 返回值类型：bool
-Dim Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::CheckPosHasLandInt")
+Dim Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::CheckPosHasLandInt")
 Dim result = Lands_CheckPosHasLandInt(x,y,z,dimensionId)
 ```
  - F#
 ```fsharp
 // 检查指定坐标(int)是否有领地 返回值类型：bool
-let Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::CheckPosHasLandInt")
+let Lands_CheckPosHasLandInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::CheckPosHasLandInt")
 (x,y,z,dimensionId)
 	|>Lands_CheckPosHasLandInt.Invoke
 	|>ignore
@@ -211,19 +211,19 @@ auto result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId);
  - C#
 ```csharp
 // 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
-var Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube");
+var Lands_GetLandByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandByCube");
 var result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
-Dim Lands_GetLandByCube = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByCube")
+Dim Lands_GetLandByCube = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandByCube")
 Dim result = Lands_GetLandByCube(x1,y1,z1,x2,y2,z2,dimensionId)
 ```
  - F#
 ```fsharp
 // 获取立方体区域(float)领地信息（返回JSON字符串） 返回值类型：string
-let Lands_GetLandByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandByCube")
+let Lands_GetLandByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandByCube")
 (x1,y1,z1,x2,y2,z2,dimensionId)
 	|>Lands_GetLandByCube.Invoke
 	|>ignore
@@ -257,19 +257,19 @@ auto result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
  - C#
 ```csharp
 // 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
-var Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt");
+var Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandByCubeInt");
 var result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
-Dim Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByCubeInt")
+Dim Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandByCubeInt")
 Dim result = Lands_GetLandByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId)
 ```
  - F#
 ```fsharp
 // 获取立方体区域(int)领地信息（返回JSON字符串） 返回值类型：string
-let Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandByCubeInt")
+let Lands_GetLandByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandByCubeInt")
 (x1,y1,z1,x2,y2,z2,dimensionId)
 	|>Lands_GetLandByCubeInt.Invoke
 	|>ignore
@@ -300,19 +300,19 @@ auto result = Lands_GetLandByPos(x,y,z,dimensionId);
  - C#
 ```csharp
 // 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
-var Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos");
+var Lands_GetLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandByPos");
 var result = Lands_GetLandByPos(x,y,z,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
-Dim Lands_GetLandByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandByPos")
+Dim Lands_GetLandByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandByPos")
 Dim result = Lands_GetLandByPos(x,y,z,dimensionId)
 ```
  - F#
 ```fsharp
 // 获取指定坐标(float)领地信息（返回JSON字符串） 返回值类型：string
-let Lands_GetLandByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandByPos")
+let Lands_GetLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandByPos")
 (x,y,z,dimensionId)
 	|>Lands_GetLandByPos.Invoke
 	|>ignore
@@ -343,19 +343,19 @@ auto result = Lands_GetLandByPosInt(x,y,z,dimensionId);
  - C#
 ```csharp
 // 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
-var Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt");
+var Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandByPosInt");
 var result = Lands_GetLandByPosInt(x,y,z,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
-Dim Lands_GetLandByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandByPosInt")
+Dim Lands_GetLandByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandByPosInt")
 Dim result = Lands_GetLandByPosInt(x,y,z,dimensionId)
 ```
  - F#
 ```fsharp
 // 获取指定坐标(int)领地信息（返回JSON字符串） 返回值类型：string
-let Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandByPosInt")
+let Lands_GetLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandByPosInt")
 (x,y,z,dimensionId)
 	|>Lands_GetLandByPosInt.Invoke
 	|>ignore
@@ -389,19 +389,19 @@ auto result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId);
  - C#
 ```csharp
 // 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-var Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube");
+var Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByCube");
 var result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-Dim Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByCube")
+Dim Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandInfoByCube")
 Dim result = Lands_GetLandInfoByCube(x1,y1,z1,x2,y2,z2,dimensionId)
 ```
  - F#
 ```fsharp
 // 获取立方体区域(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-let Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<string,float,float,float,float,float,float,int>("PFLP", "Lands::GetLandInfoByCube")
+let Lands_GetLandInfoByCube = RemoteCallAPI.ImportAs<Func<float,float,float,float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByCube")
 (x1,y1,z1,x2,y2,z2,dimensionId)
 	|>Lands_GetLandInfoByCube.Invoke
 	|>ignore
@@ -435,19 +435,19 @@ auto result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
  - C#
 ```csharp
 // 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-var Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt");
+var Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByCubeInt");
 var result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-Dim Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByCubeInt")
+Dim Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandInfoByCubeInt")
 Dim result = Lands_GetLandInfoByCubeInt(x1,y1,z1,x2,y2,z2,dimensionId)
 ```
  - F#
 ```fsharp
 // 获取立方体区域(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-let Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<string,int,int,int,int,int,int,int>("PFLP", "Lands::GetLandInfoByCubeInt")
+let Lands_GetLandInfoByCubeInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByCubeInt")
 (x1,y1,z1,x2,y2,z2,dimensionId)
 	|>Lands_GetLandInfoByCubeInt.Invoke
 	|>ignore
@@ -478,19 +478,19 @@ auto result = Lands_GetLandInfoByPos(x,y,z,dimensionId);
  - C#
 ```csharp
 // 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-var Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos");
+var Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByPos");
 var result = Lands_GetLandInfoByPos(x,y,z,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-Dim Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer)("PFLP", "Lands::GetLandInfoByPos")
+Dim Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String))("PFLP", "Lands::GetLandInfoByPos")
 Dim result = Lands_GetLandInfoByPos(x,y,z,dimensionId)
 ```
  - F#
 ```fsharp
 // 获取指定坐标(float)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-let Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<string,float,float,float,int>("PFLP", "Lands::GetLandInfoByPos")
+let Lands_GetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string>>("PFLP", "Lands::GetLandInfoByPos")
 (x,y,z,dimensionId)
 	|>Lands_GetLandInfoByPos.Invoke
 	|>ignore
@@ -521,19 +521,19 @@ auto result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId);
  - C#
 ```csharp
 // 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-var Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt");
+var Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByPosInt");
 var result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-Dim Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer)("PFLP", "Lands::GetLandInfoByPosInt")
+Dim Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String))("PFLP", "Lands::GetLandInfoByPosInt")
 Dim result = Lands_GetLandInfoByPosInt(x,y,z,dimensionId)
 ```
  - F#
 ```fsharp
 // 获取指定坐标(int)领地数据源详细信息（返回JSON字符串） 返回值类型：string
-let Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int>("PFLP", "Lands::GetLandInfoByPosInt")
+let Lands_GetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string>>("PFLP", "Lands::GetLandInfoByPosInt")
 (x,y,z,dimensionId)
 	|>Lands_GetLandInfoByPosInt.Invoke
 	|>ignore
@@ -565,19 +565,19 @@ auto result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo);
  - C#
 ```csharp
 // 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
-var Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos");
+var Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::SetLandInfoByPos");
 var result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo);
 ```
  - Visual Basic .NET
 ```vb
 ' 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
-Dim Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::SetLandInfoByPos")
+Dim Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::SetLandInfoByPos")
 Dim result = Lands_SetLandInfoByPos(x,y,z,dimensionId,landinfo)
 ```
  - F#
 ```fsharp
 // 设置指定坐标(float)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
-let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::SetLandInfoByPos")
+let Lands_SetLandInfoByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::SetLandInfoByPos")
 (x,y,z,dimensionId,landinfo)
 	|>Lands_SetLandInfoByPos.Invoke
 	|>ignore
@@ -609,19 +609,19 @@ auto result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo);
  - C#
 ```csharp
 // 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
-var Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt");
+var Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::SetLandInfoByPosInt");
 var result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo);
 ```
  - Visual Basic .NET
 ```vb
 ' 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
-Dim Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::SetLandInfoByPosInt")
+Dim Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::SetLandInfoByPosInt")
 Dim result = Lands_SetLandInfoByPosInt(x,y,z,dimensionId,landinfo)
 ```
  - F#
 ```fsharp
 // 设置或修改指定坐标(int)领地数据源详细信息（传入JSON字符串） 返回值类型：bool
-let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::SetLandInfoByPosInt")
+let Lands_SetLandInfoByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::SetLandInfoByPosInt")
 (x,y,z,dimensionId,landinfo)
 	|>Lands_SetLandInfoByPosInt.Invoke
 	|>ignore
@@ -654,19 +654,19 @@ auto result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
  - C#
 ```csharp
 // 新建领地 返回值类型：bool
-var Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D");
+var Lands_CreateLand2D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand2D");
 var result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 新建领地 返回值类型：bool
-Dim Lands_CreateLand2D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand2D")
+Dim Lands_CreateLand2D = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CreateLand2D")
 Dim result = Lands_CreateLand2D(x1,z1,x2,z2,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 新建领地 返回值类型：bool
-let Lands_CreateLand2D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,string>("PFLP", "Lands::CreateLand2D")
+let Lands_CreateLand2D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand2D")
 (x1,z1,x2,z2,dimensionId,playerXuid)
 	|>Lands_CreateLand2D.Invoke
 	|>ignore
@@ -701,19 +701,19 @@ auto result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
  - C#
 ```csharp
 // 新建领地 返回值类型：bool
-var Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D");
+var Lands_CreateLand3D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand3D");
 var result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 新建领地 返回值类型：bool
-Dim Lands_CreateLand3D = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CreateLand3D")
+Dim Lands_CreateLand3D = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CreateLand3D")
 Dim result = Lands_CreateLand3D(x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 新建领地 返回值类型：bool
-let Lands_CreateLand3D = RemoteCallAPI.ImportAs<bool,int,int,int,int,int,int,int,string>("PFLP", "Lands::CreateLand3D")
+let Lands_CreateLand3D = RemoteCallAPI.ImportAs<Func<int,int,int,int,int,int,int,string,bool>>("PFLP", "Lands::CreateLand3D")
 (x1,y1,z1,x2,y2,z2,dimensionId,playerXuid)
 	|>Lands_CreateLand3D.Invoke
 	|>ignore
@@ -744,19 +744,19 @@ auto result = Lands_DeleteLandByPos(x,y,z,dimensionId);
  - C#
 ```csharp
 // 删除指定坐标(float)的领地 返回值类型：bool
-var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos");
+var Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::DeleteLandByPos");
 var result = Lands_DeleteLandByPos(x,y,z,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 删除指定坐标(float)的领地 返回值类型：bool
-Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer)("PFLP", "Lands::DeleteLandByPos")
+Dim Lands_DeleteLandByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,Boolean))("PFLP", "Lands::DeleteLandByPos")
 Dim result = Lands_DeleteLandByPos(x,y,z,dimensionId)
 ```
  - F#
 ```fsharp
 // 删除指定坐标(float)的领地 返回值类型：bool
-let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int>("PFLP", "Lands::DeleteLandByPos")
+let Lands_DeleteLandByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,bool>>("PFLP", "Lands::DeleteLandByPos")
 (x,y,z,dimensionId)
 	|>Lands_DeleteLandByPos.Invoke
 	|>ignore
@@ -787,19 +787,19 @@ auto result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
  - C#
 ```csharp
 // 删除指定坐标(int)的领地 返回值类型：bool
-var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt");
+var Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::DeleteLandByPosInt");
 var result = Lands_DeleteLandByPosInt(x,y,z,dimensionId);
 ```
  - Visual Basic .NET
 ```vb
 ' 删除指定坐标(int)的领地 返回值类型：bool
-Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer)("PFLP", "Lands::DeleteLandByPosInt")
+Dim Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,Boolean))("PFLP", "Lands::DeleteLandByPosInt")
 Dim result = Lands_DeleteLandByPosInt(x,y,z,dimensionId)
 ```
  - F#
 ```fsharp
 // 删除指定坐标(int)的领地 返回值类型：bool
-let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int>("PFLP", "Lands::DeleteLandByPosInt")
+let Lands_DeleteLandByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,bool>>("PFLP", "Lands::DeleteLandByPosInt")
 (x,y,z,dimensionId)
 	|>Lands_DeleteLandByPosInt.Invoke
 	|>ignore
@@ -831,19 +831,19 @@ auto result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
  - C#
 ```csharp
 // 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
-var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos");
+var Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,string>>("PFLP", "Lands::GetLandPermissionByPos");
 var result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
-Dim Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs(Of String,Single,Single,Single,Integer,String)("PFLP", "Lands::GetLandPermissionByPos")
+Dim Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,String))("PFLP", "Lands::GetLandPermissionByPos")
 Dim result = Lands_GetLandPermissionByPos(x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 获取指定坐标(float)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
-let Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<string,float,float,float,int,string>("PFLP", "Lands::GetLandPermissionByPos")
+let Lands_GetLandPermissionByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,string>>("PFLP", "Lands::GetLandPermissionByPos")
 (x,y,z,dimensionId,playerXuid)
 	|>Lands_GetLandPermissionByPos.Invoke
 	|>ignore
@@ -875,19 +875,19 @@ auto result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
  - C#
 ```csharp
 // 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
-var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt");
+var Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,string>>("PFLP", "Lands::GetLandPermissionByPosInt");
 var result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
-Dim Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::GetLandPermissionByPosInt")
+Dim Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,String))("PFLP", "Lands::GetLandPermissionByPosInt")
 Dim result = Lands_GetLandPermissionByPosInt(x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 获取指定坐标(int)领地权限（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：string
-let Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<string,int,int,int,int,string>("PFLP", "Lands::GetLandPermissionByPosInt")
+let Lands_GetLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,string>>("PFLP", "Lands::GetLandPermissionByPosInt")
 (x,y,z,dimensionId,playerXuid)
 	|>Lands_GetLandPermissionByPosInt.Invoke
 	|>ignore
@@ -920,19 +920,19 @@ auto result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,play
  - C#
 ```csharp
 // 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
-var Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos");
+var Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPos");
 var result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
-Dim Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs(Of Boolean,String,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckLandPermissionByPos")
+Dim Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckLandPermissionByPos")
 Dim result = Lands_CheckLandPermissionByPos(permissionId,x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 检查指定坐标(float)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
-let Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<bool,string,float,float,float,int,string>("PFLP", "Lands::CheckLandPermissionByPos")
+let Lands_CheckLandPermissionByPos = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPos")
 (permissionId,x,y,z,dimensionId,playerXuid)
 	|>Lands_CheckLandPermissionByPos.Invoke
 	|>ignore
@@ -965,19 +965,19 @@ auto result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,p
  - C#
 ```csharp
 // 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
-var Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt");
+var Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<string,int,int,int,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPosInt");
 var result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
-Dim Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Boolean,String,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckLandPermissionByPosInt")
+Dim Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs(Of Func(Of String,Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckLandPermissionByPosInt")
 Dim result = Lands_CheckLandPermissionByPosInt(permissionId,x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 检查指定坐标(int)领地是否有指定权限（permissionId参考GetLandPermissionByPos返回的key）（返回JSON字符串字典{key:boolean}）（可指定玩家否则playerXuid填写空字符串） 返回值类型：bool
-let Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<bool,string,int,int,int,int,string>("PFLP", "Lands::CheckLandPermissionByPosInt")
+let Lands_CheckLandPermissionByPosInt = RemoteCallAPI.ImportAs<Func<string,int,int,int,int,string,bool>>("PFLP", "Lands::CheckLandPermissionByPosInt")
 (permissionId,x,y,z,dimensionId,playerXuid)
 	|>Lands_CheckLandPermissionByPosInt.Invoke
 	|>ignore
@@ -1009,19 +1009,19 @@ auto result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
  - C#
 ```csharp
 // 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
-var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
+var Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos");
 var result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
-Dim Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+Dim Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
 Dim result = Lands_CheckPlayerIsLandOwnerByPos(x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 检查玩家是否是指定坐标(float)领地的主人 返回值类型：bool
-let Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
+let Lands_CheckPlayerIsLandOwnerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPos")
 (x,y,z,dimensionId,playerXuid)
 	|>Lands_CheckPlayerIsLandOwnerByPos.Invoke
 	|>ignore
@@ -1053,19 +1053,19 @@ auto result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid)
  - C#
 ```csharp
 // 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
-var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
+var Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt");
 var result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
-Dim Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+Dim Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
 Dim result = Lands_CheckPlayerIsLandOwnerByPosInt(x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 检查玩家是否是指定坐标(int)领地的主人 返回值类型：bool
-let Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
+let Lands_CheckPlayerIsLandOwnerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerIsLandOwnerByPosInt")
 (x,y,z,dimensionId,playerXuid)
 	|>Lands_CheckPlayerIsLandOwnerByPosInt.Invoke
 	|>ignore
@@ -1097,19 +1097,19 @@ auto result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid)
  - C#
 ```csharp
 // 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
-var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
+var Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos");
 var result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
-Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Boolean,Single,Single,Single,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+Dim Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs(Of Func(Of Single,Single,Single,Integer,String,Boolean))("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 Dim result = Lands_CheckIsLandSharedToPlayerByPos(x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 检查指定坐标(float)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
-let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<bool,float,float,float,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
+let Lands_CheckIsLandSharedToPlayerByPos = RemoteCallAPI.ImportAs<Func<float,float,float,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPos")
 (x,y,z,dimensionId,playerXuid)
 	|>Lands_CheckIsLandSharedToPlayerByPos.Invoke
 	|>ignore
@@ -1141,19 +1141,19 @@ auto result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXu
  - C#
 ```csharp
 // 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
-var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
+var Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt");
 var result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
-Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+Dim Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 Dim result = Lands_CheckIsLandSharedToPlayerByPosInt(x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // 检查指定坐标(int)领地是否共享给指定玩家（检查具体权限请使用CheckLandPermissionByPos） 返回值类型：bool
-let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
+let Lands_CheckIsLandSharedToPlayerByPosInt = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckIsLandSharedToPlayerByPosInt")
 (x,y,z,dimensionId,playerXuid)
 	|>Lands_CheckIsLandSharedToPlayerByPosInt.Invoke
 	|>ignore
@@ -1185,19 +1185,19 @@ auto result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,player
  - C#
 ```csharp
 // (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
-var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
+var Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasCreateChestPermission");
 var result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
-Dim Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
+Dim Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 Dim result = Lands_CheckPlayerHasCreateChestPermission(x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有开箱（方块交互）、放置、破坏的权限(主要用于锁箱插件) 返回值类型：bool
-let Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
+let Lands_CheckPlayerHasCreateChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasCreateChestPermission")
 (x,y,z,dimensionId,playerXuid)
 	|>Lands_CheckPlayerHasCreateChestPermission.Invoke
 	|>ignore
@@ -1229,19 +1229,19 @@ auto result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXu
  - C#
 ```csharp
 // (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
-var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
+var Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasOpenChestPermission");
 var result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
-Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Boolean,Integer,Integer,Integer,Integer,String)("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
+Dim Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs(Of Func(Of Integer,Integer,Integer,Integer,String,Boolean))("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 Dim result = Lands_CheckPlayerHasOpenChestPermission(x,y,z,dimensionId,playerXuid)
 ```
  - F#
 ```fsharp
 // (请使用GetLandPermissionByPos)  检查玩家在指定坐标(int)领地是否有使用箱子的权限(主要用于锁箱插件) 返回值类型：bool
-let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<bool,int,int,int,int,string>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
+let Lands_CheckPlayerHasOpenChestPermission = RemoteCallAPI.ImportAs<Func<int,int,int,int,string,bool>>("PFLP", "Lands::CheckPlayerHasOpenChestPermission")
 (x,y,z,dimensionId,playerXuid)
 	|>Lands_CheckPlayerHasOpenChestPermission.Invoke
 	|>ignore
@@ -1269,19 +1269,19 @@ auto result = Lands_GetPlayerAllPermissionGroupId(playerXuid);
  - C#
 ```csharp
 // 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
-var Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
+var Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetPlayerAllPermissionGroupId");
 var result = Lands_GetPlayerAllPermissionGroupId(playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
-Dim Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetPlayerAllPermissionGroupId")
+Dim Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 Dim result = Lands_GetPlayerAllPermissionGroupId(playerXuid)
 ```
  - F#
 ```fsharp
 // 取玩家所有权限组ID（返回["id1","id2"...]字符串） 返回值类型：string
-let Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
+let Lands_GetPlayerAllPermissionGroupId = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetPlayerAllPermissionGroupId")
 playerXuid
 	|>Lands_GetPlayerAllPermissionGroupId.Invoke
 	|>ignore
@@ -1310,19 +1310,19 @@ auto result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId);
  - C#
 ```csharp
 // 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
-var Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup");
+var Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Lands::GetPlayerPermissionGroup");
 var result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId);
 ```
  - Visual Basic .NET
 ```vb
 ' 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
-Dim Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of String,String,String)("PFLP", "Lands::GetPlayerPermissionGroup")
+Dim Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Lands::GetPlayerPermissionGroup")
 Dim result = Lands_GetPlayerPermissionGroup(playerXuid,permissionGroupId)
 ```
  - F#
 ```fsharp
 // 取玩家权限组内容(指定ID)（返回JSON对象字符串） 返回值类型：string
-let Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<string,string,string>("PFLP", "Lands::GetPlayerPermissionGroup")
+let Lands_GetPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Lands::GetPlayerPermissionGroup")
 (playerXuid,permissionGroupId)
 	|>Lands_GetPlayerPermissionGroup.Invoke
 	|>ignore
@@ -1351,19 +1351,19 @@ auto result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId);
  - C#
 ```csharp
 // 删玩家权限组(指定ID) 返回值类型：bool
-var Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup");
+var Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Lands::DeletePlayerPermissionGroup");
 var result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId);
 ```
  - Visual Basic .NET
 ```vb
 ' 删玩家权限组(指定ID) 返回值类型：bool
-Dim Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String)("PFLP", "Lands::DeletePlayerPermissionGroup")
+Dim Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "Lands::DeletePlayerPermissionGroup")
 Dim result = Lands_DeletePlayerPermissionGroup(playerXuid,permissionGroupId)
 ```
  - F#
 ```fsharp
 // 删玩家权限组(指定ID) 返回值类型：bool
-let Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string>("PFLP", "Lands::DeletePlayerPermissionGroup")
+let Lands_DeletePlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "Lands::DeletePlayerPermissionGroup")
 (playerXuid,permissionGroupId)
 	|>Lands_DeletePlayerPermissionGroup.Invoke
 	|>ignore
@@ -1393,19 +1393,19 @@ auto result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonS
  - C#
 ```csharp
 // 修改家权限组内容(指定ID) 返回值类型：bool
-var Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup");
+var Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::EditPlayerPermissionGroup");
 var result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 ```
  - Visual Basic .NET
 ```vb
 ' 修改家权限组内容(指定ID) 返回值类型：bool
-Dim Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::EditPlayerPermissionGroup")
+Dim Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,Boolean))("PFLP", "Lands::EditPlayerPermissionGroup")
 Dim result = Lands_EditPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString)
 ```
  - F#
 ```fsharp
 // 修改家权限组内容(指定ID) 返回值类型：bool
-let Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::EditPlayerPermissionGroup")
+let Lands_EditPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::EditPlayerPermissionGroup")
 (playerXuid,permissionGroupId,jsonString)
 	|>Lands_EditPlayerPermissionGroup.Invoke
 	|>ignore
@@ -1435,19 +1435,19 @@ auto result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonSt
  - C#
 ```csharp
 // 添加权限组 返回值类型：bool
-var Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup");
+var Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::AddPlayerPermissionGroup");
 var result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString);
 ```
  - Visual Basic .NET
 ```vb
 ' 添加权限组 返回值类型：bool
-Dim Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Boolean,String,String,String)("PFLP", "Lands::AddPlayerPermissionGroup")
+Dim Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,Boolean))("PFLP", "Lands::AddPlayerPermissionGroup")
 Dim result = Lands_AddPlayerPermissionGroup(playerXuid,permissionGroupId,jsonString)
 ```
  - F#
 ```fsharp
 // 添加权限组 返回值类型：bool
-let Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<bool,string,string,string>("PFLP", "Lands::AddPlayerPermissionGroup")
+let Lands_AddPlayerPermissionGroup = RemoteCallAPI.ImportAs<Func<string,string,string,bool>>("PFLP", "Lands::AddPlayerPermissionGroup")
 (playerXuid,permissionGroupId,jsonString)
 	|>Lands_AddPlayerPermissionGroup.Invoke
 	|>ignore
@@ -1475,19 +1475,19 @@ auto result = Lands_GetLandsOwnedByPlayer(playerXuid);
  - C#
 ```csharp
 // 取玩家拥有的领地 返回值类型：string
-var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer");
+var Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsOwnedByPlayer");
 var result = Lands_GetLandsOwnedByPlayer(playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 取玩家拥有的领地 返回值类型：string
-Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsOwnedByPlayer")
+Dim Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetLandsOwnedByPlayer")
 Dim result = Lands_GetLandsOwnedByPlayer(playerXuid)
 ```
  - F#
 ```fsharp
 // 取玩家拥有的领地 返回值类型：string
-let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsOwnedByPlayer")
+let Lands_GetLandsOwnedByPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsOwnedByPlayer")
 playerXuid
 	|>Lands_GetLandsOwnedByPlayer.Invoke
 	|>ignore
@@ -1515,19 +1515,19 @@ auto result = Lands_GetLandsSharedToPlayer(playerXuid);
  - C#
 ```csharp
 // 取共享给玩家的领地 返回值类型：string
-var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer");
+var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsSharedToPlayer");
 var result = Lands_GetLandsSharedToPlayer(playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 取共享给玩家的领地 返回值类型：string
-Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Lands::GetLandsSharedToPlayer")
+Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Lands::GetLandsSharedToPlayer")
 Dim result = Lands_GetLandsSharedToPlayer(playerXuid)
 ```
  - F#
 ```fsharp
 // 取共享给玩家的领地 返回值类型：string
-let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<string,string>("PFLP", "Lands::GetLandsSharedToPlayer")
+let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Lands::GetLandsSharedToPlayer")
 playerXuid
 	|>Lands_GetLandsSharedToPlayer.Invoke
 	|>ignore

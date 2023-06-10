@@ -36,19 +36,19 @@ ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
  - C#
 ```csharp
 // 给指定方块描框
-var ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock");
+var ParticlesGraphics_DrawBlock = RemoteCallAPI.ImportAs<Action<string,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBlock");
 ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha);
 ```
  - Visual Basic .NET
 ```vb
 ' 给指定方块描框
-Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBlock")
+Dim ParticlesGraphics_DrawBlock = RemoteCallAPI.ImportAs(Of Action(Of String,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))("PFLP", "ParticlesGraphics::DrawBlock")
 ParticlesGraphics_DrawBlock(playerXuid,x,y,z,r,g,b,thickness,time,alpha)
 ```
  - F#
 ```fsharp
 // 给指定方块描框
-let ParticlesGraphics_DrawBlock = RemoteCallAPI.Import_As<string,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBlock")
+let ParticlesGraphics_DrawBlock = RemoteCallAPI.ImportAs<Action<string,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBlock")
 (playerXuid,x,y,z,r,g,b,thickness,time,alpha)
 	|>ParticlesGraphics_DrawBlock.Invoke
 ```
@@ -87,19 +87,19 @@ ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,a
  - C#
 ```csharp
 // 给指定区域描框
-var ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder");
+var ParticlesGraphics_DrawBorder = RemoteCallAPI.ImportAs<Action<string,int,int,int,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBorder");
 ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha);
 ```
  - Visual Basic .NET
 ```vb
 ' 给指定区域描框
-Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single)("PFLP", "ParticlesGraphics::DrawBorder")
+Dim ParticlesGraphics_DrawBorder = RemoteCallAPI.ImportAs(Of Action(Of String,Integer,Integer,Integer,Integer,Integer,Integer,Single,Single,Single,Single,Single,Single))("PFLP", "ParticlesGraphics::DrawBorder")
 ParticlesGraphics_DrawBorder(playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 ```
  - F#
 ```fsharp
 // 给指定区域描框
-let ParticlesGraphics_DrawBorder = RemoteCallAPI.Import_As<string,int,int,int,int,int,int,float,float,float,float,float,float>("PFLP", "ParticlesGraphics::DrawBorder")
+let ParticlesGraphics_DrawBorder = RemoteCallAPI.ImportAs<Action<string,int,int,int,int,int,int,float,float,float,float,float,float>>("PFLP", "ParticlesGraphics::DrawBorder")
 (playerXuid,x1,y1,z1,x2,y2,z2,r,g,b,thickness,time,alpha)
 	|>ParticlesGraphics_DrawBorder.Invoke
 ```

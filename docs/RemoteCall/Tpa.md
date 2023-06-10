@@ -27,19 +27,19 @@ auto result = Tpa_GetTemp(playerXuid);
  - C#
 ```csharp
 // 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
-var Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp");
+var Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp");
 var result = Tpa_GetTemp(playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
-Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "Tpa::GetTemp")
+Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp")
 Dim result = Tpa_GetTemp(playerXuid)
 ```
  - F#
 ```fsharp
 // 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
-let Tpa_GetTemp = RemoteCallAPI.ImportAs<string,string>("PFLP", "Tpa::GetTemp")
+let Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
 playerXuid
 	|>Tpa_GetTemp.Invoke
 	|>ignore

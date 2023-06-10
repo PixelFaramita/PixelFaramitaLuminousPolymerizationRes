@@ -139,7 +139,5 @@ auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>(
 auto Money_Add = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Add");
 // 给玩家(指定玩家名)减钱
 auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Remove");
-// 作弊反馈（LLAntiCheat用） 返回值类型：bool
-auto Internal_CheatPunish = RemoteCall::importAs<bool(int const& PunishLevel,int const& PunishReason,Player& const& playerXuid,int const& CheatCount)>("PFLP", "Internal::CheatPunish");
 
 ```

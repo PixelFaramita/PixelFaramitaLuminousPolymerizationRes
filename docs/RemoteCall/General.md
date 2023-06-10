@@ -27,19 +27,19 @@ auto result = General_SetConfig(jsonStr);
  - C#
 ```csharp
 // 设置全局配置文件（要求JSON字符串） 返回值类型：bool
-var General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig");
+var General_SetConfig = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "General::SetConfig");
 var result = General_SetConfig(jsonStr);
 ```
  - Visual Basic .NET
 ```vb
 ' 设置全局配置文件（要求JSON字符串） 返回值类型：bool
-Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Boolean,String)("PFLP", "General::SetConfig")
+Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Func(Of String,Boolean))("PFLP", "General::SetConfig")
 Dim result = General_SetConfig(jsonStr)
 ```
  - F#
 ```fsharp
 // 设置全局配置文件（要求JSON字符串） 返回值类型：bool
-let General_SetConfig = RemoteCallAPI.ImportAs<bool,string>("PFLP", "General::SetConfig")
+let General_SetConfig = RemoteCallAPI.ImportAs<Func<string,bool>>("PFLP", "General::SetConfig")
 jsonStr
 	|>General_SetConfig.Invoke
 	|>ignore
@@ -66,19 +66,19 @@ auto result = General_GetConfig();
  - C#
 ```csharp
 // 获取全局配置文件（JSON字符串） 返回值类型：string
-var General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig");
+var General_GetConfig = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig");
 var result = General_GetConfig();
 ```
  - Visual Basic .NET
 ```vb
 ' 获取全局配置文件（JSON字符串） 返回值类型：string
-Dim General_GetConfig = RemoteCallAPI.ImportAs(Of String)("PFLP", "General::GetConfig")
+Dim General_GetConfig = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "General::GetConfig")
 Dim result = General_GetConfig()
 ```
  - F#
 ```fsharp
 // 获取全局配置文件（JSON字符串） 返回值类型：string
-let General_GetConfig = RemoteCallAPI.ImportAs<string>("PFLP", "General::GetConfig")
+let General_GetConfig = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig")
 General_GetConfig()
 	|>ignore
 ```
@@ -104,19 +104,19 @@ General_Reload();
  - C#
 ```csharp
 // 重新加载所有功能的配置文件
-var General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload");
+var General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload");
 General_Reload();
 ```
  - Visual Basic .NET
 ```vb
 ' 重新加载所有功能的配置文件
-Dim General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+Dim General_Reload = RemoteCallAPI.ImportAs(Of Action)("PFLP", "General::Reload")
 General_Reload()
 ```
  - F#
 ```fsharp
 // 重新加载所有功能的配置文件
-let General_Reload = RemoteCallAPI.Import_As("PFLP", "General::Reload")
+let General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload")
 General_Reload()
 ```
 

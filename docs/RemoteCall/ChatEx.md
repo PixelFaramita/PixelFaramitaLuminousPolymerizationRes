@@ -28,19 +28,19 @@ ChatEx_SetNickName(playerXuid,nickName);
  - C#
 ```csharp
 // 设置玩家昵称
-var ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName");
+var ChatEx_SetNickName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetNickName");
 ChatEx_SetNickName(playerXuid,nickName);
 ```
  - Visual Basic .NET
 ```vb
 ' 设置玩家昵称
-Dim ChatEx_SetNickName = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetNickName")
+Dim ChatEx_SetNickName = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetNickName")
 ChatEx_SetNickName(playerXuid,nickName)
 ```
  - F#
 ```fsharp
 // 设置玩家昵称
-let ChatEx_SetNickName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetNickName")
+let ChatEx_SetNickName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetNickName")
 (playerXuid,nickName)
 	|>ChatEx_SetNickName.Invoke
 ```
@@ -68,19 +68,19 @@ ChatEx_SetFakeName(playerXuid,fakeName);
  - C#
 ```csharp
 // 设置玩家聊天时的名字
-var ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName");
+var ChatEx_SetFakeName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetFakeName");
 ChatEx_SetFakeName(playerXuid,fakeName);
 ```
  - Visual Basic .NET
 ```vb
 ' 设置玩家聊天时的名字
-Dim ChatEx_SetFakeName = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetFakeName")
+Dim ChatEx_SetFakeName = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetFakeName")
 ChatEx_SetFakeName(playerXuid,fakeName)
 ```
  - F#
 ```fsharp
 // 设置玩家聊天时的名字
-let ChatEx_SetFakeName = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetFakeName")
+let ChatEx_SetFakeName = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetFakeName")
 (playerXuid,fakeName)
 	|>ChatEx_SetFakeName.Invoke
 ```
@@ -108,19 +108,19 @@ ChatEx_SetEnd(playerXuid,endStr);
  - C#
 ```csharp
 // 设置玩家聊天消息后缀
-var ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd");
+var ChatEx_SetEnd = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetEnd");
 ChatEx_SetEnd(playerXuid,endStr);
 ```
  - Visual Basic .NET
 ```vb
 ' 设置玩家聊天消息后缀
-Dim ChatEx_SetEnd = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetEnd")
+Dim ChatEx_SetEnd = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetEnd")
 ChatEx_SetEnd(playerXuid,endStr)
 ```
  - F#
 ```fsharp
 // 设置玩家聊天消息后缀
-let ChatEx_SetEnd = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetEnd")
+let ChatEx_SetEnd = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetEnd")
 (playerXuid,endStr)
 	|>ChatEx_SetEnd.Invoke
 ```
@@ -148,19 +148,19 @@ ChatEx_SetStart(playerXuid,startStr);
  - C#
 ```csharp
 // 设置玩家聊天消息前缀
-var ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart");
+var ChatEx_SetStart = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetStart");
 ChatEx_SetStart(playerXuid,startStr);
 ```
  - Visual Basic .NET
 ```vb
 ' 设置玩家聊天消息前缀
-Dim ChatEx_SetStart = RemoteCallAPI.Import_As(Of String,String)("PFLP", "ChatEx::SetStart")
+Dim ChatEx_SetStart = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "ChatEx::SetStart")
 ChatEx_SetStart(playerXuid,startStr)
 ```
  - F#
 ```fsharp
 // 设置玩家聊天消息前缀
-let ChatEx_SetStart = RemoteCallAPI.Import_As<string,string>("PFLP", "ChatEx::SetStart")
+let ChatEx_SetStart = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "ChatEx::SetStart")
 (playerXuid,startStr)
 	|>ChatEx_SetStart.Invoke
 ```
@@ -187,19 +187,19 @@ auto result = ChatEx_GetNickName(playerXuid);
  - C#
 ```csharp
 // 获取玩家昵称 返回值类型：string
-var ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName");
+var ChatEx_GetNickName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetNickName");
 var result = ChatEx_GetNickName(playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取玩家昵称 返回值类型：string
-Dim ChatEx_GetNickName = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetNickName")
+Dim ChatEx_GetNickName = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetNickName")
 Dim result = ChatEx_GetNickName(playerXuid)
 ```
  - F#
 ```fsharp
 // 获取玩家昵称 返回值类型：string
-let ChatEx_GetNickName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetNickName")
+let ChatEx_GetNickName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetNickName")
 playerXuid
 	|>ChatEx_GetNickName.Invoke
 	|>ignore
@@ -227,19 +227,19 @@ auto result = ChatEx_GetFakeName(playerXuid);
  - C#
 ```csharp
 // 获取玩家聊天时的名字 返回值类型：string
-var ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName");
+var ChatEx_GetFakeName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetFakeName");
 var result = ChatEx_GetFakeName(playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取玩家聊天时的名字 返回值类型：string
-Dim ChatEx_GetFakeName = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetFakeName")
+Dim ChatEx_GetFakeName = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetFakeName")
 Dim result = ChatEx_GetFakeName(playerXuid)
 ```
  - F#
 ```fsharp
 // 获取玩家聊天时的名字 返回值类型：string
-let ChatEx_GetFakeName = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetFakeName")
+let ChatEx_GetFakeName = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetFakeName")
 playerXuid
 	|>ChatEx_GetFakeName.Invoke
 	|>ignore
@@ -267,19 +267,19 @@ auto result = ChatEx_GetEnd(playerXuid);
  - C#
 ```csharp
 // 获取玩家聊天消息后缀 返回值类型：string
-var ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd");
+var ChatEx_GetEnd = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetEnd");
 var result = ChatEx_GetEnd(playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取玩家聊天消息后缀 返回值类型：string
-Dim ChatEx_GetEnd = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetEnd")
+Dim ChatEx_GetEnd = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetEnd")
 Dim result = ChatEx_GetEnd(playerXuid)
 ```
  - F#
 ```fsharp
 // 获取玩家聊天消息后缀 返回值类型：string
-let ChatEx_GetEnd = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetEnd")
+let ChatEx_GetEnd = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetEnd")
 playerXuid
 	|>ChatEx_GetEnd.Invoke
 	|>ignore
@@ -307,19 +307,19 @@ auto result = ChatEx_GetStart(playerXuid);
  - C#
 ```csharp
 // 获取玩家聊天消息前缀 返回值类型：string
-var ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart");
+var ChatEx_GetStart = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetStart");
 var result = ChatEx_GetStart(playerXuid);
 ```
  - Visual Basic .NET
 ```vb
 ' 获取玩家聊天消息前缀 返回值类型：string
-Dim ChatEx_GetStart = RemoteCallAPI.ImportAs(Of String,String)("PFLP", "ChatEx::GetStart")
+Dim ChatEx_GetStart = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "ChatEx::GetStart")
 Dim result = ChatEx_GetStart(playerXuid)
 ```
  - F#
 ```fsharp
 // 获取玩家聊天消息前缀 返回值类型：string
-let ChatEx_GetStart = RemoteCallAPI.ImportAs<string,string>("PFLP", "ChatEx::GetStart")
+let ChatEx_GetStart = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "ChatEx::GetStart")
 playerXuid
 	|>ChatEx_GetStart.Invoke
 	|>ignore
