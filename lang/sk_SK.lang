@@ -55,6 +55,7 @@ WebConfig.ModuleName=Online konfiguračný nástroj
 WebsocketAPI.ModuleName=API diaľkového ovládania
 WebUI.ModuleName=WEBUI
 WebViewConfig.ModuleName=Miestne konfiguračné používateľské rozhranie
+WhiteBlock.ModuleName=Neprašujte na biely blok
 WorldLimit.ModuleName=Svetová hranica
 Backup.Command.Backup=Rýchly záloha
 Backup.Command.BackupInvoke=Vykonajte rýchlu zálohu

@@ -55,6 +55,7 @@ WebConfig.ModuleName=Alat konfigurasi online
 WebsocketAPI.ModuleName=API kendali jarak jauh
 WebUI.ModuleName=WEBUI
 WebViewConfig.ModuleName=UI konfigurasi lokal
+WhiteBlock.ModuleName=Jangan menginjak blok putih
 WorldLimit.ModuleName=Perbatasan Dunia
 Backup.Command.Backup=Cadangan Cepat
 Backup.Command.BackupInvoke=Jalankan Cadangan Cepat

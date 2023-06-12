@@ -55,6 +55,7 @@ WebConfig.ModuleName=Online configuration tool
 WebsocketAPI.ModuleName=Remote control API
 WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Local configuration UI
+WhiteBlock.ModuleName=Don't step on the white block
 WorldLimit.ModuleName=World border
 Backup.Command.Backup=Fast backup
 Backup.Command.BackupInvoke=Execute a fast backup

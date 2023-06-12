@@ -55,6 +55,7 @@ WebConfig.ModuleName=Online konfigurációs eszköz
 WebsocketAPI.ModuleName=Távirányító API
 WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Helyi konfiguráció UI
+WhiteBlock.ModuleName=Ne lépj a fehér blokkra
 WorldLimit.ModuleName=Világhatárok
 Backup.Command.Backup=Gyors mentés
 Backup.Command.BackupInvoke=Végezzen el egy gyors biztonsági mentést

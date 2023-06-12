@@ -55,6 +55,7 @@ WebConfig.ModuleName=Online εργαλείο διαμόρφωσης
 WebsocketAPI.ModuleName=API τηλεχειριστηρίου
 WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Τοπική διαμόρφωση UI
+WhiteBlock.ModuleName=Μην βγείτε στο λευκό μπλοκ
 WorldLimit.ModuleName=Παγκόσμια σύνορα
 Backup.Command.Backup=Γρήγορη δημιουργία αντιγράφων ασφαλείας
 Backup.Command.BackupInvoke=Εκτελέστε ένα γρήγορο αντίγραφο ασφαλείας

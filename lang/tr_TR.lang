@@ -55,6 +55,7 @@ WebConfig.ModuleName=Çevrimiçi Yapılandırma Aracı
 WebsocketAPI.ModuleName=Uzaktan Kumanda API
 WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Yerel yapılandırma kullanıcı arayüzü
+WhiteBlock.ModuleName=Beyaz bloğa basmayın
 WorldLimit.ModuleName=Dünya sınırı
 Backup.Command.Backup=Hızlı Yedekleme
 Backup.Command.BackupInvoke=Hızlı bir yedekleme yürüt

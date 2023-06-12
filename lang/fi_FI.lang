@@ -55,6 +55,7 @@ WebConfig.ModuleName=Online-määritystyökalu
 WebsocketAPI.ModuleName=Kaukosäätimen sovellusliittymä
 WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Paikallinen kokoonpano UI
+WhiteBlock.ModuleName=Älä astu valkoiseen lohkoon
 WorldLimit.ModuleName=Maailmanraja
 Backup.Command.Backup=Nopea varmuuskopiointi
 Backup.Command.BackupInvoke=Suorita nopea varmuuskopio

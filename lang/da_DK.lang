@@ -55,6 +55,7 @@ WebConfig.ModuleName=Online konfigurationsværktøj
 WebsocketAPI.ModuleName=Fjernbetjening API
 WebUI.ModuleName=Webby
 WebViewConfig.ModuleName=Lokal konfigurations UI
+WhiteBlock.ModuleName=Træd ikke på den hvide blok
 WorldLimit.ModuleName=Verdens grænse
 Backup.Command.Backup=Hurtig sikkerhedskopi
 Backup.Command.BackupInvoke=Udfør en hurtig sikkerhedskopi

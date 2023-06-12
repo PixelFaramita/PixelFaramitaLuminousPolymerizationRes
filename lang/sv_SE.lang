@@ -55,6 +55,7 @@ WebConfig.ModuleName=Online -konfigurationsverktyg
 WebsocketAPI.ModuleName=Fjärrkontroll API
 WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Lokal konfiguration UI
+WhiteBlock.ModuleName=Steg inte på det vita blocket
 WorldLimit.ModuleName=Världsgräns
 Backup.Command.Backup=Snabb backup
 Backup.Command.BackupInvoke=Kör en snabb säkerhetskopia

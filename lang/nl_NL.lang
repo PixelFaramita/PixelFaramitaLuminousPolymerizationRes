@@ -55,6 +55,7 @@ WebConfig.ModuleName=Online configuratietool
 WebsocketAPI.ModuleName=Afstandsbediening API
 WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Lokale configuratie UI
+WhiteBlock.ModuleName=Stap niet op het witte blok
 WorldLimit.ModuleName=Wereldgrens
 Backup.Command.Backup=Snelle back -up
 Backup.Command.BackupInvoke=Voer een snelle back -up uit

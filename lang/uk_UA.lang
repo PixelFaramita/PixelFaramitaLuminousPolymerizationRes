@@ -55,6 +55,7 @@ WebConfig.ModuleName=Інтернет -інструмент конфігурац
 WebsocketAPI.ModuleName=API дистанційного керування
 WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Локальний інтерфейс конфігурації
+WhiteBlock.ModuleName=Не наступай на білий блок
 WorldLimit.ModuleName=Світовий кордон
 Backup.Command.Backup=Швидке резервне копіювання
 Backup.Command.BackupInvoke=Виконайте швидку резервну копію

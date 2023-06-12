@@ -55,6 +55,7 @@ WebConfig.ModuleName=オンライン構成ツール
 WebsocketAPI.ModuleName=リモートコントロールAPI
 WebUI.ModuleName=webui
 WebViewConfig.ModuleName=ローカル構成UI
+WhiteBlock.ModuleName=白いブロックを踏まないでください
 WorldLimit.ModuleName=世界国境
 Backup.Command.Backup=高速バックアップ
 Backup.Command.BackupInvoke=高速バックアップを実行します
