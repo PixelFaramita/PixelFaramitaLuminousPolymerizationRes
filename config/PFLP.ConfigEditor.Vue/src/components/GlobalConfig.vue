@@ -62,6 +62,7 @@
         size="large"
       />（基于<a
         href="https://developer.microsoft.com/zh-cn/microsoft-edge/webview2/#download-section"
+        target="_blank"
         >EdgeWebView</a
       >）
     </n-space>

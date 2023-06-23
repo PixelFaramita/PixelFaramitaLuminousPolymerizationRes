@@ -1,6 +1,10 @@
 <template>
   <div>
     <n-h3 prefix="bar">
+      玩家个人PvP开关
+      <n-switch v-model:value="config.PvPManager.ModuleEnabled" />
+    </n-h3>
+    <n-h3 prefix="bar">
       Menu自定义菜单
       <n-text>配置位于[插件目录]\menu.json</n-text>
       <n-switch v-model:value="config.Menu.ModuleEnabled" />

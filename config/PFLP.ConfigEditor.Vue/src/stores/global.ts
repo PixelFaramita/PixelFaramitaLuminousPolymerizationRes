@@ -226,6 +226,9 @@ export const useGlobalStore = defineStore("global", () => {
       ShowTitle: true,
       ShowActionbar: true,
     },
+    PvPManager: {
+      ModuleEnabled: true,
+    },
     FakeMotd: {
       ModuleEnabled: true,
       DynamicMaxCount: true,

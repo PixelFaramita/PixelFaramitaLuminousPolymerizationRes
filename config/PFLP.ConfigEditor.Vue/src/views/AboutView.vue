@@ -9,6 +9,7 @@
       <li>
         <h3 dir="auto">
           <a
+            target="_blank"
             href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/tree/main/config/PFLP.ConfigEditor.Vue"
             rel="nofollow"
             >源码</a
@@ -22,7 +23,10 @@
       <h4 dir="auto">上次看到有这么基础的插件还在上次</h4>
       <li>
         <h3 dir="auto">
-          <a href="https://gxh.lanzoum.com/b03v3gxbi" rel="nofollow"
+          <a
+            href="https://gxh.lanzoum.com/b03v3gxbi"
+            rel="nofollow"
+            target="_blank"
             >最新构建｜Lanzou</a
           >
           密码：114514
@@ -31,6 +35,7 @@
       <li>
         <h3 dir="auto">
           <a
+            target="_blank"
             href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/wiki/InstallGuide.md"
             >安装教程｜GitHub</a
           >
@@ -39,6 +44,7 @@
       <li>
         <h3 dir="auto">
           <a
+            target="_blank"
             href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/wiki/RemoteCall.md"
             >接口文档｜GitHub</a
           >
@@ -47,6 +53,7 @@
       <li>
         <h3 dir="auto">
           <a
+            target="_blank"
             href="https://github.com/LazuliKao/PixelFaramitaLuminousPolymerizationRes/blob/main/lang"
             >语言文件｜GitHub</a
           >
