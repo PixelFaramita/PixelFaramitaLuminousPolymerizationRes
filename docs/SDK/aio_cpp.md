@@ -17,6 +17,8 @@ auto Tpa_GetTemp = RemoteCall::importAs<std::string(std::string const& playerXui
 auto Format_GetVariableString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& name,std::string const& format)>("PFLP", "Format::GetVariableString");
 // 获取变量，但是强制返回int类型 返回值类型：int
 auto Format_GetVariableInt = RemoteCall::importAs<int(std::string const& playerXuid,std::string const& name)>("PFLP", "Format::GetVariableInt");
+// 获取变量，但是强制返回float类型 返回值类型：float
+auto Format_GetVariableFloat = RemoteCall::importAs<float(std::string const& playerXuid,std::string const& name)>("PFLP", "Format::GetVariableFloat");
 // 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 auto Format_FormatRawString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& rawFormat)>("PFLP", "Format::FormatRawString");
 // 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool

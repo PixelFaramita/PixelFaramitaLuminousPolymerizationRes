@@ -23,6 +23,8 @@ var Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetT
 var Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString");
 // 获取变量，但是强制返回int类型 返回值类型：int
 var Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt");
+// 获取变量，但是强制返回float类型 返回值类型：float
+var Format_GetVariableFloat = RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat");
 // 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 var Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString");
 // 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
@@ -188,6 +190,11 @@ internal static class PFLP {
 		/// <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
 		public static int GetVariableInt(string playerXuid,string name) {
 			return Format_GetVariableInt_instance.Value(playerXuid,name);
+		}
+		private static Lazy<Func<string,string,float>>  Format_GetVariableFloat_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat"));
+		/// <summary> 获取变量，但是强制返回float类型 返回值类型：float </summary>
+		public static float GetVariableFloat(string playerXuid,string name) {
+			return Format_GetVariableFloat_instance.Value(playerXuid,name);
 		}
 		private static Lazy<Func<string,string,string>>  Format_FormatRawString_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString"));
 		/// <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>

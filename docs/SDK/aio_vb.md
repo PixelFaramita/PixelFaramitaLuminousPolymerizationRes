@@ -23,6 +23,8 @@ Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa
 Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString")
 ' 获取变量，但是强制返回int类型 返回值类型：int
 Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Func(Of String,String,Integer))("PFLP", "Format::GetVariableInt")
+' 获取变量，但是强制返回float类型 返回值类型：float
+Dim Format_GetVariableFloat = RemoteCallAPI.ImportAs(Of Func(Of String,String,Single))("PFLP", "Format::GetVariableFloat")
 ' 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::FormatRawString")
 ' 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
@@ -188,6 +190,11 @@ Friend Module PFLP
 		''' <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
 		Public Shared Function GetVariableInt(playerXuid As String,name As String) As int 
 			Return Format_GetVariableInt_instance.Value(playerXuid,name)
+		End Function
+		Private Shared Format_GetVariableFloat_instance As Lazy(Of Func(Of String,String,Single))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Single))("PFLP", "Format::GetVariableFloat"))
+		''' <summary> 获取变量，但是强制返回float类型 返回值类型：float </summary>
+		Public Shared Function GetVariableFloat(playerXuid As String,name As String) As float 
+			Return Format_GetVariableFloat_instance.Value(playerXuid,name)
 		End Function
 		Private Shared Format_FormatRawString_instance As Lazy(Of Func(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::FormatRawString"))
 		''' <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>

@@ -21,6 +21,8 @@ const Tpa_GetTemp = ll.import("PFLP", "Tpa::GetTemp");
 const Format_GetVariableString = ll.import("PFLP", "Format::GetVariableString");
 /** 获取变量，但是强制返回int类型 返回值类型：int */
 const Format_GetVariableInt = ll.import("PFLP", "Format::GetVariableInt");
+/** 获取变量，但是强制返回float类型 返回值类型：float */
+const Format_GetVariableFloat = ll.import("PFLP", "Format::GetVariableFloat");
 /** 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string */
 const Format_FormatRawString = ll.import("PFLP", "Format::FormatRawString");
 /** 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool */
@@ -187,6 +189,12 @@ const PFLP = {
 		 * @returns {number}
 		 */
 		GetVariableInt(playerXuid,name) { return (this.Format_GetVariableInt??=ll.import("PFLP", "Format::GetVariableInt"))(playerXuid,name)},
+		/** 获取变量，但是强制返回float类型 返回值类型：float
+		 * @param {string} playerXuid
+		 * @param {string} name
+		 * @returns {number}
+		 */
+		GetVariableFloat(playerXuid,name) { return (this.Format_GetVariableFloat??=ll.import("PFLP", "Format::GetVariableFloat"))(playerXuid,name)},
 		/** 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 		 * @param {string} playerXuid
 		 * @param {string} rawFormat

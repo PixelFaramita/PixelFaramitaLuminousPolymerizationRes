@@ -324,6 +324,55 @@
 >---
 >
 > <details>
+> <summary><b>GetVariableFloat  - 获取变量，但是强制返回float类型</b></summary>
+>
+>## Format::GetVariableFloat
+>### 获取变量，但是强制返回float类型
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>name</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：float;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/** 获取变量，但是强制返回float类型 返回值类型：float */
+>const Format_GetVariableFloat = ll.import("PFLP", "Format::GetVariableFloat");
+>let result = Format_GetVariableFloat(playerXuid,name);
+>```
+> - C++
+>```cpp
+>// 获取变量，但是强制返回float类型 返回值类型：float
+>auto Format_GetVariableFloat = RemoteCall::importAs<float(std::string const& playerXuid,std::string const& name)>("PFLP", "Format::GetVariableFloat");
+>auto result = Format_GetVariableFloat(playerXuid,name);
+>```
+> - C#
+>```csharp
+>// 获取变量，但是强制返回float类型 返回值类型：float
+>var Format_GetVariableFloat = RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat");
+>var result = Format_GetVariableFloat(playerXuid,name);
+>```
+> - Visual Basic .NET
+>```vb
+>' 获取变量，但是强制返回float类型 返回值类型：float
+>Dim Format_GetVariableFloat = RemoteCallAPI.ImportAs(Of Func(Of String,String,Single))("PFLP", "Format::GetVariableFloat")
+>Dim result = Format_GetVariableFloat(playerXuid,name)
+>```
+> - F#
+>```fsharp
+>// 获取变量，但是强制返回float类型 返回值类型：float
+>let Format_GetVariableFloat = RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat")
+>(playerXuid,name)
+>	|>Format_GetVariableFloat.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
 > <summary><b>FormatRawString  - 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat)</b></summary>
 >
 >## Format::FormatRawString
@@ -3466,6 +3515,8 @@
 >const Format_GetVariableString = ll.import("PFLP", "Format::GetVariableString");
 >/** 获取变量，但是强制返回int类型 返回值类型：int */
 >const Format_GetVariableInt = ll.import("PFLP", "Format::GetVariableInt");
+>/** 获取变量，但是强制返回float类型 返回值类型：float */
+>const Format_GetVariableFloat = ll.import("PFLP", "Format::GetVariableFloat");
 >/** 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string */
 >const Format_FormatRawString = ll.import("PFLP", "Format::FormatRawString");
 >/** 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool */
@@ -3632,6 +3683,12 @@
 >		 * @returns {number}
 >		 */
 >		GetVariableInt(playerXuid,name) { return (this.Format_GetVariableInt??=ll.import("PFLP", "Format::GetVariableInt"))(playerXuid,name)},
+>		/** 获取变量，但是强制返回float类型 返回值类型：float
+>		 * @param {string} playerXuid
+>		 * @param {string} name
+>		 * @returns {number}
+>		 */
+>		GetVariableFloat(playerXuid,name) { return (this.Format_GetVariableFloat??=ll.import("PFLP", "Format::GetVariableFloat"))(playerXuid,name)},
 >		/** 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 >		 * @param {string} playerXuid
 >		 * @param {string} rawFormat
@@ -4152,6 +4209,8 @@ auto Tpa_GetTemp = RemoteCall::importAs<std::string(std::string const& playerXui
 auto Format_GetVariableString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& name,std::string const& format)>("PFLP", "Format::GetVariableString");
 // 获取变量，但是强制返回int类型 返回值类型：int
 auto Format_GetVariableInt = RemoteCall::importAs<int(std::string const& playerXuid,std::string const& name)>("PFLP", "Format::GetVariableInt");
+// 获取变量，但是强制返回float类型 返回值类型：float
+auto Format_GetVariableFloat = RemoteCall::importAs<float(std::string const& playerXuid,std::string const& name)>("PFLP", "Format::GetVariableFloat");
 // 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 auto Format_FormatRawString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& rawFormat)>("PFLP", "Format::FormatRawString");
 // 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
@@ -4299,6 +4358,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString");
 >// 获取变量，但是强制返回int类型 返回值类型：int
 >var Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt");
+>// 获取变量，但是强制返回float类型 返回值类型：float
+>var Format_GetVariableFloat = RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat");
 >// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 >var Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString");
 >// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
@@ -4464,6 +4525,11 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		/// <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
 >		public static int GetVariableInt(string playerXuid,string name) {
 >			return Format_GetVariableInt_instance.Value(playerXuid,name);
+>		}
+>		private static Lazy<Func<string,string,float>>  Format_GetVariableFloat_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat"));
+>		/// <summary> 获取变量，但是强制返回float类型 返回值类型：float </summary>
+>		public static float GetVariableFloat(string playerXuid,string name) {
+>			return Format_GetVariableFloat_instance.Value(playerXuid,name);
 >		}
 >		private static Lazy<Func<string,string,string>>  Format_FormatRawString_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString"));
 >		/// <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
@@ -4818,6 +4884,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString")
 >' 获取变量，但是强制返回int类型 返回值类型：int
 >Dim Format_GetVariableInt = RemoteCallAPI.ImportAs(Of Func(Of String,String,Integer))("PFLP", "Format::GetVariableInt")
+>' 获取变量，但是强制返回float类型 返回值类型：float
+>Dim Format_GetVariableFloat = RemoteCallAPI.ImportAs(Of Func(Of String,String,Single))("PFLP", "Format::GetVariableFloat")
 >' 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 >Dim Format_FormatRawString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::FormatRawString")
 >' 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
@@ -4983,6 +5051,11 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		''' <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
 >		Public Shared Function GetVariableInt(playerXuid As String,name As String) As int 
 >			Return Format_GetVariableInt_instance.Value(playerXuid,name)
+>		End Function
+>		Private Shared Format_GetVariableFloat_instance As Lazy(Of Func(Of String,String,Single))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Single))("PFLP", "Format::GetVariableFloat"))
+>		''' <summary> 获取变量，但是强制返回float类型 返回值类型：float </summary>
+>		Public Shared Function GetVariableFloat(playerXuid As String,name As String) As float 
+>			Return Format_GetVariableFloat_instance.Value(playerXuid,name)
 >		End Function
 >		Private Shared Format_FormatRawString_instance As Lazy(Of Func(Of String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String))("PFLP", "Format::FormatRawString"))
 >		''' <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
@@ -5338,6 +5411,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 >// 获取变量，但是强制返回int类型 返回值类型：int
 >let Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt")
+>// 获取变量，但是强制返回float类型 返回值类型：float
+>let Format_GetVariableFloat = RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat")
 >// 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 >let Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString")
 >// 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
@@ -5497,6 +5572,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
 >    let public GetVariableInt(playerXuid:string)(name:string):int =
 >      Format_GetVariableInt_instance.Value.Invoke(playerXuid,name)
+>    let private Format_GetVariableFloat_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat")
+>    /// <summary> 获取变量，但是强制返回float类型 返回值类型：float </summary>
+>    let public GetVariableFloat(playerXuid:string)(name:string):float =
+>      Format_GetVariableFloat_instance.Value.Invoke(playerXuid,name)
 >    let private Format_FormatRawString_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString")
 >    /// <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
 >    let public FormatRawString(playerXuid:string)(rawFormat:string):string =

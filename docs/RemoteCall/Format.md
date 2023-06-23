@@ -89,6 +89,47 @@ let Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFL
 ```
 
 ---
+## Format::GetVariableFloat
+### 获取变量，但是强制返回float类型
+<table><tr><th>形参</th><th>类型</th></tr>
+<tr><td>playerXuid</td><td>string</td></tr>
+<tr><td>name</td><td>string</td></tr>
+<tr><td colspan="2">返回值类型：float;</td></tr></table>
+
+ - JavaScript
+```js
+/** 获取变量，但是强制返回float类型 返回值类型：float */
+const Format_GetVariableFloat = ll.import("PFLP", "Format::GetVariableFloat");
+let result = Format_GetVariableFloat(playerXuid,name);
+```
+ - C++
+```cpp
+// 获取变量，但是强制返回float类型 返回值类型：float
+auto Format_GetVariableFloat = RemoteCall::importAs<float(std::string const& playerXuid,std::string const& name)>("PFLP", "Format::GetVariableFloat");
+auto result = Format_GetVariableFloat(playerXuid,name);
+```
+ - C#
+```csharp
+// 获取变量，但是强制返回float类型 返回值类型：float
+var Format_GetVariableFloat = RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat");
+var result = Format_GetVariableFloat(playerXuid,name);
+```
+ - Visual Basic .NET
+```vb
+' 获取变量，但是强制返回float类型 返回值类型：float
+Dim Format_GetVariableFloat = RemoteCallAPI.ImportAs(Of Func(Of String,String,Single))("PFLP", "Format::GetVariableFloat")
+Dim result = Format_GetVariableFloat(playerXuid,name)
+```
+ - F#
+```fsharp
+// 获取变量，但是强制返回float类型 返回值类型：float
+let Format_GetVariableFloat = RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat")
+(playerXuid,name)
+	|>Format_GetVariableFloat.Invoke
+	|>ignore
+```
+
+---
 ## Format::FormatRawString
 ### 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat)
 <table><tr><th>形参</th><th>类型</th></tr>

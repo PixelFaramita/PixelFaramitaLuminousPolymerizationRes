@@ -24,6 +24,8 @@ let Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetT
 let Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 // 获取变量，但是强制返回int类型 返回值类型：int
 let Format_GetVariableInt = RemoteCallAPI.ImportAs<Func<string,string,int>>("PFLP", "Format::GetVariableInt")
+// 获取变量，但是强制返回float类型 返回值类型：float
+let Format_GetVariableFloat = RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat")
 // 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string
 let Format_FormatRawString = RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString")
 // 定义格式化内容（返回true为创建成功，false为覆盖） 返回值类型：bool
@@ -183,6 +185,10 @@ module public PFLP =
     /// <summary> 获取变量，但是强制返回int类型 返回值类型：int </summary>
     let public GetVariableInt(playerXuid:string)(name:string):int =
       Format_GetVariableInt_instance.Value.Invoke(playerXuid,name)
+    let private Format_GetVariableFloat_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,float>>("PFLP", "Format::GetVariableFloat")
+    /// <summary> 获取变量，但是强制返回float类型 返回值类型：float </summary>
+    let public GetVariableFloat(playerXuid:string)(name:string):float =
+      Format_GetVariableFloat_instance.Value.Invoke(playerXuid,name)
     let private Format_FormatRawString_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string>>("PFLP", "Format::FormatRawString")
     /// <summary> 格式化字符串(反复调用会导致反复解析，推荐使用DefineFormat和GetFormat) 返回值类型：string </summary>
     let public FormatRawString(playerXuid:string)(rawFormat:string):string =
