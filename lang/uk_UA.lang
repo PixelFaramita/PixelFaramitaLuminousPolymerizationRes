@@ -17,6 +17,7 @@ FloatText.ModuleName=Плаваюче слово
 FormAPI.ModuleName=Форма інтерфейсу
 FormatApi.ModuleName=Інтерфейс формату символів
 FriendlyDisconnect.ModuleName=Оптимізація запиту на відключення
+FrpClient.ModuleName=Проникнення в Інтернет
 GiftCode.ModuleName=Система подарункових кодів
 Global.ModuleName=Глобальна конфігурація, що підключається
 HeightEdit.ModuleName=Змінюйте висоту світу

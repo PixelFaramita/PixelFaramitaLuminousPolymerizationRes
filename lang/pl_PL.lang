@@ -17,6 +17,7 @@ FloatText.ModuleName=Pływające słowo
 FormAPI.ModuleName=Formularz UI
 FormatApi.ModuleName=Interfejs formatu postaci
 FriendlyDisconnect.ModuleName=Optymalizacja monitu rozłączania
+FrpClient.ModuleName=penetracja Internetu
 GiftCode.ModuleName=System kodu pakietu prezentów
 Global.ModuleName=Globalna konfiguracja wtyczki
 HeightEdit.ModuleName=Modyfikowanie wysokości świata

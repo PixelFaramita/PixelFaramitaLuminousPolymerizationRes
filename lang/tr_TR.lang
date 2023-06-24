@@ -17,6 +17,7 @@ FloatText.ModuleName=Yüzen kelime
 FormAPI.ModuleName=Form kullanıcı arayüzü
 FormatApi.ModuleName=Karakter biçimi arayüzü
 FriendlyDisconnect.ModuleName=Bağlantı kesme istemi optimizasyonu
+FrpClient.ModuleName=İnternet penetrasyonu
 GiftCode.ModuleName=Hediye kodu sistemi
 Global.ModuleName=Eklenti genel yapılandırması
 HeightEdit.ModuleName=Dünya yüksekliğini değiştirme

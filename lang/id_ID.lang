@@ -17,6 +17,7 @@ FloatText.ModuleName=浮空字
 FormAPI.ModuleName=Bentuk ui
 FormatApi.ModuleName=Antarmuka pemformatan karakter
 FriendlyDisconnect.ModuleName=Mengungkapkan optimasi prompt koneksi
+FrpClient.ModuleName=Penetrasi Internet
 GiftCode.ModuleName=Sistem kode hadiah
 Global.ModuleName=Konfigurasi global plug-in
 HeightEdit.ModuleName=Ubah ketinggian dunia

@@ -17,6 +17,7 @@ FloatText.ModuleName=Drijvend woord
 FormAPI.ModuleName=Vorm UI
 FormatApi.ModuleName=Karakterformat interface
 FriendlyDisconnect.ModuleName=Bewaar de verbindingspromptoptimalisatie
+FrpClient.ModuleName=Internetpenetratie
 GiftCode.ModuleName=Cadeaupakketcodesysteem
 Global.ModuleName=Algemene configuratie van plug-ins
 HeightEdit.ModuleName=De wereldhoogte wijzigen

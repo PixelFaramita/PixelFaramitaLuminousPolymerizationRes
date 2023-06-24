@@ -17,6 +17,7 @@ FloatText.ModuleName=Floating word
 FormAPI.ModuleName=Form UI
 FormatApi.ModuleName=Character format interface
 FriendlyDisconnect.ModuleName=Discove connection prompt optimization
+FrpClient.ModuleName=Internet penetration
 GiftCode.ModuleName=Gift Pack Code System
 Global.ModuleName=Plug-in global configuration
 HeightEdit.ModuleName=Modify the world height

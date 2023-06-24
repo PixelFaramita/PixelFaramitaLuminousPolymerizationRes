@@ -17,6 +17,7 @@ FloatText.ModuleName=フローティングワード
 FormAPI.ModuleName=FORM UI
 FormatApi.ModuleName=文字形式のインターフェイス
 FriendlyDisconnect.ModuleName=Discove接続プロンプトの最適化
+FrpClient.ModuleName=インターネットの浸透
 GiftCode.ModuleName=ギフトパックコードシステム
 Global.ModuleName=プラグインのグローバル構成
 HeightEdit.ModuleName=ワールドの高さを変更する

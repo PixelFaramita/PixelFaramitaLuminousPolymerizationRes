@@ -17,6 +17,7 @@ FloatText.ModuleName=浮空字
 FormAPI.ModuleName=表單UI
 FormatApi.ModuleName=字符格式化接口
 FriendlyDisconnect.ModuleName=斷開連接提示優化
+FrpClient.ModuleName=內網穿透
 GiftCode.ModuleName=禮包碼系統
 Global.ModuleName=外掛程式全域配置
 HeightEdit.ModuleName=修改世界高度

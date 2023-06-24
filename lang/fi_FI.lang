@@ -17,6 +17,7 @@ FloatText.ModuleName=Kelluva sana
 FormAPI.ModuleName=Muodon käyttöliittymä
 FormatApi.ModuleName=Merkkimuotoinen käyttöliittymä
 FriendlyDisconnect.ModuleName=Kesennä yhteyskehotuksen optimointi
+FrpClient.ModuleName=Internetin levinneisyys
 GiftCode.ModuleName=Lahjapakkauskoodijärjestelmä
 Global.ModuleName=Laajennuksen yleinen kokoonpano
 HeightEdit.ModuleName=Muokkaa maailmankorkeutta

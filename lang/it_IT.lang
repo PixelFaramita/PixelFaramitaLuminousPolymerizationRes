@@ -17,6 +17,7 @@ FloatText.ModuleName=Parola galleggiante
 FormAPI.ModuleName=Forma ui
 FormatApi.ModuleName=Interfaccia del formato del carattere
 FriendlyDisconnect.ModuleName=Scopri l'ottimizzazione del prompt della connessione
+FrpClient.ModuleName=Penetrazione di Internet
 GiftCode.ModuleName=Sistema di codice regalo
 Global.ModuleName=Configurazione globale del plug-in
 HeightEdit.ModuleName=Modificare l'altezza del mondo

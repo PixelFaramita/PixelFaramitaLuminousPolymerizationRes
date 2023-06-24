@@ -17,6 +17,7 @@ FloatText.ModuleName=Plovoucí slovo
 FormAPI.ModuleName=Forma UI
 FormatApi.ModuleName=Rozhraní formátu znaků
 FriendlyDisconnect.ModuleName=Zveřejněte optimalizaci výkazy připojení
+FrpClient.ModuleName=Pronikání internetu
 GiftCode.ModuleName=Systém dárkového kódu
 Global.ModuleName=Globální konfigurace modulu plug-in
 HeightEdit.ModuleName=Úprava světové výšky

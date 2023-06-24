@@ -17,6 +17,7 @@ FloatText.ModuleName=Schwimmendes Wort
 FormAPI.ModuleName=Form UI
 FormatApi.ModuleName=Zeichenformatschnittstelle
 FriendlyDisconnect.ModuleName=Entspannen Sie die Optimierung der Verbindungsumforderungsoptimierung
+FrpClient.ModuleName=Internet-Penetration
 GiftCode.ModuleName=Geschenkcode-System
 Global.ModuleName=Globale Plug-In-Konfiguration
 HeightEdit.ModuleName=Ändern der Welthöhe

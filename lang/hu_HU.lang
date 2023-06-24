@@ -17,6 +17,7 @@ FloatText.ModuleName=Úszó szó
 FormAPI.ModuleName=Feladat felhasználói felületet
 FormatApi.ModuleName=Karakter formátumú interfész
 FriendlyDisconnect.ModuleName=A kapcsolatfelvételi gyors optimalizálás
+FrpClient.ModuleName=Internetes behatolás
 GiftCode.ModuleName=Ajándékkód rendszer
 Global.ModuleName=Beépülő modul globális konfigurációja
 HeightEdit.ModuleName=Módosítsa a világ magasságát

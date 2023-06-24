@@ -17,6 +17,7 @@ FloatText.ModuleName=Flytende ord
 FormAPI.ModuleName=Skjema brukergrensesnitt
 FormatApi.ModuleName=Karakterformatgrensesnitt
 FriendlyDisconnect.ModuleName=Disse Connection Prompt Optimization
+FrpClient.ModuleName=Internett -penetrasjon
 GiftCode.ModuleName=Gave kode system
 Global.ModuleName=Plug-in global konfigurasjon
 HeightEdit.ModuleName=Endre verdenshøyden
