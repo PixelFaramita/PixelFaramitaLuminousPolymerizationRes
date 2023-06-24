@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=Játékosazonosító kezelése
 PlayerList.ModuleName=Listasáv
 PlayerSettings.ModuleName=A játékos személyes beállításai
 Popup.ModuleName=Felfüggesztett információk
+ProtectArea.ModuleName=védett terület
 PvPManager.ModuleName=PVP állapotkezelés
 QuickJsHelper.ModuleName=QuickJshelper
 QuickUpdate.ModuleName=Gyorsan frissítés

@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=Manajemen ID pemain
 PlayerList.ModuleName=Bilah daftar
 PlayerSettings.ModuleName=Pengaturan pribadi pemain
 Popup.ModuleName=Informasi yang ditangguhkan
+ProtectArea.ModuleName=kawasan lindung
 PvPManager.ModuleName=Manajemen Status PvP
 QuickJsHelper.ModuleName=QuickJshelper
 QuickUpdate.ModuleName=Pembaruan cepat

@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=Oyuncu kimliği yönetimi
 PlayerList.ModuleName=Liste çubuğu
 PlayerSettings.ModuleName=Oyuncunun kişisel ayarları
 Popup.ModuleName=Askıya alınmış bilgi
+ProtectArea.ModuleName=korunmuş bölge
 PvPManager.ModuleName=PVP Durum Yönetimi
 QuickJsHelper.ModuleName=Quickjshelper
 QuickUpdate.ModuleName=Hızlı güncellemeler

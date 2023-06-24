@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=Hantering av spelar-ID
 PlayerList.ModuleName=Listfält
 PlayerSettings.ModuleName=Spelarens personliga inställningar
 Popup.ModuleName=Avstängd information
+ProtectArea.ModuleName=skyddat område
 PvPManager.ModuleName=PVP -statushantering
 QuickJsHelper.ModuleName=Kväkare
 QuickUpdate.ModuleName=Uppdateras snabbt

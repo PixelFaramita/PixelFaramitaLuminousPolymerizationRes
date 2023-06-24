@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=Administration af spiller-id
 PlayerList.ModuleName=Liste bjælke
 PlayerSettings.ModuleName=Spillerens personlige indstillinger
 Popup.ModuleName=Suspenderede oplysninger
+ProtectArea.ModuleName=beskyttet område
 PvPManager.ModuleName=PVP -statusstyring
 QuickJsHelper.ModuleName=QuickJshelper
 QuickUpdate.ModuleName=Opdateres hurtigt

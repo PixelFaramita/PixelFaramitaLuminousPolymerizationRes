@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=Spieler-ID-Verwaltung
 PlayerList.ModuleName=Listenleiste
 PlayerSettings.ModuleName=Persönliche Einstellungen des Spielers
 Popup.ModuleName=Informationen gesperrt
+ProtectArea.ModuleName=geschützter Bereich
 PvPManager.ModuleName=PVP -Statusverwaltung
 QuickJsHelper.ModuleName=Quickjshelper
 QuickUpdate.ModuleName=Schnell aktualisieren

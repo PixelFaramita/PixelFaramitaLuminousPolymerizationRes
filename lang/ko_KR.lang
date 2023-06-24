@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=플레이어 ID 관리
 PlayerList.ModuleName=목록 표시줄
 PlayerSettings.ModuleName=플레이어 개인 설정
 Popup.ModuleName=정지 된 정보
+ProtectArea.ModuleName=보호 지역
 PvPManager.ModuleName=PVP 상태 관리
 QuickJsHelper.ModuleName=QuickJshelper
 QuickUpdate.ModuleName=빠르게 업데이트하십시오

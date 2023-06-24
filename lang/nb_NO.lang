@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=Administrasjon av spiller-ID
 PlayerList.ModuleName=Listelinje
 PlayerSettings.ModuleName=Personlige innstillinger for spilleren
 Popup.ModuleName=Suspendert informasjon
+ProtectArea.ModuleName=reservat
 PvPManager.ModuleName=PVP -statusstyring
 QuickJsHelper.ModuleName=QuickJshelper
 QuickUpdate.ModuleName=Raske oppdateringer

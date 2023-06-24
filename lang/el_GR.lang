@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=Διαχείριση αναγνωριστικών πα
 PlayerList.ModuleName=Γραμμή λίστας
 PlayerSettings.ModuleName=Προσωπικές ρυθμίσεις παίκτη
 Popup.ModuleName=Ανασταλείσες πληροφορίες
+ProtectArea.ModuleName=προστατευόμενη περιοχή
 PvPManager.ModuleName=Διαχείριση κατάστασης PVP
 QuickJsHelper.ModuleName=Quickjshelper
 QuickUpdate.ModuleName=Ενημερώστε γρήγορα

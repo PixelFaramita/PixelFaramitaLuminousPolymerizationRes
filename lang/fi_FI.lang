@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=Pelaajatunnusten hallinta
 PlayerList.ModuleName=Luettelo-palkki
 PlayerSettings.ModuleName=Pelaajan henkilökohtaiset asetukset
 Popup.ModuleName=Keskeytetyt tiedot
+ProtectArea.ModuleName=suojaalue
 PvPManager.ModuleName=PVP -tilanhallinta
 QuickJsHelper.ModuleName=Pikajuhlat
 QuickUpdate.ModuleName=Nopeat päivitykset

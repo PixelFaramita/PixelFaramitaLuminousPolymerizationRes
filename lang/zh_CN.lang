@@ -43,6 +43,7 @@ PlayerIDHelper.ModuleName=玩家ID管理
 PlayerList.ModuleName=列表栏
 PlayerSettings.ModuleName=玩家个人设置
 Popup.ModuleName=悬浮信息
+ProtectArea.ModuleName=保护区
 PvPManager.ModuleName=PvP状态管理
 QuickJsHelper.ModuleName=QuickJSHelper
 QuickUpdate.ModuleName=快速更新
