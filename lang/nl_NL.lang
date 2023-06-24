@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=Spelerskeuze
 FormAPI.SelectPlayerOpenType.Title=Spelerskeuze
 FormAPI.SelectPlayerOpenTypeAll=Kies uit alle spelers
 FormAPI.SelectPlayerOpenTypeOnline=Kies uit online spelers
+FrpClient.FileNotFound=Er is geen FRPC -configuratiebestand gevonden
 GiftCode.Command.AddCurrentItemTitle=Voeg handige items toe\n(Ondersteuning van NBT -tags, multi -Items worden aanbevolen om onderzeeërboxen te gebruiken of meerdere keren toe te voegen)
 GiftCode.Command.AddTenGiftCodeTitle=Voeg een cadeauzakje toe*10\n(One -Time -gebruik, meer geschenkpakketten worden in de latere periode toegevoegd)
 GiftCode.Command.CancelAdd=Je hebt add geannuleerd

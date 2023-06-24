@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=Spelarval
 FormAPI.SelectPlayerOpenType.Title=Spelarval
 FormAPI.SelectPlayerOpenTypeAll=Välj mellan alla spelare
 FormAPI.SelectPlayerOpenTypeOnline=Välj mellan online -spelare
+FrpClient.FileNotFound=Ingen FRPC -konfigurationsfil hittades
 GiftCode.Command.AddCurrentItemTitle=Lägg till handhållna föremål\n(Support NBT -taggar, Multi -item rekommenderas att använda ubåtlådor eller lägga till flera gånger)
 GiftCode.Command.AddTenGiftCodeTitle=Lägg till en presentpåse*10\n(One -Time Use, fler presentpaket kommer att läggas till under den senare perioden)
 GiftCode.Command.CancelAdd=Du har avbrutit tillägg

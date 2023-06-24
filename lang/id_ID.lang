@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=Pilihan pemain
 FormAPI.SelectPlayerOpenType.Title=Pilihan pemain
 FormAPI.SelectPlayerOpenTypeAll=Pilih dari semua pemain
 FormAPI.SelectPlayerOpenTypeOnline=Pilih dari pemain online
+FrpClient.FileNotFound=Tidak ada file konfigurasi FRPC yang ditemukan
 GiftCode.Command.AddCurrentItemTitle=Tambahkan item genggam\n(Dukungan tag NBT, multi -Its disarankan untuk menggunakan kotak kapal selam atau tambahkan beberapa kali)
 GiftCode.Command.AddTenGiftCodeTitle=Tambahkan tas hadiah*10\n(Penggunaan satu kali, lebih banyak paket hadiah akan ditambahkan di periode selanjutnya)
 GiftCode.Command.CancelAdd=Anda telah membatalkan Added

@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=玩家择法
 FormAPI.SelectPlayerOpenType.Title=玩家择法
 FormAPI.SelectPlayerOpenTypeAll=择诸玩家
 FormAPI.SelectPlayerOpenTypeOnline=择于在线玩家
+FrpClient.FileNotFound=未得frpc配置文件
 GiftCode.Command.AddCurrentItemTitle=添持物\n(赞NBT标签,多物议用潜影盒或屡添)
 GiftCode.Command.AddTenGiftCodeTitle=添礼包码*10\n(一次性用,后益多礼包码生姿势)
 GiftCode.Command.CancelAdd=卿已罢添

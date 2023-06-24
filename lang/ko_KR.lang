@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=플레이어 선택
 FormAPI.SelectPlayerOpenType.Title=플레이어 선택
 FormAPI.SelectPlayerOpenTypeAll=모든 플레이어 중에서 선택하십시오
 FormAPI.SelectPlayerOpenTypeOnline=온라인 플레이어 중에서 선택하십시오
+FrpClient.FileNotFound=FRPC 구성 파일이 없습니다
 GiftCode.Command.AddCurrentItemTitle=핸드 헬드 항목을 추가하십시오\n(NBT 태그 지원, 잠수함 상자를 사용하거나 여러 번 추가하는 것이 좋습니다)
 GiftCode.Command.AddTenGiftCodeTitle=선물 가방 추가*10\n(1 번 사용, 더 많은 선물 패키지가 나중에 추가됩니다)
 GiftCode.Command.CancelAdd=ADD를 취소했습니다

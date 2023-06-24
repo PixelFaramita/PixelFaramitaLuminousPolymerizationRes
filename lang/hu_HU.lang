@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=Játékosválasztás
 FormAPI.SelectPlayerOpenType.Title=Játékosválasztás
 FormAPI.SelectPlayerOpenTypeAll=Válasszon minden játékos közül
 FormAPI.SelectPlayerOpenTypeOnline=Válasszon az online játékosok közül
+FrpClient.FileNotFound=Nem találtak FRPC konfigurációs fájlt
 GiftCode.Command.AddCurrentItemTitle=Adjon hozzá kézi elemeket\n(Támogassa az NBT címkéket, a multi -elemek ajánlottak a tengeralattjáró dobozok használatához vagy többszöri hozzáadásához)
 GiftCode.Command.AddTenGiftCodeTitle=Adjon hozzá egy ajándéktáskát*10\n(Egyidős használat, további ajándékcsomagok kerülnek hozzáadásra a későbbi időszakban)
 GiftCode.Command.CancelAdd=Ön lemondta a hozzáadást

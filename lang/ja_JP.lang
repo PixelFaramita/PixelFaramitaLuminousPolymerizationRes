@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=プレイヤーの選択
 FormAPI.SelectPlayerOpenType.Title=プレイヤーの選択
 FormAPI.SelectPlayerOpenTypeAll=すべてのプレイヤーから選択してください
 FormAPI.SelectPlayerOpenTypeOnline=オンラインプレーヤーから選択してください
+FrpClient.FileNotFound=FRPC構成ファイルは見つかりませんでした
 GiftCode.Command.AddCurrentItemTitle=ハンドヘルドアイテムを追加します\n（サポートNBTタグ、マルチアイテムは、サブマリンボックスを使用するか、複数回追加するために推奨されます）
 GiftCode.Command.AddTenGiftCodeTitle=ギフトバッグ*10を追加します\n（1回の使用、より多くのギフトパッケージが後期に追加されます）
 GiftCode.Command.CancelAdd=キャンセルaddをキャンセルしました

@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=玩家选择方式
 FormAPI.SelectPlayerOpenType.Title=玩家选择方式
 FormAPI.SelectPlayerOpenTypeAll=从所有玩家中选择
 FormAPI.SelectPlayerOpenTypeOnline=从在线玩家中选择
+FrpClient.FileNotFound=未找到frpc配置文件
 GiftCode.Command.AddCurrentItemTitle=添加手持物品\n(支持NBT标签,多物品建议使用潜影盒或多次添加)
 GiftCode.Command.AddTenGiftCodeTitle=添加礼包码*10\n(一次性使用,后期会添加更多礼包码生成姿势)
 GiftCode.Command.CancelAdd=您已取消添加

@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=Pelaajan valinta
 FormAPI.SelectPlayerOpenType.Title=Pelaajan valinta
 FormAPI.SelectPlayerOpenTypeAll=Valitse kaikista pelaajista
 FormAPI.SelectPlayerOpenTypeOnline=Valitse online -pelaajista
+FrpClient.FileNotFound=FRPC -määritystiedostoa ei löytynyt
 GiftCode.Command.AddCurrentItemTitle=Lisää kädessä pidettävä esineitä\n(Tuki NBT -tunnisteita, monikiemejä suositellaan käyttämään sukellusveneitä tai lisäämään useita kertoja)
 GiftCode.Command.AddTenGiftCodeTitle=Lisää lahjapussi*10\n(Yksi -aikakäyttö, lisää lahjapaketteja lisätään myöhempään ajanjaksoon)
 GiftCode.Command.CancelAdd=Olet peruuttanut Add

@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=Volba hráče
 FormAPI.SelectPlayerOpenType.Title=Volba hráče
 FormAPI.SelectPlayerOpenTypeAll=Vyberte si ze všech hráčů
 FormAPI.SelectPlayerOpenTypeOnline=Vyberte si z online hráčů
+FrpClient.FileNotFound=Nebyl nalezen žádný konfigurační soubor FRPC
 GiftCode.Command.AddCurrentItemTitle=Přidejte ruční položky\n(Podpora značek NBT, více -items se doporučuje používat ponorkové boxy nebo přidat několikrát)
 GiftCode.Command.AddTenGiftCodeTitle=Přidat dárkový kód *10\n(Jednorázové použití, další pózy generování dárkového kódu budou přidány později)
 GiftCode.Command.CancelAdd=Zrušili jste přidání

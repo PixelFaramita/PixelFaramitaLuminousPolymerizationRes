@@ -217,6 +217,7 @@ FormAPI.SelectPlayerOpenType.Content=Scelta del giocatore
 FormAPI.SelectPlayerOpenType.Title=Scelta del giocatore
 FormAPI.SelectPlayerOpenTypeAll=Scegli tra tutti i giocatori
 FormAPI.SelectPlayerOpenTypeOnline=Scegli tra giocatori online
+FrpClient.FileNotFound=Non è stato trovato alcun file di configurazione FRPC
 GiftCode.Command.AddCurrentItemTitle=Aggiungi elementi portatili\n(Supporto tag NBT, si consigliano multitem per utilizzare scatole sottomarine o aggiungere più volte)
 GiftCode.Command.AddTenGiftCodeTitle=Aggiungi una borsa regalo*10\n(Uso di un tempo, verranno aggiunti più pacchetti regalo nel periodo successivo)
 GiftCode.Command.CancelAdd=Hai cancellato aggiungi
