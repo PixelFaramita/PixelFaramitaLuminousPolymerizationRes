@@ -339,6 +339,12 @@ export const useGlobalStore = defineStore("global", () => {
       DisplayDistance: 20,
       StaticPictureResendDurationSeconds: 30.0,
     },
+    FrpClient: {
+      ModuleEnabled: true,
+      OverrideLLGetIp: true,
+      FrpConfigs: ["~\\frpc.ini"],
+      RestartRetryTime: 10,
+    },
     WebUI: {
       ModuleEnabled: true,
       HtmlTitle: "网页标题",

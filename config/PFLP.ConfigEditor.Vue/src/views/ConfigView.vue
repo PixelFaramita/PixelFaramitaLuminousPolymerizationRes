@@ -28,6 +28,9 @@
           <n-tab-pane name="pic" tab="地图画">
             <picture-loader-config />
           </n-tab-pane>
+          <n-tab-pane name="frp" tab="frp穿透">
+            <frp-config />
+          </n-tab-pane>
           <n-tab-pane name="next" tab="杂项">
             <next-config />
           </n-tab-pane>

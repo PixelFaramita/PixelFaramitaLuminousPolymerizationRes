@@ -7,12 +7,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    AllModules: typeof import('./src/components/AllModules.vue')['default']
     BackupConfig: typeof import('./src/components/BackupConfig.vue')['default']
     BehaviorLogConfig: typeof import('./src/components/BehaviorLogConfig.vue')['default']
     EconmicConfig: typeof import('./src/components/EconmicConfig.vue')['default']
     FormatPages: typeof import('./src/components/FormatPages.vue')['default']
     FormatPagesWithTitle: typeof import('./src/components/FormatPagesWithTitle.vue')['default']
+    FrpConfig: typeof import('./src/components/FrpConfig.vue')['default']
     GlobalConfig: typeof import('./src/components/GlobalConfig.vue')['default']
     LandConfig: typeof import('./src/components/LandConfig.vue')['default']
     MessageConfig: typeof import('./src/components/MessageConfig.vue')['default']
