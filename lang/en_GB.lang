@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Remote call
 ServerTransfer.ModuleName=Fast cross-service
 Shop.ModuleName=shop
 Sidebar.ModuleName=Sidebar
+Statistics.ModuleName=Statistical variable
 Tpa.ModuleName=Request transmission
 Tpr.ModuleName=Random transmission
 UIExtensions.ModuleName=UI extension

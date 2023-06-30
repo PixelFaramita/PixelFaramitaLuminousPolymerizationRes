@@ -15,8 +15,14 @@ const General_SetConfig = ll.import("PFLP", "General::SetConfig");
 const General_GetConfig = ll.import("PFLP", "General::GetConfig");
 /** 重新加载所有功能的配置文件 */
 const General_Reload = ll.import("PFLP", "General::Reload");
+/** 获取全部IP归属地缓存（JSON字符串） 返回值类型：string */
+const Location_GetAllCacheData = ll.import("PFLP", "Location::GetAllCacheData");
+/**  设置IP归属地缓存 */
+const Location_SetIpLocation = ll.import("PFLP", "Location::SetIpLocation");
 /** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string */
 const Tpa_GetTemp = ll.import("PFLP", "Tpa::GetTemp");
+/** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string */
+const Statistics_GetPlayerStatistics = ll.import("PFLP", "Statistics::GetPlayerStatistics");
 /** 获取变量 返回值类型：string */
 const Format_GetVariableString = ll.import("PFLP", "Format::GetVariableString");
 /** 获取变量，但是强制返回int类型 返回值类型：int */
@@ -168,12 +174,35 @@ const PFLP = {
 		 */
 		Reload() { (this.General_Reload??=ll.import("PFLP", "General::Reload"))()},
 	},
+	Location : {
+		/** 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+		 * @returns {string}
+		 */
+		GetAllCacheData() { return (this.Location_GetAllCacheData??=ll.import("PFLP", "Location::GetAllCacheData"))()},
+		/**  设置IP归属地缓存
+		 * @param {string} ip
+		 * @param {string} country
+		 * @param {string} province
+		 * @param {string} city
+		 * @param {string} area
+		 * @param {string} isp
+		 * @param {string} language
+		 */
+		SetIpLocation(ip,country,province,city,area,isp,language) { (this.Location_SetIpLocation??=ll.import("PFLP", "Location::SetIpLocation"))(ip,country,province,city,area,isp,language)},
+	},
 	Tpa : {
 		/** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 		 * @param {string} playerXuid
 		 * @returns {string}
 		 */
 		GetTemp(playerXuid) { return (this.Tpa_GetTemp??=ll.import("PFLP", "Tpa::GetTemp"))(playerXuid)},
+	},
+	Statistics : {
+		/** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+		 * @param {string} playerXuid
+		 * @returns {string}
+		 */
+		GetPlayerStatistics(playerXuid) { return (this.Statistics_GetPlayerStatistics??=ll.import("PFLP", "Statistics::GetPlayerStatistics"))(playerXuid)},
 	},
 	Format : {
 		/** 获取变量 返回值类型：string

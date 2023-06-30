@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Diaľkový hovor
 ServerTransfer.ModuleName=Krížová služba
 Shop.ModuleName=obchod
 Sidebar.ModuleName=Sidebar
+Statistics.ModuleName=Štatistická premenná
 Tpa.ModuleName=Prenos
 Tpr.ModuleName=Náhodný prevod
 UIExtensions.ModuleName=Rozšírenie používateľského rozhrania

@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Ekstern samtale
 ServerTransfer.ModuleName=Kryss -tjeneste
 Shop.ModuleName=butikk
 Sidebar.ModuleName=Sidepanelet
+Statistics.ModuleName=Statistisk variabel
 Tpa.ModuleName=Be om overføring
 Tpr.ModuleName=Tilfeldig overføring
 UIExtensions.ModuleName=UI -utvidelse

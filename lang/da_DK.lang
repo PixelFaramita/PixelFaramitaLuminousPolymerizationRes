@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Fjernopkald
 ServerTransfer.ModuleName=Hurtig cross-service
 Shop.ModuleName=butik
 Sidebar.ModuleName=Sidebjælke
+Statistics.ModuleName=Statistisk variabel
 Tpa.ModuleName=Anmod om levering
 Tpr.ModuleName=Tilfældig overførsel
 UIExtensions.ModuleName=UI -udvidelse

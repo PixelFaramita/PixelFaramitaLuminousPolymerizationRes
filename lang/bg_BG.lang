@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Дистанционно повикване
 ServerTransfer.ModuleName=Бързо кръстосано обслужване
 Shop.ModuleName=Магазин
 Sidebar.ModuleName=Лента
+Statistics.ModuleName=Статистическа променлива
 Tpa.ModuleName=Предаване на заявка
 Tpr.ModuleName=Случайно предаване
 UIExtensions.ModuleName=Удължаване на потребителския интерфейс

@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Zdalne połączenie
 ServerTransfer.ModuleName=Szybka obsługa międzyobsługowa
 Shop.ModuleName=sklep
 Sidebar.ModuleName=Pasku bocznym
+Statistics.ModuleName=Zmienna statystyczna
 Tpa.ModuleName=Przekazanie żądania
 Tpr.ModuleName=Transfer losowy
 UIExtensions.ModuleName=Rozszerzenia interfejsu użytkownika

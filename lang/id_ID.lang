@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Panggilan jarak jauh
 ServerTransfer.ModuleName=Layanan silang yang cepat
 Shop.ModuleName=toko
 Sidebar.ModuleName=Bilah sisi
+Statistics.ModuleName=Variabel statistik
 Tpa.ModuleName=Meminta transmisi
 Tpr.ModuleName=Transmisi acak
 UIExtensions.ModuleName=Ekstensi UI

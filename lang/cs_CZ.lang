@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Vzdálený hovor
 ServerTransfer.ModuleName=Rychlé přecházení služeb
 Shop.ModuleName=prodejna
 Sidebar.ModuleName=Sidebar
+Statistics.ModuleName=Statistická proměnná
 Tpa.ModuleName=Přenos požadavku
 Tpr.ModuleName=Náhodný přenos
 UIExtensions.ModuleName=Rozšíření UI

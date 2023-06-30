@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Távoli hívás
 ServerTransfer.ModuleName=Gyors keresztszolgáltatás
 Shop.ModuleName=üzlet
 Sidebar.ModuleName=Oldalsáv
+Statistics.ModuleName=Statisztikai változó
 Tpa.ModuleName=Kérés továbbítás
 Tpr.ModuleName=Véletlenszerű átvitel
 UIExtensions.ModuleName=UI -kiterjesztés

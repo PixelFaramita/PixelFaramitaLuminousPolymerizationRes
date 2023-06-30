@@ -51,6 +51,7 @@ RemoteCall.ModuleName=원격 통화
 ServerTransfer.ModuleName=빠른 교차 서비스
 Shop.ModuleName=가게
 Sidebar.ModuleName=사이드바
+Statistics.ModuleName=통계 변수
 Tpa.ModuleName=요청 전송
 Tpr.ModuleName=임의의 전송
 UIExtensions.ModuleName=UI 확장

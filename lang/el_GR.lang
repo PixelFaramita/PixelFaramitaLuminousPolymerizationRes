@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Απομακρυσμένη κλήση
 ServerTransfer.ModuleName=Σταυροειδής
 Shop.ModuleName=κατάστημα
 Sidebar.ModuleName=Πλευρική γραμμή
+Statistics.ModuleName=Στατιστική μεταβλητή
 Tpa.ModuleName=Μετάδοση αίτησης
 Tpr.ModuleName=Τυχαία μεταφορά
 UIExtensions.ModuleName=Επέκταση UI

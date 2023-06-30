@@ -23,7 +23,7 @@
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI
 >```
 > - F#
->```F#
+>```fsharp
 >#r "LiteLoader.NET"
 >open LiteLoader.RemoteCall
 >```
@@ -173,6 +173,106 @@
 > </details>
 </details>
 <details>
+<summary><b>Location</b></summary>
+
+> <details>
+> <summary><b>GetAllCacheData  - 获取全部IP归属地缓存（JSON字符串）</b></summary>
+>
+>## Location::GetAllCacheData
+>### 获取全部IP归属地缓存（JSON字符串）
+><table><tr><th>无参数;</th></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/** 获取全部IP归属地缓存（JSON字符串） 返回值类型：string */
+>const Location_GetAllCacheData = ll.import("PFLP", "Location::GetAllCacheData");
+>let result = Location_GetAllCacheData();
+>```
+> - C++
+>```cpp
+>// 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+>auto Location_GetAllCacheData = RemoteCall::importAs<std::string()>("PFLP", "Location::GetAllCacheData");
+>auto result = Location_GetAllCacheData();
+>```
+> - C#
+>```csharp
+>// 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+>var Location_GetAllCacheData = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData");
+>var result = Location_GetAllCacheData();
+>```
+> - Visual Basic .NET
+>```vb
+>' 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+>Dim Location_GetAllCacheData = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Location::GetAllCacheData")
+>Dim result = Location_GetAllCacheData()
+>```
+> - F#
+>```fsharp
+>// 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+>let Location_GetAllCacheData = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData")
+>Location_GetAllCacheData()
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>SetIpLocation  -  设置IP归属地缓存</b></summary>
+>
+>## Location::SetIpLocation
+>###  设置IP归属地缓存
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>ip</td><td>string</td></tr>
+><tr><td>country</td><td>string</td></tr>
+><tr><td>province</td><td>string</td></tr>
+><tr><td>city</td><td>string</td></tr>
+><tr><td>area</td><td>string</td></tr>
+><tr><td>isp</td><td>string</td></tr>
+><tr><td>language</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/**  设置IP归属地缓存 */
+>const Location_SetIpLocation = ll.import("PFLP", "Location::SetIpLocation");
+>Location_SetIpLocation(ip,country,province,city,area,isp,language);
+>```
+> - C++
+>```cpp
+>//  设置IP归属地缓存
+>auto Location_SetIpLocation = RemoteCall::importAs<void(std::string const& ip,std::string const& country,std::string const& province,std::string const& city,std::string const& area,std::string const& isp,std::string const& language)>("PFLP", "Location::SetIpLocation");
+>Location_SetIpLocation(ip,country,province,city,area,isp,language);
+>```
+> - C#
+>```csharp
+>//  设置IP归属地缓存
+>var Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation");
+>Location_SetIpLocation(ip,country,province,city,area,isp,language);
+>```
+> - Visual Basic .NET
+>```vb
+>'  设置IP归属地缓存
+>Dim Location_SetIpLocation = RemoteCallAPI.ImportAs(Of Action(Of String,String,String,String,String,String,String))("PFLP", "Location::SetIpLocation")
+>Location_SetIpLocation(ip,country,province,city,area,isp,language)
+>```
+> - F#
+>```fsharp
+>//  设置IP归属地缓存
+>let Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation")
+>(ip,country,province,city,area,isp,language)
+>	|>Location_SetIpLocation.Invoke
+>```
+>
+> </details>
+</details>
+<details>
 <summary><b>Tpa</b></summary>
 
 > <details>
@@ -216,6 +316,55 @@
 >let Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
 >playerXuid
 >	|>Tpa_GetTemp.Invoke
+>	|>ignore
+>```
+>
+> </details>
+</details>
+<details>
+<summary><b>Statistics</b></summary>
+
+> <details>
+> <summary><b>GetPlayerStatistics  - 获取指定玩家的统计数据（JSON字符串）</b></summary>
+>
+>## Statistics::GetPlayerStatistics
+>### 获取指定玩家的统计数据（JSON字符串）
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string */
+>const Statistics_GetPlayerStatistics = ll.import("PFLP", "Statistics::GetPlayerStatistics");
+>let result = Statistics_GetPlayerStatistics(playerXuid);
+>```
+> - C++
+>```cpp
+>// 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+>auto Statistics_GetPlayerStatistics = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Statistics::GetPlayerStatistics");
+>auto result = Statistics_GetPlayerStatistics(playerXuid);
+>```
+> - C#
+>```csharp
+>// 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+>var Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics");
+>var result = Statistics_GetPlayerStatistics(playerXuid);
+>```
+> - Visual Basic .NET
+>```vb
+>' 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+>Dim Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Statistics::GetPlayerStatistics")
+>Dim result = Statistics_GetPlayerStatistics(playerXuid)
+>```
+> - F#
+>```fsharp
+>// 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+>let Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics")
+>playerXuid
+>	|>Statistics_GetPlayerStatistics.Invoke
 >	|>ignore
 >```
 >
@@ -3509,8 +3658,14 @@
 >const General_GetConfig = ll.import("PFLP", "General::GetConfig");
 >/** 重新加载所有功能的配置文件 */
 >const General_Reload = ll.import("PFLP", "General::Reload");
+>/** 获取全部IP归属地缓存（JSON字符串） 返回值类型：string */
+>const Location_GetAllCacheData = ll.import("PFLP", "Location::GetAllCacheData");
+>/**  设置IP归属地缓存 */
+>const Location_SetIpLocation = ll.import("PFLP", "Location::SetIpLocation");
 >/** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string */
 >const Tpa_GetTemp = ll.import("PFLP", "Tpa::GetTemp");
+>/** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string */
+>const Statistics_GetPlayerStatistics = ll.import("PFLP", "Statistics::GetPlayerStatistics");
 >/** 获取变量 返回值类型：string */
 >const Format_GetVariableString = ll.import("PFLP", "Format::GetVariableString");
 >/** 获取变量，但是强制返回int类型 返回值类型：int */
@@ -3662,12 +3817,35 @@
 >		 */
 >		Reload() { (this.General_Reload??=ll.import("PFLP", "General::Reload"))()},
 >	},
+>	Location : {
+>		/** 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+>		 * @returns {string}
+>		 */
+>		GetAllCacheData() { return (this.Location_GetAllCacheData??=ll.import("PFLP", "Location::GetAllCacheData"))()},
+>		/**  设置IP归属地缓存
+>		 * @param {string} ip
+>		 * @param {string} country
+>		 * @param {string} province
+>		 * @param {string} city
+>		 * @param {string} area
+>		 * @param {string} isp
+>		 * @param {string} language
+>		 */
+>		SetIpLocation(ip,country,province,city,area,isp,language) { (this.Location_SetIpLocation??=ll.import("PFLP", "Location::SetIpLocation"))(ip,country,province,city,area,isp,language)},
+>	},
 >	Tpa : {
 >		/** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 >		 * @param {string} playerXuid
 >		 * @returns {string}
 >		 */
 >		GetTemp(playerXuid) { return (this.Tpa_GetTemp??=ll.import("PFLP", "Tpa::GetTemp"))(playerXuid)},
+>	},
+>	Statistics : {
+>		/** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+>		 * @param {string} playerXuid
+>		 * @returns {string}
+>		 */
+>		GetPlayerStatistics(playerXuid) { return (this.Statistics_GetPlayerStatistics??=ll.import("PFLP", "Statistics::GetPlayerStatistics"))(playerXuid)},
 >	},
 >	Format : {
 >		/** 获取变量 返回值类型：string
@@ -4203,8 +4381,14 @@ auto General_SetConfig = RemoteCall::importAs<bool(std::string const& jsonStr)>(
 auto General_GetConfig = RemoteCall::importAs<std::string()>("PFLP", "General::GetConfig");
 // 重新加载所有功能的配置文件
 auto General_Reload = RemoteCall::importAs<void()>("PFLP", "General::Reload");
+// 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+auto Location_GetAllCacheData = RemoteCall::importAs<std::string()>("PFLP", "Location::GetAllCacheData");
+//  设置IP归属地缓存
+auto Location_SetIpLocation = RemoteCall::importAs<void(std::string const& ip,std::string const& country,std::string const& province,std::string const& city,std::string const& area,std::string const& isp,std::string const& language)>("PFLP", "Location::SetIpLocation");
 // 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 auto Tpa_GetTemp = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Tpa::GetTemp");
+// 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+auto Statistics_GetPlayerStatistics = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Statistics::GetPlayerStatistics");
 // 获取变量 返回值类型：string
 auto Format_GetVariableString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& name,std::string const& format)>("PFLP", "Format::GetVariableString");
 // 获取变量，但是强制返回int类型 返回值类型：int
@@ -4352,8 +4536,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var General_GetConfig = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig");
 >// 重新加载所有功能的配置文件
 >var General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload");
+>// 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+>var Location_GetAllCacheData = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData");
+>//  设置IP归属地缓存
+>var Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation");
 >// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 >var Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp");
+>// 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+>var Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics");
 >// 获取变量 返回值类型：string
 >var Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString");
 >// 获取变量，但是强制返回int类型 返回值类型：int
@@ -4508,11 +4698,30 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >			General_Reload_instance.Value();
 >		}
 >	}
+>	public static class Location {
+>		private static Lazy<Func<string>>  Location_GetAllCacheData_instance = new(()=> RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData"));
+>		/// <summary> 获取全部IP归属地缓存（JSON字符串） 返回值类型：string </summary>
+>		public static string GetAllCacheData() {
+>			return Location_GetAllCacheData_instance.Value();
+>		}
+>		private static Lazy<Action<string,string,string,string,string,string,string>>  Location_SetIpLocation_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation"));
+>		/// <summary>  设置IP归属地缓存 </summary>
+>		public static void SetIpLocation(string ip,string country,string province,string city,string area,string isp,string language) {
+>			Location_SetIpLocation_instance.Value(ip,country,province,city,area,isp,language);
+>		}
+>	}
 >	public static class Tpa {
 >		private static Lazy<Func<string,string>>  Tpa_GetTemp_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp"));
 >		/// <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
 >		public static string GetTemp(string playerXuid) {
 >			return Tpa_GetTemp_instance.Value(playerXuid);
+>		}
+>	}
+>	public static class Statistics {
+>		private static Lazy<Func<string,string>>  Statistics_GetPlayerStatistics_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics"));
+>		/// <summary> 获取指定玩家的统计数据（JSON字符串） 返回值类型：string </summary>
+>		public static string GetPlayerStatistics(string playerXuid) {
+>			return Statistics_GetPlayerStatistics_instance.Value(playerXuid);
 >		}
 >	}
 >	public static class Format {
@@ -4869,7 +5078,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >---
 ><details><summary>VB imports / 直接导入</summary>
 >
->``` VB
+>``` vb
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >' 设置全局配置文件（要求JSON字符串） 返回值类型：bool
@@ -4878,8 +5087,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim General_GetConfig = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "General::GetConfig")
 >' 重新加载所有功能的配置文件
 >Dim General_Reload = RemoteCallAPI.ImportAs(Of Action)("PFLP", "General::Reload")
+>' 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+>Dim Location_GetAllCacheData = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Location::GetAllCacheData")
+>'  设置IP归属地缓存
+>Dim Location_SetIpLocation = RemoteCallAPI.ImportAs(Of Action(Of String,String,String,String,String,String,String))("PFLP", "Location::SetIpLocation")
 >' 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 >Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp")
+>' 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+>Dim Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Statistics::GetPlayerStatistics")
 >' 获取变量 返回值类型：string
 >Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString")
 >' 获取变量，但是强制返回int类型 返回值类型：int
@@ -5013,7 +5228,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 ></details>
 ><details><summary>VB Module / 模块类定义（推荐）</summary>
 >
->``` VB
+>``` vb
 >Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 >
 >Friend Module PFLP
@@ -5034,11 +5249,30 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >			General_Reload_instance.Value()
 >		End Sub
 >	End Class
+>	Public NotInheritable Class Location
+>		Private Shared Location_GetAllCacheData_instance As Lazy(Of Func(Of String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Location::GetAllCacheData"))
+>		''' <summary> 获取全部IP归属地缓存（JSON字符串） 返回值类型：string </summary>
+>		Public Shared Function GetAllCacheData() As string 
+>			Return Location_GetAllCacheData_instance.Value()
+>		End Function
+>		Private Shared Location_SetIpLocation_instance As Lazy(Of Action(Of String,String,String,String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String,String,String,String,String,String))("PFLP", "Location::SetIpLocation"))
+>		''' <summary>  设置IP归属地缓存 </summary>
+>		Public Shared Sub SetIpLocation(ip As String,country As String,province As String,city As String,area As String,isp As String,language As String)  
+>			Location_SetIpLocation_instance.Value(ip,country,province,city,area,isp,language)
+>		End Sub
+>	End Class
 >	Public NotInheritable Class Tpa
 >		Private Shared Tpa_GetTemp_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp"))
 >		''' <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
 >		Public Shared Function GetTemp(playerXuid As String) As string 
 >			Return Tpa_GetTemp_instance.Value(playerXuid)
+>		End Function
+>	End Class
+>	Public NotInheritable Class Statistics
+>		Private Shared Statistics_GetPlayerStatistics_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Statistics::GetPlayerStatistics"))
+>		''' <summary> 获取指定玩家的统计数据（JSON字符串） 返回值类型：string </summary>
+>		Public Shared Function GetPlayerStatistics(playerXuid As String) As string 
+>			Return Statistics_GetPlayerStatistics_instance.Value(playerXuid)
 >		End Function
 >	End Class
 >	Public NotInheritable Class Format
@@ -5395,7 +5629,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >---
 ><details><summary>F# imports / 直接导入</summary>
 >
->``` F#
+>``` fsharp
 >#r "LiteLoader.NET"
 >open LiteLoader.RemoteCall
 >
@@ -5405,8 +5639,14 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let General_GetConfig = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "General::GetConfig")
 >// 重新加载所有功能的配置文件
 >let General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload")
+>// 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+>let Location_GetAllCacheData = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData")
+>//  设置IP归属地缓存
+>let Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation")
 >// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 >let Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
+>// 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+>let Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics")
 >// 获取变量 返回值类型：string
 >let Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 >// 获取变量，但是强制返回int类型 返回值类型：int
@@ -5540,7 +5780,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 ></details>
 ><details><summary>F# module / F# 模块类（推荐）</summary>
 >
->``` F#
+>``` fsharp
 >#r "LiteLoader.NET"
 >open LiteLoader.RemoteCall
 >
@@ -5558,11 +5798,25 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 重新加载所有功能的配置文件 </summary>
 >    let public Reload():unit =
 >      General_Reload_instance.Value.Invoke()
+>  module public Location =
+>    let private Location_GetAllCacheData_instance = lazy RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData")
+>    /// <summary> 获取全部IP归属地缓存（JSON字符串） 返回值类型：string </summary>
+>    let public GetAllCacheData():string =
+>      Location_GetAllCacheData_instance.Value.Invoke()
+>    let private Location_SetIpLocation_instance = lazy RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation")
+>    /// <summary>  设置IP归属地缓存 </summary>
+>    let public SetIpLocation(ip:string)(country:string)(province:string)(city:string)(area:string)(isp:string)(language:string):unit =
+>      Location_SetIpLocation_instance.Value.Invoke(ip,country,province,city,area,isp,language)
 >  module public Tpa =
 >    let private Tpa_GetTemp_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
 >    /// <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
 >    let public GetTemp(playerXuid:string):string =
 >      Tpa_GetTemp_instance.Value.Invoke(playerXuid)
+>  module public Statistics =
+>    let private Statistics_GetPlayerStatistics_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics")
+>    /// <summary> 获取指定玩家的统计数据（JSON字符串） 返回值类型：string </summary>
+>    let public GetPlayerStatistics(playerXuid:string):string =
+>      Statistics_GetPlayerStatistics_instance.Value.Invoke(playerXuid)
 >  module public Format =
 >    let private Format_GetVariableString_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 >    /// <summary> 获取变量 返回值类型：string </summary>

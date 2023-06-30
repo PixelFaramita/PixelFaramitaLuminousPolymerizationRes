@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Uzaktan arama
 ServerTransfer.ModuleName=Çapraz Servis
 Shop.ModuleName=mağaza
 Sidebar.ModuleName=Kenar çubuğu
+Statistics.ModuleName=İstatistiksel değişken
 Tpa.ModuleName=İletim İsteği
 Tpr.ModuleName=Rastgele iletim
 UIExtensions.ModuleName=Kullanıcı arayüzü uzantıları

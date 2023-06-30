@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Externe oproep
 ServerTransfer.ModuleName=Kruis -service
 Shop.ModuleName=winkel
 Sidebar.ModuleName=Zijbalk
+Statistics.ModuleName=Statistische variabele
 Tpa.ModuleName=Levering aanvragen
 Tpr.ModuleName=Willekeurige transmissie
 UIExtensions.ModuleName=UI -uitbreiding

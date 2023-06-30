@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Etäpuhelu
 ServerTransfer.ModuleName=Nopea ristiinpalvelu
 Shop.ModuleName=myymälä
 Sidebar.ModuleName=Sivupalkki
+Statistics.ModuleName=Tilastollinen muuttuja
 Tpa.ModuleName=Pyyntösiirto
 Tpr.ModuleName=Satunnainen lähetys
 UIExtensions.ModuleName=UI -laajennus

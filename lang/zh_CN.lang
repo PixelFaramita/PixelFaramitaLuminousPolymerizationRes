@@ -51,6 +51,7 @@ RemoteCall.ModuleName=远程调用
 ServerTransfer.ModuleName=快速跨服
 Shop.ModuleName=商店
 Sidebar.ModuleName=侧边栏
+Statistics.ModuleName=统计变量
 Tpa.ModuleName=请求传送
 Tpr.ModuleName=随机传送
 UIExtensions.ModuleName=UI扩展

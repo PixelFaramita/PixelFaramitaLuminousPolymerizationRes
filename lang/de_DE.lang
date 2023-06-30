@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Fernanruf
 ServerTransfer.ModuleName=Cross -Service
 Shop.ModuleName=Geschäft
 Sidebar.ModuleName=Seitenleiste
+Statistics.ModuleName=Statistische Variable
 Tpa.ModuleName=Übertragung anfordern
 Tpr.ModuleName=Zufällige Übertragung
 UIExtensions.ModuleName=UI -Erweiterung

@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Fjärrsamtal
 ServerTransfer.ModuleName=Snabb korsservice
 Shop.ModuleName=affär
 Sidebar.ModuleName=Sidofält
+Statistics.ModuleName=Statistisk variabel
 Tpa.ModuleName=Begära överföring
 Tpr.ModuleName=Slumpmässig överföring
 UIExtensions.ModuleName=Ui-tillägg

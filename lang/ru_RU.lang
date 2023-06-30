@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Удаленный вызов
 ServerTransfer.ModuleName=Крест -Сервис
 Shop.ModuleName=магазин
 Sidebar.ModuleName=Боковая панель
+Statistics.ModuleName=Статистическая переменная
 Tpa.ModuleName=Запросить передачу
 Tpr.ModuleName=Случайная передача
 UIExtensions.ModuleName=Расширение пользовательского интерфейса

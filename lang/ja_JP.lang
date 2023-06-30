@@ -51,6 +51,7 @@ RemoteCall.ModuleName=リモートコール
 ServerTransfer.ModuleName=クロスサービス
 Shop.ModuleName=店
 Sidebar.ModuleName=サイドバー
+Statistics.ModuleName=統計変数
 Tpa.ModuleName=送信をリクエストします
 Tpr.ModuleName=ランダム送信
 UIExtensions.ModuleName=UI拡張機能

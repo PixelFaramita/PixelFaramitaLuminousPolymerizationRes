@@ -8,7 +8,7 @@ order: 1002
 ---
 <details><summary>VB imports / 直接导入</summary>
 
-``` VB
+``` vb
 Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 
 ' 设置全局配置文件（要求JSON字符串） 返回值类型：bool
@@ -17,8 +17,14 @@ Dim General_SetConfig = RemoteCallAPI.ImportAs(Of Func(Of String,Boolean))("PFLP
 Dim General_GetConfig = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "General::GetConfig")
 ' 重新加载所有功能的配置文件
 Dim General_Reload = RemoteCallAPI.ImportAs(Of Action)("PFLP", "General::Reload")
+' 获取全部IP归属地缓存（JSON字符串） 返回值类型：string
+Dim Location_GetAllCacheData = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Location::GetAllCacheData")
+'  设置IP归属地缓存
+Dim Location_SetIpLocation = RemoteCallAPI.ImportAs(Of Action(Of String,String,String,String,String,String,String))("PFLP", "Location::SetIpLocation")
 ' 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp")
+' 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
+Dim Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Statistics::GetPlayerStatistics")
 ' 获取变量 返回值类型：string
 Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString")
 ' 获取变量，但是强制返回int类型 返回值类型：int
@@ -152,7 +158,7 @@ Dim Money_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFL
 </details>
 <details><summary>VB Module / 模块类定义（推荐）</summary>
 
-``` VB
+``` vb
 Imports RemoteCallAPI = LiteLoader.RemoteCall.RemoteCallAPI;
 
 Friend Module PFLP
@@ -173,11 +179,30 @@ Friend Module PFLP
 			General_Reload_instance.Value()
 		End Sub
 	End Class
+	Public NotInheritable Class Location
+		Private Shared Location_GetAllCacheData_instance As Lazy(Of Func(Of String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Location::GetAllCacheData"))
+		''' <summary> 获取全部IP归属地缓存（JSON字符串） 返回值类型：string </summary>
+		Public Shared Function GetAllCacheData() As string 
+			Return Location_GetAllCacheData_instance.Value()
+		End Function
+		Private Shared Location_SetIpLocation_instance As Lazy(Of Action(Of String,String,String,String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String,String,String,String,String,String))("PFLP", "Location::SetIpLocation"))
+		''' <summary>  设置IP归属地缓存 </summary>
+		Public Shared Sub SetIpLocation(ip As String,country As String,province As String,city As String,area As String,isp As String,language As String)  
+			Location_SetIpLocation_instance.Value(ip,country,province,city,area,isp,language)
+		End Sub
+	End Class
 	Public NotInheritable Class Tpa
 		Private Shared Tpa_GetTemp_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp"))
 		''' <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
 		Public Shared Function GetTemp(playerXuid As String) As string 
 			Return Tpa_GetTemp_instance.Value(playerXuid)
+		End Function
+	End Class
+	Public NotInheritable Class Statistics
+		Private Shared Statistics_GetPlayerStatistics_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Statistics::GetPlayerStatistics"))
+		''' <summary> 获取指定玩家的统计数据（JSON字符串） 返回值类型：string </summary>
+		Public Shared Function GetPlayerStatistics(playerXuid As String) As string 
+			Return Statistics_GetPlayerStatistics_instance.Value(playerXuid)
 		End Function
 	End Class
 	Public NotInheritable Class Format

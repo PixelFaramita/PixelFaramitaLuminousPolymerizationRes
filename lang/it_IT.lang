@@ -51,6 +51,7 @@ RemoteCall.ModuleName=Chiamata remota
 ServerTransfer.ModuleName=Servizio incrociato rapido
 Shop.ModuleName=negozio
 Sidebar.ModuleName=Barra laterale
+Statistics.ModuleName=Variabile statistica
 Tpa.ModuleName=Richiedere trasmissione
 Tpr.ModuleName=Trasmissione casuale
 UIExtensions.ModuleName=Estensione dell'interfaccia utente
