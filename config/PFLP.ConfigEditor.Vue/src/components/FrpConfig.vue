@@ -51,28 +51,7 @@
             <n-switch
               size="large"
               v-model:value="toggleTemp[index]"
-              :on-change="
-                () => {
-                  const defaultC = `[common]
-server_addr = frp.example.com
-server_port = 7000
-
-[mc19132]
-type = udp
-local_ip = 127.0.0.1
-local_port = 19132
-remote_port = 11451
-`;
-                  const defaultP = '~\\frpc.ini';
-                  if (toggleTemp[index]) {
-                    if (frpc.FrpConfigs[index] == defaultP)
-                      frpc.FrpConfigs[index] = defaultC;
-                  } else {
-                    if (frpc.FrpConfigs[index] == defaultC)
-                      frpc.FrpConfigs[index] = defaultP;
-                  }
-                }
-              "
+              :on-change="onChange"
             >
               <template #checked>内容</template>
               <template #unchecked>路径</template>
@@ -99,6 +78,28 @@ remote_port = 11451
 import { useGlobalStore } from "../stores/global";
 const store = useGlobalStore();
 export default {
+  methods: {
+    onChange(index: number) {
+      const configDefault = `[common]
+server_addr = frp.example.com
+server_port = 7000
+
+[mc19132]
+type = udp
+local_ip = 127.0.0.1
+local_port = 19132
+remote_port = 11451
+`;
+      const pathDefault = "~\\frpc.ini";
+      if (this.toggleTemp[index]) {
+        if (this.frpc.FrpConfigs[index] == pathDefault)
+          this.frpc.FrpConfigs[index] = configDefault;
+      } else {
+        if (this.frpc.FrpConfigs[index] == configDefault)
+          this.frpc.FrpConfigs[index] = pathDefault;
+      }
+    },
+  },
   data() {
     return {
       frpc: store.config.FrpClient,
