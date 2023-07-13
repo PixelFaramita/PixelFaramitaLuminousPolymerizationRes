@@ -25,6 +25,8 @@ Dim Location_SetIpLocation = RemoteCallAPI.ImportAs(Of Action(Of String,String,S
 Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp")
 ' 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 Dim Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Statistics::GetPlayerStatistics")
+' 设定指定玩家的统计数据（JSON字符串）
+Dim Statistics_SetPlayerStatistics = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Statistics::SetPlayerStatistics")
 ' 获取变量 返回值类型：string
 Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString")
 ' 获取变量，但是强制返回int类型 返回值类型：int
@@ -204,6 +206,11 @@ Friend Module PFLP
 		Public Shared Function GetPlayerStatistics(playerXuid As String) As string 
 			Return Statistics_GetPlayerStatistics_instance.Value(playerXuid)
 		End Function
+		Private Shared Statistics_SetPlayerStatistics_instance As Lazy(Of Action(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Statistics::SetPlayerStatistics"))
+		''' <summary> 设定指定玩家的统计数据（JSON字符串） </summary>
+		Public Shared Sub SetPlayerStatistics(playerXuid As String,newData As String)  
+			Statistics_SetPlayerStatistics_instance.Value(playerXuid,newData)
+		End Sub
 	End Class
 	Public NotInheritable Class Format
 		Private Shared Format_GetVariableString_instance As Lazy(Of Func(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString"))

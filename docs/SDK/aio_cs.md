@@ -25,6 +25,8 @@ var Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,
 var Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp");
 // 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 var Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics");
+// 设定指定玩家的统计数据（JSON字符串）
+var Statistics_SetPlayerStatistics = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics");
 // 获取变量 返回值类型：string
 var Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString");
 // 获取变量，但是强制返回int类型 返回值类型：int
@@ -203,6 +205,11 @@ internal static class PFLP {
 		/// <summary> 获取指定玩家的统计数据（JSON字符串） 返回值类型：string </summary>
 		public static string GetPlayerStatistics(string playerXuid) {
 			return Statistics_GetPlayerStatistics_instance.Value(playerXuid);
+		}
+		private static Lazy<Action<string,string>>  Statistics_SetPlayerStatistics_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics"));
+		/// <summary> 设定指定玩家的统计数据（JSON字符串） </summary>
+		public static void SetPlayerStatistics(string playerXuid,string newData) {
+			Statistics_SetPlayerStatistics_instance.Value(playerXuid,newData);
 		}
 	}
 	public static class Format {

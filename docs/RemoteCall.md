@@ -369,6 +369,54 @@
 >```
 >
 > </details>
+>
+>---
+>
+> <details>
+> <summary><b>SetPlayerStatistics  - 设定指定玩家的统计数据（JSON字符串）</b></summary>
+>
+>## Statistics::SetPlayerStatistics
+>### 设定指定玩家的统计数据（JSON字符串）
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>playerXuid</td><td>string</td></tr>
+><tr><td>newData</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/** 设定指定玩家的统计数据（JSON字符串） */
+>const Statistics_SetPlayerStatistics = ll.import("PFLP", "Statistics::SetPlayerStatistics");
+>Statistics_SetPlayerStatistics(playerXuid,newData);
+>```
+> - C++
+>```cpp
+>// 设定指定玩家的统计数据（JSON字符串）
+>auto Statistics_SetPlayerStatistics = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& newData)>("PFLP", "Statistics::SetPlayerStatistics");
+>Statistics_SetPlayerStatistics(playerXuid,newData);
+>```
+> - C#
+>```csharp
+>// 设定指定玩家的统计数据（JSON字符串）
+>var Statistics_SetPlayerStatistics = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics");
+>Statistics_SetPlayerStatistics(playerXuid,newData);
+>```
+> - Visual Basic .NET
+>```vb
+>' 设定指定玩家的统计数据（JSON字符串）
+>Dim Statistics_SetPlayerStatistics = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Statistics::SetPlayerStatistics")
+>Statistics_SetPlayerStatistics(playerXuid,newData)
+>```
+> - F#
+>```fsharp
+>// 设定指定玩家的统计数据（JSON字符串）
+>let Statistics_SetPlayerStatistics = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics")
+>(playerXuid,newData)
+>	|>Statistics_SetPlayerStatistics.Invoke
+>```
+>
+> </details>
 </details>
 <details>
 <summary><b>Format</b></summary>
@@ -3666,6 +3714,8 @@
 >const Tpa_GetTemp = ll.import("PFLP", "Tpa::GetTemp");
 >/** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string */
 >const Statistics_GetPlayerStatistics = ll.import("PFLP", "Statistics::GetPlayerStatistics");
+>/** 设定指定玩家的统计数据（JSON字符串） */
+>const Statistics_SetPlayerStatistics = ll.import("PFLP", "Statistics::SetPlayerStatistics");
 >/** 获取变量 返回值类型：string */
 >const Format_GetVariableString = ll.import("PFLP", "Format::GetVariableString");
 >/** 获取变量，但是强制返回int类型 返回值类型：int */
@@ -3846,6 +3896,11 @@
 >		 * @returns {string}
 >		 */
 >		GetPlayerStatistics(playerXuid) { return (this.Statistics_GetPlayerStatistics??=ll.import("PFLP", "Statistics::GetPlayerStatistics"))(playerXuid)},
+>		/** 设定指定玩家的统计数据（JSON字符串）
+>		 * @param {string} playerXuid
+>		 * @param {string} newData
+>		 */
+>		SetPlayerStatistics(playerXuid,newData) { (this.Statistics_SetPlayerStatistics??=ll.import("PFLP", "Statistics::SetPlayerStatistics"))(playerXuid,newData)},
 >	},
 >	Format : {
 >		/** 获取变量 返回值类型：string
@@ -4389,6 +4444,8 @@ auto Location_SetIpLocation = RemoteCall::importAs<void(std::string const& ip,st
 auto Tpa_GetTemp = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Tpa::GetTemp");
 // 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 auto Statistics_GetPlayerStatistics = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Statistics::GetPlayerStatistics");
+// 设定指定玩家的统计数据（JSON字符串）
+auto Statistics_SetPlayerStatistics = RemoteCall::importAs<void(std::string const& playerXuid,std::string const& newData)>("PFLP", "Statistics::SetPlayerStatistics");
 // 获取变量 返回值类型：string
 auto Format_GetVariableString = RemoteCall::importAs<std::string(std::string const& playerXuid,std::string const& name,std::string const& format)>("PFLP", "Format::GetVariableString");
 // 获取变量，但是强制返回int类型 返回值类型：int
@@ -4544,6 +4601,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp");
 >// 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 >var Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics");
+>// 设定指定玩家的统计数据（JSON字符串）
+>var Statistics_SetPlayerStatistics = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics");
 >// 获取变量 返回值类型：string
 >var Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString");
 >// 获取变量，但是强制返回int类型 返回值类型：int
@@ -4722,6 +4781,11 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		/// <summary> 获取指定玩家的统计数据（JSON字符串） 返回值类型：string </summary>
 >		public static string GetPlayerStatistics(string playerXuid) {
 >			return Statistics_GetPlayerStatistics_instance.Value(playerXuid);
+>		}
+>		private static Lazy<Action<string,string>>  Statistics_SetPlayerStatistics_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics"));
+>		/// <summary> 设定指定玩家的统计数据（JSON字符串） </summary>
+>		public static void SetPlayerStatistics(string playerXuid,string newData) {
+>			Statistics_SetPlayerStatistics_instance.Value(playerXuid,newData);
 >		}
 >	}
 >	public static class Format {
@@ -5095,6 +5159,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp")
 >' 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 >Dim Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Statistics::GetPlayerStatistics")
+>' 设定指定玩家的统计数据（JSON字符串）
+>Dim Statistics_SetPlayerStatistics = RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Statistics::SetPlayerStatistics")
 >' 获取变量 返回值类型：string
 >Dim Format_GetVariableString = RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString")
 >' 获取变量，但是强制返回int类型 返回值类型：int
@@ -5274,6 +5340,11 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >		Public Shared Function GetPlayerStatistics(playerXuid As String) As string 
 >			Return Statistics_GetPlayerStatistics_instance.Value(playerXuid)
 >		End Function
+>		Private Shared Statistics_SetPlayerStatistics_instance As Lazy(Of Action(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,String))("PFLP", "Statistics::SetPlayerStatistics"))
+>		''' <summary> 设定指定玩家的统计数据（JSON字符串） </summary>
+>		Public Shared Sub SetPlayerStatistics(playerXuid As String,newData As String)  
+>			Statistics_SetPlayerStatistics_instance.Value(playerXuid,newData)
+>		End Sub
 >	End Class
 >	Public NotInheritable Class Format
 >		Private Shared Format_GetVariableString_instance As Lazy(Of Func(Of String,String,String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,String,String))("PFLP", "Format::GetVariableString"))
@@ -5647,6 +5718,8 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
 >// 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 >let Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics")
+>// 设定指定玩家的统计数据（JSON字符串）
+>let Statistics_SetPlayerStatistics = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics")
 >// 获取变量 返回值类型：string
 >let Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 >// 获取变量，但是强制返回int类型 返回值类型：int
@@ -5817,6 +5890,10 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 获取指定玩家的统计数据（JSON字符串） 返回值类型：string </summary>
 >    let public GetPlayerStatistics(playerXuid:string):string =
 >      Statistics_GetPlayerStatistics_instance.Value.Invoke(playerXuid)
+>    let private Statistics_SetPlayerStatistics_instance = lazy RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics")
+>    /// <summary> 设定指定玩家的统计数据（JSON字符串） </summary>
+>    let public SetPlayerStatistics(playerXuid:string)(newData:string):unit =
+>      Statistics_SetPlayerStatistics_instance.Value.Invoke(playerXuid,newData)
 >  module public Format =
 >    let private Format_GetVariableString_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 >    /// <summary> 获取变量 返回值类型：string </summary>

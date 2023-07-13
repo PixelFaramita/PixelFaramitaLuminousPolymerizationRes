@@ -26,6 +26,8 @@ let Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,
 let Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
 // 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 let Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics")
+// 设定指定玩家的统计数据（JSON字符串）
+let Statistics_SetPlayerStatistics = RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics")
 // 获取变量 返回值类型：string
 let Format_GetVariableString = RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
 // 获取变量，但是强制返回int类型 返回值类型：int
@@ -196,6 +198,10 @@ module public PFLP =
     /// <summary> 获取指定玩家的统计数据（JSON字符串） 返回值类型：string </summary>
     let public GetPlayerStatistics(playerXuid:string):string =
       Statistics_GetPlayerStatistics_instance.Value.Invoke(playerXuid)
+    let private Statistics_SetPlayerStatistics_instance = lazy RemoteCallAPI.ImportAs<Action<string,string>>("PFLP", "Statistics::SetPlayerStatistics")
+    /// <summary> 设定指定玩家的统计数据（JSON字符串） </summary>
+    let public SetPlayerStatistics(playerXuid:string)(newData:string):unit =
+      Statistics_SetPlayerStatistics_instance.Value.Invoke(playerXuid,newData)
   module public Format =
     let private Format_GetVariableString_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,string,string>>("PFLP", "Format::GetVariableString")
     /// <summary> 获取变量 返回值类型：string </summary>
