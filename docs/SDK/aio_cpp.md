@@ -15,10 +15,14 @@ auto General_Reload = RemoteCall::importAs<void()>("PFLP", "General::Reload");
 auto Location_GetAllCacheData = RemoteCall::importAs<std::string()>("PFLP", "Location::GetAllCacheData");
 //  设置IP归属地缓存
 auto Location_SetIpLocation = RemoteCall::importAs<void(std::string const& ip,std::string const& country,std::string const& province,std::string const& city,std::string const& area,std::string const& isp,std::string const& language)>("PFLP", "Location::SetIpLocation");
-// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
-auto Tpa_GetTemp = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Tpa::GetTemp");
 // 延迟传送 返回值类型：int
 auto Teleport_StartNew = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Teleport::StartNew");
+// 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
+auto Teleport_GetTpaState = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Teleport::GetTpaState");
+// 获取指定玩家的Home（JSON字符串） 返回值类型：string
+auto Teleport_GetHome = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Teleport::GetHome");
+// 获取服务器的全部传送点（JSON字符串） 返回值类型：string
+auto Teleport_GetWarp = RemoteCall::importAs<std::string()>("PFLP", "Teleport::GetWarp");
 // 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 auto Statistics_GetPlayerStatistics = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Statistics::GetPlayerStatistics");
 // 设定指定玩家的统计数据（JSON字符串）

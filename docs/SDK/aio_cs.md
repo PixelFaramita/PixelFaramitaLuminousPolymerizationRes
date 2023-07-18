@@ -21,10 +21,14 @@ var General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload");
 var Location_GetAllCacheData = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData");
 //  设置IP归属地缓存
 var Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation");
-// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
-var Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp");
 // 延迟传送 返回值类型：int
 var Teleport_StartNew = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew");
+// 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
+var Teleport_GetTpaState = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetTpaState");
+// 获取指定玩家的Home（JSON字符串） 返回值类型：string
+var Teleport_GetHome = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetHome");
+// 获取服务器的全部传送点（JSON字符串） 返回值类型：string
+var Teleport_GetWarp = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Teleport::GetWarp");
 // 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 var Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics");
 // 设定指定玩家的统计数据（JSON字符串）
@@ -195,18 +199,26 @@ internal static class PFLP {
 			Location_SetIpLocation_instance.Value(ip,country,province,city,area,isp,language);
 		}
 	}
-	public static class Tpa {
-		private static Lazy<Func<string,string>>  Tpa_GetTemp_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp"));
-		/// <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
-		public static string GetTemp(string playerXuid) {
-			return Tpa_GetTemp_instance.Value(playerXuid);
-		}
-	}
 	public static class Teleport {
 		private static Lazy<Func<string,float,float,float,int,int>>  Teleport_StartNew_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew"));
 		/// <summary> 延迟传送 返回值类型：int </summary>
 		public static int StartNew(string playerXuid,float x,float y,float z,int dimensionId) {
 			return Teleport_StartNew_instance.Value(playerXuid,x,y,z,dimensionId);
+		}
+		private static Lazy<Func<string,string>>  Teleport_GetTpaState_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetTpaState"));
+		/// <summary> 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string </summary>
+		public static string GetTpaState(string playerXuid) {
+			return Teleport_GetTpaState_instance.Value(playerXuid);
+		}
+		private static Lazy<Func<string,string>>  Teleport_GetHome_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetHome"));
+		/// <summary> 获取指定玩家的Home（JSON字符串） 返回值类型：string </summary>
+		public static string GetHome(string playerXuid) {
+			return Teleport_GetHome_instance.Value(playerXuid);
+		}
+		private static Lazy<Func<string>>  Teleport_GetWarp_instance = new(()=> RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Teleport::GetWarp"));
+		/// <summary> 获取服务器的全部传送点（JSON字符串） 返回值类型：string </summary>
+		public static string GetWarp() {
+			return Teleport_GetWarp_instance.Value();
 		}
 	}
 	public static class Statistics {

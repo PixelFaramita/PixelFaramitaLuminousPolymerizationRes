@@ -22,10 +22,14 @@ let General_Reload = RemoteCallAPI.ImportAs<Action>("PFLP", "General::Reload")
 let Location_GetAllCacheData = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData")
 //  设置IP归属地缓存
 let Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation")
-// 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
-let Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
 // 延迟传送 返回值类型：int
 let Teleport_StartNew = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew")
+// 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
+let Teleport_GetTpaState = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetTpaState")
+// 获取指定玩家的Home（JSON字符串） 返回值类型：string
+let Teleport_GetHome = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetHome")
+// 获取服务器的全部传送点（JSON字符串） 返回值类型：string
+let Teleport_GetWarp = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Teleport::GetWarp")
 // 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 let Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics")
 // 设定指定玩家的统计数据（JSON字符串）
@@ -190,16 +194,23 @@ module public PFLP =
     /// <summary>  设置IP归属地缓存 </summary>
     let public SetIpLocation(ip:string)(country:string)(province:string)(city:string)(area:string)(isp:string)(language:string):unit =
       Location_SetIpLocation_instance.Value.Invoke(ip,country,province,city,area,isp,language)
-  module public Tpa =
-    let private Tpa_GetTemp_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp")
-    /// <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
-    let public GetTemp(playerXuid:string):string =
-      Tpa_GetTemp_instance.Value.Invoke(playerXuid)
   module public Teleport =
     let private Teleport_StartNew_instance = lazy RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew")
     /// <summary> 延迟传送 返回值类型：int </summary>
     let public StartNew(playerXuid:string)(x:float)(y:float)(z:float)(dimensionId:int):int =
       Teleport_StartNew_instance.Value.Invoke(playerXuid,x,y,z,dimensionId)
+    let private Teleport_GetTpaState_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetTpaState")
+    /// <summary> 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string </summary>
+    let public GetTpaState(playerXuid:string):string =
+      Teleport_GetTpaState_instance.Value.Invoke(playerXuid)
+    let private Teleport_GetHome_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetHome")
+    /// <summary> 获取指定玩家的Home（JSON字符串） 返回值类型：string </summary>
+    let public GetHome(playerXuid:string):string =
+      Teleport_GetHome_instance.Value.Invoke(playerXuid)
+    let private Teleport_GetWarp_instance = lazy RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Teleport::GetWarp")
+    /// <summary> 获取服务器的全部传送点（JSON字符串） 返回值类型：string </summary>
+    let public GetWarp():string =
+      Teleport_GetWarp_instance.Value.Invoke()
   module public Statistics =
     let private Statistics_GetPlayerStatistics_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics")
     /// <summary> 获取指定玩家的统计数据（JSON字符串） 返回值类型：string </summary>

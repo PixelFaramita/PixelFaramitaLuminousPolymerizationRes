@@ -21,10 +21,14 @@ Dim General_Reload = RemoteCallAPI.ImportAs(Of Action)("PFLP", "General::Reload"
 Dim Location_GetAllCacheData = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Location::GetAllCacheData")
 '  设置IP归属地缓存
 Dim Location_SetIpLocation = RemoteCallAPI.ImportAs(Of Action(Of String,String,String,String,String,String,String))("PFLP", "Location::SetIpLocation")
-' 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
-Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp")
 ' 延迟传送 返回值类型：int
 Dim Teleport_StartNew = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,Integer))("PFLP", "Teleport::StartNew")
+' 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
+Dim Teleport_GetTpaState = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Teleport::GetTpaState")
+' 获取指定玩家的Home（JSON字符串） 返回值类型：string
+Dim Teleport_GetHome = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Teleport::GetHome")
+' 获取服务器的全部传送点（JSON字符串） 返回值类型：string
+Dim Teleport_GetWarp = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Teleport::GetWarp")
 ' 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 Dim Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Statistics::GetPlayerStatistics")
 ' 设定指定玩家的统计数据（JSON字符串）
@@ -195,18 +199,26 @@ Friend Module PFLP
 			Location_SetIpLocation_instance.Value(ip,country,province,city,area,isp,language)
 		End Sub
 	End Class
-	Public NotInheritable Class Tpa
-		Private Shared Tpa_GetTemp_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp"))
-		''' <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
-		Public Shared Function GetTemp(playerXuid As String) As string 
-			Return Tpa_GetTemp_instance.Value(playerXuid)
-		End Function
-	End Class
 	Public NotInheritable Class Teleport
 		Private Shared Teleport_StartNew_instance As Lazy(Of Func(Of String,Single,Single,Single,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,Integer))("PFLP", "Teleport::StartNew"))
 		''' <summary> 延迟传送 返回值类型：int </summary>
 		Public Shared Function StartNew(playerXuid As String,x As Single,y As Single,z As Single,dimensionId As Integer) As int 
 			Return Teleport_StartNew_instance.Value(playerXuid,x,y,z,dimensionId)
+		End Function
+		Private Shared Teleport_GetTpaState_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Teleport::GetTpaState"))
+		''' <summary> 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string </summary>
+		Public Shared Function GetTpaState(playerXuid As String) As string 
+			Return Teleport_GetTpaState_instance.Value(playerXuid)
+		End Function
+		Private Shared Teleport_GetHome_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Teleport::GetHome"))
+		''' <summary> 获取指定玩家的Home（JSON字符串） 返回值类型：string </summary>
+		Public Shared Function GetHome(playerXuid As String) As string 
+			Return Teleport_GetHome_instance.Value(playerXuid)
+		End Function
+		Private Shared Teleport_GetWarp_instance As Lazy(Of Func(Of String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Teleport::GetWarp"))
+		''' <summary> 获取服务器的全部传送点（JSON字符串） 返回值类型：string </summary>
+		Public Shared Function GetWarp() As string 
+			Return Teleport_GetWarp_instance.Value()
 		End Function
 	End Class
 	Public NotInheritable Class Statistics

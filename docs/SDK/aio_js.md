@@ -19,10 +19,14 @@ const General_Reload = ll.import("PFLP", "General::Reload");
 const Location_GetAllCacheData = ll.import("PFLP", "Location::GetAllCacheData");
 /**  设置IP归属地缓存 */
 const Location_SetIpLocation = ll.import("PFLP", "Location::SetIpLocation");
-/** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string */
-const Tpa_GetTemp = ll.import("PFLP", "Tpa::GetTemp");
 /** 延迟传送 返回值类型：int */
 const Teleport_StartNew = ll.import("PFLP", "Teleport::StartNew");
+/** 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string */
+const Teleport_GetTpaState = ll.import("PFLP", "Teleport::GetTpaState");
+/** 获取指定玩家的Home（JSON字符串） 返回值类型：string */
+const Teleport_GetHome = ll.import("PFLP", "Teleport::GetHome");
+/** 获取服务器的全部传送点（JSON字符串） 返回值类型：string */
+const Teleport_GetWarp = ll.import("PFLP", "Teleport::GetWarp");
 /** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string */
 const Statistics_GetPlayerStatistics = ll.import("PFLP", "Statistics::GetPlayerStatistics");
 /** 设定指定玩家的统计数据（JSON字符串） */
@@ -194,13 +198,6 @@ const PFLP = {
 		 */
 		SetIpLocation(ip,country,province,city,area,isp,language) { (this.Location_SetIpLocation??=ll.import("PFLP", "Location::SetIpLocation"))(ip,country,province,city,area,isp,language)},
 	},
-	Tpa : {
-		/** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
-		 * @param {string} playerXuid
-		 * @returns {string}
-		 */
-		GetTemp(playerXuid) { return (this.Tpa_GetTemp??=ll.import("PFLP", "Tpa::GetTemp"))(playerXuid)},
-	},
 	Teleport : {
 		/** 延迟传送 返回值类型：int
 		 * @param {string} playerXuid
@@ -211,6 +208,20 @@ const PFLP = {
 		 * @returns {number}
 		 */
 		StartNew(playerXuid,x,y,z,dimensionId) { return (this.Teleport_StartNew??=ll.import("PFLP", "Teleport::StartNew"))(playerXuid,x,y,z,dimensionId)},
+		/** 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
+		 * @param {string} playerXuid
+		 * @returns {string}
+		 */
+		GetTpaState(playerXuid) { return (this.Teleport_GetTpaState??=ll.import("PFLP", "Teleport::GetTpaState"))(playerXuid)},
+		/** 获取指定玩家的Home（JSON字符串） 返回值类型：string
+		 * @param {string} playerXuid
+		 * @returns {string}
+		 */
+		GetHome(playerXuid) { return (this.Teleport_GetHome??=ll.import("PFLP", "Teleport::GetHome"))(playerXuid)},
+		/** 获取服务器的全部传送点（JSON字符串） 返回值类型：string
+		 * @returns {string}
+		 */
+		GetWarp() { return (this.Teleport_GetWarp??=ll.import("PFLP", "Teleport::GetWarp"))()},
 	},
 	Statistics : {
 		/** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
