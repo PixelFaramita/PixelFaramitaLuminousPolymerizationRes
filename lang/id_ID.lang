@@ -1945,3 +1945,5 @@ WebViewConfig.Command.Main=Konfigurasi plug -in
 WebViewConfig.Command.MainInvoke=Buka jendela konfigurasi plug -in
 WebViewConfig.Command.Open=Buka alamatnya
 WorldLimit.OutOfBorder=--- perbatasan dunia---
+Home.Command.ChangeHomePosXA=X
+Home.Command.ChangeHomePosXT=Koordinat x:

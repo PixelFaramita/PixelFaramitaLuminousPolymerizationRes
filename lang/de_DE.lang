@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Stecker -In -Konfiguration
 WebViewConfig.Command.MainInvoke=Öffnen Sie das Konfigurationsfenster der Stecker -In -Konfiguration
 WebViewConfig.Command.Open=Öffnen Sie die Adresse
 WorldLimit.OutOfBorder=--- den Grenzen der Welt---
+Home.Command.ChangeHomePosXA=X

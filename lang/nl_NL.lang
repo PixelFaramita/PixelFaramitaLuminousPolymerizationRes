@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Plug -in configuratie
 WebViewConfig.Command.MainInvoke=Open het stekker -in -configuratievenster
 WebViewConfig.Command.Open=Open het adres
 WorldLimit.OutOfBorder=--- de grenzen van de wereld---
+Home.Command.ChangeHomePosXA=X

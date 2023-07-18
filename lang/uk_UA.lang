@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Підклета -in -конфігурація
 WebViewConfig.Command.MainInvoke=Відкрийте вікно конфігурації PLAGIN
 WebViewConfig.Command.Open=Відкрийте адресу
 WorldLimit.OutOfBorder=--- кордонів світу---
+Home.Command.ChangeHomePosXA=X

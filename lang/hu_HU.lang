@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Plug -in konfiguráció
 WebViewConfig.Command.MainInvoke=Nyissa meg a dugó -in konfigurációs ablakot
 WebViewConfig.Command.Open=Nyissa meg a címet
 WorldLimit.OutOfBorder=--- a világ határait---
+Home.Command.ChangeHomePosXA=x

@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=插件配置
 WebViewConfig.Command.MainInvoke=打開插件配置窗口
 WebViewConfig.Command.Open=打開地址
 WorldLimit.OutOfBorder=---世界邊界---
+Home.Command.ChangeHomePosXA=X

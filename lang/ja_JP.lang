@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=プラグイン構成
 WebViewConfig.Command.MainInvoke=プラグイン構成ウィンドウを開きます
 WebViewConfig.Command.Open=アドレスを開きます
 WorldLimit.OutOfBorder=世界の国境を------
+Home.Command.ChangeHomePosXA=バツ

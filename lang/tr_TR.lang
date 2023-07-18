@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Plug -in yapılandırması
 WebViewConfig.Command.MainInvoke=Fiş -in yapılandırma penceresini açın
 WebViewConfig.Command.Open=Adresi aç
 WorldLimit.OutOfBorder=Dünyanın sınırlarını ------
+Home.Command.ChangeHomePosXA=X

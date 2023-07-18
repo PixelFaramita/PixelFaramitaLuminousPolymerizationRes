@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Konfiguracja wtyka
 WebViewConfig.Command.MainInvoke=Otwórz okno konfiguracji wtyczki
 WebViewConfig.Command.Open=Otwórz adres
 WorldLimit.OutOfBorder=--- granice świata---
+Home.Command.ChangeHomePosXA=X

@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Plug -in -konfigurasjon
 WebViewConfig.Command.MainInvoke=Åpne pluggen -i konfigurasjonsvinduet
 WebViewConfig.Command.Open=Åpne adressen
 WorldLimit.OutOfBorder=--- verdens grenser---
+Home.Command.ChangeHomePosXA=X

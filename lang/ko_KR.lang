@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=플러그 인 구성
 WebViewConfig.Command.MainInvoke=플러그 -인 구성 창을 엽니 다
 WebViewConfig.Command.Open=주소를 엽니 다
 WorldLimit.OutOfBorder=세계 경계를 ------
+Home.Command.ChangeHomePosXA=엑스

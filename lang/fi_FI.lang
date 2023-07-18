@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Plug -kokoonpano
 WebViewConfig.Command.MainInvoke=Avaa plug -in -kokoonpanoikkuna
 WebViewConfig.Command.Open=Avaa osoite
 WorldLimit.OutOfBorder=--- maailman rajoja---
+Home.Command.ChangeHomePosXA=X

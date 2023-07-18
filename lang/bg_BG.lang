@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Включване -in конфигурация
 WebViewConfig.Command.MainInvoke=Отворете прозореца за конфигуриране на включване
 WebViewConfig.Command.Open=Отворете адреса
 WorldLimit.OutOfBorder=--- границите на света---
+Home.Command.ChangeHomePosXA=х

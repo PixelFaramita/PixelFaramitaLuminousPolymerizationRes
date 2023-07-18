@@ -1945,3 +1945,4 @@ WebViewConfig.Command.Main=Konfigurácia plug -in
 WebViewConfig.Command.MainInvoke=Otvorte konfiguračné okno Plug -in
 WebViewConfig.Command.Open=Otvoriť adresu
 WorldLimit.OutOfBorder=--- hranice sveta---
+Home.Command.ChangeHomePosXA=X

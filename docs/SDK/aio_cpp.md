@@ -18,7 +18,7 @@ auto Location_SetIpLocation = RemoteCall::importAs<void(std::string const& ip,st
 // 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 auto Tpa_GetTemp = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Tpa::GetTemp");
 // 延迟传送 返回值类型：int
-auto Tp_StartTeleport = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,int const& dimension)>("PFLP", "Tp::StartTeleport");
+auto Teleport_StartNew = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Teleport::StartNew");
 // 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 auto Statistics_GetPlayerStatistics = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Statistics::GetPlayerStatistics");
 // 设定指定玩家的统计数据（JSON字符串）

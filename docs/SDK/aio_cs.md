@@ -24,7 +24,7 @@ var Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,
 // 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 var Tpa_GetTemp = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Tpa::GetTemp");
 // 延迟传送 返回值类型：int
-var Tp_StartTeleport = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Tp::StartTeleport");
+var Teleport_StartNew = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew");
 // 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 var Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Statistics::GetPlayerStatistics");
 // 设定指定玩家的统计数据（JSON字符串）
@@ -202,11 +202,11 @@ internal static class PFLP {
 			return Tpa_GetTemp_instance.Value(playerXuid);
 		}
 	}
-	public static class Tp {
-		private static Lazy<Func<string,float,float,float,int,int>>  Tp_StartTeleport_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Tp::StartTeleport"));
+	public static class Teleport {
+		private static Lazy<Func<string,float,float,float,int,int>>  Teleport_StartNew_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew"));
 		/// <summary> 延迟传送 返回值类型：int </summary>
-		public static int StartTeleport(string playerXuid,float x,float y,float z,int dimension) {
-			return Tp_StartTeleport_instance.Value(playerXuid,x,y,z,dimension);
+		public static int StartNew(string playerXuid,float x,float y,float z,int dimensionId) {
+			return Teleport_StartNew_instance.Value(playerXuid,x,y,z,dimensionId);
 		}
 	}
 	public static class Statistics {
