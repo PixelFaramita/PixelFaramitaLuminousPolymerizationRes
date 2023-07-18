@@ -276,10 +276,10 @@
 <summary><b>Teleport</b></summary>
 
 > <details>
-> <summary><b>StartNew  - 延迟传送</b></summary>
+> <summary><b>StartNew  - 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送</b></summary>
 >
 >## Teleport::StartNew
->### 延迟传送
+>### 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送
 ><table><tr><th>形参</th><th>类型</th></tr>
 ><tr><td>playerXuid</td><td>string</td></tr>
 ><tr><td>x</td><td>float</td></tr>
@@ -292,31 +292,31 @@
 
 > - JavaScript
 >```js
->/** 延迟传送 返回值类型：int */
+>/** 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int */
 >const Teleport_StartNew = ll.import("PFLP", "Teleport::StartNew");
 >let result = Teleport_StartNew(playerXuid,x,y,z,dimensionId);
 >```
 > - C++
 >```cpp
->// 延迟传送 返回值类型：int
+>// 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 >auto Teleport_StartNew = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Teleport::StartNew");
 >auto result = Teleport_StartNew(playerXuid,x,y,z,dimensionId);
 >```
 > - C#
 >```csharp
->// 延迟传送 返回值类型：int
+>// 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 >var Teleport_StartNew = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew");
 >var result = Teleport_StartNew(playerXuid,x,y,z,dimensionId);
 >```
 > - Visual Basic .NET
 >```vb
->' 延迟传送 返回值类型：int
+>' 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 >Dim Teleport_StartNew = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,Integer))("PFLP", "Teleport::StartNew")
 >Dim result = Teleport_StartNew(playerXuid,x,y,z,dimensionId)
 >```
 > - F#
 >```fsharp
->// 延迟传送 返回值类型：int
+>// 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 >let Teleport_StartNew = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew")
 >(playerXuid,x,y,z,dimensionId)
 >	|>Teleport_StartNew.Invoke
@@ -3856,7 +3856,7 @@
 >const Location_GetAllCacheData = ll.import("PFLP", "Location::GetAllCacheData");
 >/**  设置IP归属地缓存 */
 >const Location_SetIpLocation = ll.import("PFLP", "Location::SetIpLocation");
->/** 延迟传送 返回值类型：int */
+>/** 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int */
 >const Teleport_StartNew = ll.import("PFLP", "Teleport::StartNew");
 >/** 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string */
 >const Teleport_GetTpaState = ll.import("PFLP", "Teleport::GetTpaState");
@@ -4036,7 +4036,7 @@
 >		SetIpLocation(ip,country,province,city,area,isp,language) { (this.Location_SetIpLocation??=ll.import("PFLP", "Location::SetIpLocation"))(ip,country,province,city,area,isp,language)},
 >	},
 >	Teleport : {
->		/** 延迟传送 返回值类型：int
+>		/** 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 >		 * @param {string} playerXuid
 >		 * @param {number} x
 >		 * @param {number} y
@@ -4610,7 +4610,7 @@ auto General_Reload = RemoteCall::importAs<void()>("PFLP", "General::Reload");
 auto Location_GetAllCacheData = RemoteCall::importAs<std::string()>("PFLP", "Location::GetAllCacheData");
 //  设置IP归属地缓存
 auto Location_SetIpLocation = RemoteCall::importAs<void(std::string const& ip,std::string const& country,std::string const& province,std::string const& city,std::string const& area,std::string const& isp,std::string const& language)>("PFLP", "Location::SetIpLocation");
-// 延迟传送 返回值类型：int
+// 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 auto Teleport_StartNew = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,int const& dimensionId)>("PFLP", "Teleport::StartNew");
 // 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
 auto Teleport_GetTpaState = RemoteCall::importAs<std::string(std::string const& playerXuid)>("PFLP", "Teleport::GetTpaState");
@@ -4773,7 +4773,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Location_GetAllCacheData = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData");
 >//  设置IP归属地缓存
 >var Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation");
->// 延迟传送 返回值类型：int
+>// 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 >var Teleport_StartNew = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew");
 >// 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
 >var Teleport_GetTpaState = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetTpaState");
@@ -4953,7 +4953,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >	}
 >	public static class Teleport {
 >		private static Lazy<Func<string,float,float,float,int,int>>  Teleport_StartNew_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew"));
->		/// <summary> 延迟传送 返回值类型：int </summary>
+>		/// <summary> 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int </summary>
 >		public static int StartNew(string playerXuid,float x,float y,float z,int dimensionId) {
 >			return Teleport_StartNew_instance.Value(playerXuid,x,y,z,dimensionId);
 >		}
@@ -5352,7 +5352,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Location_GetAllCacheData = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Location::GetAllCacheData")
 >'  设置IP归属地缓存
 >Dim Location_SetIpLocation = RemoteCallAPI.ImportAs(Of Action(Of String,String,String,String,String,String,String))("PFLP", "Location::SetIpLocation")
->' 延迟传送 返回值类型：int
+>' 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 >Dim Teleport_StartNew = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,Integer))("PFLP", "Teleport::StartNew")
 >' 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
 >Dim Teleport_GetTpaState = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Teleport::GetTpaState")
@@ -5532,7 +5532,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >	End Class
 >	Public NotInheritable Class Teleport
 >		Private Shared Teleport_StartNew_instance As Lazy(Of Func(Of String,Single,Single,Single,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,Integer))("PFLP", "Teleport::StartNew"))
->		''' <summary> 延迟传送 返回值类型：int </summary>
+>		''' <summary> 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int </summary>
 >		Public Shared Function StartNew(playerXuid As String,x As Single,y As Single,z As Single,dimensionId As Integer) As int 
 >			Return Teleport_StartNew_instance.Value(playerXuid,x,y,z,dimensionId)
 >		End Function
@@ -5932,7 +5932,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Location_GetAllCacheData = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "Location::GetAllCacheData")
 >//  设置IP归属地缓存
 >let Location_SetIpLocation = RemoteCallAPI.ImportAs<Action<string,string,string,string,string,string,string>>("PFLP", "Location::SetIpLocation")
->// 延迟传送 返回值类型：int
+>// 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 >let Teleport_StartNew = RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew")
 >// 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
 >let Teleport_GetTpaState = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetTpaState")
@@ -6106,7 +6106,7 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >      Location_SetIpLocation_instance.Value.Invoke(ip,country,province,city,area,isp,language)
 >  module public Teleport =
 >    let private Teleport_StartNew_instance = lazy RemoteCallAPI.ImportAs<Func<string,float,float,float,int,int>>("PFLP", "Teleport::StartNew")
->    /// <summary> 延迟传送 返回值类型：int </summary>
+>    /// <summary> 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int </summary>
 >    let public StartNew(playerXuid:string)(x:float)(y:float)(z:float)(dimensionId:int):int =
 >      Teleport_StartNew_instance.Value.Invoke(playerXuid,x,y,z,dimensionId)
 >    let private Teleport_GetTpaState_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "Teleport::GetTpaState")

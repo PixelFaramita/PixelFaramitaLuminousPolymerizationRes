@@ -19,7 +19,7 @@ const General_Reload = ll.import("PFLP", "General::Reload");
 const Location_GetAllCacheData = ll.import("PFLP", "Location::GetAllCacheData");
 /**  设置IP归属地缓存 */
 const Location_SetIpLocation = ll.import("PFLP", "Location::SetIpLocation");
-/** 延迟传送 返回值类型：int */
+/** 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int */
 const Teleport_StartNew = ll.import("PFLP", "Teleport::StartNew");
 /** 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string */
 const Teleport_GetTpaState = ll.import("PFLP", "Teleport::GetTpaState");
@@ -199,7 +199,7 @@ const PFLP = {
 		SetIpLocation(ip,country,province,city,area,isp,language) { (this.Location_SetIpLocation??=ll.import("PFLP", "Location::SetIpLocation"))(ip,country,province,city,area,isp,language)},
 	},
 	Teleport : {
-		/** 延迟传送 返回值类型：int
+		/** 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 		 * @param {string} playerXuid
 		 * @param {number} x
 		 * @param {number} y

@@ -21,7 +21,7 @@ Dim General_Reload = RemoteCallAPI.ImportAs(Of Action)("PFLP", "General::Reload"
 Dim Location_GetAllCacheData = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "Location::GetAllCacheData")
 '  设置IP归属地缓存
 Dim Location_SetIpLocation = RemoteCallAPI.ImportAs(Of Action(Of String,String,String,String,String,String,String))("PFLP", "Location::SetIpLocation")
-' 延迟传送 返回值类型：int
+' 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int
 Dim Teleport_StartNew = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,Integer))("PFLP", "Teleport::StartNew")
 ' 获取指定玩家的Tpa状态（JSON字符串） 返回值类型：string
 Dim Teleport_GetTpaState = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Teleport::GetTpaState")
@@ -201,7 +201,7 @@ Friend Module PFLP
 	End Class
 	Public NotInheritable Class Teleport
 		Private Shared Teleport_StartNew_instance As Lazy(Of Func(Of String,Single,Single,Single,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,Integer))("PFLP", "Teleport::StartNew"))
-		''' <summary> 延迟传送 返回值类型：int </summary>
+		''' <summary> 开始可取消的延迟传送，可使用`$pf.listen($pf.EventKey.teleportCanceled,...)`监听取消传送 返回值类型：int </summary>
 		Public Shared Function StartNew(playerXuid As String,x As Single,y As Single,z As Single,dimensionId As Integer) As int 
 			Return Teleport_StartNew_instance.Value(playerXuid,x,y,z,dimensionId)
 		End Function
