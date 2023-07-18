@@ -23,6 +23,8 @@ Dim Location_GetAllCacheData = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP"
 Dim Location_SetIpLocation = RemoteCallAPI.ImportAs(Of Action(Of String,String,String,String,String,String,String))("PFLP", "Location::SetIpLocation")
 ' 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string
 Dim Tpa_GetTemp = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Tpa::GetTemp")
+' 延迟传送 返回值类型：int
+Dim Tp_StartTeleport = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,Integer))("PFLP", "Tp::StartTeleport")
 ' 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
 Dim Statistics_GetPlayerStatistics = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "Statistics::GetPlayerStatistics")
 ' 设定指定玩家的统计数据（JSON字符串）
@@ -198,6 +200,13 @@ Friend Module PFLP
 		''' <summary> 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string </summary>
 		Public Shared Function GetTemp(playerXuid As String) As string 
 			Return Tpa_GetTemp_instance.Value(playerXuid)
+		End Function
+	End Class
+	Public NotInheritable Class Tp
+		Private Shared Tp_StartTeleport_instance As Lazy(Of Func(Of String,Single,Single,Single,Integer,Integer))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,Integer,Integer))("PFLP", "Tp::StartTeleport"))
+		''' <summary> 延迟传送 返回值类型：int </summary>
+		Public Shared Function StartTeleport(playerXuid As String,x As Single,y As Single,z As Single,dimension As Integer) As int 
+			Return Tp_StartTeleport_instance.Value(playerXuid,x,y,z,dimension)
 		End Function
 	End Class
 	Public NotInheritable Class Statistics

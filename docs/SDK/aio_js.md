@@ -21,6 +21,8 @@ const Location_GetAllCacheData = ll.import("PFLP", "Location::GetAllCacheData");
 const Location_SetIpLocation = ll.import("PFLP", "Location::SetIpLocation");
 /** 获取指定玩家的Tpa缓存（JSON字符串） 返回值类型：string */
 const Tpa_GetTemp = ll.import("PFLP", "Tpa::GetTemp");
+/** 延迟传送 返回值类型：int */
+const Tp_StartTeleport = ll.import("PFLP", "Tp::StartTeleport");
 /** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string */
 const Statistics_GetPlayerStatistics = ll.import("PFLP", "Statistics::GetPlayerStatistics");
 /** 设定指定玩家的统计数据（JSON字符串） */
@@ -198,6 +200,17 @@ const PFLP = {
 		 * @returns {string}
 		 */
 		GetTemp(playerXuid) { return (this.Tpa_GetTemp??=ll.import("PFLP", "Tpa::GetTemp"))(playerXuid)},
+	},
+	Tp : {
+		/** 延迟传送 返回值类型：int
+		 * @param {string} playerXuid
+		 * @param {number} x
+		 * @param {number} y
+		 * @param {number} z
+		 * @param {number} dimension
+		 * @returns {number}
+		 */
+		StartTeleport(playerXuid,x,y,z,dimension) { return (this.Tp_StartTeleport??=ll.import("PFLP", "Tp::StartTeleport"))(playerXuid,x,y,z,dimension)},
 	},
 	Statistics : {
 		/** 获取指定玩家的统计数据（JSON字符串） 返回值类型：string
