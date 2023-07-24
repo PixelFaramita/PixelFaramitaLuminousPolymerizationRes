@@ -60,7 +60,7 @@ export default {
 };
 </script>
 <template>
-  <div class="main">
+  <div class="mainView">
     <nav v-if="isHome">
       <RouterLink to="/">配置工具</RouterLink>
       <RouterLink to="/document">接口文档</RouterLink>
@@ -96,4 +96,9 @@ nav a.router-link-exact-active {
 nav a {
   padding: 0 1rem;
 }
+
+.mainView {
+  margin: auto;
+}
+
 </style>

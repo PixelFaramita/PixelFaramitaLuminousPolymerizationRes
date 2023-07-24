@@ -79,7 +79,7 @@ export default {
       从这里开始
     </n-h3>
     <n-space vertical>
-      <n-steps :current="(current as number)" :status="currentStatus">
+      <n-steps :style="{'margin':'auto'}" :current="(current as number)" :status="currentStatus">
         <n-step title="导入配置" description="选择一个方式导入文件">
           <template #icon>
             <ImportOutlined />
