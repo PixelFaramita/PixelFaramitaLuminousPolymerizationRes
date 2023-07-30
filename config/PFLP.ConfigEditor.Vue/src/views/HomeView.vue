@@ -25,7 +25,7 @@ export default {
       this.currentStatus = 'process'
       if (currentRef.value === null) currentRef.value = 1
       else {
-        if (currentRef.value == 2) {
+        if (currentRef.value == 1) {
           if (this.fileData.length == 0) {
             this.message.error('请先导入配置文件')
             this.currentStatus = 'error'
