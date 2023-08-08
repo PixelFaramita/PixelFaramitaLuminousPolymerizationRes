@@ -21,6 +21,7 @@ Firewall.ModuleName=Firewall
 FloatText.ModuleName=Schwimmendes Wort
 FormAPI.ModuleName=Form UI
 FormatApi.ModuleName=Zeichenformatschnittstelle
+FreshProtect.ModuleName=Newcomer -Schutz
 FriendlyDisconnect.ModuleName=Entspannen Sie die Optimierung der Verbindungsumforderungsoptimierung
 FrpClient.ModuleName=Internet-Penetration
 GiftCode.ModuleName=Geschenkcode-System

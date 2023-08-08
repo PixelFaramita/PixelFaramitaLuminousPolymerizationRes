@@ -21,6 +21,7 @@ Firewall.ModuleName=防火墙
 FloatText.ModuleName=浮空字
 FormAPI.ModuleName=表单UI
 FormatApi.ModuleName=字符格式化接口
+FreshProtect.ModuleName=新人保护
 FriendlyDisconnect.ModuleName=断开连接提示优化
 FrpClient.ModuleName=内网穿透
 GiftCode.ModuleName=礼包码系统

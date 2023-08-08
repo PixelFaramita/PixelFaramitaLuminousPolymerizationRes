@@ -21,6 +21,7 @@ Firewall.ModuleName=ファイアウォール
 FloatText.ModuleName=フローティングワード
 FormAPI.ModuleName=FORM UI
 FormatApi.ModuleName=文字形式のインターフェイス
+FreshProtect.ModuleName=新人保護
 FriendlyDisconnect.ModuleName=Discove接続プロンプトの最適化
 FrpClient.ModuleName=インターネットの浸透
 GiftCode.ModuleName=ギフトパックコードシステム

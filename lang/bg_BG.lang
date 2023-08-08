@@ -21,6 +21,7 @@ Firewall.ModuleName=Защитна стена
 FloatText.ModuleName=Плаваща дума
 FormAPI.ModuleName=Форма UI
 FormatApi.ModuleName=Интерфейс на формата на символи
+FreshProtect.ModuleName=Защита на новодошлите
 FriendlyDisconnect.ModuleName=Прекъсване на връзката с бърза оптимизация
 FrpClient.ModuleName=Проникване в интернет
 GiftCode.ModuleName=Система за подаръчни кодове

@@ -21,6 +21,7 @@ Firewall.ModuleName=방화벽
 FloatText.ModuleName=떠 다니는 단어
 FormAPI.ModuleName=양식 UI
 FormatApi.ModuleName=문자 형식 인터페이스
+FreshProtect.ModuleName=신규 이민자 보호
 FriendlyDisconnect.ModuleName=연결 프롬프트 최적화를 원조하십시오
 FrpClient.ModuleName=인터넷 침투
 GiftCode.ModuleName=선물 팩 코드 시스템

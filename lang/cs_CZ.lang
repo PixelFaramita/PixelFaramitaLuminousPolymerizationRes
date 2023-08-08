@@ -21,6 +21,7 @@ Firewall.ModuleName=Firewall
 FloatText.ModuleName=Plovoucí slovo
 FormAPI.ModuleName=Forma UI
 FormatApi.ModuleName=Rozhraní formátu znaků
+FreshProtect.ModuleName=Ochrana nováčků
 FriendlyDisconnect.ModuleName=Zveřejněte optimalizaci výkazy připojení
 FrpClient.ModuleName=Pronikání internetu
 GiftCode.ModuleName=Systém dárkového kódu

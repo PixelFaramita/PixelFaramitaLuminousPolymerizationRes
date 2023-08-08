@@ -21,6 +21,7 @@ Firewall.ModuleName=Cortafuegos
 FloatText.ModuleName=Palabra flotante
 FormAPI.ModuleName=Interfaz de usuario del formulario
 FormatApi.ModuleName=Interfaz de formato de personaje
+FreshProtect.ModuleName=Protección del recién llegado
 FriendlyDisconnect.ModuleName=Optimización del indicador de conexión de la conexión
 FrpClient.ModuleName=la penetración de Internet
 GiftCode.ModuleName=Sistema de códigos de regalo

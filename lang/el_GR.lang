@@ -21,6 +21,7 @@ Firewall.ModuleName=Τείχος προστασίας
 FloatText.ModuleName=Πλωτή λέξη
 FormAPI.ModuleName=Μορφή ui
 FormatApi.ModuleName=Διασύνδεση μορφής χαρακτήρα
+FreshProtect.ModuleName=Προστασία νεοφερμένης
 FriendlyDisconnect.ModuleName=Discove Σύνδεση
 FrpClient.ModuleName=Διείσδυση στο Διαδίκτυο
 GiftCode.ModuleName=Σύστημα κωδικών δώρων

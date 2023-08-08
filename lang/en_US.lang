@@ -21,6 +21,7 @@ Firewall.ModuleName=Firewall
 FloatText.ModuleName=Floating word
 FormAPI.ModuleName=Form UI
 FormatApi.ModuleName=Character format interface
+FreshProtect.ModuleName=Newcomer protection
 FriendlyDisconnect.ModuleName=Discove connection prompt optimization
 FrpClient.ModuleName=Internet penetration
 GiftCode.ModuleName=Gift Pack Code System

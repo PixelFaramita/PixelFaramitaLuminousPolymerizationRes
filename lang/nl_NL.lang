@@ -21,6 +21,7 @@ Firewall.ModuleName=Firewall
 FloatText.ModuleName=Drijvend woord
 FormAPI.ModuleName=Vorm UI
 FormatApi.ModuleName=Karakterformat interface
+FreshProtect.ModuleName=Nieuwkomersbescherming
 FriendlyDisconnect.ModuleName=Bewaar de verbindingspromptoptimalisatie
 FrpClient.ModuleName=Internetpenetratie
 GiftCode.ModuleName=Cadeaupakketcodesysteem

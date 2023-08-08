@@ -21,6 +21,7 @@ Firewall.ModuleName=Brannmur
 FloatText.ModuleName=Flytende ord
 FormAPI.ModuleName=Skjema brukergrensesnitt
 FormatApi.ModuleName=Karakterformatgrensesnitt
+FreshProtect.ModuleName=Nykommerbeskyttelse
 FriendlyDisconnect.ModuleName=Disse Connection Prompt Optimization
 FrpClient.ModuleName=Internett -penetrasjon
 GiftCode.ModuleName=Gave kode system

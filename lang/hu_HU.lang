@@ -21,6 +21,7 @@ Firewall.ModuleName=Tűzfal
 FloatText.ModuleName=Úszó szó
 FormAPI.ModuleName=Feladat felhasználói felületet
 FormatApi.ModuleName=Karakter formátumú interfész
+FreshProtect.ModuleName=Újonc védelem
 FriendlyDisconnect.ModuleName=A kapcsolatfelvételi gyors optimalizálás
 FrpClient.ModuleName=Internetes behatolás
 GiftCode.ModuleName=Ajándékkód rendszer

@@ -21,6 +21,7 @@ Firewall.ModuleName=Брандмауэр
 FloatText.ModuleName=Плавающее слово
 FormAPI.ModuleName=Пользовательский интерфейс формы
 FormatApi.ModuleName=Интерфейс формата символов
+FreshProtect.ModuleName=Защита новичков
 FriendlyDisconnect.ModuleName=Оптимизация приглашения отключения
 FrpClient.ModuleName=Проникновение в Интернет
 GiftCode.ModuleName=Система подарочных кодов
