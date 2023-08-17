@@ -155,5 +155,15 @@ auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>(
 auto Money_Add = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Add");
 // 给玩家(指定玩家名)减钱
 auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Remove");
+// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+auto GiftCode_GetAllPackName = RemoteCall::importAs<std::string()>("PFLP", "GiftCode::GetAllPackName");
+// 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+auto GiftCode_GetAvailableCode = RemoteCall::importAs<std::string(std::string const& packName)>("PFLP", "GiftCode::GetAvailableCode");
+// 给指定礼包增加兑换码 返回值类型：bool
+auto GiftCode_AddCode = RemoteCall::importAs<bool(std::string const& packName,std::string const& code)>("PFLP", "GiftCode::AddCode");
+// 删除指定礼包的指定兑换码 返回值类型：bool
+auto GiftCode_RemoveCode = RemoteCall::importAs<bool(std::string const& packName,std::string const& code)>("PFLP", "GiftCode::RemoveCode");
+// 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+auto GiftCode_ClearCode = RemoteCall::importAs<void(std::string const& packName)>("PFLP", "GiftCode::ClearCode");
 
 ```

@@ -159,6 +159,16 @@ const Money_Get = ll.import("PFLP", "Money::Get");
 const Money_Add = ll.import("PFLP", "Money::Add");
 /** 给玩家(指定玩家名)减钱 */
 const Money_Remove = ll.import("PFLP", "Money::Remove");
+/** 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string */
+const GiftCode_GetAllPackName = ll.import("PFLP", "GiftCode::GetAllPackName");
+/** 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string */
+const GiftCode_GetAvailableCode = ll.import("PFLP", "GiftCode::GetAvailableCode");
+/** 给指定礼包增加兑换码 返回值类型：bool */
+const GiftCode_AddCode = ll.import("PFLP", "GiftCode::AddCode");
+/** 删除指定礼包的指定兑换码 返回值类型：bool */
+const GiftCode_RemoveCode = ll.import("PFLP", "GiftCode::RemoveCode");
+/** 删除指定礼包的所有可用的兑换码（返回json字符串数组） */
+const GiftCode_ClearCode = ll.import("PFLP", "GiftCode::ClearCode");
 /** 作弊反馈（LLAntiCheat用） 返回值类型：bool */
 const Internal_CheatPunish = ll.import("PFLP", "Internal::CheatPunish");
 
@@ -739,6 +749,33 @@ const PFLP = {
 		 * @param {string} info
 		 */
 		Remove(playerXuid,count,info) { (this.Money_Remove??=ll.import("PFLP", "Money::Remove"))(playerXuid,count,info)},
+	},
+	GiftCode : {
+		/** 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+		 * @returns {string}
+		 */
+		GetAllPackName() { return (this.GiftCode_GetAllPackName??=ll.import("PFLP", "GiftCode::GetAllPackName"))()},
+		/** 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+		 * @param {string} packName
+		 * @returns {string}
+		 */
+		GetAvailableCode(packName) { return (this.GiftCode_GetAvailableCode??=ll.import("PFLP", "GiftCode::GetAvailableCode"))(packName)},
+		/** 给指定礼包增加兑换码 返回值类型：bool
+		 * @param {string} packName
+		 * @param {string} code
+		 * @returns {boolean}
+		 */
+		AddCode(packName,code) { return (this.GiftCode_AddCode??=ll.import("PFLP", "GiftCode::AddCode"))(packName,code)},
+		/** 删除指定礼包的指定兑换码 返回值类型：bool
+		 * @param {string} packName
+		 * @param {string} code
+		 * @returns {boolean}
+		 */
+		RemoveCode(packName,code) { return (this.GiftCode_RemoveCode??=ll.import("PFLP", "GiftCode::RemoveCode"))(packName,code)},
+		/** 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+		 * @param {string} packName
+		 */
+		ClearCode(packName) { (this.GiftCode_ClearCode??=ll.import("PFLP", "GiftCode::ClearCode"))(packName)},
 	},
 	Internal : {
 		/** 作弊反馈（LLAntiCheat用） 返回值类型：bool

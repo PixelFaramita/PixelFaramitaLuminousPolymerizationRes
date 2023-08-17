@@ -161,6 +161,16 @@ Dim Money_Get = RemoteCallAPI.ImportAs(Of Func(Of String,Long))("PFLP", "Money::
 Dim Money_Add = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add")
 ' 给玩家(指定玩家名)减钱
 Dim Money_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove")
+' 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+Dim GiftCode_GetAllPackName = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "GiftCode::GetAllPackName")
+' 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+Dim GiftCode_GetAvailableCode = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "GiftCode::GetAvailableCode")
+' 给指定礼包增加兑换码 返回值类型：bool
+Dim GiftCode_AddCode = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::AddCode")
+' 删除指定礼包的指定兑换码 返回值类型：bool
+Dim GiftCode_RemoveCode = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::RemoveCode")
+' 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+Dim GiftCode_ClearCode = RemoteCallAPI.ImportAs(Of Action(Of String))("PFLP", "GiftCode::ClearCode")
 
 ```
 </details>
@@ -567,6 +577,33 @@ Friend Module PFLP
 		''' <summary> 给玩家(指定玩家名)减钱 </summary>
 		Public Shared Sub Remove(playerXuid As String,count As Long,info As String)  
 			Money_Remove_instance.Value(playerXuid,count,info)
+		End Sub
+	End Class
+	Public NotInheritable Class GiftCode
+		Private Shared GiftCode_GetAllPackName_instance As Lazy(Of Func(Of String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "GiftCode::GetAllPackName"))
+		''' <summary> 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string </summary>
+		Public Shared Function GetAllPackName() As string 
+			Return GiftCode_GetAllPackName_instance.Value()
+		End Function
+		Private Shared GiftCode_GetAvailableCode_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "GiftCode::GetAvailableCode"))
+		''' <summary> 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string </summary>
+		Public Shared Function GetAvailableCode(packName As String) As string 
+			Return GiftCode_GetAvailableCode_instance.Value(packName)
+		End Function
+		Private Shared GiftCode_AddCode_instance As Lazy(Of Func(Of String,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::AddCode"))
+		''' <summary> 给指定礼包增加兑换码 返回值类型：bool </summary>
+		Public Shared Function AddCode(packName As String,code As String) As bool 
+			Return GiftCode_AddCode_instance.Value(packName,code)
+		End Function
+		Private Shared GiftCode_RemoveCode_instance As Lazy(Of Func(Of String,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::RemoveCode"))
+		''' <summary> 删除指定礼包的指定兑换码 返回值类型：bool </summary>
+		Public Shared Function RemoveCode(packName As String,code As String) As bool 
+			Return GiftCode_RemoveCode_instance.Value(packName,code)
+		End Function
+		Private Shared GiftCode_ClearCode_instance As Lazy(Of Action(Of String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String))("PFLP", "GiftCode::ClearCode"))
+		''' <summary> 删除指定礼包的所有可用的兑换码（返回json字符串数组） </summary>
+		Public Shared Sub ClearCode(packName As String)  
+			GiftCode_ClearCode_instance.Value(packName)
 		End Sub
 	End Class
 	Public NotInheritable Class Internal

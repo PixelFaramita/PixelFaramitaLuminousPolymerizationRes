@@ -161,6 +161,16 @@ var Money_Get = RemoteCallAPI.ImportAs<Func<string,long>>("PFLP", "Money::Get");
 var Money_Add = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add");
 // 给玩家(指定玩家名)减钱
 var Money_Remove = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove");
+// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+var GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName");
+// 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+var GiftCode_GetAvailableCode = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode");
+// 给指定礼包增加兑换码 返回值类型：bool
+var GiftCode_AddCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode");
+// 删除指定礼包的指定兑换码 返回值类型：bool
+var GiftCode_RemoveCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode");
+// 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+var GiftCode_ClearCode = RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode");
 
 ```
 </details>
@@ -567,6 +577,33 @@ internal static class PFLP {
 		/// <summary> 给玩家(指定玩家名)减钱 </summary>
 		public static void Remove(string playerXuid,long count,string info) {
 			Money_Remove_instance.Value(playerXuid,count,info);
+		}
+	}
+	public static class GiftCode {
+		private static Lazy<Func<string>>  GiftCode_GetAllPackName_instance = new(()=> RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName"));
+		/// <summary> 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string </summary>
+		public static string GetAllPackName() {
+			return GiftCode_GetAllPackName_instance.Value();
+		}
+		private static Lazy<Func<string,string>>  GiftCode_GetAvailableCode_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode"));
+		/// <summary> 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string </summary>
+		public static string GetAvailableCode(string packName) {
+			return GiftCode_GetAvailableCode_instance.Value(packName);
+		}
+		private static Lazy<Func<string,string,bool>>  GiftCode_AddCode_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode"));
+		/// <summary> 给指定礼包增加兑换码 返回值类型：bool </summary>
+		public static bool AddCode(string packName,string code) {
+			return GiftCode_AddCode_instance.Value(packName,code);
+		}
+		private static Lazy<Func<string,string,bool>>  GiftCode_RemoveCode_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode"));
+		/// <summary> 删除指定礼包的指定兑换码 返回值类型：bool </summary>
+		public static bool RemoveCode(string packName,string code) {
+			return GiftCode_RemoveCode_instance.Value(packName,code);
+		}
+		private static Lazy<Action<string>>  GiftCode_ClearCode_instance = new(()=> RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode"));
+		/// <summary> 删除指定礼包的所有可用的兑换码（返回json字符串数组） </summary>
+		public static void ClearCode(string packName) {
+			GiftCode_ClearCode_instance.Value(packName);
 		}
 	}
 	public static class Internal {

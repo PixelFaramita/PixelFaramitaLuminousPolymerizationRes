@@ -3814,6 +3814,246 @@
 > </details>
 </details>
 <details>
+<summary><b>GiftCode</b></summary>
+
+> <details>
+> <summary><b>GetAllPackName  - 获取所有礼包的礼包名（返回json字符串数组）</b></summary>
+>
+>## GiftCode::GetAllPackName
+>### 获取所有礼包的礼包名（返回json字符串数组）
+><table><tr><th>无参数;</th></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/** 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string */
+>const GiftCode_GetAllPackName = ll.import("PFLP", "GiftCode::GetAllPackName");
+>let result = GiftCode_GetAllPackName();
+>```
+> - C++
+>```cpp
+>// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+>auto GiftCode_GetAllPackName = RemoteCall::importAs<std::string()>("PFLP", "GiftCode::GetAllPackName");
+>auto result = GiftCode_GetAllPackName();
+>```
+> - C#
+>```csharp
+>// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+>var GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName");
+>var result = GiftCode_GetAllPackName();
+>```
+> - Visual Basic .NET
+>```vb
+>' 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+>Dim GiftCode_GetAllPackName = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "GiftCode::GetAllPackName")
+>Dim result = GiftCode_GetAllPackName()
+>```
+> - F#
+>```fsharp
+>// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+>let GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName")
+>GiftCode_GetAllPackName()
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>GetAvailableCode  - 获取指定礼包的所有可用的兑换码（返回json字符串数组）</b></summary>
+>
+>## GiftCode::GetAvailableCode
+>### 获取指定礼包的所有可用的兑换码（返回json字符串数组）
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>packName</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：string;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/** 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string */
+>const GiftCode_GetAvailableCode = ll.import("PFLP", "GiftCode::GetAvailableCode");
+>let result = GiftCode_GetAvailableCode(packName);
+>```
+> - C++
+>```cpp
+>// 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+>auto GiftCode_GetAvailableCode = RemoteCall::importAs<std::string(std::string const& packName)>("PFLP", "GiftCode::GetAvailableCode");
+>auto result = GiftCode_GetAvailableCode(packName);
+>```
+> - C#
+>```csharp
+>// 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+>var GiftCode_GetAvailableCode = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode");
+>var result = GiftCode_GetAvailableCode(packName);
+>```
+> - Visual Basic .NET
+>```vb
+>' 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+>Dim GiftCode_GetAvailableCode = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "GiftCode::GetAvailableCode")
+>Dim result = GiftCode_GetAvailableCode(packName)
+>```
+> - F#
+>```fsharp
+>// 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+>let GiftCode_GetAvailableCode = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode")
+>packName
+>	|>GiftCode_GetAvailableCode.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>AddCode  - 给指定礼包增加兑换码</b></summary>
+>
+>## GiftCode::AddCode
+>### 给指定礼包增加兑换码
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>packName</td><td>string</td></tr>
+><tr><td>code</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/** 给指定礼包增加兑换码 返回值类型：bool */
+>const GiftCode_AddCode = ll.import("PFLP", "GiftCode::AddCode");
+>let result = GiftCode_AddCode(packName,code);
+>```
+> - C++
+>```cpp
+>// 给指定礼包增加兑换码 返回值类型：bool
+>auto GiftCode_AddCode = RemoteCall::importAs<bool(std::string const& packName,std::string const& code)>("PFLP", "GiftCode::AddCode");
+>auto result = GiftCode_AddCode(packName,code);
+>```
+> - C#
+>```csharp
+>// 给指定礼包增加兑换码 返回值类型：bool
+>var GiftCode_AddCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode");
+>var result = GiftCode_AddCode(packName,code);
+>```
+> - Visual Basic .NET
+>```vb
+>' 给指定礼包增加兑换码 返回值类型：bool
+>Dim GiftCode_AddCode = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::AddCode")
+>Dim result = GiftCode_AddCode(packName,code)
+>```
+> - F#
+>```fsharp
+>// 给指定礼包增加兑换码 返回值类型：bool
+>let GiftCode_AddCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode")
+>(packName,code)
+>	|>GiftCode_AddCode.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>RemoveCode  - 删除指定礼包的指定兑换码</b></summary>
+>
+>## GiftCode::RemoveCode
+>### 删除指定礼包的指定兑换码
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>packName</td><td>string</td></tr>
+><tr><td>code</td><td>string</td></tr>
+><tr><td colspan="2">返回值类型：bool;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/** 删除指定礼包的指定兑换码 返回值类型：bool */
+>const GiftCode_RemoveCode = ll.import("PFLP", "GiftCode::RemoveCode");
+>let result = GiftCode_RemoveCode(packName,code);
+>```
+> - C++
+>```cpp
+>// 删除指定礼包的指定兑换码 返回值类型：bool
+>auto GiftCode_RemoveCode = RemoteCall::importAs<bool(std::string const& packName,std::string const& code)>("PFLP", "GiftCode::RemoveCode");
+>auto result = GiftCode_RemoveCode(packName,code);
+>```
+> - C#
+>```csharp
+>// 删除指定礼包的指定兑换码 返回值类型：bool
+>var GiftCode_RemoveCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode");
+>var result = GiftCode_RemoveCode(packName,code);
+>```
+> - Visual Basic .NET
+>```vb
+>' 删除指定礼包的指定兑换码 返回值类型：bool
+>Dim GiftCode_RemoveCode = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::RemoveCode")
+>Dim result = GiftCode_RemoveCode(packName,code)
+>```
+> - F#
+>```fsharp
+>// 删除指定礼包的指定兑换码 返回值类型：bool
+>let GiftCode_RemoveCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode")
+>(packName,code)
+>	|>GiftCode_RemoveCode.Invoke
+>	|>ignore
+>```
+>
+> </details>
+>
+>---
+>
+> <details>
+> <summary><b>ClearCode  - 删除指定礼包的所有可用的兑换码（返回json字符串数组）</b></summary>
+>
+>## GiftCode::ClearCode
+>### 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+><table><tr><th>形参</th><th>类型</th></tr>
+><tr><td>packName</td><td>string</td></tr>
+><tr><td colspan="2">无返回值;</td></tr></table>
+
+
+
+> - JavaScript
+>```js
+>/** 删除指定礼包的所有可用的兑换码（返回json字符串数组） */
+>const GiftCode_ClearCode = ll.import("PFLP", "GiftCode::ClearCode");
+>GiftCode_ClearCode(packName);
+>```
+> - C++
+>```cpp
+>// 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+>auto GiftCode_ClearCode = RemoteCall::importAs<void(std::string const& packName)>("PFLP", "GiftCode::ClearCode");
+>GiftCode_ClearCode(packName);
+>```
+> - C#
+>```csharp
+>// 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+>var GiftCode_ClearCode = RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode");
+>GiftCode_ClearCode(packName);
+>```
+> - Visual Basic .NET
+>```vb
+>' 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+>Dim GiftCode_ClearCode = RemoteCallAPI.ImportAs(Of Action(Of String))("PFLP", "GiftCode::ClearCode")
+>GiftCode_ClearCode(packName)
+>```
+> - F#
+>```fsharp
+>// 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+>let GiftCode_ClearCode = RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode")
+>packName
+>	|>GiftCode_ClearCode.Invoke
+>```
+>
+> </details>
+</details>
+<details>
 <summary><b>Internal</b></summary>
 
 > <details>
@@ -3996,6 +4236,16 @@
 >const Money_Add = ll.import("PFLP", "Money::Add");
 >/** 给玩家(指定玩家名)减钱 */
 >const Money_Remove = ll.import("PFLP", "Money::Remove");
+>/** 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string */
+>const GiftCode_GetAllPackName = ll.import("PFLP", "GiftCode::GetAllPackName");
+>/** 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string */
+>const GiftCode_GetAvailableCode = ll.import("PFLP", "GiftCode::GetAvailableCode");
+>/** 给指定礼包增加兑换码 返回值类型：bool */
+>const GiftCode_AddCode = ll.import("PFLP", "GiftCode::AddCode");
+>/** 删除指定礼包的指定兑换码 返回值类型：bool */
+>const GiftCode_RemoveCode = ll.import("PFLP", "GiftCode::RemoveCode");
+>/** 删除指定礼包的所有可用的兑换码（返回json字符串数组） */
+>const GiftCode_ClearCode = ll.import("PFLP", "GiftCode::ClearCode");
 >/** 作弊反馈（LLAntiCheat用） 返回值类型：bool */
 >const Internal_CheatPunish = ll.import("PFLP", "Internal::CheatPunish");
 >
@@ -4577,6 +4827,33 @@
 >		 */
 >		Remove(playerXuid,count,info) { (this.Money_Remove??=ll.import("PFLP", "Money::Remove"))(playerXuid,count,info)},
 >	},
+>	GiftCode : {
+>		/** 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+>		 * @returns {string}
+>		 */
+>		GetAllPackName() { return (this.GiftCode_GetAllPackName??=ll.import("PFLP", "GiftCode::GetAllPackName"))()},
+>		/** 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+>		 * @param {string} packName
+>		 * @returns {string}
+>		 */
+>		GetAvailableCode(packName) { return (this.GiftCode_GetAvailableCode??=ll.import("PFLP", "GiftCode::GetAvailableCode"))(packName)},
+>		/** 给指定礼包增加兑换码 返回值类型：bool
+>		 * @param {string} packName
+>		 * @param {string} code
+>		 * @returns {boolean}
+>		 */
+>		AddCode(packName,code) { return (this.GiftCode_AddCode??=ll.import("PFLP", "GiftCode::AddCode"))(packName,code)},
+>		/** 删除指定礼包的指定兑换码 返回值类型：bool
+>		 * @param {string} packName
+>		 * @param {string} code
+>		 * @returns {boolean}
+>		 */
+>		RemoveCode(packName,code) { return (this.GiftCode_RemoveCode??=ll.import("PFLP", "GiftCode::RemoveCode"))(packName,code)},
+>		/** 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+>		 * @param {string} packName
+>		 */
+>		ClearCode(packName) { (this.GiftCode_ClearCode??=ll.import("PFLP", "GiftCode::ClearCode"))(packName)},
+>	},
 >	Internal : {
 >		/** 作弊反馈（LLAntiCheat用） 返回值类型：bool
 >		 * @param {number} PunishLevel
@@ -4750,6 +5027,16 @@ auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>(
 auto Money_Add = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Add");
 // 给玩家(指定玩家名)减钱
 auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Remove");
+// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+auto GiftCode_GetAllPackName = RemoteCall::importAs<std::string()>("PFLP", "GiftCode::GetAllPackName");
+// 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+auto GiftCode_GetAvailableCode = RemoteCall::importAs<std::string(std::string const& packName)>("PFLP", "GiftCode::GetAvailableCode");
+// 给指定礼包增加兑换码 返回值类型：bool
+auto GiftCode_AddCode = RemoteCall::importAs<bool(std::string const& packName,std::string const& code)>("PFLP", "GiftCode::AddCode");
+// 删除指定礼包的指定兑换码 返回值类型：bool
+auto GiftCode_RemoveCode = RemoteCall::importAs<bool(std::string const& packName,std::string const& code)>("PFLP", "GiftCode::RemoveCode");
+// 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+auto GiftCode_ClearCode = RemoteCall::importAs<void(std::string const& packName)>("PFLP", "GiftCode::ClearCode");
 
 ```
 </details>
@@ -4913,6 +5200,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >var Money_Add = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add");
 >// 给玩家(指定玩家名)减钱
 >var Money_Remove = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove");
+>// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+>var GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName");
+>// 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+>var GiftCode_GetAvailableCode = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode");
+>// 给指定礼包增加兑换码 返回值类型：bool
+>var GiftCode_AddCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode");
+>// 删除指定礼包的指定兑换码 返回值类型：bool
+>var GiftCode_RemoveCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode");
+>// 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+>var GiftCode_ClearCode = RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode");
 >
 >```
 ></details>
@@ -5321,6 +5618,33 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >			Money_Remove_instance.Value(playerXuid,count,info);
 >		}
 >	}
+>	public static class GiftCode {
+>		private static Lazy<Func<string>>  GiftCode_GetAllPackName_instance = new(()=> RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName"));
+>		/// <summary> 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string </summary>
+>		public static string GetAllPackName() {
+>			return GiftCode_GetAllPackName_instance.Value();
+>		}
+>		private static Lazy<Func<string,string>>  GiftCode_GetAvailableCode_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode"));
+>		/// <summary> 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string </summary>
+>		public static string GetAvailableCode(string packName) {
+>			return GiftCode_GetAvailableCode_instance.Value(packName);
+>		}
+>		private static Lazy<Func<string,string,bool>>  GiftCode_AddCode_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode"));
+>		/// <summary> 给指定礼包增加兑换码 返回值类型：bool </summary>
+>		public static bool AddCode(string packName,string code) {
+>			return GiftCode_AddCode_instance.Value(packName,code);
+>		}
+>		private static Lazy<Func<string,string,bool>>  GiftCode_RemoveCode_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode"));
+>		/// <summary> 删除指定礼包的指定兑换码 返回值类型：bool </summary>
+>		public static bool RemoveCode(string packName,string code) {
+>			return GiftCode_RemoveCode_instance.Value(packName,code);
+>		}
+>		private static Lazy<Action<string>>  GiftCode_ClearCode_instance = new(()=> RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode"));
+>		/// <summary> 删除指定礼包的所有可用的兑换码（返回json字符串数组） </summary>
+>		public static void ClearCode(string packName) {
+>			GiftCode_ClearCode_instance.Value(packName);
+>		}
+>	}
 >	public static class Internal {
 >	}
 >}
@@ -5492,6 +5816,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >Dim Money_Add = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add")
 >' 给玩家(指定玩家名)减钱
 >Dim Money_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove")
+>' 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+>Dim GiftCode_GetAllPackName = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "GiftCode::GetAllPackName")
+>' 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+>Dim GiftCode_GetAvailableCode = RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "GiftCode::GetAvailableCode")
+>' 给指定礼包增加兑换码 返回值类型：bool
+>Dim GiftCode_AddCode = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::AddCode")
+>' 删除指定礼包的指定兑换码 返回值类型：bool
+>Dim GiftCode_RemoveCode = RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::RemoveCode")
+>' 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+>Dim GiftCode_ClearCode = RemoteCallAPI.ImportAs(Of Action(Of String))("PFLP", "GiftCode::ClearCode")
 >
 >```
 ></details>
@@ -5900,6 +6234,33 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >			Money_Remove_instance.Value(playerXuid,count,info)
 >		End Sub
 >	End Class
+>	Public NotInheritable Class GiftCode
+>		Private Shared GiftCode_GetAllPackName_instance As Lazy(Of Func(Of String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "GiftCode::GetAllPackName"))
+>		''' <summary> 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string </summary>
+>		Public Shared Function GetAllPackName() As string 
+>			Return GiftCode_GetAllPackName_instance.Value()
+>		End Function
+>		Private Shared GiftCode_GetAvailableCode_instance As Lazy(Of Func(Of String,String))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String))("PFLP", "GiftCode::GetAvailableCode"))
+>		''' <summary> 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string </summary>
+>		Public Shared Function GetAvailableCode(packName As String) As string 
+>			Return GiftCode_GetAvailableCode_instance.Value(packName)
+>		End Function
+>		Private Shared GiftCode_AddCode_instance As Lazy(Of Func(Of String,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::AddCode"))
+>		''' <summary> 给指定礼包增加兑换码 返回值类型：bool </summary>
+>		Public Shared Function AddCode(packName As String,code As String) As bool 
+>			Return GiftCode_AddCode_instance.Value(packName,code)
+>		End Function
+>		Private Shared GiftCode_RemoveCode_instance As Lazy(Of Func(Of String,String,Boolean))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,String,Boolean))("PFLP", "GiftCode::RemoveCode"))
+>		''' <summary> 删除指定礼包的指定兑换码 返回值类型：bool </summary>
+>		Public Shared Function RemoveCode(packName As String,code As String) As bool 
+>			Return GiftCode_RemoveCode_instance.Value(packName,code)
+>		End Function
+>		Private Shared GiftCode_ClearCode_instance As Lazy(Of Action(Of String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String))("PFLP", "GiftCode::ClearCode"))
+>		''' <summary> 删除指定礼包的所有可用的兑换码（返回json字符串数组） </summary>
+>		Public Shared Sub ClearCode(packName As String)  
+>			GiftCode_ClearCode_instance.Value(packName)
+>		End Sub
+>	End Class
 >	Public NotInheritable Class Internal
 >	End Class
 >End Module
@@ -6072,6 +6433,16 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >let Money_Add = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
 >// 给玩家(指定玩家名)减钱
 >let Money_Remove = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
+>// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+>let GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName")
+>// 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+>let GiftCode_GetAvailableCode = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode")
+>// 给指定礼包增加兑换码 返回值类型：bool
+>let GiftCode_AddCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode")
+>// 删除指定礼包的指定兑换码 返回值类型：bool
+>let GiftCode_RemoveCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode")
+>// 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+>let GiftCode_ClearCode = RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode")
 >
 >```
 ></details>
@@ -6394,6 +6765,27 @@ auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long
 >    /// <summary> 给玩家(指定玩家名)减钱 </summary>
 >    let public Remove(playerXuid:string)(count:int64)(info:string):unit =
 >      Money_Remove_instance.Value.Invoke(playerXuid,count,info)
+>  module public GiftCode =
+>    let private GiftCode_GetAllPackName_instance = lazy RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName")
+>    /// <summary> 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string </summary>
+>    let public GetAllPackName():string =
+>      GiftCode_GetAllPackName_instance.Value.Invoke()
+>    let private GiftCode_GetAvailableCode_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode")
+>    /// <summary> 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string </summary>
+>    let public GetAvailableCode(packName:string):string =
+>      GiftCode_GetAvailableCode_instance.Value.Invoke(packName)
+>    let private GiftCode_AddCode_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode")
+>    /// <summary> 给指定礼包增加兑换码 返回值类型：bool </summary>
+>    let public AddCode(packName:string)(code:string):bool =
+>      GiftCode_AddCode_instance.Value.Invoke(packName,code)
+>    let private GiftCode_RemoveCode_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode")
+>    /// <summary> 删除指定礼包的指定兑换码 返回值类型：bool </summary>
+>    let public RemoveCode(packName:string)(code:string):bool =
+>      GiftCode_RemoveCode_instance.Value.Invoke(packName,code)
+>    let private GiftCode_ClearCode_instance = lazy RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode")
+>    /// <summary> 删除指定礼包的所有可用的兑换码（返回json字符串数组） </summary>
+>    let public ClearCode(packName:string):unit =
+>      GiftCode_ClearCode_instance.Value.Invoke(packName)
 >  module public Internal =
 >
 >```

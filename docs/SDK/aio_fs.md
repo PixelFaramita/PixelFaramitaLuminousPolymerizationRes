@@ -162,6 +162,16 @@ let Money_Get = RemoteCallAPI.ImportAs<Func<string,int64>>("PFLP", "Money::Get")
 let Money_Add = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
 // 给玩家(指定玩家名)减钱
 let Money_Remove = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
+// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
+let GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName")
+// 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string
+let GiftCode_GetAvailableCode = RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode")
+// 给指定礼包增加兑换码 返回值类型：bool
+let GiftCode_AddCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode")
+// 删除指定礼包的指定兑换码 返回值类型：bool
+let GiftCode_RemoveCode = RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode")
+// 删除指定礼包的所有可用的兑换码（返回json字符串数组）
+let GiftCode_ClearCode = RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode")
 
 ```
 </details>
@@ -484,6 +494,27 @@ module public PFLP =
     /// <summary> 给玩家(指定玩家名)减钱 </summary>
     let public Remove(playerXuid:string)(count:int64)(info:string):unit =
       Money_Remove_instance.Value.Invoke(playerXuid,count,info)
+  module public GiftCode =
+    let private GiftCode_GetAllPackName_instance = lazy RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName")
+    /// <summary> 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string </summary>
+    let public GetAllPackName():string =
+      GiftCode_GetAllPackName_instance.Value.Invoke()
+    let private GiftCode_GetAvailableCode_instance = lazy RemoteCallAPI.ImportAs<Func<string,string>>("PFLP", "GiftCode::GetAvailableCode")
+    /// <summary> 获取指定礼包的所有可用的兑换码（返回json字符串数组） 返回值类型：string </summary>
+    let public GetAvailableCode(packName:string):string =
+      GiftCode_GetAvailableCode_instance.Value.Invoke(packName)
+    let private GiftCode_AddCode_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::AddCode")
+    /// <summary> 给指定礼包增加兑换码 返回值类型：bool </summary>
+    let public AddCode(packName:string)(code:string):bool =
+      GiftCode_AddCode_instance.Value.Invoke(packName,code)
+    let private GiftCode_RemoveCode_instance = lazy RemoteCallAPI.ImportAs<Func<string,string,bool>>("PFLP", "GiftCode::RemoveCode")
+    /// <summary> 删除指定礼包的指定兑换码 返回值类型：bool </summary>
+    let public RemoveCode(packName:string)(code:string):bool =
+      GiftCode_RemoveCode_instance.Value.Invoke(packName,code)
+    let private GiftCode_ClearCode_instance = lazy RemoteCallAPI.ImportAs<Action<string>>("PFLP", "GiftCode::ClearCode")
+    /// <summary> 删除指定礼包的所有可用的兑换码（返回json字符串数组） </summary>
+    let public ClearCode(packName:string):unit =
+      GiftCode_ClearCode_instance.Value.Invoke(packName)
   module public Internal =
 
 ```
