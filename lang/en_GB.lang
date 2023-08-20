@@ -69,7 +69,7 @@ WebConfig.ModuleName=Online configuration tool
 WebsocketAPI.ModuleName=Remote control API
 WebUI.ModuleName=Webui
 WebViewConfig.ModuleName=Local configuration UI
-WhiteBlock.ModuleName=Don't step on the white block
+WhiteBlock.ModuleName=别踩白块儿
 WorldLimit.ModuleName=World border
 Auth.Commands.Main=
 Auth.Commands.MainInvoke=verify
@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Go back to the main menu
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Continue to select the range
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=The scope of confirmation is wrong
 Land.Common.Forms.BeforePurchaseMainContent=Select {0}area:\n  Starting point: {1}\n  End: {2}\n  Size: {3}\n  During the dimension: {4}\n  Price: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Select {0}area:\n  Starting point: {1}\n  End: {2}\n  Size: {3}\n  Dimension: {4}\n  Original price: {5}× {6}= {7}{10}\n{9}\n  Current price: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Territory Confirmation
 Land.Common.Forms.ChooseItemNextPage=Next page
 Land.Common.Forms.ChooseItemNone.Back=return

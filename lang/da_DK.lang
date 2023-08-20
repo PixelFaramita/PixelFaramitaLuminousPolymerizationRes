@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Tilbage til hovedmenuen
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Fortsæt med at indramme udvælgelsesområdet
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Bekræftelsesomfanget er forkert
 Land.Common.Forms.BeforePurchaseMainContent=Vælg {0}område:\n  Udgangspunkt: {1}\n  Slut: {2}\n  Størrelse: {3}\n  Under dimensionen: {4}\n  Pris: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Vælg {0}område:\n  Udgangspunkt: {1}\n  Slut: {2}\n  Størrelse: {3}\n  Dimension: {4}\n  Original pris: {5}× {6}= {7}{10}\n{9}\n  Aktuel pris: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Territorium bekræftelse
 Land.Common.Forms.ChooseItemNextPage=Næste
 Land.Common.Forms.ChooseItemNone.Back=Vend tilbage

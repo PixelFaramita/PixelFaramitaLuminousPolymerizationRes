@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Vissza a főmenübe
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Folytassa a keret kiválasztási tartományát
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=A megerősítés hatálya rossz
 Land.Common.Forms.BeforePurchaseMainContent=Válassza a {0}területet:\n  Kiindulópont: {1}\n  Vége: {2}\n  Méret: {3}\n  A dimenzió során: {4}\n  Ár: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Válassza a {0}területet:\n  Kiindulópont: {1}\n  Vége: {2}\n  Méret: {3}\n  Dimenzió: {4}\n  Eredeti ár: {5}× {6}= {7}{10}\n{9}\n  Jelenlegi ár: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Terület visszaigazolás
 Land.Common.Forms.ChooseItemNextPage=Következő
 Land.Common.Forms.ChooseItemNone.Back=Visszatérés

@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Retour au menu principal
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Continuez à cadrer la plage de sélection
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=La portée de la confirmation est erronée
 Land.Common.Forms.BeforePurchaseMainContent=Sélectionnez {0}zone:\n  Point de départ: {1}\n  Fin: {2}\n  Taille: {3}\n  Pendant la dimension: {4}\n  Prix: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Sélectionnez la zone {0}:\n  Point de départ: {1}\n  Fin: {2}\n  Taille: {3}\n  Dimension: {4}\n  Prix ​​d'origine: {5}× {6}= {7}{10}\n{9}\n  Prix ​​actuel: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Confirmation du territoire
 Land.Common.Forms.ChooseItemNextPage=Page suivante
 Land.Common.Forms.ChooseItemNone.Back=revenir

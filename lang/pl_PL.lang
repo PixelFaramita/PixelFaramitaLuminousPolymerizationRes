@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Powrót do menu głównego
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Kontynuuj zakres wyboru ramek
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Zakres potwierdzenia jest zły
 Land.Common.Forms.BeforePurchaseMainContent=Wybierz {0}Obszar:\n  Punkt wyjścia: {1}\n  END: {2}\n  Rozmiar: {3}\n  Podczas wymiaru: {4}\n  Cena: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Wybierz {0}Obszar:\n  Punkt wyjścia: {1}\n  END: {2}\n  Rozmiar: {3}\n  Wymiar: {4}\n  Oryginalna cena: {5}× {6}= {7}{10}\n{9}\n  Obecna cena: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Potwierdzenie terytorium
 Land.Common.Forms.ChooseItemNextPage=Następny
 Land.Common.Forms.ChooseItemNone.Back=zwrócić

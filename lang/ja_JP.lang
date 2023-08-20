@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=メインメニューに戻
 Land.Common.Forms.BeforePurchaseMainButtonCancel=選択範囲をフレーム化し続けます
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=確認の範囲が間違っています
 Land.Common.Forms.BeforePurchaseMainContent={0}領域を選択します：\n  出発点：{1}\n  終了：{2}\n  サイズ：{3}\n  寸法中：{4}\n  価格：{5}×{6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom={0}領域を選択します：\n  出発点：{1}\n  終了：{2}\n  サイズ：{3}\n  寸法：{4}\n  元の価格：{5}×{6}= {7}{10}\n{9}\n  現在の価格：{8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=領土確認
 Land.Common.Forms.ChooseItemNextPage=次のページ
 Land.Common.Forms.ChooseItemNone.Back=戻る

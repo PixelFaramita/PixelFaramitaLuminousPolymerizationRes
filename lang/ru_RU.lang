@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Вернуться в гл�
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Продолжить диапазон выбора кадров
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Сфера подтверждения неверно
 Land.Common.Forms.BeforePurchaseMainContent=Выберите {0}область:\n  Отправная точка: {1}\n  Конец: {2}\n  Размер: {3}\n  Во время измерения: {4}\n  Цена: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Выберите {0}область:\n  Отправная точка: {1}\n  Конец: {2}\n  Размер: {3}\n  Размер: {4}\n  Исходная цена: {5}× {6}= {7}{10}\n{9}\n  Текущая цена: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Территория подтверждение
 Land.Common.Forms.ChooseItemNextPage=Следующая страница
 Land.Common.Forms.ChooseItemNone.Back=возвращаться

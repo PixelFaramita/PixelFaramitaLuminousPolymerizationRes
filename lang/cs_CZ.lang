@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Zpět do hlavní nabídky
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Pokračujte v rozsahu výběru snímků
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Rozsah potvrzení je špatný
 Land.Common.Forms.BeforePurchaseMainContent=Vyberte oblast {0}:\n  Počáteční bod: {1}\n  Konec: {2}\n  Velikost: {3}\n  Během dimenze: {4}\n  Cena: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Vyberte oblast {0}:\n  Počáteční bod: {1}\n  Konec: {2}\n  Velikost: {3}\n  Dimenze: {4}\n  Původní cena: {5}× {6}= {7}{10}\n{9}\n  Aktuální cena: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Potvrzení území
 Land.Common.Forms.ChooseItemNextPage=Další
 Land.Common.Forms.ChooseItemNone.Back=vrátit se

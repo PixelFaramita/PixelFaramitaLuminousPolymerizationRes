@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=메인 메뉴로 돌아갑�
 Land.Common.Forms.BeforePurchaseMainButtonCancel=프레임 선택 범위를 계속하십시오
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=확인 범위가 잘못되었습니다
 Land.Common.Forms.BeforePurchaseMainContent={0}영역 선택 :\n  출발점 : {1}\n  끝 : {2}\n  크기 : {3}\n  차원 중 : {4}\n  가격 : {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom={0}영역 선택 :\n  출발점 : {1}\n  끝 : {2}\n  크기 : {3}\n  치수 : {4}\n  원래 가격 : {5}× {6}= {7}{10}\n{9}\n  현재 가격 : {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=영토 확인
 Land.Common.Forms.ChooseItemNextPage=다음 페이지
 Land.Common.Forms.ChooseItemNone.Back=반품

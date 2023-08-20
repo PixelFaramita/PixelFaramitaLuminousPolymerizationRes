@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=回到主菜單
 Land.Common.Forms.BeforePurchaseMainButtonCancel=繼續框選範圍
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=確認範圍無誤
 Land.Common.Forms.BeforePurchaseMainContent=已選擇{0}區域：\n  起點： {1}\n  終點： {2}\n  大小： {3}\n  維度： {4}\n  價格： {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=已選擇{0}區域：\n  起點： {1}\n  終點： {2}\n  大小： {3}\n  維度： {4}\n  原價： {5}× {6}= {7}{10}\n{9}\n  現價： {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=領地範圍確認
 Land.Common.Forms.ChooseItemNextPage=下一頁
 Land.Common.Forms.ChooseItemNone.Back=返回

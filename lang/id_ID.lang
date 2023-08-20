@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Kembali ke menu utama
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Lanjutkan ke rangkaian pemilihan bingkai
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Ruang lingkup konfirmasi itu salah
 Land.Common.Forms.BeforePurchaseMainContent=SELECT {0}area:\n  Titik awal: {1}\n  End: {2}\n  Ukuran: {3}\n  Selama dimensi: {4}\n  Harga: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=SELECT {0}area:\n  Titik awal: {1}\n  End: {2}\n  Ukuran: {3}\n  Dimensi: {4}\n  Harga Asli: {5}× {6}= {7}{10}\n{9}\n  Harga saat ini: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Konfirmasi Wilayah
 Land.Common.Forms.ChooseItemNextPage=Halaman selanjutnya
 Land.Common.Forms.ChooseItemNone.Back=kembali

@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Tillbaka till huvudmenyn
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Fortsätt att rama urvalsområdet
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Bekräftets omfattning är fel
 Land.Common.Forms.BeforePurchaseMainContent=Välj {0}-området:\n  Utgångspunkt: {1}\n  Slut: {2}\n  Storlek: {3}\n  Under dimensionen: {4}\n  Pris: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Välj {0}-området:\n  Utgångspunkt: {1}\n  Slut: {2}\n  Storlek: {3}\n  Dimension: {4}\n  Originalpris: {5}× {6}= {7}{10}\n{9}\n  Nuvarande pris: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Territoriumsbekräftelse
 Land.Common.Forms.ChooseItemNextPage=Nästa
 Land.Common.Forms.ChooseItemNone.Back=lämna tillbaka

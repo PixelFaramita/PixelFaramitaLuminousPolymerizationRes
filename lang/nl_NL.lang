@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Terug naar het hoofdmenu
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Blijf selectiebereik omlijsten
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=De reikwijdte van de bevestiging is verkeerd
 Land.Common.Forms.BeforePurchaseMainContent=Selecteer {0}gebied:\n  Startpunt: {1}\n  Einde: {2}\n  Maat: {3}\n  Tijdens de dimensie: {4}\n  Prijs: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Selecteer {0}gebied:\n  Startpunt: {1}\n  Einde: {2}\n  Maat: {3}\n  Dimensie: {4}\n  Originele prijs: {5}× {6}= {7}{10}\n{9}\n  Huidige prijs: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Territoriumbevestiging
 Land.Common.Forms.ChooseItemNextPage=Volgend
 Land.Common.Forms.ChooseItemNone.Back=opbrengst

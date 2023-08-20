@@ -1,6 +1,6 @@
 ---
 title: RemoteCall
-icon: laptop-code
+icon: link
 ---
 
 ## 介绍

@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Назад до голов�
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Продовжуйте діапазон вибору кадру
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Обсяг підтвердження неправильно
 Land.Common.Forms.BeforePurchaseMainContent=Виберіть {0}область:\n  Початкова точка: {1}\n  Кінець: {2}\n  Розмір: {3}\n  Під час виміру: {4}\n  Ціна: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=Виберіть {0}область:\n  Початкова точка: {1}\n  Кінець: {2}\n  Розмір: {3}\n  Розмір: {4}\n  Оригінальна ціна: {5}× {6}= {7}{10}\n{9}\n  Поточна ціна: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Підтвердження території
 Land.Common.Forms.ChooseItemNextPage=Наступна сторінка
 Land.Common.Forms.ChooseItemNone.Back=повернення

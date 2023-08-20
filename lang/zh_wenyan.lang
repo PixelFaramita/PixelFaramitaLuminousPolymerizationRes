@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=还至主菜单
 Land.Common.Forms.BeforePurchaseMainButtonCancel=续框选限
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=确认无误
 Land.Common.Forms.BeforePurchaseMainContent=已择{0}区。\n  初一: {1}\n  终曰: {2}\n  大小: {3}\n  维度: {4}\n  价 {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom=已择{0}区。\n  初一: {1}\n  终曰: {2}\n  大小: {3}\n  维度: {4}\n  原价: {5}× {6}= {7}{10}\n{9}\n  现价: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=地界确认
 Land.Common.Forms.ChooseItemNextPage=下一页
 Land.Common.Forms.ChooseItemNone.Back=返回

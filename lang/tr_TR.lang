@@ -620,6 +620,7 @@ Land.Common.Forms.BeforePurchaseMainButtonBackToMain=Ana menüye geri dön
 Land.Common.Forms.BeforePurchaseMainButtonCancel=Seçim aralığını çerçevelemeye devam edin
 Land.Common.Forms.BeforePurchaseMainButtonConfirm=Onay kapsamı yanlış
 Land.Common.Forms.BeforePurchaseMainContent={0}alanını seçin:\n  Başlangıç ​​noktası: {1}\n  Son: {2}\n  Boyut: {3}\n  Boyut sırasında: {4}\n  Fiyat: {5}× {6}= {7}{8}\n{9}
+Land.Common.Forms.BeforePurchaseMainContentCustom={0}alanını seçin:\n  Başlangıç ​​noktası: {1}\n  Son: {2}\n  Boyut: {3}\n  Boyut: {4}\n  Orijinal fiyat: {5}× {6}= {7}{10}\n{9}\n  Mevcut fiyat: {8}{10}\n{11}
 Land.Common.Forms.BeforePurchaseMainTitle=Bölge Onayı
 Land.Common.Forms.ChooseItemNextPage=Önümüzdeki
 Land.Common.Forms.ChooseItemNone.Back=dönüş
