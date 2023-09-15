@@ -155,11 +155,11 @@ Dim Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs(Of Func(Of String,Stri
 Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,String,Integer))("PFLP", "FloatText::Add")
 ' 移除浮空字(给玩家发包)
 Dim FloatText_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Integer))("PFLP", "FloatText::Remove")
-' 获取玩家(指定玩家名)金钱 返回值类型：long
+' 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 Dim Money_Get = RemoteCallAPI.ImportAs(Of Func(Of String,Long))("PFLP", "Money::Get")
-' 给玩家(指定玩家名)加钱
+' 给玩家(指定玩家Xuid)加钱
 Dim Money_Add = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add")
-' 给玩家(指定玩家名)减钱
+' 给玩家(指定玩家Xuid)减钱
 Dim Money_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove")
 ' 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
 Dim GiftCode_GetAllPackName = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "GiftCode::GetAllPackName")
@@ -564,17 +564,17 @@ Friend Module PFLP
 	End Class
 	Public NotInheritable Class Money
 		Private Shared Money_Get_instance As Lazy(Of Func(Of String,Long))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Long))("PFLP", "Money::Get"))
-		''' <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
+		''' <summary> 获取玩家(指定玩家Xuid)金钱 返回值类型：long </summary>
 		Public Shared Function Get(playerXuid As String) As long 
 			Return Money_Get_instance.Value(playerXuid)
 		End Function
 		Private Shared Money_Add_instance As Lazy(Of Action(Of String,Long,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add"))
-		''' <summary> 给玩家(指定玩家名)加钱 </summary>
+		''' <summary> 给玩家(指定玩家Xuid)加钱 </summary>
 		Public Shared Sub Add(playerXuid As String,count As Long,info As String)  
 			Money_Add_instance.Value(playerXuid,count,info)
 		End Sub
 		Private Shared Money_Remove_instance As Lazy(Of Action(Of String,Long,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove"))
-		''' <summary> 给玩家(指定玩家名)减钱 </summary>
+		''' <summary> 给玩家(指定玩家Xuid)减钱 </summary>
 		Public Shared Sub Remove(playerXuid As String,count As Long,info As String)  
 			Money_Remove_instance.Value(playerXuid,count,info)
 		End Sub

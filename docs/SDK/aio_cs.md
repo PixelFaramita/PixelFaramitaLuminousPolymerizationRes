@@ -155,11 +155,11 @@ var Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("
 var FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add");
 // 移除浮空字(给玩家发包)
 var FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove");
-// 获取玩家(指定玩家名)金钱 返回值类型：long
+// 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 var Money_Get = RemoteCallAPI.ImportAs<Func<string,long>>("PFLP", "Money::Get");
-// 给玩家(指定玩家名)加钱
+// 给玩家(指定玩家Xuid)加钱
 var Money_Add = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add");
-// 给玩家(指定玩家名)减钱
+// 给玩家(指定玩家Xuid)减钱
 var Money_Remove = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove");
 // 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
 var GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName");
@@ -564,17 +564,17 @@ internal static class PFLP {
 	}
 	public static class Money {
 		private static Lazy<Func<string,long>>  Money_Get_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,long>>("PFLP", "Money::Get"));
-		/// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
+		/// <summary> 获取玩家(指定玩家Xuid)金钱 返回值类型：long </summary>
 		public static long Get(string playerXuid) {
 			return Money_Get_instance.Value(playerXuid);
 		}
 		private static Lazy<Action<string,long,string>>  Money_Add_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add"));
-		/// <summary> 给玩家(指定玩家名)加钱 </summary>
+		/// <summary> 给玩家(指定玩家Xuid)加钱 </summary>
 		public static void Add(string playerXuid,long count,string info) {
 			Money_Add_instance.Value(playerXuid,count,info);
 		}
 		private static Lazy<Action<string,long,string>>  Money_Remove_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove"));
-		/// <summary> 给玩家(指定玩家名)减钱 </summary>
+		/// <summary> 给玩家(指定玩家Xuid)减钱 </summary>
 		public static void Remove(string playerXuid,long count,string info) {
 			Money_Remove_instance.Value(playerXuid,count,info);
 		}

@@ -156,11 +156,11 @@ let Lands_GetLandsSharedToPlayer = RemoteCallAPI.ImportAs<Func<string,string>>("
 let FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add")
 // 移除浮空字(给玩家发包)
 let FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove")
-// 获取玩家(指定玩家名)金钱 返回值类型：long
+// 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 let Money_Get = RemoteCallAPI.ImportAs<Func<string,int64>>("PFLP", "Money::Get")
-// 给玩家(指定玩家名)加钱
+// 给玩家(指定玩家Xuid)加钱
 let Money_Add = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
-// 给玩家(指定玩家名)减钱
+// 给玩家(指定玩家Xuid)减钱
 let Money_Remove = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
 // 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
 let GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName")
@@ -483,15 +483,15 @@ module public PFLP =
       FloatText_Remove_instance.Value.Invoke(playerXuid,id)
   module public Money =
     let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<Func<string,int64>>("PFLP", "Money::Get")
-    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
+    /// <summary> 获取玩家(指定玩家Xuid)金钱 返回值类型：long </summary>
     let public Get(playerXuid:string):int64 =
       Money_Get_instance.Value.Invoke(playerXuid)
     let private Money_Add_instance = lazy RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
-    /// <summary> 给玩家(指定玩家名)加钱 </summary>
+    /// <summary> 给玩家(指定玩家Xuid)加钱 </summary>
     let public Add(playerXuid:string)(count:int64)(info:string):unit =
       Money_Add_instance.Value.Invoke(playerXuid,count,info)
     let private Money_Remove_instance = lazy RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
-    /// <summary> 给玩家(指定玩家名)减钱 </summary>
+    /// <summary> 给玩家(指定玩家Xuid)减钱 </summary>
     let public Remove(playerXuid:string)(count:int64)(info:string):unit =
       Money_Remove_instance.Value.Invoke(playerXuid,count,info)
   module public GiftCode =

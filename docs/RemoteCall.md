@@ -3670,10 +3670,10 @@
 <summary><b>Money</b></summary>
 
 > <details>
-> <summary><b>Get  - 获取玩家(指定玩家名)金钱</b></summary>
+> <summary><b>Get  - 获取玩家(指定玩家Xuid)金钱</b></summary>
 >
 >## Money::Get
->### 获取玩家(指定玩家名)金钱
+>### 获取玩家(指定玩家Xuid)金钱
 ><table><tr><th>形参</th><th>类型</th></tr>
 ><tr><td>playerXuid</td><td>string</td></tr>
 ><tr><td colspan="2">返回值类型：long;</td></tr></table>
@@ -3682,31 +3682,31 @@
 
 > - JavaScript
 >```js
->/** 获取玩家(指定玩家名)金钱 返回值类型：long */
+>/** 获取玩家(指定玩家Xuid)金钱 返回值类型：long */
 >const Money_Get = ll.import("PFLP", "Money::Get");
 >let result = Money_Get(playerXuid);
 >```
 > - C++
 >```cpp
->// 获取玩家(指定玩家名)金钱 返回值类型：long
+>// 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 >auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
 >auto result = Money_Get(playerXuid);
 >```
 > - C#
 >```csharp
->// 获取玩家(指定玩家名)金钱 返回值类型：long
+>// 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<Func<string,long>>("PFLP", "Money::Get");
 >var result = Money_Get(playerXuid);
 >```
 > - Visual Basic .NET
 >```vb
->' 获取玩家(指定玩家名)金钱 返回值类型：long
+>' 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Func(Of String,Long))("PFLP", "Money::Get")
 >Dim result = Money_Get(playerXuid)
 >```
 > - F#
 >```fsharp
->// 获取玩家(指定玩家名)金钱 返回值类型：long
+>// 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<Func<string,int64>>("PFLP", "Money::Get")
 >playerXuid
 >	|>Money_Get.Invoke
@@ -3718,10 +3718,10 @@
 >---
 >
 > <details>
-> <summary><b>Add  - 给玩家(指定玩家名)加钱</b></summary>
+> <summary><b>Add  - 给玩家(指定玩家Xuid)加钱</b></summary>
 >
 >## Money::Add
->### 给玩家(指定玩家名)加钱
+>### 给玩家(指定玩家Xuid)加钱
 ><table><tr><th>形参</th><th>类型</th></tr>
 ><tr><td>playerXuid</td><td>string</td></tr>
 ><tr><td>count</td><td>long</td></tr>
@@ -3732,31 +3732,31 @@
 
 > - JavaScript
 >```js
->/** 给玩家(指定玩家名)加钱 */
+>/** 给玩家(指定玩家Xuid)加钱 */
 >const Money_Add = ll.import("PFLP", "Money::Add");
 >Money_Add(playerXuid,count,info);
 >```
 > - C++
 >```cpp
->// 给玩家(指定玩家名)加钱
+>// 给玩家(指定玩家Xuid)加钱
 >auto Money_Add = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Add");
 >Money_Add(playerXuid,count,info);
 >```
 > - C#
 >```csharp
->// 给玩家(指定玩家名)加钱
+>// 给玩家(指定玩家Xuid)加钱
 >var Money_Add = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add");
 >Money_Add(playerXuid,count,info);
 >```
 > - Visual Basic .NET
 >```vb
->' 给玩家(指定玩家名)加钱
+>' 给玩家(指定玩家Xuid)加钱
 >Dim Money_Add = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add")
 >Money_Add(playerXuid,count,info)
 >```
 > - F#
 >```fsharp
->// 给玩家(指定玩家名)加钱
+>// 给玩家(指定玩家Xuid)加钱
 >let Money_Add = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
 >(playerXuid,count,info)
 >	|>Money_Add.Invoke
@@ -3767,10 +3767,10 @@
 >---
 >
 > <details>
-> <summary><b>Remove  - 给玩家(指定玩家名)减钱</b></summary>
+> <summary><b>Remove  - 给玩家(指定玩家Xuid)减钱</b></summary>
 >
 >## Money::Remove
->### 给玩家(指定玩家名)减钱
+>### 给玩家(指定玩家Xuid)减钱
 ><table><tr><th>形参</th><th>类型</th></tr>
 ><tr><td>playerXuid</td><td>string</td></tr>
 ><tr><td>count</td><td>long</td></tr>
@@ -3781,31 +3781,31 @@
 
 > - JavaScript
 >```js
->/** 给玩家(指定玩家名)减钱 */
+>/** 给玩家(指定玩家Xuid)减钱 */
 >const Money_Remove = ll.import("PFLP", "Money::Remove");
 >Money_Remove(playerXuid,count,info);
 >```
 > - C++
 >```cpp
->// 给玩家(指定玩家名)减钱
+>// 给玩家(指定玩家Xuid)减钱
 >auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Remove");
 >Money_Remove(playerXuid,count,info);
 >```
 > - C#
 >```csharp
->// 给玩家(指定玩家名)减钱
+>// 给玩家(指定玩家Xuid)减钱
 >var Money_Remove = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove");
 >Money_Remove(playerXuid,count,info);
 >```
 > - Visual Basic .NET
 >```vb
->' 给玩家(指定玩家名)减钱
+>' 给玩家(指定玩家Xuid)减钱
 >Dim Money_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove")
 >Money_Remove(playerXuid,count,info)
 >```
 > - F#
 >```fsharp
->// 给玩家(指定玩家名)减钱
+>// 给玩家(指定玩家Xuid)减钱
 >let Money_Remove = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
 >(playerXuid,count,info)
 >	|>Money_Remove.Invoke
@@ -4230,11 +4230,11 @@
 >const FloatText_Add = ll.import("PFLP", "FloatText::Add");
 >/** 移除浮空字(给玩家发包) */
 >const FloatText_Remove = ll.import("PFLP", "FloatText::Remove");
->/** 获取玩家(指定玩家名)金钱 返回值类型：long */
+>/** 获取玩家(指定玩家Xuid)金钱 返回值类型：long */
 >const Money_Get = ll.import("PFLP", "Money::Get");
->/** 给玩家(指定玩家名)加钱 */
+>/** 给玩家(指定玩家Xuid)加钱 */
 >const Money_Add = ll.import("PFLP", "Money::Add");
->/** 给玩家(指定玩家名)减钱 */
+>/** 给玩家(指定玩家Xuid)减钱 */
 >const Money_Remove = ll.import("PFLP", "Money::Remove");
 >/** 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string */
 >const GiftCode_GetAllPackName = ll.import("PFLP", "GiftCode::GetAllPackName");
@@ -4809,18 +4809,18 @@
 >		Remove(playerXuid,id) { (this.FloatText_Remove??=ll.import("PFLP", "FloatText::Remove"))(playerXuid,id)},
 >	},
 >	Money : {
->		/** 获取玩家(指定玩家名)金钱 返回值类型：long
+>		/** 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 >		 * @param {string} playerXuid
 >		 * @returns {number}
 >		 */
 >		Get(playerXuid) { return (this.Money_Get??=ll.import("PFLP", "Money::Get"))(playerXuid)},
->		/** 给玩家(指定玩家名)加钱
+>		/** 给玩家(指定玩家Xuid)加钱
 >		 * @param {string} playerXuid
 >		 * @param {number} count
 >		 * @param {string} info
 >		 */
 >		Add(playerXuid,count,info) { (this.Money_Add??=ll.import("PFLP", "Money::Add"))(playerXuid,count,info)},
->		/** 给玩家(指定玩家名)减钱
+>		/** 给玩家(指定玩家Xuid)减钱
 >		 * @param {string} playerXuid
 >		 * @param {number} count
 >		 * @param {string} info
@@ -5021,11 +5021,11 @@ auto Lands_GetLandsSharedToPlayer = RemoteCall::importAs<std::string(std::string
 auto FloatText_Add = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,std::string const& text)>("PFLP", "FloatText::Add");
 // 移除浮空字(给玩家发包)
 auto FloatText_Remove = RemoteCall::importAs<void(std::string const& playerXuid,int const& id)>("PFLP", "FloatText::Remove");
-// 获取玩家(指定玩家名)金钱 返回值类型：long
+// 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
-// 给玩家(指定玩家名)加钱
+// 给玩家(指定玩家Xuid)加钱
 auto Money_Add = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Add");
-// 给玩家(指定玩家名)减钱
+// 给玩家(指定玩家Xuid)减钱
 auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Remove");
 // 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
 auto GiftCode_GetAllPackName = RemoteCall::importAs<std::string()>("PFLP", "GiftCode::GetAllPackName");
@@ -5194,11 +5194,11 @@ auto GiftCode_ClearCode = RemoteCall::importAs<void(std::string const& packName)
 >var FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add");
 >// 移除浮空字(给玩家发包)
 >var FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove");
->// 获取玩家(指定玩家名)金钱 返回值类型：long
+>// 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 >var Money_Get = RemoteCallAPI.ImportAs<Func<string,long>>("PFLP", "Money::Get");
->// 给玩家(指定玩家名)加钱
+>// 给玩家(指定玩家Xuid)加钱
 >var Money_Add = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add");
->// 给玩家(指定玩家名)减钱
+>// 给玩家(指定玩家Xuid)减钱
 >var Money_Remove = RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove");
 >// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
 >var GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName");
@@ -5603,17 +5603,17 @@ auto GiftCode_ClearCode = RemoteCall::importAs<void(std::string const& packName)
 >	}
 >	public static class Money {
 >		private static Lazy<Func<string,long>>  Money_Get_instance = new(()=> RemoteCallAPI.ImportAs<Func<string,long>>("PFLP", "Money::Get"));
->		/// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
+>		/// <summary> 获取玩家(指定玩家Xuid)金钱 返回值类型：long </summary>
 >		public static long Get(string playerXuid) {
 >			return Money_Get_instance.Value(playerXuid);
 >		}
 >		private static Lazy<Action<string,long,string>>  Money_Add_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Add"));
->		/// <summary> 给玩家(指定玩家名)加钱 </summary>
+>		/// <summary> 给玩家(指定玩家Xuid)加钱 </summary>
 >		public static void Add(string playerXuid,long count,string info) {
 >			Money_Add_instance.Value(playerXuid,count,info);
 >		}
 >		private static Lazy<Action<string,long,string>>  Money_Remove_instance = new(()=> RemoteCallAPI.ImportAs<Action<string,long,string>>("PFLP", "Money::Remove"));
->		/// <summary> 给玩家(指定玩家名)减钱 </summary>
+>		/// <summary> 给玩家(指定玩家Xuid)减钱 </summary>
 >		public static void Remove(string playerXuid,long count,string info) {
 >			Money_Remove_instance.Value(playerXuid,count,info);
 >		}
@@ -5810,11 +5810,11 @@ auto GiftCode_ClearCode = RemoteCall::importAs<void(std::string const& packName)
 >Dim FloatText_Add = RemoteCallAPI.ImportAs(Of Func(Of String,Single,Single,Single,String,Integer))("PFLP", "FloatText::Add")
 >' 移除浮空字(给玩家发包)
 >Dim FloatText_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Integer))("PFLP", "FloatText::Remove")
->' 获取玩家(指定玩家名)金钱 返回值类型：long
+>' 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 >Dim Money_Get = RemoteCallAPI.ImportAs(Of Func(Of String,Long))("PFLP", "Money::Get")
->' 给玩家(指定玩家名)加钱
+>' 给玩家(指定玩家Xuid)加钱
 >Dim Money_Add = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add")
->' 给玩家(指定玩家名)减钱
+>' 给玩家(指定玩家Xuid)减钱
 >Dim Money_Remove = RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove")
 >' 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
 >Dim GiftCode_GetAllPackName = RemoteCallAPI.ImportAs(Of Func(Of String))("PFLP", "GiftCode::GetAllPackName")
@@ -6219,17 +6219,17 @@ auto GiftCode_ClearCode = RemoteCall::importAs<void(std::string const& packName)
 >	End Class
 >	Public NotInheritable Class Money
 >		Private Shared Money_Get_instance As Lazy(Of Func(Of String,Long))(Function() RemoteCallAPI.ImportAs(Of Func(Of String,Long))("PFLP", "Money::Get"))
->		''' <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
+>		''' <summary> 获取玩家(指定玩家Xuid)金钱 返回值类型：long </summary>
 >		Public Shared Function Get(playerXuid As String) As long 
 >			Return Money_Get_instance.Value(playerXuid)
 >		End Function
 >		Private Shared Money_Add_instance As Lazy(Of Action(Of String,Long,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Add"))
->		''' <summary> 给玩家(指定玩家名)加钱 </summary>
+>		''' <summary> 给玩家(指定玩家Xuid)加钱 </summary>
 >		Public Shared Sub Add(playerXuid As String,count As Long,info As String)  
 >			Money_Add_instance.Value(playerXuid,count,info)
 >		End Sub
 >		Private Shared Money_Remove_instance As Lazy(Of Action(Of String,Long,String))(Function() RemoteCallAPI.ImportAs(Of Action(Of String,Long,String))("PFLP", "Money::Remove"))
->		''' <summary> 给玩家(指定玩家名)减钱 </summary>
+>		''' <summary> 给玩家(指定玩家Xuid)减钱 </summary>
 >		Public Shared Sub Remove(playerXuid As String,count As Long,info As String)  
 >			Money_Remove_instance.Value(playerXuid,count,info)
 >		End Sub
@@ -6427,11 +6427,11 @@ auto GiftCode_ClearCode = RemoteCall::importAs<void(std::string const& packName)
 >let FloatText_Add = RemoteCallAPI.ImportAs<Func<string,float,float,float,string,int>>("PFLP", "FloatText::Add")
 >// 移除浮空字(给玩家发包)
 >let FloatText_Remove = RemoteCallAPI.ImportAs<Action<string,int>>("PFLP", "FloatText::Remove")
->// 获取玩家(指定玩家名)金钱 返回值类型：long
+>// 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 >let Money_Get = RemoteCallAPI.ImportAs<Func<string,int64>>("PFLP", "Money::Get")
->// 给玩家(指定玩家名)加钱
+>// 给玩家(指定玩家Xuid)加钱
 >let Money_Add = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
->// 给玩家(指定玩家名)减钱
+>// 给玩家(指定玩家Xuid)减钱
 >let Money_Remove = RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
 >// 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
 >let GiftCode_GetAllPackName = RemoteCallAPI.ImportAs<Func<string>>("PFLP", "GiftCode::GetAllPackName")
@@ -6754,15 +6754,15 @@ auto GiftCode_ClearCode = RemoteCall::importAs<void(std::string const& packName)
 >      FloatText_Remove_instance.Value.Invoke(playerXuid,id)
 >  module public Money =
 >    let private Money_Get_instance = lazy RemoteCallAPI.ImportAs<Func<string,int64>>("PFLP", "Money::Get")
->    /// <summary> 获取玩家(指定玩家名)金钱 返回值类型：long </summary>
+>    /// <summary> 获取玩家(指定玩家Xuid)金钱 返回值类型：long </summary>
 >    let public Get(playerXuid:string):int64 =
 >      Money_Get_instance.Value.Invoke(playerXuid)
 >    let private Money_Add_instance = lazy RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Add")
->    /// <summary> 给玩家(指定玩家名)加钱 </summary>
+>    /// <summary> 给玩家(指定玩家Xuid)加钱 </summary>
 >    let public Add(playerXuid:string)(count:int64)(info:string):unit =
 >      Money_Add_instance.Value.Invoke(playerXuid,count,info)
 >    let private Money_Remove_instance = lazy RemoteCallAPI.ImportAs<Action<string,int64,string>>("PFLP", "Money::Remove")
->    /// <summary> 给玩家(指定玩家名)减钱 </summary>
+>    /// <summary> 给玩家(指定玩家Xuid)减钱 </summary>
 >    let public Remove(playerXuid:string)(count:int64)(info:string):unit =
 >      Money_Remove_instance.Value.Invoke(playerXuid,count,info)
 >  module public GiftCode =

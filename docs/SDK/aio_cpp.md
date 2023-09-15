@@ -149,11 +149,11 @@ auto Lands_GetLandsSharedToPlayer = RemoteCall::importAs<std::string(std::string
 auto FloatText_Add = RemoteCall::importAs<int(std::string const& playerXuid,float const& x,float const& y,float const& z,std::string const& text)>("PFLP", "FloatText::Add");
 // 移除浮空字(给玩家发包)
 auto FloatText_Remove = RemoteCall::importAs<void(std::string const& playerXuid,int const& id)>("PFLP", "FloatText::Remove");
-// 获取玩家(指定玩家名)金钱 返回值类型：long
+// 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 auto Money_Get = RemoteCall::importAs<long long(std::string const& playerXuid)>("PFLP", "Money::Get");
-// 给玩家(指定玩家名)加钱
+// 给玩家(指定玩家Xuid)加钱
 auto Money_Add = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Add");
-// 给玩家(指定玩家名)减钱
+// 给玩家(指定玩家Xuid)减钱
 auto Money_Remove = RemoteCall::importAs<void(std::string const& playerXuid,long long const& count,std::string const& info)>("PFLP", "Money::Remove");
 // 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string
 auto GiftCode_GetAllPackName = RemoteCall::importAs<std::string()>("PFLP", "GiftCode::GetAllPackName");

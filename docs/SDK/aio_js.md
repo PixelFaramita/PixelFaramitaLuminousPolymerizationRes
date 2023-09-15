@@ -153,11 +153,11 @@ const Lands_GetLandsSharedToPlayer = ll.import("PFLP", "Lands::GetLandsSharedToP
 const FloatText_Add = ll.import("PFLP", "FloatText::Add");
 /** 移除浮空字(给玩家发包) */
 const FloatText_Remove = ll.import("PFLP", "FloatText::Remove");
-/** 获取玩家(指定玩家名)金钱 返回值类型：long */
+/** 获取玩家(指定玩家Xuid)金钱 返回值类型：long */
 const Money_Get = ll.import("PFLP", "Money::Get");
-/** 给玩家(指定玩家名)加钱 */
+/** 给玩家(指定玩家Xuid)加钱 */
 const Money_Add = ll.import("PFLP", "Money::Add");
-/** 给玩家(指定玩家名)减钱 */
+/** 给玩家(指定玩家Xuid)减钱 */
 const Money_Remove = ll.import("PFLP", "Money::Remove");
 /** 获取所有礼包的礼包名（返回json字符串数组） 返回值类型：string */
 const GiftCode_GetAllPackName = ll.import("PFLP", "GiftCode::GetAllPackName");
@@ -732,18 +732,18 @@ const PFLP = {
 		Remove(playerXuid,id) { (this.FloatText_Remove??=ll.import("PFLP", "FloatText::Remove"))(playerXuid,id)},
 	},
 	Money : {
-		/** 获取玩家(指定玩家名)金钱 返回值类型：long
+		/** 获取玩家(指定玩家Xuid)金钱 返回值类型：long
 		 * @param {string} playerXuid
 		 * @returns {number}
 		 */
 		Get(playerXuid) { return (this.Money_Get??=ll.import("PFLP", "Money::Get"))(playerXuid)},
-		/** 给玩家(指定玩家名)加钱
+		/** 给玩家(指定玩家Xuid)加钱
 		 * @param {string} playerXuid
 		 * @param {number} count
 		 * @param {string} info
 		 */
 		Add(playerXuid,count,info) { (this.Money_Add??=ll.import("PFLP", "Money::Add"))(playerXuid,count,info)},
-		/** 给玩家(指定玩家名)减钱
+		/** 给玩家(指定玩家Xuid)减钱
 		 * @param {string} playerXuid
 		 * @param {number} count
 		 * @param {string} info
